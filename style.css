@@ -1,0 +1,23 @@
+/*
+Theme Name: jfl
+Theme Description: jfl Bootstrap 3.0 Theme
+Author: jfl
+URI: http://www.jungfrau-ledig.com/
+License: GNU General Public License v2 or later
+*/
+@import url('css/bootstrap.min.css');
+
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+    display: block;
+    position: static;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}

@@ -1,5 +1,7 @@
 <?php
 
+require_once( get_template_directory() . '/inc/header-addons.php' );
+
 
 if ( function_exists('register_sidebar') )
     register_sidebar();
@@ -64,3 +66,29 @@ function add_class_the_tags($html){
     return $html;
 }
 add_filter('the_tags','add_class_the_tags',10,1);
+
+function register_my_menu() {
+    register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+
+function add_menu_parent_class( $items ) {
+
+    $parents = array();
+    foreach ( $items as $item ) {
+        if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
+            $parents[] = $item->menu_item_parent;
+        }
+    }
+
+    foreach ( $items as $item ) {
+        if ( in_array( $item->ID, $parents ) ) {
+            $item->classes[] = 'dropdown';
+        }
+    }
+
+    return $items;
+}
+
+add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );

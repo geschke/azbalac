@@ -15,33 +15,22 @@
 	<header class="entry-header">
 
         <?php
-        $taxonomy = 'category';
 
-        // get the term IDs assigned to post.
-        $post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
-        // separator between links
-        $separator = ', ';
-
-        if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
-
-            $term_ids = implode( ',' , $post_terms );
-            $terms = wp_list_categories( 'title_li=&style=none&echo=0&taxonomy=' . $taxonomy . '&include=' . $term_ids );
-
-            $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
-
-            // display post categories
-            echo  $terms;
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
+        if($categories){
+            echo '<ul class="nav nav-pills">';
+            foreach($categories as $category) {
+                $output .= '<li><a href="'.get_category_link( $category->term_id ).'"
+                title="' .
+                    esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name
+                    .'</a></li>'.$separator;
+            }
+            echo trim($output, $separator);
+            echo '</ul>';
         }
-        ?>
 
-		<?php
-
-            if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && jfl_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'jfl' ) ); ?></span>
-		</div>
-		<?php
-			endif;
 
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );

@@ -72,7 +72,7 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
-
+/*
 function add_menu_parent_class( $items ) {
 
     $parents = array();
@@ -92,3 +92,4 @@ function add_menu_parent_class( $items ) {
 }
 
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+*/

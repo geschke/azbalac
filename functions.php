@@ -3,8 +3,103 @@
 require_once( get_template_directory() . '/inc/header-addons.php' );
 
 
-if ( function_exists('register_sidebar') )
-    register_sidebar();
+if ( function_exists('register_sidebar') ) {
+    register_sidebar(array(
+        'class'         => '',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => "</div>\n",
+        'before_title'  => '<h3 class="widgettitle">',
+        'after_title'   => "</h3>\n"
+    ));
+
+register_sidebar( array(
+    'name' => 'Footer Sidebar 1 (left)',
+    'id' => 'footer-sidebar-1',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+) );
+register_sidebar( array(
+    'name' => 'Footer Sidebar 2 (middle)',
+    'id' => 'footer-sidebar-2',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+) );
+register_sidebar( array(
+    'name' => 'Footer Sidebar 3 (right)',
+    'id' => 'footer-sidebar-3',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+) );
+}
+
+
+if ( ! function_exists( 'jfl_paging_nav' ) ) :
+    /**
+     * Display navigation to next/previous set of posts when applicable.
+     *
+     * @return void
+     */
+    function jfl_paging_nav() {
+        // Don't print empty markup if there's only one page.
+        if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+            return;
+        }
+
+        $paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+        $pagenum_link = html_entity_decode( get_pagenum_link() );
+        $query_args   = array();
+        $url_parts    = explode( '?', $pagenum_link );
+
+        if ( isset( $url_parts[1] ) ) {
+            wp_parse_str( $url_parts[1], $query_args );
+        }
+
+        $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+        $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+        $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+        $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+        // Set up paginated links.
+        $links = paginate_links( array(
+            'base'     => $pagenum_link,
+            'format'   => $format,
+            'total'    => $GLOBALS['wp_query']->max_num_pages,
+            'current'  => $paged,
+            'mid_size' => 1,
+            'add_args' => array_map( 'urlencode', $query_args ),
+            'prev_text' => __( '&laquo; Previous', 'jfl' ),
+            'next_text' => __( 'Next &raquo;', 'jfl' ),
+            'type' => 'array'
+        ) );
+
+        if ( $links ) :
+
+            ?>
+            <nav class="navigation paging-navigation" role="navigation">
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'jfl' ); ?></h1>
+                <ul class="pagination loop-pagination">
+                    <?php
+                    foreach ($links as $link) {
+                        echo '<li>' . $link . '</li>';
+                    }
+                    ?>
+                </ul><!-- .pagination -->
+            </nav><!-- .navigation -->
+        <?php
+        endif;
+    }
+endif;
+
 
 if ( ! function_exists( 'jfl_categorized_blog' ) ) :
 

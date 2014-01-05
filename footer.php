@@ -13,6 +13,35 @@
 		</div><!-- #main -->
 </div><!-- container -->
 
+<div class="container">
+<div class="row" style="padding: 10px; 0px; 10px;">
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <?php
+        if(is_active_sidebar('footer-sidebar-1')){
+            dynamic_sidebar('footer-sidebar-1');
+        }
+        ?>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <?php
+        if(is_active_sidebar('footer-sidebar-2')){
+            dynamic_sidebar('footer-sidebar-2');
+        }
+        ?>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <?php
+        if(is_active_sidebar('footer-sidebar-3')){
+            dynamic_sidebar('footer-sidebar-3');
+        }
+        ?>
+    </div>
+</div>
+</div>
+
+
+<div class="container">
+    <hr/>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<?php get_sidebar( 'footer' ); ?>
@@ -24,7 +53,7 @@
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 
-
+</div>
 
 	<?php wp_footer(); ?>
 <!-- Bootstrap core JavaScript

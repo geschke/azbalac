@@ -53,9 +53,33 @@
     }
 */
     // $menu_list now ready to output
+
+/*global $jfl_theme;
+var_dump($jfl_theme);
+die;
+*/
+
+global $jfl_theme;
+$navbarStyle = '';
+
+if (isset($jfl_theme['navbar-style-inverse']) && $jfl_theme['navbar-style-inverse'] == 'inverse') {
+    $navbarStyle .= ' navbar-inverse';
+}
+else {
+    $navbarStyle .= ' navbar-default';
+}
+
+if (isset($jfl_theme['navbar-fixed']) && $jfl_theme['navbar-fixed'] == 'fixed-top') {
+    $navbarStyle .= ' navbar-fixed-top';
+}
+else {
+    $navbarStyle .= ' '; // todo: set css style when not fixed... or if fixed. hm
+}
+
+
 ?>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar <?php echo $navbarStyle; ?>" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -65,7 +89,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <?php
-                $description = get_bloginfo( 'description', 'display' );
+                $description = get_bloginfo( 'name', 'display' );
+                $description .= ' ' . get_bloginfo( 'description', 'display' );
                 ?>
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a>
             </div>

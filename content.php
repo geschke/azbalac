@@ -63,6 +63,9 @@
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
+        if (has_post_thumbnail()) {
+            the_post_thumbnail('medium');
+        }
 			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'jfl' ) );
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',

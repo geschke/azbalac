@@ -1,12 +1,15 @@
 <?php
 
+require_once( get_template_directory() . '/admin/admin-config.php' );
+
+
 require_once( get_template_directory() . '/inc/header-addons.php' );
 
 
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'class'         => '',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="well widget %2$s">',
         'after_widget'  => "</div>\n",
         'before_title'  => '<h3 class="widgettitle">',
         'after_title'   => "</h3>\n"
@@ -155,6 +158,38 @@ function jfl_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'jfl_scripts' );
 
+
+function bootstrap_styles()
+{
+    global $jfl_theme;
+    if (isset($jfl_theme['stylesheet']))
+    {
+        $stylesheet = $jfl_theme['stylesheet'];
+    }
+    else {
+        $stylesheet = 'bootstap.min.css';
+    }
+
+    // Register the style like this for a theme:
+    wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
+        '2014011301','all');
+        //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
+    //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
+    //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
+    //wp_register_style( 'responsive-style', get_stylesheet_uri(), false, '3.0.3' );
+
+
+    //  enqueue the style:
+    wp_enqueue_style( 'bootstrap-styles' );
+    //wp_enqueue_style( 'font-awesome' );
+    //wp_enqueue_style( 'magnific' );
+    //wp_enqueue_style( 'responsive-style' );
+
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_styles' );
+
+
+
 function add_class_the_tags($html){
     $postid = get_the_ID();
     $html = str_replace('<a','<a class="btn btn-info btn-xs"',$html);
@@ -166,6 +201,8 @@ function register_my_menu() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+add_theme_support('post-thumbnails');
 
 /*
 function add_menu_parent_class( $items ) {

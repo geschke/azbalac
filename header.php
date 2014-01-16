@@ -10,13 +10,32 @@
     <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <!-- <title><?php wp_title(); ?></title> -->
-      <title><?php wp_title( '|', true, 'right' ); ?></title>
+      <title><?php wp_title( '|', true, 'right' );
+          bloginfo( 'name' ); ?></title>
         
       <meta name="description" content="<?php bloginfo( 'description' ); ?>">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<?php
+
+global $jfl_theme;
+    // maybe find a better solution...
+// todo: show different kinds of navigation and header
+// todo: use header image, if available
+// todo: set header background color
+        if (isset($jfl_theme['navbar-fixed']) && $jfl_theme['navbar-fixed'] == 'fixed-top') {
+            ?>
+            <style type="text/css">
+                body {
+                    padding-top: 70px;
+                }
+            </style>
+        <?php
+        }
+     ?>
+
         <?php wp_head(); ?>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -59,7 +78,6 @@ var_dump($jfl_theme);
 die;
 */
 
-global $jfl_theme;
 $navbarStyle = '';
 
 if (isset($jfl_theme['navbar-style-inverse']) && $jfl_theme['navbar-style-inverse'] == 'inverse') {
@@ -76,8 +94,20 @@ else {
     $navbarStyle .= ' '; // todo: set css style when not fixed... or if fixed. hm
 }
 
-
 ?>
+
+<?php
+$description = get_bloginfo( 'name', 'display' );
+$description .= ' ' . get_bloginfo( 'description', 'display' );
+?>
+
+<div class="container">
+
+    <div class="masthead">
+        <h3 class="text-muted"><?php echo $description; ?></h3>
+        </div>
+    </div>
+
     <!-- Fixed navbar -->
     <div class="navbar <?php echo $navbarStyle; ?>" role="navigation">
         <div class="container">
@@ -88,10 +118,7 @@ else {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php
-                $description = get_bloginfo( 'name', 'display' );
-                $description .= ' ' . get_bloginfo( 'description', 'display' );
-                ?>
+
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a>
             </div>
             <div class="navbar-collapse collapse">

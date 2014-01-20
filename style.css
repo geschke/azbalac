@@ -8,9 +8,9 @@ License: GNU General Public License v2 or later
 */
 @import url('css/bootstrap.min.css');
 
-body {
+/*body {
     padding-bottom: 30px;
-}
+}*/
 
 .theme-dropdown .dropdown-menu {
     display: block;
@@ -20,4 +20,8 @@ body {
 
 .theme-showcase > p > .btn {
     margin: 5px 0;
+}
+
+a.header-url, a.header-url:hover {
+    text-decoration: none;
 }

@@ -13,6 +13,28 @@
 		</div><!-- #main -->
 </div><!-- container -->
 
+<?php
+global $jfl_theme;
+
+if (isset($jfl_theme['color-bg-footer']) && $jfl_theme['color-bg-footer']) {
+    $colorBgFooter = $jfl_theme['color-bg-footer'];
+}
+else {
+    $colorBgFooter = '#000000';
+}
+if (isset($jfl_theme['color-fg-footer']) && $jfl_theme['color-fg-footer'] && stripos($jfl_theme['color-fg-footer'], 'transparent') !== false ) {
+    $footerStyleColorFg = '';
+}
+elseif (isset($jfl_theme['color-fg-footer']) && $jfl_theme['color-fg-footer'] ) {
+    $footerStyleColorFg = ' color: ' . $jfl_theme['color-fg-footer'] .';';
+}
+else {
+    $footerStyleColorFg = '';
+}
+
+?>
+<div style="background-color: <?php echo $colorBgFooter; ?>; <?php echo $footerStyleColorFg; ?>;">
+
 <div class="container">
 <div class="row" style="padding: 10px; 0px; 10px;">
     <div class="col-md-4 col-sm-4 col-xs-4">
@@ -54,6 +76,9 @@
 		</footer><!-- #colophon -->
 
 </div>
+
+    </div>
+
 
 	<?php wp_footer(); ?>
 <!-- Bootstrap core JavaScript

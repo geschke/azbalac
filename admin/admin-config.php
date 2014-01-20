@@ -698,23 +698,51 @@ if (!function_exists('redux_init')) :
                     //Must provide key => value pairs for radio options
                     'default' => 'default'
                 ),
-                /*  array(
-                      'id'=>'color-background',
+                array(
+                    'id'=>'header-image',
+                    'type' => 'media',
+                    'url'=> true,
+                    'title' => __('Header Image', 'jfl'),
+                    'compiler' => 'true',
+                    //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                    'desc'=> __('Use header image when chosen default navbar.', 'jfl'),
+                    //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'jfl'),
+                    'default'=>array('url'=>'')
+                ),
+                  array(
+                      'id'=>'color-fg-header',
                       'type' => 'color',
-                      'output' => array('.site-title'),
-                      'title' => __('Body Background Color', 'redux-framework-demo'),
-                      'subtitle' => __('Pick a background color for the theme (default: #fff).', 'redux-framework-demo'),
+                      //'output' => array('.site-title'),
+                      'title' => __('Header Font Color', 'jfl'),
+                      'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'jfl'),
                       'default' => '#FFFFFF',
                       'validate' => 'color',
                   ),
                   array(
-                      'id'=>'color-footer',
+                      'id'=>'color-bg-header',
                       'type' => 'color',
-                      'title' => __('Footer Background Color', 'redux-framework-demo'),
-                      'subtitle' => __('Pick a background color for the footer (default: #dd9933).', 'redux-framework-demo'),
-                      'default' => '#dd9933',
+                      'title' => __('Header Background Color', 'jfl'),
+                      'subtitle' => __('Pick a background color for the footer (default: #666666).', 'jfl'),
+                      'default' => '#666666',
                       'validate' => 'color',
-                  )*/
+                  ),
+                array(
+                    'id'=>'color-fg-footer',
+                    'type' => 'color',
+                    //'output' => array('.site-title'),
+                    'title' => __('Footer Font Color', 'jfl'),
+                    'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'jfl'),
+                    'default' => '#FFFFFF',
+                    'validate' => 'color',
+                ),
+                array(
+                    'id'=>'color-bg-footer',
+                    'type' => 'color',
+                    'title' => __('Footer Background Color', 'jfl'),
+                    'subtitle' => __('Pick a background color for the footer (default: #666666).', 'jfl'),
+                    'default' => '#666666',
+                    'validate' => 'color',
+                )
             ));
 
 	/*$sections[] = array(

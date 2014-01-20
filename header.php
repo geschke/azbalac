@@ -26,6 +26,13 @@ global $jfl_theme;
 // todo: use header image, if available
 // todo: set header background color
         if (isset($jfl_theme['navbar-fixed']) && $jfl_theme['navbar-fixed'] == 'fixed-top') {
+            $navbarFixed = 'fixed-top';
+        }
+        else {
+            $navbarFixed = 'default';
+        }
+
+        if ($navbarFixed == 'fixed-top') {
             ?>
             <style type="text/css">
                 body {
@@ -72,27 +79,47 @@ global $jfl_theme;
     }
 */
     // $menu_list now ready to output
-
-/*global $jfl_theme;
+/*
+global $jfl_theme;
+echo "<pre>";
 var_dump($jfl_theme);
 die;
 */
 
-$navbarStyle = '';
+$navbarStyleClass = '';
 
 if (isset($jfl_theme['navbar-style-inverse']) && $jfl_theme['navbar-style-inverse'] == 'inverse') {
-    $navbarStyle .= ' navbar-inverse';
+    $navbarStyleClass .= ' navbar-inverse';
 }
 else {
-    $navbarStyle .= ' navbar-default';
+    $navbarStyleClass .= ' navbar-default';
 }
 
-if (isset($jfl_theme['navbar-fixed']) && $jfl_theme['navbar-fixed'] == 'fixed-top') {
-    $navbarStyle .= ' navbar-fixed-top';
+if ($navbarFixed == 'fixed-top') {
+    $navbarStyleClass .= ' navbar-fixed-top';
 }
 else {
-    $navbarStyle .= ' '; // todo: set css style when not fixed... or if fixed. hm
+    $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
 }
+
+
+if (isset($jfl_theme['color-bg-header']) && $jfl_theme['color-bg-header']) {
+    $headerStyleColorBg = $jfl_theme['color-bg-header'];
+}
+else {
+    $headerStyleColorBg = '#000000';
+}
+if (isset($jfl_theme['color-fg-header']) && $jfl_theme['color-fg-header'] && stripos($jfl_theme['color-fg-header'], 'transparent') !== false ) {
+    $headerStyleColorFg = '';
+}
+elseif (isset($jfl_theme['color-fg-header']) && $jfl_theme['color-fg-header'] ) {
+    $headerStyleColorFg = ' color: ' . $jfl_theme['color-fg-header'] .';';
+}
+else {
+    $headerStyleColorFg = '';
+}
+
+
 
 ?>
 
@@ -100,18 +127,33 @@ else {
 $description = get_bloginfo( 'name', 'display' );
 $description .= ' ' . get_bloginfo( 'description', 'display' );
 ?>
+<?php if ($navbarFixed == 'default') {
+?>
+    <div style="background-color: <?php echo $headerStyleColorBg; ?>; <?php echo $headerStyleColorFg; ?>;">
 
 <div class="container">
-
-    <div class="masthead">
-        <h3 class="text-muted"><?php echo $description; ?></h3>
-        </div>
+    <div class="masthead col-md-12 col-sm-12 col-xs-12">
+        <h3 class="text-muted"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
+        <?php
+        if (isset($jfl_theme['header-image']['url']) && $jfl_theme['header-image']['url']) {
+            echo '<img height="' . $jfl_theme['header-image']['height'] . '" width="' . $jfl_theme['header-image']['width'] . '" src="' . $jfl_theme['header-image']['url'] .'"/>';
+        }
+        ?>
     </div>
+ </div>
+<?php }
+?>
 
+<?php if ($navbarFixed == 'default') {
+?>
+<div class="container">
+<?php }
+?>
     <!-- Fixed navbar -->
-    <div class="navbar <?php echo $navbarStyle; ?>" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
+    <div class="navbar <?php echo $navbarStyleClass; ?>" role="navigation">
+        <?php if ($navbarFixed == 'fixed-top') {
+        ?><div class="container">
+         <?php } ?>   <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -119,7 +161,9 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
                     <span class="icon-bar"></span>
                 </button>
 
+                <?php if ($navbarFixed == 'fixed-top') { ?>
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a>
+                <?php } ?>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -131,9 +175,18 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
                     ?>
                 </ul>
             </div><!--/.nav-collapse -->
-        </div>
+            <?php if ($navbarFixed == 'fixed-top') {
+            ?></div>
+            <?php } ?>
     </div>
 
+    <?php if ($navbarFixed == 'default') {
+    ?>
+</div> <!-- container -->
+    </div> <!-- header in default navbar -->
+
+<?php }
+?>
     <?php //wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 
         <div class="container">

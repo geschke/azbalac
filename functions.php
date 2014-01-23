@@ -237,21 +237,24 @@ if ( ! function_exists( 'jfl_get_layout' ) ) :
         switch ($jfl_theme['layout']) {
             case 1:
                 $columns = 1;
+                $content = 1; // main content in single column
                 $styleCol_1 = 'col-md-12 col-sm-12 col-xs-12';
                 $styleCol_2 = 'col-md-12 col-sm-12 col-xs-12';
                 break;
             case 3:
                 $columns = 2;
-                $styleCol_1 = 'col-md-3 col-sm-3 col-xs-3';
-                $styleCol_2 = 'col-md-9 col-sm-9 col-xs-9';
+                $content = 2; // main content right
+                $styleCol_1 = 'col-md-9 col-sm-9 col-xs-9';
+                $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
                 break;
             case 2:
             default:
                 $columns = 2;
+                $content = 1; // main content left
                 $styleCol_1 = 'col-md-9 col-sm-9 col-xs-9';
                 $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
                 break;
         }
-        return array('columns' => $columns, 'col_1' => $styleCol_1, 'col_2' => $styleCol_2);
+        return array('columns' => $columns, 'col_1' => $styleCol_1, 'col_2' => $styleCol_2, 'content' => $content);
     }
 endif;

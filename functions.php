@@ -225,3 +225,33 @@ function add_menu_parent_class( $items ) {
 
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 */
+
+
+if ( ! function_exists( 'jfl_get_layout' ) ) :
+
+    function jfl_get_layout() {
+        global $jfl_theme;
+        if (!isset($jfl_theme['layout'])) {
+            $jfl_theme['layout'] = 2; // default: content left, sidebar right
+        }
+        switch ($jfl_theme['layout']) {
+            case 1:
+                $columns = 1;
+                $styleCol_1 = 'col-md-12 col-sm-12 col-xs-12';
+                $styleCol_2 = 'col-md-12 col-sm-12 col-xs-12';
+                break;
+            case 3:
+                $columns = 2;
+                $styleCol_1 = 'col-md-3 col-sm-3 col-xs-3';
+                $styleCol_2 = 'col-md-9 col-sm-9 col-xs-9';
+                break;
+            case 2:
+            default:
+                $columns = 2;
+                $styleCol_1 = 'col-md-9 col-sm-9 col-xs-9';
+                $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
+                break;
+        }
+        return array('columns' => $columns, 'col_1' => $styleCol_1, 'col_2' => $styleCol_2);
+    }
+endif;

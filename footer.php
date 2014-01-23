@@ -66,7 +66,7 @@ else {
     <hr/>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
-			<?php get_sidebar( 'footer' ); ?>
+			<?php //get_sidebar( 'footer' ); // this has shown the right sidebar below the hr ??? ähh... ?>
 
 			<div class="site-info">
 				<?php //do_action( 'twentyfourteen_credits' ); ?>

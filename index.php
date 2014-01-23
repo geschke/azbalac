@@ -22,12 +22,17 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 
 <?php
+
+$layoutStyle = jfl_get_layout();
+// todo: switch main content within columns...
+
+
 	//if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
 		// Include the featured content template.
 //		get_template_part( 'featured-content' );
 //	}
 ?>
-    <div class="col-md-9 col-sm-9 col-xs-9">
+    <div class="<?php echo $layoutStyle['col_1']; ?>">
 	<div id="primary" class="content-area">
 
         <div id="content" class="site-content" role="main">
@@ -60,13 +65,16 @@ get_header(); ?>
 	</div><!-- #primary -->
     </div>
 
-    <div class="col-md-3 col-sm-3 col-xs-3">
+    <?php
+
+    if ($layoutStyle['columns'] == 2) { ?>
+    <div class="<?php echo $layoutStyle['col_2']; ?>">
 
     <?php get_sidebar( 'content' );
-
-        get_sidebar();
-?>
-        </div>
+    get_sidebar();
+    ?>
+    </div>
+    <?php } ?>
 </div><!-- #main-content -->
 
 </div><!-- row -->

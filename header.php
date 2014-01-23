@@ -20,6 +20,9 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <?php
 
+
+$layoutStyle = jfl_get_layout();
+
 global $jfl_theme;
     // maybe find a better solution...
 // todo: show different kinds of navigation and header
@@ -57,34 +60,7 @@ global $jfl_theme;
 
 <?php
 
-/*
 
-    $menu_name = 'header-menu';
-
-    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-    $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-    $headerMenuItems = ''; // '<ul id="menu-' . $menu_name . '">';
-
-        foreach ( $menu_items as $key => $menu_item ) {
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-        $headerMenuItems .= '<li><a href="' . $url . '">' . $title . '</a></li>';
-        }
-        //$menu_list .= '</ul>';
-    } else {
-    //$menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
-    }
-*/
-    // $menu_list now ready to output
-/*
-global $jfl_theme;
-echo "<pre>";
-var_dump($jfl_theme);
-die;
-*/
 
 $navbarStyleClass = '';
 

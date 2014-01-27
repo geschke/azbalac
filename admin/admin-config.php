@@ -679,8 +679,8 @@ if (!function_exists('redux_init')) :
                     'desc' => __('Set layout or your site.', 'jfl'),
                     'options' => array(
                         '1' => array('alt' => '1 Column', 'img' => ReduxFramework::$_url.'assets/img/1col.png'),
-                        '2' => array('alt' => '2 Column Left', 'img' => ReduxFramework::$_url.'assets/img/2cl.png'),
-                        '3' => array('alt' => '2 Column Right', 'img' => ReduxFramework::$_url.'assets/img/2cr.png'),
+                        '2' => array('alt' => '2 Column, Content left, Sidebar right', 'img' => ReduxFramework::$_url.'assets/img/2cr.png'),
+                        '3' => array('alt' => '2 Column, Content right, Sidebar left', 'img' => ReduxFramework::$_url.'assets/img/2cl.png'),
                         //'4' => array('alt' => '3 Column Middle', 'img' => ReduxFramework::$_url.'assets/img/3cm.png'),
                         //'5' => array('alt' => '3 Column Left', 'img' => ReduxFramework::$_url.'assets/img/3cl.png'),
                         //'6' => array('alt' => '3 Column Right', 'img' => ReduxFramework::$_url.'assets/img/3cr.png')

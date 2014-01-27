@@ -188,6 +188,27 @@ function bootstrap_styles()
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_styles' );
 
+function jfl_comment_fields($fields) {
+    // does not work as expected... hmm...
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+$fields['author'] = '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name*' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+                    '<br/><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>';
+
+$fields['email'] = '<p class="comment-form-email"><label for="email">' . __( 'Email*' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+                    '<br/><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
+
+$fields['url'] = '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+                    '<br/><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
+
+return $fields;
+}
+
+// see above...
+
+add_filter('comment_form_default_fields','jfl_comment_fields');
 
 
 function add_class_the_tags($html){

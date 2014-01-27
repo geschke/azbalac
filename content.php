@@ -16,20 +16,7 @@
 
         <?php
 
-        $categories = get_the_category();
-        $separator = ' ';
-        $output = '';
-        if($categories){
-            echo '<ul class="nav nav-pills">';
-            foreach($categories as $category) {
-                $output .= '<li><a href="'.get_category_link( $category->term_id ).'"
-                title="' .
-                    esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name
-                    .'</a></li>'.$separator;
-            }
-            echo trim($output, $separator);
-            echo '</ul>';
-        }
+
 
 
 			if ( is_single() ) :
@@ -78,5 +65,23 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<?php the_tags( __('Tags: ','jfl'), ' ','' ); ?>
+	<?php the_tags( __('Tags: ','jfl'), ' ','' );
+
+    $categories = get_the_category();
+    $separator = ' ';
+    $output = '';
+    if($categories){
+        echo "<div>Kategorien: ";
+        echo '<ul class="nav nav-pills">';
+        foreach($categories as $category) {
+            $output .= '<li><a href="'.get_category_link( $category->term_id ).'"
+                title="' .
+                esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name
+                .'</a></li>'.$separator;
+        }
+        echo trim($output, $separator);
+        echo '</ul></div>';
+    }
+
+    ?>
 </article><!-- #post-## -->

@@ -134,6 +134,22 @@ if ( ! function_exists( 'jfl_categorized_blog' ) ) :
     }
 endif;
 
+
+function jfl_get_search_form() {
+
+    $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+    <div class="form-group"><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+    <input class="form-control" type="text" placeholder="' . __( 'Search for:' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    </div>
+    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+    </div>
+    </form>';
+
+    return $form;
+}
+
+add_filter( 'get_search_form', 'jfl_get_search_form' );
+
 /**
  * Enqueue scripts and styles for the front end.
  *

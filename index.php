@@ -26,11 +26,12 @@ get_header(); ?>
 $layoutStyle = jfl_get_layout();
 // todo: switch main content within columns...
 
+if ( is_front_page() && jfl_has_featured_posts() ) {
+    // Include the featured content template.
+    get_template_part( 'featured-content' );
+ //   echo "<h1>show featured content</h1>";
+}
 
-	//if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-//		get_template_part( 'featured-content' );
-//	}
 
 if ($layoutStyle['content'] == 2) {
     ?>

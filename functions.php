@@ -244,7 +244,16 @@ add_action( 'init', 'register_my_menu' );
 add_theme_support('post-thumbnails');
 
 /*
-function add_menu_parent_class( $items ) {
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+add_theme_support( 'post-formats', array(
+    'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+) );
+
+
+/*
+ *  function add_menu_parent_class( $items ) {
 
     $parents = array();
     foreach ( $items as $item ) {
@@ -265,6 +274,41 @@ function add_menu_parent_class( $items ) {
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 */
 
+/**
+ * A helper conditional function that returns a boolean value.
+ *
+ * @since jfl 1.0
+ *
+ * @return bool Whether there are featured posts.
+ */
+function jfl_has_featured_posts() {
+    return !is_paged() && (bool) jfl_get_featured_posts();
+}
+
+/**
+ * Getter function for Featured Content Plugin.
+ *
+ * @since jfl 1.0
+ *
+ * @return array An array of WP_Post objects.
+ */
+function jfl_get_featured_posts() {
+    /**
+     * Filter the featured posts to return in Twenty Fourteen.
+     *
+     * @since jfl 1.0
+     *
+     * @param array|bool $posts Array of featured posts, otherwise false.
+     */
+    return apply_filters( 'jfl_get_featured_posts', array() );
+}
+
+
+
+add_theme_support( 'featured-content', array(
+    'featured_content_filter' => 'jfl_get_featured_posts',
+    'max_posts' => 4,
+) );
 
 if ( ! function_exists( 'jfl_get_layout' ) ) :
 
@@ -297,3 +341,13 @@ if ( ! function_exists( 'jfl_get_layout' ) ) :
         return array('columns' => $columns, 'col_1' => $styleCol_1, 'col_2' => $styleCol_2, 'content' => $content);
     }
 endif;
+
+/*
+ * Add Featured Content functionality.
+ *
+ * To overwrite in a plugin, define your own Featured_Content class on or
+ * before the 'setup_theme' hook.
+ */
+if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
+    require get_template_directory() . '/inc/featured-content.php';
+}

@@ -150,6 +150,11 @@ class Featured_Content {
 	 * @return array Array of post IDs.
 	 */
 	public static function get_featured_post_ids() {
+
+
+        // todo here - get posts by meta data
+        // todo: delete all other stuff, it's not necessary...
+
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {

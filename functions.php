@@ -4,6 +4,7 @@ require_once( get_template_directory() . '/admin/admin-config.php' );
 
 
 require_once( get_template_directory() . '/inc/header-addons.php' );
+require_once( get_template_directory() . '/inc/post-addons.php' );
 
 
 if ( function_exists('register_sidebar') ) {

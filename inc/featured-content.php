@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Fourteen Featured Content
+ * jfl Featured Content
  *
  * This module allows you to define a subset of posts to be displayed
  * in the theme's Featured Content area.
@@ -62,20 +62,17 @@ class Featured_Content {
 		if ( ! $theme_support ) {
 			return;
 		}
-
-		/*
+    	/*
 		 * An array of named arguments must be passed as the second parameter
 		 * of add_theme_support().
 		 */
 		if ( ! isset( $theme_support[0] ) ) {
 			return;
 		}
-
 		// Return early if "featured_content_filter" has not been defined.
 		if ( ! isset( $theme_support[0]['featured_content_filter'] ) ) {
 			return;
 		}
-
 		$filter = $theme_support[0]['featured_content_filter'];
 
 		// Theme can override the number of max posts.
@@ -84,13 +81,13 @@ class Featured_Content {
 		}
 
 		add_filter( $filter,                              array( __CLASS__, 'get_featured_posts' )    );
-		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
-		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
-		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
-		add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
-		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
-		add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded'          )    );
+		//add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
+		//add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
+		//add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
+		//add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
+		//add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
+		//add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
+		//add_action( 'wp_loaded',                          array( __CLASS__, 'wp_loaded'          )    );
 	}
 
 	/**
@@ -122,7 +119,7 @@ class Featured_Content {
 	public static function get_featured_posts() {
 		$post_ids = self::get_featured_post_ids();
 
-		// No need to query if there is are no featured posts.
+        // No need to query if there is are no featured posts.
 		if ( empty( $post_ids ) ) {
 			return array();
 		}
@@ -145,14 +142,12 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since jfl 1.0
 	 *
 	 * @return array Array of post IDs.
 	 */
 	public static function get_featured_post_ids() {
 
-
-        // todo here - get posts by meta data
         // todo: delete all other stuff, it's not necessary...
 
 		// Return array of cached results if they exist.
@@ -163,24 +158,20 @@ class Featured_Content {
 
 		$settings = self::get_setting();
 
-		// Return sticky post ids if no tag name is set.
-		$term = get_term_by( 'name', $settings['tag-name'], 'post_tag' );
-		if ( $term ) {
-			$tag = $term->term_id;
-		} else {
-			return self::get_sticky_posts();
-		}
-
 		// Query for featured posts.
 		$featured = get_posts( array(
 			'numberposts' => $settings['quantity'],
-			'tax_query'   => array(
-				array(
-					'field'    => 'term_id',
-					'taxonomy' => 'post_tag',
-					'terms'    => $tag,
-				),
-			),
+            'meta_query' => array(
+                'relation' => 'OR',
+                array(
+                    'key' => 'jfl_featured_post',
+                    'value' => '_1'
+                ),
+                array(
+                    'key' => 'jfl_featured_post',
+                    'value' => '_2'
+                )
+            )
 		) );
 
 		// Return array with sticky posts if no Featured Content exists.

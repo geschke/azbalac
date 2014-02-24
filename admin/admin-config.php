@@ -136,16 +136,32 @@ if (!function_exists('redux_init')) :
 	//$args['admin_stylesheet'] = 'standard';
 
 	// Setup custom links in the footer for share icons
-	$args['share_icons']['twitter'] = array(
-	    'link' => 'http://twitter.com/geschke',
-	    'title' => 'Follow me on Twitter', 
-	    'img' => ReduxFramework::$_url . 'assets/img/social/Twitter.png'
-	);
-	$args['share_icons']['linked_in'] = array(
-	    'link' => 'http://de.linkedin.com/in/geschke/',
-	    'title' => 'Find me on LinkedIn', 
-	    'img' => ReduxFramework::$_url . 'assets/img/social/LinkedIn.png'
-	);
+
+        // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
+/*        $args['share_icons'][] = array(
+            'url' => 'https://github.com/ReduxFramework/ReduxFramework',
+            'title' => 'Visit us on GitHub',
+            'icon' => 'el-icon-github'
+            // 'img' => '', // You can use icon OR img. IMG needs to be a full URL.
+        );
+*/        $args['share_icons'][] = array(
+            'url' => 'https://www.facebook.com/rgeschke',
+            'title' => 'Like us on Facebook',
+            'icon' => 'el-icon-facebook'
+        );
+        $args['share_icons'][] = array(
+            'url' => 'http://twitter.com/geschke',
+            'title' => 'Follow me on Twitter',
+            'icon' => 'el-icon-twitter'
+        );
+        $args['share_icons'][] = array(
+            'url' => 'http://de.linkedin.com/in/geschke/',
+            'title' => 'Find me on LinkedIn',
+            'icon' => 'el-icon-linkedin'
+        );
+
+
+
 
 	// Enable the import/export feature.
 	// Default: true

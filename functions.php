@@ -343,6 +343,12 @@ if ( ! function_exists( 'jfl_get_layout' ) ) :
     }
 endif;
 
+
+function jfl_excerpt_more( $more ) {
+    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">Read More »</a></p>';
+}
+add_filter( 'excerpt_more', 'jfl_excerpt_more' );
+
 /*
  * Add Featured Content functionality.
  *

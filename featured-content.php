@@ -39,6 +39,18 @@
         $postNumber = 0;
     if (isset($featuredStandard) && count($featuredStandard)) {
 
+        $rowsFeaturedStandard = 3 - (count($featuredStandard) % 3);
+        /*
+        9 mod = 0 res 3
+        8 mod = 2 res 2 oder 3 + 3 + 2
+        7 mod = 1 res 3 + 3 + 1
+        6 mod = 0 res 3
+        5 mod = 2 res 2 + 1
+        4 mod = 1 res 2
+        3 mod = 0 res 3
+        2 mod = 2 res 2
+        1 mod = 1 res 1
+        */
     ?>
         <div class="container marketing">
 

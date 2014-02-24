@@ -30,7 +30,7 @@
 
             <p>
             <?php
-            the_excerpt("Mehr...");
+            the_excerpt();
             ?>
             </p>
     </article>

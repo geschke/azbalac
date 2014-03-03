@@ -36,11 +36,42 @@
             }
         }
 
-        $postNumber = 0;
+
     if (isset($featuredStandard) && count($featuredStandard)) {
 
-        $rowsFeaturedStandard = 3 - (count($featuredStandard) % 3);
+
+        $countFeaturedStandard = count($featuredStandard);
+        if ($countFeaturedStandard >= 6) {
+            $colsFeaturedFirst = $countFeaturedStandard % 3;
+            $countFeaturedStandard -= $colsFeaturedFirst;
+            $rowsFeaturedLast = $countFeaturedStandard / 3;
+            $colsFeaturedLast = 3;
+        }
+        else {
+            if ($countFeaturedStandard % 3 == 0) {
+                // 3
+                $colsFeaturedFirst = 0;
+                $rowsFeaturedLast = $countFeaturedStandard / 3;
+                $colsFeaturedLast = 3;
+            } elseif ($countFeaturedStandard % 2 == 0) {
+                // 4 or 2
+                $colsFeaturedFirst = 0;
+                $rowsFeaturedLast = $countFeaturedStandard / 2;
+                $colsFeaturedLast = 2;
+            } elseif ($countFeaturedStandard % 3 == 1) {
+                // 5 or 1
+                $colsFeaturedFirst = 1;
+                $rowsFeaturedLast = (--$countFeaturedStandard) / 2;
+                $colsFeaturedLast = 2;
+            }
+
+        }
+
+
+        print "countStandard:" . $countFeaturedStandard . " colsFirst : " . $colsFeaturedFirst . " rowslast: " . $rowsFeaturedLast . " colsLast " . $colsFeaturedLast;
         /*
+
+        10 mod = 1 res 3
         9 mod = 0 res 3
         8 mod = 2 res 2 oder 3 + 3 + 2
         7 mod = 1 res 3 + 3 + 1
@@ -56,14 +87,21 @@
 
              <div class="row">
         <?php
+        $postNumber = 0;
+        $colsFeaturedFirstIndex = 0;
+		if ($colsFeaturedFirst)
+            $colsFeaturedFirstIndex = $colsFeaturedFirst;
 
-		foreach ( $featuredStandard as $order => $post ) :
+        foreach ( $featuredStandard as $order => $post ) {
 			setup_postdata( $post );
+            if ($colsFeaturedFirstIndex) {
+                // in first row
+            }
             $post->postNumber = $postNumber++;
 
            	 // Include the featured content template.
 			get_template_part( 'content', 'featured-post' );
-		endforeach;
+        }
 
 
         ?>

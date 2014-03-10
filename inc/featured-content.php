@@ -151,11 +151,11 @@ class Featured_Content {
         // todo: delete all other stuff, it's not necessary...
 
 		// Return array of cached results if they exist.
-		$featured_ids = get_transient( 'featured_content_ids' );
+	/*	$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
 			return array_map( 'absint', (array) $featured_ids );
 		}
-
+*/
 		$settings = self::get_setting();
 
 		// Query for featured posts.
@@ -178,6 +178,7 @@ class Featured_Content {
 		if ( ! $featured ) {
 			return self::get_sticky_posts();
 		}
+
 
 		// Ensure correct format before save/return.
 		$featured_ids = wp_list_pluck( (array) $featured, 'ID' );
@@ -475,7 +476,8 @@ class Featured_Content {
 
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
-		$options['quantity'] = self::sanitize_quantity( $options['quantity'] );
+		$options['quantity'] = 100; // todo: store in jfl options...
+        //self::sanitize_quantity( $options['quantity'] );
 
 		if ( 'all' != $key ) {
 			return isset( $options[ $key ] ) ? $options[ $key ] : false;

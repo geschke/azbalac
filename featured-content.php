@@ -19,8 +19,11 @@
 		do_action( 'jfl_featured_posts_before' );
 
 		$featured_posts = jfl_get_featured_posts();
+
         foreach ($featured_posts as $featured_post) {
             $featured = get_post_meta($featured_post->ID, 'jfl_featured_post', true);
+            // print "post: " . $featured_post->ID . "<br/>";
+            //var_dump($featured);
             if ($featured == '_1') {
                 $featureLarge[] = $featured_post;
             } elseif ($featured == '_2') {
@@ -39,8 +42,10 @@
 
     if (isset($featuredStandard) && count($featuredStandard)) {
 
-
         $countFeaturedStandard = count($featuredStandard);
+       // echo "featuredstandard";
+       // var_dump($countFeaturedStandard);
+
         if ($countFeaturedStandard >= 6) {
             $colsFeaturedFirst = $countFeaturedStandard % 3;
             $countFeaturedStandard -= $colsFeaturedFirst;
@@ -59,7 +64,12 @@
                 $rowsFeaturedLast = $countFeaturedStandard / 2;
                 $colsFeaturedLast = 2;
             } elseif ($countFeaturedStandard % 3 == 1) {
-                // 5 or 1
+                // 1
+                $colsFeaturedFirst = 1;
+                $rowsFeaturedLast = 0;
+                $colsFeaturedLast = 0;
+            } elseif ($countFeaturedStandard % 3 == 2) {
+                // 5
                 $colsFeaturedFirst = 1;
                 $rowsFeaturedLast = (--$countFeaturedStandard) / 2;
                 $colsFeaturedLast = 2;
@@ -68,7 +78,7 @@
         }
 
 
-        print "countStandard:" . $countFeaturedStandard . " colsFirst : " . $colsFeaturedFirst . " rowslast: " . $rowsFeaturedLast . " colsLast " . $colsFeaturedLast;
+       // print "countStandard:" . $countFeaturedStandard . " colsFirst : " . $colsFeaturedFirst . " rowslast: " . $rowsFeaturedLast . " colsLast " . $colsFeaturedLast;
         /*
 
         10 mod = 1 res 3
@@ -91,11 +101,24 @@
         $colsFeaturedFirstIndex = 0;
 		if ($colsFeaturedFirst)
             $colsFeaturedFirstIndex = $colsFeaturedFirst;
-
+//echo "colsfeatured first: " . $colsFeaturedFirst;
+        $colsTranslate = array(3 => 4,
+        2 => 6,
+        1 => 12);
         foreach ( $featuredStandard as $order => $post ) {
 			setup_postdata( $post );
             if ($colsFeaturedFirstIndex) {
                 // in first row
+                // 3: 4, 2: 6, 1: 12
+                $post->themeCols = $colsTranslate[$colsFeaturedFirst];
+                $colsFeaturedFirstIndex--;
+            } else {
+                $post->themeCols = $colsTranslate[$colsFeaturedLast];
+                if ($countFeaturedStandard > $postNumber - $colsFeaturedFirst + 1 &&
+                    ($postNumber - $colsFeaturedFirst + 1) % $colsFeaturedLast == 1 &&
+                    $postNumber != 0) {
+                    echo '</div><div class="row">';
+                }
             }
             $post->postNumber = $postNumber++;
 

@@ -8,8 +8,10 @@
  */
 ?>
 
-<div class="col-lg-4 col-md-4 col-sm-4">
+<?php
+echo '<div class="col-lg-' .  $post->themeCols . ' col-md-' . $post->themeCols . ' col-sm-' . $post->themeCols . '">';
 
+    ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 	<?php

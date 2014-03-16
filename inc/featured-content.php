@@ -151,11 +151,11 @@ class Featured_Content {
         // todo: delete all other stuff, it's not necessary...
 
 		// Return array of cached results if they exist.
-	/*	$featured_ids = get_transient( 'featured_content_ids' );
+		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
 			return array_map( 'absint', (array) $featured_ids );
 		}
-*/
+
 		$settings = self::get_setting();
 
 		// Query for featured posts.
@@ -485,7 +485,7 @@ class Featured_Content {
         else {
             $options['quantity'] = 10;
         }
-      
+
         //self::sanitize_quantity( $options['quantity'] );
 
 		if ( 'all' != $key ) {

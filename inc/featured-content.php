@@ -83,7 +83,7 @@ class Featured_Content {
 		add_filter( $filter,                              array( __CLASS__, 'get_featured_posts' )    );
 		//add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
 		//add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
-		//add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
+		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
 		//add_action( 'delete_post_tag',                    array( __CLASS__, 'delete_post_tag'    )    );
 		//add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_scripts'    )    );
 		//add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
@@ -476,7 +476,16 @@ class Featured_Content {
 
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
-		$options['quantity'] = 100; // todo: store in jfl options...
+
+        global $jfl_theme;
+        if (isset($jfl_theme['featured_articles_max']))
+        {
+            $options['quantity'] = intval($jfl_theme['featured_articles_max']);
+        }
+        else {
+            $options['quantity'] = 10;
+        }
+      
         //self::sanitize_quantity( $options['quantity'] );
 
 		if ( 'all' != $key ) {

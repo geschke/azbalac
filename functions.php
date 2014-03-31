@@ -7,6 +7,83 @@ require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
 
+if ( ! function_exists( 'jfl_setup' ) ) :
+    /**
+     * jfl theme setup.
+     *
+     * Set up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support post thumbnails.
+     *
+     * @since jfl 0.1
+     */
+    function jfl_setup() {
+
+        /*
+         * Make jfl theme available for translation.
+         *
+         * Translations can be added to the /languages/ directory.
+         * If you're building a theme based on jfl, use a find and
+         * replace to change 'jfl' to the name of your theme in all
+         * template files.
+         */
+        load_theme_textdomain( 'jfl', get_template_directory() . '/languages' );
+
+        // This theme styles the visual editor to resemble the theme style.
+        //add_editor_style( array( 'css/editor-style.css', twentyfourteen_font_url() ) );
+
+        // Add RSS feed links to <head> for posts and comments.
+        add_theme_support( 'automatic-feed-links' );
+
+        // Enable support for Post Thumbnails, and declare two sizes.
+        //add_theme_support( 'post-thumbnails' );
+        //set_post_thumbnail_size( 672, 372, true );
+        //add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
+
+        // This theme uses wp_nav_menu() in two locations.
+        //register_nav_menus( array(
+        //    'primary'   => __( 'Top primary menu', 'twentyfourteen' ),
+        //    'secondary' => __( 'Secondary menu in left sidebar', 'twentyfourteen' ),
+        //) );
+
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form', 'comment-form', 'comment-list',
+        ) );
+
+        /*
+         * Enable support for Post Formats.
+         * See http://codex.wordpress.org/Post_Formats
+         */
+        //add_theme_support( 'post-formats', array(
+        //    'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+        //) );
+
+        // This theme allows users to set a custom background.
+        //add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
+        //    'default-color' => 'f5f5f5',
+        //) ) );
+
+        // Add support for featured content.
+        //add_theme_support( 'featured-content', array(
+        //    'featured_content_filter' => 'twentyfourteen_get_featured_posts',
+        //    'max_posts' => 6,
+        //) );
+
+        // This theme uses its own gallery styles.
+        //add_filter( 'use_default_gallery_style', '__return_false' );
+    }
+endif; // jfl_setup
+add_action( 'after_setup_theme', 'jfl_setup' );
+
+
+
+
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'class'         => '',
@@ -345,7 +422,7 @@ endif;
 
 
 function jfl_excerpt_more( $more ) {
-    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">Read More »</a></p>';
+    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More »', 'jfl' ). '</a></p>';
 }
 add_filter( 'excerpt_more', 'jfl_excerpt_more' );
 

@@ -101,8 +101,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
       /*  function dynamic_section($sections) {
             //$sections = array();
             $sections[] = array(
-                'title' => __('Section via hook', 'redux-framework-demo'),
-                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'redux-framework-demo'),
+                'title' => __('Section via hook', 'jfl'),
+                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'jfl'),
                 'icon' => 'el-icon-paper-clip',
                 // Leave this as a blank section, no options just some intro text set above.
                 'fields' => array()
@@ -170,7 +170,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             $screenshot = $this->theme->get_screenshot();
             $class = $screenshot ? 'has-screenshot' : '';
 
-            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'redux-framework-demo'), $this->theme->display('Name'));
+            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'jfl'), $this->theme->display('Name'));
             ?>
             <div id="current-theme" class="<?php echo esc_attr($class); ?>">
                 <?php if ($screenshot) : ?>
@@ -188,14 +188,14 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
                 <div>
                     <ul class="theme-info">
-                        <li><?php printf(__('By %s', 'redux-framework-demo'), $this->theme->display('Author')); ?></li>
-                        <li><?php printf(__('Version %s', 'redux-framework-demo'), $this->theme->display('Version')); ?></li>
-                        <li><?php echo '<strong>' . __('Tags', 'redux-framework-demo') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
+                        <li><?php printf(__('By %s', 'jfl'), $this->theme->display('Author')); ?></li>
+                        <li><?php printf(__('Version %s', 'jfl'), $this->theme->display('Version')); ?></li>
+                        <li><?php echo '<strong>' . __('Tags', 'jfl') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
                     </ul>
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
                     <?php
                     if ($this->theme->parent()) {
-                        printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'redux-framework-demo'), $this->theme->parent()->display('Name'));
+                        printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'jfl'), $this->theme->parent()->display('Name'));
                     }
                     ?>
 
@@ -244,7 +244,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
             $this->sections[] =  array(
                 'title' => __('Home Settings', 'jfl'),
-                'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'redux-framework-demo'),
+                'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'jfl'),
                 'icon' => 'el-icon-home',
                 // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                 'fields' => array(
@@ -252,7 +252,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                         'id'=>'featured_articles_max',
                         'type' => 'slider',
                         'title' => __('Maximum number of featured articles on homepage', 'jfl'),
-                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'redux-framework-demo'),
+                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'jfl'),
                         "default" 		=> "5",
                         "min" 		=> "0",
                         "step"		=> "1",
@@ -305,8 +305,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                         'id'=>'navbar-fixed',
                         'type' => 'button_set',
                         'title' => __('Navbar fixed options', 'jfl'),
-                        //'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-                        //'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+                        //'subtitle' => __('No validation can be done on this field type', 'jfl'),
+                        //'desc' => __('This is the description field, again good for additional info.', 'jfl'),
                         'options' => array('default' => 'Default','fixed-top' => 'Fixed to top'),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
@@ -315,8 +315,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                         'id'=>'navbar-style-inverse',
                         'type' => 'button_set',
                         'title' => __('Navbar style', 'jfl'),
-                        //'subtitle' => __('No validation can be done on this field type', 'redux-framework-demo'),
-                        //'desc' => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
+                        //'subtitle' => __('No validation can be done on this field type', 'jfl'),
+                        //'desc' => __('This is the description field, again good for additional info.', 'jfl'),
                         'options' => array('default' => 'Default','inverse' => 'Inverse'),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
@@ -373,20 +373,20 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
 
             $theme_info = '<div class="redux-framework-section-desc">';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'redux-framework-demo') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'redux-framework-demo') . $this->theme->get('Author') . '</p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'redux-framework-demo') . $this->theme->get('Version') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'jfl') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'jfl') . $this->theme->get('Author') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'jfl') . $this->theme->get('Version') . '</p>';
             $theme_info .= '<p class="redux-framework-theme-data description theme-description">' . $this->theme->get('Description') . '</p>';
             $tabs = $this->theme->get('Tags');
             if (!empty($tabs)) {
-                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'redux-framework-demo') . implode(', ', $tabs) . '</p>';
+                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'jfl') . implode(', ', $tabs) . '</p>';
             }
             $theme_info .= '</div>';
 
             if (file_exists(dirname(__FILE__) . '/../README.md')) {
                 $this->sections['theme_docs'] = array(
                     'icon' => 'el-icon-list-alt',
-                    'title' => __('Documentation', 'redux-framework-demo'),
+                    'title' => __('Documentation', 'jfl'),
                     'fields' => array(
                         array(
                             'id' => '17',
@@ -406,8 +406,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
             $this->sections[] = array(
                 'icon' => 'el-icon-info-sign',
-                'title' => __('Theme Information', 'redux-framework-demo'),
-                'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'redux-framework-demo'),
+                'title' => __('Theme Information', 'jfl'),
+                'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'jfl'),
                 'fields' => array(
                     array(
                         'id' => 'raw_new_info',
@@ -420,7 +420,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             if (file_exists(trailingslashit(dirname(__FILE__)) . 'README.html')) {
                 $tabs['docs'] = array(
                     'icon' => 'el-icon-book',
-                    'title' => __('Documentation', 'redux-framework-demo'),
+                    'title' => __('Documentation', 'jfl'),
                     'content' => nl2br(file_get_contents(trailingslashit(dirname(__FILE__)) . 'README.html'))
                 );
             }
@@ -431,18 +431,18 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
             $this->args['help_tabs'][] = array(
                 'id' => 'redux-opts-1',
-                'title' => __('Theme Information 1', 'redux-framework-demo'),
-                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo')
+                'title' => __('Theme Information 1', 'jfl'),
+                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'jfl')
             );
 
             $this->args['help_tabs'][] = array(
                 'id' => 'redux-opts-2',
-                'title' => __('Theme Information 2', 'redux-framework-demo'),
-                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo')
+                'title' => __('Theme Information 2', 'jfl'),
+                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'jfl')
             );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = __('<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework-demo');
+            $this->args['help_sidebar'] = __('<p>This is the sidebar content, HTML is allowed.</p>', 'jfl');
         }
 
         /**
@@ -524,13 +524,13 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                 } else {
                     $v = str_replace("-", "_", $this->args['opt_name']);
                 }
-                $this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'redux-framework-demo'), $v);
+                $this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'jfl'), $v);
             } else {
-                $this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'redux-framework-demo');
+                $this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'jfl');
             }
 
             // Add content after the form.
-            $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'redux-framework-demo');
+            $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'jfl');
         }
 
     }

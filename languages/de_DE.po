@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: jfl v0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-03-31 22:31:59+0200\n"
+"PO-Revision-Date: 2014-04-07 22:09:45+0200\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,10 @@ msgstr "Archiv (Monat): %s"
 #@ jfl
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr ""
+msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ jfl
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -48,7 +48,7 @@ msgstr "Archiv (Tag): %s"
 #@ jfl
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: archive.php:45
 #@ jfl
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ jfl
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -129,12 +129,12 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:74
-#, fuzzy, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ jfl
 msgid "Proudly powered by %s"
 msgstr "Seite %s"
 
-#: functions.php:222
+#: functions.php:223
 #@ default
 msgid "Search"
 msgstr "Suche"
@@ -171,7 +171,7 @@ msgstr ""
 #, fuzzy
 #@ jfl
 msgid "Posts navigation"
-msgstr "Kommentar-Navigation"
+msgstr "Beitrags-Navigation"
 
 #: admin/admin-config.php:173
 #: admin/admin-config_pre.php:33
@@ -193,7 +193,7 @@ msgstr ""
 #, php-format
 #@ jfl
 msgid "By %s"
-msgstr ""
+msgstr "Von %s"
 
 #: admin/admin-config.php:192
 #: admin/admin-config_pre.php:53
@@ -206,7 +206,7 @@ msgstr "Version %s"
 #: admin/admin-config_pre.php:54
 #@ jfl
 msgid "Tags"
-msgstr ""
+msgstr "Tags"
 
 #: admin/admin-config.php:198
 #: admin/admin-config_pre.php:58
@@ -237,7 +237,7 @@ msgstr ""
 #: admin/admin-config_pre.php:322
 #@ jfl
 msgid "Maximum number of featured articles on homepage"
-msgstr "Maximale Anzahl von hervorgehobenen (\\\"feaatured\\\") Artikeln auf der Homepage"
+msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
 
 #: admin/admin-config.php:274
 #: admin/admin-config_pre.php:413
@@ -374,7 +374,7 @@ msgstr ""
 #: admin/admin-config_pre.php:239
 #@ jfl
 msgid "Theme Information 1"
-msgstr ""
+msgstr "Theme Informationen 1"
 
 #: admin/admin-config.php:435
 #: admin/admin-config.php:441
@@ -382,19 +382,19 @@ msgstr ""
 #: admin/admin-config_pre.php:245
 #@ jfl
 msgid "<p>This is the tab content, HTML is allowed.</p>"
-msgstr ""
+msgstr "<p>Das ist der Inhalt des Tabs, HTML ist erlaubt.</p>"
 
 #: admin/admin-config.php:440
 #: admin/admin-config_pre.php:244
 #@ jfl
 msgid "Theme Information 2"
-msgstr ""
+msgstr "Theme Informationen 2"
 
 #: admin/admin-config.php:445
 #: admin/admin-config_pre.php:249
 #@ jfl
 msgid "<p>This is the sidebar content, HTML is allowed.</p>"
-msgstr ""
+msgstr "<p>Das ist der Inhalt der Sidebar, HTML ist erlaubt.</p>"
 
 #: admin/admin-config.php:465
 #: admin/admin-config.php:466
@@ -446,7 +446,7 @@ msgstr ""
 #: content.php:68
 #@ jfl
 msgid "Tags: "
-msgstr ""
+msgstr "Tags: "
 
 #: content.php:79
 #, php-format
@@ -479,18 +479,12 @@ msgstr "&laquo; Zurück"
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:219
-#: functions.php:220
-#@ default
-msgid "Search for:"
-msgstr ""
-
-#: functions.php:318
+#: functions.php:319
 #@ default
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:425
+#: functions.php:426
 #@ jfl
 msgid "Read More »"
 msgstr "Weiterlesen »"
@@ -499,4 +493,68 @@ msgstr "Weiterlesen »"
 #@ jfl
 msgid "Set layout of your site."
 msgstr "Setze Layout der Site"
+
+#: inc/page_options.php:5
+#@ jfl
+msgid "Featured Post"
+msgstr "Hervorgehobener Beitrag"
+
+#: inc/page_options.php:6
+#@ jfl
+msgid "Not featured"
+msgstr "keine Hervorhebung"
+
+#: inc/page_options.php:7
+#@ jfl
+msgid "Large Feature (Jumbotron)"
+msgstr "Große Hervorhebung (Jumbotron)"
+
+#: inc/page_options.php:8
+#@ jfl
+msgid "Featured"
+msgstr "Hervorgehoben"
+
+#: content-none.php:12
+#@ jfl
+msgid "Nothing Found"
+msgstr "Nicht gefunden"
+
+#: content-none.php:18
+#, php-format
+#@ jfl
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:22
+#@ jfl
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen Schlüsselwörtern erneut."
+
+#: content-none.php:27
+#@ jfl
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
+
+#: functions.php:220
+#@ default
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: functions.php:221
+#@ default
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: search.php:46
+#, php-format
+#@ jfl
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: inc/page_options.php:2
+#@ jfl
+msgid "Theme Options:"
+msgstr "Theme Einstellungen:"
 

@@ -22,9 +22,7 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 
 <?php
-
 $layoutStyle = jfl_get_layout();
-// todo: switch main content within columns...
 
 if ( is_front_page() && jfl_has_featured_posts() ) {
     // Include the featured content template.
@@ -43,8 +41,6 @@ if ($layoutStyle['content'] == 2) {
 <?php
 }
 ?>
-
-
 
     <div class="<?php echo $layoutStyle['col_1']; ?>">
 

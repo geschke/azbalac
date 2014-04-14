@@ -76,7 +76,7 @@
         foreach($categories as $category) {
             $output .= '<li><a href="'.get_category_link( $category->term_id ).'"
                 title="' .
-                esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name
+                esc_attr( sprintf( __( "View all posts in %s",'jfl' ), $category->name ) ) . '">'.$category->cat_name
                 .'</a></li>'.$separator;
         }
         echo trim($output, $separator);

@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage jfl
- * @since jfl 1.0
+ * @since jfl 0.1
  */
 
 /*
@@ -62,7 +62,7 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 
 	<?php
-    $formArgs = array('comment_field'        => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
+    $formArgs = array('comment_field'        => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'jfl' ) . '</label>' .
         '<div class="col-sm-10"><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div>',
     );
 

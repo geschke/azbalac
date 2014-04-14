@@ -81,7 +81,16 @@ if ( ! function_exists( 'jfl_setup' ) ) :
 endif; // jfl_setup
 add_action( 'after_setup_theme', 'jfl_setup' );
 
-
+/**
+ * Set up the content width value based on the theme's design.
+ *
+ * @see twentyfourteen_content_width()
+ *
+ * @since jfl 0.1
+ */
+if ( ! isset( $content_width ) ) {
+    $content_width = 474;
+}
 
 
 if ( function_exists('register_sidebar') ) {
@@ -129,13 +138,13 @@ function jfl_comment_fields($fields) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
 
-    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*' ) . '</label> ' .
+    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','jfl' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*' ) . '</label> ' .
+    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'jfl' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website' ) . '</label>' .
+    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'jfl' ) . '</label>' .
         '<div class="col-sm-10"><input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>';
 
     return $fields;
@@ -217,8 +226,8 @@ if ( ! function_exists( 'jfl_get_search_form' ) ) :
 function jfl_get_search_form() {
 
     $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label' ) . '</label>
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','jfl' ) . '</label>
+    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','jfl' ) . '" value="' . get_search_query() . '" name="s" id="s" />
     </div>
     <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
     </div>
@@ -423,7 +432,7 @@ endif;
 
 
 function jfl_excerpt_more( $more ) {
-    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More »', 'jfl' ). '</a></p>';
+    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More &raquo;', 'jfl' ). '</a></p>';
 }
 add_filter( 'excerpt_more', 'jfl_excerpt_more' );
 

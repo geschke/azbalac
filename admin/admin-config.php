@@ -15,7 +15,9 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
         public function __construct() {
             // This is needed. Bah WordPress bugs.  ;)
-            if ( defined('TEMPLATEPATH') && strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( TEMPLATEPATH ) ) !== false) {
+            //var_dump(TEMPLATEPATH);
+            //var_dump(get_template_directory());
+            if ( strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( get_template_directory() ) ) !== false) {
                 $this->initSettings();
             } else {
                 add_action('plugins_loaded', array($this, 'initSettings'), 10);
@@ -75,7 +77,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
               $filename = dirname(__FILE__) . '/style' . '.css';
               global $wp_filesystem;
               if( empty( $wp_filesystem ) ) {
-              require_once( ABSPATH .'/wp-admin/includes/file.php' );
+              //require_once( ABSPATH .'/wp-admin/includes/file.php' );
               WP_Filesystem();
               }
 
@@ -207,17 +209,6 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             $item_info = ob_get_contents();
 
             ob_end_clean();
-
-            $sampleHTML = '';
-            if (file_exists(dirname(__FILE__) . '/info-html.html')) {
-                /** @global WP_Filesystem_Direct $wp_filesystem  */
-                global $wp_filesystem;
-                if (empty($wp_filesystem)) {
-                    require_once(ABSPATH . '/wp-admin/includes/file.php');
-                    WP_Filesystem();
-                }
-                $sampleHTML = $wp_filesystem->get_contents(dirname(__FILE__) . '/info-html.html');
-            }
 
 
             $designStylesheetPath = get_template_directory() . '/css/design/';
@@ -384,6 +375,9 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             $theme_info .= '</div>';
 
             if (file_exists(dirname(__FILE__) . '/../README.md')) {
+                // ugly stuff! A local file should be readable without going remote!
+                // And the WP_Filesystem API is not really senseful, there is no need for credentials from a formular!!!
+                $readmeContent = wp_remote_retrieve_body( wp_remote_get( get_template_directory_uri() . '/README.md' )); //$wp_filesystem->get_contents(dirname(__FILE__) . '/../README.md');
                 $this->sections['theme_docs'] = array(
                     'icon' => 'el-icon-list-alt',
                     'title' => __('Documentation', 'jfl'),
@@ -392,7 +386,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                             'id' => '17',
                             'type' => 'raw',
                             'markdown' => true,
-                            'content' => file_get_contents(dirname(__FILE__) . '/../README.md')
+                            'content' => $readmeContent
                         ),
                     ),
                 );
@@ -417,13 +411,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                 ),
             );
 
-            if (file_exists(trailingslashit(dirname(__FILE__)) . 'README.html')) {
-                $tabs['docs'] = array(
-                    'icon' => 'el-icon-book',
-                    'title' => __('Documentation', 'jfl'),
-                    'content' => nl2br(file_get_contents(trailingslashit(dirname(__FILE__)) . 'README.html'))
-                );
-            }
+
         }
 
         public function setHelpTabs() {

@@ -56,7 +56,7 @@
 */
 	$( function() {
 		// Search toggle.
-		$( '.search-toggle' ).on( 'click.jfl', function( event ) {
+		$( '.search-toggle' ).on( 'click.tikva', function( event ) {
 			var that    = $( this ),
 				wrapper = $( '.search-box-wrapper' );
 

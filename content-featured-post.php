@@ -3,8 +3,8 @@
  * The template for displaying featured posts on the front page
  *
  * @package WordPress
- * @subpackage jfl
- * @since jfl 1.0
+ * @subpackage tikva
+ * @since tikva 0.1
  */
 ?>
 
@@ -20,7 +20,7 @@ echo '<div class="col-lg-' .  $post->themeCols . ' col-md-' . $post->themeCols .
 			if ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) {
 				the_post_thumbnail();
 			} else {
-				the_post_thumbnail( 'jfl-full-width' );
+				the_post_thumbnail( 'tikva-full-width' );
 			}
 		endif;
 	?>

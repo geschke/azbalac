@@ -12,16 +12,16 @@
 	<div class="featured-content-inner">
 	<?php
 		/**
-		 * Fires before the jfl featured content.
+		 * Fires before the tikva featured content.
 		 *
-		 * @since jfl 1.0
+		 * @since tikva 0.1
 		 */
-		do_action( 'jfl_featured_posts_before' );
+		do_action( 'tikva_featured_posts_before' );
 
-		$featured_posts = jfl_get_featured_posts();
+		$featured_posts = tikva_get_featured_posts();
 
         foreach ($featured_posts as $featured_post) {
-            $featured = get_post_meta($featured_post->ID, 'jfl_featured_post', true);
+            $featured = get_post_meta($featured_post->ID, 'tikva_featured_post', true);
             // print "post: " . $featured_post->ID . "<br/>";
             //var_dump($featured);
             if ($featured == '_1') {
@@ -135,11 +135,11 @@
     }
 
 		/**
-		 * Fires after the jfl featured content.
+		 * Fires after the tikva featured content.
 		 *
-		 * @since jfl 1.0
+		 * @since tikva 0.1
 		 */
-		do_action( 'jfl_featured_posts_after' );
+		do_action( 'tikva_featured_posts_after' );
 
 		wp_reset_postdata();
 	?>

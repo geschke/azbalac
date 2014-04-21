@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget area
  *
- * @package jfl
+ * @package tikva
  * @subpackage Themes
  */
 ?>

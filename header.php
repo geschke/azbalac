@@ -21,14 +21,14 @@
 <?php
 
 
-$layoutStyle = jfl_get_layout();
+$layoutStyle = tikva_get_layout();
 
-global $jfl_theme;
+global $tikva_theme;
     // maybe find a better solution...
 // todo: show different kinds of navigation and header
 // todo: use header image, if available
 // todo: set header background color
-        if (isset($jfl_theme['navbar-fixed']) && $jfl_theme['navbar-fixed'] == 'fixed-top') {
+        if (isset($tikva_theme['navbar-fixed']) && $tikva_theme['navbar-fixed'] == 'fixed-top') {
             $navbarFixed = 'fixed-top';
         }
         else {
@@ -64,7 +64,7 @@ global $jfl_theme;
 
 $navbarStyleClass = '';
 
-if (isset($jfl_theme['navbar-style-inverse']) && $jfl_theme['navbar-style-inverse'] == 'inverse') {
+if (isset($tikva_theme['navbar-style-inverse']) && $tikva_theme['navbar-style-inverse'] == 'inverse') {
     $navbarStyleClass .= ' navbar-inverse';
 }
 else {
@@ -79,17 +79,17 @@ else {
 }
 
 
-if (isset($jfl_theme['color-bg-header']) && $jfl_theme['color-bg-header']) {
-    $headerStyleColorBg = $jfl_theme['color-bg-header'];
+if (isset($tikva_theme['color-bg-header']) && $tikva_theme['color-bg-header']) {
+    $headerStyleColorBg = $tikva_theme['color-bg-header'];
 }
 else {
     $headerStyleColorBg = '#000000';
 }
-if (isset($jfl_theme['color-fg-header']) && $jfl_theme['color-fg-header'] && stripos($jfl_theme['color-fg-header'], 'transparent') !== false ) {
+if (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] && stripos($tikva_theme['color-fg-header'], 'transparent') !== false ) {
     $headerStyleColorFg = '';
 }
-elseif (isset($jfl_theme['color-fg-header']) && $jfl_theme['color-fg-header'] ) {
-    $headerStyleColorFg = ' color: ' . $jfl_theme['color-fg-header'] .';';
+elseif (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] ) {
+    $headerStyleColorFg = ' color: ' . $tikva_theme['color-fg-header'] .';';
 }
 else {
     $headerStyleColorFg = '';
@@ -111,8 +111,8 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
     <div class="masthead col-md-12 col-sm-12 col-xs-12">
         <h3 class="text-muted"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
         <?php
-        if (isset($jfl_theme['header-image']['url']) && $jfl_theme['header-image']['url']) {
-            echo '<img height="' . $jfl_theme['header-image']['height'] . '" width="' . $jfl_theme['header-image']['width'] . '" src="' . $jfl_theme['header-image']['url'] .'"/>';
+        if (isset($tikva_theme['header-image']['url']) && $tikva_theme['header-image']['url']) {
+            echo '<img height="' . $tikva_theme['header-image']['height'] . '" width="' . $tikva_theme['header-image']['width'] . '" src="' . $tikva_theme['header-image']['url'] .'"/>';
         }
         ?>
     </div>

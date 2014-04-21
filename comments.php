@@ -5,8 +5,8 @@
  * The area of the page that contains comments and the comment form.
  *
  * @package WordPress
- * @subpackage jfl
- * @since jfl 0.1
+ * @subpackage tikva
+ * @since tikva 0.1
  */
 
 /*
@@ -24,16 +24,16 @@ if ( post_password_required() ) {
 
 	<h2 class="comments-title">
 		<?php
-			printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'jfl' ),
+			printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'tikva' ),
 				number_format_i18n( get_comments_number() ), get_the_title() );
 		?>
 	</h2>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'jfl' ); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'jfl' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'jfl' ) ); ?></div>
+		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tikva' ); ?></h1>
+		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tikva' ) ); ?></div>
+		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tikva' ) ); ?></div>
 	</nav><!-- #comment-nav-above -->
 	<?php endif; // Check for comment navigation. ?>
 
@@ -49,20 +49,20 @@ if ( post_password_required() ) {
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'jfl' ); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'jfl' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'jfl' ) ); ?></div>
+		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tikva' ); ?></h1>
+		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tikva' ) ); ?></div>
+		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tikva' ) ); ?></div>
 	</nav><!-- #comment-nav-below -->
 	<?php endif; // Check for comment navigation. ?>
 
 	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments"><?php _e( 'Comments are closed.', 'jfl' ); ?></p>
+	<p class="no-comments"><?php _e( 'Comments are closed.', 'tikva' ); ?></p>
 	<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
 
 	<?php
-    $formArgs = array('comment_field'        => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'jfl' ) . '</label>' .
+    $formArgs = array('comment_field'        => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'tikva' ) . '</label>' .
         '<div class="col-sm-10"><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div>',
     );
 

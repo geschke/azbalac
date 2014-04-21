@@ -6,7 +6,7 @@
  * Date: 20.02.14
  * Time: 18:54
  */
-class JflMetaboxes
+class TikvaMetaboxes
 {
 
     public function __construct()
@@ -14,34 +14,34 @@ class JflMetaboxes
         global $data;
         $this->data = $data;
 
-        add_action('add_meta_boxes', array($this, 'jfl_add_meta_boxes'));
-        add_action('save_post', array($this, 'jfl_save_meta_boxes'));
+        add_action('add_meta_boxes', array($this, 'tikva_add_meta_boxes'));
+        add_action('save_post', array($this, 'tikva_save_meta_boxes'));
     }
 
-    public function jfl_add_meta_boxes()
+    public function tikva_add_meta_boxes()
     {
-        $this->jfl_add_meta_box('jfl_post_options', 'Post Options', 'post');
-        $this->jfl_add_meta_box('jfl_page_options', 'Page Options', 'page');
+        $this->tikva_add_meta_box('tikva_post_options', 'Post Options', 'post');
+        $this->tikva_add_meta_box('tikva_page_options', 'Page Options', 'page');
     }
 
-    public function jfl_add_meta_box($id, $label, $post_type)
+    public function tikva_add_meta_box($id, $label, $post_type)
     {
         add_meta_box(
-            'jfl_' . $id,
+            'tikva_' . $id,
             $label,
             array($this, $id),
             $post_type
         );
     }
 
-    public function jfl_save_meta_boxes($post_id)
+    public function tikva_save_meta_boxes($post_id)
     {
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
             return;
         }
 
         foreach ($_POST as $key => $value) {
-            if (strstr($key, 'jfl_')) {
+            if (strstr($key, 'tikva_')) {
                 update_post_meta($post_id, $key, $value);
             }
         }
@@ -49,44 +49,44 @@ class JflMetaboxes
 
     public function pageOptions()
     {
-        echo '<h2 style="margin-top:0;">' . _e('Theme Options:', 'jfl') . '</h2>';
-        $this->jfl_select('featured_post',
-            __('Featured Post', 'jfl'),
-            array('_0' => __('Not featured', 'jfl'),
-                '_1' => __('Large Feature (Jumbotron)', 'jfl'),
-                '_2' => __('Featured', 'jfl')),
+        echo '<h2 style="margin-top:0;">' . _e('Theme Options:', 'tikva') . '</h2>';
+        $this->tikva_select('featured_post',
+            __('Featured Post', 'tikva'),
+            array('_0' => __('Not featured', 'tikva'),
+                '_1' => __('Large Feature (Jumbotron)', 'tikva'),
+                '_2' => __('Featured', 'tikva')),
             ''
         );
 
     }
 
-    public function jfl_post_options()
+    public function tikva_post_options()
     {
         $data = $this->data;
         $this->pageOptions(); //        get_template_part('inc/page_options');
         //require_once( get_template_directory() . '/inc/page_options.php' );
     }
 
-    public function jfl_page_options()
+    public function tikva_page_options()
     {
         $this->pageOptions(); //        get_template_part('inc/page_options');
         //get_template_part('inc/page_options');
         //require_once( get_template_directory() . '/inc/page_options.php' );
     }
 
-    public function jfl_select($id, $label, $options, $desc = '')
+    public function tikva_select($id, $label, $options, $desc = '')
     {
         global $post;
 
         $html = '';
-        $html .= '<div class="jfl_metabox_field">';
-        $html .= '<label for="jfl_' . $id . '">';
+        $html .= '<div class="tikva_metabox_field">';
+        $html .= '<label for="tikva_' . $id . '">';
         $html .= $label;
         $html .= '</label>';
         $html .= '<div class="field">';
-        $html .= '<select id="jfl_' . $id . '" name="jfl_' . $id . '">';
+        $html .= '<select id="tikva_' . $id . '" name="tikva_' . $id . '">';
         foreach ($options as $key => $option) {
-            if (get_post_meta($post->ID, 'jfl_' . $id, true) == $key) {
+            if (get_post_meta($post->ID, 'tikva_' . $id, true) == $key) {
                 $selected = 'selected="selected"';
             } else {
                 $selected = '';
@@ -106,4 +106,4 @@ class JflMetaboxes
 
 }
 
-$metaboxes = new JflMetaboxes();
+$metaboxes = new TikvaMetaboxes();

@@ -3,8 +3,8 @@
  * The template for displaying Search Results pages
  *
  * @package WordPress
- * @subpackage jfl
- * @since jfl 1.0
+ * @subpackage tikva
+ * @since tikva 0.1
  */
 
 get_header(); ?>
@@ -15,9 +15,9 @@ get_header(); ?>
     <div id="main-content" class="main-content">
 
 <?php
-$layoutStyle = jfl_get_layout();
+$layoutStyle = tikva_get_layout();
 
-if ( is_front_page() && jfl_has_featured_posts() ) {
+if ( is_front_page() && tikva_has_featured_posts() ) {
     // Include the featured content template.
     get_template_part( 'featured-content' );
     //   echo "<h1>show featured content</h1>";
@@ -43,7 +43,7 @@ if ($layoutStyle['content'] == 2) {
 			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'jfl' ), get_search_query() ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tikva' ), get_search_query() ); ?></h1>
 			</header><!-- .page-header -->
 
 				<?php
@@ -59,7 +59,7 @@ if ($layoutStyle['content'] == 2) {
 
 					endwhile;
 					// Previous/next post navigation.
-					jfl_paging_nav();
+					tikva_paging_nav();
 
 				else :
 					// If no content, include the "No posts found" template.

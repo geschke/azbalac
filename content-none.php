@@ -3,28 +3,28 @@
  * The template for displaying a "No posts found" message
  *
  * @package WordPress
- * @subpackage jfl
- * @since jfl 0.1
+ * @subpackage tikva
+ * @since tikva 0.1
  */
 ?>
 
 <header class="page-header">
-	<h1 class="page-title"><?php _e( 'Nothing Found', 'jfl' ); ?></h1>
+	<h1 class="page-title"><?php _e( 'Nothing Found', 'tikva' ); ?></h1>
 </header>
 
 <div class="page-content">
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'jfl' ), admin_url( 'post-new.php' ) ); ?></p>
+	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'tikva' ), admin_url( 'post-new.php' ) ); ?></p>
 
 	<?php elseif ( is_search() ) : ?>
 
-	<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'jfl' ); ?></p>
+	<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tikva' ); ?></p>
 	<?php get_search_form(); ?>
 
 	<?php else : ?>
 
-	<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'jfl' ); ?></p>
+	<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'tikva' ); ?></p>
 	<?php get_search_form(); ?>
 
 	<?php endif; ?>

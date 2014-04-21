@@ -1,4 +1,4 @@
-jfl Bootstrap Theme
+tikva Bootstrap Theme
 
 Version 0.1
 

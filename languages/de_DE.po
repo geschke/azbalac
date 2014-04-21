@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jfl v0.1\n"
+"Project-Id-Version: Tikva v0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-04-14 13:06:56+0200\n"
+"PO-Revision-Date: 2014-04-21 22:36:16+0200\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,48 +22,48 @@ msgstr ""
 
 #: archive.php:36
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Daily Archives: %s"
 msgstr "Archiv (Tag): %s"
 
 #: archive.php:39
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Monthly Archives: %s"
 msgstr "Archiv (Monat): %s"
 
 #: archive.php:39
-#@ jfl
+#@ tikva
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
-#@ jfl
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
 
 #: archive.php:42
-#@ jfl
+#@ tikva
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
 #: archive.php:45
-#@ jfl
+#@ tikva
 msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
-#@ jfl
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
 
 #: comments.php:27
 #, php-format
-#@ jfl
+#@ tikva
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -71,426 +71,425 @@ msgstr[1] ""
 
 #: comments.php:34
 #: comments.php:52
-#@ jfl
+#@ tikva
 msgid "Comment navigation"
 msgstr "Kommentar-Navigation"
 
 #: comments.php:35
 #: comments.php:53
-#@ jfl
+#@ tikva
 msgid "&larr; Older Comments"
 msgstr "&larr; Ältere Kommentare"
 
 #: comments.php:36
 #: comments.php:54
 #, fuzzy
-#@ jfl
+#@ tikva
 msgid "Newer Comments &rarr;"
-msgstr "% Kommentare"
+msgstr "Neuere Kommentare &rarr;"
 
 #: comments.php:59
-#@ jfl
+#@ tikva
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
 #: content.php:36
-#@ jfl
+#@ tikva
 msgid "Leave a comment"
 msgstr "Schreibe einen Kommentar"
 
 #: content.php:37
-#@ jfl
+#@ tikva
 msgid "1 Comment"
 msgstr "Ein Kommentar"
 
 #: content.php:37
-#@ jfl
+#@ tikva
 msgid "% Comments"
 msgstr "% Kommentare"
 
 #: content.php:41
-#@ jfl
+#@ tikva
 msgid "Edit"
 msgstr "Editieren"
 
 #: content.php:56
-#@ jfl
+#@ tikva
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
 #: content.php:58
-#@ jfl
+#@ tikva
 msgid "Pages:"
 msgstr "Seiten:"
 
 #: footer.php:73
-#@ jfl
+#@ tikva
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:74
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
-#@ jfl
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#@ tikva
 msgid "Proudly powered by %s"
-msgstr "Seite %s"
+msgstr "Präsentiert von %s"
 
-#: functions.php:223
+#: functions.php:232
 #@ default
 msgid "Search"
 msgstr "Suche"
 
 #: inc/featured-content.php:405
 #, fuzzy
-#@ jfl
+#@ tikva
 msgid "Featured Content"
-msgstr "Überspringen zum Inhalt"
+msgstr "Hervorgehobener Inhalt"
 
-#: admin/admin-config.php:281
-#@ jfl
+#: admin/admin-config.php:272
+#@ tikva
 msgid "Layout"
 msgstr "Layout"
 
 #: inc/featured-content.php:406
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
 #: inc/featured-content.php:425
-#@ jfl
+#@ tikva
 msgid "Tag Name"
 msgstr "Tag-Bezeichnung"
 
 #: inc/featured-content.php:430
-#@ jfl
+#@ tikva
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: functions.php:193
+#: functions.php:202
 #, fuzzy
-#@ jfl
+#@ tikva
 msgid "Posts navigation"
 msgstr "Beitrags-Navigation"
 
-#: admin/admin-config.php:173
+#: admin/admin-config.php:175
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Customize &#8220;%s&#8221;"
 msgstr "Anpassen &#8220;%s&#8221;"
 
-#: admin/admin-config.php:179
-#: admin/admin-config.php:182
+#: admin/admin-config.php:181
+#: admin/admin-config.php:184
 #@ default
 msgid "Current theme preview"
 msgstr ""
 
-#: admin/admin-config.php:191
+#: admin/admin-config.php:193
 #, php-format
-#@ jfl
+#@ tikva
 msgid "By %s"
 msgstr "Von %s"
 
-#: admin/admin-config.php:192
+#: admin/admin-config.php:194
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Version %s"
 msgstr "Version %s"
 
-#: admin/admin-config.php:193
-#@ jfl
+#: admin/admin-config.php:195
+#@ tikva
 msgid "Tags"
 msgstr "Tags"
 
-#: admin/admin-config.php:198
+#: admin/admin-config.php:200
 #, php-format
 #@ default
 msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
 msgstr ""
 
-#: admin/admin-config.php:198
-#@ jfl
+#: admin/admin-config.php:200
+#@ tikva
 msgid "http://codex.wordpress.org/Child_Themes"
 msgstr ""
 
-#: admin/admin-config.php:246
-#@ jfl
+#: admin/admin-config.php:237
+#@ tikva
 msgid "Home Settings"
 msgstr ""
 
-#: admin/admin-config.php:247
-#@ jfl
+#: admin/admin-config.php:238
+#@ tikva
 msgid "Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href=\"https://github.com/ReduxFramework/Redux-Framework\">https://github.com/ReduxFramework/Redux-Framework</a>"
 msgstr ""
 
-#: admin/admin-config.php:254
-#@ jfl
+#: admin/admin-config.php:245
+#@ tikva
 msgid "Maximum number of featured articles on homepage"
 msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
 
-#: admin/admin-config.php:274
-#@ jfl
+#: admin/admin-config.php:265
+#@ tikva
 msgid "Styling Options"
 msgstr "Styling Einstellungen"
 
-#: admin/admin-config.php:283
-#@ jfl
+#: admin/admin-config.php:274
+#@ tikva
 msgid "Set layout or your site."
 msgstr ""
 
-#: admin/admin-config.php:298
-#@ jfl
+#: admin/admin-config.php:289
+#@ tikva
 msgid "Theme Stylesheet"
 msgstr ""
 
-#: admin/admin-config.php:299
-#@ jfl
+#: admin/admin-config.php:290
+#@ tikva
 msgid "Select your themes alternative color scheme."
 msgstr ""
 
-#: admin/admin-config.php:307
-#@ jfl
+#: admin/admin-config.php:298
+#@ tikva
 msgid "Navbar fixed options"
 msgstr ""
 
-#: admin/admin-config.php:317
-#@ jfl
+#: admin/admin-config.php:308
+#@ tikva
 msgid "Navbar style"
 msgstr "Navigationsleiste Style"
 
-#: admin/admin-config.php:328
-#@ jfl
+#: admin/admin-config.php:319
+#@ tikva
 msgid "Header Image"
 msgstr "Header Bild"
 
-#: admin/admin-config.php:331
-#@ jfl
+#: admin/admin-config.php:322
+#@ tikva
 msgid "Use header image when chosen default navbar."
 msgstr ""
 
-#: admin/admin-config.php:339
-#@ jfl
+#: admin/admin-config.php:330
+#@ tikva
 msgid "Header Font Color"
 msgstr "Header Schriftfarbe"
 
-#: admin/admin-config.php:340
-#: admin/admin-config.php:357
-#@ jfl
+#: admin/admin-config.php:331
+#: admin/admin-config.php:348
+#@ tikva
 msgid "Pick a foreground color for the theme (default: #fff)."
 msgstr "Wähle eine Farbe für den Vordergrund des Themes (Standard: #fff)."
 
-#: admin/admin-config.php:347
-#@ jfl
+#: admin/admin-config.php:338
+#@ tikva
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: admin/admin-config.php:348
-#: admin/admin-config.php:365
-#@ jfl
+#: admin/admin-config.php:339
+#: admin/admin-config.php:356
+#@ tikva
 msgid "Pick a background color for the footer (default: #666666)."
 msgstr "Wähle eine Hintergrund-Farbe für den Footer (Standard: #666666)."
 
-#: admin/admin-config.php:356
-#@ jfl
+#: admin/admin-config.php:347
+#@ tikva
 msgid "Footer Font Color"
 msgstr "Footer Schriftfarbe"
 
-#: admin/admin-config.php:364
-#@ jfl
+#: admin/admin-config.php:355
+#@ tikva
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: admin/admin-config.php:376
-#@ jfl
+#: admin/admin-config.php:367
+#@ tikva
 msgid "<strong>Theme URL:</strong> "
 msgstr "<strong>Theme URL:</strong> "
 
-#: admin/admin-config.php:377
-#@ jfl
+#: admin/admin-config.php:368
+#@ tikva
 msgid "<strong>Author:</strong> "
 msgstr "<strong>Autor:</strong> "
 
-#: admin/admin-config.php:378
-#@ jfl
+#: admin/admin-config.php:369
+#@ tikva
 msgid "<strong>Version:</strong> "
 msgstr "<strong>Version:</strong> "
 
-#: admin/admin-config.php:382
-#@ jfl
+#: admin/admin-config.php:373
+#@ tikva
 msgid "<strong>Tags:</strong> "
-msgstr ""
+msgstr "<strong>Tags:</strong> "
 
-#: admin/admin-config.php:389
-#: admin/admin-config.php:423
-#@ jfl
+#: admin/admin-config.php:383
+#@ tikva
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: admin/admin-config.php:409
-#@ jfl
+#: admin/admin-config.php:403
+#@ tikva
 msgid "Theme Information"
 msgstr "Theme Informationen"
 
-#: admin/admin-config.php:410
-#@ jfl
+#: admin/admin-config.php:404
+#@ tikva
 msgid "<p class=\"description\">This is the Description. Again HTML is allowed</p>"
-msgstr ""
+msgstr "<p class=\"description\">Dies ist die Beschreibung. HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:434
-#@ jfl
+#: admin/admin-config.php:422
+#@ tikva
 msgid "Theme Information 1"
 msgstr "Theme Informationen 1"
 
-#: admin/admin-config.php:435
-#: admin/admin-config.php:441
-#@ jfl
+#: admin/admin-config.php:423
+#: admin/admin-config.php:429
+#@ tikva
 msgid "<p>This is the tab content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt des Tabs, HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:440
-#@ jfl
+#: admin/admin-config.php:428
+#@ tikva
 msgid "Theme Information 2"
 msgstr "Theme Informationen 2"
 
-#: admin/admin-config.php:445
-#@ jfl
+#: admin/admin-config.php:433
+#@ tikva
 msgid "<p>This is the sidebar content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt der Sidebar, HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:465
-#: admin/admin-config.php:466
-#@ jfl
-msgid "jfl Theme Options"
-msgstr "jfl Theme Einstellungen"
+#: admin/admin-config.php:453
+#: admin/admin-config.php:454
+#@ tikva
+msgid "tikva Theme Options"
+msgstr "tikva Theme Einstellungen"
 
-#: admin/admin-config.php:527
+#: admin/admin-config.php:515
 #, php-format
-#@ jfl
+#@ tikva
 msgid "<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>"
 msgstr ""
 
-#: admin/admin-config.php:529
-#@ jfl
+#: admin/admin-config.php:517
+#@ tikva
 msgid "<p>This text is displayed above the options panel. It isn't required, but more info is always better! The intro_text field accepts all HTML.</p>"
 msgstr ""
 
-#: admin/admin-config.php:533
-#@ jfl
+#: admin/admin-config.php:521
+#@ tikva
 msgid "<p>This text is displayed below the options panel. It isn't required, but more info is always better! The footer_text field accepts all HTML.</p>"
 msgstr ""
 
 #: comments.php:65
-#@ default
+#@ tikva
 msgctxt "noun"
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: content.php:68
-#@ jfl
+#@ tikva
 msgid "Tags: "
 msgstr "Tags: "
 
 #: content.php:79
 #, php-format
-#@ default
+#@ tikva
 msgid "View all posts in %s"
-msgstr ""
+msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:132
-#@ default
+#: functions.php:141
+#@ tikva
 msgid "Name*"
-msgstr ""
+msgstr "Name*"
 
-#: functions.php:135
-#@ default
+#: functions.php:144
+#@ tikva
 msgid "Email*"
-msgstr ""
+msgstr "E-Mail*"
 
-#: functions.php:138
-#@ default
+#: functions.php:147
+#@ tikva
 msgid "Website"
-msgstr ""
+msgstr "Website"
 
-#: functions.php:184
-#@ jfl
+#: functions.php:193
+#@ tikva
 msgid "&laquo; Previous"
 msgstr "&laquo; Zurück"
 
-#: functions.php:185
-#@ jfl
+#: functions.php:194
+#@ tikva
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:319
+#: functions.php:328
 #@ default
 msgid "Header Menu"
 msgstr ""
 
-#: inc/page_options.php:5
-#@ jfl
+#: inc/post-addons.php:54
+#@ tikva
 msgid "Featured Post"
 msgstr "Hervorgehobener Beitrag"
 
-#: inc/page_options.php:6
-#@ jfl
+#: inc/post-addons.php:55
+#@ tikva
 msgid "Not featured"
 msgstr "keine Hervorhebung"
 
-#: inc/page_options.php:7
-#@ jfl
+#: inc/post-addons.php:56
+#@ tikva
 msgid "Large Feature (Jumbotron)"
 msgstr "Große Hervorhebung (Jumbotron)"
 
-#: inc/page_options.php:8
-#@ jfl
+#: inc/post-addons.php:57
+#@ tikva
 msgid "Featured"
 msgstr "Hervorgehoben"
 
 #: content-none.php:12
-#@ jfl
+#@ tikva
 msgid "Nothing Found"
 msgstr "Nicht gefunden"
 
 #: content-none.php:18
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: content-none.php:22
-#@ jfl
+#@ tikva
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen Schlüsselwörtern erneut."
 
 #: content-none.php:27
-#@ jfl
+#@ tikva
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:220
-#@ default
+#: functions.php:229
+#@ tikva
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Suche nach:"
 
-#: functions.php:221
-#@ default
+#: functions.php:230
+#@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Suche &hellip;"
 
 #: search.php:46
 #, php-format
-#@ jfl
+#@ tikva
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: inc/page_options.php:2
-#@ jfl
+#: inc/post-addons.php:52
+#@ tikva
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
 
-#: functions.php:426
-#@ jfl
+#: functions.php:435
+#@ tikva
 msgid "Read More &raquo;"
 msgstr "Weiterlesen &raquo;"
 

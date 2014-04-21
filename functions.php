@@ -7,9 +7,9 @@ require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
 
-if ( ! function_exists( 'jfl_setup' ) ) :
+if ( ! function_exists( 'tikva_setup' ) ) :
     /**
-     * jfl theme setup.
+     * tikva theme setup.
      *
      * Set up theme defaults and registers support for various WordPress features.
      *
@@ -17,19 +17,19 @@ if ( ! function_exists( 'jfl_setup' ) ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support post thumbnails.
      *
-     * @since jfl 0.1
+     * @since tikva 0.1
      */
-    function jfl_setup() {
+    function tikva_setup() {
 
         /*
-         * Make jfl theme available for translation.
+         * Make tikva theme available for translation.
          *
          * Translations can be added to the /languages/ directory.
-         * If you're building a theme based on jfl, use a find and
-         * replace to change 'jfl' to the name of your theme in all
+         * If you're building a theme based on tikva, use a find and
+         * replace to change 'tikva' to the name of your theme in all
          * template files.
          */
-        load_theme_textdomain( 'jfl', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
         //add_editor_style( array( 'css/editor-style.css', twentyfourteen_font_url() ) );
@@ -78,15 +78,15 @@ if ( ! function_exists( 'jfl_setup' ) ) :
         // This theme uses its own gallery styles.
         //add_filter( 'use_default_gallery_style', '__return_false' );
     }
-endif; // jfl_setup
-add_action( 'after_setup_theme', 'jfl_setup' );
+endif; // tikva_setup
+add_action( 'after_setup_theme', 'tikva_setup' );
 
 /**
  * Set up the content width value based on the theme's design.
  *
  * @see twentyfourteen_content_width()
  *
- * @since jfl 0.1
+ * @since tikva 0.1
  */
 if ( ! isset( $content_width ) ) {
     $content_width = 474;
@@ -132,36 +132,36 @@ register_sidebar( array(
 }
 
 
-function jfl_comment_fields($fields) {
+function tikva_comment_fields($fields) {
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
 
-    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','jfl' ) . '</label> ' .
+    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','tikva' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'jfl' ) . '</label> ' .
+    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'tikva' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'jfl' ) . '</label>' .
+    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'tikva' ) . '</label>' .
         '<div class="col-sm-10"><input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>';
 
     return $fields;
 }
 
 // see above...
-add_filter('comment_form_default_fields','jfl_comment_fields');
+add_filter('comment_form_default_fields','tikva_comment_fields');
 
 
 
-if ( ! function_exists( 'jfl_paging_nav' ) ) :
+if ( ! function_exists( 'tikva_paging_nav' ) ) :
     /**
      * Display navigation to next/previous set of posts when applicable.
      *
      * @return void
      */
-    function jfl_paging_nav() {
+    function tikva_paging_nav() {
         // Don't print empty markup if there's only one page.
         if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
             return;
@@ -190,8 +190,8 @@ if ( ! function_exists( 'jfl_paging_nav' ) ) :
             'current'  => $paged,
             'mid_size' => 1,
             'add_args' => array_map( 'urlencode', $query_args ),
-            'prev_text' => __( '&laquo; Previous', 'jfl' ),
-            'next_text' => __( 'Next &raquo;', 'jfl' ),
+            'prev_text' => __( '&laquo; Previous', 'tikva' ),
+            'next_text' => __( 'Next &raquo;', 'tikva' ),
             'type' => 'array'
         ) );
 
@@ -199,7 +199,7 @@ if ( ! function_exists( 'jfl_paging_nav' ) ) :
 
             ?>
             <nav class="navigation paging-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'jfl' ); ?></h1>
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tikva' ); ?></h1>
                 <ul class="pagination loop-pagination">
                     <?php
                     foreach ($links as $link) {
@@ -214,20 +214,20 @@ if ( ! function_exists( 'jfl_paging_nav' ) ) :
 endif;
 
 
-if ( ! function_exists( 'jfl_categorized_blog' ) ) :
+if ( ! function_exists( 'tikva_categorized_blog' ) ) :
 
-    function jfl_categorized_blog() {
+    function tikva_categorized_blog() {
         return true;
     }
 endif;
 
-if ( ! function_exists( 'jfl_get_search_form' ) ) :
+if ( ! function_exists( 'tikva_get_search_form' ) ) :
 
-function jfl_get_search_form() {
+function tikva_get_search_form() {
 
     $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','jfl' ) . '</label>
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','jfl' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','tikva' ) . '</label>
+    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','tikva' ) . '" value="' . get_search_query() . '" name="s" id="s" />
     </div>
     <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
     </div>
@@ -236,18 +236,18 @@ function jfl_get_search_form() {
 }
 endif;
 
-add_filter( 'get_search_form', 'jfl_get_search_form' );
+add_filter( 'get_search_form', 'tikva_get_search_form' );
 
 /**
  * Enqueue scripts and styles for the front end.
  *
- * @since jfl 1.0
+ * @since tikva 0.1
  *
  * @return void
  */
-function jfl_scripts() {
+function tikva_scripts() {
     // Add Lato font, used in the main stylesheet.
-    //wp_enqueue_style( 'jfl-lato', twentyfourteen_font_url(), array(), null );
+    //wp_enqueue_style( 'tikva-lato', twentyfourteen_font_url(), array(), null );
 
     // Add Genericons font, used in the main stylesheet.
     //wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
@@ -280,18 +280,18 @@ function jfl_scripts() {
         ) );
     }*/
 
-    wp_enqueue_script( 'jfl-script', get_template_directory_uri() . '/js/functions.js',
+    wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
         array( 'jquery' ), '20131224', true );
 }
-add_action( 'wp_enqueue_scripts', 'jfl_scripts' );
+add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 
 
 function bootstrap_styles()
 {
-    global $jfl_theme;
-    if (isset($jfl_theme['stylesheet']))
+    global $tikva_theme;
+    if (isset($tikva_theme['stylesheet']))
     {
-        $stylesheet = $jfl_theme['stylesheet'];
+        $stylesheet = $tikva_theme['stylesheet'];
     }
     else {
         $stylesheet = 'bootstap.min.css';
@@ -365,47 +365,47 @@ add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 /**
  * A helper conditional function that returns a boolean value.
  *
- * @since jfl 1.0
+ * @since tikva 0.1
  *
  * @return bool Whether there are featured posts.
  */
-function jfl_has_featured_posts() {
-    return !is_paged() && (bool) jfl_get_featured_posts();
+function tikva_has_featured_posts() {
+    return !is_paged() && (bool) tikva_get_featured_posts();
 }
 
 /**
  * Getter function for Featured Content Plugin.
  *
- * @since jfl 1.0
+ * @since tikva 0.1
  *
  * @return array An array of WP_Post objects.
  */
-function jfl_get_featured_posts() {
+function tikva_get_featured_posts() {
     /**
      * Filter the featured posts to return in Twenty Fourteen.
      *
-     * @since jfl 1.0
+     * @since tikva 0.1
      *
      * @param array|bool $posts Array of featured posts, otherwise false.
      */
-    return apply_filters( 'jfl_get_featured_posts', array() );
+    return apply_filters( 'tikva_get_featured_posts', array() );
 }
 
 
 
 add_theme_support( 'featured-content', array(
-    'featured_content_filter' => 'jfl_get_featured_posts',
+    'featured_content_filter' => 'tikva_get_featured_posts',
     'max_posts' => 4,
 ) );
 
-if ( ! function_exists( 'jfl_get_layout' ) ) :
+if ( ! function_exists( 'tikva_get_layout' ) ) :
 
-    function jfl_get_layout() {
-        global $jfl_theme;
-        if (!isset($jfl_theme['layout'])) {
-            $jfl_theme['layout'] = 2; // default: content left, sidebar right
+    function tikva_get_layout() {
+        global $tikva_theme;
+        if (!isset($tikva_theme['layout'])) {
+            $tikva_theme['layout'] = 2; // default: content left, sidebar right
         }
-        switch ($jfl_theme['layout']) {
+        switch ($tikva_theme['layout']) {
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
@@ -431,10 +431,10 @@ if ( ! function_exists( 'jfl_get_layout' ) ) :
 endif;
 
 
-function jfl_excerpt_more( $more ) {
-    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More &raquo;', 'jfl' ). '</a></p>';
+function tikva_excerpt_more( $more ) {
+    return '...<br/> <p> <a class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More &raquo;', 'tikva' ). '</a></p>';
 }
-add_filter( 'excerpt_more', 'jfl_excerpt_more' );
+add_filter( 'excerpt_more', 'tikva_excerpt_more' );
 
 /*
  * Add Featured Content functionality.

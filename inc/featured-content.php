@@ -1,6 +1,6 @@
 <?php
 /**
- * jfl Featured Content
+ * tikva Featured Content
  *
  * This module allows you to define a subset of posts to be displayed
  * in the theme's Featured Content area.
@@ -142,7 +142,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since jfl 1.0
+	 * @since tikva 0.1
 	 *
 	 * @return array Array of post IDs.
 	 */
@@ -164,11 +164,11 @@ class Featured_Content {
             'meta_query' => array(
                 'relation' => 'OR',
                 array(
-                    'key' => 'jfl_featured_post',
+                    'key' => 'tikva_featured_post',
                     'value' => '_1'
                 ),
                 array(
-                    'key' => 'jfl_featured_post',
+                    'key' => 'tikva_featured_post',
                     'value' => '_2'
                 )
             )
@@ -402,8 +402,8 @@ class Featured_Content {
 	 */
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'featured_content', array(
-			'title'          => __( 'Featured Content', 'jfl' ),
-			'description'    => sprintf( __( 'Use the <a href="%1$s">"featured" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'jfl' ), admin_url( '/edit.php?tag=featured' ), admin_url( '/edit.php?show_sticky=1' ) ),
+			'title'          => __( 'Featured Content', 'tikva' ),
+			'description'    => sprintf( __( 'Use the <a href="%1$s">"featured" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'tikva' ), admin_url( '/edit.php?tag=featured' ), admin_url( '/edit.php?show_sticky=1' ) ),
 			'priority'       => 130,
 			'theme_supports' => 'featured-content',
 		) );
@@ -422,12 +422,12 @@ class Featured_Content {
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'    => __( 'Tag Name', 'jfl' ),
+			'label'    => __( 'Tag Name', 'tikva' ),
 			'section'  => 'featured_content',
 			'priority' => 20,
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'    => __( 'Don&rsquo;t display tag on front end.', 'jfl' ),
+			'label'    => __( 'Don&rsquo;t display tag on front end.', 'tikva' ),
 			'section'  => 'featured_content',
 			'type'     => 'checkbox',
 			'priority' => 30,
@@ -477,10 +477,10 @@ class Featured_Content {
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
 
-        global $jfl_theme;
-        if (isset($jfl_theme['featured_articles_max']))
+        global $tikva_theme;
+        if (isset($tikva_theme['featured_articles_max']))
         {
-            $options['quantity'] = intval($jfl_theme['featured_articles_max']);
+            $options['quantity'] = intval($tikva_theme['featured_articles_max']);
         }
         else {
             $options['quantity'] = 10;

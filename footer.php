@@ -14,19 +14,19 @@
 </div><!-- container -->
 
 <?php
-global $jfl_theme;
+global $tikva_theme;
 
-if (isset($jfl_theme['color-bg-footer']) && $jfl_theme['color-bg-footer']) {
-    $colorBgFooter = $jfl_theme['color-bg-footer'];
+if (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer']) {
+    $colorBgFooter = $tikva_theme['color-bg-footer'];
 }
 else {
     $colorBgFooter = '#000000';
 }
-if (isset($jfl_theme['color-fg-footer']) && $jfl_theme['color-fg-footer'] && stripos($jfl_theme['color-fg-footer'], 'transparent') !== false ) {
+if (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] && stripos($tikva_theme['color-fg-footer'], 'transparent') !== false ) {
     $footerStyleColorFg = '';
 }
-elseif (isset($jfl_theme['color-fg-footer']) && $jfl_theme['color-fg-footer'] ) {
-    $footerStyleColorFg = ' color: ' . $jfl_theme['color-fg-footer'] .';';
+elseif (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] ) {
+    $footerStyleColorFg = ' color: ' . $tikva_theme['color-fg-footer'] .';';
 }
 else {
     $footerStyleColorFg = '';
@@ -70,8 +70,8 @@ else {
 
 			<div class="site-info">
 				<?php //do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'jfl' ) ); ?>"><?php printf( __
-                    ( 'Proudly powered by %s', 'jfl' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tikva' ) ); ?>"><?php printf( __
+                    ( 'Proudly powered by %s', 'tikva' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 

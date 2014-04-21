@@ -1,12 +1,12 @@
 <?php
 /**
- * jfl Theme ReduxFramework Config File
+ * tikva Theme ReduxFramework Config File
 For full documentation, please visit: https://github.com/ReduxFramework/ReduxFramework/wiki
  */
 
-if (!class_exists("Redux_Framework_jfl_config")) {
+if (!class_exists("Redux_Framework_tikva_config")) {
 
-    class Redux_Framework_jfl_config {
+    class Redux_Framework_tikva_config {
 
         public $args = array();
         public $sections = array();
@@ -103,8 +103,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
       /*  function dynamic_section($sections) {
             //$sections = array();
             $sections[] = array(
-                'title' => __('Section via hook', 'jfl'),
-                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'jfl'),
+                'title' => __('Section via hook', 'tikva'),
+                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'tikva'),
                 'icon' => 'el-icon-paper-clip',
                 // Leave this as a blank section, no options just some intro text set above.
                 'fields' => array()
@@ -172,7 +172,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             $screenshot = $this->theme->get_screenshot();
             $class = $screenshot ? 'has-screenshot' : '';
 
-            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'jfl'), $this->theme->display('Name'));
+            $customize_title = sprintf(__('Customize &#8220;%s&#8221;', 'tikva'), $this->theme->display('Name'));
             ?>
             <div id="current-theme" class="<?php echo esc_attr($class); ?>">
                 <?php if ($screenshot) : ?>
@@ -190,14 +190,14 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
                 <div>
                     <ul class="theme-info">
-                        <li><?php printf(__('By %s', 'jfl'), $this->theme->display('Author')); ?></li>
-                        <li><?php printf(__('Version %s', 'jfl'), $this->theme->display('Version')); ?></li>
-                        <li><?php echo '<strong>' . __('Tags', 'jfl') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
+                        <li><?php printf(__('By %s', 'tikva'), $this->theme->display('Author')); ?></li>
+                        <li><?php printf(__('Version %s', 'tikva'), $this->theme->display('Version')); ?></li>
+                        <li><?php echo '<strong>' . __('Tags', 'tikva') . ':</strong> '; ?><?php printf($this->theme->display('Tags')); ?></li>
                     </ul>
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
                     <?php
                     if ($this->theme->parent()) {
-                        printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'jfl'), $this->theme->parent()->display('Name'));
+                        printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'tikva'), $this->theme->parent()->display('Name'));
                     }
                     ?>
 
@@ -234,16 +234,16 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             // ACTUAL DECLARATION OF SECTIONS
 
             $this->sections[] =  array(
-                'title' => __('Home Settings', 'jfl'),
-                'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'jfl'),
+                'title' => __('Home Settings', 'tikva'),
+                'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'tikva'),
                 'icon' => 'el-icon-home',
                 // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                 'fields' => array(
                     array(
                         'id'=>'featured_articles_max',
                         'type' => 'slider',
-                        'title' => __('Maximum number of featured articles on homepage', 'jfl'),
-                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'jfl'),
+                        'title' => __('Maximum number of featured articles on homepage', 'tikva'),
+                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'tikva'),
                         "default" 		=> "5",
                         "min" 		=> "0",
                         "step"		=> "1",
@@ -262,16 +262,16 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
             $this->sections[] = array(
                 'icon' => 'el-icon-website',
-                'title' => __('Styling Options', 'jfl'),
+                'title' => __('Styling Options', 'tikva'),
                 'fields' => array(
 
 
                     array(
                         'id'=>'layout',
                         'type' => 'image_select',
-                        'title' => __('Layout', 'jfl'),
-                        //'subtitle' => __('No validation can be done on this field type', 'jfl'),
-                        'desc' => __('Set layout or your site.', 'jfl'),
+                        'title' => __('Layout', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        'desc' => __('Set layout or your site.', 'tikva'),
                         'options' => array(
                             '1' => array('alt' => '1 Column', 'img' => ReduxFramework::$_url.'assets/img/1col.png'),
                             '2' => array('alt' => '2 Column, Content left, Sidebar right', 'img' => ReduxFramework::$_url.'assets/img/2cr.png'),
@@ -286,8 +286,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                     array(
                         'id'=>'stylesheet',
                         'type' => 'select',
-                        'title' => __('Theme Stylesheet', 'jfl'),
-                        'subtitle' => __('Select your themes alternative color scheme.', 'jfl'),
+                        'title' => __('Theme Stylesheet', 'tikva'),
+                        'subtitle' => __('Select your themes alternative color scheme.', 'tikva'),
                         'options' => $designStylesheets, //array('bootstrap.min.css'=>'bootstap.css',
                         //'united.min.css'=>'united.css'),
                         'default' => 'bootstap.css',
@@ -295,9 +295,9 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                     array(
                         'id'=>'navbar-fixed',
                         'type' => 'button_set',
-                        'title' => __('Navbar fixed options', 'jfl'),
-                        //'subtitle' => __('No validation can be done on this field type', 'jfl'),
-                        //'desc' => __('This is the description field, again good for additional info.', 'jfl'),
+                        'title' => __('Navbar fixed options', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        //'desc' => __('This is the description field, again good for additional info.', 'tikva'),
                         'options' => array('default' => 'Default','fixed-top' => 'Fixed to top'),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
@@ -305,9 +305,9 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                     array(
                         'id'=>'navbar-style-inverse',
                         'type' => 'button_set',
-                        'title' => __('Navbar style', 'jfl'),
-                        //'subtitle' => __('No validation can be done on this field type', 'jfl'),
-                        //'desc' => __('This is the description field, again good for additional info.', 'jfl'),
+                        'title' => __('Navbar style', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        //'desc' => __('This is the description field, again good for additional info.', 'tikva'),
                         'options' => array('default' => 'Default','inverse' => 'Inverse'),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
@@ -316,27 +316,27 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                         'id'=>'header-image',
                         'type' => 'media',
                         'url'=> true,
-                        'title' => __('Header Image', 'jfl'),
+                        'title' => __('Header Image', 'tikva'),
                         'compiler' => 'true',
                         //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'=> __('Use header image when chosen default navbar.', 'jfl'),
-                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'jfl'),
+                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
                     array(
                         'id'=>'color-fg-header',
                         'type' => 'color',
                         //'output' => array('.site-title'),
-                        'title' => __('Header Font Color', 'jfl'),
-                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'jfl'),
+                        'title' => __('Header Font Color', 'tikva'),
+                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'tikva'),
                         'default' => '#FFFFFF',
                         'validate' => 'color',
                     ),
                     array(
                         'id'=>'color-bg-header',
                         'type' => 'color',
-                        'title' => __('Header Background Color', 'jfl'),
-                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'jfl'),
+                        'title' => __('Header Background Color', 'tikva'),
+                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'tikva'),
                         'default' => '#666666',
                         'validate' => 'color',
                     ),
@@ -344,16 +344,16 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                         'id'=>'color-fg-footer',
                         'type' => 'color',
                         //'output' => array('.site-title'),
-                        'title' => __('Footer Font Color', 'jfl'),
-                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'jfl'),
+                        'title' => __('Footer Font Color', 'tikva'),
+                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'tikva'),
                         'default' => '#FFFFFF',
                         'validate' => 'color',
                     ),
                     array(
                         'id'=>'color-bg-footer',
                         'type' => 'color',
-                        'title' => __('Footer Background Color', 'jfl'),
-                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'jfl'),
+                        'title' => __('Footer Background Color', 'tikva'),
+                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'tikva'),
                         'default' => '#666666',
                         'validate' => 'color',
                     )
@@ -364,13 +364,13 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
 
             $theme_info = '<div class="redux-framework-section-desc">';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'jfl') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'jfl') . $this->theme->get('Author') . '</p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'jfl') . $this->theme->get('Version') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'tikva') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'tikva') . $this->theme->get('Author') . '</p>';
+            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'tikva') . $this->theme->get('Version') . '</p>';
             $theme_info .= '<p class="redux-framework-theme-data description theme-description">' . $this->theme->get('Description') . '</p>';
             $tabs = $this->theme->get('Tags');
             if (!empty($tabs)) {
-                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'jfl') . implode(', ', $tabs) . '</p>';
+                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'tikva') . implode(', ', $tabs) . '</p>';
             }
             $theme_info .= '</div>';
 
@@ -380,7 +380,7 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                 $readmeContent = wp_remote_retrieve_body( wp_remote_get( get_template_directory_uri() . '/README.md' )); //$wp_filesystem->get_contents(dirname(__FILE__) . '/../README.md');
                 $this->sections['theme_docs'] = array(
                     'icon' => 'el-icon-list-alt',
-                    'title' => __('Documentation', 'jfl'),
+                    'title' => __('Documentation', 'tikva'),
                     'fields' => array(
                         array(
                             'id' => '17',
@@ -400,8 +400,8 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
             $this->sections[] = array(
                 'icon' => 'el-icon-info-sign',
-                'title' => __('Theme Information', 'jfl'),
-                'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'jfl'),
+                'title' => __('Theme Information', 'tikva'),
+                'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'tikva'),
                 'fields' => array(
                     array(
                         'id' => 'raw_new_info',
@@ -419,18 +419,18 @@ if (!class_exists("Redux_Framework_jfl_config")) {
             // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
             $this->args['help_tabs'][] = array(
                 'id' => 'redux-opts-1',
-                'title' => __('Theme Information 1', 'jfl'),
-                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'jfl')
+                'title' => __('Theme Information 1', 'tikva'),
+                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'tikva')
             );
 
             $this->args['help_tabs'][] = array(
                 'id' => 'redux-opts-2',
-                'title' => __('Theme Information 2', 'jfl'),
-                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'jfl')
+                'title' => __('Theme Information 2', 'tikva'),
+                'content' => __('<p>This is the tab content, HTML is allowed.</p>', 'tikva')
             );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = __('<p>This is the sidebar content, HTML is allowed.</p>', 'jfl');
+            $this->args['help_sidebar'] = __('<p>This is the sidebar content, HTML is allowed.</p>', 'tikva');
         }
 
         /**
@@ -445,13 +445,13 @@ if (!class_exists("Redux_Framework_jfl_config")) {
 
             $this->args = array(
                 // TYPICAL -> Change these values as you need/desire
-                'opt_name' => 'jfl_theme', // This is where your data is stored in the database and also becomes your global variable name.
+                'opt_name' => 'tikva_theme', // This is where your data is stored in the database and also becomes your global variable name.
                 'display_name' => $theme->get('Name'), // Name that appears at the top of your panel
                 'display_version' => $theme->get('Version'), // Version that appears at the top of your panel
                 'menu_type' => 'menu', //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu' => true, // Show the sections below the admin menu item or not
-                'menu_title' => __('jfl Theme Options', 'jfl'),
-                'page' => __('jfl Theme Options', 'jfl'),
+                'menu_title' => __('tikva Theme Options', 'tikva'),
+                'page' => __('tikva Theme Options', 'tikva'),
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                 'google_api_key' => 'AIzaSyAuAl40BlKHKsDEYeHbVMbJpD1ygXc0-8Q', // Must be defined to add google fonts to the typography module
@@ -512,18 +512,18 @@ if (!class_exists("Redux_Framework_jfl_config")) {
                 } else {
                     $v = str_replace("-", "_", $this->args['opt_name']);
                 }
-                $this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'jfl'), $v);
+                $this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'tikva'), $v);
             } else {
-                $this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'jfl');
+                $this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'tikva');
             }
 
             // Add content after the form.
-            $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'jfl');
+            $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'tikva');
         }
 
     }
 
-    new Redux_Framework_jfl_config();
+    new Redux_Framework_tikva_config();
 }
 
 

@@ -3,7 +3,7 @@
  * The Content Sidebar
  *
  * @package WordPress
- * @subpackage jfl
+ * @subpackage tikva
  * @since Twenty Fourteen 1.0
  */
 

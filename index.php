@@ -9,9 +9,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package jfl
+ * @package tikva
  * @subpackage Themes
- * @since jfl 1.0
+ * @since tikva 0.1
  */
 
 get_header(); ?>
@@ -22,9 +22,9 @@ get_header(); ?>
 <div id="main-content" class="main-content">
 
 <?php
-$layoutStyle = jfl_get_layout();
+$layoutStyle = tikva_get_layout();
 
-if ( is_front_page() && jfl_has_featured_posts() ) {
+if ( is_front_page() && tikva_has_featured_posts() ) {
     // Include the featured content template.
     get_template_part( 'featured-content' );
  //   echo "<h1>show featured content</h1>";
@@ -59,7 +59,7 @@ if ($layoutStyle['content'] == 2) {
 					get_template_part( 'content', get_post_format() );
 				endwhile;
 				// Previous/next post navigation.
-				jfl_paging_nav();
+				tikva_paging_nav();
             else :
 				// If no content, include the "No posts found" template.
 				get_template_part( 'content', 'none' );

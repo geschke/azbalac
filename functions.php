@@ -120,15 +120,9 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         add_theme_support( 'automatic-feed-links' );
 
         // Enable support for Post Thumbnails, and declare two sizes.
-        //add_theme_support( 'post-thumbnails' );
+        add_theme_support('post-thumbnails');
         //set_post_thumbnail_size( 672, 372, true );
-        //add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
-
-        // This theme uses wp_nav_menu() in two locations.
-        //register_nav_menus( array(
-        //    'primary'   => __( 'Top primary menu', 'twentyfourteen' ),
-        //    'secondary' => __( 'Secondary menu in left sidebar', 'twentyfourteen' ),
-        //) );
+        //add_image_size( 'tikva-full-width', 1038, 576, true );
 
         /*
          * Switch default core markup for search form, comment form, and comments
@@ -142,14 +136,19 @@ if ( ! function_exists( 'tikva_setup' ) ) :
          * Enable support for Post Formats.
          * See http://codex.wordpress.org/Post_Formats
          */
-        //add_theme_support( 'post-formats', array(
-        //    'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-        //) );
+        add_theme_support( 'post-formats', array(
+            'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+        ) );
+
 
         // This theme allows users to set a custom background.
         //add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
         //    'default-color' => 'f5f5f5',
         //) ) );
+        add_theme_support( 'custom-background');
+
+        // this does not work out-of-the-box, the tikva header image will be used...
+       // add_theme_support( 'custom-header' );
 
         // Add support for featured content.
         //add_theme_support( 'featured-content', array(
@@ -410,16 +409,6 @@ function register_my_menu() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
-
-add_theme_support('post-thumbnails');
-
-/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-add_theme_support( 'post-formats', array(
-    'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-) );
 
 
 /*

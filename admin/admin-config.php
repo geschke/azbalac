@@ -13,22 +13,24 @@ if (!class_exists("Redux_Framework_tikva_config")) {
         public $theme;
         public $ReduxFramework;
 
+
         public function __construct() {
+
+            if (!class_exists('ReduxFramework')) {
+                return;
+            }
+
             // This is needed. Bah WordPress bugs.  ;)
-            //var_dump(TEMPLATEPATH);
-            //var_dump(get_template_directory());
-            if ( strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( get_template_directory() ) ) !== false) {
+            if (  true == Redux_Helpers::isTheme(__FILE__) ) {
                 $this->initSettings();
             } else {
                 add_action('plugins_loaded', array($this, 'initSettings'), 10);
             }
+
         }
 
         public function initSettings() {
 
-            if ( !class_exists("ReduxFramework" ) ) {
-                return;
-            }
 
             // Just for demo purposes. Not needed per say.
             $this->theme = wp_get_theme();

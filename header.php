@@ -111,9 +111,13 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
     <div class="masthead col-md-12 col-sm-12 col-xs-12">
         <h3 class="text-muted"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
         <?php
-        if (isset($tikva_theme['header-image']['url']) && $tikva_theme['header-image']['url']) {
-            echo '<img height="' . $tikva_theme['header-image']['height'] . '" width="' . $tikva_theme['header-image']['width'] . '" src="' . $tikva_theme['header-image']['url'] .'"/>';
-        }
+        if ( get_header_image() ) : ?>
+            <div id="site-header">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+                </a>
+            </div>
+        <?php endif;
         ?>
     </div>
  </div>

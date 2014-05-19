@@ -314,8 +314,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
                     ),
-                    array(
-                        'id'=>'header-image',
+              /*          'id'=>'header-image',
                         'type' => 'media',
                         'url'=> true,
                         'title' => __('Header Image', 'tikva'),
@@ -325,6 +324,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
+               */
                     array(
                         'id'=>'color-fg-header',
                         'type' => 'color',

@@ -147,8 +147,15 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         //) ) );
         add_theme_support( 'custom-background');
 
-        // this does not work out-of-the-box, the tikva header image will be used...
-       // add_theme_support( 'custom-header' );
+        $headerDefaults = array(
+            'default-color'          => 'ffffff',
+            'default-image'          =>  null
+        );
+       add_theme_support( 'custom-header', $headerDefaults );
+
+        // This theme styles the visual editor to resemble the theme style.
+        add_editor_style( 'css/editor-style.css' );
+
 
         // Add support for featured content.
         //add_theme_support( 'featured-content', array(

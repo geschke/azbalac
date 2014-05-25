@@ -51,7 +51,6 @@ if (!class_exists("Redux_Framework_tikva_config")) {
             // If Redux is running as a plugin, this will remove the demo notice and links
             //add_action( 'redux/plugin/hooks', array( $this, 'remove_demo' ) );
             // Function to test the compiler hook and demo CSS output.
-            //add_filter('redux/options/'.$this->args['opt_name'].'/compiler', array( $this, 'compiler_action' ), 10, 2);
             // Above 10 is a priority, but 2 in necessary to include the dynamically generated CSS to be sent to the function.
             // Change the arguments after they've been declared, but before the panel is created
             //add_filter('redux/options/'.$this->args['opt_name'].'/args', array( $this, 'change_arguments' ) );
@@ -63,58 +62,6 @@ if (!class_exists("Redux_Framework_tikva_config")) {
             $this->ReduxFramework = new ReduxFramework($this->sections, $this->args);
         }
 
-        /**
-
-        This is a test function that will let you see when the compiler hook occurs.
-        It only runs if a field	set with compiler=>true is changed.
-
-         * */
-        function compiler_action($options, $css) {
-            //echo "<h1>The compiler hook has run!";
-            //print_r($options); //Option values
-            //print_r($css); // Compiler selector CSS values  compiler => array( CSS SELECTORS )
-
-            /*
-              // Demo of how to use the dynamic CSS and write your own static CSS file
-              $filename = dirname(__FILE__) . '/style' . '.css';
-              global $wp_filesystem;
-              if( empty( $wp_filesystem ) ) {
-              //require_once( ABSPATH .'/wp-admin/includes/file.php' );
-              WP_Filesystem();
-              }
-
-              if( $wp_filesystem ) {
-              $wp_filesystem->put_contents(
-              $filename,
-              $css,
-              FS_CHMOD_FILE // predefined mode settings for WP files
-              );
-              }
-             */
-        }
-
-        /**
-
-        Custom function for filtering the sections array. Good for child themes to override or add to the sections.
-        Simply include this function in the child themes functions.php file.
-
-        NOTE: the defined constants for URLs, and directories will NOT be available at this point in a child theme,
-        so you must use get_template_directory_uri() if you want to use any of the built in icons
-
-         * */
-      /*  function dynamic_section($sections) {
-            //$sections = array();
-            $sections[] = array(
-                'title' => __('Section via hook', 'tikva'),
-                'desc' => __('<p class="description">This is a section created by adding a filter to the sections array. Can be used by child themes to add/remove sections from the options.</p>', 'tikva'),
-                'icon' => 'el-icon-paper-clip',
-                // Leave this as a blank section, no options just some intro text set above.
-                'fields' => array()
-            );
-
-            return $sections;
-        }
-      */
 
         /**
 
@@ -237,7 +184,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
 
             $this->sections[] =  array(
                 'title' => __('Home Settings', 'tikva'),
-                'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'tikva'),
+                //'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'tikva'),
                 'icon' => 'el-icon-home',
                 // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                 'fields' => array(
@@ -403,7 +350,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
             $this->sections[] = array(
                 'icon' => 'el-icon-info-sign',
                 'title' => __('Theme Information', 'tikva'),
-                'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'tikva'),
+                //'desc' => __('<p class="description">This is the Description. Again HTML is allowed</p>', 'tikva'),
                 'fields' => array(
                     array(
                         'id' => 'raw_new_info',
@@ -514,13 +461,13 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 } else {
                     $v = str_replace("-", "_", $this->args['opt_name']);
                 }
-                $this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'tikva'), $v);
+                //$this->args['intro_text'] = sprintf(__('<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'tikva'), $v);
             } else {
-                $this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'tikva');
+                //$this->args['intro_text'] = __('<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'tikva');
             }
 
             // Add content after the form.
-            $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'tikva');
+           // $this->args['footer_text'] = __('<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'tikva');
         }
 
     }

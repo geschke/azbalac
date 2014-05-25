@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage jfp
- * @since Twenty Fourteen 1.0
+ * @since Tikva 1.0
  */
 ?>
 

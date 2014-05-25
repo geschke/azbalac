@@ -25,9 +25,6 @@ $layoutStyle = tikva_get_layout();
 
 global $tikva_theme;
     // maybe find a better solution...
-// todo: show different kinds of navigation and header
-// todo: use header image, if available
-// todo: set header background color
         if (isset($tikva_theme['navbar-fixed']) && $tikva_theme['navbar-fixed'] == 'fixed-top') {
             $navbarFixed = 'fixed-top';
         }
@@ -148,10 +145,12 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <?php
-                    wp_nav_menu( array( 'items_wrap' => '%3$s',
+                    wp_nav_menu( array( 'theme_location' => 'header-menu',
+                        'items_wrap' => '%3$s',
                     'container' => '',
                     'menu_class'     => 'nav navbar-nav',
-                    'walker' => new HeaderMenuWalker()) );
+                    'walker' => new HeaderMenuWalker()
+                    ) );
                     ?>
                 </ul>
             </div><!--/.nav-collapse -->

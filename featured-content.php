@@ -3,8 +3,8 @@
  * The template for displaying featured content
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Tikva
+ * @since Tikva 1.0
  */
 ?>
 

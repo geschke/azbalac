@@ -49,7 +49,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
             }
 
             // If Redux is running as a plugin, this will remove the demo notice and links
-            //add_action( 'redux/plugin/hooks', array( $this, 'remove_demo' ) );
+            add_action( 'redux/plugin/hooks', array( $this, 'remove_demo' ) );
             // Function to test the compiler hook and demo CSS output.
             // Above 10 is a priority, but 2 in necessary to include the dynamically generated CSS to be sent to the function.
             // Change the arguments after they've been declared, but before the panel is created
@@ -406,7 +406,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 'google_api_key' => 'AIzaSyAuAl40BlKHKsDEYeHbVMbJpD1ygXc0-8Q', // Must be defined to add google fonts to the typography module
                 //'admin_bar' => false, // Show the panel pages on the admin bar
                 'global_variable' => '', // Set a different name for your global variable other than the opt_name
-                'dev_mode' => true, // Show the time the page took to load, etc
+                'dev_mode' => false, // Show the time the page took to load, etc
                 'customizer' => true, // Enable basic customizer support
                 // OPTIONAL -> Give you extra features
                 'page_priority' => null, // Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.

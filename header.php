@@ -32,7 +32,7 @@ global $tikva_theme;
             $navbarFixed = 'default';
         }
 
-        if ($navbarFixed == 'fixed-top') {
+        if ($navbarFixed == 'fixed-top' && has_nav_menu('header-menu')) {
             ?>
             <style type="text/css">
                 body {
@@ -125,7 +125,9 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
 ?>
 <div class="container">
 <?php }
+if (has_nav_menu('header-menu')) {
 ?>
+
     <!-- Fixed navbar -->
     <div class="navbar <?php echo $navbarStyleClass; ?>" role="navigation">
         <?php if ($navbarFixed == 'fixed-top') {
@@ -154,20 +156,27 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
                     ?>
                 </ul>
             </div><!--/.nav-collapse -->
-            <?php if ($navbarFixed == 'fixed-top') {
+
+            <?php
+            if ($navbarFixed == 'fixed-top') {
             ?></div>
             <?php } ?>
-    </div>
+    </div> <!-- end navbar-->
 
-    <?php if ($navbarFixed == 'default') {
+<?php
+}
+else
+{ ?>
+  <p>&nbsp;</p>
+<?php }
+
+if ($navbarFixed == 'default') {
     ?>
 </div> <!-- container -->
     </div> <!-- header in default navbar -->
 
 <?php }
 ?>
-    <?php //wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-
         <div class="container">
 
         <div id="main" class="site-main">

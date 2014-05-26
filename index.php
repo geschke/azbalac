@@ -9,9 +9,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package tikva
+ * @package Tikva
  * @subpackage Themes
- * @since tikva 0.1
+ * @since Tikva 0.1
  */
 
 get_header(); ?>

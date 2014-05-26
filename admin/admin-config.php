@@ -220,7 +220,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'type' => 'image_select',
                         'title' => __('Layout', 'tikva'),
                         //'subtitle' => __('No validation can be done on this field type', 'tikva'),
-                        'desc' => __('Set layout or your site.', 'tikva'),
+                        'desc' => __('Set layout of your site.', 'tikva'),
                         'options' => array(
                             '1' => array('alt' => '1 Column', 'img' => ReduxFramework::$_url.'assets/img/1col.png'),
                             '2' => array('alt' => '2 Column, Content left, Sidebar right', 'img' => ReduxFramework::$_url.'assets/img/2cr.png'),
@@ -399,8 +399,8 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 'display_version' => $theme->get('Version'), // Version that appears at the top of your panel
                 'menu_type' => 'menu', //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu' => true, // Show the sections below the admin menu item or not
-                'menu_title' => __('tikva Theme Options', 'tikva'),
-                'page' => __('tikva Theme Options', 'tikva'),
+                'menu_title' => __('Tikva Theme Options', 'tikva'),
+                'page' => __('Tikva Theme Options', 'tikva'),
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                 'google_api_key' => 'AIzaSyAuAl40BlKHKsDEYeHbVMbJpD1ygXc0-8Q', // Must be defined to add google fonts to the typography module

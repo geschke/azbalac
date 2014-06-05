@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage tikva
- * @since Tikva 1.0
+ * @since Tikva 0.1
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) ) {

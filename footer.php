@@ -2,11 +2,7 @@
 /**
  * The template for displaying the footer
  *
- * Contains footer content and the closing of the #main and #page div elements.
- *
- * @package WordPress
- * @subpackage jfp
- * @since Tikva 1.0
+ * @since Tikva 0.1
  */
 ?>
 
@@ -65,11 +61,7 @@ else {
 <div class="container">
     <hr/>
 		<footer id="colophon" class="site-footer" role="contentinfo">
-
-			<?php //get_sidebar( 'footer' ); // this has shown the right sidebar below the hr ??? ähh... ?>
-
 			<div class="site-info">
-				<?php //do_action( 'twentyfourteen_credits' ); ?>
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tikva' ) ); ?>"><?php printf( __
                     ( 'Proudly powered by %s', 'tikva' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
@@ -80,9 +72,5 @@ else {
     </div>
 
 	<?php wp_footer(); ?>
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tikva v0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
 "PO-Revision-Date: 2014-05-26 16:08:35+0200\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"

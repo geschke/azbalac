@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php //twentyfourteen_post_thumbnail(); ?>
+	<?php //tikva_post_thumbnail(); ?>
 
 	<header class="entry-header">
 
@@ -29,7 +29,7 @@
 		<div class="entry-meta">
 			<?php
 				if ( 'post' == get_post_type() )
-					//twentyfourteen_posted_on();
+					//tikva_posted_on();
 
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 			?>

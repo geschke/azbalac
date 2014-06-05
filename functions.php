@@ -114,7 +114,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
-        //add_editor_style( array( 'css/editor-style.css', twentyfourteen_font_url() ) );
+        //add_editor_style( array( 'css/editor-style.css', tikva_font_url() ) );
 
         // Add RSS feed links to <head> for posts and comments.
         add_theme_support( 'automatic-feed-links' );
@@ -142,7 +142,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
 
         // This theme allows users to set a custom background.
-        //add_theme_support( 'custom-background', apply_filters( 'twentyfourteen_custom_background_args', array(
+        //add_theme_support( 'custom-background', apply_filters( 'tikva_custom_background_args', array(
         //    'default-color' => 'f5f5f5',
         //) ) );
         add_theme_support( 'custom-background');
@@ -157,11 +157,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         add_editor_style( 'css/editor-style.css' );
 
 
-        // Add support for featured content.
-        //add_theme_support( 'featured-content', array(
-        //    'featured_content_filter' => 'twentyfourteen_get_featured_posts',
-        //    'max_posts' => 6,
-        //) );
+
 
         // This theme uses its own gallery styles.
         //add_filter( 'use_default_gallery_style', '__return_false' );
@@ -172,7 +168,7 @@ add_action( 'after_setup_theme', 'tikva_setup' );
 /**
  * Set up the content width value based on the theme's design.
  *
- * @see twentyfourteen_content_width()
+ * @see tikva_content_width()
  *
  * @since tikva 0.1
  */
@@ -326,6 +322,7 @@ endif;
 
 add_filter( 'get_search_form', 'tikva_get_search_form' );
 
+
 /**
  * Enqueue scripts and styles for the front end.
  *
@@ -335,25 +332,27 @@ add_filter( 'get_search_form', 'tikva_get_search_form' );
  */
 function tikva_scripts() {
     // Add Lato font, used in the main stylesheet.
-    //wp_enqueue_style( 'tikva-lato', twentyfourteen_font_url(), array(), null );
+    //wp_enqueue_style( 'tikva-lato', tikva_font_url(), array(), null );
 
     // Add Genericons font, used in the main stylesheet.
     //wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
 
     // Load our main stylesheet.
-    //wp_enqueue_style( 'twentyfourteen-style', get_stylesheet_uri(), array( 'genericons' ) );
+    wp_enqueue_style( 'tikva-style', get_stylesheet_uri(), array());
 
     // Load the Internet Explorer specific stylesheet.
-   // wp_enqueue_style( 'twentyfourteen-ie', get_template_directory_uri() . '/css/ie.css',
-   //     array( 'twentyfourteen-style', 'genericons' ), '20131205' );
-    //wp_style_add_data( 'twentyfourteen-ie', 'conditional', 'lt IE 9' );
+   // wp_enqueue_script( 'tikva-ie', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'); //get_template_directory_uri() . '/css/ie.css',
+        // array( 'tikva-style', 'genericons' ), '20131205' );
+    //wp_st_add_data( 'tikva-ie', 'conditional', 'lt IE 9' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.1.1', true );
+
     /*if ( is_singular() && wp_attachment_is_image() ) {
-        wp_enqueue_script( 'twentyfourteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
+        wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
     }*/
 
     /*if ( is_active_sidebar( 'sidebar-3' ) ) {
@@ -361,15 +360,16 @@ function tikva_scripts() {
     }*/
 
     /*if ( is_front_page() && 'slider' == get_theme_mod( 'featured_content_layout' ) ) {
-        wp_enqueue_script( 'twentyfourteen-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
-        wp_localize_script( 'twentyfourteen-slider', 'featuredSliderDefaults', array(
-            'prevText' => __( 'Previous', 'twentyfourteen' ),
-            'nextText' => __( 'Next', 'twentyfourteen' )
+        wp_enqueue_script( 'tikva-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
+        wp_localize_script( 'tikva-slider', 'featuredSliderDefaults', array(
+            'prevText' => __( 'Previous', 'tikva' ),
+            'nextText' => __( 'Next', 'tikva' )
         ) );
     }*/
 
+    
     wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
-        array( 'jquery' ), '20131224', true );
+        array( 'jquery' ), '20140605', true );
 }
 add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 

@@ -14,7 +14,7 @@
  *
  * @package WordPress
  * @subpackage Tikva
- * @since Tikva 1.0
+ * @since Tikva 0.1
  */
 
 get_header(); ?>

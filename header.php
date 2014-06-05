@@ -9,15 +9,15 @@
 <html  <?php language_attributes(); ?>>
     <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
-      <!-- <title><?php wp_title(); ?></title> -->
-      <title><?php wp_title( '|', true, 'right' );
-          bloginfo( 'name' ); ?></title>
+      <title><?php
+          wp_title( '|', true, 'right' );
+          bloginfo( 'name' );
+      ?></title>
         
       <meta name="description" content="<?php bloginfo( 'description' ); ?>">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <?php
 
 
@@ -44,6 +44,10 @@ global $tikva_theme;
      ?>
 
         <?php wp_head(); ?>
+        <?php
+        /* Unfortunately there is no conditional JavaScript solution as it exists for stylesheets.
+        */
+        ?>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

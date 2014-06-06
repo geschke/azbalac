@@ -11,7 +11,8 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 {
 
     // add classes to ul sub-menus
-    public function start_lvl( &$output, $depth ) {
+    public function start_lvl( &$output, $depth = 0, $args = array() )
+    {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
     }
@@ -19,7 +20,8 @@ class HeaderMenuWalker extends Walker_Nav_Menu
     // todo: if level > 2 then don't do dropdown
 
     // add main/sub classes to li's and links
-    public function start_el( &$output, $item, $depth, $args ) {
+    public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 )
+    {
         global $wp_query;
         $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 

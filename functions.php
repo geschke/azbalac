@@ -7,10 +7,10 @@
 if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/inc/3rd/ReduxFramework/ReduxCore/framework.php' ) ) {
     require_once( dirname( __FILE__ ) . '/inc/3rd/ReduxFramework/ReduxCore/framework.php' );
 }
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/inc/3rd/ReduxFramework/sample/sample-config.php' ) ) {
+/*if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/inc/3rd/ReduxFramework/sample/sample-config.php' ) ) {
     require_once( dirname( __FILE__ ) . '/inc/3rd/ReduxFramework/sample/sample-config.php' );
 }
-
+*/
 require_once( get_template_directory() . '/admin/admin-config.php' );
 
 

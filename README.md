@@ -18,3 +18,8 @@ Version 0.1.1:
 
 Version 0.1:
 Initial release.
+
+License:
+========
+
+http://opensource.org/licenses/gpl-2.0.php GPL v2 or later

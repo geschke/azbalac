@@ -80,8 +80,6 @@ function tikva_register_required_plugins() {
 
 }
 
-
-
 require_once( get_template_directory() . '/admin/admin-config.php' );
 
 
@@ -382,7 +380,7 @@ function bootstrap_styles()
         $stylesheet = $tikva_theme['stylesheet'];
     }
     else {
-        $stylesheet = 'bootstap.min.css';
+        $stylesheet = 'slate.min.css';
     }
 
     // Register the style like this for a theme:
@@ -417,28 +415,6 @@ function register_tikva_menus() {
 }
 add_action( 'init', 'register_tikva_menus' );
 
-
-/*
- *  function add_menu_parent_class( $items ) {
-
-    $parents = array();
-    foreach ( $items as $item ) {
-        if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
-            $parents[] = $item->menu_item_parent;
-        }
-    }
-
-    foreach ( $items as $item ) {
-        if ( in_array( $item->ID, $parents ) ) {
-            $item->classes[] = 'dropdown';
-        }
-    }
-
-    return $items;
-}
-
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
-*/
 
 /**
  * A helper conditional function that returns a boolean value.
@@ -504,7 +480,10 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
                 $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
                 break;
         }
-        return array('columns' => $columns, 'col_1' => $styleCol_1, 'col_2' => $styleCol_2, 'content' => $content);
+        return array('columns' => $columns,
+            'col_1' => $styleCol_1,
+            'col_2' => $styleCol_2,
+            'content' => $content);
     }
 endif;
 

@@ -219,7 +219,6 @@ function tikva_comment_fields($fields) {
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
-
     $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','tikva' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
@@ -235,6 +234,19 @@ function tikva_comment_fields($fields) {
 // see above...
 add_filter('comment_form_default_fields','tikva_comment_fields');
 
+
+function tikva_sidebar_params_table($params) {
+    $sidebar_id = $params[0]['id'];
+    $sidebar_widgets = wp_get_sidebars_widgets();
+    $last_widget_id = end($sidebar_widgets[$sidebar_id]);
+    if ($last_widget_id==$params[0]['widget_id']) {
+        $params[0]['before_widget'] = str_replace(' class="',' class="last_widget ',$params[0]['before_widget']);
+    }
+
+    return $params;
+}
+
+add_filter('dynamic_sidebar_params','tikva_sidebar_params_table');
 
 
 if ( ! function_exists( 'tikva_paging_nav' ) ) :

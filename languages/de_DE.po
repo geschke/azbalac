@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tikva v0.1\n"
+"Project-Id-Version: Tikva v0.1.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-05-26 16:08:35+0200\n"
+"PO-Revision-Date: 2014-06-09 15:57:20+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -123,18 +123,18 @@ msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: footer.php:73
+#: footer.php:65
 #@ tikva
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:74
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#: footer.php:66
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
 
-#: functions.php:320
+#: functions.php:312
 #@ default
 msgid "Search"
 msgstr "Suche"
@@ -144,7 +144,7 @@ msgstr "Suche"
 msgid "Layout"
 msgstr "Layout"
 
-#: functions.php:290
+#: functions.php:282
 #, fuzzy
 #@ tikva
 msgid "Posts navigation"
@@ -257,53 +257,33 @@ msgstr "Footer Schriftfarbe"
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: admin/admin-config.php:316
-#@ tikva
-msgid "<strong>Theme URL:</strong> "
-msgstr "<strong>Theme URL:</strong> "
-
-#: admin/admin-config.php:317
-#@ tikva
-msgid "<strong>Author:</strong> "
-msgstr "<strong>Autor:</strong> "
-
 #: admin/admin-config.php:318
-#@ tikva
-msgid "<strong>Version:</strong> "
-msgstr "<strong>Version:</strong> "
-
-#: admin/admin-config.php:322
-#@ tikva
-msgid "<strong>Tags:</strong> "
-msgstr "<strong>Tags:</strong> "
-
-#: admin/admin-config.php:332
 #@ tikva
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: admin/admin-config.php:352
+#: admin/admin-config.php:338
 #@ tikva
 msgid "Theme Information"
 msgstr "Theme Informationen"
 
-#: admin/admin-config.php:371
+#: admin/admin-config.php:357
 #@ tikva
 msgid "Theme Information 1"
 msgstr "Theme Informationen 1"
 
-#: admin/admin-config.php:372
-#: admin/admin-config.php:378
+#: admin/admin-config.php:358
+#: admin/admin-config.php:364
 #@ tikva
 msgid "<p>This is the tab content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt des Tabs, HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:377
+#: admin/admin-config.php:363
 #@ tikva
 msgid "Theme Information 2"
 msgstr "Theme Informationen 2"
 
-#: admin/admin-config.php:382
+#: admin/admin-config.php:368
 #@ tikva
 msgid "<p>This is the sidebar content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt der Sidebar, HTML ist erlaubt.</p>"
@@ -319,38 +299,38 @@ msgstr "Kommentar"
 msgid "Tags: "
 msgstr "Tags: "
 
-#: content.php:79
+#: content.php:80
 #, php-format
 #@ tikva
 msgid "View all posts in %s"
 msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:229
+#: functions.php:222
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:232
+#: functions.php:225
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:235
+#: functions.php:228
 #@ tikva
 msgid "Website"
 msgstr "Website"
 
-#: functions.php:281
+#: functions.php:273
 #@ tikva
 msgid "&laquo; Previous"
 msgstr "&laquo; Zurück"
 
-#: functions.php:282
+#: functions.php:274
 #@ tikva
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:416
+#: functions.php:412
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -396,13 +376,13 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:317
+#: functions.php:309
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:318
+#: functions.php:310
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
@@ -419,36 +399,36 @@ msgstr "Suchergebnisse für: %s"
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
 
-#: functions.php:513
+#: functions.php:490
 #@ tikva
 msgid "Read More &raquo;"
 msgstr "Weiterlesen &raquo;"
 
-#: functions.php:59
+#: functions.php:58
 #: inc/3rd/class-tgm-plugin-activation.php:196
 #@ tikva
 msgid "Install Required Plugins"
 msgstr "Installiere benötigte Plugins"
 
-#: functions.php:60
+#: functions.php:59
 #: inc/3rd/class-tgm-plugin-activation.php:197
 #@ tikva
 msgid "Install Plugins"
 msgstr "Installiere Plugins"
 
-#: functions.php:61
+#: functions.php:60
 #: inc/3rd/class-tgm-plugin-activation.php:198
 #, php-format
 #@ tikva
 msgid "Installing Plugin: %s"
 msgstr "Installiere Plugin: %s"
 
-#: functions.php:62
+#: functions.php:61
 #@ tikva
 msgid "Something went wrong with the plugin API."
 msgstr "Leider ist bei der Plugin API etwas schief gelaufen."
 
-#: functions.php:63
+#: functions.php:62
 #: inc/3rd/class-tgm-plugin-activation.php:200
 #, php-format
 #@ tikva
@@ -457,7 +437,7 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] "Dieses Theme benötigt das folgende Plugin:  %1$s."
 msgstr[1] "Dieses Theme benötigt die folgenden Plugins:  %1$s."
 
-#: functions.php:64
+#: functions.php:63
 #: inc/3rd/class-tgm-plugin-activation.php:201
 #, php-format
 #@ tikva
@@ -466,7 +446,7 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] "Bei diesem Theme wird die Verwendung des folgenden Plugins empfohlen: %1$s."
 msgstr[1] "Bei diesem Theme wird die Verwendung der folgenden Plugins empfohlen: %1$s."
 
-#: functions.php:65
+#: functions.php:64
 #: inc/3rd/class-tgm-plugin-activation.php:202
 #, php-format
 #@ tikva
@@ -475,7 +455,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to install the 
 msgstr[0] "Leider reichen die Zugriffsrechte nicht aus, um das %s Plugin zu installieren. Bitte wende dich an den Administrator der Site."
 msgstr[1] "Leider reichen die Zugriffsrechte nicht aus, um die %s Plugins zu installieren. Bitte wende dich an den Administrator der Site."
 
-#: functions.php:66
+#: functions.php:65
 #: inc/3rd/class-tgm-plugin-activation.php:203
 #, php-format
 #@ tikva
@@ -484,7 +464,7 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] "Das folgende Plugin wird benötigt, ist jedoch nicht aktiviert:  %1$s."
 msgstr[1] "Die folgenden Plugins werden benötigt, sind jedoch nicht aktiviert:  %1$s."
 
-#: functions.php:67
+#: functions.php:66
 #: inc/3rd/class-tgm-plugin-activation.php:204
 #, php-format
 #@ tikva
@@ -493,7 +473,7 @@ msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] "Das folgende Plugin wird empfohlen, ist jedoch nicht aktiviert:  %1$s."
 msgstr[1] "Die folgenden Plugins werden empfohlen, sind jedoch nicht aktiviert:  %1$s."
 
-#: functions.php:68
+#: functions.php:67
 #: inc/3rd/class-tgm-plugin-activation.php:205
 #, php-format
 #@ tikva
@@ -502,7 +482,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to activate the
 msgstr[0] "Leider reichen die Zugriffsrechte nicht aus, um das %s Plugin zu aktivieren. Bitte wende dich an den Administrator der Site."
 msgstr[1] "Leider reichen die Zugriffsrechte nicht aus, um die %s Plugins zu aktivieren. Bitte wende dich an den Administrator der Site."
 
-#: functions.php:69
+#: functions.php:68
 #: inc/3rd/class-tgm-plugin-activation.php:206
 #, php-format
 #@ tikva
@@ -511,7 +491,7 @@ msgid_plural "The following plugins need to be updated to their latest version t
 msgstr[0] "Um maximale Kompatibilität mit dem Theme herzustellen, muss das folgende Plugin aktualisiert werden: %1$s."
 msgstr[1] "Um maximale Kompatibilität mit dem Theme herzustellen, müssen die folgenden Plugins aktualisiert werden: %1$s."
 
-#: functions.php:70
+#: functions.php:69
 #: inc/3rd/class-tgm-plugin-activation.php:207
 #, php-format
 #@ tikva
@@ -520,7 +500,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to update the %
 msgstr[0] "Leider reichen die Zugriffsrechte nicht aus, um das %s Plugin zu aktualisieren. Bitte wende dich an den Administrator der Site."
 msgstr[1] "Leider reichen die Zugriffsrechte nicht aus, um die %s Plugins zu aktualisieren. Bitte wende dich an den Administrator der Site."
 
-#: functions.php:71
+#: functions.php:70
 #: inc/3rd/class-tgm-plugin-activation.php:208
 #@ tikva
 msgid "Begin installing plugin"
@@ -528,7 +508,7 @@ msgid_plural "Begin installing plugins"
 msgstr[0] "Beginne mit der Installation des Plugins"
 msgstr[1] "Beginne mit der Installation der Plugins"
 
-#: functions.php:72
+#: functions.php:71
 #: inc/3rd/class-tgm-plugin-activation.php:209
 #@ tikva
 msgid "Begin activating plugin"
@@ -536,20 +516,20 @@ msgid_plural "Begin activating plugins"
 msgstr[0] "Beginne mit der Aktivierung des Plugins"
 msgstr[1] "Beginne mit der Aktivierung der Plugins"
 
-#: functions.php:73
+#: functions.php:72
 #: inc/3rd/class-tgm-plugin-activation.php:210
 #@ tikva
 msgid "Return to Required Plugins Installer"
 msgstr "Zurück zur Installation benötigter Plugins"
 
-#: functions.php:74
+#: functions.php:73
 #: inc/3rd/class-tgm-plugin-activation.php:212
 #: inc/3rd/class-tgm-plugin-activation.php:1951
 #@ tikva
 msgid "Plugin activated successfully."
 msgstr "Plugin erfolgreich aktiviert."
 
-#: functions.php:75
+#: functions.php:74
 #, php-format
 #@ tikva
 msgid "All plugins installed and activated successfully. %s"
@@ -783,9 +763,16 @@ msgstr "Installiere Plugin %1$s (%2$d/%3$d)"
 msgid "Set layout of your site."
 msgstr "Setze Layout der Site"
 
-#: admin/admin-config.php:402
-#: admin/admin-config.php:403
+#: admin/admin-config.php:388
+#: admin/admin-config.php:389
 #@ tikva
 msgid "Tikva Theme Options"
 msgstr "Tikva Theme Einstellungen"
+
+#: content.php:75
+#@ tikva
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] "Kategorie:"
+msgstr[1] "Kategorien:"
 

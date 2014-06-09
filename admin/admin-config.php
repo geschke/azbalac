@@ -308,25 +308,11 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                     )
                 ));
 
-
-
-
-
-            $theme_info = '<div class="redux-framework-section-desc">';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-uri">' . __('<strong>Theme URL:</strong> ', 'tikva') . '<a href="' . $this->theme->get('ThemeURI') . '" target="_blank">' . $this->theme->get('ThemeURI') . '</a></p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-author">' . __('<strong>Author:</strong> ', 'tikva') . $this->theme->get('Author') . '</p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-version">' . __('<strong>Version:</strong> ', 'tikva') . $this->theme->get('Version') . '</p>';
-            $theme_info .= '<p class="redux-framework-theme-data description theme-description">' . $this->theme->get('Description') . '</p>';
-            $tabs = $this->theme->get('Tags');
-            if (!empty($tabs)) {
-                $theme_info .= '<p class="redux-framework-theme-data description theme-tags">' . __('<strong>Tags:</strong> ', 'tikva') . implode(', ', $tabs) . '</p>';
-            }
-            $theme_info .= '</div>';
-
             if (file_exists(dirname(__FILE__) . '/../README.md')) {
-                // ugly stuff! A local file should be readable without going remote!
-                // And the WP_Filesystem API is not really senseful, there is no need for credentials from a formular!!!
-                $readmeContent = wp_remote_retrieve_body( wp_remote_get( get_template_directory_uri() . '/README.md' )); //$wp_filesystem->get_contents(dirname(__FILE__) . '/../README.md');
+                // strange stuff! A local file should be readable without going remote!
+                // And the WP_Filesystem API is not really senseful, there is no need for credentials from a formular!
+                $remoteReadmeFile = wp_remote_get( get_template_directory_uri() . '/README.md' );
+                $readmeContent = wp_remote_retrieve_body( $remoteReadmeFile);
                 $this->sections['theme_docs'] = array(
                     'icon' => 'el-icon-list-alt',
                     'title' => __('Documentation', 'tikva'),

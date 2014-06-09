@@ -71,7 +71,8 @@
     $separator = ' ';
     $output = '';
     if($categories){
-        echo "<div>Kategorien: ";
+        echo "<div>";
+        echo _n( 'Category:', 'Categories:', count($categories), 'tikva' );
         echo '<ul class="nav nav-pills">';
         foreach($categories as $category) {
             $output .= '<li><a href="'.get_category_link( $category->term_id ).'"

@@ -235,20 +235,6 @@ function tikva_comment_fields($fields) {
 add_filter('comment_form_default_fields','tikva_comment_fields');
 
 
-function tikva_sidebar_params_table($params) {
-    $sidebar_id = $params[0]['id'];
-    $sidebar_widgets = wp_get_sidebars_widgets();
-    $last_widget_id = end($sidebar_widgets[$sidebar_id]);
-    if ($last_widget_id==$params[0]['widget_id']) {
-        $params[0]['before_widget'] = str_replace(' class="',' class="last_widget ',$params[0]['before_widget']);
-    }
-
-    return $params;
-}
-
-add_filter('dynamic_sidebar_params','tikva_sidebar_params_table');
-
-
 if ( ! function_exists( 'tikva_paging_nav' ) ) :
     /**
      * Display navigation to next/previous set of posts when applicable.

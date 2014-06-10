@@ -370,7 +370,7 @@ function tikva_scripts() {
 add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 
 
-function bootstrap_styles()
+function tikva_bootstrap_styles()
 {
     global $tikva_theme;
     if (isset($tikva_theme['stylesheet']))
@@ -397,7 +397,44 @@ function bootstrap_styles()
     //wp_enqueue_style( 'responsive-style' );
 
 }
-add_action( 'wp_enqueue_scripts', 'bootstrap_styles' );
+add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
+
+/**
+ * Create a nicely formatted and more specific title element text for output
+ * in head of document, based on current view.
+ * in head of document, based on current view.
+ * in head of document, based on current view.
+ *
+ * @since Tikva 0.1.4
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function tikva_wp_title( $title, $sep ) {
+        global $paged, $page;
+
+        if ( is_feed() ) {
+                return $title;
+        }
+
+        // Add the site name.
+        $title .= get_bloginfo( 'name' );
+
+        // Add the site description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) ) {
+                $title = "$title $sep $site_description";
+        }
+
+        // Add a page number if necessary.
+        if ( $paged >= 2 || $page >= 2 ) {
+                $title = "$title $sep " . sprintf( __( 'Page %s', 'tikva' ), max( $paged, $page ) );
+        }
+
+        return $title;
+}
+add_filter( 'wp_title', 'tikva_wp_title', 10, 2 );
 
 
 

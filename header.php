@@ -129,6 +129,9 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
 if (has_nav_menu('header-menu')) {
 ?>
 
+
+
+
     <!-- Fixed navbar -->
     <div class="navbar <?php echo $navbarStyleClass; ?>" role="navigation">
         <?php if ($navbarFixed == 'fixed-top') {
@@ -154,7 +157,31 @@ if (has_nav_menu('header-menu')) {
                     'menu_class'     => 'nav navbar-nav',
                     'walker' => new HeaderMenuWalker()
                     ) );
+
                     ?>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">More options</a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Second level</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#">More..</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">3rd level</a></li>
+                                    <li><a href="#">3rd level</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Second level</a></li>
+                            <li><a href="#">Second level</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+
                 </ul>
             </div><!--/.nav-collapse -->
 

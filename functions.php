@@ -439,7 +439,6 @@ add_filter( 'wp_title', 'tikva_wp_title', 10, 2 );
 
 
 function add_class_the_tags($html){
-    $postid = get_the_ID();
     $html = str_replace('<a','<a class="btn btn-info btn-xs"',$html);
     return $html;
 }

@@ -36,7 +36,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 
         // passed classes
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-        $classes[] = ($args->has_children) ? 'dropdown' : '';
+        $classes[] = ($args->has_children) ? ( $depth >= 1 ? 'dropdown-submenu dropdown' : 'dropdown') : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
 
 

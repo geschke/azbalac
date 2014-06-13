@@ -279,7 +279,7 @@ if ( ! function_exists( 'tikva_paging_nav' ) ) :
 
             ?>
             <nav class="navigation paging-navigation" role="navigation">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tikva' ); ?></h1>
+                <h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'tikva' ); ?></h2>
                 <ul class="pagination loop-pagination">
                     <?php
                     foreach ($links as $link) {
@@ -497,21 +497,21 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
-                $styleCol_1 = 'col-md-12 col-sm-12 col-xs-12';
-                $styleCol_2 = 'col-md-12 col-sm-12 col-xs-12';
+                $styleCol_1 = 'col-md-12 col-sm-12';
+                $styleCol_2 = 'col-md-12 col-sm-12';
                 break;
             case 3:
                 $columns = 2;
                 $content = 2; // main content right
-                $styleCol_1 = 'col-md-9 col-sm-9 col-xs-9';
-                $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
+                $styleCol_1 = 'col-md-9 col-sm-8';
+                $styleCol_2 = 'col-md-3 col-sm-4';
                 break;
             case 2:
             default:
                 $columns = 2;
                 $content = 1; // main content left
-                $styleCol_1 = 'col-md-9 col-sm-9 col-xs-9';
-                $styleCol_2 = 'col-md-3 col-sm-3 col-xs-3';
+                $styleCol_1 = 'col-md-9 col-sm-8';
+                $styleCol_2 = 'col-md-3 col-sm-4';
                 break;
         }
         return array('columns' => $columns,

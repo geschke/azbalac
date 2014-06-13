@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tikva v0.1.2\n"
+"Project-Id-Version: Tikva v0.1.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-06-09 15:57:20+0000\n"
+"PO-Revision-Date: 2014-06-13 23:10:19+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -129,7 +129,7 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:66
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
@@ -330,7 +330,7 @@ msgstr "&laquo; Zurück"
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:412
+#: functions.php:448
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -399,7 +399,7 @@ msgstr "Suchergebnisse für: %s"
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
 
-#: functions.php:490
+#: functions.php:526
 #@ tikva
 msgid "Read More &raquo;"
 msgstr "Weiterlesen &raquo;"
@@ -775,4 +775,25 @@ msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] "Kategorie:"
 msgstr[1] "Kategorien:"
+
+#: functions.php:432
+#, php-format
+#@ tikva
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: header.php:58
+#@ tikva
+msgid "Skip to main content"
+msgstr "Zum Hauptinhalt springen"
+
+#: header.php:115
+#@ tikva
+msgid "Header Image - navigate to homepage"
+msgstr "Header-Bild - Link zur Homepage"
+
+#: header.php:141
+#@ tikva
+msgid "Toggle navigation"
+msgstr "Schalte Navigation"
 

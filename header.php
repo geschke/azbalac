@@ -55,7 +55,7 @@ global $tikva_theme;
 
 
     <body <?php body_class(); ?>>
-
+    <a href="#content" class="sr-only"><?php _e( 'Skip to main content', 'tikva' ); ?></a>
 <?php
 
 
@@ -106,13 +106,13 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
     <div style="background-color: <?php echo $headerStyleColorBg; ?>; <?php echo $headerStyleColorFg; ?>;">
 
 <div class="container">
-    <div class="masthead col-md-12 col-sm-12 col-xs-12">
+    <div class="masthead col-md-12 col-sm-12">
         <h3 class="text-muted"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
         <?php
         if ( get_header_image() ) : ?>
             <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+                    <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
                 </a>
             </div>
         <?php endif;
@@ -138,7 +138,7 @@ if (has_nav_menu('header-menu')) {
         ?><div class="container">
          <?php } ?>   <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"><?php _e( 'Toggle navigation', 'tikva' ); ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -159,28 +159,7 @@ if (has_nav_menu('header-menu')) {
                     ) );
 
                     ?>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
 
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-submenu">
-                        <a tabindex="-1" href="#">More options</a>
-                        <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="#">Second level</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#">More..</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">3rd level</a></li>
-                                    <li><a href="#">3rd level</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Second level</a></li>
-                            <li><a href="#">Second level</a></li>
-                        </ul>
-                    </li>
-                    </ul>
 
                 </ul>
             </div><!--/.nav-collapse -->

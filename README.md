@@ -1,10 +1,16 @@
 Tikva - a small theme based on Bootstrap
 
-Version 0.1.3
+Version 0.1.4
 =============
 
 Version history:
 ================
+
+Version 0.1.4:
+- title function taken from Twentyfourteen
+- multilevel menus now working
+- responsiveness optimized
+- removed the accessibility-ready tag, this feature will be added in future versions again
 
 Version 0.1.3:
 - strict standards warning in admin-config.php fixed

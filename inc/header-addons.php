@@ -60,7 +60,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
             $args->link_before,
             apply_filters( 'the_title', $item->title, $item->ID ),
             $args->link_after,
-            ($args->has_children) ? ' <b class="caret"></b>' : '',
+            ($args->has_children && $depth < 1) ? ' <b class="caret"></b>' : '',
             $args->after
         );
 

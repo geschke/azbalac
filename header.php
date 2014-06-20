@@ -55,7 +55,7 @@ global $tikva_theme;
 
 
     <body <?php body_class(); ?>>
-    <a href="#content" class="sr-only"><?php _e( 'Skip to main content', 'tikva' ); ?></a>
+    <div id="skip-link"><a href="#content" class="sr-only element-focusable"><?php _e( 'Skip to main content', 'tikva' ); ?></a></div>
 <?php
 
 
@@ -99,7 +99,9 @@ else {
 
 <?php
 $description = get_bloginfo( 'name', 'display' );
-$description .= ' ' . get_bloginfo( 'description', 'display' );
+if ($navbarFixed != 'fixed-top') {
+    $description .= ' ' . get_bloginfo( 'description', 'display' );
+}
 ?>
 <?php if ($navbarFixed == 'default') {
 ?>
@@ -125,20 +127,18 @@ $description .= ' ' . get_bloginfo( 'description', 'display' );
 <?php if ($navbarFixed == 'default') {
 ?>
 <div class="container">
-<?php }
+<?php
+}
 if (has_nav_menu('header-menu')) {
 ?>
-
-
-
-
     <!-- Fixed navbar -->
     <div class="navbar <?php echo $navbarStyleClass; ?>" role="navigation">
         <?php if ($navbarFixed == 'fixed-top') {
         ?><div class="container">
          <?php } ?>   <div class="navbar-header">
+                <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse"><?php _e( 'Toggle navigation', 'tikva' ); ?></a></div>
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"><?php _e( 'Toggle navigation', 'tikva' ); ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

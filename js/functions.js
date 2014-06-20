@@ -68,6 +68,7 @@
 			}
 		} );
 
+
 		/*
 		 * Fixed header for large screen.
 		 * If the header becomes more than 48px tall, unfix the header.

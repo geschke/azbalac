@@ -19,6 +19,67 @@ Use it to make something cool, have fun, and share what you've learned with othe
    padding-bottom: 30px;
  }*/
 
+/* Skip link styling */
+#skip-link {
+    top: 0;
+    left: 50%;
+    margin-left: -5.25em;
+    margin-top: 0;
+    position: absolute;
+    width: auto;
+    z-index: 5000;
+}
+
+#skip-link a,
+#skip-link a:link,
+#skip-link a:visited {
+    background: #444;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    /*display: block;*/
+    padding: 1px 10px 2px 10px;
+    -khtml-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+    outline: 0;
+}
+
+
+/* screen-reader navigation link styling */
+
+@media (min-width: 768px) {
+    #navbar-toggle-screenreader {
+        display: none;
+    }
+}
+
+#navbar-toggle-screenreader {
+    position: absolute;
+    padding: 10px 0 0 10px;
+}
+
+/**
+ * Allows the element to be focusable when navigated to via the keyboard.
+ */
+.element-focusable:active,
+.element-focusable:focus {
+    position: static !important;
+    clip: auto;
+    /*overflow: visible;*/
+    overflow: visible !important;
+    height: auto;
+}
+
 /* multilevel dropdown menu, taken from http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3
 */
 .dropdown-submenu {

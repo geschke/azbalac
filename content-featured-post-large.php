@@ -30,7 +30,11 @@
 
             <p>
             <?php
-            the_excerpt();
+            if (preg_match('/<!--more.*-->/',$post->post_content)) {
+                the_content( '<br/><p><span class="btn btn-primary"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span></p>' );
+            } else {
+                the_excerpt();
+            }
             ?>
             </p>
     </article>

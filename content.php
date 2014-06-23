@@ -57,7 +57,8 @@
         if (has_post_thumbnail()) {
             the_post_thumbnail('medium');
         }
-			the_content( '<br/><span class="btn btn-primary">' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span>' );
+
+			the_content( '<br/><span class="btn btn-primary"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span>' );
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
                         'tikva' ) . '</span>',

@@ -71,6 +71,9 @@ if ( post_password_required() ) {
     $commentForm = ob_get_clean();
     $commentForm = str_replace('class="comment-form"','class="form-horizontal comment-form"', $commentForm);
     $commentForm = str_replace('id="submit"','id="submit" class="btn btn-primary"', $commentForm);
+    $commentForm = str_replace('<code>','<pre>', $commentForm);
+    $commentForm = str_replace('</code>','</pre>', $commentForm);
+
     echo $commentForm;
     ?>
 

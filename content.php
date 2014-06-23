@@ -16,28 +16,32 @@
 
         <?php
 
-
-
-
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 		?>
 
 		<div class="entry-meta">
 			<?php
 				if ( 'post' == get_post_type() )
-					//tikva_posted_on();
+					tikva_posted_on();
 
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-			?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'tikva' ),
+
+                ?>
+            &nbsp;&nbsp;<span class="comments-link-icon"><a class="glyphicon glyphicon-comment" href="<?php comments_link();
+                    ?>"></a></span>&nbsp;<span class="comments-link"><?php
+                    comments_popup_link( __( 'Leave a comment', 'tikva' ),
                     __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>
 			<?php
 				endif;
-
+                if ($editPostLink = get_edit_post_link()) {
+                    printf('&nbsp;&nbsp;<span class="edit-link-icon"><a class="glyphicon glyphicon-edit" href="%1$s"></a></span>&nbsp;',
+                        $editPostLink
+                    );
+                }
 				edit_post_link( __( 'Edit', 'tikva' ), '<span class="edit-link">', '</span>' );
 			?>
 		</div><!-- .entry-meta -->

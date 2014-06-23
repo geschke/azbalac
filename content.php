@@ -57,7 +57,7 @@
         if (has_post_thumbnail()) {
             the_post_thumbnail('medium');
         }
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'tikva' ) );
+			the_content( '<br/><span class="btn btn-primary">' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span>' );
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
                         'tikva' ) . '</span>',

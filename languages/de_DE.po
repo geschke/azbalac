@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tikva v0.1.4\n"
+"Project-Id-Version: Tikva v0.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-06-13 23:10:19+0000\n"
+"PO-Revision-Date: 2014-06-23 19:02:00+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -108,17 +108,12 @@ msgstr "Ein Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: content.php:41
+#: content.php:45
 #@ tikva
 msgid "Edit"
 msgstr "Editieren"
 
-#: content.php:56
-#@ tikva
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
-
-#: content.php:58
+#: content.php:62
 #@ tikva
 msgid "Pages:"
 msgstr "Seiten:"
@@ -129,12 +124,12 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:66
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
 
-#: functions.php:312
+#: functions.php:256
 #@ default
 msgid "Search"
 msgstr "Suche"
@@ -144,7 +139,7 @@ msgstr "Suche"
 msgid "Layout"
 msgstr "Layout"
 
-#: functions.php:282
+#: inc/template-tags.php:53
 #, fuzzy
 #@ tikva
 msgid "Posts navigation"
@@ -294,43 +289,43 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: content.php:68
+#: content.php:72
 #@ tikva
 msgid "Tags: "
 msgstr "Tags: "
 
-#: content.php:80
+#: content.php:84
 #, php-format
 #@ tikva
 msgid "View all posts in %s"
 msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:222
+#: functions.php:224
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:225
+#: functions.php:227
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:228
+#: functions.php:230
 #@ tikva
 msgid "Website"
 msgstr "Website"
 
-#: functions.php:273
+#: inc/template-tags.php:44
 #@ tikva
 msgid "&laquo; Previous"
 msgstr "&laquo; Zurück"
 
-#: functions.php:274
+#: inc/template-tags.php:45
 #@ tikva
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:448
+#: functions.php:392
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -376,13 +371,13 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:309
+#: functions.php:253
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:310
+#: functions.php:254
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
@@ -399,7 +394,7 @@ msgstr "Suchergebnisse für: %s"
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
 
-#: functions.php:526
+#: functions.php:470
 #@ tikva
 msgid "Read More &raquo;"
 msgstr "Weiterlesen &raquo;"
@@ -769,14 +764,14 @@ msgstr "Setze Layout der Site"
 msgid "Tikva Theme Options"
 msgstr "Tikva Theme Einstellungen"
 
-#: content.php:75
+#: content.php:79
 #@ tikva
 msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] "Kategorie:"
 msgstr[1] "Kategorien:"
 
-#: functions.php:432
+#: functions.php:376
 #, php-format
 #@ tikva
 msgid "Page %s"
@@ -787,13 +782,24 @@ msgstr "Seite %s"
 msgid "Skip to main content"
 msgstr "Zum Hauptinhalt springen"
 
-#: header.php:115
+#: header.php:117
 #@ tikva
 msgid "Header Image - navigate to homepage"
 msgstr "Header-Bild - Link zur Homepage"
 
-#: header.php:141
+#: header.php:139
 #@ tikva
 msgid "Toggle navigation"
 msgstr "Schalte Navigation"
+
+#: content-featured-post.php:33
+#: content.php:60
+#@ tikva
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Weiterlesen <span class=\"meta-nav\">&raquo;</span>"
+
+#: inc/template-tags.php:78
+#@ tikva
+msgid "Sticky"
+msgstr "Oben halten"
 

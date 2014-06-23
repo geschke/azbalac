@@ -105,7 +105,7 @@ if ($navbarFixed != 'fixed-top') {
 ?>
 <?php if ($navbarFixed == 'default') {
 ?>
-    <div style="background-color: <?php echo $headerStyleColorBg; ?>; <?php echo $headerStyleColorFg; ?>;">
+    <div role="banner" style="background-color: <?php echo $headerStyleColorBg; ?>; <?php echo $headerStyleColorFg; ?>;">
 
 <div class="container">
     <div class="masthead col-md-12 col-sm-12">

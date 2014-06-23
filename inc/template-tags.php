@@ -75,7 +75,7 @@ if (!function_exists('tikva_posted_on')) :
     function tikva_posted_on()
     {
         if (is_sticky() && is_home() && !is_paged()) {
-            echo '<span class="featured-post">' . __('Sticky', 'tikva') . '</span>';
+            echo '<span class="featured-post">' . __('Sticky', 'tikva') . '</span>&nbsp;&nbsp;';
         }
         $permalink = esc_url(get_permalink());
         $authorPostsUrl = esc_url(get_author_posts_url(get_the_author_meta('ID')));

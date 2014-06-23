@@ -31,7 +31,7 @@ else {
 ?>
 <div style="background-color: <?php echo $colorBgFooter; ?>; <?php echo $footerStyleColorFg; ?>;">
 
-<div class="container">
+<div role="complementary" class="container">
 <div class="row" style="padding: 10px; 0px; 10px;">
     <div class="col-md-4 col-sm-4">
         <?php

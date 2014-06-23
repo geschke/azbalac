@@ -101,7 +101,7 @@
         $colsFeaturedFirstIndex = 0;
 		if ($colsFeaturedFirst)
             $colsFeaturedFirstIndex = $colsFeaturedFirst;
-//echo "colsfeatured first: " . $colsFeaturedFirst;
+
         $colsTranslate = array(3 => 4,
         2 => 6,
         1 => 12);

@@ -28,9 +28,12 @@ echo '<div class="col-lg-' .  $post->themeCols . ' col-md-' . $post->themeCols .
 
 	<header class="entry-header">
 		<?php
-
-        the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' );
-        the_excerpt();
+        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h2>' );
+        if (preg_match('/<!--more.*-->/',$post->post_content)) {
+            the_content( '<br/><p><span class="btn btn-primary">' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span></p>' );
+        } else {
+            the_excerpt();
+        }
         ?>
 
 	</header><!-- .entry-header -->

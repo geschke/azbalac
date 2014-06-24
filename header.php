@@ -109,7 +109,7 @@ if ($navbarFixed != 'fixed-top') {
 
 <div class="container">
     <div class="masthead col-md-12 col-sm-12">
-        <h3 class="text-muted"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
+        <h3><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
         <?php
         if ( get_header_image() ) : ?>
             <div id="site-header">

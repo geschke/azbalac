@@ -15,7 +15,6 @@
 	<header class="entry-header">
 
         <?php
-
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
@@ -32,13 +31,15 @@
 
                 ?>
             &nbsp;&nbsp;<span class="comments-link-icon"><a class="glyphicon glyphicon-comment" href="<?php comments_link();
-                    ?>"></a></span>&nbsp;<span class="comments-link"><?php
-                    comments_popup_link( __( 'Leave a comment', 'tikva' ),
+                    ?>"><span class="screen-reader-text"><?php
+                    printf( __( 'Leave a comment on %s', 'tikva' ), get_the_title())
+                    ?></span></a></span>&nbsp;<span class="comments-link"><?php
+                    comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
                     __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>
 			<?php
 				endif;
                 if ($editPostLink = get_edit_post_link()) {
-                    printf('&nbsp;&nbsp;<span class="edit-link-icon"><a class="glyphicon glyphicon-edit" href="%1$s"></a></span>&nbsp;',
+                    printf('&nbsp;&nbsp;<span class="edit-link-icon"><a class="glyphicon glyphicon-edit" href="%1$s">' . sprintf('<span class="screen-reader-text">Edit %s</span>', get_the_title()) . ' </a></span>&nbsp;',
                         $editPostLink
                     );
                 }
@@ -58,7 +59,7 @@
             the_post_thumbnail('medium');
         }
 
-			the_content( '<br/><span class="btn btn-primary"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span>' );
+			the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
                         'tikva' ) . '</span>',

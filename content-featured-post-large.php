@@ -15,23 +15,28 @@
         <h1><?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); ?>
         </h1>
 
-            <a class="post-thumbnail" href="<?php the_permalink(); ?>">
                 <?php
                 // Output the featured image.
                 if ( has_post_thumbnail() ) :
+                ?>
+                            <a class="post-thumbnail" href="<?php the_permalink(); ?>">
+<?php
                     if ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) {
                         the_post_thumbnail();
                     } else {
                         the_post_thumbnail( 'tikva-full-width' );
                     }
+                    ?>
+                    </a>
+                    <?php
                 endif;
                 ?>
-            </a>
 
             <p>
             <?php
             if (preg_match('/<!--more.*-->/',$post->post_content)) {
-                the_content( '<br/><p><span class="btn btn-primary"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span></p>' );
+            	the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
+
             } else {
                 the_excerpt();
             }

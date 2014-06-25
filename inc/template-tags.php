@@ -79,22 +79,26 @@ if (!function_exists('tikva_posted_on')) :
         }
         $permalink = esc_url(get_permalink());
         $authorPostsUrl = esc_url(get_author_posts_url(get_the_author_meta('ID')));
-
+        $dateComplete = esc_html(get_the_date());
+        $author = esc_html(get_the_author());
         // Set up and print post meta information.
-        printf('<span class="entry-date-icon"><a href="%1$s" class="glyphicon glyphicon-time" rel="bookmark"></a></span>&nbsp;',
-            $permalink
+        printf('<span class="entry-date-icon"><a href="%1$s" class="glyphicon glyphicon-time" rel="bookmark"><span class="screen-reader-text">%2$s</span></a></span>&nbsp;',
+            $permalink,
+            $dateComplete
         );
         printf('<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
             $permalink,
             esc_attr(get_the_date('c')),
-            esc_html(get_the_date())
+            $dateComplete
         );
-        printf('<span class="byline-icon"><a class="glyphicon glyphicon-user" href="%1$s" rel="author"></a></span>',
-            $authorPostsUrl
+        printf('<span class="byline-icon"><a class="glyphicon glyphicon-user" href="%1$s" rel="author"><span class="screen-reader-text">%2$s</span></a></span>',
+            $authorPostsUrl,
+            $author
+            
         );
         printf('<span class="byline"><span class="author vcard"> <a class="url fn n" href="%1$s" rel="author">%2$s</a></span></span>',
             $authorPostsUrl,
-            get_the_author()
+            $author
         );
 
 

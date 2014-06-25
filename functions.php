@@ -467,7 +467,7 @@ endif;
 
 
 function tikva_excerpt_more( $more ) {
-    return '...<br/> <p> <a rel="bookmark" title="'.  esc_html(get_the_title()) . '" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Read More &raquo;', 'tikva' ). '</a></p>';
+    return '...<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'tikva' ), get_the_title())  . '</a></p>';
 }
 add_filter( 'excerpt_more', 'tikva_excerpt_more' );
 

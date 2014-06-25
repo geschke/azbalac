@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tikva v0.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-06-23 20:46:37+0000\n"
+"PO-Revision-Date: 2014-06-25 12:00:15+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -93,27 +93,22 @@ msgstr "Neuere Kommentare &rarr;"
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
-#: content.php:36
-#@ tikva
-msgid "Leave a comment"
-msgstr "Schreibe einen Kommentar"
-
-#: content.php:37
+#: content.php:38
 #@ tikva
 msgid "1 Comment"
 msgstr "Ein Kommentar"
 
-#: content.php:37
+#: content.php:38
 #@ tikva
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: content.php:45
+#: content.php:46
 #@ tikva
 msgid "Edit"
 msgstr "Editieren"
 
-#: content.php:62
+#: content.php:64
 #@ tikva
 msgid "Pages:"
 msgstr "Seiten:"
@@ -124,7 +119,7 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:66
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
@@ -289,12 +284,12 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: content.php:72
+#: content.php:74
 #@ tikva
 msgid "Tags: "
 msgstr "Tags: "
 
-#: content.php:84
+#: content.php:86
 #, php-format
 #@ tikva
 msgid "View all posts in %s"
@@ -393,11 +388,6 @@ msgstr "Suchergebnisse für: %s"
 #@ tikva
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
-
-#: functions.php:470
-#@ tikva
-msgid "Read More &raquo;"
-msgstr "Weiterlesen &raquo;"
 
 #: functions.php:58
 #: inc/3rd/class-tgm-plugin-activation.php:196
@@ -764,7 +754,7 @@ msgstr "Setze Layout der Site"
 msgid "Tikva Theme Options"
 msgstr "Tikva Theme Einstellungen"
 
-#: content.php:79
+#: content.php:81
 #@ tikva
 msgid "Category:"
 msgid_plural "Categories:"
@@ -788,26 +778,39 @@ msgid "Header Image - navigate to homepage"
 msgstr "Header-Bild - Link zur Homepage"
 
 #: header.php:139
+#: header.php:142
 #@ tikva
 msgid "Toggle navigation"
 msgstr "Schalte Navigation"
-
-#: content-featured-post-large.php:34
-#: content-featured-post.php:33
-#: content.php:60
-#@ tikva
-msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Weiterlesen <span class=\"meta-nav\">&raquo;</span>"
 
 #: inc/template-tags.php:78
 #@ tikva
 msgid "Sticky"
 msgstr "Oben halten"
 
-#: content-featured-post-large.php:34
-#: content-featured-post.php:33
-#: functions.php:470
+#: content-featured-post-large.php:38
+#: content-featured-post.php:36
+#: content.php:62
+#, php-format
 #@ tikva
-msgid "Continue reading on "
-msgstr "Weiterlesen bei "
+msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
+msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
+
+#: content.php:35
+#, php-format
+#@ tikva
+msgid "Leave a comment on %s"
+msgstr "Schreibe einen Kommentar zu %s"
+
+#: content.php:37
+#, php-format
+#@ tikva
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Schreibe einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
+
+#: functions.php:470
+#, php-format
+#@ tikva
+msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
+msgstr "Weiterlesen<span class=\"screen-reader-text\"> bei %1$s </span>&raquo;"
 

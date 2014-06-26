@@ -1,10 +1,18 @@
 Tikva - a small theme based on Bootstrap
 
-Version 0.1.4
+Version 0.1.5
 =============
 
 Version history:
 ================
+
+Version 0.1.5
+- fixed some accessibility issues (keyboard navigation, "read more" links, screenreader-text and so on)
+- added ARIA landmarks for header and footer
+- added new default color scheme regarding to accessibility problems
+- fixed read-more buttons in featured articles teaser
+- added line with date, author and edit links
+- Bootstrap updated to version 3.2.0
 
 Version 0.1.4:
 - title function taken from Twentyfourteen

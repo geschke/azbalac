@@ -289,7 +289,7 @@ function tikva_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.1.1', true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.2.0', true );
 
     /*if ( is_singular() && wp_attachment_is_image() ) {
         wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
@@ -311,23 +311,22 @@ function tikva_scripts() {
     wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
         array( 'jquery' ), '20140605', true );
 }
-add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 
 
 function tikva_bootstrap_styles()
 {
     global $tikva_theme;
-    if (isset($tikva_theme['stylesheet']))
+    if (isset($tikva_theme['stylesheet']) && $tikva_theme['stylesheet'])
     {
         $stylesheet = $tikva_theme['stylesheet'];
     }
     else {
-        $stylesheet = 'slate.min.css';
+        $stylesheet = 'slate_accessibility_ready.min.css';
     }
 
     // Register the style like this for a theme:
     wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '2014011301','all');
+        '20140626','all');
         //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
     //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
     //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
@@ -341,7 +340,9 @@ function tikva_bootstrap_styles()
     //wp_enqueue_style( 'responsive-style' );
 
 }
+
 add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
+add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 
 /**
  * Create a nicely formatted and more specific title element text for output

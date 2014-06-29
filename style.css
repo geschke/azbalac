@@ -223,11 +223,11 @@ img.aligncenter,
     display: block;
     margin: 0;
 }
-
+/* added into theme design css files
 .wp-caption {
     color: #767676;
 }
-
+*/
 .wp-caption-text {
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;

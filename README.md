@@ -13,6 +13,7 @@ Version 0.1.5
 - fixed read-more buttons in featured articles teaser
 - added line with date, author and edit links
 - Bootstrap updated to version 3.2.0
+- added new default css design file based on 'slate' design file for accessibility ready settings
 
 Version 0.1.4:
 - title function taken from Twentyfourteen

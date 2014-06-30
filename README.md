@@ -1,10 +1,14 @@
 Tikva - a small theme based on Bootstrap
 
-Version 0.1.5
+Version 0.1.6
 =============
 
 Version history:
 ================
+
+Version 0.1.6
+- slate_accessibility_ready design file bumped to version 3.2.0
+- Bootswatch design files bumped to versioin 3.2.0
 
 Version 0.1.5
 - fixed some accessibility issues (keyboard navigation, "read more" links, screenreader-text and so on)

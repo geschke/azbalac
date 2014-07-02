@@ -8,7 +8,10 @@ Version history:
 
 Version 0.1.6
 - slate_accessibility_ready design file bumped to version 3.2.0
-- Bootswatch design files bumped to versioin 3.2.0
+- Bootswatch design files bumped to version 3.2.0
+- skip to content link visibility fixed
+- line with author and date information improved, now they are in a single link wrapper
+
 
 Version 0.1.5
 - fixed some accessibility issues (keyboard navigation, "read more" links, screenreader-text and so on)

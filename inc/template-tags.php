@@ -82,21 +82,21 @@ if (!function_exists('tikva_posted_on')) :
         $dateComplete = esc_html(get_the_date());
         $author = esc_html(get_the_author());
         // Set up and print post meta information.
-        printf('<span class="entry-date-icon"><a href="%1$s" class="glyphicon glyphicon-time" rel="bookmark"><span class="screen-reader-text">%2$s</span></a></span>&nbsp;',
-            $permalink,
-            $dateComplete
-        );
-        printf('<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
+        //printf('<span class="entry-date-icon"><a href="%1$s" class="glyphicon glyphicon-time" rel="bookmark"><span class="screen-reader-text">%2$s</span></a></span>&nbsp;',
+        //    $permalink,
+        //    $dateComplete
+        //);
+        printf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon glyphicon glyphicon-time"></span>' . __('<span class="screen-reader-text">Date: </span>', 'tikva') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
             $permalink,
             esc_attr(get_the_date('c')),
             $dateComplete
         );
-        printf('<span class="byline-icon"><a class="glyphicon glyphicon-user" href="%1$s" rel="author"><span class="screen-reader-text">%2$s</span></a></span>',
-            $authorPostsUrl,
-            $author
-            
-        );
-        printf('<span class="byline"><span class="author vcard"> <a class="url fn n" href="%1$s" rel="author">%2$s</a></span></span>',
+        //printf('<span class="byline-icon"><a class="glyphicon glyphicon-user" href="%1$s" rel="author"><span class="screen-reader-text">%2$s</span></a></span>',
+        //    $authorPostsUrl,
+        //    $autho//r
+
+        //);
+        printf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon glyphicon glyphicon-user"></span>' . __('<span class="screen-reader-text">Author: </span>', 'tikva') . '%2$s</a></span></span>',
             $authorPostsUrl,
             $author
         );

@@ -4,7 +4,7 @@ Theme URI: https://www.geschke.net/tikva/
 Author: Ralf Geschke
 Author URI: https://www.geschke.net
 Description: Tikva - A small Wordpress theme based on Bootstrap 3.0 Framework.
-Version: 0.1.5
+Version: 0.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
@@ -90,6 +90,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .entry-date-icon a, .byline-icon a, .comments-link-icon a, .edit-link-icon a {
     text-decoration: none !important;
 }
+
+.byline-icon {
+    margin-right: 5px;
+    text-decoration: none !important;
+}
+
 /* multilevel dropdown menu, taken from http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3
 */
 .dropdown-submenu {

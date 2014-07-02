@@ -26,10 +26,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
     left: 50%;
     margin-left: -5.25em;
     margin-top: 0;
-    position: absolute;
+    position: relative;
     width: auto;
     z-index: 5000;
 }
+
+/* .sr-only {
+    width: auto;
+}
+*/
 
 #skip-link a,
 #skip-link a:link,
@@ -79,6 +84,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     /*overflow: visible;*/
     overflow: visible !important;
     height: auto;
+    width: auto !important;
 }
 
 .entry-date-icon a, .byline-icon a, .comments-link-icon a, .edit-link-icon a {

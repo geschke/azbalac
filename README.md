@@ -11,7 +11,7 @@ Version 0.1.6
 - Bootswatch design files bumped to version 3.2.0
 - skip to content link visibility fixed
 - line with author and date information improved, now they are in a single link wrapper
-
+- problems with focus outlines fixed
 
 Version 0.1.5
 - fixed some accessibility issues (keyboard navigation, "read more" links, screenreader-text and so on)

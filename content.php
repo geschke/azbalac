@@ -30,11 +30,8 @@
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 
                 ?>
-            &nbsp;&nbsp;<span class="comments-link-icon"><a class="glyphicon glyphicon-comment" href="<?php comments_link();
-                    ?>"><span class="screen-reader-text"><?php
-                    printf( __( 'Leave a comment on %s', 'tikva' ), get_the_title())
-                    ?></span></a></span>&nbsp;<span class="comments-link"><?php
-                    comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
+            &nbsp;&nbsp;<span class="comments-link"><?php
+                    comments_popup_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-comment"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
                     __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>
 			<?php
 				endif;

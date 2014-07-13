@@ -4,7 +4,7 @@ Theme URI: https://www.geschke.net/tikva/
 Author: Ralf Geschke
 Author URI: https://www.geschke.net
 Description: Tikva - A small Wordpress theme based on Bootstrap 3.0 Framework.
-Version: 0.1.6
+Version: 0.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
@@ -60,6 +60,41 @@ Use it to make something cool, have fun, and share what you've learned with othe
     outline: 0;
 }
 
+a img.alignright:focus, a img.alignright::-moz-focus-inner {
+    outline-offset: 0px !important;
+
+}
+
+a img.alignleft:focus, a img.alignleft::-moz-focus-inner {
+    outline-offset: 0px !important;
+
+}
+a img.aligncenter:focus, a img.aligncenter::-moz-focus-inner {
+    outline-offset: 0px !important;
+
+}
+
+a img:hover, a img:focus, a img.hrng:focus {
+    /*outline: thin dotted;
+    outline-offset: 1px !important;
+    border: 2px solid green;
+    */
+    outline: thin dotted !important;
+    outline: 5px auto -webkit-focus-ring-color !important;
+    -moz-border-radius: 0 0 10px 10px;
+
+    outline-offset: 0px !important;
+}
+
+/*a:focus img {
+    outline-offset: 0px !important;
+    border: 1px solid red;
+}*/
+
+.entry-content  a {
+    outline-offset: 0px !important;
+
+}
 
 /* screen-reader navigation link styling */
 
@@ -85,10 +120,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     overflow: visible !important;
     height: auto;
     width: auto !important;
-}
-
-.entry-date-icon a, .byline-icon a, .comments-link-icon a, .edit-link-icon a {
-    text-decoration: none !important;
 }
 
 .byline-icon {

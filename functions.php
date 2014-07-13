@@ -473,6 +473,34 @@ function tikva_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'tikva_excerpt_more' );
 
 /*
+add_filter('the_content', 'addlightboxrel_replace');
+function addlightboxrel_replace ($content)
+{
+    $pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)<img<\/a>/i";
+    $replacement = '<a$1rel="lightbox[%LIGHTID%]" href=$2$3.$4$5$6</a>';
+    $content = preg_replace($pattern, $replacement, $content);
+    return $content;
+}
+*/
+
+/**
+ * Attach a class to linked images' parent anchors
+ * e.g. a img => a.img img
+ */
+function give_linked_images_class($html, $id, $caption, $title, $align, $url, $size, $alt = '' ){
+    $classes = 'img lalala'; // separated by spaces, e.g. 'img image-link'
+
+    // check if there are already classes assigned to the anchor
+    if ( preg_match('/<a.*? class=".*?">/', $html) ) {
+        $html = preg_replace('/(<a.*? class=".*?)(".*?>)/', '$1 ' . $classes . '$2', $html);
+    } else {
+        $html = preg_replace('/(<a.*?)>/', '$1 class="' . $classes . '" >', $html);
+    }
+    return $html;
+}
+add_filter('image_send_to_editor','give_linked_images_class',10,8);
+
+/*
  * Add Featured Content functionality.
  *
  * To overwrite in a plugin, define your own Featured_Content class on or

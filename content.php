@@ -32,15 +32,11 @@
                 ?>
             &nbsp;&nbsp;<span class="comments-link"><?php
                     comments_popup_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-comment"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
-                    __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>
+                    __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>&nbsp;&nbsp;
 			<?php
 				endif;
-                if ($editPostLink = get_edit_post_link()) {
-                    printf('&nbsp;&nbsp;<span class="edit-link-icon"><a class="glyphicon glyphicon-edit" href="%1$s">' . sprintf('<span class="screen-reader-text">Edit %s</span>', get_the_title()) . ' </a></span>&nbsp;',
-                        $editPostLink
-                    );
-                }
-				edit_post_link( __( 'Edit', 'tikva' ), '<span class="edit-link">', '</span>' );
+
+				edit_post_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-edit"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
 			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

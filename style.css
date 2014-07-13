@@ -60,40 +60,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     outline: 0;
 }
 
-a img.alignright:focus, a img.alignright::-moz-focus-inner {
-    outline-offset: 0px !important;
-
-}
-
-a img.alignleft:focus, a img.alignleft::-moz-focus-inner {
-    outline-offset: 0px !important;
-
-}
-a img.aligncenter:focus, a img.aligncenter::-moz-focus-inner {
-    outline-offset: 0px !important;
-
-}
-
-a img:hover, a img:focus, a img.hrng:focus {
-    /*outline: thin dotted;
-    outline-offset: 1px !important;
-    border: 2px solid green;
-    */
-    outline: thin dotted !important;
-    outline: 5px auto -webkit-focus-ring-color !important;
-    -moz-border-radius: 0 0 10px 10px;
-
-    outline-offset: 0px !important;
-}
-
-/*a:focus img {
-    outline-offset: 0px !important;
-    border: 1px solid red;
-}*/
 
 .entry-content  a {
-    outline-offset: 0px !important;
-
+    outline-offset: 0 !important;
+    outline-width: 2px;
 }
 
 /* screen-reader navigation link styling */

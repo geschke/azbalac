@@ -1,11 +1,16 @@
 Tikva - a small theme based on Bootstrap
 ========================================
 
-Version 0.1.7
+Version 0.1.8
 
 
 Version history:
 ================
+
+Version 0.1.8
+- header image handling improved - choose between image options, resize automatically and/or upload matching images
+- options panel enhancements and cleanup
+- tested compatibility to WordPress 4.0, it just works
 
 Version 0.1.7
 - edit link duplication fix

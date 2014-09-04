@@ -182,35 +182,8 @@ if (!class_exists("Redux_Framework_tikva_config")) {
 
             // ACTUAL DECLARATION OF SECTIONS
 
-            $this->sections[] =  array(
-                'title' => __('Home Settings', 'tikva'),
-                //'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'tikva'),
-                'icon' => 'el-icon-home',
-                // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
-                'fields' => array(
-                    array(
-                        'id'=>'featured_articles_max',
-                        'type' => 'slider',
-                        'title' => __('Maximum number of featured articles on homepage', 'tikva'),
-                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'tikva'),
-                        "default" 		=> "5",
-                        "min" 		=> "0",
-                        "step"		=> "1",
-                        "max" 		=> "100",
-                    ),
-
-                ),
-            );
-
-
-
             $this->sections[] = array(
-                'type' => 'divide',
-            );
-
-
-            $this->sections[] = array(
-                'icon' => 'el-icon-website',
+                'icon' => 'el-icon-screen',
                 'title' => __('Styling Options', 'tikva'),
                 'fields' => array(
 
@@ -260,8 +233,44 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'options' => array('default' => 'Default','inverse' => 'Inverse'),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
+                    )
+                ));
+
+
+            $this->sections[] = array(
+                'type' => 'divide',
+            );
+            $this->sections[] =  array(
+                'title' => __('Home Settings', 'tikva'),
+                //'desc' => __('Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'tikva'),
+                'icon' => 'el-icon-home',
+                // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                'fields' => array(
+                    array(
+                        'id'=>'featured_articles_max',
+                        'type' => 'slider',
+                        'title' => __('Maximum number of featured articles on homepage', 'tikva'),
+                        //'desc'=> __('JQuery UI slider description. Min: 1, max: 500, step: 3, default value: 45', 'tikva'),
+                        "default" 		=> "5",
+                        "min" 		=> "0",
+                        "step"		=> "1",
+                        "max" 		=> "100",
                     ),
-              /*          'id'=>'header-image',
+
+                ),
+            );
+
+
+
+
+
+            $this->sections[] = array(
+                'icon' => 'el-icon-website',
+                'title' => __('Header / Footer Options', 'tikva'),
+                'fields' => array(
+
+                    array(
+                        'id'=>'header-image',
                         'type' => 'media',
                         'url'=> true,
                         'title' => __('Header Image', 'tikva'),
@@ -271,7 +280,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
-               */
+
                     array(
                         'id'=>'color-fg-header',
                         'type' => 'color',
@@ -307,6 +316,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'validate' => 'color',
                     )
                 ));
+
 
             if (file_exists(dirname(__FILE__) . '/../README.md')) {
                 // strange stuff! A local file should be readable without going remote!

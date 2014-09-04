@@ -149,7 +149,8 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         $headerDefaults = array(
             'default-color'          => 'ffffff',
-            'default-image'          =>  null
+            'default-image'          =>  null,
+            'uploads'                => true
         );
        add_theme_support( 'custom-header', $headerDefaults );
 

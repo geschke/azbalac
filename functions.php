@@ -150,7 +150,11 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         $headerDefaults = array(
             'default-color'          => 'ffffff',
             'default-image'          =>  null,
-            'uploads'                => true
+            'uploads'                => true,
+            'flex-width'    => true,
+        	'width'         => 980,
+	        'flex-height'    => true,
+
         );
        add_theme_support( 'custom-header', $headerDefaults );
 

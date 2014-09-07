@@ -11,6 +11,7 @@ Version 0.1.8
 - header image handling improved - choose between image options, resize automatically and/or upload matching images
 - options panel enhancements and cleanup
 - tested compatibility to WordPress 4.0, it just works
+- set default header image as part of the theme, the image is made by myself and licensed under the same restrictions as the theme
 
 Version 0.1.7
 - edit link duplication fix

@@ -270,16 +270,104 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 'fields' => array(
 
                     array(
-                        'id'=>'header-image',
+                        'id'=>'header-image-large',
                         'type' => 'media',
                         'url'=> true,
-                        'title' => __('Header Image', 'tikva'),
+                        'title' => __('Header Image (large screen)', 'tikva'),
                         'compiler' => 'true',
                         //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                         'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
+                    array(
+                        'id'       => 'header-image-align-large',
+                        'type'     => 'image_select',
+                        'title'    => __( 'Header Image Alignment (large screen)', 'tikva' ),
+                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
+                        //Must provide key => value(array:title|img) pairs for radio options
+                        'options'  => array(
+                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
+                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
+                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
+                        ),
+                        'default'  => 'l'
+                    ),
+
+                    array(
+                        'id'=>'header-image-medium',
+                        'type' => 'media',
+                        'url'=> true,
+                        'title' => __('Header Image (medium screen)', 'tikva'),
+                        'compiler' => 'true',
+                        //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
+                        'default'=>array('url'=>'')
+                    ),
+                    array(
+                        'id'       => 'header-image-align-medium',
+                        'type'     => 'image_select',
+                        'title'    => __( 'Header Image Alignment (medium screen)', 'tikva' ),
+                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
+                        //Must provide key => value(array:title|img) pairs for radio options
+                        'options'  => array(
+                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
+                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
+                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
+                        ),
+                        'default'  => 'l'
+                    ),
+                    array(
+                        'id'=>'header-image-small',
+                        'type' => 'media',
+                        'url'=> true,
+                        'title' => __('Header Image (small screen)', 'tikva'),
+                        'compiler' => 'true',
+                        //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
+                        'default'=>array('url'=>'')
+                    ),
+                    array(
+                        'id'       => 'header-image-align-small',
+                        'type'     => 'image_select',
+                        'title'    => __( 'Header Image Alignment (small screen)', 'tikva' ),
+                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
+                        //Must provide key => value(array:title|img) pairs for radio options
+                        'options'  => array(
+                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
+                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
+                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
+                        ),
+                        'default'  => 'l'
+                    ),
+                    array(
+                        'id'=>'header-image-xsmall',
+                        'type' => 'media',
+                        'url'=> true,
+                        'title' => __('Header Image (extra small screen)', 'tikva'),
+                        'compiler' => 'true',
+                        //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
+                        'default'=>array('url'=>'')
+                    ),
+                    array(
+                        'id'       => 'header-image-align-xsmall',
+                        'type'     => 'image_select',
+                        'title'    => __( 'Header Image Alignment (extra small screen)', 'tikva' ),
+                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
+                        //Must provide key => value(array:title|img) pairs for radio options
+                        'options'  => array(
+                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
+                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
+                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
+                        ),
+                        'default'  => 'l'
+                    ),
+
+
 
                     array(
                         'id'=>'color-fg-header',

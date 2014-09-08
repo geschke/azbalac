@@ -72,6 +72,6 @@ else {
     </div>
 
 	<?php wp_footer(); ?>
-<div id="media-width-detection-element"></div>
+<div id="media-width-detection-element" ></div>
 </body>
 </html>

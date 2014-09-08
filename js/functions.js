@@ -10,16 +10,63 @@
 		_window = $( window );
 
 
-    var winSize = '';
+    var mediaSize = '';
+
+    $.headerImageResize = function(mediaSize) {
+        if (! $('#site-header-image').length) {
+            return false;
+        }
+        var width = $('#site-header-image').attr('width');
+        var height = $('#site-header-image').attr('height');
+        var ratio = width / height;
+        console.log(ratio);
+        console.log("height: " + height + " width: " + width);
+        console.log(mediaSize);
+
+        var newWidth = 0, newHeight = 0;
+        if (mediaSize == 'xs') {
+            newWidth = 244;
+        } else if (mediaSize == 'sm') {
+            newWidth = 690;
+        } else if (mediaSize == 'md') {
+            newWidth = 912;
+        } else { // lg
+            newWidth = 1114;
+        }
+        newHeight = Math.round(newWidth / ratio);
+        $('#site-header-image').attr('width',newWidth);
+        $('#site-header-image').attr('height',newHeight);
+
+        // 1114
+        // 912
+        // 690
+        // 244
+    };
 
     $.checkMediaSize = function( ) {
-        console.log("in resizeWindow");
+        //console.log("in resizeWindow");
         console.log("width of element: " + $('#media-width-detection-element').width());
+        var elementSize = $('#media-width-detection-element').width();
+        if (elementSize <= 749) { // 767
+            mediaDetectSize = 'xs';
+        } else if (elementSize >= 750 && elementSize < 970) { // 768 992
+            mediaDetectSize = 'sm';
+        } else if (elementSize >= 970 && elementSize < 1170) { // 1200
+            mediaDetectSize = 'md';
+        } else { // >= 1200
+            mediaDetectSize = 'lg';
+        }
+        if (mediaDetectSize != mediaSize) {
+            mediaSize = mediaDetectSize;
+            $.headerImageResize(mediaSize);
+            console.log("change detected, now " + mediaSize);
+        }
+
     };
 
 
     _window.resize(function () {
-        $.checkMediaSize();
+        $.checkMediaSize(false);
 
         /*        if ($(this).width() >= 1200) {
             newWinSize = 'lg';

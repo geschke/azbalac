@@ -17,17 +17,11 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php
 
+echo tikva_get_header_image_data();
 
 $layoutStyle = tikva_get_layout();
 
-global $tikva_theme;
-    // maybe find a better solution...
-        if (isset($tikva_theme['navbar-fixed']) && $tikva_theme['navbar-fixed'] == 'fixed-top') {
-            $navbarFixed = 'fixed-top';
-        }
-        else {
-            $navbarFixed = 'default';
-        }
+$navbarFixed = tikva_get_navbar_layout();
 
         if ($navbarFixed == 'fixed-top' && has_nav_menu('header-menu')) {
             ?>
@@ -38,6 +32,7 @@ global $tikva_theme;
             </style>
         <?php
         }
+
      ?>
 
         <?php wp_head(); ?>
@@ -58,43 +53,7 @@ global $tikva_theme;
     <div id="skip-link"><a href="#content" class="sr-only element-focusable"><?php _e( 'Skip to main content', 'tikva' ); ?></a></div>
 <?php
 
-
-
-$navbarStyleClass = '';
-
-if (isset($tikva_theme['navbar-style-inverse']) && $tikva_theme['navbar-style-inverse'] == 'inverse') {
-    $navbarStyleClass .= ' navbar-inverse';
-}
-else {
-    $navbarStyleClass .= ' navbar-default';
-}
-
-if ($navbarFixed == 'fixed-top') {
-    $navbarStyleClass .= ' navbar-fixed-top';
-}
-else {
-    $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
-}
-
-
-if (isset($tikva_theme['color-bg-header']) && $tikva_theme['color-bg-header']) {
-    $headerStyleColorBg = $tikva_theme['color-bg-header'];
-}
-else {
-    $headerStyleColorBg = '#000000';
-}
-if (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] && stripos($tikva_theme['color-fg-header'], 'transparent') !== false ) {
-    $headerStyleColorFg = '';
-}
-elseif (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] ) {
-    $headerStyleColorFg = ' color: ' . $tikva_theme['color-fg-header'] .';';
-}
-else {
-    $headerStyleColorFg = '';
-}
-
-
-
+$headerStyles = tikva_get_header_styles($navbarFixed);
 ?>
 
 <?php
@@ -104,8 +63,19 @@ if ($navbarFixed != 'fixed-top') {
 }
 ?>
 <?php if ($navbarFixed == 'default') {
+
+/*
+
+todo: set initial image height and width to 0
+get real image height and width from some js output
+do a smooth view of the header image, with a nice effect
+or scrolling or similar...
+
+todo 2nd: use different images, if available
+ */
+
 ?>
-    <div role="banner" style="background-color: <?php echo $headerStyleColorBg; ?>; <?php echo $headerStyleColorFg; ?>;">
+    <div role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">
 
 <div class="container">
     <div class="masthead col-md-12 col-sm-12">
@@ -114,7 +84,7 @@ if ($navbarFixed != 'fixed-top') {
         if ( get_header_image() ) : ?>
             <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
+                    <img id="site-header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
                 </a>
             </div>
         <?php endif;
@@ -132,7 +102,7 @@ if ($navbarFixed != 'fixed-top') {
 if (has_nav_menu('header-menu')) {
 ?>
     <!-- Fixed navbar -->
-    <div class="navbar <?php echo $navbarStyleClass; ?>" role="navigation">
+    <div class="navbar <?php echo $headerStyles['navbarStyleClass']; ?>" role="navigation">
         <?php if ($navbarFixed == 'fixed-top') {
         ?><div class="container">
          <?php } ?>   <div class="navbar-header">

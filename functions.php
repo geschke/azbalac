@@ -471,6 +471,122 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
     }
 endif;
 
+if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
+
+    function tikva_get_navbar_layout() {
+        global $tikva_theme;
+        if (isset($tikva_theme['navbar-fixed']) && $tikva_theme['navbar-fixed'] == 'fixed-top') {
+            $navbarFixed = 'fixed-top';
+        }
+        else {
+            $navbarFixed = 'default';
+        }
+        return $navbarFixed;
+    }
+endif;
+
+if ( ! function_exists( 'tikva_get_header_styles' ) ) :
+
+    function tikva_get_header_styles($navbarFixed) {
+        global $tikva_theme;
+
+        $navbarStyleClass = '';
+
+        if (isset($tikva_theme['navbar-style-inverse']) && $tikva_theme['navbar-style-inverse'] == 'inverse') {
+            $navbarStyleClass .= ' navbar-inverse';
+        }
+        else {
+            $navbarStyleClass .= ' navbar-default';
+        }
+
+        if ($navbarFixed == 'fixed-top') {
+            $navbarStyleClass .= ' navbar-fixed-top';
+        }
+        else {
+            $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
+        }
+        if (isset($tikva_theme['color-bg-header']) && $tikva_theme['color-bg-header']) {
+            $headerStyleColorBg = $tikva_theme['color-bg-header'];
+        }
+        else {
+            $headerStyleColorBg = '#000000';
+        }
+        if (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] && stripos($tikva_theme['color-fg-header'], 'transparent') !== false ) {
+            $headerStyleColorFg = '';
+        }
+        elseif (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] ) {
+            $headerStyleColorFg = ' color: ' . $tikva_theme['color-fg-header'] .';';
+        }
+        else {
+            $headerStyleColorFg = '';
+        }
+
+        return array('navbarStyleClass' => $navbarStyleClass,
+            'headerStyleColorBg' => $headerStyleColorBg,
+            'headerStyleColorFg' => $headerStyleColorFg
+        );
+    }
+endif;
+
+
+
+if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
+
+    function tikva_get_header_image_data() {
+        global $tikva_theme;
+        $imageData = array();
+        if (isset($tikva_theme['header-image-large']) && $tikva_theme['header-image-large'] &&
+            isset($tikva_theme['header-image-large']['url']) && $tikva_theme['header-image-large']['url']) {
+            $imageData['header-image-large'] = $tikva_theme['header-image-large'];
+        } else {
+            $imageData['header-image-large'] = '';
+        }
+        if (isset($tikva_theme['header-image-middle']) && $tikva_theme['header-image-middle'] &&
+            isset($tikva_theme['header-image-middle']['url']) && $tikva_theme['header-image-middle']['url']) {
+            $imageData['header-image-middle'] = $tikva_theme['header-image-middle'];
+        } else {
+            $imageData['header-image-middle'] = '';
+        }
+        if (isset($tikva_theme['header-image-small']) && $tikva_theme['header-image-small'] &&
+            isset($tikva_theme['header-image-small']['url']) && $tikva_theme['header-image-small']['url']) {
+
+            $imageData['header-image-small'] = $tikva_theme['header-image-small'];
+        } else {
+            $imageData['header-image-small'] = '';
+        }
+        if (isset($tikva_theme['header-image-xsmall']) && $tikva_theme['header-image-xsmall'] &&
+            isset($tikva_theme['header-image-xsmall']['url']) && $tikva_theme['header-image-xsmall']['url']) {
+
+            $imageData['header-image-xsmall'] = $tikva_theme['header-image-xsmall'];
+        } else {
+            $imageData['header-image-xsmall'] = '';
+        }
+        if (isset($tikva_theme['header-image-align-large']) && $tikva_theme['header-image-large']) {
+            $imageData['header-image-align-large'] = $tikva_theme['header-image-align-large'];
+        } else {
+            $imageData['header-image-align-large'] = 'l';
+        }
+        if (isset($tikva_theme['header-image-align-middle']) && $tikva_theme['header-image-middle']) {
+            $imageData['header-image-align-middle'] = $tikva_theme['header-image-align-middle'];
+        } else {
+            $imageData['header-image-align-middle'] = 'l';
+        }
+        if (isset($tikva_theme['header-image-align-small']) && $tikva_theme['header-image-small']) {
+            $imageData['header-image-align-small'] = $tikva_theme['header-image-align-xsmall'];
+        } else {
+            $imageData['header-image-align-small'] = 'l';
+        }
+        if (isset($tikva_theme['header-image-align-xsmall']) && $tikva_theme['header-image-xsmall']) {
+            $imageData['header-image-align-xsmall'] = $tikva_theme['header-image-align-xsmall'];
+        } else {
+            $imageData['header-image-align-xsmall'] = 'l';
+        }
+        return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';
+    }
+endif;
+
+
+
 
 function tikva_excerpt_more( $more ) {
     return '...<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'tikva' ), get_the_title())  . '</a></p>';

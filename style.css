@@ -82,18 +82,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* media query stuff */
 
 #media-width-detection-element {
-    display: none;
-    width: 0px;
+    display: block;
+    border: 1px solid white;
+    height: 1px;
+    width: 1170px;
+
 }
-/* from bootstrap:
-
-
-
-@media (min-width: 768px) and (max-width: 991px) {
-@media (min-width: 992px) and (max-width: 1199px) {
-@media (min-width: 1200px) {
-
-*/
 
 @media (max-width: 767px) {
     #media-width-detection-element {

@@ -9,6 +9,37 @@
 	var body    = $( 'body' ),
 		_window = $( window );
 
+
+    var winSize = '';
+
+    $.checkMediaSize = function( ) {
+        console.log("in resizeWindow");
+        console.log("width of element: " + $('#media-width-detection-element').width());
+    };
+
+
+    _window.resize(function () {
+        $.checkMediaSize();
+
+        /*        if ($(this).width() >= 1200) {
+            newWinSize = 'lg';
+        } else if ($(this).width() >= 992) {
+            newWinSize = 'md';
+        } else if ($(this).width() >= 768) {
+            newWinSize = 'sm';
+        } else {
+            newWinSize = 'xs';
+        }
+        console.log("in resize with " + $(this).width() );
+        console.log("width of element: " + $('#media-width-detection-element').width());
+        if( newWinSize != winSize ) {
+            //doSomethingOnSizeChange();
+            winSize = newWinSize;
+            console.log(winSize);
+        }*/
+    });
+
+
 	// Enable menu toggle for small screens.
 	/*( function() {
 		var nav = $( '#primary-navigation' ), button, menu;
@@ -67,6 +98,9 @@
 				wrapper.find( '.search-field' ).focus();
 			}
 		} );
+
+
+
 
 
 		/*
@@ -129,4 +163,9 @@
 		}
 	} );
 	*/
+    _window.load(function() {
+        console.log("window loaded");
+        $.checkMediaSize();
+    })
+
 } )( jQuery );

@@ -79,6 +79,44 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 10px 0 0 10px;
 }
 
+/* media query stuff */
+
+#media-width-detection-element {
+    display: none;
+    width: 0px;
+}
+/* from bootstrap:
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1200px) {
+
+*/
+
+@media (max-width: 767px) {
+    #media-width-detection-element {
+        width: 767px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #media-width-detection-element {
+        width: 768px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #media-width-detection-element {
+        width: 992px;
+    }
+}
+@media (min-width: 1200px) {
+    #media-width-detection-element {
+        width: 1200px;
+    }
+}
+
 /**
  * Allows the element to be focusable when navigated to via the keyboard.
  */

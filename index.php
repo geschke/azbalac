@@ -56,6 +56,7 @@ if ($layoutStyle['content'] == 2) {
 					 * use this in a child theme, then include a file called called content-___.php
 					 * (where ___ is the post format) and that will be used instead.
 					 */
+
 					get_template_part( 'content', get_post_format() );
 				endwhile;
 				// Previous/next post navigation.

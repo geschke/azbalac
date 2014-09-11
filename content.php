@@ -28,7 +28,7 @@
 					tikva_posted_on();
 
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
-
+echo "hmmmmmmmmmmmm";
                 ?>
             &nbsp;&nbsp;<span class="comments-link"><?php
                     comments_popup_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-comment"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
@@ -53,7 +53,7 @@
         }
 
 			the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
-			wp_link_pages( array(
+		    wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
                         'tikva' ) . '</span>',
 				'after'       => '</div>',
@@ -81,6 +81,7 @@
         }
         echo trim($output, $separator);
         echo '</ul></div>';
+
     }
 
     ?>

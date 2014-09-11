@@ -22,14 +22,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Skip link styling */
 #skip-link {
-    top: 0;
+/*    top: 0;
     left: 50%;
     margin-left: -5.25em;
     margin-top: 0;
     position: relative;
-    width: auto;
+    width: auto;*/
     z-index: 5000;
 }
+
+
 
 /* .sr-only {
     width: auto;

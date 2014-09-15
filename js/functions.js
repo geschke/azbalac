@@ -26,28 +26,58 @@
 
         var width = siteHeaderImage.attr('data-width');
         var height = siteHeaderImage.attr('data-height');
-        var ratio = width / height;
-        console.log(ratio);
+
         console.log("height: " + height + " width: " + width);
         console.log(mediaSize);
-
         var newWidth = 0, newHeight = 0;
         if (mediaSize == 'xs') {
             newWidth = $('#navbar-header').width() - 26;
+            if (typeof tikvaHeaderImage.header_image_xsmall.url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage.header_image_xsmall.url);
+                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_xsmall.url);
+                height = tikvaHeaderImage.header_image_xsmall.height;
+                width = tikvaHeaderImage.header_image_xsmall.width;
+
+            }
             //console.log(newWidth);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
+            if (typeof tikvaHeaderImage.header_image_small.url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage.header_image_small.url);
+                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_small.url);
+                height = tikvaHeaderImage.header_image_small.height;
+                width = tikvaHeaderImage.header_image_small.width;
+
+            }
             newWidth = 690;
         } else if (mediaSize == 'md') {
+            if (typeof tikvaHeaderImage.header_image_middle.url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage.header_image_middle.url);
+                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_middle.url);
+                height = tikvaHeaderImage.header_image_middle.height;
+                width = tikvaHeaderImage.header_image_middle.width;
+            }
+
             newWidth = 912;
         } else { // lg
+            if (typeof tikvaHeaderImage.header_image_large.url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage.header_image_large.url);
+                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_large.url);
+                height = tikvaHeaderImage.header_image_large.height;
+                width = tikvaHeaderImage.header_image_large.width;
+
+            }
+
             newWidth = 1114;
         }
+        var ratio = width / height;
         newHeight = Math.round(newWidth / ratio);
         siteHeaderImage.attr('width',newWidth);
         siteHeaderImage.attr('height',newHeight);
         siteHeaderImage.attr('data-width',newWidth);
         siteHeaderImage.attr('data-height',newHeight);
+
+
 
         if (showImage) {
             siteHeaderImage.fadeIn();
@@ -213,7 +243,8 @@
         if ($('#site-header-image').length) {
             $('#site-header-image').hide();
         }
-            $.checkMediaSize();
+        $.checkMediaSize();
+
     })
 
 } )( jQuery );

@@ -187,7 +187,6 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 'title' => __('Styling Options', 'tikva'),
                 'fields' => array(
 
-
                     array(
                         'id'=>'layout',
                         'type' => 'image_select',
@@ -270,30 +269,10 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                 'fields' => array(
 
                     array(
-                        'id'=>'header-image-large',
-                        'type' => 'media',
-                        'url'=> true,
-                        'title' => __('Header Image (large screen)', 'tikva'),
-                        'compiler' => 'true',
-                        //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
-                        //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
-                        'default'=>array('url'=>'')
+                        'id'   => 'info_normal',
+                        'type' => 'info',
+                        'desc' => __('This theme supports four breakpoints for different screen sizes. The image which is defined in the Design -> Header section will be used with large devices (desktops, 1200px and up). If no further image is set below, the default header image will be resized automatically.', 'tikva')
                     ),
-                    array(
-                        'id'       => 'header-image-align-large',
-                        'type'     => 'image_select',
-                        'title'    => __( 'Header Image Alignment (large screen)', 'tikva' ),
-                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
-                        //Must provide key => value(array:title|img) pairs for radio options
-                        'options'  => array(
-                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
-                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
-                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
-                        ),
-                        'default'  => 'l'
-                    ),
-
                     array(
                         'id'=>'header-image-medium',
                         'type' => 'media',
@@ -301,22 +280,9 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'title' => __('Header Image (medium screen)', 'tikva'),
                         'compiler' => 'true',
                         //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        'desc'=> __('If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
-                    ),
-                    array(
-                        'id'       => 'header-image-align-medium',
-                        'type'     => 'image_select',
-                        'title'    => __( 'Header Image Alignment (medium screen)', 'tikva' ),
-                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
-                        //Must provide key => value(array:title|img) pairs for radio options
-                        'options'  => array(
-                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
-                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
-                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
-                        ),
-                        'default'  => 'l'
                     ),
                     array(
                         'id'=>'header-image-small',
@@ -325,23 +291,11 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'title' => __('Header Image (small screen)', 'tikva'),
                         'compiler' => 'true',
                         //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        'desc'=> __('If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
-                    array(
-                        'id'       => 'header-image-align-small',
-                        'type'     => 'image_select',
-                        'title'    => __( 'Header Image Alignment (small screen)', 'tikva' ),
-                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
-                        //Must provide key => value(array:title|img) pairs for radio options
-                        'options'  => array(
-                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
-                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
-                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
-                        ),
-                        'default'  => 'l'
-                    ),
+
                     array(
                         'id'=>'header-image-xsmall',
                         'type' => 'media',
@@ -349,24 +303,10 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'title' => __('Header Image (extra small screen)', 'tikva'),
                         'compiler' => 'true',
                         //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'desc'=> __('Use header image when chosen default navbar.', 'tikva'),
+                        'desc'=> __('If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
                     ),
-                    array(
-                        'id'       => 'header-image-align-xsmall',
-                        'type'     => 'image_select',
-                        'title'    => __( 'Header Image Alignment (extra small screen)', 'tikva' ),
-                        //'desc'     => __( 'This is the description field, again good for additional info.', 'tikva' ),
-                        //Must provide key => value(array:title|img) pairs for radio options
-                        'options'  => array(
-                            'l' => array( 'title' => __( 'left', 'tikva' ), 'img' => 'images/align-left.png' ),
-                            'm' => array( 'title' => __( 'center', 'tikva' ), 'img' => 'images/align-center.png' ),
-                            'r' => array( 'title' => __( 'right', 'tikva' ), 'img' => 'images/align-right.png' )
-                        ),
-                        'default'  => 'l'
-                    ),
-
 
 
                     array(

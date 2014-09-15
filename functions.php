@@ -535,52 +535,40 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
     function tikva_get_header_image_data() {
         global $tikva_theme;
         $imageData = array();
-        if (isset($tikva_theme['header-image-large']) && $tikva_theme['header-image-large'] &&
-            isset($tikva_theme['header-image-large']['url']) && $tikva_theme['header-image-large']['url']) {
-            $imageData['header-image-large'] = $tikva_theme['header-image-large'];
+        //if (isset($tikva_theme['header-image-large']) && $tikva_theme['header-image-large'] &&
+        //    isset($tikva_theme['header-image-large']['url']) && $tikva_theme['header-image-large']['url']) {
+
+        if (get_header_image()) {
+            $largeImage = get_custom_header();
+            $imageData['header_image_large'] = array('url' => $largeImage->url,
+            'height' => $largeImage->height,
+            'width' => $largeImage->width,
+            'thumbnail' => $largeImage->thumbnail_url,
+            'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
         } else {
-            $imageData['header-image-large'] = '';
+            $imageData['header_image_large'] = '';
         }
         if (isset($tikva_theme['header-image-middle']) && $tikva_theme['header-image-middle'] &&
             isset($tikva_theme['header-image-middle']['url']) && $tikva_theme['header-image-middle']['url']) {
-            $imageData['header-image-middle'] = $tikva_theme['header-image-middle'];
+            $imageData['header_image_middle'] = $tikva_theme['header-image-middle'];
         } else {
-            $imageData['header-image-middle'] = '';
+            $imageData['header_image_middle'] = '';
         }
         if (isset($tikva_theme['header-image-small']) && $tikva_theme['header-image-small'] &&
             isset($tikva_theme['header-image-small']['url']) && $tikva_theme['header-image-small']['url']) {
 
-            $imageData['header-image-small'] = $tikva_theme['header-image-small'];
+            $imageData['header_image_small'] = $tikva_theme['header-image-small'];
         } else {
-            $imageData['header-image-small'] = '';
+            $imageData['header_image_small'] = '';
         }
         if (isset($tikva_theme['header-image-xsmall']) && $tikva_theme['header-image-xsmall'] &&
             isset($tikva_theme['header-image-xsmall']['url']) && $tikva_theme['header-image-xsmall']['url']) {
 
-            $imageData['header-image-xsmall'] = $tikva_theme['header-image-xsmall'];
+            $imageData['header_image_xsmall'] = $tikva_theme['header-image-xsmall'];
         } else {
-            $imageData['header-image-xsmall'] = '';
+            $imageData['header_image_xsmall'] = '';
         }
-        if (isset($tikva_theme['header-image-align-large']) && $tikva_theme['header-image-large']) {
-            $imageData['header-image-align-large'] = $tikva_theme['header-image-align-large'];
-        } else {
-            $imageData['header-image-align-large'] = 'l';
-        }
-        if (isset($tikva_theme['header-image-align-middle']) && $tikva_theme['header-image-middle']) {
-            $imageData['header-image-align-middle'] = $tikva_theme['header-image-align-middle'];
-        } else {
-            $imageData['header-image-align-middle'] = 'l';
-        }
-        if (isset($tikva_theme['header-image-align-small']) && $tikva_theme['header-image-small']) {
-            $imageData['header-image-align-small'] = $tikva_theme['header-image-align-xsmall'];
-        } else {
-            $imageData['header-image-align-small'] = 'l';
-        }
-        if (isset($tikva_theme['header-image-align-xsmall']) && $tikva_theme['header-image-xsmall']) {
-            $imageData['header-image-align-xsmall'] = $tikva_theme['header-image-align-xsmall'];
-        } else {
-            $imageData['header-image-align-xsmall'] = 'l';
-        }
+
         return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;

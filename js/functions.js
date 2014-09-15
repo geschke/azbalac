@@ -25,7 +25,9 @@
 
         var newWidth = 0, newHeight = 0;
         if (mediaSize == 'xs') {
-            newWidth = 244;
+            newWidth = $('#navbar-header').width() - 26;
+            //console.log(newWidth);
+            //newWidth = 244;
         } else if (mediaSize == 'sm') {
             newWidth = 690;
         } else if (mediaSize == 'md') {
@@ -56,7 +58,7 @@
         } else { // >= 1200
             mediaDetectSize = 'lg';
         }
-        if (mediaDetectSize != mediaSize) {
+        if (mediaDetectSize != mediaSize || mediaDetectSize == 'xs') {
             mediaSize = mediaDetectSize;
             $.headerImageResize(mediaSize);
             console.log("change detected, now " + mediaSize);

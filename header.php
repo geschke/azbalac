@@ -105,7 +105,7 @@ if (has_nav_menu('header-menu')) {
     <div class="navbar <?php echo $headerStyles['navbarStyleClass']; ?>" role="navigation">
         <?php if ($navbarFixed == 'fixed-top') {
         ?><div class="container">
-         <?php } ?>   <div class="navbar-header">
+         <?php } ?>   <div id="navbar-header" class="navbar-header">
                 <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse"><?php _e( 'Toggle navigation', 'tikva' ); ?></a></div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

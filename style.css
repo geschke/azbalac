@@ -113,6 +113,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     }
 }
 
+#site-header-image {
+    box-shadow: #000 0em 0em 0em; /* fix for fadeIn bug in firefox */
+}
+
 /**
  * Allows the element to be focusable when navigated to via the keyboard.
  */

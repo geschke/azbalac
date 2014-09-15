@@ -84,7 +84,7 @@ todo 2nd: use different images, if available
         if ( get_header_image() ) : ?>
             <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img id="site-header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
+                    <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
                 </a>
             </div>
         <?php endif;

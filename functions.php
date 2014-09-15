@@ -314,7 +314,7 @@ function tikva_scripts() {
 
 
     wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
-        array( 'jquery' ), '20140605', true );
+        array( 'jquery' ), '20140915', true );
 }
 
 

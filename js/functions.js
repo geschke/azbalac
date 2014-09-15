@@ -16,8 +16,16 @@
         if (! $('#site-header-image').length) {
             return false;
         }
-        var width = $('#site-header-image').attr('width');
-        var height = $('#site-header-image').attr('height');
+        var siteHeaderImage =  $('#site-header-image');
+
+        var showImage = false;
+        if (siteHeaderImage.attr('width') == 1) {
+            // only after window load
+            showImage = true;
+        }
+
+        var width = siteHeaderImage.attr('data-width');
+        var height = siteHeaderImage.attr('data-height');
         var ratio = width / height;
         console.log(ratio);
         console.log("height: " + height + " width: " + width);
@@ -36,9 +44,14 @@
             newWidth = 1114;
         }
         newHeight = Math.round(newWidth / ratio);
-        $('#site-header-image').attr('width',newWidth);
-        $('#site-header-image').attr('height',newHeight);
+        siteHeaderImage.attr('width',newWidth);
+        siteHeaderImage.attr('height',newHeight);
+        siteHeaderImage.attr('data-width',newWidth);
+        siteHeaderImage.attr('data-height',newHeight);
 
+        if (showImage) {
+            siteHeaderImage.fadeIn();
+        }
         // 1114
         // 912
         // 690
@@ -69,23 +82,6 @@
 
     _window.resize(function () {
         $.checkMediaSize(false);
-
-        /*        if ($(this).width() >= 1200) {
-            newWinSize = 'lg';
-        } else if ($(this).width() >= 992) {
-            newWinSize = 'md';
-        } else if ($(this).width() >= 768) {
-            newWinSize = 'sm';
-        } else {
-            newWinSize = 'xs';
-        }
-        console.log("in resize with " + $(this).width() );
-        console.log("width of element: " + $('#media-width-detection-element').width());
-        if( newWinSize != winSize ) {
-            //doSomethingOnSizeChange();
-            winSize = newWinSize;
-            console.log(winSize);
-        }*/
     });
 
 
@@ -214,7 +210,10 @@
 	*/
     _window.load(function() {
         console.log("window loaded");
-        $.checkMediaSize();
+        if ($('#site-header-image').length) {
+            $('#site-header-image').hide();
+        }
+            $.checkMediaSize();
     })
 
 } )( jQuery );

@@ -12,6 +12,28 @@
 
     var mediaSize = '';
 
+    $.getHeaderImage = function(index, fallback) {
+        var siteHeaderImage = '';
+        var width = 0;
+        var height = 0;
+        if (typeof tikvaHeaderImage[index].url != 'undefined') {
+            console.log("use image " + tikvaHeaderImage[index].url);
+            siteHeaderImage = tikvaHeaderImage[index].url;
+            height = tikvaHeaderImage[index].height;
+            width = tikvaHeaderImage[index].width;
+
+        } elseif (typeof tikvaHeaderImage[fallback].url != 'undefined') {
+            console.log("use image " + tikvaHeaderImage[fallback].url);
+            siteHeaderImage  = tikvaHeaderImage[fallback].url;
+            height = tikvaHeaderImage[fallback].height;
+            width = tikvaHeaderImage[fallback].width;
+
+        } else {
+            var foo = 'bar';
+        }
+
+    }
+
     $.headerImageResize = function(mediaSize) {
         if (! $('#site-header-image').length) {
             return false;
@@ -32,39 +54,39 @@
         var newWidth = 0, newHeight = 0;
         if (mediaSize == 'xs') {
             newWidth = $('#navbar-header').width() - 26;
-            if (typeof tikvaHeaderImage.header_image_xsmall.url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage.header_image_xsmall.url);
-                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_xsmall.url);
-                height = tikvaHeaderImage.header_image_xsmall.height;
-                width = tikvaHeaderImage.header_image_xsmall.width;
+            if (typeof tikvaHeaderImage[3].url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage[3].url);
+                siteHeaderImage.attr('src',tikvaHeaderImage[3].url);
+                height = tikvaHeaderImage[3].height;
+                width = tikvaHeaderImage[3].width;
 
             }
             //console.log(newWidth);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
-            if (typeof tikvaHeaderImage.header_image_small.url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage.header_image_small.url);
-                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_small.url);
-                height = tikvaHeaderImage.header_image_small.height;
-                width = tikvaHeaderImage.header_image_small.width;
+            if (typeof tikvaHeaderImage[2].url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage[2].url);
+                siteHeaderImage.attr('src',tikvaHeaderImage[2].url);
+                height = tikvaHeaderImage[2].height;
+                width = tikvaHeaderImage[2].width;
 
             }
             newWidth = 690;
         } else if (mediaSize == 'md') {
-            if (typeof tikvaHeaderImage.header_image_middle.url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage.header_image_middle.url);
-                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_middle.url);
-                height = tikvaHeaderImage.header_image_middle.height;
-                width = tikvaHeaderImage.header_image_middle.width;
+            if (typeof tikvaHeaderImage[1].url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage[1].url);
+                siteHeaderImage.attr('src',tikvaHeaderImage[1].url);
+                height = tikvaHeaderImage[1].height;
+                width = tikvaHeaderImage[1].width;
             }
 
             newWidth = 912;
         } else { // lg
-            if (typeof tikvaHeaderImage.header_image_large.url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage.header_image_large.url);
-                siteHeaderImage.attr('src',tikvaHeaderImage.header_image_large.url);
-                height = tikvaHeaderImage.header_image_large.height;
-                width = tikvaHeaderImage.header_image_large.width;
+            if (typeof tikvaHeaderImage[0].url != 'undefined') {
+                console.log("use image " + tikvaHeaderImage[0].url);
+                siteHeaderImage.attr('src',tikvaHeaderImage[0].url);
+                height = tikvaHeaderImage[0].height;
+                width = tikvaHeaderImage[0].width;
 
             }
 

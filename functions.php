@@ -540,33 +540,33 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
 
         if (get_header_image()) {
             $largeImage = get_custom_header();
-            $imageData['header_image_large'] = array('url' => $largeImage->url,
+            $imageData[0] = array('url' => $largeImage->url,
             'height' => $largeImage->height,
             'width' => $largeImage->width,
             'thumbnail' => $largeImage->thumbnail_url,
             'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
         } else {
-            $imageData['header_image_large'] = '';
+            $imageData[0] = '';
         }
         if (isset($tikva_theme['header-image-middle']) && $tikva_theme['header-image-middle'] &&
             isset($tikva_theme['header-image-middle']['url']) && $tikva_theme['header-image-middle']['url']) {
-            $imageData['header_image_middle'] = $tikva_theme['header-image-middle'];
+            $imageData[1] = $tikva_theme['header-image-middle'];
         } else {
-            $imageData['header_image_middle'] = '';
+            $imageData[1] = '';
         }
         if (isset($tikva_theme['header-image-small']) && $tikva_theme['header-image-small'] &&
             isset($tikva_theme['header-image-small']['url']) && $tikva_theme['header-image-small']['url']) {
 
-            $imageData['header_image_small'] = $tikva_theme['header-image-small'];
+            $imageData[2] = $tikva_theme['header-image-small'];
         } else {
-            $imageData['header_image_small'] = '';
+            $imageData[2] = '';
         }
         if (isset($tikva_theme['header-image-xsmall']) && $tikva_theme['header-image-xsmall'] &&
             isset($tikva_theme['header-image-xsmall']['url']) && $tikva_theme['header-image-xsmall']['url']) {
 
-            $imageData['header_image_xsmall'] = $tikva_theme['header-image-xsmall'];
+            $imageData[3] = $tikva_theme['header-image-xsmall'];
         } else {
-            $imageData['header_image_xsmall'] = '';
+            $imageData[3] = '';
         }
 
         return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';

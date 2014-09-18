@@ -17,13 +17,11 @@
         var width = 0;
         var height = 0;
         if (typeof tikvaHeaderImage[index].url != 'undefined') {
-            console.log("use image " + tikvaHeaderImage[index].url);
             siteHeaderImage = tikvaHeaderImage[index].url;
             height = tikvaHeaderImage[index].height;
             width = tikvaHeaderImage[index].width;
 
         } else if (typeof tikvaHeaderImage[fallback].url != 'undefined') {
-            console.log("use image " + tikvaHeaderImage[fallback].url);
             siteHeaderImage  = tikvaHeaderImage[fallback].url;
             height = tikvaHeaderImage[fallback].height;
             width = tikvaHeaderImage[fallback].width;
@@ -49,15 +47,11 @@
 
         var width, height;
 
-        console.log("height: " + height + " width: " + width);
-        console.log(mediaSize);
         var newWidth = 0, newHeight = 0;
         var imgData = {};
         if (mediaSize == 'xs') {
             newWidth = $('#navbar-header').width() - 26;
             imgData = $.getHeaderImage(3,0);
-
-            //console.log(newWidth);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
             imgData = $.getHeaderImage(2,0);
@@ -74,7 +68,6 @@
             height = imgData.height;
             width = imgData.width;
             siteHeaderImage.attr('src', imgData.image);
-
 
             var ratio = width / height;
             newHeight = Math.round(newWidth / ratio);
@@ -96,8 +89,6 @@
     };
 
     $.checkMediaSize = function( ) {
-        //console.log("in resizeWindow");
-        console.log("width of element: " + $('#media-width-detection-element').width());
         var elementSize = $('#media-width-detection-element').width();
         if (elementSize <= 749) { // 767
             mediaDetectSize = 'xs';
@@ -111,7 +102,6 @@
         if (mediaDetectSize != mediaSize || mediaDetectSize == 'xs') {
             mediaSize = mediaDetectSize;
             $.headerImageResize(mediaSize);
-            console.log("change detected, now " + mediaSize);
         }
 
     };
@@ -246,7 +236,6 @@
 	} );
 	*/
     _window.load(function() {
-        console.log("window loaded");
         if ($('#site-header-image').length) {
             $('#site-header-image').hide();
         }

@@ -22,15 +22,16 @@
             height = tikvaHeaderImage[index].height;
             width = tikvaHeaderImage[index].width;
 
-        } elseif (typeof tikvaHeaderImage[fallback].url != 'undefined') {
+        } else if (typeof tikvaHeaderImage[fallback].url != 'undefined') {
             console.log("use image " + tikvaHeaderImage[fallback].url);
             siteHeaderImage  = tikvaHeaderImage[fallback].url;
             height = tikvaHeaderImage[fallback].height;
             width = tikvaHeaderImage[fallback].width;
 
-        } else {
-            var foo = 'bar';
         }
+        return { image: siteHeaderImage,
+            width: width,
+            height: height};
 
     }
 
@@ -46,64 +47,48 @@
             showImage = true;
         }
 
-        var width = siteHeaderImage.attr('data-width');
-        var height = siteHeaderImage.attr('data-height');
+        var width, height;
 
         console.log("height: " + height + " width: " + width);
         console.log(mediaSize);
         var newWidth = 0, newHeight = 0;
+        var imgData = {};
         if (mediaSize == 'xs') {
             newWidth = $('#navbar-header').width() - 26;
-            if (typeof tikvaHeaderImage[3].url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage[3].url);
-                siteHeaderImage.attr('src',tikvaHeaderImage[3].url);
-                height = tikvaHeaderImage[3].height;
-                width = tikvaHeaderImage[3].width;
+            imgData = $.getHeaderImage(3,0);
 
-            }
             //console.log(newWidth);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
-            if (typeof tikvaHeaderImage[2].url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage[2].url);
-                siteHeaderImage.attr('src',tikvaHeaderImage[2].url);
-                height = tikvaHeaderImage[2].height;
-                width = tikvaHeaderImage[2].width;
-
-            }
+            imgData = $.getHeaderImage(2,0);
             newWidth = 690;
         } else if (mediaSize == 'md') {
-            if (typeof tikvaHeaderImage[1].url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage[1].url);
-                siteHeaderImage.attr('src',tikvaHeaderImage[1].url);
-                height = tikvaHeaderImage[1].height;
-                width = tikvaHeaderImage[1].width;
-            }
-
+            imgData = $.getHeaderImage(1,0);
             newWidth = 912;
         } else { // lg
-            if (typeof tikvaHeaderImage[0].url != 'undefined') {
-                console.log("use image " + tikvaHeaderImage[0].url);
-                siteHeaderImage.attr('src',tikvaHeaderImage[0].url);
-                height = tikvaHeaderImage[0].height;
-                width = tikvaHeaderImage[0].width;
-
-            }
-
+            imgData = $.getHeaderImage(0,0);
             newWidth = 1114;
         }
-        var ratio = width / height;
-        newHeight = Math.round(newWidth / ratio);
-        siteHeaderImage.attr('width',newWidth);
-        siteHeaderImage.attr('height',newHeight);
-        siteHeaderImage.attr('data-width',newWidth);
-        siteHeaderImage.attr('data-height',newHeight);
+        if (imgData.image != '') {
+
+            height = imgData.height;
+            width = imgData.width;
+            siteHeaderImage.attr('src', imgData.image);
 
 
+            var ratio = width / height;
+            newHeight = Math.round(newWidth / ratio);
+            siteHeaderImage.attr('width', newWidth);
+            siteHeaderImage.attr('height', newHeight);
+            siteHeaderImage.attr('data-width', newWidth);
+            siteHeaderImage.attr('data-height', newHeight);
 
-        if (showImage) {
-            siteHeaderImage.fadeIn();
-        }
+            if (showImage) {
+                siteHeaderImage.fadeIn();
+            }
+
+        } // else - what else? no image found, so do nothing.
+
         // 1114
         // 912
         // 690

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tikva v0.1.6\n"
+"Project-Id-Version: Tikva v0.1.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-07-03 21:31:12+0000\n"
+"PO-Revision-Date: 2014-09-21 22:49:45+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -103,33 +103,28 @@ msgstr "Ein Kommentar"
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: content.php:43
-#@ tikva
-msgid "Edit"
-msgstr "Editieren"
-
-#: content.php:61
+#: content.php:57
 #@ tikva
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: footer.php:65
+#: footer.php:49
 #@ tikva
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:66
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#: footer.php:50
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
 
-#: functions.php:256
+#: functions.php:261
 #@ default
 msgid "Search"
 msgstr "Suche"
 
-#: admin/admin-config.php:221
+#: admin/admin-config.php:193
 #@ tikva
 msgid "Layout"
 msgstr "Layout"
@@ -180,100 +175,83 @@ msgstr ""
 msgid "http://codex.wordpress.org/Child_Themes"
 msgstr "http://codex.wordpress.org/Child_Themes"
 
-#: admin/admin-config.php:186
+#: admin/admin-config.php:243
 #@ tikva
 msgid "Home Settings"
 msgstr "Home Einstellungen"
 
-#: admin/admin-config.php:194
+#: admin/admin-config.php:251
 #@ tikva
 msgid "Maximum number of featured articles on homepage"
 msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
 
-#: admin/admin-config.php:214
+#: admin/admin-config.php:187
 #@ tikva
 msgid "Styling Options"
 msgstr "Styling Einstellungen"
 
-#: admin/admin-config.php:238
+#: admin/admin-config.php:210
 #@ tikva
 msgid "Theme Stylesheet"
 msgstr "Theme Stylesheet"
 
-#: admin/admin-config.php:239
+#: admin/admin-config.php:211
 #@ tikva
 msgid "Select your themes alternative color scheme."
 msgstr "Wähle alternative Farbschemata"
 
-#: admin/admin-config.php:247
+#: admin/admin-config.php:219
 #@ tikva
 msgid "Navbar fixed options"
 msgstr "Einstellungen der Navigation"
 
-#: admin/admin-config.php:257
+#: admin/admin-config.php:229
 #@ tikva
 msgid "Navbar style"
 msgstr "Navigationsleiste Style"
 
-#: admin/admin-config.php:279
-#@ tikva
-msgid "Header Font Color"
-msgstr "Header Schriftfarbe"
-
-#: admin/admin-config.php:280
-#: admin/admin-config.php:297
-#@ tikva
-msgid "Pick a foreground color for the theme (default: #fff)."
-msgstr "Wähle eine Farbe für den Vordergrund des Themes (Standard: #fff)."
-
-#: admin/admin-config.php:287
+#: admin/admin-config.php:361
 #@ tikva
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: admin/admin-config.php:288
-#: admin/admin-config.php:305
-#@ tikva
-msgid "Pick a background color for the footer (default: #666666)."
-msgstr "Wähle eine Hintergrund-Farbe für den Footer (Standard: #666666)."
-
-#: admin/admin-config.php:296
+#: admin/admin-config.php:370
 #@ tikva
 msgid "Footer Font Color"
 msgstr "Footer Schriftfarbe"
 
-#: admin/admin-config.php:304
+#: admin/admin-config.php:378
 #@ tikva
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: admin/admin-config.php:318
+#: admin/admin-config.php:393
 #@ tikva
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: admin/admin-config.php:338
+#: admin/admin-config.php:413
 #@ tikva
 msgid "Theme Information"
 msgstr "Theme Informationen"
 
-#: admin/admin-config.php:357
+#: admin/admin-config.php:432
 #@ tikva
 msgid "Theme Information 1"
 msgstr "Theme Informationen 1"
 
-#: admin/admin-config.php:358
-#: admin/admin-config.php:364
+#: admin/admin-config.php:433
+#: admin/admin-config.php:439
 #@ tikva
 msgid "<p>This is the tab content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt des Tabs, HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:363
+#: admin/admin-config.php:438
 #@ tikva
 msgid "Theme Information 2"
 msgstr "Theme Informationen 2"
 
-#: admin/admin-config.php:368
+#: admin/admin-config.php:443
 #@ tikva
 msgid "<p>This is the sidebar content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt der Sidebar, HTML ist erlaubt.</p>"
@@ -284,28 +262,28 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: content.php:71
+#: content.php:67
 #@ tikva
 msgid "Tags: "
 msgstr "Tags: "
 
-#: content.php:83
+#: content.php:79
 #, php-format
 #@ tikva
 msgid "View all posts in %s"
 msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:224
+#: functions.php:229
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:227
+#: functions.php:232
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:230
+#: functions.php:235
 #@ tikva
 msgid "Website"
 msgstr "Website"
@@ -320,7 +298,7 @@ msgstr "&laquo; Zurück"
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:393
+#: functions.php:398
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -366,13 +344,13 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:253
+#: functions.php:258
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:254
+#: functions.php:259
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
@@ -743,42 +721,42 @@ msgstr "Alle Installationen wurden fertig gestellt."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Installiere Plugin %1$s (%2$d/%3$d)"
 
-#: admin/admin-config.php:223
+#: admin/admin-config.php:195
 #@ tikva
 msgid "Set layout of your site."
 msgstr "Setze Layout der Site"
 
-#: admin/admin-config.php:388
-#: admin/admin-config.php:389
+#: admin/admin-config.php:463
+#: admin/admin-config.php:464
 #@ tikva
 msgid "Tikva Theme Options"
 msgstr "Tikva Theme Einstellungen"
 
-#: content.php:78
+#: content.php:74
 #@ tikva
 msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] "Kategorie:"
 msgstr[1] "Kategorien:"
 
-#: functions.php:377
+#: functions.php:382
 #, php-format
 #@ tikva
 msgid "Page %s"
 msgstr "Seite %s"
 
-#: header.php:58
+#: header.php:54
 #@ tikva
 msgid "Skip to main content"
 msgstr "Zum Hauptinhalt springen"
 
-#: header.php:117
+#: header.php:77
 #@ tikva
 msgid "Header Image - navigate to homepage"
 msgstr "Header-Bild - Link zur Homepage"
 
-#: header.php:139
-#: header.php:142
+#: header.php:98
+#: header.php:101
 #@ tikva
 msgid "Toggle navigation"
 msgstr "Schalte Navigation"
@@ -790,13 +768,13 @@ msgstr "Oben halten"
 
 #: content-featured-post-large.php:38
 #: content-featured-post.php:36
-#: content.php:59
+#: content.php:55
 #, php-format
 #@ tikva
 msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
 msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
 
-#: functions.php:471
+#: functions.php:636
 #, php-format
 #@ tikva
 msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
@@ -817,4 +795,111 @@ msgstr "<span class=\"byline-icon glyphicon glyphicon-comment\"></span> Schreibe
 #@ tikva
 msgid "<span class=\"screen-reader-text\">Date: </span>"
 msgstr "<span class=\"screen-reader-text\">Datum: </span>"
+
+#: admin/admin-config.php:265
+#@ tikva
+msgid "Header / Footer Options"
+msgstr "Header / Footer Einstellungen"
+
+#: admin/admin-config.php:271
+#@ tikva
+msgid "This theme supports four breakpoints for different screen sizes. The image which is defined in the Design -> Header section will be used with large devices (desktops, 1200px and up). If no further image is set below, the default header image will be resized automatically."
+msgstr ""
+
+#: admin/admin-config.php:276
+#@ tikva
+msgid "Do not resize automatically the default header image"
+msgstr ""
+
+#: admin/admin-config.php:278
+#@ tikva
+msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
+msgstr ""
+
+#: admin/admin-config.php:286
+#@ tikva
+msgid "Header Image (medium screen)"
+msgstr ""
+
+#: admin/admin-config.php:289
+#@ tikva
+msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
+msgstr ""
+
+#: admin/admin-config.php:296
+#@ tikva
+msgid "Do not resize automatically the medium screen header image"
+msgstr ""
+
+#: admin/admin-config.php:298
+#@ tikva
+msgid "If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen."
+msgstr ""
+
+#: admin/admin-config.php:305
+#@ tikva
+msgid "Header Image (small screen)"
+msgstr ""
+
+#: admin/admin-config.php:308
+#@ tikva
+msgid "If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar."
+msgstr ""
+
+#: admin/admin-config.php:315
+#@ tikva
+msgid "Do not resize automatically the small screen header image"
+msgstr ""
+
+#: admin/admin-config.php:317
+#@ tikva
+msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
+msgstr ""
+
+#: admin/admin-config.php:325
+#@ tikva
+msgid "Header Image (extra small screen)"
+msgstr ""
+
+#: admin/admin-config.php:328
+#@ tikva
+msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
+msgstr ""
+
+#: admin/admin-config.php:335
+#@ tikva
+msgid "Do not resize automatically the extra small header image"
+msgstr ""
+
+#: admin/admin-config.php:337
+#@ tikva
+msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
+msgstr ""
+
+#: admin/admin-config.php:343
+#@ tikva
+msgid "Use the example image from the theme if no default header image is set."
+msgstr ""
+
+#: admin/admin-config.php:344
+#@ tikva
+msgid "You can switch off this option, so no image will be displayed."
+msgstr ""
+
+#: admin/admin-config.php:362
+#: admin/admin-config.php:379
+#@ tikva
+msgid "Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr ""
+
+#: admin/admin-config.php:371
+#@ tikva
+msgid "Pick a foreground color for the theme (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr ""
+
+#: content.php:39
+#, php-format
+#@ tikva
+msgid "<span class=\"byline-icon glyphicon glyphicon-edit\"></span>Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
 

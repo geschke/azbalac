@@ -65,6 +65,8 @@
             newWidth = 1114;
         }
         if (imgData.image != '') {
+            $('#site-header').show();
+
 
             siteHeaderImage.attr('src', imgData.image);
 
@@ -84,12 +86,11 @@
                 siteHeaderImage.fadeIn();
             }
 
-        } // else - what else? no image found, so do nothing.
+        } else {
 
-        // 1114
-        // 912
-        // 690
-        // 244
+                $('#site-header').hide();
+
+        }
     };
 
     $.checkMediaSize = function( ) {

@@ -337,23 +337,30 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'desc'     => __('If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
                         'default'  => '0'// 1 = on | 0 = off
                     ),
-
-
                     array(
+                        'id'       => 'header-image-example-tikva',
+                        'type'     => 'checkbox',
+                        'title'    => __('Use the example image from the theme if no default header image is set.', 'tikva'),
+                        'subtitle' => __('You can switch off this option, so no image will be displayed.', 'tikva'),
+                        //'desc'     => __('If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+                        'default'  => '1'// 1 = on | 0 = off
+                    ),
+
+                  /*  array(
                         'id'=>'color-fg-header',
                         'type' => 'color',
                         //'output' => array('.site-title'),
                         'title' => __('Header Font Color', 'tikva'),
-                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'tikva'),
-                        'default' => '#FFFFFF',
+                        'subtitle' => __('Pick a foreground color for the theme (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),
+                        'default' => 'transparent',
                         'validate' => 'color',
-                    ),
+                    ), */
                     array(
                         'id'=>'color-bg-header',
                         'type' => 'color',
                         'title' => __('Header Background Color', 'tikva'),
-                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'tikva'),
-                        'default' => '#666666',
+                        'subtitle' => __('Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),
+                        'default' => 'transparent',
                         'validate' => 'color',
                     ),
                     array(
@@ -361,16 +368,16 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'type' => 'color',
                         //'output' => array('.site-title'),
                         'title' => __('Footer Font Color', 'tikva'),
-                        'subtitle' => __('Pick a foreground color for the theme (default: #fff).', 'tikva'),
-                        'default' => '#FFFFFF',
+                        'subtitle' => __('Pick a foreground color for the theme (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),
+                        'default' => 'transparent',
                         'validate' => 'color',
                     ),
                     array(
                         'id'=>'color-bg-footer',
                         'type' => 'color',
                         'title' => __('Footer Background Color', 'tikva'),
-                        'subtitle' => __('Pick a background color for the footer (default: #666666).', 'tikva'),
-                        'default' => '#666666',
+                        'subtitle' => __('Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),
+                        'default' => 'transparent',
                         'validate' => 'color',
                     )
                 ));

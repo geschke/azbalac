@@ -17,6 +17,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php
 
+global $tikva_theme; //ugly, but working... use better solution in next versions...
+
 echo tikva_get_header_image_data();
 
 $layoutStyle = tikva_get_layout();
@@ -32,8 +34,7 @@ $navbarFixed = tikva_get_navbar_layout();
             </style>
         <?php
         }
-
-     ?>
+       ?>
 
         <?php wp_head(); ?>
         <?php
@@ -64,31 +65,19 @@ if ($navbarFixed != 'fixed-top') {
 ?>
 <?php if ($navbarFixed == 'default') {
 
-/*
-
-todo: set initial image height and width to 0
-get real image height and width from some js output
-do a smooth view of the header image, with a nice effect
-or scrolling or similar...
-
-todo 2nd: use different images, if available
- */
-
 ?>
     <div role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">
 
 <div class="container">
     <div class="masthead col-md-12 col-sm-12">
         <h3><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h3>
-        <?php
-        if ( get_header_image() ) : ?>
+
             <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
                 </a>
             </div>
-        <?php endif;
-        ?>
+
     </div>
  </div>
 <?php }

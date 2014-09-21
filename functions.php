@@ -152,7 +152,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
             'default-image'          =>  null,
             'uploads'                => true,
             'flex-width'    => true,
-        	'width'         => 980,
+        	'width'         => 1115,
 	        'flex-height'    => true,
 
         );
@@ -511,6 +511,7 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
         else {
             $headerStyleColorBg = '#000000';
         }
+        // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
         if (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] && stripos($tikva_theme['color-fg-header'], 'transparent') !== false ) {
             $headerStyleColorFg = '';
         }
@@ -529,37 +530,81 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
 endif;
 
 
+if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
+
+    function tikva_get_footer_styles() {
+        global $tikva_theme;
+
+        if (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer'] && stripos($tikva_theme['color-bg-footer'], 'transparent') !== false ) {
+            $footerStyleColorBg = '';
+        }
+        elseif (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer'] ) {
+            $footerStyleColorBg = ' background-color: ' . $tikva_theme['color-bg-footer'] .';';
+        }
+        else {
+            $footerStyleColorBg = '';
+        }
+
+        if (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] && stripos($tikva_theme['color-fg-footer'], 'transparent') !== false ) {
+            $footerStyleColorFg = '';
+        }
+        elseif (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] ) {
+            $footerStyleColorFg = ' color: ' . $tikva_theme['color-fg-footer'] .';';
+        }
+        else {
+            $footerStyleColorFg = '';
+        }
+        return array(
+            'footerStyleColorBg' => $footerStyleColorBg,
+            'footerStyleColorFg' => $footerStyleColorFg
+        );
+    }
+endif;
+
+
 
 if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
 
     function tikva_get_header_image_data() {
         global $tikva_theme;
         $imageData = array();
-        //if (isset($tikva_theme['header-image-large']) && $tikva_theme['header-image-large'] &&
-        //    isset($tikva_theme['header-image-large']['url']) && $tikva_theme['header-image-large']['url']) {
 
         if (get_header_image()) {
             $largeImage = get_custom_header();
             $imageData[0] = array('url' => $largeImage->url,
-            'height' => $largeImage->height,
-            'width' => $largeImage->width,
-            'thumbnail' => $largeImage->thumbnail_url,
-            'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
+                'height' => $largeImage->height,
+                'width' => $largeImage->width,
+                'thumbnail' => $largeImage->thumbnail_url,
+                'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
+        }
+        elseif (!isset($tikva_theme['header-image-example-tikva']) ||
+            (isset($tikva_theme['header-image-example-tikva']) &&
+                $tikva_theme['header-image-example-tikva'] == '1'
+            )
+        ) {
+            // fallback to example image if not overwritten or switched off
+            $imageData[0] = array('url' => get_template_directory_uri() . '/images/tikva_default_header_image.jpg',
+                'height' => 213,
+                'width' => 1115,
+                'thumbnail' => '', // not used here
+                'id' => 0);
 
+        } else {
+            $imageData[0] = '';
+        }
+        if (isset($imageData[0]) && $imageData[0] !== '') {
             if (isset($tikva_theme['header-image-large-dontscale']) && $tikva_theme['header-image-large-dontscale']) {
                 $imageData[0]['dontscale'] = $tikva_theme['header-image-large-dontscale'];
             } else {
                 $imageData[0]['dontscale'] = 0;
             }
-
-        } else {
-            $imageData[0] = '';
         }
-        if (isset($tikva_theme['header-image-middle']) && $tikva_theme['header-image-middle'] &&
-            isset($tikva_theme['header-image-middle']['url']) && $tikva_theme['header-image-middle']['url']) {
-            $imageData[1] = $tikva_theme['header-image-middle'];
-            if (isset($tikva_theme['header-image-middle-dontscale']) && $tikva_theme['header-image-middle-dontscale']) {
-                $imageData[1]['dontscale'] = $tikva_theme['header-image-middle-dontscale'];
+
+        if (isset($tikva_theme['header-image-medium']) && $tikva_theme['header-image-medium'] &&
+            isset($tikva_theme['header-image-medium']['url']) && $tikva_theme['header-image-medium']['url']) {
+            $imageData[1] = $tikva_theme['header-image-medium'];
+            if (isset($tikva_theme['header-image-medium-dontscale']) && $tikva_theme['header-image-medium-dontscale']) {
+                $imageData[1]['dontscale'] = $tikva_theme['header-image-medium-dontscale'];
             } else {
                 $imageData[1]['dontscale'] = 0;
             }

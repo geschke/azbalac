@@ -10,26 +10,10 @@
 </div><!-- container -->
 
 <?php
-global $tikva_theme;
-
-if (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer']) {
-    $colorBgFooter = $tikva_theme['color-bg-footer'];
-}
-else {
-    $colorBgFooter = '#000000';
-}
-if (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] && stripos($tikva_theme['color-fg-footer'], 'transparent') !== false ) {
-    $footerStyleColorFg = '';
-}
-elseif (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] ) {
-    $footerStyleColorFg = ' color: ' . $tikva_theme['color-fg-footer'] .';';
-}
-else {
-    $footerStyleColorFg = '';
-}
-
+$footerStyles = tikva_get_footer_styles();
 ?>
-<div style="background-color: <?php echo $colorBgFooter; ?>; <?php echo $footerStyleColorFg; ?>;">
+
+<div style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
 
 <div role="complementary" class="container">
 <div class="row" style="padding: 10px; 0px; 10px;">

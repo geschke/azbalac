@@ -10,8 +10,10 @@ Version history:
 Version 0.1.8
 - header image handling improved - choose between image options, resize automatically and/or upload matching images
 - options panel enhancements and cleanup
-- tested compatibility to WordPress 4.0, it just works
+- header and footer color functions cleanup
 - set default header image as part of the theme, the image is made by myself and licensed under the same restrictions as the theme
+- page width bug solved, it was too high because of strange formatting of skip-link URL
+- allow setting body and widget background and text color. (But this is not recommended, better use a custom stylesheet uploaded to css/design folder.)
 
 Version 0.1.7
 - edit link duplication fix

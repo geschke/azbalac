@@ -260,9 +260,6 @@ if (!class_exists("Redux_Framework_tikva_config")) {
             );
 
 
-
-
-
             $this->sections[] = array(
                 'icon' => 'el-icon-website',
                 'title' => __('Header / Footer Options', 'tikva'),
@@ -273,6 +270,15 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'type' => 'info',
                         'desc' => __('This theme supports four breakpoints for different screen sizes. The image which is defined in the Design -> Header section will be used with large devices (desktops, 1200px and up). If no further image is set below, the default header image will be resized automatically.', 'tikva')
                     ),
+                    array(
+                    'id'       => 'header-image-large-dontscale',
+                    'type'     => 'checkbox',
+                    'title'    => __('Do not resize automatically the default header image', 'tikva'),
+                    //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                    'desc'     => __('If checked, the default header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+                    'default'  => '0'// 1 = on | 0 = off
+                ),
+
                     array(
                         'id'=>'header-image-medium',
                         'type' => 'media',
@@ -285,6 +291,14 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'default'=>array('url'=>'')
                     ),
                     array(
+                        'id'       => 'header-image-medium-dontscale',
+                        'type'     => 'checkbox',
+                        'title'    => __('Do not resize automatically the medium screen header image', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        'desc'     => __('If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+                        'default'  => '0'// 1 = on | 0 = off
+                    ),
+                    array(
                         'id'=>'header-image-small',
                         'type' => 'media',
                         'url'=> true,
@@ -294,6 +308,14 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'desc'=> __('If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
+                    ),
+                    array(
+                        'id'       => 'header-image-small-dontscale',
+                        'type'     => 'checkbox',
+                        'title'    => __('Do not resize automatically the small screen header image', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        'desc'     => __('If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+                        'default'  => '0'// 1 = on | 0 = off
                     ),
 
                     array(
@@ -306,6 +328,14 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'desc'=> __('If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva'),
                         //'subtitle' => __('Upload header imageany media using the WordPress native uploader', 'tikva'),
                         'default'=>array('url'=>'')
+                    ),
+                    array(
+                        'id'       => 'header-image-xsmall-dontscale',
+                        'type'     => 'checkbox',
+                        'title'    => __('Do not resize automatically the extra small header image', 'tikva'),
+                        //'subtitle' => __('No validation can be done on this field type', 'tikva'),
+                        'desc'     => __('If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+                        'default'  => '0'// 1 = on | 0 = off
                     ),
 
 

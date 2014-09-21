@@ -545,19 +545,38 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
             'width' => $largeImage->width,
             'thumbnail' => $largeImage->thumbnail_url,
             'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
+
+            if (isset($tikva_theme['header-image-large-dontscale']) && $tikva_theme['header-image-large-dontscale']) {
+                $imageData[0]['dontscale'] = $tikva_theme['header-image-large-dontscale'];
+            } else {
+                $imageData[0]['dontscale'] = 0;
+            }
+
         } else {
             $imageData[0] = '';
         }
         if (isset($tikva_theme['header-image-middle']) && $tikva_theme['header-image-middle'] &&
             isset($tikva_theme['header-image-middle']['url']) && $tikva_theme['header-image-middle']['url']) {
             $imageData[1] = $tikva_theme['header-image-middle'];
+            if (isset($tikva_theme['header-image-middle-dontscale']) && $tikva_theme['header-image-middle-dontscale']) {
+                $imageData[1]['dontscale'] = $tikva_theme['header-image-middle-dontscale'];
+            } else {
+                $imageData[1]['dontscale'] = 0;
+            }
         } else {
             $imageData[1] = '';
         }
+
         if (isset($tikva_theme['header-image-small']) && $tikva_theme['header-image-small'] &&
             isset($tikva_theme['header-image-small']['url']) && $tikva_theme['header-image-small']['url']) {
 
             $imageData[2] = $tikva_theme['header-image-small'];
+            if (isset($tikva_theme['header-image-small-dontscale']) && $tikva_theme['header-image-small-dontscale']) {
+                $imageData[2]['dontscale'] = $tikva_theme['header-image-small-dontscale'];
+            } else {
+                $imageData[2]['dontscale'] = 0;
+            }
+
         } else {
             $imageData[2] = '';
         }
@@ -565,6 +584,12 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
             isset($tikva_theme['header-image-xsmall']['url']) && $tikva_theme['header-image-xsmall']['url']) {
 
             $imageData[3] = $tikva_theme['header-image-xsmall'];
+            if (isset($tikva_theme['header-image-xsmall-dontscale']) && $tikva_theme['header-image-xsmall-dontscale']) {
+                $imageData[3]['dontscale'] = $tikva_theme['header-image-xsmall-dontscale'];
+            } else {
+                $imageData[3]['dontscale'] = 0;
+            }
+
         } else {
             $imageData[3] = '';
         }

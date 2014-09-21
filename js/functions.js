@@ -16,21 +16,22 @@
         var siteHeaderImage = '';
         var width = 0;
         var height = 0;
+        var dontscale = 0;
         if (typeof tikvaHeaderImage[index].url != 'undefined') {
             siteHeaderImage = tikvaHeaderImage[index].url;
             height = tikvaHeaderImage[index].height;
             width = tikvaHeaderImage[index].width;
-
+            dontscale = tikvaHeaderImage[index].dontscale;
         } else if (typeof tikvaHeaderImage[fallback].url != 'undefined') {
             siteHeaderImage  = tikvaHeaderImage[fallback].url;
             height = tikvaHeaderImage[fallback].height;
             width = tikvaHeaderImage[fallback].width;
-
+            dontscale = tikvaHeaderImage[fallback].dontscale;
         }
         return { image: siteHeaderImage,
             width: width,
-            height: height};
-
+            height: height,
+            dontscale: dontscale};
     }
 
     $.headerImageResize = function(mediaSize) {
@@ -65,12 +66,15 @@
         }
         if (imgData.image != '') {
 
-            height = imgData.height;
-            width = imgData.width;
             siteHeaderImage.attr('src', imgData.image);
 
-            var ratio = width / height;
-            newHeight = Math.round(newWidth / ratio);
+            if (imgData.dontscale == 1) {
+                newWidth = imgData.width;
+                newHeight = imgData.height;
+            } else {
+                var ratio = imgData.width / imgData.height;
+                newHeight = Math.round(newWidth / ratio);
+            }
             siteHeaderImage.attr('width', newWidth);
             siteHeaderImage.attr('height', newHeight);
             siteHeaderImage.attr('data-width', newWidth);

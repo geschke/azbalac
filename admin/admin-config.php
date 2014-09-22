@@ -219,7 +219,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'title' => __('Navbar fixed options', 'tikva'),
                         //'subtitle' => __('No validation can be done on this field type', 'tikva'),
                         //'desc' => __('This is the description field, again good for additional info.', 'tikva'),
-                        'options' => array('default' => 'Default','fixed-top' => 'Fixed to top'),
+                        'options' => array('default' => __('Default','tikva'),'fixed-top' => __('Fixed to top','tikva')),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
                     ),
@@ -229,7 +229,7 @@ if (!class_exists("Redux_Framework_tikva_config")) {
                         'title' => __('Navbar style', 'tikva'),
                         //'subtitle' => __('No validation can be done on this field type', 'tikva'),
                         //'desc' => __('This is the description field, again good for additional info.', 'tikva'),
-                        'options' => array('default' => 'Default','inverse' => 'Inverse'),
+                        'options' => array('default' => __('Default','tikva'),'inverse' => __('Inverse','tikva')),
                         //Must provide key => value pairs for radio options
                         'default' => 'default'
                     ),

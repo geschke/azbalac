@@ -3,6 +3,7 @@
 require_once dirname( __FILE__ ) . '/inc/3rd/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'tikva_register_required_plugins' );
+
 /**
  * Register the required plugins for this theme.
  *
@@ -80,7 +81,10 @@ function tikva_register_required_plugins() {
 
 }
 
+load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
+
 require_once( get_template_directory() . '/admin/admin-config.php' );
+
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
@@ -111,7 +115,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
          * replace to change 'tikva' to the name of your theme in all
          * template files.
          */
-        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
+//        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
         //add_editor_style( array( 'css/editor-style.css', tikva_font_url() ) );

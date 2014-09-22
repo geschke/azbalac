@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tikva v0.1.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-09-21 22:49:45+0000\n"
+"PO-Revision-Date: 2014-09-22 10:34:01+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -114,12 +114,12 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:50
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
 
-#: functions.php:261
+#: functions.php:297
 #@ default
 msgid "Search"
 msgstr "Suche"
@@ -175,12 +175,12 @@ msgstr ""
 msgid "http://codex.wordpress.org/Child_Themes"
 msgstr "http://codex.wordpress.org/Child_Themes"
 
-#: admin/admin-config.php:243
+#: admin/admin-config.php:261
 #@ tikva
 msgid "Home Settings"
 msgstr "Home Einstellungen"
 
-#: admin/admin-config.php:251
+#: admin/admin-config.php:269
 #@ tikva
 msgid "Maximum number of featured articles on homepage"
 msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
@@ -210,48 +210,48 @@ msgstr "Einstellungen der Navigation"
 msgid "Navbar style"
 msgstr "Navigationsleiste Style"
 
-#: admin/admin-config.php:361
+#: admin/admin-config.php:379
 #@ tikva
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: admin/admin-config.php:370
+#: admin/admin-config.php:388
 #@ tikva
 msgid "Footer Font Color"
 msgstr "Footer Schriftfarbe"
 
-#: admin/admin-config.php:378
+#: admin/admin-config.php:396
 #@ tikva
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
 
-#: admin/admin-config.php:393
+#: admin/admin-config.php:411
 #@ tikva
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: admin/admin-config.php:413
+#: admin/admin-config.php:431
 #@ tikva
 msgid "Theme Information"
 msgstr "Theme Informationen"
 
-#: admin/admin-config.php:432
+#: admin/admin-config.php:450
 #@ tikva
 msgid "Theme Information 1"
 msgstr "Theme Informationen 1"
 
-#: admin/admin-config.php:433
-#: admin/admin-config.php:439
+#: admin/admin-config.php:451
+#: admin/admin-config.php:457
 #@ tikva
 msgid "<p>This is the tab content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt des Tabs, HTML ist erlaubt.</p>"
 
-#: admin/admin-config.php:438
+#: admin/admin-config.php:456
 #@ tikva
 msgid "Theme Information 2"
 msgstr "Theme Informationen 2"
 
-#: admin/admin-config.php:443
+#: admin/admin-config.php:461
 #@ tikva
 msgid "<p>This is the sidebar content, HTML is allowed.</p>"
 msgstr "<p>Das ist der Inhalt der Sidebar, HTML ist erlaubt.</p>"
@@ -273,17 +273,17 @@ msgstr "Tags: "
 msgid "View all posts in %s"
 msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:229
+#: functions.php:265
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:232
+#: functions.php:268
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:235
+#: functions.php:271
 #@ tikva
 msgid "Website"
 msgstr "Website"
@@ -298,7 +298,7 @@ msgstr "&laquo; Zurück"
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:398
+#: functions.php:434
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -344,13 +344,13 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:258
+#: functions.php:294
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:259
+#: functions.php:295
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
@@ -726,8 +726,8 @@ msgstr "Installiere Plugin %1$s (%2$d/%3$d)"
 msgid "Set layout of your site."
 msgstr "Setze Layout der Site"
 
-#: admin/admin-config.php:463
-#: admin/admin-config.php:464
+#: admin/admin-config.php:481
+#: admin/admin-config.php:482
 #@ tikva
 msgid "Tikva Theme Options"
 msgstr "Tikva Theme Einstellungen"
@@ -739,24 +739,24 @@ msgid_plural "Categories:"
 msgstr[0] "Kategorie:"
 msgstr[1] "Kategorien:"
 
-#: functions.php:382
+#: functions.php:418
 #, php-format
 #@ tikva
 msgid "Page %s"
 msgstr "Seite %s"
 
-#: header.php:54
+#: header.php:56
 #@ tikva
 msgid "Skip to main content"
 msgstr "Zum Hauptinhalt springen"
 
-#: header.php:77
+#: header.php:79
 #@ tikva
 msgid "Header Image - navigate to homepage"
 msgstr "Header-Bild - Link zur Homepage"
 
-#: header.php:98
-#: header.php:101
+#: header.php:100
+#: header.php:103
 #@ tikva
 msgid "Toggle navigation"
 msgstr "Schalte Navigation"
@@ -774,7 +774,7 @@ msgstr "Oben halten"
 msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
 msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
 
-#: functions.php:636
+#: functions.php:687
 #, php-format
 #@ tikva
 msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
@@ -796,110 +796,134 @@ msgstr "<span class=\"byline-icon glyphicon glyphicon-comment\"></span> Schreibe
 msgid "<span class=\"screen-reader-text\">Date: </span>"
 msgstr "<span class=\"screen-reader-text\">Datum: </span>"
 
-#: admin/admin-config.php:265
+#: admin/admin-config.php:283
 #@ tikva
 msgid "Header / Footer Options"
 msgstr "Header / Footer Einstellungen"
 
-#: admin/admin-config.php:271
-#@ tikva
-msgid "This theme supports four breakpoints for different screen sizes. The image which is defined in the Design -> Header section will be used with large devices (desktops, 1200px and up). If no further image is set below, the default header image will be resized automatically."
-msgstr ""
-
-#: admin/admin-config.php:276
-#@ tikva
-msgid "Do not resize automatically the default header image"
-msgstr ""
-
-#: admin/admin-config.php:278
-#@ tikva
-msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
-msgstr ""
-
-#: admin/admin-config.php:286
-#@ tikva
-msgid "Header Image (medium screen)"
-msgstr ""
-
 #: admin/admin-config.php:289
 #@ tikva
-msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
-msgstr ""
+msgid "This theme supports four breakpoints for different screen sizes. The image which is defined in the Design -> Header section will be used with large devices (desktops, 1200px and up). If no further image is set below, the default header image will be resized automatically."
+msgstr "Dieses Theme unterstützt vier Breakpoints für verschiedene Display-Größen. Das Header-Bild, das im Bereich \\\"Design -> Header\\\" eingestellt ist, wird bei breiten Browser-Fenstern (Desktops, 1200px und größer) verwendet. Wenn kein weiteres Header-Bild weiter unten eingestellt wird, wird das große Standard-Header-Bild benutzt und an die jeweilige Display-Größe angepasst."
+
+#: admin/admin-config.php:294
+#@ tikva
+msgid "Do not resize automatically the default header image"
+msgstr "Keine automatische Anpassung des Standard Header-Bildes"
 
 #: admin/admin-config.php:296
 #@ tikva
-msgid "Do not resize automatically the medium screen header image"
-msgstr ""
+msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: admin/admin-config.php:298
+#: admin/admin-config.php:304
+#@ tikva
+msgid "Header Image (medium screen)"
+msgstr "Header-Bild (mittlere Displays)"
+
+#: admin/admin-config.php:307
+#@ tikva
+msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
+msgstr "Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet (Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
+
+#: admin/admin-config.php:314
+#@ tikva
+msgid "Do not resize automatically the medium screen header image"
+msgstr "Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
+
+#: admin/admin-config.php:316
 #@ tikva
 msgid "If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen."
-msgstr ""
+msgstr "Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: admin/admin-config.php:305
+#: admin/admin-config.php:323
 #@ tikva
 msgid "Header Image (small screen)"
-msgstr ""
+msgstr "Header-Bild (kleine Displays)"
 
-#: admin/admin-config.php:308
+#: admin/admin-config.php:326
 #@ tikva
 msgid "If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar."
-msgstr ""
+msgstr "Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet (Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
-#: admin/admin-config.php:315
+#: admin/admin-config.php:333
 #@ tikva
 msgid "Do not resize automatically the small screen header image"
-msgstr ""
-
-#: admin/admin-config.php:317
-#@ tikva
-msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
-msgstr ""
-
-#: admin/admin-config.php:325
-#@ tikva
-msgid "Header Image (extra small screen)"
-msgstr ""
-
-#: admin/admin-config.php:328
-#@ tikva
-msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
-msgstr ""
+msgstr "Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
 
 #: admin/admin-config.php:335
 #@ tikva
-msgid "Do not resize automatically the extra small header image"
-msgstr ""
-
-#: admin/admin-config.php:337
-#@ tikva
-msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
-msgstr ""
+msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
 #: admin/admin-config.php:343
 #@ tikva
-msgid "Use the example image from the theme if no default header image is set."
-msgstr ""
+msgid "Header Image (extra small screen)"
+msgstr "Header-Bild (sehr kleine Displays)"
 
-#: admin/admin-config.php:344
+#: admin/admin-config.php:346
 #@ tikva
-msgid "You can switch off this option, so no image will be displayed."
-msgstr ""
+msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
+msgstr "Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
+
+#: admin/admin-config.php:353
+#@ tikva
+msgid "Do not resize automatically the extra small header image"
+msgstr "Keine automatische Anpassung des Header-Bildes für sehr kleine Display-Größen."
+
+#: admin/admin-config.php:355
+#@ tikva
+msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
+
+#: admin/admin-config.php:361
+#@ tikva
+msgid "Use the example image from the theme if no default header image is set."
+msgstr "Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild gesetzt ist."
 
 #: admin/admin-config.php:362
-#: admin/admin-config.php:379
+#@ tikva
+msgid "You can switch off this option, so no image will be displayed."
+msgstr "Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild erscheint, falls kein Standard-Header-Bild gesetzt ist."
+
+#: admin/admin-config.php:397
 #@ tikva
 msgid "Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr ""
-
-#: admin/admin-config.php:371
-#@ tikva
-msgid "Pick a foreground color for the theme (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr ""
+msgstr "Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: content.php:39
 #, php-format
 #@ tikva
 msgid "<span class=\"byline-icon glyphicon glyphicon-edit\"></span>Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "<span class=\"byline-icon glyphicon glyphicon-edit\"></span>Bearbeite <span class=\"screen-reader-text\">%s</span>"
+
+#: admin/admin-config.php:240
+#@ tikva
+msgid "Sidebar Font Color"
+msgstr "Schriftfarbe Sidebar (Widgets)"
+
+#: admin/admin-config.php:241
+#@ tikva
+msgid "Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftgarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: admin/admin-config.php:248
+#@ tikva
+msgid "Sidebar Background Color"
+msgstr "Hintergrundfarbe Sidebar (Widgets)"
+
+#: admin/admin-config.php:249
+#@ tikva
+msgid "Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: admin/admin-config.php:380
+#@ tikva
+msgid "Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Header (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: admin/admin-config.php:389
+#@ tikva
+msgid "Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftgarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 

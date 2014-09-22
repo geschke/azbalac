@@ -182,10 +182,46 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+if ( ! function_exists( 'tikva_get_body_styles' ) ) :
+
+    function tikva_get_body_styles() {
+        global $tikva_theme;
+
+        if (isset($tikva_theme['color-bg-sidebar']) && $tikva_theme['color-bg-sidebar'] && stripos($tikva_theme['color-bg-sidebar'], 'transparent') !== false ) {
+            $sidebarStyleColorBg = '';
+        }
+        elseif (isset($tikva_theme['color-bg-sidebar']) && $tikva_theme['color-bg-sidebar'] ) {
+            $sidebarStyleColorBg = ' background-color: ' . $tikva_theme['color-bg-sidebar'] .';';
+        }
+        else {
+            $sidebarStyleColorBg = '';
+        }
+
+        if (isset($tikva_theme['color-fg-sidebar']) && $tikva_theme['color-fg-sidebar'] && stripos($tikva_theme['color-fg-sidebar'], 'transparent') !== false ) {
+            $sidebarStyleColorFg = '';
+        }
+        elseif (isset($tikva_theme['color-fg-sidebar']) && $tikva_theme['color-fg-sidebar'] ) {
+            $sidebarStyleColorFg = ' color: ' . $tikva_theme['color-fg-sidebar'] .';';
+        }
+        else {
+            $sidebarStyleColorFg = '';
+        }
+        return array(
+            'sidebarStyleColorBg' => $sidebarStyleColorBg,
+            'sidebarStyleColorFg' => $sidebarStyleColorFg
+        );
+    }
+endif;
+
+
+
 if ( function_exists('register_sidebar') ) {
+
+
+    $bodyStyles = tikva_get_body_styles();
     register_sidebar(array(
         'class'         => '',
-        'before_widget' => '<div id="%1$s" class="well widget %2$s">',
+        'before_widget' => '<div id="%1$s" style="'. $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg']  . '" class="well widget %2$s">',
         'after_widget'  => "</div>\n",
         'before_title'  => '<h3 class="widgettitle">',
         'after_title'   => "</h3>\n"
@@ -560,6 +596,7 @@ if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
         );
     }
 endif;
+
 
 
 

@@ -23,6 +23,8 @@ echo tikva_get_header_image_data();
 
 $layoutStyle = tikva_get_layout();
 
+$bodyStyles = tikva_get_body_styles();
+
 $navbarFixed = tikva_get_navbar_layout();
 
         if ($navbarFixed == 'fixed-top' && has_nav_menu('header-menu')) {

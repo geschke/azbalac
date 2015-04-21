@@ -219,10 +219,10 @@ endif;
 
 
 
-if ( function_exists('register_sidebar') ) {
-
-
+function theme_tikva_widgets_init() 
+{
     $bodyStyles = tikva_get_body_styles();
+
     register_sidebar(array(
         'class'         => '',
         'before_widget' => '<div id="%1$s" style="'. $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg']  . '" class="well widget %2$s">',
@@ -231,33 +231,42 @@ if ( function_exists('register_sidebar') ) {
         'after_title'   => "</h3>\n"
     ));
 
-register_sidebar( array(
-    'name' => 'Footer Sidebar 1 (left)',
-    'id' => 'footer-sidebar-1',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-) );
-register_sidebar( array(
-    'name' => 'Footer Sidebar 2 (middle)',
-    'id' => 'footer-sidebar-2',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-) );
-register_sidebar( array(
-    'name' => 'Footer Sidebar 3 (right)',
-    'id' => 'footer-sidebar-3',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 1 (left)',
+        'id' => 'footer-sidebar-1',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 2 (middle)',
+        'id' => 'footer-sidebar-2',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 3 (right)',
+        'id' => 'footer-sidebar-3',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    
+}
+
+
+if ( function_exists('register_sidebar') ) {
+
+    add_action( 'widgets_init', 'theme_tikva_widgets_init' );
+ 
 }
 
 

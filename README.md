@@ -10,6 +10,8 @@ Version history:
 Version 0.1.9
 - fixed image resize problem with extra small width when no menu is shown (thanks to Iestyn Brice)
 - Bootstrap updated to version 3.3.4
+- used widgets_init when initializing sidebars due to new theme guidelines
+- remove screen_icon functions from 3rd party tgm-plugin, because it's deprecated
 
 Version 0.1.8
 - header image handling improved - choose between image options, resize automatically and/or upload matching images

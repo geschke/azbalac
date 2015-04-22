@@ -93,6 +93,16 @@ require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
 
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+    	function theme_slug_render_title() {
+           ?>
+            <title><?php wp_title( '|', true, 'right' ); ?></title>
+            <?php
+        }
+	add_action( 'wp_head', 'theme_slug_render_title' );
+}
+            
+
 if ( ! function_exists( 'tikva_setup' ) ) :
     /**
      * tikva theme setup.
@@ -165,7 +175,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style( 'css/editor-style.css' );
 
-
+        add_theme_support( 'title-tag' );
 
 
         // This theme uses its own gallery styles.

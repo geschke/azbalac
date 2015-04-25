@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tikva v0.1.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2014-09-22 11:17:46+0000\n"
+"PO-Revision-Date: 2014-12-10 16:16:59+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 #, php-format
 #@ tikva
 msgid "Daily Archives: %s"
-msgstr "Archiv (Tag): %s"
+msgstr "Daily Archives: %s"
 
 #: archive.php:39
 #, php-format
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -114,7 +114,7 @@ msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: footer.php:50
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
@@ -306,7 +306,7 @@ msgstr "Header Menu"
 #: inc/post-addons.php:54
 #@ tikva
 msgid "Featured Post"
-msgstr "Hervorgehobener Beitrag"
+msgstr "Hervorgehobener Eintrag"
 
 #: inc/post-addons.php:55
 #@ tikva

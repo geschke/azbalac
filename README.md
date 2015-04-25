@@ -1,11 +1,15 @@
 Tikva - a small theme based on Bootstrap
 ========================================
 
-Version 0.1.9
+Version 0.1.9.1
 
 
 Version history:
 ================
+
+Version 0.1.9.1
+- wording changed 
+- theme url changed to its new home
 
 Version 0.1.9
 - fixed image resize problem with extra small width when no menu is shown 

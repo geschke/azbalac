@@ -168,6 +168,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
             'flex-width'    => true,
         	'width'         => 1115,
 	        'flex-height'    => true,
+            'wp-head-callback'       => 'tikva_header_style',
 
         );
        add_theme_support( 'custom-header', $headerDefaults );
@@ -227,13 +228,13 @@ if ( ! function_exists( 'tikva_get_body_styles' ) ) :
     }
 endif;
 
-
-
 function theme_tikva_widgets_init() 
 {
     $bodyStyles = tikva_get_body_styles();
 
     register_sidebar(array(
+        'name' => 'Sidebar 1',
+        'id' => 'sidebar-1',
         'class'         => '',
         'before_widget' => '<div id="%1$s" style="'. $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg']  . '" class="well widget %2$s">',
         'after_widget'  => "</div>\n",
@@ -317,7 +318,7 @@ function tikva_get_search_form() {
     <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','tikva' ) . '</label>
     <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','tikva' ) . '" value="' . get_search_query() . '" name="s" id="s" />
     </div>
-    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'tikva') ) .'" />
     </div>
     </form>';
     return $form;
@@ -353,7 +354,7 @@ function tikva_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.2.0', true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 
     /*if ( is_singular() && wp_attachment_is_image() ) {
         wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
@@ -702,6 +703,36 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
         return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;
+
+
+
+if ( ! function_exists( 'tikva_header_style' ) ) :
+/**
+ * Styles the header text displayed on the site.
+ *
+ * Create your own tikva_header_style() function to override in a child theme.
+ *
+ * @since Tikva 0.2
+ *
+ * @see twentysixteen_custom_header_and_background().
+ */
+function tikva_header_style() {
+	// If the header text option is untouched, let's bail.
+	if ( display_header_text() ) {
+		return;
+	}
+
+	// If the header text has been hidden.
+	?>
+	<style type="text/css" id="tikva-header-css">
+
+		#site-header-text {
+                    display: none;
+		}
+	</style>
+	<?php
+}
+endif; // tikva_header_style
 
 
 

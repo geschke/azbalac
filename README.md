@@ -1,11 +1,19 @@
-Tikva - a small theme based on Bootstrap
-========================================
+Tikva - a small theme based on Bootstrap 3.0
+============================================
 
-Version 0.1.9.1
+Version 0.2
 
 
 Version history:
 ================
+
+Version 0.2
+- Bootstrap Version bumped to 3.3.6
+- Bootswatch themes updated
+- minor language fixes
+- Hiding header text enabled 
+- usage of register_sidebar() fixed 
+
 
 Version 0.1.9.1
 - wording changed 
@@ -67,6 +75,12 @@ Version 0.1.1:
 
 Version 0.1:
 Initial release.
+
+Thanks to:
+==========
+
+- Thomas Park for his excellent Bootswatch Themes
+
 
 License:
 ========

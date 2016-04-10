@@ -31,12 +31,12 @@
 
                 ?>
             &nbsp;&nbsp;<span class="comments-link"><?php
-                    comments_popup_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-comment"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
+                    comments_popup_link( sprintf( __( '<span class="byline-icon fa fa-comment" aria-hidden="true"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
                     __( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); ?></span>&nbsp;&nbsp;
 			<?php
 				endif;
 
-				edit_post_link( sprintf( __( '<span class="byline-icon glyphicon glyphicon-edit"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
+				edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
 			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -64,7 +64,7 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<?php the_tags( __('Tags: ','tikva'), ' ','' );
+	<?php the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','tikva'), ' ','' );
 
     $categories = get_the_category();
     $separator = ' ';

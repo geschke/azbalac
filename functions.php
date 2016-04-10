@@ -196,6 +196,15 @@ if ( ! isset( $content_width ) ) {
     $content_width = 474;
 }
 
+if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
+
+    function tikva_enqueue_font_awesome() {
+
+        wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
+
+}
+
+endif;
 
 if ( ! function_exists( 'tikva_get_body_styles' ) ) :
 
@@ -372,9 +381,8 @@ function tikva_scripts() {
         ) );
     }*/
 
-
     wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
-        array( 'jquery' ), '20140915', true );
+        array( 'jquery' ), '20160410', true );
 }
 
 
@@ -391,7 +399,7 @@ function tikva_bootstrap_styles()
 
     // Register the style like this for a theme:
     wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '20140626','all');
+        '20160410','all');
         //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
     //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
     //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
@@ -408,7 +416,7 @@ function tikva_bootstrap_styles()
 
 add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
 add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
-
+add_action( 'wp_enqueue_scripts', 'tikva_enqueue_font_awesome' );
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.

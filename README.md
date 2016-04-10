@@ -1,11 +1,16 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.2
+Version 0.2.1
 
 
 Version history:
 ================
+
+Version 0.2.1
+- added Font Awesome 
+- changed icons on pages from Glyphicons to Font Awesome
+
 
 Version 0.2
 - Bootstrap Version bumped to 3.3.6

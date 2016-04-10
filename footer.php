@@ -9,6 +9,47 @@
 		</div><!-- #main -->
 </div><!-- container -->
 
+<div class="row">
+<div class="container">
+    <div class="col-md-12">
+
+        <div  class="socialcircle">
+        <a  href=""><i class="fa fa-twitter fa-2x fa-inverse "></i></a>
+        </div>
+ <div s class="socialcircle">
+        <a  href=""><i class="fa fa-facebook fa-2x fa-inverse "></i></a>
+        </div>
+        <div  class="socialcircle">
+        <a  href=""><i class="fa fa-github fa-2x fa-inverse "></i></a>
+        </div>
+        <div  class="socialcircle">
+        <a  href=""><i class="fa fa-google-plus fa-2x fa-inverse "></i></a>
+        </div>
+    <div  class="socialcircle">
+        <a  href=""><i class="fa fa-instagram fa-2x fa-inverse "></i></a>
+        </div>
+     <div  class="socialcircle">
+        <a  href=""><i class="fa fa-linkedin fa-2x fa-inverse "></i></a>
+        </div>   
+    <div  class="socialcircle">
+        <a  href=""><i class="fa fa-skype fa-2x fa-inverse "></i></a>
+        </div>
+      <div  class="socialcircle">
+        <a  href=""><i class="fa fa-slideshare fa-2x fa-inverse "></i></a>
+        </div>  
+     <div  class="socialcircle">
+        <a  href=""><i class="fa fa-xing fa-2x fa-inverse "></i></a>
+        </div>
+        <div class="socialcircle">
+        <a  href=""><i class="fa fa-youtube fa-2x fa-inverse "></i></a>
+        </div>
+         
+        <div class="socialcircle">
+        <a  href=""><i class="fa fa-thumbs-up fa-2x fa-inverse "></i></a>
+        </div>
+    </div>
+</div>
+</div>
 <?php
 $footerStyles = tikva_get_footer_styles();
 ?>

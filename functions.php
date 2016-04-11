@@ -1,8 +1,24 @@
 <?php
 
-require_once dirname( __FILE__ ) . '/inc/3rd/class-tgm-plugin-activation.php';
+/**
+ * Activates Theme Mode
+ */
+add_filter( 'ot_theme_mode', '__return_true' );
 
-add_action( 'tgmpa_register', 'tikva_register_required_plugins' );
+/**
+ * Loads OptionTree
+ */
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
+
+/**
+ * Loads Theme Options
+ */
+require( trailingslashit( get_template_directory() ) . 'admin/theme-options.php' );
+
+
+//require_once dirname( __FILE__ ) . '/inc/3rd/class-tgm-plugin-activation.php';
+
+//add_action( 'tgmpa_register', 'tikva_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -16,6 +32,7 @@ add_action( 'tgmpa_register', 'tikva_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
+
 function tikva_register_required_plugins() {
 
     /**
@@ -83,7 +100,7 @@ function tikva_register_required_plugins() {
 
 load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
-require_once( get_template_directory() . '/admin/admin-config.php' );
+//require_once( get_template_directory() . '/admin/admin-config.php' );
 
 
 // Custom template tags for this theme.
@@ -209,27 +226,23 @@ endif;
 if ( ! function_exists( 'tikva_get_body_styles' ) ) :
 
     function tikva_get_body_styles() {
-        global $tikva_theme;
-
-        if (isset($tikva_theme['color-bg-sidebar']) && $tikva_theme['color-bg-sidebar'] && stripos($tikva_theme['color-bg-sidebar'], 'transparent') !== false ) {
+    
+        $colorBgSidebar = ot_get_option('color_bg_sidebar');
+        if (!$colorBgSidebar) {
             $sidebarStyleColorBg = '';
         }
-        elseif (isset($tikva_theme['color-bg-sidebar']) && $tikva_theme['color-bg-sidebar'] ) {
-            $sidebarStyleColorBg = ' background-color: ' . $tikva_theme['color-bg-sidebar'] .';';
-        }
         else {
-            $sidebarStyleColorBg = '';
+            $sidebarStyleColorBg = ' background-color: ' . $colorBgSidebar .';';
         }
-
-        if (isset($tikva_theme['color-fg-sidebar']) && $tikva_theme['color-fg-sidebar'] && stripos($tikva_theme['color-fg-sidebar'], 'transparent') !== false ) {
+       
+        $colorFgSidebar = ot_get_option('color_fg_sidebar');
+        if (!$colorFgSidebar) {
             $sidebarStyleColorFg = '';
         }
-        elseif (isset($tikva_theme['color-fg-sidebar']) && $tikva_theme['color-fg-sidebar'] ) {
-            $sidebarStyleColorFg = ' color: ' . $tikva_theme['color-fg-sidebar'] .';';
-        }
         else {
-            $sidebarStyleColorFg = '';
+            $sidebarStyleColorFg = ' color: ' . $colorFgSidebar .';';
         }
+        
         return array(
             'sidebarStyleColorBg' => $sidebarStyleColorBg,
             'sidebarStyleColorFg' => $sidebarStyleColorFg
@@ -388,10 +401,11 @@ function tikva_scripts() {
 
 function tikva_bootstrap_styles()
 {
-    global $tikva_theme;
-    if (isset($tikva_theme['stylesheet']) && $tikva_theme['stylesheet'])
+    $stylesheetData = ot_get_option('stylesheet');
+    
+    if ($stylesheetData)
     {
-        $stylesheet = $tikva_theme['stylesheet'];
+        $stylesheet = $stylesheetData;
     }
     else {
         $stylesheet = 'slate_accessibility_ready.min.css';
@@ -399,7 +413,7 @@ function tikva_bootstrap_styles()
 
     // Register the style like this for a theme:
     wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '20160410','all');
+        '20160411','all');
         //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
     //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
     //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
@@ -507,11 +521,13 @@ add_theme_support( 'featured-content', array(
 if ( ! function_exists( 'tikva_get_layout' ) ) :
 
     function tikva_get_layout() {
-        global $tikva_theme;
-        if (!isset($tikva_theme['layout'])) {
-            $tikva_theme['layout'] = 2; // default: content left, sidebar right
+    
+        $layoutData = ot_get_option('layout');
+    
+        if (!isset($layoutData) || !$layoutData) {
+            $layoutData = 2; // default: content left, sidebar right
         }
-        switch ($tikva_theme['layout']) {
+        switch ($layoutData) {
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
@@ -541,26 +557,29 @@ endif;
 
 if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
 
+    
     function tikva_get_navbar_layout() {
-        global $tikva_theme;
-        if (isset($tikva_theme['navbar-fixed']) && $tikva_theme['navbar-fixed'] == 'fixed-top') {
+    
+         $navbarData = ot_get_option('navbar_fixed');
+         if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
-        }
-        else {
+         }
+         else {
             $navbarFixed = 'default';
-        }
-        return $navbarFixed;
+         }
+         return $navbarFixed;
     }
 endif;
 
 if ( ! function_exists( 'tikva_get_header_styles' ) ) :
 
     function tikva_get_header_styles($navbarFixed) {
-        global $tikva_theme;
-
+         
+        $navbarData = ot_get_option('navbar_style_inverse');
+    
         $navbarStyleClass = '';
 
-        if (isset($tikva_theme['navbar-style-inverse']) && $tikva_theme['navbar-style-inverse'] == 'inverse') {
+        if ($navbarData == 'inverse') {
             $navbarStyleClass .= ' navbar-inverse';
         }
         else {
@@ -573,18 +592,20 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
         else {
             $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
         }
-        if (isset($tikva_theme['color-bg-header']) && $tikva_theme['color-bg-header']) {
-            $headerStyleColorBg = $tikva_theme['color-bg-header'];
+        
+        $colorBgHeaderData = ot_get_option('color_bg_header');
+        if ($colorBgHeaderData) {
+            $headerStyleColorBg = $colorBgHeaderData;
         }
         else {
-            $headerStyleColorBg = '#000000';
+            $headerStyleColorBg = '';
         }
         // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
-        if (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] && stripos($tikva_theme['color-fg-header'], 'transparent') !== false ) {
-            $headerStyleColorFg = '';
-        }
-        elseif (isset($tikva_theme['color-fg-header']) && $tikva_theme['color-fg-header'] ) {
-            $headerStyleColorFg = ' color: ' . $tikva_theme['color-fg-header'] .';';
+        
+        $colorFgHeaderData = ot_get_option('color_fg_header');
+        
+        if ($colorFgHeaderData) {
+            $headerStyleColorFg = ' color: ' . $colorFgHeaderData .';';
         }
         else {
             $headerStyleColorFg = '';
@@ -601,6 +622,8 @@ endif;
 if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
 
     function tikva_get_footer_styles() {
+    
+    
         global $tikva_theme;
 
         if (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer'] && stripos($tikva_theme['color-bg-footer'], 'transparent') !== false ) {

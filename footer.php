@@ -11,8 +11,8 @@
 
 <div class="row">
 <div class="container">
-    <div class="col-md-12">
-
+    <div class="col-md-12"> 
+        <div style="text-align: center;">
         <div  class="socialcircle">
         <a  href=""><i class="fa fa-twitter fa-2x fa-inverse "></i></a>
         </div>
@@ -31,12 +31,13 @@
      <div  class="socialcircle">
         <a  href=""><i class="fa fa-linkedin fa-2x fa-inverse "></i></a>
         </div>   
-    <div  class="socialcircle">
-        <a  href=""><i class="fa fa-skype fa-2x fa-inverse "></i></a>
-        </div>
+    
       <div  class="socialcircle">
         <a  href=""><i class="fa fa-slideshare fa-2x fa-inverse "></i></a>
         </div>  
+       <div  class="socialcircle">
+        <a  href=""><i class="fa fa-vine fa-2x fa-inverse "></i></a>
+        </div>      
      <div  class="socialcircle">
         <a  href=""><i class="fa fa-xing fa-2x fa-inverse "></i></a>
         </div>
@@ -44,8 +45,7 @@
         <a  href=""><i class="fa fa-youtube fa-2x fa-inverse "></i></a>
         </div>
          
-        <div class="socialcircle">
-        <a  href=""><i class="fa fa-thumbs-up fa-2x fa-inverse "></i></a>
+       
         </div>
     </div>
 </div>

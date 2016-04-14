@@ -11,7 +11,7 @@
 
 <div class="row">
 <div class="container">
-    <div class="col-md-12"> 
+    <div class="col-md-12 social-media-buttons"> 
         <div style="text-align: center;">
         <div  class="socialcircle">
         <a  href=""><i class="fa fa-twitter fa-2x fa-inverse "></i></a>

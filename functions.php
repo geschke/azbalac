@@ -561,6 +561,7 @@ if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
     function tikva_get_navbar_layout() {
     
          $navbarData = ot_get_option('navbar_fixed');
+        
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
          }
@@ -622,25 +623,19 @@ endif;
 if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
 
     function tikva_get_footer_styles() {
+        $colorBgFooterData = ot_get_option('color_bg_footer');
     
-    
-        global $tikva_theme;
-
-        if (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer'] && stripos($tikva_theme['color-bg-footer'], 'transparent') !== false ) {
-            $footerStyleColorBg = '';
-        }
-        elseif (isset($tikva_theme['color-bg-footer']) && $tikva_theme['color-bg-footer'] ) {
-            $footerStyleColorBg = ' background-color: ' . $tikva_theme['color-bg-footer'] .';';
+        if ($colorBgFooterData) {
+            $footerStyleColorBg = ' background-color: ' . $colorBgFooterData .';';
         }
         else {
             $footerStyleColorBg = '';
         }
 
-        if (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] && stripos($tikva_theme['color-fg-footer'], 'transparent') !== false ) {
-            $footerStyleColorFg = '';
-        }
-        elseif (isset($tikva_theme['color-fg-footer']) && $tikva_theme['color-fg-footer'] ) {
-            $footerStyleColorFg = ' color: ' . $tikva_theme['color-fg-footer'] .';';
+        $colorFgFooterData = ot_get_option('color_fg_footer');
+
+        if ($colorFgFooterData) {
+            $footerStyleColorFg = ' color: ' . $colorFgFooterData .';';
         }
         else {
             $footerStyleColorFg = '';
@@ -661,19 +656,18 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
         global $tikva_theme;
         $imageData = array();
 
+     
+        
         if (get_header_image()) {
             $largeImage = get_custom_header();
+            var_dump($largeImage);
             $imageData[0] = array('url' => $largeImage->url,
                 'height' => $largeImage->height,
                 'width' => $largeImage->width,
                 'thumbnail' => $largeImage->thumbnail_url,
                 'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
         }
-        elseif (!isset($tikva_theme['header-image-example-tikva']) ||
-            (isset($tikva_theme['header-image-example-tikva']) &&
-                $tikva_theme['header-image-example-tikva'] == '1'
-            )
-        ) {
+        elseif (ot_get_option('header_image_example_tikva')) {
             // fallback to example image if not overwritten or switched off
             $imageData[0] = array('url' => get_template_directory_uri() . '/images/tikva_default_header_image.jpg',
                 'height' => 213,
@@ -685,13 +679,15 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
             $imageData[0] = '';
         }
         if (isset($imageData[0]) && $imageData[0] !== '') {
-            if (isset($tikva_theme['header-image-large-dontscale']) && $tikva_theme['header-image-large-dontscale']) {
-                $imageData[0]['dontscale'] = $tikva_theme['header-image-large-dontscale'];
+            
+            if (ot_get_option('header_image_large_dontscale')) {
+                $imageData[0]['dontscale'] = ot_get_option('header_image_large_dontscale');
             } else {
                 $imageData[0]['dontscale'] = 0;
             }
         }
-
+        $headerImageMediumData = ot_get_option('header_image_medium');
+        var_dump($headerImageMediumData);// not good...
         if (isset($tikva_theme['header-image-medium']) && $tikva_theme['header-image-medium'] &&
             isset($tikva_theme['header-image-medium']['url']) && $tikva_theme['header-image-medium']['url']) {
             $imageData[1] = $tikva_theme['header-image-medium'];

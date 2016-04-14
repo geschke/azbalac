@@ -29,8 +29,9 @@ $navbarFixed = tikva_get_navbar_layout();
             ?>
             <style type="text/css">
                 body {
-                    padding-top: 70px;
+                    padding-top: 70px !important;
                 }
+                body.admin-bar .navbar-fixed-top { top: 28px !important; }
             </style>
         <?php
         }

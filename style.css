@@ -415,3 +415,8 @@ table > thead:first-child > tr:first-child > td {
     overflow: hidden;
     max-height:0px;
 }
+
+.social-media-buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

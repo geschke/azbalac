@@ -16,87 +16,6 @@ require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.ph
 require( trailingslashit( get_template_directory() ) . 'admin/theme-options.php' );
 
 
-//require_once dirname( __FILE__ ) . '/inc/3rd/class-tgm-plugin-activation.php';
-
-//add_action( 'tgmpa_register', 'tikva_register_required_plugins' );
-
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register two plugins - one included with the TGMPA library
- * and one from the .org repo.
- *
- * The variable passed to tgmpa_register_plugins() should be an array of plugin
- * arrays.
- *
- * This function is hooked into tgmpa_init, which is fired within the
- * TGM_Plugin_Activation class constructor.
- */
-
-function tikva_register_required_plugins() {
-
-    /**
-     * Array of plugin arrays. Required keys are name and slug.
-     * If the source is NOT from the .org repo, then source is also required.
-     */
-    $plugins = array(
-
-        // This is an example of how to include a plugin pre-packaged with a theme.
-        array(
-            'name'               => 'ReduxFramework', // The plugin name.
-            'slug'               => 'redux-framework', // The plugin slug (typically the folder name).
-            //'source'             => get_stylesheet_directory() . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
-            'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-            'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-        )
-
-
-    );
-
-    /**
-     * Array of configuration settings. Amend each line as needed.
-     * If you want the default strings to be available under your own theme domain,
-     * leave the strings uncommented.
-     * Some of the strings are added into a sprintf, so see the comments at the
-     * end of each line for what each argument will be.
-     */
-    $config = array(
-        'id'           => 'tgmpa_tikva',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-        'default_path' => '',                      // Default absolute path to pre-packaged plugins.
-        'menu'         => 'tgmpa-install-plugins', // Menu slug.
-        'has_notices'  => true,                    // Show admin notices or not.
-        'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-        'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-        'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-        'message'      => '',                      // Message to output right before the plugins table.
-        'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugins', 'tikva' ),
-            'menu_title'                      => __( 'Install Plugins', 'tikva' ),
-            'installing'                      => __( 'Installing Plugin: %s', 'tikva' ), // %s = plugin name.
-            'oops'                            => __( 'Something went wrong with the plugin API.', 'tikva' ),
-            'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'tikva' ), // %1$s = plugin name(s).
-            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'tikva' ), // %1$s = plugin name(s).
-            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'tikva' ),
-            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'tikva' ),
-            'return'                          => __( 'Return to Required Plugins Installer', 'tikva' ),
-            'plugin_activated'                => __( 'Plugin activated successfully.', 'tikva' ),
-            'complete'                        => __( 'All plugins installed and activated successfully. %s', 'tikva' ), // %s = dashboard link.
-            'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
-        )
-    );
-
-    tgmpa( $plugins, $config );
-
-}
 
 load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
@@ -222,6 +141,152 @@ if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
 }
 
 endif;
+
+/**
+ * Add Social Media Integration options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerSocialButtons($wp_customize)
+{
+    $socialData = array(
+        'instagram' => array('settings_id' => 'social_media_facebook',
+            'label' => __('Facebook', 'tikva'),
+            'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'tikva'),
+        ),
+        'github' => array('settings_id' => 'social_media_github',
+            'label' => __('Github', 'tikva'),
+            'description' => __('Enter the complete Gthub profile page URL (please include http or https!)', 'tikva'),
+        ),
+        'googleplus' => array('settings_id' => 'social_media_google',
+            'label' => __('Google+', 'tikva'),
+            'description' => __('Enter the complete Google+ page URL (please include http or https!)', 'tikva'),
+        ),
+        'instagram' => array('settings_id' => 'social_media_instagram',
+            'label' => __('Instagram', 'tikva'),
+            'description' => __('Enter the complete Instagram page URL (please include http or https!)', 'tikva'),
+        ),
+        'linkedin' => array('settings_id' => 'social_media_linkedin',
+            'label' => __('LinkedIn', 'tikva'),
+            'description' => __('Enter the complete LinkedIn page URL (please include http or https!)', 'tikva'),
+        ),
+        'slideshare' => array('settings_id' => 'social_media_slideshare',
+            'label' => __('Slideshare', 'tikva'),
+            'description' => __('Enter the complete Slideshare page URL (please include http or https!)', 'tikva'),
+        ),
+        'twitter' => array('settings_id' => 'social_media_twitter',
+            'label' => __('Twitter', 'tikva'),
+            'description' => __('Enter the Twitter profile page URL (please include http!)', 'tikva'),
+        ),
+        'vine' => array('settings_id' => 'social_media_vine',
+            'label' => __('Vine', 'tikva'),
+            'description' => __('Enter the complete Vine page URL (please include http or https!)', 'tikva'),
+        ),
+        'xing' => array('settings_id' => 'social_media_xing',
+            'label' => __('Xing', 'tikva'),
+            'description' => __('Enter the complete Xing profile page URL (please include http or https!)', 'tikva')
+        ),
+        'youtube' => array('settings_id' => 'social_media_youtube',
+            'label' => __('YouTube', 'tikva'),
+            'description' => __('Enter the complete YouTube channel page URL (please include http or https!)', 'tikva')
+        )
+    );
+    foreach ($socialData as $key => $value) {
+        $wp_customize->add_setting($value['settings_id'], array(
+            'default' => '',
+           'sanitize_callback' => 'esc_url'
+            
+            )
+        );
+
+        $wp_customize->add_control(
+                new WP_Customize_Control(
+                $wp_customize, $value['settings_id'], array(
+            'label' => $value['label'],
+            'section' => 'section_social_media_buttons',
+            'type' => 'text',
+            'settings' => $value['settings_id'],
+            'description' => $value['description'])
+        ));
+    }
+
+    $wp_customize->add_panel('panel_social_media_integration', array(
+        'priority' => 1000,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Social Media Integration', 'tikva'),
+        'description' => __('Configuration of Social Media Buttons', 'tikva'),
+    ));
+
+    $wp_customize->add_section('section_social_media_buttons', array(
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Social Media Buttons', 'tikva'),
+        'description' => __('Configure URLs of your Social Media Buttons', 'tikva'),
+        'panel' => 'panel_social_media_integration',
+    ));
+
+    $wp_customize->add_section('section_social_media_position', array(
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Social Media Button Position', 'tikva'),
+        'description' => __('Set position of Social Media Buttons', 'mytheme'),
+        'panel' => 'panel_social_media_integration',
+    ));
+    
+   $wp_customize->add_setting('social_media_position', array(
+    'default'        => '1',
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+));
+ 
+$wp_customize->add_control('control_social_media_position', array(
+    'label'      => __('Button Position', 'narga'),
+    'section'    => 'section_social_media_position',
+    'settings'   => 'social_media_position',
+    'type'       => 'radio',
+    'choices'    => array(
+        '1' => __( 'Don\'t show', 'tikva' ),
+        '2' => __( 'Between Content and Footer', 'tikva' ),
+        '3' => __( 'Below Footer', 'tikva' ),
+    ),
+));
+}
+
+if ( ! function_exists( 'tikva_customize_register' ) ) :
+
+function tikva_customize_register( $wp_customize ) {
+   /* $wp_customize->add_setting(
+        'design_color', array(
+        'default' => '#27ae60'
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'design_color', array(
+            'label' => __('Main Color of the Design', 'tikva'),
+            'section' => 'header_settings',
+            'settings' => 'design_color')
+        ));
+     */
+        addCustomizerSocialButtons($wp_customize);
+        
+   
+      
+      
+     //social_media_xing
+    
+     
+     
+}
+
+endif;
+
+add_action( 'customize_register', 'tikva_customize_register' );
+
+
+
 
 if ( ! function_exists( 'tikva_get_body_styles' ) ) :
 
@@ -660,7 +725,7 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
         
         if (get_header_image()) {
             $largeImage = get_custom_header();
-            var_dump($largeImage);
+            //var_dump($largeImage);
             $imageData[0] = array('url' => $largeImage->url,
                 'height' => $largeImage->height,
                 'width' => $largeImage->width,
@@ -687,7 +752,7 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
             }
         }
         $headerImageMediumData = ot_get_option('header_image_medium');
-        var_dump($headerImageMediumData);// not good...
+        //var_dump($headerImageMediumData);// not good...
         if (isset($tikva_theme['header-image-medium']) && $tikva_theme['header-image-medium'] &&
             isset($tikva_theme['header-image-medium']['url']) && $tikva_theme['header-image-medium']['url']) {
             $imageData[1] = $tikva_theme['header-image-medium'];

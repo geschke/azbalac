@@ -194,9 +194,8 @@ function addCustomizerSocialButtons($wp_customize)
     foreach ($socialData as $key => $value) {
         $wp_customize->add_setting($value['settings_id'], array(
             'default' => '',
-           'sanitize_callback' => 'esc_url'
-            
-            )
+            'sanitize_callback' => 'esc_url'
+                )
         );
 
         $wp_customize->add_control(
@@ -204,7 +203,7 @@ function addCustomizerSocialButtons($wp_customize)
                 $wp_customize, $value['settings_id'], array(
             'label' => $value['label'],
             'section' => 'section_social_media_buttons',
-            'type' => 'text',
+            'type' => 'url',
             'settings' => $value['settings_id'],
             'description' => $value['description'])
         ));
@@ -235,24 +234,320 @@ function addCustomizerSocialButtons($wp_customize)
         'description' => __('Set position of Social Media Buttons', 'mytheme'),
         'panel' => 'panel_social_media_integration',
     ));
+
+    $wp_customize->add_setting('social_media_position', array(
+        'default' => '1',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+
+    $wp_customize->add_control('control_social_media_position', array(
+        'label' => __('Button Position', 'narga'),
+        'section' => 'section_social_media_position',
+        'settings' => 'social_media_position',
+        'type' => 'radio',
+        'choices' => array(
+            '1' => __('Don\'t show', 'tikva'),
+            '2' => __('Between Content and Footer', 'tikva'),
+            '3' => __('Below Footer', 'tikva'),
+        ),
+    ));
+}
+
+
+/**
+ * Add Customizable color options
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerColors($wp_customize)
+{
+    $wp_customize->add_setting(
+        'color_bg_header', array(
+        'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'color_bg_header', array(
+            'label' => __('Header Background Color', 'tikva'),
+            'section' => 'colors',
+            'settings' => 'color_bg_header',
+            'description'        => __( 'Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva' ),)
+        ));
+     $wp_customize->add_setting(
+        'color_fg_footer', array(
+        'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'color_fg_footer', array(
+            'label' => __('Footer Font Color', 'tikva'),
+            'section' => 'colors',
+            'settings' => 'color_fg_footer',
+            'description'        => __( 'Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva' ),)
+        ));
+     
+      $wp_customize->add_setting(
+        'color_bg_footer', array(
+        'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'color_bg_footer', array(
+            'label' => __( 'Footer Background Color', 'tikva' ),
+            'section' => 'colors',
+            'settings' => 'color_bg_footer',
+            'description'   => __( 'Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva' ),)
+        ));
+     
+     
+       $wp_customize->add_setting(
+        'color_fg_sidebar', array(
+        'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'color_fg_sidebar', array(
+            'label' =>  __( 'Sidebar Font Color', 'tikva' ),
+            'section' => 'colors',
+            'settings' => 'color_fg_sidebar',
+            'description'   => __( 'Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva' ),)
+        ));
+     
+       $wp_customize->add_setting(
+        'color_bg_sidebar', array(
+        'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize, 'color_bg_sidebar', array(
+            'label' => __( 'Sidebar Background Color', 'tikva' ),
+            'section' => 'colors',
+            'settings' => 'color_bg_sidebar',
+            'description'   => __( 'Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva' ),)
+        ));
+     
+}
+
+
+
+/**
+ * Add Styling options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerStylingOptions($wp_customize)
+{
+    $wp_customize->add_section('section_styling_options', array(
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Styling Options', 'tikva'),
+    ));
+
+    $wp_customize->add_setting('tikva_stylesheet', array(
+        'default' => 'slate_accessibility_ready.min.css',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+    $designStylesheetPath = get_template_directory() . '/css/design/';
+    $designStylesheets = array();
+
+    if (is_dir($designStylesheetPath)) {
+        if ($alt_stylesheet_dir = opendir($designStylesheetPath)) {
+            while (($alt_stylesheet_file = readdir($alt_stylesheet_dir)) !== false) {
+                if (stristr($alt_stylesheet_file, ".css")) {
+                    $designStylesheets[$alt_stylesheet_file] = $alt_stylesheet_file;
+                }
+            }
+        }
+    }
+    asort($designStylesheets);
+
+    $wp_customize->add_control('tikva_stylesheet', array(
+        'settings' => 'tikva_stylesheet',
+        'label' => __('Theme Stylesheet', 'tikva'),
+        'section' => 'section_styling_options',
+        'description' => __('Select your themes alternative color scheme.', 'tikva'),
+        'type' => 'select',
+        'choices' => $designStylesheets
+    ));
     
-   $wp_customize->add_setting('social_media_position', array(
-    'default'        => '1',
-    'capability'     => 'edit_theme_options',
+     $wp_customize->add_setting('navbar_fixed', array(
+        'default' => 'default',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+
+    $wp_customize->add_control('navbar_fixed', array(
+        'label' => __( 'Navbar fixed options', 'tikva' ),
+        'section' => 'section_styling_options',
+        'settings' => 'navbar_fixed',
+        'type' => 'radio',
+        'choices' => array(
+            'default' =>__( 'Default', 'tikva' ),
+            'fixed-top' => __( 'Fixed to top', 'tikva' )
+          
+        ),
+    ));
+    
+     $wp_customize->add_setting('navbar_style_inverse', array(
+        'default' => 'default',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+
+    $wp_customize->add_control('navbar_style_inverse', array(
+        'label' => __( 'Navbar style', 'tikva' ),
+        'section' => 'section_styling_options',
+        'settings' => 'navbar_style_inverse',
+        'type' => 'radio',
+        'choices' => array(
+            'default' =>__( 'Default', 'tikva' ),
+            'inverse' =>__( 'Inverse', 'tikva' ),
+          
+        ),
+    ));
+    
+}
+
+/**
+ * Add Styling options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerHeaderImageOptions($wp_customize)
+{
+    $wp_customize->add_section('section_header_image_options', array(
+        'priority' => 100,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Header Image Options', 'tikva'),
+    ));
+    
+    
+$wp_customize->add_setting('header_image_example_tikva', array(
+    'capability' => 'edit_theme_options',
+    'default' => 1,
+    'type'       => 'option',
+));
+ 
+$wp_customize->add_control('header_image_example_tikva', array(
+    'settings' => 'header_image_example_tikva',
+    'label'    => __( 'Use the example image from the theme if no default header image is set.', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'type'     => 'checkbox',
+    'description' =>__( 'You can switch off this option, so no image will be displayed.', 'tikva' ),
+));
+    
+
+
+$wp_customize->add_setting('header_image_large_dontscale', array(
+    'capability' => 'edit_theme_options',
+     'default' => 0,
+    'type'       => 'option',
+));
+ 
+$wp_customize->add_control('header_image_large_dontscale', array(
+    'settings' => 'header_image_large_dontscale',
+    'label'    => __( 'Do not resize automatically the default header image', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'type'     => 'checkbox',
+    'description' => __( 'If checked, the default header image will <b>not</b> be resized to fit the width of the screen.', 'tikva' ),
+));
+
+    
+     $wp_customize->add_setting('header_image_medium', array(
+    'default'           => '',
+    'capability'        => 'edit_theme_options',
     'type'           => 'option',
 ));
  
-$wp_customize->add_control('control_social_media_position', array(
-    'label'      => __('Button Position', 'narga'),
-    'section'    => 'section_social_media_position',
-    'settings'   => 'social_media_position',
-    'type'       => 'radio',
-    'choices'    => array(
-        '1' => __( 'Don\'t show', 'tikva' ),
-        '2' => __( 'Between Content and Footer', 'tikva' ),
-        '3' => __( 'Below Footer', 'tikva' ),
-    ),
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_medium', array(
+    'label'    =>__( 'Header Image (medium screen)', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'settings' => 'header_image_medium',
+    'description' =>  __( 'If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar.', 'tikva' )
+)));
+
+$wp_customize->add_setting('header_image_medium_dontscale', array(
+    'capability' => 'edit_theme_options',
+     'default' => 0,
+    'type'       => 'option',
 ));
+ 
+$wp_customize->add_control('header_image_medium_dontscale', array(
+    'settings' => 'header_image_medium_dontscale',
+    'label'    => __( 'Do not resize automatically the medium screen header image', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'type'     => 'checkbox',
+    'description' =>__( 'If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva' ),
+));
+    
+    
+    $wp_customize->add_setting('header_image_small', array(
+    'default'           => '',
+    'capability'        => 'edit_theme_options',
+    'type'           => 'option',
+));
+ 
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_small', array(
+    'label'    => __( 'Header Image (small screen)', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'settings' => 'header_image_small',
+    'description' =>  __( 'If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva' )
+)));
+
+$wp_customize->add_setting('header_image_small_dontscale', array(
+    'capability' => 'edit_theme_options',
+     'default' => 0,
+    'type'       => 'option',
+));
+ 
+$wp_customize->add_control('header_image_small_dontscale', array(
+    'settings' => 'header_image_small_dontscale',
+    'label'    =>__( 'Do not resize automatically the small screen header image', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'type'     => 'checkbox',
+    'description' => __( 'If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva' ),
+));
+
+
+
+    $wp_customize->add_setting('header_image_xsmall', array(
+    'default'           => '',
+    'capability'        => 'edit_theme_options',
+    'type'           => 'option',
+));
+ 
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_xsmall', array(
+    'label'    => __( 'Header Image (extra small screen)', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'settings' => 'header_image_xsmall',
+    'description' => __( 'If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva' ),
+)));
+
+$wp_customize->add_setting('header_image_xsmall_dontscale', array(
+    'capability' => 'edit_theme_options',
+     'default' => 0,
+    'type'       => 'option',
+));
+ 
+$wp_customize->add_control('header_image_xsmall_dontscale', array(
+    'settings' => 'header_image_xsmall_dontscale',
+    'label'    => __( 'Do not resize automatically the extra small header image', 'tikva' ),
+    'section'  => 'section_header_image_options',
+    'type'     => 'checkbox',
+    'description' => __( 'If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'tikva' ),
+));
+
+
+    
 }
 
 if ( ! function_exists( 'tikva_customize_register' ) ) :
@@ -271,7 +566,9 @@ function tikva_customize_register( $wp_customize ) {
         ));
      */
         addCustomizerSocialButtons($wp_customize);
-        
+        addCustomizerColors($wp_customize);
+        addCustomizerStylingOptions($wp_customize);
+        addCustomizerHeaderImageOptions($wp_customize);
    
       
       

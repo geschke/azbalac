@@ -15,8 +15,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php
 
-global $tikva_theme; //ugly, but working... use better solution in next versions...
-
 echo tikva_get_header_image_data();
 
 $layoutStyle = tikva_get_layout();

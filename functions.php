@@ -1,20 +1,5 @@
 <?php
 
-/**
- * Activates Theme Mode
- */
-add_filter( 'ot_theme_mode', '__return_true' );
-
-/**
- * Loads OptionTree
- */
-require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
-
-/**
- * Loads Theme Options
- */
-require( trailingslashit( get_template_directory() ) . 'admin/theme-options.php' );
-
 
 
 load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
@@ -28,6 +13,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
+require_once( get_template_directory() . '/inc/CustomLayoutPicker.php' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
     	function theme_slug_render_title() {
@@ -334,30 +320,16 @@ function addCustomizerColors($wp_customize)
      
 }
 
-
-
 /**
- * Add Styling options to Customizer
+ * Get array of available stylesheets stored in the Bootstrap stylesheer directory. 
+ * The list can be used directly in a select field. 
  * 
- * @param type $wp_customize
+ * @return array $designStylesheets
  */
-function addCustomizerStylingOptions($wp_customize)
+function getAvailableStylesheets()
 {
-    $wp_customize->add_section('section_styling_options', array(
-        'priority' => 10,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Styling Options', 'tikva'),
-    ));
-
-    $wp_customize->add_setting('tikva_stylesheet', array(
-        'default' => 'slate_accessibility_ready.min.css',
-        'capability' => 'edit_theme_options',
-        'type' => 'option',
-    ));
     $designStylesheetPath = get_template_directory() . '/css/design/';
     $designStylesheets = array();
-
     if (is_dir($designStylesheetPath)) {
         if ($alt_stylesheet_dir = opendir($designStylesheetPath)) {
             while (($alt_stylesheet_file = readdir($alt_stylesheet_dir)) !== false) {
@@ -368,14 +340,57 @@ function addCustomizerStylingOptions($wp_customize)
         }
     }
     asort($designStylesheets);
+    return $designStylesheets;
+}
 
+/**
+ * Add Styling options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerStylingOptions($wp_customize)
+{
+    $wp_customize->add_section('section_styling_options', array(
+        'priority' => 25,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Styling Options', 'tikva'),
+    ));
+
+   /* $wp_customize->add_setting('tikva_layout', array(
+        'default' => '2',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+
+    $wp_customize->add_control(new Tikva_Custom_Layout_Picker($wp_customize, 'tikva_layout', array(
+        'label' => __( 'Layout', 'tikva' ),
+        'description' => __( 'Set layout of your site.', 'tikva' ),
+        'section' => 'section_styling_options',
+        'settings' => 'tikva_layout',
+        //'type' => 'radio',
+        //'choices' => array(
+        //    '1' => __( '1 Column', 'tikva' ),
+        //    '2' => __( '2 Columns, Content left, Sidebar right', 'tikva' ),
+        //    '3' => __( '2 Columns, Content right, Sidebar left', 'tikva' )
+          
+        //),
+    )));
+    */
+    
+    $wp_customize->add_setting('tikva_stylesheet', array(
+        'default' => 'slate_accessibility_ready.min.css',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+    ));
+    
     $wp_customize->add_control('tikva_stylesheet', array(
         'settings' => 'tikva_stylesheet',
         'label' => __('Theme Stylesheet', 'tikva'),
         'section' => 'section_styling_options',
         'description' => __('Select your themes alternative color scheme.', 'tikva'),
         'type' => 'select',
-        'choices' => $designStylesheets
+        'choices' => getAvailableStylesheets()
     ));
     
      $wp_customize->add_setting('navbar_fixed', array(
@@ -424,7 +439,7 @@ function addCustomizerStylingOptions($wp_customize)
 function addCustomizerHeaderImageOptions($wp_customize)
 {
     $wp_customize->add_section('section_header_image_options', array(
-        'priority' => 100,
+        'priority' => 65,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __('Header Image Options', 'tikva'),
@@ -468,10 +483,12 @@ $wp_customize->add_control('header_image_large_dontscale', array(
     'type'           => 'option',
 ));
  
-$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_medium', array(
+$wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_medium', array(
     'label'    =>__( 'Header Image (medium screen)', 'tikva' ),
     'section'  => 'section_header_image_options',
     'settings' => 'header_image_medium',
+    
+     'mime_type' => 'image',
     'description' =>  __( 'If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar.', 'tikva' )
 )));
 
@@ -496,10 +513,11 @@ $wp_customize->add_control('header_image_medium_dontscale', array(
     'type'           => 'option',
 ));
  
-$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_small', array(
+$wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_small', array(
     'label'    => __( 'Header Image (small screen)', 'tikva' ),
     'section'  => 'section_header_image_options',
     'settings' => 'header_image_small',
+     'mime_type' => 'image',
     'description' =>  __( 'If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva' )
 )));
 
@@ -525,10 +543,11 @@ $wp_customize->add_control('header_image_small_dontscale', array(
     'type'           => 'option',
 ));
  
-$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'header_image_xsmall', array(
+$wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_xsmall', array(
     'label'    => __( 'Header Image (extra small screen)', 'tikva' ),
     'section'  => 'section_header_image_options',
     'settings' => 'header_image_xsmall',
+     'mime_type' => 'image',
     'description' => __( 'If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva' ),
 )));
 
@@ -589,7 +608,7 @@ if ( ! function_exists( 'tikva_get_body_styles' ) ) :
 
     function tikva_get_body_styles() {
     
-        $colorBgSidebar = ot_get_option('color_bg_sidebar');
+        $colorBgSidebar = get_theme_mod('color_bg_sidebar');
         if (!$colorBgSidebar) {
             $sidebarStyleColorBg = '';
         }
@@ -597,7 +616,7 @@ if ( ! function_exists( 'tikva_get_body_styles' ) ) :
             $sidebarStyleColorBg = ' background-color: ' . $colorBgSidebar .';';
         }
        
-        $colorFgSidebar = ot_get_option('color_fg_sidebar');
+        $colorFgSidebar = get_theme_mod('color_fg_sidebar');
         if (!$colorFgSidebar) {
             $sidebarStyleColorFg = '';
         }
@@ -763,8 +782,8 @@ function tikva_scripts() {
 
 function tikva_bootstrap_styles()
 {
-    $stylesheetData = ot_get_option('stylesheet');
-    
+    $stylesheetData = get_option('tikva_stylesheet');
+   
     if ($stylesheetData)
     {
         $stylesheet = $stylesheetData;
@@ -884,7 +903,7 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
 
     function tikva_get_layout() {
     
-        $layoutData = ot_get_option('layout');
+        $layoutData = get_option('tikva_layout');
     
         if (!isset($layoutData) || !$layoutData) {
             $layoutData = 2; // default: content left, sidebar right
@@ -922,7 +941,7 @@ if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
     
     function tikva_get_navbar_layout() {
     
-         $navbarData = ot_get_option('navbar_fixed');
+         $navbarData = get_option('navbar_fixed');
         
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
@@ -938,7 +957,7 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
 
     function tikva_get_header_styles($navbarFixed) {
          
-        $navbarData = ot_get_option('navbar_style_inverse');
+        $navbarData = get_option('navbar_style_inverse');
     
         $navbarStyleClass = '';
 
@@ -956,7 +975,7 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
             $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
         }
         
-        $colorBgHeaderData = ot_get_option('color_bg_header');
+        $colorBgHeaderData = get_theme_mod('color_bg_header');
         if ($colorBgHeaderData) {
             $headerStyleColorBg = $colorBgHeaderData;
         }
@@ -965,7 +984,7 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
         }
         // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
         
-        $colorFgHeaderData = ot_get_option('color_fg_header');
+        $colorFgHeaderData = get_theme_mod('color_fg_header');
         
         if ($colorFgHeaderData) {
             $headerStyleColorFg = ' color: ' . $colorFgHeaderData .';';
@@ -985,7 +1004,7 @@ endif;
 if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
 
     function tikva_get_footer_styles() {
-        $colorBgFooterData = ot_get_option('color_bg_footer');
+        $colorBgFooterData = get_theme_mod('color_bg_footer');
     
         if ($colorBgFooterData) {
             $footerStyleColorBg = ' background-color: ' . $colorBgFooterData .';';
@@ -994,7 +1013,7 @@ if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
             $footerStyleColorBg = '';
         }
 
-        $colorFgFooterData = ot_get_option('color_fg_footer');
+        $colorFgFooterData = get_theme_mod('color_fg_footer');
 
         if ($colorFgFooterData) {
             $footerStyleColorFg = ' color: ' . $colorFgFooterData .';';
@@ -1015,11 +1034,9 @@ endif;
 if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
 
     function tikva_get_header_image_data() {
-        global $tikva_theme;
+        
         $imageData = array();
 
-     
-        
         if (get_header_image()) {
             $largeImage = get_custom_header();
             //var_dump($largeImage);
@@ -1027,9 +1044,9 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
                 'height' => $largeImage->height,
                 'width' => $largeImage->width,
                 'thumbnail' => $largeImage->thumbnail_url,
-                'id' => $largeImage->attachment_id); //$tikva_theme['header-image-large'];
+                'id' => $largeImage->attachment_id); 
         }
-        elseif (ot_get_option('header_image_example_tikva')) {
+        elseif (get_option('header_image_example_tikva')) {
             // fallback to example image if not overwritten or switched off
             $imageData[0] = array('url' => get_template_directory_uri() . '/images/tikva_default_header_image.jpg',
                 'height' => 213,
@@ -1042,19 +1059,29 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
         }
         if (isset($imageData[0]) && $imageData[0] !== '') {
             
-            if (ot_get_option('header_image_large_dontscale')) {
-                $imageData[0]['dontscale'] = ot_get_option('header_image_large_dontscale');
+            if (get_option('header_image_large_dontscale')) {
+                $imageData[0]['dontscale'] = get_option('header_image_large_dontscale');
             } else {
                 $imageData[0]['dontscale'] = 0;
             }
         }
-        $headerImageMediumData = ot_get_option('header_image_medium');
-        //var_dump($headerImageMediumData);// not good...
-        if (isset($tikva_theme['header-image-medium']) && $tikva_theme['header-image-medium'] &&
-            isset($tikva_theme['header-image-medium']['url']) && $tikva_theme['header-image-medium']['url']) {
-            $imageData[1] = $tikva_theme['header-image-medium'];
-            if (isset($tikva_theme['header-image-medium-dontscale']) && $tikva_theme['header-image-medium-dontscale']) {
-                $imageData[1]['dontscale'] = $tikva_theme['header-image-medium-dontscale'];
+        
+        
+        $headerImageMediumData = wp_get_attachment_image_src(absint(get_option('header_image_medium')), 'original');
+        $headerImageSmallData = wp_get_attachment_image_src(absint(get_option('header_image_small')), 'original');
+        $headerImageXSmallData = wp_get_attachment_image_src(absint(get_option('header_image_xsmall')), 'original');
+        
+        if (isset($headerImageMediumData) && $headerImageMediumData) {
+            
+            $imageData[1]['url'] = $headerImageMediumData[0];
+            $imageData[1]['width'] = $headerImageMediumData[1];
+            $imageData[1]['height'] = $headerImageMediumData[2];
+            $imageData[1]['thumbnail'] = '';
+            $imageData[1]['id'] = 0; // if necessary, set to attachment id. But check before.
+            
+            if (get_option('header_image_medium_dontscale'))
+            {
+                $imageData[1]['dontscale'] = 1;
             } else {
                 $imageData[1]['dontscale'] = 0;
             }
@@ -1062,32 +1089,43 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
             $imageData[1] = '';
         }
 
-        if (isset($tikva_theme['header-image-small']) && $tikva_theme['header-image-small'] &&
-            isset($tikva_theme['header-image-small']['url']) && $tikva_theme['header-image-small']['url']) {
-
-            $imageData[2] = $tikva_theme['header-image-small'];
-            if (isset($tikva_theme['header-image-small-dontscale']) && $tikva_theme['header-image-small-dontscale']) {
-                $imageData[2]['dontscale'] = $tikva_theme['header-image-small-dontscale'];
+        if (isset($headerImageSmallData) && $headerImageSmallData) {
+            
+            $imageData[2]['url'] = $headerImageSmallData[0];
+            $imageData[2]['width'] = $headerImageSmallData[1];
+            $imageData[2]['height'] = $headerImageSmallData[2];
+            $imageData[2]['thumbnail'] = '';
+            $imageData[2]['id'] = 0; // if necessary, set to attachment id. But check before.
+            
+            if (get_option('header_image_small_dontscale'))
+            {
+                $imageData[2]['dontscale'] = 1;
             } else {
                 $imageData[2]['dontscale'] = 0;
             }
-
         } else {
             $imageData[2] = '';
         }
-        if (isset($tikva_theme['header-image-xsmall']) && $tikva_theme['header-image-xsmall'] &&
-            isset($tikva_theme['header-image-xsmall']['url']) && $tikva_theme['header-image-xsmall']['url']) {
 
-            $imageData[3] = $tikva_theme['header-image-xsmall'];
-            if (isset($tikva_theme['header-image-xsmall-dontscale']) && $tikva_theme['header-image-xsmall-dontscale']) {
-                $imageData[3]['dontscale'] = $tikva_theme['header-image-xsmall-dontscale'];
+         if (isset($headerImageXSmallData) && $headerImageXSmallData) {
+            
+            $imageData[3]['url'] = $headerImageXSmallData[0];
+            $imageData[3]['width'] = $headerImageXSmallData[1];
+            $imageData[3]['height'] = $headerImageXSmallData[2];
+            $imageData[3]['thumbnail'] = '';
+            $imageData[3]['id'] = 0; // if necessary, set to attachment id. But check before.
+            
+            if (get_option('header_image_xsmall_dontscale'))
+            {
+                $imageData[3]['dontscale'] = 1;
             } else {
                 $imageData[3]['dontscale'] = 0;
             }
-
         } else {
             $imageData[3] = '';
         }
+       
+       
 
         return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';
     }

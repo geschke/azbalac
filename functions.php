@@ -4,8 +4,6 @@
 
 load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
-//require_once( get_template_directory() . '/admin/admin-config.php' );
-
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
@@ -213,7 +211,7 @@ function addCustomizerSocialButtons($wp_customize)
     ));
 
     $wp_customize->add_section('section_social_media_position', array(
-        'priority' => 10,
+        'priority' => 20,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __('Social Media Button Position', 'tikva'),
@@ -432,8 +430,40 @@ function addCustomizerStylingOptions($wp_customize)
     ));
 }
 
+
 /**
- * Add Styling options to Customizer
+ * Add Homepage options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerHomeOptions($wp_customize)
+{
+    $wp_customize->add_section('section_homepage_options', array(
+        'priority' => 24,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __( 'Home Settings', 'tikva' )
+    ));
+
+    $wp_customize->add_setting('featured_articles_max', array(
+        'default' => '10',
+        'capability' => 'edit_theme_options',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_control('featured_articles_max', array(
+        'label' =>__( 'Maximum number of featured articles on homepage', 'tikva' ),
+        'section' => 'section_homepage_options',
+        'settings' => 'featured_articles_max',
+    
+        ));
+
+
+}
+
+
+/**
+ * Add Header Image options to Customizer
  * 
  * @param type $wp_customize
  */
@@ -570,33 +600,17 @@ $wp_customize->add_control('header_image_xsmall_dontscale', array(
     
 }
 
-if ( ! function_exists( 'tikva_customize_register' ) ) :
+if (!function_exists('tikva_customize_register')) :
 
-function tikva_customize_register( $wp_customize ) {
-   /* $wp_customize->add_setting(
-        'design_color', array(
-        'default' => '#27ae60'
-     ));
-     $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize, 'design_color', array(
-            'label' => __('Main Color of the Design', 'tikva'),
-            'section' => 'header_settings',
-            'settings' => 'design_color')
-        ));
-     */
+    function tikva_customize_register($wp_customize)
+    {
+
         addCustomizerSocialButtons($wp_customize);
         addCustomizerColors($wp_customize);
         addCustomizerStylingOptions($wp_customize);
         addCustomizerHeaderImageOptions($wp_customize);
-   
-      
-      
-     //social_media_xing
-    
-     
-     
-}
+        addCustomizerHomeOptions($wp_customize);
+    }
 
 endif;
 
@@ -795,7 +809,7 @@ function tikva_bootstrap_styles()
 
     // Register the style like this for a theme:
     wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '20160411','all');
+        '20160418','all');
         //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
     //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
     //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );

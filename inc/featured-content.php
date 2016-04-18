@@ -277,14 +277,15 @@ class Featured_Content {
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
 
-         // todo: get from slider... 
-        //if (isset($tikva_theme['featured_articles_max']))
-        //{
-        //  $options['quantity'] = intval($tikva_theme['featured_articles_max']);
-        //}
-        //else {
-            $options['quantity'] = 10;
-        //}
+        
+                $featuredArticlesMax = get_theme_mod('featured_articles_max');
+            if ($featuredArticlesMax !== false)
+            {
+                $options['quantity'] = intval($featuredArticlesMax);
+            }
+            else {
+                $options['quantity'] = 10;
+            }
 
         //self::sanitize_quantity( $options['quantity'] );
 

@@ -12,6 +12,7 @@ require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
 require_once( get_template_directory() . '/inc/CustomRadioImageControl.php' );
+require_once( get_template_directory() . '/inc/CustomSliderControl.php' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
     	function theme_slug_render_title() {
@@ -214,7 +215,7 @@ function addCustomizerSocialButtons($wp_customize)
         'priority' => 20,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Social Media Button Position', 'tikva'),
+        'title' => __('Social Media Buttons Position', 'tikva'),
         'description' => __('Set position of Social Media Buttons', 'mytheme'),
         'panel' => 'panel_social_media_integration',
     ));
@@ -446,17 +447,30 @@ function addCustomizerHomeOptions($wp_customize)
     ));
 
     $wp_customize->add_setting('featured_articles_max', array(
-        'default' => '10',
+        'default' => 10,
         'capability' => 'edit_theme_options',
-        'type' => 'text',
+        
     ));
-
-    $wp_customize->add_control('featured_articles_max', array(
+ 
+    /*$wp_customize->add_control(new WP_Customize_Control($wp_customize, 
+            'featured_articles_max', array(
         'label' =>__( 'Maximum number of featured articles on homepage', 'tikva' ),
         'section' => 'section_homepage_options',
         'settings' => 'featured_articles_max',
+        'type' => 'text',
+        )));*/
     
-        ));
+$wp_customize->add_control(new Tikva_Custom_Slider_Control($wp_customize, 
+            'featured_articles_max', array(
+        'label' =>__( 'Maximum number of featured articles on homepage', 'tikva' ),
+        'section' => 'section_homepage_options',
+        'settings' => 'featured_articles_max',
+        //'type' => 'slider',
+                'choices' => array(
+                    'min' => 1, 
+                    'max' => 100,
+                    'step' => 1)
+        )));
 
 
 }

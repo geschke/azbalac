@@ -121,7 +121,7 @@ if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
 
     function tikva_enqueue_font_awesome() {
 
-        wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
+        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
 
 }
 

@@ -140,8 +140,8 @@ function addCustomizerSocialButtons($wp_customize)
             'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'tikva'),
         ),
         'github' => array('settings_id' => 'social_media_github',
-            'label' => __('Github', 'tikva'),
-            'description' => __('Enter the complete Gthub profile page URL (please include http or https!)', 'tikva'),
+            'label' => __('GitHub', 'tikva'),
+            'description' => __('Enter the complete GitHub profile page URL (please include http or https!)', 'tikva'),
         ),
         'googleplus' => array('settings_id' => 'social_media_google',
             'label' => __('Google+', 'tikva'),
@@ -216,7 +216,7 @@ function addCustomizerSocialButtons($wp_customize)
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
         'title' => __('Social Media Buttons Position', 'tikva'),
-        'description' => __('Set position of Social Media Buttons', 'mytheme'),
+        'description' => __('Set position of Social Media Buttons', 'tikva'),
         'panel' => 'panel_social_media_integration',
     ));
 
@@ -225,9 +225,9 @@ function addCustomizerSocialButtons($wp_customize)
         'capability' => 'edit_theme_options',
         'type' => 'option',
     ));
-
+            
     $wp_customize->add_control('control_social_media_position', array(
-        'label' => __('Button Position', 'narga'),
+        'label' => __('Button Position', 'tikva'),
         'section' => 'section_social_media_position',
         'settings' => 'social_media_position',
         'type' => 'radio',

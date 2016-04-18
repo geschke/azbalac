@@ -127,6 +127,63 @@ if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
 
 endif;
 
+function tikva_sanitize_checkbox( $input ) 
+{
+    if ( $input == 1 ) {
+        return 1;
+    } else {
+        return '';
+    }
+}
+
+function tikva_sanitize_integer( $input ) 
+{
+    $input = absint($input);
+    if( is_numeric( $input ) ) {
+        return intval( $input );
+    }
+    return 5;
+}
+
+function tikva_sanitize_social_media_position($input)
+{
+    $input = absint($input);
+    if ($input < 1 || $input > 3)
+        return 2;    
+    return $input;
+}
+
+function tikva_sanitize_layout($input)
+{
+    $input = absint($input);
+    if ($input < 1 || $input > 3)
+        return 2;   
+    return $input;
+}
+
+function tikva_sanitize_navbar_style_inverse($input)
+{
+    if ($input == 'inverse')
+        return $input;
+    return 'default';
+}
+
+function tikva_sanitize_navbar_fixed($input)
+{
+    if ($input == 'fixed-top') {
+        return $input;
+    }
+    return 'default';
+}
+
+function tikva_sanitize_stylesheet($input)
+{
+    $stylesheets = getAvailableStylesheets();
+    if (!in_array($input, $stylesheets)) {
+        return 'slate_accessibility_ready.min.css';
+    }
+    return $input;
+}
 /**
  * Add Social Media Integration options to Customizer
  * 
@@ -224,6 +281,8 @@ function addCustomizerSocialButtons($wp_customize)
         'default' => '1',
         'capability' => 'edit_theme_options',
         'type' => 'option',
+         'sanitize_callback' => 'tikva_sanitize_social_media_position'
+        
     ));
             
     $wp_customize->add_control('control_social_media_position', array(
@@ -360,6 +419,7 @@ function addCustomizerStylingOptions($wp_customize)
         'default' => '2',
         'capability' => 'edit_theme_options',
         'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_layout'
     ));
 
     $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout', array(
@@ -385,6 +445,7 @@ function addCustomizerStylingOptions($wp_customize)
         'default' => 'slate_accessibility_ready.min.css',
         'capability' => 'edit_theme_options',
         'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_stylesheet'
     ));
 
     $wp_customize->add_control('tikva_stylesheet', array(
@@ -400,6 +461,7 @@ function addCustomizerStylingOptions($wp_customize)
         'default' => 'default',
         'capability' => 'edit_theme_options',
         'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_navbar_fixed'
     ));
 
     $wp_customize->add_control('navbar_fixed', array(
@@ -417,6 +479,7 @@ function addCustomizerStylingOptions($wp_customize)
         'default' => 'default',
         'capability' => 'edit_theme_options',
         'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_navbar_style_inverse'
     ));
 
     $wp_customize->add_control('navbar_style_inverse', array(
@@ -449,6 +512,7 @@ function addCustomizerHomeOptions($wp_customize)
     $wp_customize->add_setting('featured_articles_max', array(
         'default' => 10,
         'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'tikva_sanitize_integer'
         
     ));
  
@@ -495,6 +559,7 @@ $wp_customize->add_setting('header_image_example_tikva', array(
     'capability' => 'edit_theme_options',
     'default' => 1,
     'type'       => 'option',
+    'sanitize_callback' => 'tikva_sanitize_checkbox'
 ));
  
 $wp_customize->add_control('header_image_example_tikva', array(
@@ -511,6 +576,7 @@ $wp_customize->add_setting('header_image_large_dontscale', array(
     'capability' => 'edit_theme_options',
      'default' => 0,
     'type'       => 'option',
+    'sanitize_callback' => 'tikva_sanitize_checkbox'
 ));
  
 $wp_customize->add_control('header_image_large_dontscale', array(
@@ -526,6 +592,7 @@ $wp_customize->add_control('header_image_large_dontscale', array(
     'default'           => '',
     'capability'        => 'edit_theme_options',
     'type'           => 'option',
+          'sanitize_callback' => 'tikva_sanitize_integer'
 ));
  
 $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_medium', array(
@@ -541,6 +608,7 @@ $wp_customize->add_setting('header_image_medium_dontscale', array(
     'capability' => 'edit_theme_options',
      'default' => 0,
     'type'       => 'option',
+    'sanitize_callback' => 'tikva_sanitize_checkbox'
 ));
  
 $wp_customize->add_control('header_image_medium_dontscale', array(
@@ -556,6 +624,7 @@ $wp_customize->add_control('header_image_medium_dontscale', array(
     'default'           => '',
     'capability'        => 'edit_theme_options',
     'type'           => 'option',
+         'sanitize_callback' => 'tikva_sanitize_integer'
 ));
  
 $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_small', array(
@@ -570,6 +639,7 @@ $wp_customize->add_setting('header_image_small_dontscale', array(
     'capability' => 'edit_theme_options',
      'default' => 0,
     'type'       => 'option',
+    'sanitize_callback' => 'tikva_sanitize_checkbox'
 ));
  
 $wp_customize->add_control('header_image_small_dontscale', array(
@@ -586,6 +656,7 @@ $wp_customize->add_control('header_image_small_dontscale', array(
     'default'           => '',
     'capability'        => 'edit_theme_options',
     'type'           => 'option',
+         'sanitize_callback' => 'tikva_sanitize_integer'
 ));
  
 $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'header_image_xsmall', array(
@@ -600,6 +671,7 @@ $wp_customize->add_setting('header_image_xsmall_dontscale', array(
     'capability' => 'edit_theme_options',
      'default' => 0,
     'type'       => 'option',
+    'sanitize_callback' => 'tikva_sanitize_checkbox'
 ));
  
 $wp_customize->add_control('header_image_xsmall_dontscale', array(
@@ -1217,7 +1289,7 @@ function tikva_build_social_button($socialOption, $socialIcon)
         return '';
     }
     
-    $output = sprintf('<div class="socialcircle"><a target="_blank" href="%s"><i class="fa fa-%s fa-2x fa-inverse"></i></a></div>',$url,$socialIcon);
+    $output = sprintf('<div class="socialcircle"><a target="_blank" href="%s"><i class="fa fa-%s fa-2x fa-inverse"></i></a></div>',esc_url($url),$socialIcon);
     return $output;
 }
 

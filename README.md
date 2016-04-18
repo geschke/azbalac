@@ -1,12 +1,15 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.3
+Version 0.3.1
 
 
 Version history:
 ================
 
+
+Version 0.3.1
+- fixed: wrong Customizer identifier of Facebook Social Media Button option
 
 Version 0.3
 - Options framework switched to OptionTree (There were too many banner ads in Redux. Sorry, I really appreciate the work behind Redux Framework, but the ads were annoying. And there was no option to buy the removal plugin and use it in a free theme.)

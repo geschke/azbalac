@@ -192,7 +192,7 @@ function tikva_sanitize_stylesheet($input)
 function addCustomizerSocialButtons($wp_customize)
 {
     $socialData = array(
-        'instagram' => array('settings_id' => 'social_media_facebook',
+        'facebook' => array('settings_id' => 'social_media_facebook',
             'label' => __('Facebook', 'tikva'),
             'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'tikva'),
         ),

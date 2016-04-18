@@ -13,7 +13,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
 
-require_once( get_template_directory() . '/inc/CustomLayoutPicker.php' );
+require_once( get_template_directory() . '/inc/CustomRadioImageControl.php' );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
     	function theme_slug_render_title() {
@@ -357,33 +357,37 @@ function addCustomizerStylingOptions($wp_customize)
         'title' => __('Styling Options', 'tikva'),
     ));
 
-   /* $wp_customize->add_setting('tikva_layout', array(
+    $wp_customize->add_setting('tikva_layout', array(
         'default' => '2',
         'capability' => 'edit_theme_options',
         'type' => 'option',
     ));
 
-    $wp_customize->add_control(new Tikva_Custom_Layout_Picker($wp_customize, 'tikva_layout', array(
-        'label' => __( 'Layout', 'tikva' ),
-        'description' => __( 'Set layout of your site.', 'tikva' ),
+    $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout', array(
+        'label' => __('Layout', 'tikva'),
+        'description' => __('Set layout of your site.', 'tikva'),
         'section' => 'section_styling_options',
         'settings' => 'tikva_layout',
-        //'type' => 'radio',
-        //'choices' => array(
-        //    '1' => __( '1 Column', 'tikva' ),
-        //    '2' => __( '2 Columns, Content left, Sidebar right', 'tikva' ),
-        //    '3' => __( '2 Columns, Content right, Sidebar left', 'tikva' )
-          
-        //),
+        'choices' => array(
+            '1' => get_template_directory_uri() . '/images/admin/1c.png',
+            '2' => get_template_directory_uri() . '/images/admin/2cl.png',
+            '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+        )
+            //'type' => 'radio',
+            //'choices' => array(
+            //    '1' => __( '1 Column', 'tikva' ),
+            //    '2' => __( '2 Columns, Content left, Sidebar right', 'tikva' ),
+            //    '3' => __( '2 Columns, Content right, Sidebar left', 'tikva' )
+            //),
     )));
-    */
-    
+
+
     $wp_customize->add_setting('tikva_stylesheet', array(
         'default' => 'slate_accessibility_ready.min.css',
         'capability' => 'edit_theme_options',
         'type' => 'option',
     ));
-    
+
     $wp_customize->add_control('tikva_stylesheet', array(
         'settings' => 'tikva_stylesheet',
         'label' => __('Theme Stylesheet', 'tikva'),
@@ -392,43 +396,40 @@ function addCustomizerStylingOptions($wp_customize)
         'type' => 'select',
         'choices' => getAvailableStylesheets()
     ));
-    
-     $wp_customize->add_setting('navbar_fixed', array(
+
+    $wp_customize->add_setting('navbar_fixed', array(
         'default' => 'default',
         'capability' => 'edit_theme_options',
         'type' => 'option',
     ));
 
     $wp_customize->add_control('navbar_fixed', array(
-        'label' => __( 'Navbar fixed options', 'tikva' ),
+        'label' => __('Navbar fixed options', 'tikva'),
         'section' => 'section_styling_options',
         'settings' => 'navbar_fixed',
         'type' => 'radio',
         'choices' => array(
-            'default' =>__( 'Default', 'tikva' ),
-            'fixed-top' => __( 'Fixed to top', 'tikva' )
-          
+            'default' => __('Default', 'tikva'),
+            'fixed-top' => __('Fixed to top', 'tikva')
         ),
     ));
-    
-     $wp_customize->add_setting('navbar_style_inverse', array(
+
+    $wp_customize->add_setting('navbar_style_inverse', array(
         'default' => 'default',
         'capability' => 'edit_theme_options',
         'type' => 'option',
     ));
 
     $wp_customize->add_control('navbar_style_inverse', array(
-        'label' => __( 'Navbar style', 'tikva' ),
+        'label' => __('Navbar style', 'tikva'),
         'section' => 'section_styling_options',
         'settings' => 'navbar_style_inverse',
         'type' => 'radio',
         'choices' => array(
-            'default' =>__( 'Default', 'tikva' ),
-            'inverse' =>__( 'Inverse', 'tikva' ),
-          
+            'default' => __('Default', 'tikva'),
+            'inverse' => __('Inverse', 'tikva'),
         ),
     ));
-    
 }
 
 /**

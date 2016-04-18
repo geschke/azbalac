@@ -937,7 +937,6 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
 endif;
 
 if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
-
     
     function tikva_get_navbar_layout() {
     
@@ -1161,6 +1160,80 @@ function tikva_header_style() {
 }
 endif; // tikva_header_style
 
+
+if ( ! function_exists( 'tikva_get_social_media_position' ) ) :
+/**
+ * Get position of Social Media Buttons
+ *
+ * @since Tikva 0.3
+ *
+ * @see twentysixteen_custom_header_and_background().
+ */
+function tikva_get_social_media_position() {
+    
+    $position = absint(get_option('social_media_position'));
+    return $position;
+    
+    /*        '1' => __('Don\'t show', 'tikva'),
+            '2' => __('Between Content and Footer', 'tikva'),
+            '3' => __('Below Footer', 'tikva'),
+    */        
+}
+endif; // tikva_get_social_buttons_position
+
+function tikva_build_social_button($socialOption, $socialIcon)
+{
+    $url = get_theme_mod($socialOption);
+    if (!$url) {
+        return '';
+    }
+    
+    $output = sprintf('<div class="socialcircle"><a target="_blank" href="%s"><i class="fa fa-%s fa-2x fa-inverse"></i></a></div>',$url,$socialIcon);
+    return $output;
+}
+
+
+if ( ! function_exists( 'tikva_display_social_media_buttons' ) ) :
+/**
+ * Get position of Social Media Buttons
+ *
+ * @since Tikva 0.3
+ *
+ * @see twentysixteen_custom_header_and_background().
+ */
+function tikva_display_social_media_buttons() {
+    $socialButtons = array('social_media_facebook' => 'facebook', 
+        'social_media_github' => 'github',
+        'social_media_google' => 'google-plus',
+        'social_media_instagram' => 'instagram',
+        'social_media_linkedin' => 'linkedin',
+        'social_media_slideshare' => 'slideshare',
+        'social_media_twitter' => 'twitter',
+        'social_media_vine' => 'vine',
+        'social_media_xing' => 'xing',
+        'social_media_youtube' => 'youtube');
+    
+    ?>
+        
+<div class="row">
+<div class="container">
+    <div class="col-md-12 social-media-buttons"> 
+        <div style="text-align: center;">
+            <?php
+            $socialOutput = '';
+            foreach ($socialButtons as $socialOption => $socialIcon) {
+                $socialOutput .= tikva_build_social_button($socialOption, $socialIcon);
+            }
+            echo $socialOutput;
+            ?>
+        </div>
+    </div>
+</div>
+</div>
+        <?php
+    
+}
+endif; // tikva_display_social_media_buttons
 
 
 

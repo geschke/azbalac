@@ -9,47 +9,13 @@
 		</div><!-- #main -->
 </div><!-- container -->
 
-<div class="row">
-<div class="container">
-    <div class="col-md-12 social-media-buttons"> 
-        <div style="text-align: center;">
-        <div  class="socialcircle">
-        <a  href=""><i class="fa fa-twitter fa-2x fa-inverse "></i></a>
-        </div>
- <div s class="socialcircle">
-        <a  href=""><i class="fa fa-facebook fa-2x fa-inverse "></i></a>
-        </div>
-        <div  class="socialcircle">
-        <a  href=""><i class="fa fa-github fa-2x fa-inverse "></i></a>
-        </div>
-        <div  class="socialcircle">
-        <a  href=""><i class="fa fa-google-plus fa-2x fa-inverse "></i></a>
-        </div>
-    <div  class="socialcircle">
-        <a  href=""><i class="fa fa-instagram fa-2x fa-inverse "></i></a>
-        </div>
-     <div  class="socialcircle">
-        <a  href=""><i class="fa fa-linkedin fa-2x fa-inverse "></i></a>
-        </div>   
-    
-      <div  class="socialcircle">
-        <a  href=""><i class="fa fa-slideshare fa-2x fa-inverse "></i></a>
-        </div>  
-       <div  class="socialcircle">
-        <a  href=""><i class="fa fa-vine fa-2x fa-inverse "></i></a>
-        </div>      
-     <div  class="socialcircle">
-        <a  href=""><i class="fa fa-xing fa-2x fa-inverse "></i></a>
-        </div>
-        <div class="socialcircle">
-        <a  href=""><i class="fa fa-youtube fa-2x fa-inverse "></i></a>
-        </div>
-         
-       
-        </div>
-    </div>
-</div>
-</div>
+<?php
+$positionSocial = tikva_get_social_media_position();
+if ($positionSocial == 2) {
+    tikva_display_social_media_buttons();
+}
+?>
+
 <?php
 $footerStyles = tikva_get_footer_styles();
 ?>
@@ -82,6 +48,12 @@ $footerStyles = tikva_get_footer_styles();
 </div>
 </div>
 
+    <?php
+$positionSocial = tikva_get_social_media_position();
+if ($positionSocial == 3) {
+    tikva_display_social_media_buttons();
+}
+?>
 
 <div class="container">
     <hr/>

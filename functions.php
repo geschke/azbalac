@@ -142,7 +142,16 @@ function tikva_sanitize_integer( $input )
     if( is_numeric( $input ) ) {
         return intval( $input );
     }
-    return 5;
+    return 0;
+}
+
+function tikva_sanitize_featured_articles($input)
+{
+    $input = intval($input);
+    if ($input < 0 || $input > 100) {
+        return 10;
+    }
+    return $input;
 }
 
 function tikva_sanitize_social_media_position($input)
@@ -512,7 +521,7 @@ function addCustomizerHomeOptions($wp_customize)
     $wp_customize->add_setting('featured_articles_max', array(
         'default' => 10,
         'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'tikva_sanitize_integer'
+        'sanitize_callback' => 'tikva_sanitize_featured_articles'
         
     ));
  

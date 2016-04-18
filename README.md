@@ -1,12 +1,14 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.3.1
+Version 0.3.2
 
 
 Version history:
 ================
 
+Version 0.3.2
+- fixed sanitizing number of featured articles on homepage
 
 Version 0.3.1
 - fixed: wrong Customizer identifier of Facebook Social Media Button option

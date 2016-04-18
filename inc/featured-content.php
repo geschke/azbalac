@@ -279,7 +279,7 @@ class Featured_Content {
 
         
                 $featuredArticlesMax = get_theme_mod('featured_articles_max');
-               
+              
             if ($featuredArticlesMax !== '')
             {
                 $options['quantity'] = intval($featuredArticlesMax);

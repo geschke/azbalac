@@ -56,6 +56,7 @@ class Featured_Content {
 	 * @since Tikva 0.1
 	 */
 	public static function init() {
+            
 		$theme_support = get_theme_support( 'featured-content' );
 
 		// Return early if theme does not support Featured Content.
@@ -97,6 +98,7 @@ class Featured_Content {
 	public static function get_featured_posts() {
 		$post_ids = self::get_featured_post_ids();
 
+              
         // No need to query if there is are no featured posts.
 		if ( empty( $post_ids ) ) {
 			return array();
@@ -106,7 +108,7 @@ class Featured_Content {
 			'include'        => $post_ids,
 			'posts_per_page' => count( $post_ids ),
 		) );
-
+                
 		return $featured_posts;
 	}
 
@@ -130,12 +132,11 @@ class Featured_Content {
 
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
-		if ( ! empty( $featured_ids ) ) {
-			return array_map( 'absint', (array) $featured_ids );
+                if ( ! empty( $featured_ids ) ) {
+                	return array_map( 'absint', (array) $featured_ids );
 		}
 
 		$settings = self::get_setting();
-
 		// Query for featured posts.
 		$featured = get_posts( array(
 			'numberposts' => $settings['quantity'],
@@ -277,9 +278,9 @@ class Featured_Content {
 		$options = wp_parse_args( $saved, $defaults );
 		$options = array_intersect_key( $options, $defaults );
 
-        
+         
                 $featuredArticlesMax = get_theme_mod('featured_articles_max');
-              
+               
             if ($featuredArticlesMax !== '')
             {
                 $options['quantity'] = intval($featuredArticlesMax);
@@ -287,7 +288,7 @@ class Featured_Content {
             else {
                 $options['quantity'] = 10;
             }
-
+           
         //self::sanitize_quantity( $options['quantity'] );
 
 		if ( 'all' != $key ) {

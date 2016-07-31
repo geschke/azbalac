@@ -22,7 +22,7 @@
 
         foreach ($featured_posts as $featured_post) {
             $featured = get_post_meta($featured_post->ID, 'tikva_featured_post', true);
-            // print "post: " . $featured_post->ID . "<br/>";
+             //print "post: " . $featured_post->ID . "<br/>";
             //var_dump($featured);
             if ($featured == '_1') {
                 $featureLarge[] = $featured_post;

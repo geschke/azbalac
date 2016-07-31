@@ -148,6 +148,7 @@ function tikva_sanitize_integer( $input )
 function tikva_sanitize_featured_articles($input)
 {
     $input = intval($input);
+    
     if ($input < 0 || $input > 100) {
         return 10;
     }
@@ -193,6 +194,169 @@ function tikva_sanitize_stylesheet($input)
     }
     return $input;
 }
+
+function addSliderOptions($wp_customize, $slider)
+{
+      $wp_customize->add_section('section_slider_' . $slider, array(
+        'priority' => 30,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Slider #' . $slider, 'tikva'),
+        'description' => __('Configure Slider #' . $slider, 'tikva'),
+        'panel' => 'panel_slider_integration',
+    ));
+
+    $wp_customize->add_setting('setting_slider_' . $slider . '_image', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_integer'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'control_slider_' . $slider . '_image', array(
+        'label' => __('Slider image', 'tikva'),
+        'section' => 'section_slider_' . $slider,
+        'settings' => 'setting_slider_' . $slider . '_image',
+        'flex_width' => true, // Allow any width, making the specified value recommended. False by default.
+        'flex_height' => true, // Require the resulting image to be exactly as tall as the height attribute (default).
+        'width' => 1920,
+        'height' => 500,
+        'mime_type' => 'image',
+        'description' => __('Image displayed on slider', 'tikva')
+    )));
+
+    $wp_customize->add_setting('setting_slider_' . $slider . '_title', array(
+        'default' => '')
+    );
+    $wp_customize->add_control('control_slider_' . $slider . '_title', array(
+        'label' => __('Title', 'tikva'),
+        'section' => 'section_slider_' . $slider,
+        'settings' => 'setting_slider_' . $slider . '_title')
+    );
+
+    $wp_customize->add_setting('setting_slider_' . $slider . '_description', array(
+        'default' => '')
+    );
+
+    $wp_customize->add_control('control_slider_' . $slider . '_description', array(
+        'label' => __('Description', 'tikva'),
+        'type' => 'textarea',
+        'section' => 'section_slider_'. $slider,
+        'settings' => 'setting_slider_' . $slider . '_description'
+    ));
+
+    $wp_customize->add_setting('setting_slider_' . $slider . '_text_position', array(
+        'default' => '1',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_slider_position'
+    ));
+
+    $wp_customize->add_control('control_slider_' . $slider . '_text_position', array(
+        'label' => __('Position of Slider text', 'tikva'),
+        'section' => 'section_slider_'. $slider,
+        'settings' => 'setting_slider_' . $slider . '_text_position',
+        'type' => 'radio',
+        'choices' => array(
+            '1' => __('Left)', 'tikva'),
+            '2' => __('Center', 'tikva'),
+            '3' => __('Right', 'tikva')
+        ),
+    ));
+
+    $wp_customize->add_setting('setting_slider_' . $slider . '_page', array(
+        // note - works with or without capability & type set
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+            // note - need to add sanitize callback
+    ));
+
+    $wp_customize->add_control('control_slider_' . $slider . '_page', array(
+        'label' => __('Link to page', 'tikva'),
+        'section' => 'section_slider_' . $slider,
+        'type' => 'dropdown-pages',
+        'settings' => 'setting_slider_' . $slider . '_page',
+    )); // end link
+    $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
+        'default' => '')
+    );
+    $wp_customize->add_control('control_slider_' . $slider . '_url', array(
+        'label' => __('...or enter URL to link to', 'tikva'),
+        'section' => 'section_slider_' . $slider,
+        'settings' => 'setting_slider_' . $slider . '_url')
+    );
+}
+
+/**
+ * Add Slider Integration options to Customizer
+ * 
+ * @param type $wp_customize
+ */
+function addCustomizerSliderOptions($wp_customize)
+{
+
+
+    $wp_customize->add_panel('panel_slider_integration', array(
+        'priority' => 1010,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Slider Integration', 'tikva'),
+        'description' => __('Configuration of Slider', 'tikva'),
+    ));
+
+
+
+
+    $wp_customize->add_section('section_slider_options', array(
+        'priority' => 20,
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Slider Options ', 'tikva'),
+        'description' => __('Set generic slider options', 'tikva'),
+        'panel' => 'panel_slider_integration',
+    ));
+
+    $wp_customize->add_setting('setting_slider_activate', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_social_media_position'
+    ));
+
+    $wp_customize->add_control('control_slider_activate', array(
+        'label' => __('Show slider', 'tikva'),
+        'section' => 'section_slider_options',
+        'settings' => 'setting_slider_activate',
+        'type' => 'checkbox',
+    ));
+
+    $wp_customize->add_setting('slider_position', array(
+        'default' => '1',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+        'sanitize_callback' => 'tikva_sanitize_slider_position'
+    ));
+
+    $wp_customize->add_control('control_slider_position', array(
+        'label' => __('Slider Position', 'tikva'),
+        'section' => 'section_slider_options',
+        'settings' => 'slider_position',
+        'type' => 'radio',
+        'choices' => array(
+            '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
+            '2' => __('Between navigation and featured articles', 'tikva'),
+            '3' => __('Between featured articles and content', 'tikva'),
+            '4' => __('Between content and footer', 'tikva'),
+        ),
+    ));
+    
+    for ($i = 1; $i <= 6; $i++) 
+    {
+        addSliderOptions($wp_customize, $i);
+    }
+  
+}
+
 /**
  * Add Social Media Integration options to Customizer
  * 
@@ -306,7 +470,6 @@ function addCustomizerSocialButtons($wp_customize)
         ),
     ));
 }
-
 
 /**
  * Add Customizable color options
@@ -441,12 +604,7 @@ function addCustomizerStylingOptions($wp_customize)
             '2' => get_template_directory_uri() . '/images/admin/2cl.png',
             '3' => get_template_directory_uri() . '/images/admin/2cr.png',
         )
-            //'type' => 'radio',
-            //'choices' => array(
-            //    '1' => __( '1 Column', 'tikva' ),
-            //    '2' => __( '2 Columns, Content left, Sidebar right', 'tikva' ),
-            //    '3' => __( '2 Columns, Content right, Sidebar left', 'tikva' )
-            //),
+
     )));
 
 
@@ -525,14 +683,7 @@ function addCustomizerHomeOptions($wp_customize)
         
     ));
  
-    /*$wp_customize->add_control(new WP_Customize_Control($wp_customize, 
-            'featured_articles_max', array(
-        'label' =>__( 'Maximum number of featured articles on homepage', 'tikva' ),
-        'section' => 'section_homepage_options',
-        'settings' => 'featured_articles_max',
-        'type' => 'text',
-        )));*/
-    
+   
 $wp_customize->add_control(new Tikva_Custom_Slider_Control($wp_customize, 
             'featured_articles_max', array(
         'label' =>__( 'Maximum number of featured articles on homepage', 'tikva' ),
@@ -701,6 +852,7 @@ if (!function_exists('tikva_customize_register')) :
     {
 
         addCustomizerSocialButtons($wp_customize);
+        addCustomizerSliderOptions($wp_customize);
         addCustomizerColors($wp_customize);
         addCustomizerStylingOptions($wp_customize);
         addCustomizerHeaderImageOptions($wp_customize);

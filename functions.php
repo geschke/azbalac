@@ -736,6 +736,7 @@ function tikva_display_social_media_buttons() {
         'social_media_instagram' => 'instagram',
         'social_media_linkedin' => 'linkedin',
         'social_media_slideshare' => 'slideshare',
+        'social_media_snapchat' => 'snapchat',
         'social_media_twitter' => 'twitter',
         'social_media_vine' => 'vine',
         'social_media_xing' => 'xing',
@@ -763,6 +764,150 @@ function tikva_display_social_media_buttons() {
 }
 endif; // tikva_display_social_media_buttons
 
+if ( ! function_exists( 'tikva_set_slider_text_style' ) ) :
+function tikva_set_slider_text_style() 
+{
+    ?>
+     <style type="text/css">
+         .carousel-caption-left {
+             text-align: left !important;
+         }
+         .carousel-caption-right {
+             text-align: right !important;
+         }
+         .tikva-slider {
+             
+             margin-bottom: 10px;
+         }
+     </style>    
+    <?php
+}
+
+endif; // tikva_set_slider_text_style
+
+
+
+if ( ! function_exists( 'tikva_show_slider' ) ) :
+function tikva_show_slider($sliderPosition) 
+{
+    if (!get_option('setting_slider_activate')) {
+        return '';
+    }
+   
+    if (get_option('setting_slider_position') != $sliderPosition) {
+        return '';
+    }
+    
+   for ($i = 1; $i <= 6; $i++) {
+                $sliderImage = wp_get_attachment_image_src(absint(get_option('setting_slider_' . $i . '_image')), 'original');
+                if ($sliderImage) {
+                    $sliderData[$i]['image'] = $sliderImage;
+                    $sliderData[$i]['title'] = get_theme_mod('setting_slider_' . $i . '_title');
+                    $sliderData[$i]['description'] = get_theme_mod('setting_slider_' . $i . '_description');
+                    $sliderData[$i]['text_position'] = get_option('setting_slider_' . $i . '_text_position');
+                    $sliderData[$i]['page'] = get_option('setting_slider_' . $i . '_page');
+                    $sliderData[$i]['url'] = get_option('setting_slider_' . $i . '_url');
+                }
+            }
+           
+            ?>
+            
+            <div id="tikva-slider" class="tikva-slider carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+      <?php
+           foreach ($sliderData as $idx => $sliderElement) {
+            echo '<li data-target="#tikva-slider" data-slide-to="';
+            echo $idx - 1;
+            echo '"';
+            if ($idx == 1) echo 'class="active"';
+            echo '></li>';
+      }
+      ?>
+  </ol>
+
+  <!-- Wrapper for slides -->
+     
+
+  <div class="carousel-inner" role="listbox">
+            
+    <?php
+    
+      foreach ($sliderData as $idx => $sliderElement) {
+         
+          echo ' <div class="item ';
+          if ($idx == 1) echo 'active';
+          echo '">';
+          if ($sliderElement['url']) {
+              $sliderUrl = $sliderElement['url'];
+          } elseif ($sliderElement['page']) {
+              $sliderUrl = get_page_link($sliderElement['page']);
+              
+          }
+          else {
+              $sliderUrl = null;
+          }
+          if ($sliderUrl) {
+            echo '<a href="' . $sliderUrl . '">';
+          }
+          echo '<img src="' . $sliderElement['image'][0] .'" alt="...">';
+          if ($sliderUrl) {
+            echo '</a>';
+          }
+          echo ' <div class="carousel-caption';
+          switch ($sliderElement['text_position']) {
+              case 1: echo " carousel-caption-left";
+                  break;
+              case 3: echo ' carousel-caption-right';
+                  break;
+              // no default, centered is default
+          }          
+          echo '">';
+          if ($sliderElement['title']) {
+              echo '<h3>';
+              if ($sliderUrl) {
+            echo '<a href="' . $sliderUrl . '">';
+          }
+            echo $sliderElement['title'];
+                      if ($sliderUrl) {
+            echo '</a>';
+          }
+            echo '</h3>';
+                      
+          }
+          if ($sliderElement['description']) {
+              echo '<p>';
+                if ($sliderUrl) {
+            echo '<a href="' . $sliderUrl . '">';
+          }
+              echo $sliderElement['description'];
+                   if ($sliderUrl) {
+            echo '</a>';
+          }
+              echo '</p>';
+                      
+          }
+          echo '</div>    ';
+          echo '</div>';
+      }
+      ?>
+        
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#tikva-slider" role="button" data-slide="prev">
+    <span class="icon-prev fa fa-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#tikva-slider" role="button" data-slide="next">
+    <span class="icon-next fa fa-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+     <?php
+}
+
+endif; // tikva_show_slider
 
 
 function tikva_excerpt_more( $more ) {

@@ -79,5 +79,21 @@ class Tikva_Sanitizer
         }
         return $input;
     }
+    
+     public function sanitizeSliderTextPosition($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 3)
+            return 2;
+        return $input;
+    }
+    
+    public function sanitizeSliderPosition($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 4)
+            return 2;
+        return $input;
+    }
 
 }

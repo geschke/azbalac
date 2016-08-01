@@ -35,7 +35,9 @@ $navbarFixed = tikva_get_navbar_layout();
         }
        ?>
 
-        <?php wp_head(); ?>
+        <?php 
+        tikva_set_slider_text_style();
+        wp_head(); ?>
         <?php
         /* Unfortunately there is no conditional JavaScript solution as it exists for stylesheets.
         */
@@ -68,6 +70,7 @@ if ($navbarFixed != 'fixed-top') {
     <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">
 
 <div class="container">
+    
     <div class="masthead col-md-12 col-sm-12">
         <h1 id="site-header-text"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
          <div id="site-header">
@@ -75,7 +78,9 @@ if ($navbarFixed != 'fixed-top') {
                     <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
                 </a>
             </div>
-
+      <?php
+tikva_show_slider(1);
+?>
     </div>
  </div>
 <?php }
@@ -143,6 +148,10 @@ if ($navbarFixed == 'default') {
 <?php }
 ?>
         <div class="container">
-
+          
+            <?php
+tikva_show_slider(2);
+?>
+            
         <div id="main" class="site-main">
 

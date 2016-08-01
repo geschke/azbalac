@@ -27,7 +27,8 @@ $layoutStyle = tikva_get_layout();
 if ( is_front_page() && tikva_has_featured_posts() ) {
     // Include the featured content template.
     get_template_part( 'featured-content' );
- //   echo "<h1>show featured content</h1>";
+  tikva_show_slider(3);
+
 }
 
 
@@ -86,7 +87,9 @@ if ($layoutStyle['content'] == 2) {
         }
     } ?>
 
-
+      <?php
+tikva_show_slider(4);
+?>
 </div><!-- #main-content -->
 
 </div><!-- row -->

@@ -13,6 +13,7 @@
  */
 class Tikva_Customizer
 {
+  
 
     /**
      * TTikva_Customizer constructor.
@@ -39,33 +40,8 @@ class Tikva_Customizer
         $this->addCustomizerHomeOptions($wp_customize);
     }
 
-
-
-
-    
-    /**
-     * Add all sections and panels to the Customizer
-     *
-     * @param WP_Customize_Manager $wp_customize
-     *
-     * @access public
-     * @since  tikva 0.4
-     * @return void
-     */
-    public function register_customize_sections($wp_customize)
-    {
-
-        /*
-         * Add Sections
-         */
-
-        // New section for "Layout".
-        $wp_customize->add_section('blog_layout', array(
-            'title' => __('Blog Layout', 'twentytwelve-child'),
-            'priority' => 101
-        ));
-    }
-
+   
+  
     public function addSliderOptions($wp_customize, $slider)
     {
         $wp_customize->add_section('section_slider_' . $slider, array(
@@ -117,7 +93,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_text_position', array(
-            'default' => '1',
+            'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderTextPosition')
@@ -201,8 +177,8 @@ class Tikva_Customizer
             'type' => 'checkbox',
         ));
 
-        $wp_customize->add_setting('slider_position', array(
-            'default' => '1',
+        $wp_customize->add_setting('setting_slider_position', array(
+            'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderPosition')
@@ -211,7 +187,7 @@ class Tikva_Customizer
         $wp_customize->add_control('control_slider_position', array(
             'label' => __('Slider Position', 'tikva'),
             'section' => 'section_slider_options',
-            'settings' => 'slider_position',
+            'settings' => 'setting_slider_position',
             'type' => 'radio',
             'choices' => array(
                 '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
@@ -221,6 +197,59 @@ class Tikva_Customizer
             ),
         ));
 
+          $wp_customize->add_setting('setting_slider_interval', array(
+            'default' => '5000')
+        );
+        $wp_customize->add_control('control_slider_interval', array(
+            'label' => __('Transition delay', 'tikva'),
+            'description' => __('Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling).', 'tikva'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_interval',
+             'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger'))
+        );
+        
+        $wp_customize->add_setting('setting_slider_pause', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_slider_pause', array(
+            'label' => __('Pause sliding on mouseenter', 'tikva'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_pause',
+            'type' => 'checkbox',
+        ));
+        
+        $wp_customize->add_setting('setting_slider_keyboard', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_slider_keyboard', array(
+            'label' => __('Slider reacts to keyboard events', 'tikva'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_keyboard',
+            'type' => 'checkbox',
+        ));
+        
+        $wp_customize->add_setting('setting_slider_wrap', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_slider_wrap', array(
+            'label' => __('Cycle continuously', 'tikva'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_wrap',
+            'type' => 'checkbox',
+        ));
+        
         for ($i = 1; $i <= 6; $i++) {
             $this->addSliderOptions($wp_customize, $i);
         }
@@ -257,6 +286,10 @@ class Tikva_Customizer
             'slideshare' => array('settings_id' => 'social_media_slideshare',
                 'label' => __('Slideshare', 'tikva'),
                 'description' => __('Enter the complete Slideshare page URL (please include http or https!)', 'tikva'),
+            ),
+            'snapchat' => array('settings_id' => 'social_media_snapshat',
+                'label' => __('Snapchat', 'tikva'),
+                'description' => __('Enter the complete Snapchat page URL (please include http or https!)', 'tikva'),
             ),
             'twitter' => array('settings_id' => 'social_media_twitter',
                 'label' => __('Twitter', 'tikva'),

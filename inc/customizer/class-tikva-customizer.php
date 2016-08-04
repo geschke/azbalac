@@ -48,8 +48,8 @@ class Tikva_Customizer
             'priority' => 30,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Slider #' . $slider, 'tikva'),
-            'description' => __('Configure Slider #' . $slider, 'tikva'),
+            'title' => sprintf(__('Slider #%d', 'tikva'), $slider),
+            'description' => sprintf(__('Configure Slider #%d', 'tikva'), $slider),
             'panel' => 'panel_slider_integration',
         ));
 
@@ -73,7 +73,8 @@ class Tikva_Customizer
         )));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_title', array(
-            'default' => '')
+            'default' => '', 
+            'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_title', array(
             'label' => __('Title', 'tikva'),
@@ -82,7 +83,8 @@ class Tikva_Customizer
         );
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_description', array(
-            'default' => '')
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field')
         );
 
         $wp_customize->add_control('control_slider_' . $slider . '_description', array(
@@ -111,10 +113,23 @@ class Tikva_Customizer
             ),
         ));
 
+          $wp_customize->add_setting('setting_slider_' . $slider . '_text_color', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(
+                new WP_Customize_Color_Control($wp_customize, 'control_slider_' . $slider . '_text_color', array(
+            'label' => __('Slider Text Color', 'tikva'),
+            'section' => 'section_slider_' . $slider,
+            'settings' => 'setting_slider_' . $slider . '_text_color',
+            'description' => __('Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+        
         $wp_customize->add_setting('setting_slider_' . $slider . '_page', array(
             // note - works with or without capability & type set
             'capability' => 'edit_theme_options',
             'type' => 'option',
+            'sanitize_callback' => 'sanitize_post',
                 // note - need to add sanitize callback
         ));
 
@@ -124,8 +139,10 @@ class Tikva_Customizer
             'type' => 'dropdown-pages',
             'settings' => 'setting_slider_' . $slider . '_page',
         )); // end link
+ 
         $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
-            'default' => '')
+            'default' => '',
+           'sanitize_callback' => 'esc_url_raw')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_url', array(
             'label' => __('...or enter URL to link to', 'tikva'),
@@ -151,14 +168,14 @@ class Tikva_Customizer
             'description' => __('Configuration of Slider', 'tikva'),
         ));
 
-
+ 
 
 
         $wp_customize->add_section('section_slider_options', array(
             'priority' => 20,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Slider Options ', 'tikva'),
+            'title' => __('Slider Options', 'tikva'),
             'description' => __('Set generic slider options', 'tikva'),
             'panel' => 'panel_slider_integration',
         ));
@@ -196,10 +213,11 @@ class Tikva_Customizer
                 '4' => __('Between content and footer', 'tikva'),
             ),
         ));
-
-          $wp_customize->add_setting('setting_slider_interval', array(
-            'default' => '5000')
-        );
+        $wp_customize->add_setting('setting_slider_interval', array(
+            'default' => '5000',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+              ));
+          
         $wp_customize->add_control('control_slider_interval', array(
             'label' => __('Transition delay', 'tikva'),
             'description' => __('Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling).', 'tikva'),

@@ -797,6 +797,10 @@ function tikva_show_slider($sliderPosition)
     if (get_option('setting_slider_position') != $sliderPosition) {
         return '';
     }
+    $sliderInterval = get_theme_mod('setting_slider_interval');
+    $sliderPause = get_option('setting_slider_pause') ? 'hover': '';
+    $sliderKeyboard = get_option('setting_slider_keyboard') ? 'true': 'false';
+    $sliderWrap = get_option('setting_slider_wrap') ? 'true': 'false';
     
    for ($i = 1; $i <= 6; $i++) {
                 $sliderImage = wp_get_attachment_image_src(absint(get_option('setting_slider_' . $i . '_image')), 'original');
@@ -807,12 +811,19 @@ function tikva_show_slider($sliderPosition)
                     $sliderData[$i]['text_position'] = get_option('setting_slider_' . $i . '_text_position');
                     $sliderData[$i]['page'] = get_option('setting_slider_' . $i . '_page');
                     $sliderData[$i]['url'] = get_option('setting_slider_' . $i . '_url');
+                    $colorFgText = get_theme_mod('setting_slider_' . $i . '_text_color');
+                    if ($colorFgText) {
+                        $sliderData[$i]['style'] = ' color: ' . $colorFgText .';';
+                    }
+                    else {
+                        $sliderData[$i]['style'] = '';
+                    }
                 }
             }
            
             ?>
             
-            <div id="tikva-slider" class="tikva-slider carousel slide" data-ride="carousel">
+            <div id="tikva-slider" class="tikva-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>">
   <!-- Indicators -->
   <ol class="carousel-indicators">
       <?php
@@ -864,11 +875,11 @@ function tikva_show_slider($sliderPosition)
           }          
           echo '">';
           if ($sliderElement['title']) {
-              echo '<h3>';
+              echo '<h3 style="' . $sliderElement['style'] . '">';
               if ($sliderUrl) {
-            echo '<a href="' . $sliderUrl . '">';
+            echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
           }
-            echo $sliderElement['title'];
+            echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['title'] . '</span>';
                       if ($sliderUrl) {
             echo '</a>';
           }
@@ -878,9 +889,10 @@ function tikva_show_slider($sliderPosition)
           if ($sliderElement['description']) {
               echo '<p>';
                 if ($sliderUrl) {
-            echo '<a href="' . $sliderUrl . '">';
+            echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
           }
-              echo $sliderElement['description'];
+            echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['description'] . '</span>';
+           
                    if ($sliderUrl) {
             echo '</a>';
           }
@@ -897,11 +909,11 @@ function tikva_show_slider($sliderPosition)
   <!-- Controls -->
   <a class="left carousel-control" href="#tikva-slider" role="button" data-slide="prev">
     <span class="icon-prev fa fa-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only"><?php  __( 'Previous','tikva' ); ?></span>
   </a>
   <a class="right carousel-control" href="#tikva-slider" role="button" data-slide="next">
     <span class="icon-next fa fa-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only"><?php  __( 'Next','tikva' ); ?></span>
   </a>
 </div>
      <?php

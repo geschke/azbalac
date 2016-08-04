@@ -1,11 +1,18 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.3.2
+Version 0.4.0
 
 
 Version history:
 ================
+
+Version 0.4.0
+- Snapchat added to Social Media Buttons
+- new light stylesheet (kdo_flatly.css), based on Bootswatch Flatly, but with more contrast and some colors changed
+- minor fixes due to new WordPress versions
+- added image slider on homepage, add up to six images with optionally text and description, linkable to pages or any URL
+- refactoring of using customizer features
 
 Version 0.3.2
 - fixed sanitizing number of featured articles on homepage

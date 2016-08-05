@@ -370,8 +370,23 @@ class Tikva_Customizer
             'panel' => 'panel_social_media_integration',
         ));
 
-        $wp_customize->add_setting('social_media_position', array(
-            'default' => '1',
+        
+          $wp_customize->add_setting('setting_social_media_activate', array(
+            'default' => '',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_social_media_activate', array(
+            'label' => __('Show Social Media Buttons', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_media_activate',
+            'type' => 'checkbox',
+        ));
+        
+        $wp_customize->add_setting('setting_social_media_position', array(
+            'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialMediaPosition')
@@ -380,12 +395,31 @@ class Tikva_Customizer
         $wp_customize->add_control('control_social_media_position', array(
             'label' => __('Button Position', 'tikva'),
             'section' => 'section_social_media_position',
-            'settings' => 'social_media_position',
+            'settings' => 'setting_social_media_position',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Don\'t show', 'tikva'),
+                // '1' => __('Don\'t show', 'tikva'),
                 '2' => __('Between Content and Footer', 'tikva'),
                 '3' => __('Below Footer', 'tikva'),
+            ),
+        ));
+        
+         $wp_customize->add_setting('setting_social_media_alignment', array(
+            'default' => '2',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialMediaAlignment')
+        ));
+
+        $wp_customize->add_control('control_social_media_alignment', array(
+            'label' => __('Button Alignment', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_media_alignment',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __('Left', 'tikva'),
+                '2' => __('Centered', 'tikva'),
+                '3' => __('Right', 'tikva'),
             ),
         ));
     }

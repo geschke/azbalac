@@ -10,10 +10,7 @@
 </div><!-- container -->
 
 <?php
-$positionSocial = tikva_get_social_media_position();
-if ($positionSocial == 2) {
-    tikva_display_social_media_buttons();
-}
+    tikva_display_social_media_buttons(2);
 ?>
 
 <?php
@@ -49,11 +46,8 @@ $footerStyles = tikva_get_footer_styles();
 </div>
 
     <?php
-$positionSocial = tikva_get_social_media_position();
-if ($positionSocial == 3) {
-    tikva_display_social_media_buttons();
-}
-?>
+    tikva_display_social_media_buttons(3);
+    ?>
 
 <div class="container">
     <hr/>

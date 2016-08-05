@@ -10,12 +10,14 @@ require get_template_directory() . '/inc/template-tags.php';
 
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
+include get_template_directory() . '/inc/info-screen/welcome-screen.php';
 
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
 
 require_once( get_template_directory() . '/inc/customizer/class-tikva-sanitizer.php' );
 require_once( get_template_directory() . '/inc/customizer/class-tikva-customizer.php' );
+
 new Tikva_Customizer();
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
@@ -689,26 +691,6 @@ function tikva_header_style() {
 endif; // tikva_header_style
 
 
-if ( ! function_exists( 'tikva_get_social_media_position' ) ) :
-/**
- * Get position of Social Media Buttons
- *
- * @since Tikva 0.3
- *
- * @see twentysixteen_custom_header_and_background().
- */
-function tikva_get_social_media_position() {
-    
-    $position = absint(get_option('social_media_position'));
-    return $position;
-    
-    /*        '1' => __('Don\'t show', 'tikva'),
-            '2' => __('Between Content and Footer', 'tikva'),
-            '3' => __('Below Footer', 'tikva'),
-    */        
-}
-endif; // tikva_get_social_buttons_position
-
 function tikva_build_social_button($socialOption, $socialIcon)
 {
     $url = get_theme_mod($socialOption);
@@ -729,7 +711,15 @@ if ( ! function_exists( 'tikva_display_social_media_buttons' ) ) :
  *
  * @see twentysixteen_custom_header_and_background().
  */
-function tikva_display_social_media_buttons() {
+function tikva_display_social_media_buttons($currentPosition) {
+    $position = absint(get_option('setting_social_media_position'));
+    if ($position != $currentPosition) {
+        return null;
+    }
+    if (!get_option('setting_social_media_activate')) {
+        return null;
+    }
+        
     $socialButtons = array('social_media_facebook' => 'facebook', 
         'social_media_github' => 'github',
         'social_media_google' => 'google-plus',
@@ -741,13 +731,19 @@ function tikva_display_social_media_buttons() {
         'social_media_vine' => 'vine',
         'social_media_xing' => 'xing',
         'social_media_youtube' => 'youtube');
-    
+    switch (get_option('setting_social_media_alignment')) {
+        case 1: $align = 'left';
+            break;
+        case 3: $align = 'right';
+            break;
+        default: $align = 'center';
+    }
     ?>
         
 <div class="row">
 <div class="container">
     <div class="col-md-12 social-media-buttons"> 
-        <div style="text-align: center;">
+        <div style="text-align: <?php echo $align; ?>;">
             <?php
             $socialOutput = '';
             foreach ($socialButtons as $socialOption => $socialIcon) {

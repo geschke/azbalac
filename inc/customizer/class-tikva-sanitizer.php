@@ -47,6 +47,14 @@ class Tikva_Sanitizer
             return 2;
         return $input;
     }
+    
+     public function sanitizeSocialMediaAlignment($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 3)
+            return 2;
+        return $input;
+    }
 
     public function sanitizeLayout($input)
     {

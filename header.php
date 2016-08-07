@@ -30,6 +30,25 @@ $navbarFixed = tikva_get_navbar_layout();
                     padding-top: 70px !important;
                 }
                 body.admin-bar .navbar-fixed-top { top: 28px !important; }
+                
+                
+                
+/* v4 notice above main navbar */
+.v4-tease {
+  display: block;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background-color: #0275d8;
+}
+.v4-tease:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0269c2;
+}
+
+                
             </style>
         <?php
         }
@@ -67,6 +86,10 @@ if ($navbarFixed != 'fixed-top') {
 <?php if ($navbarFixed == 'default') {
 
 ?>
+    <div>foo
+    <?php        tikva_display_social_media_buttons(3); ?>
+    </div>
+   
     <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">
 
 <div class="container">

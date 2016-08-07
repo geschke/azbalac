@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Implements Sanitizer functionality.
  *
@@ -47,12 +48,28 @@ class Tikva_Sanitizer
             return 2;
         return $input;
     }
-    
-     public function sanitizeSocialMediaAlignment($input)
+
+    public function sanitizeSocialMediaAlignment($input)
     {
         $input = absint($input);
         if ($input < 1 || $input > 3)
             return 2;
+        return $input;
+    }
+    
+    public function sanitizeSocialButtonSize($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 3)
+            return 2;
+        return $input;
+    }
+    
+    public function sanitizeSocialButtonType($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 2)
+            return 1;
         return $input;
     }
 
@@ -87,15 +104,15 @@ class Tikva_Sanitizer
         }
         return $input;
     }
-    
-     public function sanitizeSliderTextPosition($input)
+
+    public function sanitizeSliderTextPosition($input)
     {
         $input = absint($input);
         if ($input < 1 || $input > 3)
             return 2;
         return $input;
     }
-    
+
     public function sanitizeSliderPosition($input)
     {
         $input = absint($input);

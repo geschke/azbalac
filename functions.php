@@ -691,15 +691,33 @@ function tikva_header_style() {
 endif; // tikva_header_style
 
 
-function tikva_build_social_button($socialOption, $socialIcon)
+function tikva_build_social_button($socialOption, $socialIcon, $buttonSize, $buttonType)
 {
     $url = get_theme_mod($socialOption);
     if (!$url) {
         return '';
     }
+    $faType = ($buttonType == 2) ? 'fa-square' : 'fa-circle';
+    switch ($buttonSize) {
+        case 1:
+            $faSize = ' ';
+            break;
+        case 2: 
+            $faSize = ' fa-lg ';
+            break;
+        case 3: 
+            $faSize = ' fa-2x ';
+            break;
+     
+        
+    }
+    $styleFg = '';
+    $styleBg = '';
     
-    $output = sprintf('<div class="socialcircle"><a target="_blank" href="%s"><i class="fa fa-%s fa-2x fa-inverse"></i></a></div>',esc_url($url),$socialIcon);
+    $output = sprintf('<a class="socialbutton" target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x tttsocialtest"></i><i %s class="fa fa-%s fa-stack-1x fa-inverse socialtest"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
     return $output;
+    //$output = sprintf('<div class="socialcircles socialcircle-size-1"><a target="_blank" href="%s"><i class="fa fa-%s %s fa-inverse"></i></a></div>',esc_url($url),$socialIcon, $faSize);
+    //return $output;
 }
 
 
@@ -738,16 +756,23 @@ function tikva_display_social_media_buttons($currentPosition) {
             break;
         default: $align = 'center';
     }
+    $buttonSize = get_option('setting_social_button_size');
+    $buttonType = get_option('setting_social_button_type');
     ?>
         
 <div class="row">
 <div class="container">
     <div class="col-md-12 social-media-buttons"> 
         <div style="text-align: <?php echo $align; ?>;">
+            
+            
+<a class="xxsocialbutton" target="_blank" href="https://www.facebook.com/rgeschke"><span class="tttsocialtest fa-stack  fa-2x "><i style="color: #ff0039;" class="fa fa-square fa-stack-2x tttsocialtest"></i><i  class="fa fa-facebook fa-stack-1x fa-inverse innersocial socialtest "></i></span></a>  
+ 
+
             <?php
             $socialOutput = '';
             foreach ($socialButtons as $socialOption => $socialIcon) {
-                $socialOutput .= tikva_build_social_button($socialOption, $socialIcon);
+                $socialOutput .= tikva_build_social_button($socialOption, $socialIcon, $buttonSize, $buttonType);
             }
             echo $socialOutput;
             ?>

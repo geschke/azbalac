@@ -246,6 +246,19 @@
         }
         $.checkMediaSize();
 
-    })
+    });
 
+$( ".innersocial" ).hover(
+  function() {
+     
+    $( this ).parent().find('.tttsocialtest').addClass('socialhover');
+  }, function() {
+     
+       $( this ).parent().find('.tttsocialtest').removeClass('socialhover');
+   
+  }
+);
+ 
+ 
 } )( jQuery );
+

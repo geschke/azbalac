@@ -13,7 +13,6 @@
  */
 class Tikva_Customizer
 {
-  
 
     /**
      * TTikva_Customizer constructor.
@@ -40,8 +39,6 @@ class Tikva_Customizer
         $this->addCustomizerHomeOptions($wp_customize);
     }
 
-   
-  
     public function addSliderOptions($wp_customize, $slider)
     {
         $wp_customize->add_section('section_slider_' . $slider, array(
@@ -73,7 +70,7 @@ class Tikva_Customizer
         )));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_title', array(
-            'default' => '', 
+            'default' => '',
             'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_title', array(
@@ -113,7 +110,7 @@ class Tikva_Customizer
             ),
         ));
 
-          $wp_customize->add_setting('setting_slider_' . $slider . '_text_color', array(
+        $wp_customize->add_setting('setting_slider_' . $slider . '_text_color', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
         ));
@@ -124,7 +121,7 @@ class Tikva_Customizer
             'settings' => 'setting_slider_' . $slider . '_text_color',
             'description' => __('Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
         ));
-        
+
         $wp_customize->add_setting('setting_slider_' . $slider . '_page', array(
             // note - works with or without capability & type set
             'capability' => 'edit_theme_options',
@@ -139,10 +136,10 @@ class Tikva_Customizer
             'type' => 'dropdown-pages',
             'settings' => 'setting_slider_' . $slider . '_page',
         )); // end link
- 
+
         $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
             'default' => '',
-           'sanitize_callback' => 'esc_url_raw')
+            'sanitize_callback' => 'esc_url_raw')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_url', array(
             'label' => __('...or enter URL to link to', 'tikva'),
@@ -168,7 +165,7 @@ class Tikva_Customizer
             'description' => __('Configuration of Slider', 'tikva'),
         ));
 
- 
+
 
 
         $wp_customize->add_section('section_slider_options', array(
@@ -216,16 +213,16 @@ class Tikva_Customizer
         $wp_customize->add_setting('setting_slider_interval', array(
             'default' => '5000',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
-              ));
-          
+        ));
+
         $wp_customize->add_control('control_slider_interval', array(
             'label' => __('Transition delay', 'tikva'),
             'description' => __('Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling).', 'tikva'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_interval',
-             'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger'))
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger'))
         );
-        
+
         $wp_customize->add_setting('setting_slider_pause', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -239,7 +236,7 @@ class Tikva_Customizer
             'settings' => 'setting_slider_pause',
             'type' => 'checkbox',
         ));
-        
+
         $wp_customize->add_setting('setting_slider_keyboard', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -253,7 +250,7 @@ class Tikva_Customizer
             'settings' => 'setting_slider_keyboard',
             'type' => 'checkbox',
         ));
-        
+
         $wp_customize->add_setting('setting_slider_wrap', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -267,7 +264,7 @@ class Tikva_Customizer
             'settings' => 'setting_slider_wrap',
             'type' => 'checkbox',
         ));
-        
+
         for ($i = 1; $i <= 6; $i++) {
             $this->addSliderOptions($wp_customize, $i);
         }
@@ -353,7 +350,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_section('section_social_media_buttons', array(
-            'priority' => 10,
+            'priority' => 20,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Social Media Buttons', 'tikva'),
@@ -362,16 +359,16 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_section('section_social_media_position', array(
-            'priority' => 20,
+            'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Social Media Buttons Position', 'tikva'),
-            'description' => __('Set position of Social Media Buttons', 'tikva'),
+            'title' => __('Social Media Buttons Options', 'tikva'),
+            'description' => __('Set options of Social Media Buttons', 'tikva'),
             'panel' => 'panel_social_media_integration',
         ));
 
-        
-          $wp_customize->add_setting('setting_social_media_activate', array(
+
+        $wp_customize->add_setting('setting_social_media_activate', array(
             'default' => '',
             'capability' => 'edit_theme_options',
             'type' => 'option',
@@ -384,7 +381,7 @@ class Tikva_Customizer
             'settings' => 'setting_social_media_activate',
             'type' => 'checkbox',
         ));
-        
+
         $wp_customize->add_setting('setting_social_media_position', array(
             'default' => '2',
             'capability' => 'edit_theme_options',
@@ -403,8 +400,8 @@ class Tikva_Customizer
                 '3' => __('Below Footer', 'tikva'),
             ),
         ));
-        
-         $wp_customize->add_setting('setting_social_media_alignment', array(
+
+        $wp_customize->add_setting('setting_social_media_alignment', array(
             'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
@@ -422,6 +419,46 @@ class Tikva_Customizer
                 '3' => __('Right', 'tikva'),
             ),
         ));
+        
+         $wp_customize->add_setting('setting_social_button_size', array(
+            'default' => '2',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonSize')
+        ));
+
+        $wp_customize->add_control('control_social_button_size', array(
+            'label' => __('Button Size', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_button_size',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __('Small', 'tikva'), 
+                '2' => __('Medium', 'tikva'), // lg
+                '3' => __('Large', 'tikva'),  // 2x
+              
+                
+            ),
+        ));
+        
+        $wp_customize->add_setting('setting_social_button_type', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonType')
+        ));
+
+        $wp_customize->add_control('control_social_button_type', array(
+            'label' => __('Button Type', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_button_type',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __('Circle', 'tikva'), 
+                '2' => __('Square', 'tikva'), 
+            ),
+        ));
+        
     }
 
     /**

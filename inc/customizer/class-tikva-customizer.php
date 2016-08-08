@@ -487,7 +487,7 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_bg_hover', array(
-            'label' => __('Button Background Mouseover Color ', 'tikva'),
+            'label' => __('Button Background Mouseover Color', 'tikva'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_color_bg_hover',
             'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)

@@ -85,8 +85,8 @@ if ($navbarFixed != 'fixed-top') {
 <?php if ($navbarFixed == 'default') {
 
 ?>
-    <div>foo
-    <?php        tikva_display_social_media_buttons(3); ?>
+    <div>
+    <?php      //  tikva_display_social_media_buttons(3); ?>
     </div>
    
     <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">

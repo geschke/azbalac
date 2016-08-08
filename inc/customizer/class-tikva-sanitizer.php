@@ -98,7 +98,7 @@ class Tikva_Sanitizer
 
     public function sanitizeStylesheet($input)
     {
-        $stylesheets = getAvailableStylesheets();
+        $stylesheets = Tikva_Customizer::getAvailableStylesheets();
         if (!in_array($input, $stylesheets)) {
             return 'slate_accessibility_ready.min.css';
         }

@@ -10,7 +10,7 @@ require get_template_directory() . '/inc/template-tags.php';
 
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
-include get_template_directory() . '/inc/info-screen/welcome-screen.php';
+//include get_template_directory() . '/inc/info-screen/welcome-screen.php';
 
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
@@ -330,7 +330,7 @@ function tikva_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true );
 
     /*if ( is_singular() && wp_attachment_is_image() ) {
         wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );

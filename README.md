@@ -1,11 +1,17 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.4.0
+Version 0.4.1
 
 
 Version history:
 ================
+
+Version 0.4.1
+-  Bugfix: choosing theme stylesheet works again (Sorry for tha ugly bug!)
+- Social Media Button improvements: Choose style (circle or square), size (small, medium, large) and alignment. Additional, you can switch the colors independently from the default stylesheet color. 
+- minor code improvements
+- Bootstrap bumped to version 3.3.7
 
 Version 0.4.0
 - Snapchat added to Social Media Buttons

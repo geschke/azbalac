@@ -55,9 +55,8 @@ $navbarFixed = tikva_get_navbar_layout();
        ?>
 
         <?php 
-        tikva_set_slider_text_style();
-        wp_head(); ?>
-        <?php
+        wp_head(); 
+        
         /* Unfortunately there is no conditional JavaScript solution as it exists for stylesheets.
         */
         ?>

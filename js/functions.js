@@ -251,10 +251,10 @@
 $( ".innersocial" ).hover(
   function() {
      
-    $( this ).parent().find('.tttsocialtest').addClass('socialhover');
+    $( this ).parent().find('.innersocialbg').addClass('socialhover');
   }, function() {
      
-       $( this ).parent().find('.tttsocialtest').removeClass('socialhover');
+       $( this ).parent().find('.innersocialbg').removeClass('socialhover');
    
   }
 );

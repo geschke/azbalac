@@ -459,6 +459,41 @@ class Tikva_Customizer
             ),
         ));
         
+        
+        $wp_customize->add_setting('setting_social_button_color_fg', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_fg', array(
+            'label' => __('Button Foreground (Icon) Color', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_button_color_fg',
+            'description' => __('Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+        
+        $wp_customize->add_setting('setting_social_button_color_bg', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_bg', array(
+            'label' => __('Button Background Color', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_button_color_bg',
+            'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+        
+        $wp_customize->add_setting('setting_social_button_color_bg_hover', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_bg_hover', array(
+            'label' => __('Button Background Mouseover Color ', 'tikva'),
+            'section' => 'section_social_media_position',
+            'settings' => 'setting_social_button_color_bg_hover',
+            'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+        
+        
     }
 
     /**

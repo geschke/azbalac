@@ -112,6 +112,49 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 endif; // tikva_setup
 add_action( 'after_setup_theme', 'tikva_setup' );
 
+
+/**
+ * Add color styling from theme
+ */
+ //wp_enqueue_style( 'tikva-default', get_template_directory_uri() . '/css/default.css' );
+ 
+if ( ! function_exists( 'tikva_add_social_button_style' ) ) :
+function tikva_add_social_button_style() {
+    wp_enqueue_style(
+        'tikva-default-style',
+        get_template_directory_uri() . '/css/default.css'
+    );
+    $css = '';
+    $social_button_color_bg_hover = get_theme_mod('setting_social_button_color_bg_hover');
+    $social_button_color_bg = get_theme_mod('setting_social_button_color_bg');
+    $social_button_color_fg = get_theme_mod('setting_social_button_color_fg');
+    if ($social_button_color_bg_hover) {
+        $css .= ".socialhover {
+    color: $social_button_color_bg_hover !important;
+        } 
+                 ";
+    }
+    if ($social_button_color_bg) {
+        $css .= "
+    .innersocialbg {
+        color: $social_button_color_bg ;
+            }
+                 ";
+    }
+    if ($social_button_color_fg) {
+        $css .= "
+    .innersocial {
+        color: $social_button_color_fg;  
+    }
+    
+                ";
+    }
+    
+   
+    wp_add_inline_style( 'tikva-default-style', $css );
+}
+endif;
+
 /**
  * Set up the content width value based on the theme's design.
  *
@@ -342,6 +385,8 @@ function tikva_bootstrap_styles()
 add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
 add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 add_action( 'wp_enqueue_scripts', 'tikva_enqueue_font_awesome' );
+add_action( 'wp_enqueue_scripts', 'tikva_add_social_button_style' );
+
 /**
  * Create a nicely formatted and more specific title element text for output
  * in head of document, based on current view.
@@ -714,10 +759,9 @@ function tikva_build_social_button($socialOption, $socialIcon, $buttonSize, $but
     $styleFg = '';
     $styleBg = '';
     
-    $output = sprintf('<a class="socialbutton" target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x tttsocialtest"></i><i %s class="fa fa-%s fa-stack-1x fa-inverse socialtest"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
+    $output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="fa fa-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
     return $output;
-    //$output = sprintf('<div class="socialcircles socialcircle-size-1"><a target="_blank" href="%s"><i class="fa fa-%s %s fa-inverse"></i></a></div>',esc_url($url),$socialIcon, $faSize);
-    //return $output;
+   
 }
 
 
@@ -766,9 +810,6 @@ function tikva_display_social_media_buttons($currentPosition) {
         <div style="text-align: <?php echo $align; ?>;">
             
             
-<a class="xxsocialbutton" target="_blank" href="https://www.facebook.com/rgeschke"><span class="tttsocialtest fa-stack  fa-2x "><i style="color: #ff0039;" class="fa fa-square fa-stack-2x tttsocialtest"></i><i  class="fa fa-facebook fa-stack-1x fa-inverse innersocial socialtest "></i></span></a>  
- 
-
             <?php
             $socialOutput = '';
             foreach ($socialButtons as $socialOption => $socialIcon) {
@@ -785,24 +826,27 @@ function tikva_display_social_media_buttons($currentPosition) {
 }
 endif; // tikva_display_social_media_buttons
 
-if ( ! function_exists( 'tikva_set_slider_text_style' ) ) :
-function tikva_set_slider_text_style() 
-{
-    ?>
-     <style type="text/css">
-         .carousel-caption-left {
+if ( ! function_exists('tikva_set_slider_text_style')) :
+
+    function tikva_set_slider_text_style()
+    {
+        wp_enqueue_style(
+                'tikva-default-style', get_template_directory_uri() . '/css/default.css'
+        );
+        $color = get_theme_mod('setting_social_button_color_bg_hover');
+        $custom_css = "
+             .carousel-caption-left {
              text-align: left !important;
          }
          .carousel-caption-right {
              text-align: right !important;
          }
          .tikva-slider {
-             
              margin-bottom: 10px;
          }
-     </style>    
-    <?php
-}
+";
+        wp_add_inline_style('tikva-default-style', $custom_css);
+    }
 
 endif; // tikva_set_slider_text_style
 
@@ -818,6 +862,8 @@ function tikva_show_slider($sliderPosition)
     if (get_option('setting_slider_position') != $sliderPosition) {
         return '';
     }
+    tikva_set_slider_text_style(); // add css modifications only when slider is displayed
+        
     $sliderInterval = get_theme_mod('setting_slider_interval');
     $sliderPause = get_option('setting_slider_pause') ? 'hover': '';
     $sliderKeyboard = get_option('setting_slider_keyboard') ? 'true': 'false';

@@ -34,7 +34,9 @@ class Tikva_Customizer
         $this->addCustomizerSocialButtons($wp_customize);
         $this->addCustomizerSliderOptions($wp_customize);
         $this->addCustomizerColors($wp_customize);
-        $this->addCustomizerStylingOptions($wp_customize);
+        $this->addCustomizerStylingPanel($wp_customize);
+        $this->addCustomizerGeneralSettings($wp_customize);
+            $this->addCustomizerFooterOptions($wp_customize);
         $this->addCustomizerHeaderImageOptions($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
     }
@@ -602,14 +604,48 @@ class Tikva_Customizer
      * 
      * @param type $wp_customize
      */
-    public function addCustomizerStylingOptions($wp_customize)
+    public function addCustomizerStylingPanel($wp_customize)
     {
-        $wp_customize->add_section('section_styling_options', array(
-            'priority' => 25,
+         $wp_customize->add_panel('panel_styling_options', array(
+            'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Styling Options', 'tikva'),
+            'description' => __('Configuration of the styling of the site', 'tikva'),
         ));
+
+        $wp_customize->add_section('section_styling_options_general', array(
+            'priority' => 10,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('General Settings', 'tikva'),
+            'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'tikva'),
+            'panel' => 'panel_styling_options',
+        ));
+
+        $wp_customize->add_section('section_styling_options_footer', array(
+            'priority' => 20,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Footer Options', 'tikva'),
+            'description' => __('Set options of Footer', 'tikva'),
+            'panel' => 'panel_styling_options',
+        ));
+        
+        
+     
+        
+       
+    }
+
+      /**
+     * Add Styling options to Customizer
+     * 
+     * @param type $wp_customize
+     */
+    public function addCustomizerGeneralSettings($wp_customize)
+    {
+       
 
         $wp_customize->add_setting('tikva_layout', array(
             'default' => '2',
@@ -621,7 +657,7 @@ class Tikva_Customizer
         $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout', array(
             'label' => __('Layout', 'tikva'),
             'description' => __('Set layout of your site.', 'tikva'),
-            'section' => 'section_styling_options',
+            'section' => 'section_styling_options_general',
             'settings' => 'tikva_layout',
             'choices' => array(
                 '1' => get_template_directory_uri() . '/images/admin/1c.png',
@@ -641,7 +677,7 @@ class Tikva_Customizer
         $wp_customize->add_control('tikva_stylesheet', array(
             'settings' => 'tikva_stylesheet',
             'label' => __('Theme Stylesheet', 'tikva'),
-            'section' => 'section_styling_options',
+            'section' => 'section_styling_options_general',
             'description' => __('Select your themes alternative color scheme.', 'tikva'),
             'type' => 'select',
             'choices' => $this->getAvailableStylesheets()
@@ -656,7 +692,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('navbar_fixed', array(
             'label' => __('Navbar fixed options', 'tikva'),
-            'section' => 'section_styling_options',
+            'section' => 'section_styling_options_general',
             'settings' => 'navbar_fixed',
             'type' => 'radio',
             'choices' => array(
@@ -674,7 +710,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('navbar_style_inverse', array(
             'label' => __('Navbar style', 'tikva'),
-            'section' => 'section_styling_options',
+            'section' => 'section_styling_options_general',
             'settings' => 'navbar_style_inverse',
             'type' => 'radio',
             'choices' => array(
@@ -682,8 +718,57 @@ class Tikva_Customizer
                 'inverse' => __('Inverse', 'tikva'),
             ),
         ));
+        
+        
+       
     }
+    
+    
+     /**
+     * Add Footer options to Customizer
+     * 
+     * @param type $wp_customize
+     */
+    public function addCustomizerFooterOptions($wp_customize)
+    {
+        
+        
+         $wp_customize->add_setting('setting_footer_activate', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
 
+        $wp_customize->add_control('control_footer_activate', array(
+            'label' => __('Show footer', 'tikva'),
+            'section' => 'section_styling_options_footer',
+            'settings' => 'setting_footer_activate',
+            'type' => 'checkbox',
+        ));
+        
+        
+           $wp_customize->add_setting('setting_footer_layout', array(
+            'default' => '3',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFooterLayout')
+        ));
+        
+           for ($i = 1; $i <= 18; $i++) {
+                $footerLayouts[$i] = get_template_directory_uri() . sprintf("/images/admin/footer/option%02d.png", $i);
+           }
+         
+           
+        $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
+            'label' => __('Footer Layout', 'tikva'),
+            'description' => __('Set layout of the footer.', 'tikva'),
+            'section' => 'section_styling_options_footer',
+            'settings' => 'setting_footer_layout',
+            'choices' => $footerLayouts
+        )));
+    }
+    
     /**
      * Add Homepage options to Customizer
      * 

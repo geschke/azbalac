@@ -38,7 +38,7 @@ $footerStyles = tikva_get_footer_styles();
     <div class="col-md-4 col-sm-4">
         <?php
         if(is_active_sidebar('footer-sidebar-3')){
-            dynamic_sidebar('footer-sidebar-3');
+      //      dynamic_sidebar('footer-sidebar-3');
         }
         ?>
     </div>

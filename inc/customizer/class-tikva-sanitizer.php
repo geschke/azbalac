@@ -80,7 +80,20 @@ class Tikva_Sanitizer
             return 2;
         return $input;
     }
+    
+    public function sanitizeFooterLayout($input)
+    {
+        return $this->sanitizeRange($input,3, 1,18);
+    }
 
+    public function sanitizeRange($input, $default, $start, $end)
+    {
+        $input = absint($input);
+        if ($input < $start || $input > $end)
+            return $default;
+        return $input;
+    }
+    
     public function sanitizeNavbarStyleInverse($input)
     {
         if ($input == 'inverse')

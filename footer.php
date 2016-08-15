@@ -16,30 +16,35 @@
 <?php
 $footerStyles = tikva_get_footer_styles();
 ?>
-
+<?php
+Tikva_Footer::build();
+// todo: add styling...
+?>
 <div style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
 
 <div role="complementary" class="container">
+    
+    
 <div class="row" style="padding: 10px; 0px; 10px;">
     <div class="col-md-4 col-sm-4">
         <?php
-        if(is_active_sidebar('footer-sidebar-1')){
-            dynamic_sidebar('footer-sidebar-1');
-        }
+     //   if(is_active_sidebar('footer-sidebar-1')){
+       //     dynamic_sidebar('footer-sidebar-1');
+       // }
         ?>
     </div>
     <div class="col-md-4 col-sm-4">
         <?php
-        if(is_active_sidebar('footer-sidebar-2')){
-            dynamic_sidebar('footer-sidebar-2');
-        }
+       // if(is_active_sidebar('footer-sidebar-2')){
+       //     dynamic_sidebar('footer-sidebar-2');
+        //}
         ?>
     </div>
     <div class="col-md-4 col-sm-4">
         <?php
-        if(is_active_sidebar('footer-sidebar-3')){
+       // if(is_active_sidebar('footer-sidebar-3')){
       //      dynamic_sidebar('footer-sidebar-3');
-        }
+       // }
         ?>
     </div>
 </div>

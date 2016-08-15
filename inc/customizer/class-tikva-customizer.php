@@ -15,7 +15,7 @@ class Tikva_Customizer
 {
 
     /**
-     * TTikva_Customizer constructor.
+     * Tikva_Customizer constructor.
      *
      * @access public
      * @since  tikva 0.4

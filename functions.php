@@ -18,6 +18,9 @@ require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.ph
 require_once( get_template_directory() . '/inc/customizer/class-tikva-sanitizer.php' );
 require_once( get_template_directory() . '/inc/customizer/class-tikva-customizer.php' );
 
+require_once( get_template_directory() . '/inc/class-tikva-footer.php' );
+
+
 new Tikva_Customizer();
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
@@ -204,51 +207,32 @@ if ( ! function_exists( 'tikva_get_body_styles' ) ) :
     }
 endif;
 
-function theme_tikva_widgets_init() 
+function theme_tikva_widgets_init()
 {
     $bodyStyles = tikva_get_body_styles();
 
     register_sidebar(array(
         'name' => 'Sidebar 1',
         'id' => 'sidebar-1',
-        'class'         => '',
-        'before_widget' => '<div id="%1$s" style="'. $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg']  . '" class="well widget %2$s">',
-        'after_widget'  => "</div>\n",
-        'before_title'  => '<h3 class="widgettitle">',
-        'after_title'   => "</h3>\n"
+        'class' => '',
+        'before_widget' => '<div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="well widget %2$s">',
+        'after_widget' => "</div>\n",
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => "</h3>\n"
     ));
 
-    register_sidebar( array(
-        'name' => 'Footer Sidebar 1 (left)',
-        'id' => 'footer-sidebar-1',
-        'description' => 'Appears in the footer area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
-    register_sidebar( array(
-        'name' => 'Footer Sidebar 2 (middle)',
-        'id' => 'footer-sidebar-2',
-        'description' => 'Appears in the footer area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
-    register_sidebar( array(
-        'name' => 'Footer Sidebar 3 (right)',
-        'id' => 'footer-sidebar-3',
-        'description' => 'Appears in the footer area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
-
-    
+    for ($i = 1; $i <= 6; $i++) {
+        register_sidebar(array(
+            'name' => sprintf("Footer Widget Area %d", $i),
+            'id' => sprintf("footer-sidebar-%d", $i),
+            'description' => 'Appears in the footer area',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ));
+    }
 }
-
 
 if ( function_exists('register_sidebar') ) {
 

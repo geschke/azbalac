@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
         jQuery('#customize-theme-controls > ul').prepend('<li class="accordion-section tikva-upsells">');
     }
     if (typeof Tikva_aboutpage !== 'undefined') {
-        jQuery('.tikva-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="' + Tikva_aboutpage + '" class="button" target="_blank">{themeinfo}</a>'.replace('{themeinfo}', tikvaWelcomeScreenCustomizerObject.themeinfo));
+        jQuery('.tikva-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="' + Tikva_aboutpage + '" class="button" >{themeinfo}</a>'.replace('{themeinfo}', tikvaWelcomeScreenCustomizerObject.themeinfo));
     }
     if ( !jQuery( ".tikva-upsells" ).length ) {
         jQuery('#customize-theme-controls > ul').prepend('</li>');

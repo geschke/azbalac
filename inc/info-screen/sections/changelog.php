@@ -15,18 +15,29 @@ $Tikva = wp_get_theme( 'Tikva' );
 	</div>
 
 	<?php
-	WP_Filesystem();
-	global $wp_filesystem;
-	$Tikva_changelog = $wp_filesystem->get_contents( get_template_directory().'/README.md' );
-	$Tikva_changelog_lines = explode(PHP_EOL, $Tikva_changelog);
-	foreach($Tikva_changelog_lines as $Tikva_changelog_line){
-		if(substr( $Tikva_changelog_line, 0, 3 ) === "###"){
-			echo '<h1>'.substr($Tikva_changelog_line,3).'</h1>';
-		} else {
-			echo $Tikva_changelog_line,'<br/>';
-		}
-	}
+        
+        function tikva_show_changelog()
+        {
+            WP_Filesystem();
+            global $wp_filesystem;
+            $changelog = $wp_filesystem->get_contents(get_template_directory() . '/README.md');
+            $lines = explode(PHP_EOL, $changelog);
+            foreach ($lines as $line) {
+                if (substr($line, 0, 2) === "# ") {
+                    echo '<h1>' . substr($line, 2) . '</h1>';
+                }
+                elseif (substr($line, 0, 3) === "## ") {
+                    echo '<h2>' . substr($line, 3) . '</h2>';
+                }
+                elseif (substr($line, 0, 4) === "### ") {
+                    echo '<h3>' . substr($line, 4) . '</h3>';    
+                } else {
+                    echo $line, '<br/>';
+                }
+            }
+        }
 
-	?>
+        tikva_show_changelog();
+        ?>
 	
 </div>

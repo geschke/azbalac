@@ -1,5 +1,5 @@
-Tikva - a small theme based on Bootstrap 3.0
-============================================
+Tikva - A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
+===========================================================================
 
 Version 0.4.2
 

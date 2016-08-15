@@ -212,7 +212,7 @@ function theme_tikva_widgets_init()
     $bodyStyles = tikva_get_body_styles();
 
     register_sidebar(array(
-        'name' => 'Sidebar 1',
+        'name' => __("Sidebar 1", 'tikva'),
         'id' => 'sidebar-1',
         'class' => '',
         'before_widget' => '<div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="well widget %2$s">',
@@ -223,7 +223,7 @@ function theme_tikva_widgets_init()
 
     for ($i = 1; $i <= 6; $i++) {
         register_sidebar(array(
-            'name' => sprintf("Footer Widget Area %d", $i),
+            'name' => sprintf(__("Footer Widget Area #%d", 'tikva'), $i),
             'id' => sprintf("footer-sidebar-%d", $i),
             'description' => 'Appears in the footer area',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',

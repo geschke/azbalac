@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tikva v0.4.1\n"
+"Project-Id-Version: Tikva v0.4.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2013-12-12 05:25:07+00:00\n"
-"PO-Revision-Date: 2016-08-08 12:08:47+0000\n"
+"PO-Revision-Date: 2016-08-15 14:01:12+0000\n"
 "Last-Translator: Ralf Geschke <ralf@kuerbis.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgid "F Y"
 msgstr "F Y"
 
 #: archive.php:42
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Yearly Archives: %s"
 msgstr "Archiv (Jahr): %s"
@@ -56,7 +56,7 @@ msgid "Archives"
 msgstr "Archive"
 
 #: category.php:25
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Category Archives: %s"
 msgstr "Archiv (Tag): %s"
@@ -108,23 +108,23 @@ msgstr "% Kommentare"
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: footer.php:56
+#: footer.php:37
 #@ tikva
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:57
-#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+#: footer.php:37
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 #@ tikva
 msgid "Proudly powered by %s"
 msgstr "Präsentiert von %s"
 
-#: functions.php:297
+#: functions.php:281
 #@ tikva
 msgid "Search"
 msgstr "Suche"
 
-#: inc/customizer/class-tikva-customizer.php:622
+#: inc/customizer/class-tikva-customizer.php:658
 #@ tikva
 msgid "Layout"
 msgstr "Layout"
@@ -135,52 +135,52 @@ msgstr "Layout"
 msgid "Posts navigation"
 msgstr "Beitrags-Navigation"
 
-#: inc/customizer/class-tikva-customizer.php:698
+#: inc/customizer/class-tikva-customizer.php:783
 #@ tikva
 msgid "Home Settings"
 msgstr "Home Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:709
+#: inc/customizer/class-tikva-customizer.php:794
 #@ tikva
 msgid "Maximum number of featured articles on homepage"
 msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
 
-#: inc/customizer/class-tikva-customizer.php:611
+#: inc/customizer/class-tikva-customizer.php:613
 #@ tikva
 msgid "Styling Options"
 msgstr "Styling Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:643
+#: inc/customizer/class-tikva-customizer.php:679
 #@ tikva
 msgid "Theme Stylesheet"
 msgstr "Theme Stylesheet"
 
-#: inc/customizer/class-tikva-customizer.php:645
+#: inc/customizer/class-tikva-customizer.php:681
 #@ tikva
 msgid "Select your themes alternative color scheme."
 msgstr "Wähle alternative Farbschemata"
 
-#: inc/customizer/class-tikva-customizer.php:658
+#: inc/customizer/class-tikva-customizer.php:694
 #@ tikva
 msgid "Navbar fixed options"
 msgstr "Einstellungen der Navigation"
 
-#: inc/customizer/class-tikva-customizer.php:676
+#: inc/customizer/class-tikva-customizer.php:712
 #@ tikva
 msgid "Navbar style"
 msgstr "Navigationsleiste Style"
 
-#: inc/customizer/class-tikva-customizer.php:514
+#: inc/customizer/class-tikva-customizer.php:516
 #@ tikva
 msgid "Header Background Color"
 msgstr "Header Hintergrundfarbe"
 
-#: inc/customizer/class-tikva-customizer.php:527
+#: inc/customizer/class-tikva-customizer.php:529
 #@ tikva
 msgid "Footer Font Color"
 msgstr "Footer Schriftfarbe"
 
-#: inc/customizer/class-tikva-customizer.php:541
+#: inc/customizer/class-tikva-customizer.php:543
 #@ tikva
 msgid "Footer Background Color"
 msgstr "Footer Hintergrundfarbe"
@@ -197,17 +197,17 @@ msgstr "Kommentar"
 msgid "View all posts in %s"
 msgstr "Zeige alle Beiträge in %s"
 
-#: functions.php:265
+#: functions.php:249
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:268
+#: functions.php:252
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:271
+#: functions.php:255
 #@ tikva
 msgid "Website"
 msgstr "Website"
@@ -222,7 +222,7 @@ msgstr "&laquo; Zurück"
 msgid "Next &raquo;"
 msgstr "Vor &raquo;"
 
-#: functions.php:436
+#: functions.php:420
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -268,13 +268,13 @@ msgstr "Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit and
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft eine Suche."
 
-#: functions.php:294
+#: functions.php:278
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:295
+#: functions.php:279
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
@@ -291,7 +291,7 @@ msgstr "Suchergebnisse für: %s"
 msgid "Theme Options:"
 msgstr "Theme Einstellungen:"
 
-#: inc/customizer/class-tikva-customizer.php:623
+#: inc/customizer/class-tikva-customizer.php:659
 #@ tikva
 msgid "Set layout of your site."
 msgstr "Setze Layout der Site"
@@ -303,7 +303,7 @@ msgid_plural "Categories:"
 msgstr[0] "Kategorie:"
 msgstr[1] "Kategorien:"
 
-#: functions.php:420
+#: functions.php:404
 #, php-format
 #@ tikva
 msgid "Page %s"
@@ -338,7 +338,7 @@ msgstr "Oben halten"
 msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
 msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
 
-#: functions.php:993
+#: functions.php:947
 #, php-format
 #@ tikva
 msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
@@ -354,133 +354,133 @@ msgstr "<span class=\"screen-reader-text\">Autor: </span>"
 msgid "<span class=\"screen-reader-text\">Date: </span>"
 msgstr "<span class=\"screen-reader-text\">Datum: </span>"
 
-#: inc/customizer/class-tikva-customizer.php:761
+#: inc/customizer/class-tikva-customizer.php:846
 #@ tikva
 msgid "Do not resize automatically the default header image"
 msgstr "Keine automatische Anpassung des Standard Header-Bildes"
 
-#: inc/customizer/class-tikva-customizer.php:764
+#: inc/customizer/class-tikva-customizer.php:849
 #@ tikva
 msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
 msgstr "Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: inc/customizer/class-tikva-customizer.php:776
+#: inc/customizer/class-tikva-customizer.php:861
 #@ tikva
 msgid "Header Image (medium screen)"
 msgstr "Header-Bild (mittlere Displays)"
 
-#: inc/customizer/class-tikva-customizer.php:780
+#: inc/customizer/class-tikva-customizer.php:865
 #@ tikva
 msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
 msgstr "Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet (Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
-#: inc/customizer/class-tikva-customizer.php:792
+#: inc/customizer/class-tikva-customizer.php:877
 #@ tikva
 msgid "Do not resize automatically the medium screen header image"
 msgstr "Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
 
-#: inc/customizer/class-tikva-customizer.php:795
+#: inc/customizer/class-tikva-customizer.php:880
 #@ tikva
 msgid "If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen."
 msgstr "Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: inc/customizer/class-tikva-customizer.php:807
+#: inc/customizer/class-tikva-customizer.php:892
 #@ tikva
 msgid "Header Image (small screen)"
 msgstr "Header-Bild (kleine Displays)"
 
-#: inc/customizer/class-tikva-customizer.php:811
+#: inc/customizer/class-tikva-customizer.php:896
 #@ tikva
 msgid "If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar."
 msgstr "Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet (Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
-#: inc/customizer/class-tikva-customizer.php:823
+#: inc/customizer/class-tikva-customizer.php:908
 #@ tikva
 msgid "Do not resize automatically the small screen header image"
 msgstr "Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
 
-#: inc/customizer/class-tikva-customizer.php:826
+#: inc/customizer/class-tikva-customizer.php:911
 #@ tikva
 msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
 msgstr "Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: inc/customizer/class-tikva-customizer.php:839
+#: inc/customizer/class-tikva-customizer.php:924
 #@ tikva
 msgid "Header Image (extra small screen)"
 msgstr "Header-Bild (sehr kleine Displays)"
 
-#: inc/customizer/class-tikva-customizer.php:843
+#: inc/customizer/class-tikva-customizer.php:928
 #@ tikva
 msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
 msgstr "Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
-#: inc/customizer/class-tikva-customizer.php:855
+#: inc/customizer/class-tikva-customizer.php:940
 #@ tikva
 msgid "Do not resize automatically the extra small header image"
 msgstr "Keine automatische Anpassung des Header-Bildes für sehr kleine Display-Größen."
 
-#: inc/customizer/class-tikva-customizer.php:858
+#: inc/customizer/class-tikva-customizer.php:943
 #@ tikva
 msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
 msgstr "Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
-#: inc/customizer/class-tikva-customizer.php:744
+#: inc/customizer/class-tikva-customizer.php:829
 #@ tikva
 msgid "Use the example image from the theme if no default header image is set."
 msgstr "Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild gesetzt ist."
 
-#: inc/customizer/class-tikva-customizer.php:747
+#: inc/customizer/class-tikva-customizer.php:832
 #@ tikva
 msgid "You can switch off this option, so no image will be displayed."
 msgstr "Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild erscheint, falls kein Standard-Header-Bild gesetzt ist."
 
-#: inc/customizer/class-tikva-customizer.php:544
+#: inc/customizer/class-tikva-customizer.php:546
 #@ tikva
 msgid "Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:556
+#: inc/customizer/class-tikva-customizer.php:558
 #@ tikva
 msgid "Sidebar Font Color"
 msgstr "Schriftfarbe Sidebar (Widgets)"
 
-#: inc/customizer/class-tikva-customizer.php:559
+#: inc/customizer/class-tikva-customizer.php:561
 #@ tikva
 msgid "Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Schriftgarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:570
+#: inc/customizer/class-tikva-customizer.php:572
 #@ tikva
 msgid "Sidebar Background Color"
 msgstr "Hintergrundfarbe Sidebar (Widgets)"
 
-#: inc/customizer/class-tikva-customizer.php:573
+#: inc/customizer/class-tikva-customizer.php:575
 #@ tikva
 msgid "Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:517
+#: inc/customizer/class-tikva-customizer.php:519
 #@ tikva
 msgid "Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Hintergrundfarbe für den Header (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:530
+#: inc/customizer/class-tikva-customizer.php:532
 #@ tikva
 msgid "Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Schriftgarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:663
-#: inc/customizer/class-tikva-customizer.php:681
+#: inc/customizer/class-tikva-customizer.php:699
+#: inc/customizer/class-tikva-customizer.php:717
 #@ tikva
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer/class-tikva-customizer.php:664
+#: inc/customizer/class-tikva-customizer.php:700
 #@ tikva
 msgid "Fixed to top"
 msgstr "Oben fixiert"
 
-#: inc/customizer/class-tikva-customizer.php:682
+#: inc/customizer/class-tikva-customizer.php:718
 #@ tikva
 msgid "Inverse"
 msgstr "Invers"
@@ -502,406 +502,473 @@ msgstr "<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\"><
 msgid "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
 msgstr "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
 
-#: inc/customizer/class-tikva-customizer.php:356
+#: inc/customizer/class-tikva-customizer.php:358
 #@ tikva
 msgid "Social Media Buttons"
 msgstr "Social Media Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:282
+#: inc/customizer/class-tikva-customizer.php:284
 #@ tikva
 msgid "Facebook"
 msgstr "Facebook"
 
-#: inc/customizer/class-tikva-customizer.php:283
+#: inc/customizer/class-tikva-customizer.php:285
 #@ tikva
 msgid "Enter the complete Facebook profile page URL (please include http or https!)"
 msgstr "Gib deine vollständige Facebook-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:290
+#: inc/customizer/class-tikva-customizer.php:292
 #@ tikva
 msgid "Google+"
 msgstr "Google+"
 
-#: inc/customizer/class-tikva-customizer.php:291
+#: inc/customizer/class-tikva-customizer.php:293
 #@ tikva
 msgid "Enter the complete Google+ page URL (please include http or https!)"
 msgstr "Gib deine Google+-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:294
+#: inc/customizer/class-tikva-customizer.php:296
 #@ tikva
 msgid "Instagram"
 msgstr "Instagram"
 
-#: inc/customizer/class-tikva-customizer.php:295
+#: inc/customizer/class-tikva-customizer.php:297
 #@ tikva
 msgid "Enter the complete Instagram page URL (please include http or https!)"
 msgstr "Gib deine Instagram-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:298
+#: inc/customizer/class-tikva-customizer.php:300
 #@ tikva
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: inc/customizer/class-tikva-customizer.php:299
+#: inc/customizer/class-tikva-customizer.php:301
 #@ tikva
 msgid "Enter the complete LinkedIn page URL (please include http or https!)"
 msgstr "Gib deine LinkedIn-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:302
+#: inc/customizer/class-tikva-customizer.php:304
 #@ tikva
 msgid "Slideshare"
 msgstr "Slideshare"
 
-#: inc/customizer/class-tikva-customizer.php:303
+#: inc/customizer/class-tikva-customizer.php:305
 #@ tikva
 msgid "Enter the complete Slideshare page URL (please include http or https!)"
 msgstr "Gib deine Slideshare-Seiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:310
+#: inc/customizer/class-tikva-customizer.php:312
 #@ tikva
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/class-tikva-customizer.php:311
+#: inc/customizer/class-tikva-customizer.php:313
 #@ tikva
 msgid "Enter the Twitter profile page URL (please include http!)"
 msgstr "Gib deine Twitter-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:314
+#: inc/customizer/class-tikva-customizer.php:316
 #@ tikva
 msgid "Vine"
 msgstr "Vine"
 
-#: inc/customizer/class-tikva-customizer.php:315
+#: inc/customizer/class-tikva-customizer.php:317
 #@ tikva
 msgid "Enter the complete Vine page URL (please include http or https!)"
 msgstr "Gib deine Vine-Seiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:318
+#: inc/customizer/class-tikva-customizer.php:320
 #@ tikva
 msgid "Xing"
 msgstr "Xing"
 
-#: inc/customizer/class-tikva-customizer.php:319
+#: inc/customizer/class-tikva-customizer.php:321
 #@ tikva
 msgid "Enter the complete Xing profile page URL (please include http or https!)"
 msgstr "Gib deine Xing-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:322
+#: inc/customizer/class-tikva-customizer.php:324
 #@ tikva
 msgid "YouTube"
 msgstr "YouTube"
 
-#: inc/customizer/class-tikva-customizer.php:323
+#: inc/customizer/class-tikva-customizer.php:325
 #@ tikva
 msgid "Enter the complete YouTube channel page URL (please include http or https!)"
 msgstr "Gib deine YouTube-Channel-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:399
+#: inc/customizer/class-tikva-customizer.php:401
 #@ tikva
 msgid "Between Content and Footer"
 msgstr "Zwischen Inhaltsbereich und Footer"
 
-#: inc/customizer/class-tikva-customizer.php:400
+#: inc/customizer/class-tikva-customizer.php:402
 #@ tikva
 msgid "Below Footer"
 msgstr "Unterhalb des Footers"
 
-#: inc/customizer/class-tikva-customizer.php:348
+#: inc/customizer/class-tikva-customizer.php:350
 #@ tikva
 msgid "Social Media Integration"
 msgstr "Social Media Integration"
 
-#: inc/customizer/class-tikva-customizer.php:349
+#: inc/customizer/class-tikva-customizer.php:351
 #@ tikva
 msgid "Configuration of Social Media Buttons"
 msgstr "Konfiguration der Social Media Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:357
+#: inc/customizer/class-tikva-customizer.php:359
 #@ tikva
 msgid "Configure URLs of your Social Media Buttons"
 msgstr "Konfiguriere URLs von den Social Media Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:393
+#: inc/customizer/class-tikva-customizer.php:395
 #@ tikva
 msgid "Button Position"
 msgstr "Button Position"
 
-#: inc/customizer/class-tikva-customizer.php:731
+#: inc/customizer/class-tikva-customizer.php:816
 #@ tikva
 msgid "Header Image Options"
 msgstr "Header-Bild-Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:286
+#: inc/customizer/class-tikva-customizer.php:288
 #@ tikva
 msgid "GitHub"
 msgstr "GitHub"
 
-#: inc/customizer/class-tikva-customizer.php:287
+#: inc/customizer/class-tikva-customizer.php:289
 #@ tikva
 msgid "Enter the complete GitHub profile page URL (please include http or https!)"
 msgstr "Gib deine GitHub-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: functions.php:979
+#: functions.php:933
 #@ tikva
 msgid "Previous"
 msgstr "Zurück"
 
-#: functions.php:983
+#: functions.php:937
 #@ tikva
 msgid "Next"
 msgstr "Vor"
 
-#: inc/customizer/class-tikva-customizer.php:48
+#: inc/customizer/class-tikva-customizer.php:50
 #, php-format
 #@ tikva
 msgid "Slider #%d"
 msgstr "Slider #%d"
 
-#: inc/customizer/class-tikva-customizer.php:49
+#: inc/customizer/class-tikva-customizer.php:51
 #, php-format
 #@ tikva
 msgid "Configure Slider #%d"
 msgstr "Konfiguriere Slider #%d"
 
-#: inc/customizer/class-tikva-customizer.php:61
+#: inc/customizer/class-tikva-customizer.php:63
 #@ tikva
 msgid "Slider image"
 msgstr "Slider Bild"
 
-#: inc/customizer/class-tikva-customizer.php:69
+#: inc/customizer/class-tikva-customizer.php:71
 #@ tikva
 msgid "Image displayed on slider"
 msgstr "Bild für Slider"
 
-#: inc/customizer/class-tikva-customizer.php:77
+#: inc/customizer/class-tikva-customizer.php:79
 #@ tikva
 msgid "Title"
 msgstr "Titel"
 
-#: inc/customizer/class-tikva-customizer.php:88
+#: inc/customizer/class-tikva-customizer.php:90
 #@ tikva
 msgid "Description"
 msgstr "Beschreibung (Untertitel)"
 
-#: inc/customizer/class-tikva-customizer.php:102
+#: inc/customizer/class-tikva-customizer.php:104
 #@ tikva
 msgid "Position of Slider text"
 msgstr "Platzierung des Textes auf dem Slider"
 
-#: inc/customizer/class-tikva-customizer.php:107
+#: inc/customizer/class-tikva-customizer.php:109
 #@ tikva
 msgid "Left)"
 msgstr "Links"
 
-#: inc/customizer/class-tikva-customizer.php:108
+#: inc/customizer/class-tikva-customizer.php:110
 #@ tikva
 msgid "Center"
 msgstr "Zentriert"
 
-#: inc/customizer/class-tikva-customizer.php:109
-#: inc/customizer/class-tikva-customizer.php:419
+#: inc/customizer/class-tikva-customizer.php:111
+#: inc/customizer/class-tikva-customizer.php:421
 #@ tikva
 msgid "Right"
 msgstr "Rechts"
 
-#: inc/customizer/class-tikva-customizer.php:119
+#: inc/customizer/class-tikva-customizer.php:121
 #@ tikva
 msgid "Slider Text Color"
 msgstr "Textfarbe Slider"
 
-#: inc/customizer/class-tikva-customizer.php:122
+#: inc/customizer/class-tikva-customizer.php:124
 #@ tikva
 msgid "Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Schriftgarbe für den Titel und Beschreibung des Sliders (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:134
+#: inc/customizer/class-tikva-customizer.php:136
 #@ tikva
 msgid "Link to page"
 msgstr "Verlinke Seite"
 
-#: inc/customizer/class-tikva-customizer.php:145
+#: inc/customizer/class-tikva-customizer.php:147
 #@ tikva
 msgid "...or enter URL to link to"
 msgstr "...oder URL eingeben zur Verlinkung"
 
-#: inc/customizer/class-tikva-customizer.php:164
+#: inc/customizer/class-tikva-customizer.php:166
 #@ tikva
 msgid "Slider Integration"
 msgstr "Slider-Integration"
 
-#: inc/customizer/class-tikva-customizer.php:165
+#: inc/customizer/class-tikva-customizer.php:167
 #@ tikva
 msgid "Configuration of Slider"
 msgstr "Slider-Konfiguration"
 
-#: inc/customizer/class-tikva-customizer.php:176
+#: inc/customizer/class-tikva-customizer.php:178
 #@ tikva
 msgid "Set generic slider options"
 msgstr "Setze allgemeine Slider-Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:188
+#: inc/customizer/class-tikva-customizer.php:190
 #@ tikva
 msgid "Show slider"
 msgstr "Aktiviere Slider"
 
-#: inc/customizer/class-tikva-customizer.php:202
+#: inc/customizer/class-tikva-customizer.php:204
 #@ tikva
 msgid "Slider Position"
 msgstr "Slider Position"
 
-#: inc/customizer/class-tikva-customizer.php:207
+#: inc/customizer/class-tikva-customizer.php:209
 #@ tikva
 msgid "Above navigation (if navbar position is not fixed)"
 msgstr "Oberhalb Navigationsleiste (wenn Navigationsleiste nicht am oberen Rand fixiert ist)"
 
-#: inc/customizer/class-tikva-customizer.php:208
+#: inc/customizer/class-tikva-customizer.php:210
 #@ tikva
 msgid "Between navigation and featured articles"
 msgstr "Zwischen Navigationsleiste und hervorgehobenen Beiträgen"
 
-#: inc/customizer/class-tikva-customizer.php:209
+#: inc/customizer/class-tikva-customizer.php:211
 #@ tikva
 msgid "Between featured articles and content"
 msgstr "Zwischen hervorgehobenen Beiträgen und übrigem Inhalt"
 
-#: inc/customizer/class-tikva-customizer.php:210
+#: inc/customizer/class-tikva-customizer.php:212
 #@ tikva
 msgid "Between content and footer"
 msgstr "Zwischen Inhalt und Footer"
 
-#: inc/customizer/class-tikva-customizer.php:219
+#: inc/customizer/class-tikva-customizer.php:221
 #@ tikva
 msgid "Transition delay"
 msgstr "Verzögerung beim Übergang"
 
-#: inc/customizer/class-tikva-customizer.php:220
+#: inc/customizer/class-tikva-customizer.php:222
 #@ tikva
 msgid "Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling)."
 msgstr "Zeit in Millisekunden, die vergehen soll, bevor das nächste Objekt aufgerufen wird (0 für keine automatische Bewegung)"
 
-#: inc/customizer/class-tikva-customizer.php:234
+#: inc/customizer/class-tikva-customizer.php:236
 #@ tikva
 msgid "Pause sliding on mouseenter"
 msgstr "Pausiert die Bewegung des Sliders bei mouseenter"
 
-#: inc/customizer/class-tikva-customizer.php:248
+#: inc/customizer/class-tikva-customizer.php:250
 #@ tikva
 msgid "Slider reacts to keyboard events"
 msgstr "Slider reagiert auf Tastatureingaben"
 
-#: inc/customizer/class-tikva-customizer.php:262
+#: inc/customizer/class-tikva-customizer.php:264
 #@ tikva
 msgid "Cycle continuously"
 msgstr "Dauerhafte Bewegung"
 
-#: inc/customizer/class-tikva-customizer.php:306
+#: inc/customizer/class-tikva-customizer.php:308
 #@ tikva
 msgid "Snapchat"
 msgstr "Snapchat"
 
-#: inc/customizer/class-tikva-customizer.php:307
+#: inc/customizer/class-tikva-customizer.php:309
 #@ tikva
 msgid "Enter the complete Snapchat page URL (please include http or https!)"
 msgstr "Gib deine Snapchat-Profilseiten-URL an (bitte inkl. http oder https)"
 
-#: inc/customizer/class-tikva-customizer.php:175
+#: inc/customizer/class-tikva-customizer.php:177
 #@ tikva
 msgid "Slider Options"
 msgstr "Slider Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:365
+#: inc/customizer/class-tikva-customizer.php:367
 #@ tikva
 msgid "Social Media Buttons Options"
 msgstr "Social Media Button Einstellungen"
 
-#: inc/customizer/class-tikva-customizer.php:366
+#: inc/customizer/class-tikva-customizer.php:368
 #@ tikva
 msgid "Set options of Social Media Buttons"
 msgstr "Setze Einstellungen der Social Media Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:379
+#: inc/customizer/class-tikva-customizer.php:381
 #@ tikva
 msgid "Show Social Media Buttons"
 msgstr "Zeige Social Media Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:412
+#: inc/customizer/class-tikva-customizer.php:414
 #@ tikva
 msgid "Button Alignment"
 msgstr "Button Ausrichtung"
 
-#: inc/customizer/class-tikva-customizer.php:417
+#: inc/customizer/class-tikva-customizer.php:419
 #@ tikva
 msgid "Left"
 msgstr "Links"
 
-#: inc/customizer/class-tikva-customizer.php:418
+#: inc/customizer/class-tikva-customizer.php:420
 #@ tikva
 msgid "Centered"
 msgstr "Zentriert"
 
-#: inc/customizer/class-tikva-customizer.php:431
+#: inc/customizer/class-tikva-customizer.php:433
 #@ tikva
 msgid "Button Size"
 msgstr "Größe der Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:436
+#: inc/customizer/class-tikva-customizer.php:438
 #@ tikva
 msgid "Small"
 msgstr "Klein"
 
-#: inc/customizer/class-tikva-customizer.php:437
+#: inc/customizer/class-tikva-customizer.php:439
 #@ tikva
 msgid "Medium"
 msgstr "Mittel"
 
-#: inc/customizer/class-tikva-customizer.php:438
+#: inc/customizer/class-tikva-customizer.php:440
 #@ tikva
 msgid "Large"
 msgstr "Groß"
 
-#: inc/customizer/class-tikva-customizer.php:452
+#: inc/customizer/class-tikva-customizer.php:454
 #@ tikva
 msgid "Button Type"
 msgstr "Button Typ"
 
-#: inc/customizer/class-tikva-customizer.php:457
+#: inc/customizer/class-tikva-customizer.php:459
 #@ tikva
 msgid "Circle"
 msgstr "Rund"
 
-#: inc/customizer/class-tikva-customizer.php:458
+#: inc/customizer/class-tikva-customizer.php:460
 #@ tikva
 msgid "Square"
 msgstr "Quadratisch (abgerundete Ecken)"
 
-#: inc/customizer/class-tikva-customizer.php:468
+#: inc/customizer/class-tikva-customizer.php:470
 #@ tikva
 msgid "Button Foreground (Icon) Color"
 msgstr "Schriftfarbe für das Icon"
 
-#: inc/customizer/class-tikva-customizer.php:471
+#: inc/customizer/class-tikva-customizer.php:473
 #@ tikva
 msgid "Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Schriftfarbe für das Social Media Button Icon (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:479
+#: inc/customizer/class-tikva-customizer.php:481
 #@ tikva
 msgid "Button Background Color"
 msgstr "Hintergrundfarbe des Buttons"
 
-#: inc/customizer/class-tikva-customizer.php:482
+#: inc/customizer/class-tikva-customizer.php:484
 #@ tikva
 msgid "Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Hintergrundfarbe für den Social Media Button (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:493
+#: inc/customizer/class-tikva-customizer.php:495
 #@ tikva
 msgid "Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet)."
 msgstr "Hintergrundfarbe für den Social Media Button bei Mouseover (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
-#: inc/customizer/class-tikva-customizer.php:490
+#: inc/customizer/class-tikva-customizer.php:492
 #@ tikva
 msgid "Button Background Mouseover Color"
 msgstr "Hintergrundfarbe des Buttons bei Mouseover"
+
+#: inc/class-tikva-footer.php:20
+#@ tikva
+msgid "Please Add Widgets"
+msgstr "Bitte Widgets hinzufügen"
+
+#: inc/class-tikva-footer.php:22
+#, php-format
+#@ tikva
+msgid "Remove this message by adding widgets to Footer Widget Area #%d."
+msgstr "Diese Nachricht ist ein Platzhalter und kann entfernt werden durch Hinzufügen von Inhalten im Footer Widget Bereich #%d."
+
+#: inc/class-tikva-footer.php:23
+#@ tikva
+msgid "Click here to go to Widget area."
+msgstr "Hier klicken, um Widgets zu konfigurieren."
+
+#: inc/customizer/class-tikva-customizer.php:614
+#@ tikva
+msgid "Configuration of the styling of the site"
+msgstr "Konfiguration des Stylings der Site"
+
+#: inc/customizer/class-tikva-customizer.php:621
+#@ tikva
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: inc/customizer/class-tikva-customizer.php:622
+#@ tikva
+msgid "Edit general settings:  colors, main layout, navigation bar."
+msgstr "Allgemeine Einstellungen konfigurieren: Styling, Layout, Navigation"
+
+#: inc/customizer/class-tikva-customizer.php:630
+#@ tikva
+msgid "Footer Options"
+msgstr "Footer Einstellungen"
+
+#: inc/customizer/class-tikva-customizer.php:631
+#@ tikva
+msgid "Set options of Footer"
+msgstr "Setze Einstellungen für den Footer"
+
+#: inc/customizer/class-tikva-customizer.php:744
+#@ tikva
+msgid "Show footer"
+msgstr "Zeige Footer an"
+
+#: inc/customizer/class-tikva-customizer.php:764
+#@ tikva
+msgid "Footer Layout"
+msgstr "Footer Layout"
+
+#: inc/customizer/class-tikva-customizer.php:765
+#@ tikva
+msgid "Set layout of the footer."
+msgstr "Layout-Einstellungen für den Footer"
+
+#: functions.php:215
+#@ tikva
+msgid "Sidebar 1"
+msgstr "Seitenleiste 1"
+
+#: functions.php:226
+#, php-format
+#@ tikva
+msgid "Footer Widget Area #%d"
+msgstr "Footer Widget Bereich #%d"
 

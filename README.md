@@ -1,11 +1,15 @@
 Tikva - a small theme based on Bootstrap 3.0
 ============================================
 
-Version 0.4.1
+Version 0.4.2
 
 
 Version history:
 ================
+
+Version 0.4.2
+- Footer implementation refactored - choose between 18 different styles or deactivate footer. 
+- Customizer settings revisited and partly restructured
 
 Version 0.4.1
 -  Bugfix: choosing theme stylesheet works again (Sorry for tha ugly bug!)

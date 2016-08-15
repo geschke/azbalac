@@ -559,36 +559,6 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
 endif;
 
 
-if ( ! function_exists( 'tikva_get_footer_styles' ) ) :
-
-    function tikva_get_footer_styles() {
-        $colorBgFooterData = get_theme_mod('color_bg_footer');
-    
-        if ($colorBgFooterData) {
-            $footerStyleColorBg = ' background-color: ' . $colorBgFooterData .';';
-        }
-        else {
-            $footerStyleColorBg = '';
-        }
-
-        $colorFgFooterData = get_theme_mod('color_fg_footer');
-
-        if ($colorFgFooterData) {
-            $footerStyleColorFg = ' color: ' . $colorFgFooterData .';';
-        }
-        else {
-            $footerStyleColorFg = '';
-        }
-        return array(
-            'footerStyleColorBg' => $footerStyleColorBg,
-            'footerStyleColorFg' => $footerStyleColorFg
-        );
-    }
-endif;
-
-
-
-
 if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
 
     function tikva_get_header_image_data() {

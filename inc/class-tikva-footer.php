@@ -1,9 +1,7 @@
 <?php
 
 /**
- * Implements Customizer functionality.
- *
- * Add custom sections and settings to the Customizer.
+ * Implements Footer functionality.
  *
  * @package   WordPress
  * @subpackage tikva
@@ -15,9 +13,9 @@ class Tikva_Footer
 {
     /* Assign function for widget areas */
 
-    private static function initializeFooterWidget($footerNumber)
+    private static function initializeFooterWidget($footerNumber, $columns)
     {
-        echo '<div  class="widget-area">';
+        printf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
         if (!dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
             echo '<h3 class="widget-title">' . __('Please Add Widgets', 'tikva') . '</h3>',
             '<div class="error-icon">',
@@ -32,141 +30,115 @@ class Tikva_Footer
 
     public static function build()
     {
-        
+
         $footerLayout = get_option('setting_footer_layout');
         $footerActivate = get_option('setting_footer_activate');
-        echo "footerLayout: $footerLayout // activate: $footerActivate";
+        //echo "footerLayout: $footerLayout // activate: $footerActivate";
 
         if ($footerActivate == "1" and ! empty($footerLayout)) {
-            echo '<div id="footer">';
+            echo '<div class="row" style="padding: 10px; 0px; 10px;" id="footer">';
             if ($footerLayout == 1) {
-                echo '<div id="footer-core" class="option1">';
-                self::initializeFooterWidget(1);
-                echo '</div>';
+                self::initializeFooterWidget(1, 12);
             } else if ($footerLayout == 2) {
-                echo '<div id="footer-core" class="option2">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                echo '</div>';
+
+                self::initializeFooterWidget(1, 6);
+                self::initializeFooterWidget(2, 6);
             } else if ($footerLayout == 3) {
-                echo '<div id="footer-core" class="option3">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                echo '</div>';
+                self::initializeFooterWidget(1, 4);
+                self::initializeFooterWidget(2, 4);
+                self::initializeFooterWidget(3, 4);
             } else if ($footerLayout == 4) {
-                echo '<div id="footer-core" class="option4">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-                echo '</div>';
+                self::initializeFooterWidget(1, 3);
+                self::initializeFooterWidget(2, 3);
+                self::initializeFooterWidget(3, 3);
+                self::initializeFooterWidget(4, 3);
             } else if ($footerLayout == 5) {
-                echo '<div id="footer-core" class="option5">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-                self::initializeFooterWidget(5);
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 2);
+                self::initializeFooterWidget(3, 4);
+                self::initializeFooterWidget(4, 2);
+                self::initializeFooterWidget(5, 2);
             } else if ($footerLayout == 6) {
-                echo '<div id="footer-core" class="option6">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-                self::initializeFooterWidget(5);
-                self::initializeFooterWidget(6);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 2);
+                self::initializeFooterWidget(3, 2);
+                self::initializeFooterWidget(4, 2);
+                self::initializeFooterWidget(5, 2);
+                self::initializeFooterWidget(6, 2);
             } else if ($footerLayout == 7) {
-                echo '<div id="footer-core" class="option7">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 4);
+                self::initializeFooterWidget(2, 8);
             } else if ($footerLayout == 8) {
-                echo '<div id="footer-core" class="option8">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 8);
+                self::initializeFooterWidget(2, 4);
             } else if ($footerLayout == 9) {
-                echo '<div id="footer-core" class="option9">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 3);
+                self::initializeFooterWidget(2, 9);
             } else if ($footerLayout == 10) {
-                echo '<div id="footer-core" class="option10">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 9);
+                self::initializeFooterWidget(2, 3);
             } else if ($footerLayout == 11) {
-                echo '<div id="footer-core" class="option11">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 10);
             } else if ($footerLayout == 12) {
-                echo '<div id="footer-core" class="option12">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 10);
+                self::initializeFooterWidget(2, 2);
             } else if ($footerLayout == 13) {
-                echo '<div id="footer-core" class="option13">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 2);
+                self::initializeFooterWidget(3, 2);
+                self::initializeFooterWidget(4, 6);
             } else if ($footerLayout == 14) {
-                echo '<div id="footer-core" class="option14">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 6);
+                self::initializeFooterWidget(2, 2);
+                self::initializeFooterWidget(3, 2);
+                self::initializeFooterWidget(4, 2);
             } else if ($footerLayout == 15) {
-                echo '<div id="footer-core" class="option15">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 4);
+                self::initializeFooterWidget(3, 6);
             } else if ($footerLayout == 16) {
-                echo '<div id="footer-core" class="option16">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 6);
+                self::initializeFooterWidget(2, 4);
+                self::initializeFooterWidget(3, 2);
             } else if ($footerLayout == 17) {
-                echo '<div id="footer-core" class="option17">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-                self::initializeFooterWidget(5);
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 3);
+                self::initializeFooterWidget(2, 3);
+                self::initializeFooterWidget(3, 2);
+                self::initializeFooterWidget(4, 2);
+                self::initializeFooterWidget(5, 2);
             } else if ($footerLayout == 18) {
-                echo '<div id="footer-core" class="option18">';
-                self::initializeFooterWidget(1);
-                self::initializeFooterWidget(2);
-                self::initializeFooterWidget(3);
-                self::initializeFooterWidget(4);
-                self::initializeFooterWidget(5);
-
-
-                echo '</div>';
+                self::initializeFooterWidget(1, 2);
+                self::initializeFooterWidget(2, 2);
+                self::initializeFooterWidget(3, 2);
+                self::initializeFooterWidget(4, 3);
+                self::initializeFooterWidget(5, 3);
             }
             echo '</div>';
         }
+    }
+
+    public static function getStyles()
+    {
+        $colorBgFooterData = get_theme_mod('color_bg_footer');
+
+        if ($colorBgFooterData) {
+            $footerStyleColorBg = ' background-color: ' . $colorBgFooterData . ';';
+        } else {
+            $footerStyleColorBg = '';
+        }
+
+        $colorFgFooterData = get_theme_mod('color_fg_footer');
+
+        if ($colorFgFooterData) {
+            $footerStyleColorFg = ' color: ' . $colorFgFooterData . ';';
+        } else {
+            $footerStyleColorFg = '';
+        }
+        return array(
+            'footerStyleColorBg' => $footerStyleColorBg,
+            'footerStyleColorFg' => $footerStyleColorFg
+        );
     }
 
 }

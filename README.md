@@ -9,7 +9,7 @@ Version 0.4.3
 
 
 Version 0.4.3
-- Added option to show date and author under headline of featurized posts, default off
+- Added option to show date and author under headline of featured posts, default off
 
 Version 0.4.2
  - Footer implementation refactored - choose between 18 different styles or deactivate footer. 

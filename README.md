@@ -2,10 +2,14 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.4.2
+Version 0.4.3
 
 
 ## Version history:
+
+
+Version 0.4.3
+- Added option to show date and author under headline of featurized posts, default off
 
 Version 0.4.2
  - Footer implementation refactored - choose between 18 different styles or deactivate footer. 

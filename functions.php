@@ -2,15 +2,13 @@
 
 
 
-load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
-
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
 
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
-include get_template_directory() . '/inc/info-screen/welcome-screen.php';
+// include get_template_directory() . '/inc/info-screen/welcome-screen.php';
 
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
@@ -55,6 +53,9 @@ if ( ! function_exists( 'tikva_setup' ) ) :
          * replace to change 'tikva' to the name of your theme in all
          * template files.
          */
+    
+        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
+
 //        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.

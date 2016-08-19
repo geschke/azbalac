@@ -32,10 +32,19 @@ echo '<div class="col-lg-' .  $post->themeCols . ' col-md-' . $post->themeCols .
 	<header class="entry-header">
 		<?php
         the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h2>' );
+        if (absint(get_option('setting_posts_featured_date'))) {
+        
+            if ( 'post' == get_post_type() ) {
+                tikva_posted_on();
+                echo '&nbsp';
+            }
+            edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
+            
+        }
         if (preg_match('/<!--more.*-->/',$post->post_content)) {
             the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
 
-            //the_content( '<br/><p><span class="btn btn-primary"><span class="screen-reader-text">'. __('Continue reading on ', 'tikva') . esc_html(get_the_title()) . '</span>' . __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'tikva' ) . '</span></p>' );
+            
         } else {
             the_excerpt();
         }

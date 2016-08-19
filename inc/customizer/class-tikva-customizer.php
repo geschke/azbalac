@@ -36,7 +36,8 @@ class Tikva_Customizer
         $this->addCustomizerColors($wp_customize);
         $this->addCustomizerStylingPanel($wp_customize);
         $this->addCustomizerGeneralSettings($wp_customize);
-            $this->addCustomizerFooterOptions($wp_customize);
+        $this->addCustomizerPostsSettings($wp_customize);
+        $this->addCustomizerFooterOptions($wp_customize);
         $this->addCustomizerHeaderImageOptions($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
     }
@@ -421,8 +422,8 @@ class Tikva_Customizer
                 '3' => __('Right', 'tikva'),
             ),
         ));
-        
-         $wp_customize->add_setting('setting_social_button_size', array(
+
+        $wp_customize->add_setting('setting_social_button_size', array(
             'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
@@ -435,14 +436,12 @@ class Tikva_Customizer
             'settings' => 'setting_social_button_size',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Small', 'tikva'), 
+                '1' => __('Small', 'tikva'),
                 '2' => __('Medium', 'tikva'), // lg
-                '3' => __('Large', 'tikva'),  // 2x
-              
-                
+                '3' => __('Large', 'tikva'), // 2x
             ),
         ));
-        
+
         $wp_customize->add_setting('setting_social_button_type', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -456,12 +455,12 @@ class Tikva_Customizer
             'settings' => 'setting_social_button_type',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Circle', 'tikva'), 
-                '2' => __('Square', 'tikva'), 
+                '1' => __('Circle', 'tikva'),
+                '2' => __('Square', 'tikva'),
             ),
         ));
-        
-        
+
+
         $wp_customize->add_setting('setting_social_button_color_fg', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
@@ -472,7 +471,7 @@ class Tikva_Customizer
             'settings' => 'setting_social_button_color_fg',
             'description' => __('Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
         ));
-        
+
         $wp_customize->add_setting('setting_social_button_color_bg', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
@@ -483,7 +482,7 @@ class Tikva_Customizer
             'settings' => 'setting_social_button_color_bg',
             'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
         ));
-        
+
         $wp_customize->add_setting('setting_social_button_color_bg_hover', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
@@ -494,8 +493,6 @@ class Tikva_Customizer
             'settings' => 'setting_social_button_color_bg_hover',
             'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
         ));
-        
-        
     }
 
     /**
@@ -606,7 +603,7 @@ class Tikva_Customizer
      */
     public function addCustomizerStylingPanel($wp_customize)
     {
-         $wp_customize->add_panel('panel_styling_options', array(
+        $wp_customize->add_panel('panel_styling_options', array(
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
@@ -623,29 +620,33 @@ class Tikva_Customizer
             'panel' => 'panel_styling_options',
         ));
 
-        $wp_customize->add_section('section_styling_options_footer', array(
+        $wp_customize->add_section('section_styling_options_posts', array(
             'priority' => 20,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Posts Settings', 'tikva'),
+            'description' => __('Edit posts settings', 'tikva'),
+            'panel' => 'panel_styling_options',
+        ));
+
+        $wp_customize->add_section('section_styling_options_footer', array(
+            'priority' => 30,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Footer Options', 'tikva'),
             'description' => __('Set options of Footer', 'tikva'),
             'panel' => 'panel_styling_options',
         ));
-        
-        
-     
-        
-       
     }
 
-      /**
+    /**
      * Add Styling options to Customizer
      * 
      * @param type $wp_customize
      */
     public function addCustomizerGeneralSettings($wp_customize)
     {
-       
+
 
         $wp_customize->add_setting('tikva_layout', array(
             'default' => '2',
@@ -718,22 +719,40 @@ class Tikva_Customizer
                 'inverse' => __('Inverse', 'tikva'),
             ),
         ));
-        
-        
-       
     }
-    
-    
-     /**
+
+    /**
+     * Add Styling posts options to Customizer
+     * 
+     * @param type $wp_customize
+     */
+    public function addCustomizerPostsSettings($wp_customize)
+    {
+        $wp_customize->add_setting('setting_posts_featured_date', array(
+            'default' => '',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_posts_featured_date', array(
+            'label' => __('Show date and author of featured posts on homepage', 'tikva'),
+            'section' => 'section_styling_options_posts',
+            'settings' => 'setting_posts_featured_date',
+            'type' => 'checkbox',
+        ));
+    }
+
+    /**
      * Add Footer options to Customizer
      * 
      * @param type $wp_customize
      */
     public function addCustomizerFooterOptions($wp_customize)
     {
-        
-        
-         $wp_customize->add_setting('setting_footer_activate', array(
+
+
+        $wp_customize->add_setting('setting_footer_activate', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
             'type' => 'option',
@@ -746,20 +765,20 @@ class Tikva_Customizer
             'settings' => 'setting_footer_activate',
             'type' => 'checkbox',
         ));
-        
-        
-           $wp_customize->add_setting('setting_footer_layout', array(
+
+
+        $wp_customize->add_setting('setting_footer_layout', array(
             'default' => '3',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFooterLayout')
         ));
-        
-           for ($i = 1; $i <= 18; $i++) {
-                $footerLayouts[$i] = get_template_directory_uri() . sprintf("/images/admin/footer/option%02d.png", $i);
-           }
-         
-           
+
+        for ($i = 1; $i <= 18; $i++) {
+            $footerLayouts[$i] = get_template_directory_uri() . sprintf("/images/admin/footer/option%02d.png", $i);
+        }
+
+
         $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
             'label' => __('Footer Layout', 'tikva'),
             'description' => __('Set layout of the footer.', 'tikva'),
@@ -768,7 +787,7 @@ class Tikva_Customizer
             'choices' => $footerLayouts
         )));
     }
-    
+
     /**
      * Add Homepage options to Customizer
      * 

@@ -7,12 +7,9 @@ $customizer_url = admin_url() . 'customize.php' ;
 $Tikva = wp_get_theme( 'tikva' );
 ?>
 
-<div id="getting_started" class="tikva-tab-pane active">
-
-	<div class="tikva-tab-pane-center">
-		
-		<h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva!', 'tikva'); if( !empty($Tikva['Version']) ): ?> <sup id="tikva-theme-version"><?php echo esc_attr( $Tikva['Version'] ); ?> </sup><?php endif; ?></h1>
-	</div>
+ <div role="tabpanel" class="tab-pane  fade in  active" id="tikva-tab-getting-started">
+ 
+        <h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva!', 'tikva'); if( !empty($Tikva['Version']) ): ?> <sup id="tikva-theme-version"><?php echo esc_attr( $Tikva['Version'] ); ?> </sup><?php endif; ?></h1>
 
 	<hr />
 
@@ -56,5 +53,6 @@ $Tikva = wp_get_theme( 'tikva' );
 	</div>
 
 	<div class="tikva-clear"></div>
-
-</div>
+    
+    </div>
+ 

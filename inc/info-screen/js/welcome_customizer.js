@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
     /* Upsell in Customizer (Link to Welcome page) */
     if ( !jQuery( ".tikva-upsells" ).length ) {
         jQuery('#customize-theme-controls > ul').prepend('<li class="accordion-section tikva-upsells">');
-    }
+    } 
     if (typeof Tikva_aboutpage !== 'undefined') {
         jQuery('.tikva-upsells').append('<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="' + Tikva_aboutpage + '" class="button" >{themeinfo}</a>'.replace('{themeinfo}', tikvaWelcomeScreenCustomizerObject.themeinfo));
     }

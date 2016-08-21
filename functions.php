@@ -8,7 +8,7 @@ require get_template_directory() . '/inc/template-tags.php';
 
 require_once( get_template_directory() . '/inc/header-addons.php' );
 require_once( get_template_directory() . '/inc/post-addons.php' );
-// include get_template_directory() . '/inc/info-screen/welcome-screen.php';
+include get_template_directory() . '/inc/info-screen/welcome-screen.php';
 
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );

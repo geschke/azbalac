@@ -1,6 +1,17 @@
+body {
+    background: #f1f1f1;
+}
+
+
+.tikva-wrap {
+    margin-top: 20px;
+    padding: 25px 25px 20px 20px;
+    background: #fff;
+}
+/*
 .tikva-nav-tabs {
     margin-bottom: 0;
-}
+} 
 .tikva-nav-tabs:after {
     clear: both;
     display: table;
@@ -28,6 +39,10 @@
     color: red;
     font-weight: bold;
 }
+
+*/
+
+/*
 .tikva-tab-content {
 	background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -52,7 +67,9 @@
 .tikva-tab-pane.active {
     display: block;
 }
+*/
 
+/*
 #tikva-theme-version {
     font-size: 50%;
     padding: 10px;
@@ -88,6 +105,10 @@
 .tikva-welcome-title {
     font-size: 32px;
 }
+
+*/
+
+/*
 .tikva-clear {
     clear: both;
 }
@@ -207,3 +228,5 @@
 .tikva-child-theme-description h2{
 	color: #fff;
 }
+
+*/

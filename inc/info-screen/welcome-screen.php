@@ -4,9 +4,9 @@
  */
 if (!defined('ABSPATH')) {
     exit;
-}
+} 
 if (!class_exists('Tikva_Welcome')) {
-
+  
     class Tikva_Welcome
     {
 
@@ -49,10 +49,14 @@ if (!class_exists('Tikva_Welcome')) {
          */
         public function Tikva_welcome_style_and_scripts($hook_suffix)
         {
-
+            //echo "hook_suffix: " . $hook_suffix;
             if ('appearance_page_tikva-welcome' == $hook_suffix) {
-                wp_enqueue_style('tikva-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css');
-                wp_enqueue_script('tikva-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
+            wp_enqueue_script( 'tikva-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true );
+              wp_enqueue_style('tikva-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css',array(), '2016082101');
+
+                
+               wp_enqueue_style('tikva-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css',array(), '2016082101');
+               // wp_enqueue_script('tikva-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
             }
         }
 
@@ -90,12 +94,17 @@ if (!class_exists('Tikva_Welcome')) {
             require_once( ABSPATH . 'wp-admin/admin-header.php' );
             ?>
 
-            <ul class="tikva-nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#getting_started" aria-controls="getting_started" role="tab" data-toggle="tab"><?php esc_html_e('Getting started', 'tikva'); ?></a></li>
-                <li role="presentation"><a href="#changelog" aria-controls="changelog" role="tab" data-toggle="tab"><?php esc_html_e('Changelog', 'tikva'); ?></a></li>
-            </ul>
+  <!-- Nav tabs -->
+  <div class="tikva-wrap">
+  <ul class="tikva-nav-tabs nav nav-tabs" role="tablist">
+    <li class="active"><a href="#tikva-tab-getting-started" aria-controls="tikva-tab-getting-started" role="tab" data-toggle="tab">Getting started</a></li>
+    <li><a href="#tikva-tab-changelog" aria-controls="tikva-tab-changelog" role="tab" data-toggle="tab">Changelog</a></li>
+   
+  </ul>
+  
+          
 
-            <div class="tikva-tab-content">
+            <div class="tab-content">
 
             <?php
             /**
@@ -107,6 +116,7 @@ if (!class_exists('Tikva_Welcome')) {
             ?>
 
             </div>
+  </div>
                 <?php
             }
 

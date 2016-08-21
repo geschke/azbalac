@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 	
 	/* If there are required actions, add an icon with the number of required actions in the About tikva page -> Actions required tab */
    
-   
+    
 	/* Tabs in welcome page */
 	function Tikva_welcome_page_tabs(event) {
 		jQuery(event).parent().addClass("active");

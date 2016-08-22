@@ -28,10 +28,6 @@ if (!class_exists('Tikva_Welcome')) {
             //add_action( 'load-themes.php', array( $this, 'activation_admin_notice' ) );
             $this->activation_admin_notice();
 
-            /* enqueue script for customizer */
-            // strange - if called, header image in customizer don't work anymore...
-            // add_action('customize_controls_enqueue_scripts', array($this, 'Tikva_welcome_scripts_for_customizer'));
-
             /* load welcome screen */
             add_action('Tikva_welcome', array($this, 'Tikva_welcome_getting_started'), 10);
 
@@ -81,8 +77,8 @@ if (!class_exists('Tikva_Welcome')) {
         {
             ?>
             <div class="updated notice tikva-admin-notice is-dismissible">
-                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Tikva Theme! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'tikva'), '<a href="' . esc_url(admin_url('themes.php?page=tikva-welcome')) . '">', '</a>'); ?></p>
-                <p><a href="<?php echo esc_url(admin_url('themes.php?page=awada-welcome')); ?>" class="button" style="text-decoration: none;"><?php _e('Get started with Tikva', 'tikva'); ?></a></p>
+                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Tikva Theme! Please have a look at the new %swelcome page%s. You will find some information about new or updated features there.', 'tikva'), '<a href="' . esc_url(admin_url('themes.php?page=tikva-welcome')) . '">', '</a>'); ?></p>
+                
             </div>
             <?php
         }
@@ -112,13 +108,15 @@ if (!class_exists('Tikva_Welcome')) {
         public function Tikva_welcome_style_and_scripts($hook_suffix)
         {
             //echo "hook_suffix: " . $hook_suffix;
+            
+            wp_enqueue_script('tikva-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
             if ('appearance_page_tikva-welcome' == $hook_suffix) {
                 wp_enqueue_script('tikva-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true);
                 wp_enqueue_style('tikva-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '2016082101');
-
-
                 wp_enqueue_style('tikva-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), '2016082101');
-                wp_enqueue_script('tikva-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
+            
+
+               
             }
         }
 
@@ -180,7 +178,7 @@ if (!class_exists('Tikva_Welcome')) {
         }
 
     }
- new Tikva_Welcome();
-   // $GLOBALS['Tikva_Welcome'] = new Tikva_Welcome();
+ //new Tikva_Welcome();
+    $GLOBALS['Tikva_Welcome'] = new Tikva_Welcome();
 }
 ?>

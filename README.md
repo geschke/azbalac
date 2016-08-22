@@ -2,11 +2,13 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.4.3
+Version 0.4.4
 
 
 ## Version history:
 
+Version 0.4.4
+ - Added Welcome screen with information and changelog tabs. Thanks to Avada theme for its great example. 
 
 Version 0.4.3
  - Added option to show date and author under headline of featured posts, default off

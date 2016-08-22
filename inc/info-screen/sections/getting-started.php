@@ -9,7 +9,11 @@ $Tikva = wp_get_theme( 'tikva' );
 
  <div role="tabpanel" class="tab-pane  fade in  active" id="tikva-tab-getting-started">
  
-        <h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva!', 'tikva'); if( !empty($Tikva['Version']) ): ?> <sup id="tikva-theme-version"><?php echo esc_attr( $Tikva['Version'] ); ?> </sup><?php endif; ?></h1>
+        <h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva', 'tikva'); ?> 
+            <?php
+        if( !empty($Tikva['Version']) ) { 
+            echo sprintf(__("- Version %s",'tikva'), esc_attr( $Tikva['Version'] )); 
+        } ?></h1>
 
 	<hr />
 

@@ -805,7 +805,18 @@ if ( ! function_exists('tikva_set_slider_text_style')) :
 
 endif; // tikva_set_slider_text_style
 
+/*
+if ( ! function_exists('tikva_admin_notice')) :
 
+function tikva_admin_notice() {
+  ?>
+  <div class="updated notice tikva-admin-notice is-dismissible">
+      <p><?php _e( 'Demo of admin notice...', 'tikva' ); ?></p>
+  </div>
+  <?php
+}
+endif; // tikva_admin_notice
+*/
 
 if ( ! function_exists( 'tikva_show_slider' ) ) :
 function tikva_show_slider($sliderPosition) 

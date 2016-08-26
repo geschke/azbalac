@@ -25,6 +25,9 @@ get_header(); ?>
                 get_template_part( 'featured-content' );
                 //   echo "<h1>show featured content</h1>";
             }
+            if ( is_front_page() ) {
+                tikva_show_slider(3);
+            }
 
 
             if ($layoutStyle['content'] == 2) {
@@ -87,12 +90,15 @@ get_header(); ?>
                 }
             } ?>
 
-
+ 
         </div><!-- #main-content -->
 
     </div><!-- row -->
-
-<?php
+ <?php
+     if ( is_front_page() ) {
+        tikva_show_slider(4);
+      }
+     
 get_footer();
 
 

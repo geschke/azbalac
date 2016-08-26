@@ -120,14 +120,15 @@ add_action( 'after_setup_theme', 'tikva_setup' );
 /**
  * Add color styling from theme
  */
- //wp_enqueue_style( 'tikva-default', get_template_directory_uri() . '/css/default.css' );
+// wp_enqueue_style( 'tikva-default-style', get_template_directory_uri() . '/css/default.css' );
  
 if ( ! function_exists( 'tikva_add_social_button_style' ) ) :
 function tikva_add_social_button_style() {
-    wp_enqueue_style(
+    /*wp_enqueue_style(
         'tikva-default-style',
         get_template_directory_uri() . '/css/default.css'
     );
+      */
     $css = '';
     $social_button_color_bg_hover = get_theme_mod('setting_social_button_color_bg_hover');
     $social_button_color_bg = get_theme_mod('setting_social_button_color_bg');
@@ -371,6 +372,8 @@ add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
 add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
 add_action( 'wp_enqueue_scripts', 'tikva_enqueue_font_awesome' );
 add_action( 'wp_enqueue_scripts', 'tikva_add_social_button_style' );
+add_action( 'wp_enqueue_scripts', 'tikva_set_slider_text_style' );
+
 
 /**
  * Create a nicely formatted and more specific title element text for output
@@ -788,7 +791,6 @@ if ( ! function_exists('tikva_set_slider_text_style')) :
         wp_enqueue_style(
                 'tikva-default-style', get_template_directory_uri() . '/css/default.css'
         );
-        $color = get_theme_mod('setting_social_button_color_bg_hover');
         $custom_css = "
              .carousel-caption-left {
              text-align: left !important;
@@ -800,6 +802,7 @@ if ( ! function_exists('tikva_set_slider_text_style')) :
              margin-bottom: 10px;
          }
 ";
+        
         wp_add_inline_style('tikva-default-style', $custom_css);
     }
 
@@ -821,15 +824,16 @@ endif; // tikva_admin_notice
 if ( ! function_exists( 'tikva_show_slider' ) ) :
 function tikva_show_slider($sliderPosition) 
 {
-    if (!get_option('setting_slider_activate')) {
+   if (!get_option('setting_slider_activate')) {
         return '';
     }
    
     if (get_option('setting_slider_position') != $sliderPosition) {
         return '';
     }
-    tikva_set_slider_text_style(); // add css modifications only when slider is displayed
-        
+    // this is too late, so set above...
+    //add_action( 'wp_enqueue_scripts', 'tikva_set_slider_text_style' );
+
     $sliderInterval = get_theme_mod('setting_slider_interval');
     $sliderPause = get_option('setting_slider_pause') ? 'hover': '';
     $sliderKeyboard = get_option('setting_slider_keyboard') ? 'true': 'false';

@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-
+  
 <div class="row">
 
 
@@ -86,13 +86,15 @@ if ($layoutStyle['content'] == 2) {
             <?php
         }
     } ?>
-
-      <?php
-tikva_show_slider(4);
-?>
+  
+     
+    
 </div><!-- #main-content -->
-
+ 
 </div><!-- row -->
-
 <?php
+      if ( is_front_page() ) {
+tikva_show_slider(4);
+      }
+     
 get_footer();

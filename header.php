@@ -101,7 +101,10 @@ if ($navbarFixed != 'fixed-top') {
                 </a>
             </div>
       <?php
-tikva_show_slider(1);
+    
+      if ( is_front_page()) {
+        tikva_show_slider(1);
+      }
 ?>
     </div>
  </div>
@@ -172,8 +175,10 @@ if ($navbarFixed == 'default') {
         <div class="container">
           
             <?php
+            if ( is_front_page() ) {
 tikva_show_slider(2);
-?>
+            } 
+            ?>
             
         <div id="main" class="site-main">
 

@@ -2,10 +2,13 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.4.4
+Version 0.4.5
 
 
 ## Version history:
+
+Version 0.4.5
+ - fixed some slider issues: show slider on homepage only, show slider on static startpage, css fixes
 
 Version 0.4.4
  - Added Welcome screen with information and changelog tabs. Thanks to Awada theme / WebHunt Infotech for its great example. 

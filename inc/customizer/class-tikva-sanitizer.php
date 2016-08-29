@@ -81,6 +81,10 @@ class Tikva_Sanitizer
         return $input;
     }
     
+    public function sanitizeIntroductionElements($input) {
+        return $this->sanitizeRange($input, 0, 0, 6);
+    }
+    
     public function sanitizeFooterLayout($input)
     {
         return $this->sanitizeRange($input,3, 1,18);
@@ -89,8 +93,9 @@ class Tikva_Sanitizer
     public function sanitizeRange($input, $default, $start, $end)
     {
         $input = absint($input);
-        if ($input < $start || $input > $end)
+        if ($input < $start || $input > $end) {
             return $default;
+        }
         return $input;
     }
     

@@ -30,16 +30,86 @@ class Tikva_Customizer
 
     public function customizeRegister($wp_customize)
     {
-
+        $this->addCustomizerThemePanel($wp_customize);
         $this->addCustomizerSocialButtons($wp_customize);
         $this->addCustomizerSliderOptions($wp_customize);
         $this->addCustomizerColors($wp_customize);
-        $this->addCustomizerStylingPanel($wp_customize);
+
         $this->addCustomizerGeneralSettings($wp_customize);
         $this->addCustomizerPostsSettings($wp_customize);
+        $this->addCustomizerIntroductionSettings($wp_customize);
         $this->addCustomizerFooterOptions($wp_customize);
-        $this->addCustomizerHeaderImageOptions($wp_customize);
+        $this->addCustomizerHeaderImageSettings($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
+    }
+
+    /**
+     * Add Styling options to Customizer
+     * 
+     * @param type $wp_customize
+     */
+    public function addCustomizerThemePanel($wp_customize)
+    {
+        $wp_customize->add_panel('panel_theme_options', array(
+            'priority' => 10,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Theme Options', 'tikva'),
+            'description' => __('Configuration of the theme', 'tikva'),
+        ));
+
+        $wp_customize->add_section('section_theme_options_general', array(
+            'priority' => 10,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('General Settings', 'tikva'),
+            'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_header_image_options', array(
+            'priority' => 15,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Header Image Options', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_home', array(
+            'priority' => 10,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Home Options', 'tikva'),
+            'description' => __('Edit homepage settings', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_intro', array(
+            'priority' => 10,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Introduction Area', 'tikva'),
+            'description' => __('Edit Introduction Contents', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_posts', array(
+            'priority' => 20,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Posts Settings', 'tikva'),
+            'description' => __('Edit posts settings', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_footer', array(
+            'priority' => 30,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Footer Options', 'tikva'),
+            'description' => __('Set options of Footer', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
     }
 
     public function addSliderOptions($wp_customize, $slider)
@@ -130,7 +200,6 @@ class Tikva_Customizer
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => 'sanitize_post',
-                // note - need to add sanitize callback
         ));
 
         $wp_customize->add_control('control_slider_' . $slider . '_page', array(
@@ -138,7 +207,7 @@ class Tikva_Customizer
             'section' => 'section_slider_' . $slider,
             'type' => 'dropdown-pages',
             'settings' => 'setting_slider_' . $slider . '_page',
-        )); // end link
+        ));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
             'default' => '',
@@ -601,49 +670,6 @@ class Tikva_Customizer
      * 
      * @param type $wp_customize
      */
-    public function addCustomizerStylingPanel($wp_customize)
-    {
-        $wp_customize->add_panel('panel_styling_options', array(
-            'priority' => 10,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Styling Options', 'tikva'),
-            'description' => __('Configuration of the styling of the site', 'tikva'),
-        ));
-
-        $wp_customize->add_section('section_styling_options_general', array(
-            'priority' => 10,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('General Settings', 'tikva'),
-            'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'tikva'),
-            'panel' => 'panel_styling_options',
-        ));
-
-        $wp_customize->add_section('section_styling_options_posts', array(
-            'priority' => 20,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Posts Settings', 'tikva'),
-            'description' => __('Edit posts settings', 'tikva'),
-            'panel' => 'panel_styling_options',
-        ));
-
-        $wp_customize->add_section('section_styling_options_footer', array(
-            'priority' => 30,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Footer Options', 'tikva'),
-            'description' => __('Set options of Footer', 'tikva'),
-            'panel' => 'panel_styling_options',
-        ));
-    }
-
-    /**
-     * Add Styling options to Customizer
-     * 
-     * @param type $wp_customize
-     */
     public function addCustomizerGeneralSettings($wp_customize)
     {
 
@@ -658,7 +684,7 @@ class Tikva_Customizer
         $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout', array(
             'label' => __('Layout', 'tikva'),
             'description' => __('Set layout of your site.', 'tikva'),
-            'section' => 'section_styling_options_general',
+            'section' => 'section_theme_options_general',
             'settings' => 'tikva_layout',
             'choices' => array(
                 '1' => get_template_directory_uri() . '/images/admin/1c.png',
@@ -678,7 +704,7 @@ class Tikva_Customizer
         $wp_customize->add_control('tikva_stylesheet', array(
             'settings' => 'tikva_stylesheet',
             'label' => __('Theme Stylesheet', 'tikva'),
-            'section' => 'section_styling_options_general',
+            'section' => 'section_theme_options_general',
             'description' => __('Select your themes alternative color scheme.', 'tikva'),
             'type' => 'select',
             'choices' => $this->getAvailableStylesheets()
@@ -693,7 +719,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('navbar_fixed', array(
             'label' => __('Navbar fixed options', 'tikva'),
-            'section' => 'section_styling_options_general',
+            'section' => 'section_theme_options_general',
             'settings' => 'navbar_fixed',
             'type' => 'radio',
             'choices' => array(
@@ -711,7 +737,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('navbar_style_inverse', array(
             'label' => __('Navbar style', 'tikva'),
-            'section' => 'section_styling_options_general',
+            'section' => 'section_theme_options_general',
             'settings' => 'navbar_style_inverse',
             'type' => 'radio',
             'choices' => array(
@@ -737,7 +763,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('control_posts_featured_date', array(
             'label' => __('Show date and author of featured posts on homepage', 'tikva'),
-            'section' => 'section_styling_options_posts',
+            'section' => 'section_theme_options_posts',
             'settings' => 'setting_posts_featured_date',
             'type' => 'checkbox',
         ));
@@ -761,7 +787,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control('control_footer_activate', array(
             'label' => __('Show footer', 'tikva'),
-            'section' => 'section_styling_options_footer',
+            'section' => 'section_theme_options_footer',
             'settings' => 'setting_footer_activate',
             'type' => 'checkbox',
         ));
@@ -782,7 +808,7 @@ class Tikva_Customizer
         $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
             'label' => __('Footer Layout', 'tikva'),
             'description' => __('Set layout of the footer.', 'tikva'),
-            'section' => 'section_styling_options_footer',
+            'section' => 'section_theme_options_footer',
             'settings' => 'setting_footer_layout',
             'choices' => $footerLayouts
         )));
@@ -795,12 +821,7 @@ class Tikva_Customizer
      */
     public function addCustomizerHomeOptions($wp_customize)
     {
-        $wp_customize->add_section('section_homepage_options', array(
-            'priority' => 24,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Home Settings', 'tikva')
-        ));
+
 
         $wp_customize->add_setting('featured_articles_max', array(
             'default' => 10,
@@ -811,7 +832,7 @@ class Tikva_Customizer
 
         $wp_customize->add_control(new Tikva_Custom_Slider_Control($wp_customize, 'featured_articles_max', array(
             'label' => __('Maximum number of featured articles on homepage', 'tikva'),
-            'section' => 'section_homepage_options',
+            'section' => 'section_theme_options_home',
             'settings' => 'featured_articles_max',
             //'type' => 'slider',
             'choices' => array(
@@ -826,15 +847,8 @@ class Tikva_Customizer
      * 
      * @param type $wp_customize
      */
-    public function addCustomizerHeaderImageOptions($wp_customize)
+    public function addCustomizerHeaderImageSettings($wp_customize)
     {
-        $wp_customize->add_section('section_header_image_options', array(
-            'priority' => 65,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Header Image Options', 'tikva'),
-        ));
-
 
         $wp_customize->add_setting('header_image_example_tikva', array(
             'capability' => 'edit_theme_options',
@@ -961,6 +975,142 @@ class Tikva_Customizer
             'type' => 'checkbox',
             'description' => __('If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
         ));
+    }
+
+    /**
+     * Add Homepage options to Customizer
+     * 
+     * @param type $wp_customize
+     */
+    public function addCustomizerIntroductionSettings($wp_customize)
+    {
+
+
+        $wp_customize->add_setting('setting_introduction_area_count', array(
+            'default' => 0,
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeIntroductionElements')
+        ));
+
+
+        $wp_customize->add_control(new Tikva_Custom_Slider_Control($wp_customize, 'control_introduction_area_count', array(
+            'label' => __('Number of elements of introduction area (set 0 to disable the section)', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'settings' => 'setting_introduction_area_count',
+            'type' => 'slider',
+            'choices' => array(
+                'min' => 0,
+                'max' => 6,
+                'step' => 1)
+        )));
+
+        $contentArea = sprintf("%02d", 1);
+       
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_icon', array(
+            'default' => '',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeStylesheet')
+        ));
+
+        $wp_customize->add_control('control_content_area_' . $contentArea . '_icon', array(
+            'settings' => 'setting_content_area_' . $contentArea . '_icon',
+            'label' => __('Content Area ' . $contentArea . ': Select Font Awesome Icon or...', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'description' => __('Select icon for Content Area ' . (int) $contentArea . ' or...', 'tikva'),
+            'type' => 'select',
+            'choices' => $this->getFaIcons()
+        ));
+
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
+            'default' => '',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'control_content_area_' . $contentArea . '_image', array(
+            'label' => __('...use image', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'settings' => 'setting_content_area_' . $contentArea . '_image',
+            'flex_width' => true, // Allow any width, making the specified value recommended. False by default.
+            'flex_height' => true, // Require the resulting image to be exactly as tall as the height attribute (default).
+            //'width' => 1920,
+            //'height' => 500,
+            'mime_type' => 'image',
+            'description' => __('Image displayed on section background', 'tikva')
+        )));
+
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_title', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field')
+        );
+        $wp_customize->add_control('control_content_area_' . $contentArea . '_title', array(
+            'label' => __('Title for the section', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'settings' => 'setting_content_area_' . $contentArea . '_title')
+        );
+
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_description', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field')
+        );
+
+        $wp_customize->add_control('control_content_area_' . $contentArea . '_description', array(
+            'label' => __('Description', 'tikva'),
+            'type' => 'textarea',
+            'section' => 'section_theme_options_intro',
+            'settings' => 'setting_content_area_' . $contentArea . '_description'
+        ));
+
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_page', array(
+            // note - works with or without capability & type set
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => 'sanitize_post',
+        ));
+
+        $wp_customize->add_control('control_content_area_' . $contentArea . '_page', array(
+            'label' => __('Link to page or...', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'type' => 'dropdown-pages',
+            'settings' => 'setting_content_area_' . $contentArea . '_page',
+        ));
+        
+        
+         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_post', array(
+            // note - works with or without capability & type set
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => 'sanitize_post',
+        ));
+
+        $wp_customize->add_control(new Tikva_Custom_Latest_Post_Control($wp_customize, 'control_content_area_' . $contentArea . '_post', array(
+          
+            'label' => __('Link to Post', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'type' => 'dropdown-pages',
+            'settings' => 'setting_content_area_' . $contentArea . '_post',
+        )));
+    }
+
+    public function getFaIcons()
+    {
+        global $wp_filesystem;
+        if (empty($wp_filesystem)) {
+            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
+            WP_Filesystem();
+        }
+
+        $faIcons = $wp_filesystem->get_contents(get_template_directory() . '/css/font-awesome/fa-icons.txt');
+        $lines = explode(PHP_EOL, $faIcons);
+        $icons[0] = __('Choose Icon', 'tikva');
+        foreach ($lines as $line) {
+            if ($line) {
+                $icons[$line] = $line;
+            }
+        }
+        return $icons;
     }
 
 }

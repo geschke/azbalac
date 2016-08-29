@@ -2,10 +2,13 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.4.5
+Version 0.4.6
 
 
 ## Version history:
+
+Version 0.4.6
+ - Font Awesome updated to version 4.6.3
 
 Version 0.4.5
  - fixed some slider issues: show slider on homepage only, show slider on static startpage, css fixes

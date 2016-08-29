@@ -165,7 +165,7 @@ if (!class_exists('Tikva_Welcome')) {
          */
         public function Tikva_welcome_getting_started()
         {
-            require_once( get_template_directory() . '/inc/info-screen/sections/getting-started.php' );
+            get_template_part('/inc/info-screen/sections/getting-started' );
         }
 
         /**
@@ -174,7 +174,7 @@ if (!class_exists('Tikva_Welcome')) {
          */
         public function Tikva_welcome_changelog()
         {
-            require_once( get_template_directory() . '/inc/info-screen/sections/changelog.php' );
+            get_template_part('inc/info-screen/sections/changelog');
         }
 
     }

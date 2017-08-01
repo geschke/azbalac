@@ -19,10 +19,18 @@ class Tikva_Customizer_Addon
         $this->customizer = $wp_customize;
     }
 
-    public function initSelectiveRefresh()
+    public function initPreview()
     {
         $this->customizer->get_setting( 'blogname' )->transport = 'postMessage';
         $this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+        $this->customizer->get_setting( 'color_bg_header' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'color_fg_footer' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'color_bg_footer' )->transport = 'postMessage';
+
+        $this->customizer->get_setting( 'color_fg_sidebar' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'color_bg_sidebar' )->transport = 'postMessage';
+
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
 

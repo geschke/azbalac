@@ -547,12 +547,13 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
         else {
             $headerStyleColorBg = '';
         }
+
         // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
-        
-        $colorFgHeaderData = get_theme_mod('color_fg_header');
-        
+        //$colorFgHeaderData = get_theme_mod('color_fg_header');
+        $colorFgHeaderData = get_header_textcolor();
+
         if ($colorFgHeaderData) {
-            $headerStyleColorFg = ' color: ' . $colorFgHeaderData .';';
+            $headerStyleColorFg = ' color: #' . $colorFgHeaderData .';';
         }
         else {
             $headerStyleColorFg = '';

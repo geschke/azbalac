@@ -31,7 +31,6 @@ class Tikva_Customizer
     public function customizeRegister($wp_customize)
     {
         $customAddOn = new Tikva_Customizer_Addon($wp_customize);
-        $customAddOn->initSelectiveRefresh();
         
         $this->addCustomizerThemePanel($wp_customize);
         $this->addCustomizerSocialButtons($wp_customize);
@@ -44,6 +43,9 @@ class Tikva_Customizer
         $this->addCustomizerFooterOptions($wp_customize);
         $this->addCustomizerHeaderImageSettings($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
+
+        $customAddOn->initPreview();
+     
     }
 
     /**

@@ -78,7 +78,7 @@ $headerStyles = tikva_get_header_styles($navbarFixed);
 
 <?php
 $description = get_bloginfo( 'name', 'display' );
-
+$subtitleDescription = get_bloginfo( 'description', 'display' );
 /*if ($navbarFixed != 'fixed-top') {
     $description .= ' ' . get_bloginfo( 'description', 'display' );
 }*/ // todo: don't concat in this way, it is the subtitle!
@@ -90,12 +90,13 @@ $description = get_bloginfo( 'name', 'display' );
     <?php      //  tikva_display_social_media_buttons(3); ?>
     </div>
    
-    <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg']; ?>;">
+    <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg'];  ?>">
 
 <div class="container">
     
     <div class="masthead col-md-12 col-sm-12">
         <h1 id="site-header-text"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
+        <div id="site-description"><?php echo esc_html($subtitleDescription); ?></div>
          <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">

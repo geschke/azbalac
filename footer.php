@@ -17,7 +17,7 @@
 $footerStyles = Tikva_Footer::getStyles();
 ?>
 
-<div style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
+<div class="site-footer-1" style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
 
 <div role="complementary" class="container">
     

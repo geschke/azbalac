@@ -24,7 +24,7 @@ Version 0.4.2
  - Customizer settings revisited and partly restructured
 
 Version 0.4.1
- -  Bugfix: choosing theme stylesheet works again (Sorry for tha ugly bug!)
+ - Bugfix: choosing theme stylesheet works again (Sorry for tha ugly bug!)
  - Social Media Button improvements: Choose style (circle or square), size (small, medium, large) and alignment. Additional, you can switch the colors independently from the default stylesheet color. 
  - minor code improvements
  - Bootstrap bumped to version 3.3.7

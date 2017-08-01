@@ -14,8 +14,10 @@ require_once( get_template_directory() . '/inc/customizer/CustomLatestPostContro
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
 
-require_once( get_template_directory() . '/inc/customizer/class-tikva-sanitizer.php' );
-require_once( get_template_directory() . '/inc/customizer/class-tikva-customizer.php' );
+require_once( get_template_directory() . '/inc/customizer/CustomizerSanitizer.php' );
+require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' );
+
+require_once( get_template_directory() . '/inc/customizer/Customizer.php' );
 
 require_once( get_template_directory() . '/inc/class-tikva-footer.php' );
 

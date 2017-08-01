@@ -25,11 +25,14 @@ class Tikva_Customizer
     {
 
         add_action('customize_register', array($this, 'customizeRegister'));
-        $this->sanitizer = new Tikva_Sanitizer();
+        $this->sanitizer = new Tikva_Customizer_Sanitizer();
     }
 
     public function customizeRegister($wp_customize)
     {
+        $customAddOn = new Tikva_Customizer_Addon($wp_customize);
+        $customAddOn->initSelectiveRefresh();
+        
         $this->addCustomizerThemePanel($wp_customize);
         $this->addCustomizerSocialButtons($wp_customize);
         $this->addCustomizerSliderOptions($wp_customize);

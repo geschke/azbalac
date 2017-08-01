@@ -78,9 +78,10 @@ $headerStyles = tikva_get_header_styles($navbarFixed);
 
 <?php
 $description = get_bloginfo( 'name', 'display' );
-if ($navbarFixed != 'fixed-top') {
+
+/*if ($navbarFixed != 'fixed-top') {
     $description .= ' ' . get_bloginfo( 'description', 'display' );
-}
+}*/ // todo: don't concat in this way, it is the subtitle!
 ?>
 <?php if ($navbarFixed == 'default') {
 
@@ -133,7 +134,7 @@ if (has_nav_menu('header-menu')) {
                 </button>
 
                 <?php if ($navbarFixed == 'fixed-top') { ?>
-                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a>
+                <div id="site-header-text"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></div>
                 <?php } ?>
             </div>
             <div class="navbar-collapse collapse">

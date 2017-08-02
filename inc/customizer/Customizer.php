@@ -45,12 +45,11 @@ class Tikva_Customizer
         $this->addCustomizerHomeOptions($wp_customize);
 
         $customAddOn->initPreview();
-     
     }
 
     /**
      * Add Styling options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerThemePanel($wp_customize)
@@ -227,7 +226,7 @@ class Tikva_Customizer
 
     /**
      * Add Slider Integration options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerSliderOptions($wp_customize)
@@ -349,7 +348,7 @@ class Tikva_Customizer
 
     /**
      * Add Social Media Integration options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerSocialButtons($wp_customize)
@@ -571,7 +570,7 @@ class Tikva_Customizer
 
     /**
      * Add Customizable color options
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerColors($wp_customize)
@@ -648,9 +647,9 @@ class Tikva_Customizer
     }
 
     /**
-     * Get array of available stylesheets stored in the Bootstrap stylesheer directory. 
-     * The list can be used directly in a select field. 
-     * 
+     * Get array of available stylesheets stored in the Bootstrap stylesheer directory.
+     * The list can be used directly in a select field.
+     *
      * @return array $designStylesheets
      */
     public static function getAvailableStylesheets()
@@ -672,7 +671,7 @@ class Tikva_Customizer
 
     /**
      * Add Styling options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerGeneralSettings($wp_customize)
@@ -754,7 +753,7 @@ class Tikva_Customizer
 
     /**
      * Add Styling posts options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerPostsSettings($wp_customize)
@@ -776,7 +775,7 @@ class Tikva_Customizer
 
     /**
      * Add Footer options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerFooterOptions($wp_customize)
@@ -821,7 +820,7 @@ class Tikva_Customizer
 
     /**
      * Add Homepage options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerHomeOptions($wp_customize)
@@ -849,7 +848,7 @@ class Tikva_Customizer
 
     /**
      * Add Header Image options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerHeaderImageSettings($wp_customize)
@@ -982,13 +981,60 @@ class Tikva_Customizer
         ));
     }
 
+
+    /**
+     * Retrieves common arguments to supply when constructing a Customizer setting.
+     *
+     * @since 3.9.0
+     * @access public
+     *
+     * @param string $id        Widget setting ID.
+     * @param array  $overrides Array of setting overrides.
+     * @return array Possibly modified setting arguments.
+     */
+    public function get_setting_args($id, $overrides = array())
+    {
+        $args = array(
+            'type'       => 'option',
+            'capability' => 'edit_theme_options',
+            'default'    => array(),
+        );
+
+       /* if (preg_match( $this->setting_id_patterns['sidebar_widgets'], $id, $matches )) {
+            $args['sanitize_callback'] = array( $this, 'sanitize_sidebar_widgets' );
+            $args['sanitize_js_callback'] = array( $this, 'sanitize_sidebar_widgets_js_instance' );
+            $args['transport'] = current_theme_supports( 'customize-selective-refresh-widgets' ) ? 'postMessage' : 'refresh';
+        } elseif (preg_match( $this->setting_id_patterns['widget_instance'], $id, $matches )) {
+            $args['sanitize_callback'] = array( $this, 'sanitize_widget_instance' );
+            $args['sanitize_js_callback'] = array( $this, 'sanitize_widget_js_instance' );
+            $args['transport'] = $this->is_widget_selective_refreshable( $matches['id_base'] ) ? 'postMessage' : 'refresh';
+        }
+*/
+        $args = array_merge( $args, $overrides );
+
+        /**
+         * Filters the common arguments supplied when constructing a Customizer setting.
+         *
+         * @since 3.9.0
+         *
+         * @see WP_Customize_Setting
+         *
+         * @param array  $args Array of Customizer setting arguments.
+         * @param string $id   Widget setting ID.
+         */
+        return apply_filters( 'widget_customizer_setting_args', $args, $id );
+    }
+
+
+
     /**
      * Add Homepage options to Customizer
-     * 
+     *
      * @param type $wp_customize
      */
     public function addCustomizerIntroductionSettings($wp_customize)
     {
+	global $wp_registered_widgets, $wp_registered_widget_controls, $wp_registered_sidebars;
 
 
         $wp_customize->add_setting('setting_introduction_area_count', array(
@@ -1009,6 +1055,59 @@ class Tikva_Customizer
                 'step' => 1)
         )));
 
+        $section_id = 'section_theme_options_intro';
+       /* $sidebar_id = 1;
+        	$setting_id   = sprintf( 'sidebars_widgets[%s]', $sidebar_id );
+        $setting_id = 1;
+        //$sidebar_id = 'footer-sidebar-1';
+        $sidebar_widget_ids = array(0,1);
+
+        $control = new WP_Widget_Area_Customize_Control( $wp_customize, $setting_id, array(
+						'section'    => $section_id,
+						'sidebar_id' => $sidebar_id,
+						'priority'   => count( $sidebar_widget_ids ), // place 'Add Widget' and 'Reorder' buttons at end.
+					) );
+					$new_setting_ids[] = $setting_id;
+        $wp_customize->add_control( $control );
+*/
+        $sidebar_id = 'sidebar-1';
+        $setting_id   = sprintf( 'sidebars_widgets[%s]', $sidebar_id );
+        $setting_args = $this->get_setting_args( $setting_id );
+        if (! $wp_customize->get_setting( $setting_id )) {
+            $wp_customize->add_setting( $setting_id, $setting_args );
+        }
+                $new_setting_ids[] = $setting_id;
+
+                // Add section to contain controls.
+                $section_id = sprintf( 'sidebar-widgets-%s', $sidebar_id );
+              // var_dump($wp_registered_sidebars);
+        if (true or $is_active_sidebar) {
+            $section_args = array(
+            'title' => $wp_registered_sidebars[ $sidebar_id ]['name'],
+            'description' => $wp_registered_sidebars[ $sidebar_id ]['description'],
+            'priority' => array_search( $sidebar_id, array_keys( $wp_registered_sidebars ) ),
+            'panel' => 'panel_theme_options',
+            'sidebar_id' => $sidebar_id,
+            );
+//print_r($section_args);die;
+                
+            $section_args = apply_filters( 'customizer_widgets_section_args', $section_args, $section_id, $sidebar_id );
+
+            $section = new WP_Customize_Sidebar_Section($wp_customize, $section_id, $section_args );
+            $wp_customize->add_section( $section );
+
+            $control = new WP_Widget_Area_Customize_Control($wp_customize, $setting_id, array(
+            'section'    => $section_id,
+            'sidebar_id' => $sidebar_id,
+            'priority'   => count( $sidebar_widget_ids ), // place 'Add Widget' and 'Reorder' buttons at end.
+            ) );
+            $new_setting_ids[] = $setting_id;
+
+            $wp_customize->add_control( $control );
+        }
+
+
+        /*
         $contentArea = sprintf("%02d", 1);
 
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_icon', array(
@@ -1097,6 +1196,7 @@ class Tikva_Customizer
             'type' => 'dropdown-pages',
             'settings' => 'setting_content_area_' . $contentArea . '_post',
         )));
+        */
     }
 
     public function getFaIcons()
@@ -1117,5 +1217,4 @@ class Tikva_Customizer
         }
         return $icons;
     }
-
 }

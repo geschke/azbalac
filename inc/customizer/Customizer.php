@@ -1010,17 +1010,31 @@ class Tikva_Customizer
                 'step' => 1)
         )));
 
-       $wp_customize->add_setting('multi_field', array(
+     /*  $wp_customize->add_setting('multi_field', array(
 	'default'           => '',
 	'transport'         => 'postMessage',
-	'sanitize_callback' => 'mytheme_text_sanitization',
+	'sanitize_callback' => 'sanitize_text_field',
 ));
 $wp_customize->add_control(new Multi_Input_Custom_control($wp_customize, 'multi_field', array(
 	'label'    		=> esc_html__('Multiple inputs', 'mytheme'),
 	'description' 	=> esc_html__('Add more and more and more...', 'mytheme'),
 	'settings'		=> 'multi_field',
 	'section'  		=> 'section_theme_options_intro',
-)));
+)));*/
+
+$wp_customize->add_setting( 'multitest', array(
+		'default'           => '',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( new Multi_Input_Custom_Control( $wp_customize, 'multitest', array(
+		'label'       => esc_html__( 'Multitest', 'tikva' ),
+		'description' => esc_html__( 'Add as many custom sidebars as you need', 'tikva' ),
+		'type'   	  => 'multi_input',
+		'settings'    => 'multitest',
+		'section'     => 'section_theme_options_intro',
+	) ) );
+
 
 
         /*

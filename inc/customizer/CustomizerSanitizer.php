@@ -3,7 +3,7 @@
 /**
  * Implements Sanitizer functionality.
  *
- * 
+ *
  * @package   WordPress
  * @subpackage tikva
  * @since tikva 0.4
@@ -44,50 +44,56 @@ class Tikva_Customizer_Sanitizer
     public function sanitizeSocialMediaPosition($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 3)
+        if ($input < 1 || $input > 3) {
             return 2;
+        }
         return $input;
     }
 
     public function sanitizeSocialMediaAlignment($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 3)
+        if ($input < 1 || $input > 3) {
             return 2;
+        }
         return $input;
     }
     
     public function sanitizeSocialButtonSize($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 3)
+        if ($input < 1 || $input > 3) {
             return 2;
+        }
         return $input;
     }
     
     public function sanitizeSocialButtonType($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 2)
+        if ($input < 1 || $input > 2) {
             return 1;
+        }
         return $input;
     }
 
     public function sanitizeLayout($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 3)
+        if ($input < 1 || $input > 3) {
             return 2;
+        }
         return $input;
     }
     
-    public function sanitizeIntroductionElements($input) {
+    public function sanitizeIntroductionElements($input)
+    {
         return $this->sanitizeRange($input, 0, 0, 6);
     }
     
     public function sanitizeFooterLayout($input)
     {
-        return $this->sanitizeRange($input,3, 1,18);
+        return $this->sanitizeRange($input, 3, 1, 18);
     }
 
     public function sanitizeRange($input, $default, $start, $end)
@@ -101,8 +107,9 @@ class Tikva_Customizer_Sanitizer
     
     public function sanitizeNavbarStyleInverse($input)
     {
-        if ($input == 'inverse')
+        if ($input == 'inverse') {
             return $input;
+        }
         return 'default';
     }
 
@@ -126,17 +133,32 @@ class Tikva_Customizer_Sanitizer
     public function sanitizeSliderTextPosition($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 3)
+        if ($input < 1 || $input > 3) {
             return 2;
+        }
         return $input;
     }
 
     public function sanitizeSliderPosition($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 4)
+        if ($input < 1 || $input > 4) {
             return 2;
+        }
         return $input;
     }
 
+    public function sanitizeRepeater($input)
+    {
+        $input_decoded = json_decode($input, true);
+        if (!empty($input_decoded)) {
+            foreach ($input_decoded as $boxk => $box) {
+                foreach ($box as $key => $value) {
+                    $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+                }
+            }
+            return json_encode($input_decoded);
+        }
+        return $input;
+    }
 }

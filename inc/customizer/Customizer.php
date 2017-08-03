@@ -982,7 +982,7 @@ class Tikva_Customizer
     }
 
 
-   
+
 
     /**
      * Add Homepage options to Customizer
@@ -1010,30 +1010,21 @@ class Tikva_Customizer
                 'step' => 1)
         )));
 
-     /*  $wp_customize->add_setting('multi_field', array(
-	'default'           => '',
-	'transport'         => 'postMessage',
-	'sanitize_callback' => 'sanitize_text_field',
-));
-$wp_customize->add_control(new Multi_Input_Custom_control($wp_customize, 'multi_field', array(
-	'label'    		=> esc_html__('Multiple inputs', 'mytheme'),
-	'description' 	=> esc_html__('Add more and more and more...', 'mytheme'),
-	'settings'		=> 'multi_field',
-	'section'  		=> 'section_theme_options_intro',
-)));*/
-
-$wp_customize->add_setting( 'multitest', array(
-		'default'           => '',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-	$wp_customize->add_control( new Multi_Input_Custom_Control( $wp_customize, 'multitest', array(
-		'label'       => esc_html__( 'Multitest', 'tikva' ),
-		'description' => esc_html__( 'Add as many custom sidebars as you need', 'tikva' ),
-		'type'   	  => 'multi_input',
-		'settings'    => 'multitest',
-		'section'     => 'section_theme_options_intro',
-	) ) );
+   
+   $wp_customize->add_setting( 'customizer_repeater_example', array(
+         'sanitize_callback' => array($this->sanitizer, 'sanitizeRepeater')
+      ));
+      $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'customizer_repeater_example', array(
+	'label'   => esc_html__('Example','customizer-repeater'),
+	'section' => 'section_theme_options_intro',
+	'priority' => 1,
+	'customizer_repeater_title_control' => true,
+	'customizer_repeater_subtitle_control' => true,
+	'customizer_repeater_text_control' => true,
+	'customizer_repeater_link_control' => true,
+	'customizer_repeater_shortcode_control' => true,
+	'customizer_repeater_repeater_control' => true
+ ) ) );
 
 
 

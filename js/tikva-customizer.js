@@ -46,13 +46,6 @@
         });
     });
 
-/********* Sidebars ***********/
-	wp.customize( 'multitest', function(value) {
-        //console.log(value);
-		value.bind(function(newval) {
-            console.log(newval);
-		});
-	});
-
+    
 
 })(jQuery);

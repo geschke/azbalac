@@ -62,10 +62,6 @@ class Customizer_Repeater extends WP_Customize_Control {
 	public $id;
 	private $boxtitle = array();
 	private $customizer_repeater_title_control = false;
-	private $customizer_repeater_subtitle_control = false;
-	private $customizer_repeater_text_control = false;
-	private $customizer_repeater_link_control = false;
-	//private $customizer_repeater_repeater_control = false;
 
 	/*Class constructor*/
 	public function __construct( $manager, $id, $args = array() ) {
@@ -80,25 +76,7 @@ class Customizer_Repeater extends WP_Customize_Control {
 			$this->customizer_repeater_title_control = $args['customizer_repeater_title_control'];
 		}
 
-		if ( ! empty( $args['customizer_repeater_subtitle_control'] ) ) {
-			$this->customizer_repeater_subtitle_control = $args['customizer_repeater_subtitle_control'];
-		}
-
-		if ( ! empty( $args['customizer_repeater_text_control'] ) ) {
-			$this->customizer_repeater_text_control = $args['customizer_repeater_text_control'];
-		}
-
-		if ( ! empty( $args['customizer_repeater_link_control'] ) ) {
-			$this->customizer_repeater_link_control = $args['customizer_repeater_link_control'];
-		}
-
-		if ( ! empty( $args['customizer_repeater_shortcode_control'] ) ) {
-			$this->customizer_repeater_shortcode_control = $args['customizer_repeater_shortcode_control'];
-		}
-
-		if ( ! empty( $args['customizer_repeater_repeater_control'] ) ) {
-			$this->customizer_repeater_repeater_control = $args['customizer_repeater_repeater_control'];
-		}
+		
 
 		if ( ! empty( $args['id'] ) ) {
 			$this->id = $args['id'];
@@ -184,15 +162,6 @@ class Customizer_Repeater extends WP_Customize_Control {
 						if(!empty($item->title)){
 							$title = $item->title;
 						}
-						if(!empty($item->subtitle)){
-							$subtitle =  $item->subtitle;
-						}
-						if(!empty($item->text)){
-							$text = $item->text;
-						}
-						if(!empty($item->link)){
-							$link = $item->link;
-						}
 					
 					
 						
@@ -202,30 +171,9 @@ class Customizer_Repeater extends WP_Customize_Control {
 								'class' => 'customizer-repeater-title-control',
 							), $title);
 						}
-						if($this->customizer_repeater_subtitle_control==true){
-							$this->input_control(array(
-								'label' => __('Subtitle','your-textdomain'),
-								'class' => 'customizer-repeater-subtitle-control',
-							), $subtitle);
-						}
-						if($this->customizer_repeater_text_control==true){
-							$this->input_control(array(
-								'label' => __('Text','your-textdomain'),
-								'class' => 'customizer-repeater-text-control',
-								'type'  => 'textarea'
-							), $text);
-						}
-						if($this->customizer_repeater_link_control){
-							$this->input_control(array(
-								'label' => __('Link','your-textdomain'),
-								'class' => 'customizer-repeater-link-control',
-								'sanitize_callback' => 'esc_url'
-							), $link);
-						}
 					
-						/*if($this->customizer_repeater_repeater_control==true){
-							$this->repeater_control($repeater);
-						} */ ?>
+					
+					 ?>
 
 						<input type="hidden" class="social-repeater-box-id" value="<?php if ( ! empty( $this->id ) ) {
 							echo esc_attr( $this->id );
@@ -256,29 +204,9 @@ class Customizer_Repeater extends WP_Customize_Control {
 							'class' => 'customizer-repeater-title-control',
 						) );
 					}
-					if ( $this->customizer_repeater_subtitle_control == true ) {
-						$this->input_control( array(
-							'label' => __( 'Subtitle', 'your-textdomain' ),
-							'class' => 'customizer-repeater-subtitle-control'
-						) );
-					}
-					if ( $this->customizer_repeater_text_control == true ) {
-						$this->input_control( array(
-							'label' => __( 'Text', 'your-textdomain' ),
-							'class' => 'customizer-repeater-text-control',
-							'type'  => 'textarea'
-						) );
-					}
-					if ( $this->customizer_repeater_link_control == true ) {
-						$this->input_control( array(
-							'label' => __( 'Link', 'your-textdomain' ),
-							'class' => 'customizer-repeater-link-control'
-						) );
-					}
 				
-					/*if($this->customizer_repeater_repeater_control==true){
-						$this->repeater_control();
-					} */?>
+				
+					?>
 					<input type="hidden" class="social-repeater-box-id">
 					<button type="button" class="social-repeater-general-control-remove-field button" style="display:none;">
 						<?php esc_html_e( 'Delete field', 'your-textdomain' ); ?>
@@ -302,65 +230,5 @@ class Customizer_Repeater extends WP_Customize_Control {
 	}
 
 
-	/*private function repeater_control($value = ''){
-		$social_repeater = array();
-		$show_del        = 0; ?>
-		<span class="customize-control-title"><?php esc_html_e( 'Social icons', 'your-textdomain' ); ?></span>
-		<?php
-		if(!empty($value)) {
-			$social_repeater = json_decode( html_entity_decode( $value ), true );
-		}
-		if ( ( count( $social_repeater ) == 1 && '' === $social_repeater[0] ) || empty( $social_repeater ) ) { ?>
-			<div class="customizer-repeater-social-repeater">
-				<div class="customizer-repeater-social-repeater-container">
-					<div class="customizer-repeater-rc input-group icp-container">
-						<input data-placement="bottomRight" class="icp icp-auto" value="<?php if(!empty($value)) { echo esc_attr( $value ); } ?>" type="text">
-						<span class="input-group-addon"></span>
-					</div>
-
-					<input type="text" class="customizer-repeater-social-repeater-link"
-					       placeholder="<?php esc_html_e( 'Link', 'your-textdomain' ); ?>">
-					<input type="hidden" class="customizer-repeater-social-repeater-id" value="">
-					<button class="social-repeater-remove-social-item" style="display:none">
-						<?php esc_html_e( 'X', 'your-textdomain' ); ?>
-					</button>
-				</div>
-				<input type="hidden" id="social-repeater-socials-repeater-colector" class="social-repeater-socials-repeater-colector" value=""/>
-			</div>
-			<button class="social-repeater-add-social-item"><?php esc_html_e( 'Add icon', 'your-textdomain' ); ?></button>
-			<?php
-		} else { ?>
-			<div class="customizer-repeater-social-repeater">
-				<?php
-				foreach ( $social_repeater as $social_icon ) {
-					$show_del ++; ?>
-					<div class="customizer-repeater-social-repeater-container">
-						<div class="customizer-repeater-rc input-group icp-container">
-							<input data-placement="bottomRight" class="icp icp-auto" value="<?php if( !empty($social_icon['icon']) ) { echo esc_attr( $social_icon['icon'] ); } ?>" type="text">
-							<span class="input-group-addon"></span>
-						</div>
-						<input type="text" class="customizer-repeater-social-repeater-link"
-						       placeholder="<?php esc_html_e( 'Link', 'your-textdomain' ); ?>"
-						       value="<?php if ( ! empty( $social_icon['link'] ) ) {
-							       echo esc_url( $social_icon['link'] );
-						       } ?>">
-						<input type="hidden" class="customizer-repeater-social-repeater-id"
-						       value="<?php if ( ! empty( $social_icon['id'] ) ) {
-							       echo esc_attr( $social_icon['id'] );
-						       } ?>">
-						<button class="social-repeater-remove-social-item"
-						        style="<?php if ( $show_del == 1 ) {
-							        echo "display:none";
-						        } ?>"><?php esc_html_e( 'X', 'your-textdomain' ); ?></button>
-					</div>
-					<?php
-				} ?>
-				<input type="hidden" id="social-repeater-socials-repeater-colector"
-				       class="social-repeater-socials-repeater-colector"
-				       value="<?php echo esc_textarea( html_entity_decode( $value ) ); ?>" />
-			</div>
-			<button class="social-repeater-add-social-item"><?php esc_html_e( 'Add icon', 'your-textdomain' ); ?></button>
-			<?php
-		}
-	}*/
+	
 }

@@ -26,55 +26,16 @@ function escapeHtml(string) {
 
 }
 
-
-
-/********************************************
- *** Generate unique id ***
- *********************************************/
-function customizer_repeater_uniqid(prefix, more_entropy) {
-    'use strict';
-    if (typeof prefix === 'undefined') {
-        prefix = '';
-    }
-
-    var retId;
-    var php_js;
-    var formatSeed = function (seed, reqWidth) {
-        seed = parseInt(seed, 10)
-            .toString(16); // to hex str
-        if (reqWidth < seed.length) { // so long we split
-            return seed.slice(seed.length - reqWidth);
-        }
-        if (reqWidth > seed.length) { // so short we pad
-            return new Array(1 + (reqWidth - seed.length))
-                    .join('0') + seed;
-        }
-        return seed;
-    };
-
-    // BEGIN REDUNDANT
-    if (!php_js) {
-        php_js = {};
-    }
-    // END REDUNDANT
-    if (!php_js.uniqidSeed) { // init seed with big random int
-        php_js.uniqidSeed = Math.floor(Math.random() * 0x75bcd15);
-    }
-    php_js.uniqidSeed++;
-
-    retId = prefix; // start with prefix, add current milliseconds hex string
-    retId += formatSeed(parseInt(new Date()
-            .getTime() / 1000, 10), 8);
-    retId += formatSeed(php_js.uniqidSeed, 5); // add seed hex string
-    if (more_entropy) {
-        // for more entropy we add a float lower to 10
-        retId += (Math.random() * 10)
-            .toFixed(8)
-            .toString();
-    }
-
-    return retId;
+/* Generate unique id, taken from https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+*/
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
 }
+
+
 
 
 /********************************************
@@ -89,15 +50,11 @@ function customizer_repeater_refresh_general_control_values() {
         var th = $(this);
         th.find('.customizer-repeater-general-control-repeater-container').each(function () {
 
-        
-              var title = $(this).find('.customizer-repeater-title-control').val();
+            var title = $(this).find('.customizer-repeater-title-control').val();
 
             if (title !== ''  ) {
                 values.push({
-                
                     'title': escapeHtml(title)
-            
-                   
                 });
             }
 
@@ -108,18 +65,9 @@ function customizer_repeater_refresh_general_control_values() {
 }
 
 
-    'use strict';
-    var theme_conrols = $('#customize-theme-controls');
-    theme_conrols.on('click', '.customizer-repeater-customize-control-title', function () {
-        $(this).next().slideToggle('medium', function () {
-            if ($(this).is(':visible')){
-                $(this).css('display', 'block');
-            }
-        });
-    });
-
+ 'use strict';
+ var theme_conrols = $('#customize-theme-controls');
  
-
 
     /**
      * This adds a new box to repeater
@@ -128,7 +76,7 @@ function customizer_repeater_refresh_general_control_values() {
     theme_conrols.on('click', '.customizer-repeater-new-field', function () {
         console.log("new field clicked");
         var th = $(this).parent();
-        var id = 'customizer-repeater-' + customizer_repeater_uniqid();
+        var id = 'customizer-repeater-' + uuidv4();
         if (typeof th !== 'undefined') {
             /* Clone the first box*/
             var field = th.find('.customizer-repeater-general-control-repeater-container:first').clone();
@@ -140,23 +88,11 @@ function customizer_repeater_refresh_general_control_values() {
             
 
                 /*Show delete box button because it's not the first box*/
-                field.find('.social-repeater-general-control-remove-field').show();
-
-               
-
-                /*Remove all repeater fields except first one*/
-
-                field.find('.customizer-repeater-social-repeater').find('.customizer-repeater-social-repeater-container').not(':first').remove();
-                field.find('.customizer-repeater-social-repeater-link').val('');
-                field.find('.social-repeater-socials-repeater-colector').val('');
-
-                /*Remove value from icon field*/
-                // field.find('.icp').val('');
-
+                field.find('.customizer-repeater-general-control-remove-field').show();
               
              
                 /*Set box id*/
-                //field.find('.social-repeater-box-id').val(id);
+                field.find('.customizer-repeater-box-id').val(id);
 
               
                 /*Remove value from title field*/
@@ -175,7 +111,7 @@ function customizer_repeater_refresh_general_control_values() {
     });
 
 
-   theme_conrols.on('click', '.social-repeater-general-control-remove-field', function () {
+   theme_conrols.on('click', '.customizer-repeater-general-control-remove-field', function () {
        console.log("delete field clicked");
         if (typeof    $(this).parent() !== 'undefined') {
             $(this).parent().parent().remove();
@@ -190,17 +126,5 @@ function customizer_repeater_refresh_general_control_values() {
     });
 
   
-
-    /*Drag and drop to change icons order*/
-
-    $('.customizer-repeater-general-control-droppable').sortable({
-        update: function () {
-            customizer_repeater_refresh_general_control_values();
-        }
-    });
-
-
-
-
 
 })(jQuery);

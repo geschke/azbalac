@@ -1014,8 +1014,8 @@ class Tikva_Customizer
    $wp_customize->add_setting( 'customizer_repeater_example', array(
          'sanitize_callback' => array($this->sanitizer, 'sanitizeRepeater')
       ));
-      
-      $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'customizer_repeater_example', array(
+
+      $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'customizer_repeater_example', array(
 	'label'   => esc_html__('Example','customizer-repeater'),
 	'section' => 'section_theme_options_intro',
 	'priority' => 1,

@@ -1,6 +1,33 @@
 /* global jQuery */
 /* global wp */
 
+
+(function ($) {
+
+
+
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    '\'': '&#39;',
+    '/': '&#x2F;'
+};
+
+function escapeHtml(string) {
+    'use strict';
+    //noinspection JSUnresolvedFunction
+    string = String(string).replace(new RegExp('\r?\n', 'g'), '<br />');
+    string = String(string).replace(/\\/g, '&#92;');
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+        return entityMap[s];
+    });
+
+}
+
+
+
 /********************************************
  *** Generate unique id ***
  *********************************************/
@@ -53,42 +80,17 @@ function customizer_repeater_uniqid(prefix, more_entropy) {
 /********************************************
  *** General Repeater ***
  *********************************************/
-function customizer_repeater_refresh_social_icons(th) {
-    'use strict';
-    var icons_repeater_values = [];
-    th.find('.customizer-repeater-social-repeater-container').each(function () {
-       
-        var link = jQuery(this).find('.customizer-repeater-social-repeater-link').val();
-        var id = jQuery(this).find('.customizer-repeater-social-repeater-id').val();
-
-        if (!id) {
-            id = 'customizer-repeater-social-repeater-' + customizer_repeater_uniqid();
-            jQuery(this).find('.customizer-repeater-social-repeater-id').val(id);
-        }
-
-        if (icon !== '' && link !== '') {
-            icons_repeater_values.push({
-                'icon': icon,
-                'link': link,
-                'id': id
-            });
-        }
-    });
-
-    th.find('.social-repeater-socials-repeater-colector').val(JSON.stringify(icons_repeater_values));
-    customizer_repeater_refresh_general_control_values();
-}
 
 
 function customizer_repeater_refresh_general_control_values() {
     'use strict';
-    jQuery('.customizer-repeater-general-control-repeater').each(function () {
+    $('.customizer-repeater-general-control-repeater').each(function () {
         var values = [];
-        var th = jQuery(this);
+        var th = $(this);
         th.find('.customizer-repeater-general-control-repeater-container').each(function () {
 
         
-              var title = jQuery(this).find('.customizer-repeater-title-control').val();
+              var title = $(this).find('.customizer-repeater-title-control').val();
 
             if (title !== ''  ) {
                 values.push({
@@ -106,13 +108,12 @@ function customizer_repeater_refresh_general_control_values() {
 }
 
 
-jQuery(document).ready(function () {
     'use strict';
-    var theme_conrols = jQuery('#customize-theme-controls');
+    var theme_conrols = $('#customize-theme-controls');
     theme_conrols.on('click', '.customizer-repeater-customize-control-title', function () {
-        jQuery(this).next().slideToggle('medium', function () {
-            if (jQuery(this).is(':visible')){
-                jQuery(this).css('display', 'block');
+        $(this).next().slideToggle('medium', function () {
+            if ($(this).is(':visible')){
+                $(this).css('display', 'block');
             }
         });
     });
@@ -126,7 +127,7 @@ jQuery(document).ready(function () {
      */
     theme_conrols.on('click', '.customizer-repeater-new-field', function () {
         console.log("new field clicked");
-        var th = jQuery(this).parent();
+        var th = $(this).parent();
         var id = 'customizer-repeater-' + customizer_repeater_uniqid();
         if (typeof th !== 'undefined') {
             /* Clone the first box*/
@@ -176,8 +177,8 @@ jQuery(document).ready(function () {
 
    theme_conrols.on('click', '.social-repeater-general-control-remove-field', function () {
        console.log("delete field clicked");
-        if (typeof    jQuery(this).parent() !== 'undefined') {
-            jQuery(this).parent().parent().remove();
+        if (typeof    $(this).parent() !== 'undefined') {
+            $(this).parent().parent().remove();
             customizer_repeater_refresh_general_control_values();
         }
         return false;
@@ -192,73 +193,14 @@ jQuery(document).ready(function () {
 
     /*Drag and drop to change icons order*/
 
-    jQuery('.customizer-repeater-general-control-droppable').sortable({
+    $('.customizer-repeater-general-control-droppable').sortable({
         update: function () {
             customizer_repeater_refresh_general_control_values();
         }
     });
 
 
-    /*----------------- Socials Repeater ---------------------*/
-   /* theme_conrols.on('click', '.social-repeater-add-social-item', function (event) {
-        event.preventDefault();
-        var th = jQuery(this).parent();
-        var id = 'customizer-repeater-social-repeater-' + customizer_repeater_uniqid();
-        if (typeof th !== 'undefined') {
-            var field = th.find('.customizer-repeater-social-repeater-container:first').clone();
-            if (typeof field !== 'undefined') {
-              
-                field.find( '.input-group-addon' ).find('.fa').attr('class','fa');
-                field.find('.social-repeater-remove-social-item').show();
-                field.find('.customizer-repeater-social-repeater-link').val('');
-                field.find('.customizer-repeater-social-repeater-id').val(id);
-                th.find('.customizer-repeater-social-repeater-container:first').parent().append(field);
-            }
-        }
-        return false;
-    });
 
-    theme_conrols.on('click', '.social-repeater-remove-social-item', function (event) {
-        event.preventDefault();
-        var th = jQuery(this).parent();
-        var repeater = jQuery(this).parent().parent();
-        th.remove();
-        customizer_repeater_refresh_social_icons(repeater);
-        return false;
-    });
 
-    theme_conrols.on('keyup', '.customizer-repeater-social-repeater-link', function (event) {
-        event.preventDefault();
-        var repeater = jQuery(this).parent().parent();
-        customizer_repeater_refresh_social_icons(repeater);
-        return false;
-    });
 
-    theme_conrols.on( 'iconpickerUpdated','.icp', function(event) {
-        event.preventDefault();
-        var th = jQuery(this).parent().parent().parent();
-        customizer_repeater_refresh_social_icons(th);
-        return false;
-    } );
-*/
-});
-
-var entityMap = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    '\'': '&#39;',
-    '/': '&#x2F;'
-};
-
-function escapeHtml(string) {
-    'use strict';
-    //noinspection JSUnresolvedFunction
-    string = String(string).replace(new RegExp('\r?\n', 'g'), '<br />');
-    string = String(string).replace(/\\/g, '&#92;');
-    return String(string).replace(/[&<>"'\/]/g, function (s) {
-        return entityMap[s];
-    });
-
-}
+})(jQuery);

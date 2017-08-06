@@ -82,10 +82,6 @@ function customizer_repeater_refresh_general_control_values() {
             var field = th.find('.customizer-repeater-general-control-repeater-container:first').clone();
 
             if (typeof field !== 'undefined') {
-                /*Set the default value for choice between image and icon to icon*/
-                //field.find('.customizer-repeater-image-choice').val('customizer_repeater_icon');
-
-            
 
                 /*Show delete box button because it's not the first box*/
                 field.find('.customizer-repeater-general-control-remove-field').show();

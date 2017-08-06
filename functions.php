@@ -24,7 +24,6 @@ require_once( get_template_directory() . '/inc/customizer/Customizer.php' );
 require_once( get_template_directory() . '/inc/class-tikva-footer.php' );
 
 
-new Tikva_Customizer();
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
     	function theme_slug_render_title() {
@@ -114,6 +113,12 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         add_theme_support( 'title-tag' );
 
+        
+        add_action( 'customize_register', 'tikva_register_customizer_repeater' );
+        
+
+        // Initialize Customizer after all custom controls are loaded
+        new Tikva_Customizer();
 
         // This theme uses its own gallery styles.
         //add_filter( 'use_default_gallery_style', '__return_false' );
@@ -121,6 +126,21 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 endif; // tikva_setup
 add_action( 'after_setup_theme', 'tikva_setup' );
 
+/**
+ * Make call to register_control_type to enable underscore JavaScript template integration
+*/
+if (! function_exists('tikva_register_customize_repeater')) :
+
+    function tikva_register_customizer_repeater($wp_customize)
+    {
+        // Load our custom control.
+        //require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
+
+        // Register the control type.
+        $wp_customize->register_control_type( 'Tikva_Custom_Repeater_Control' );
+    }
+
+endif;
 
 /**
  * Add color styling from theme
@@ -128,7 +148,8 @@ add_action( 'after_setup_theme', 'tikva_setup' );
 // wp_enqueue_style( 'tikva-default-style', get_template_directory_uri() . '/css/default.css' );
  
 if ( ! function_exists( 'tikva_add_social_button_style' ) ) :
-function tikva_add_social_button_style() {
+function tikva_add_social_button_style() 
+{
     /*wp_enqueue_style(
         'tikva-default-style',
         get_template_directory_uri() . '/css/default.css'
@@ -178,18 +199,20 @@ if ( ! isset( $content_width ) ) {
 
 if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
 
-    function tikva_enqueue_font_awesome() {
+    function tikva_enqueue_font_awesome() 
+    {
 
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
 
-}
+    }
 
 endif;
 
 
 if ( ! function_exists( 'tikva_get_body_styles' ) ) :
 
-    function tikva_get_body_styles() {
+    function tikva_get_body_styles() 
+    {
     
         $colorBgSidebar = get_theme_mod('color_bg_sidebar');
         if (!$colorBgSidebar) {

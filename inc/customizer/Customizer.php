@@ -1016,10 +1016,28 @@ class Tikva_Customizer
       ));
 
       $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'customizer_repeater_example', array(
-	'label'   => esc_html__('Example','customizer-repeater'),
+	'label'   => esc_html__('Example','tikva'),
+       'description' => 'Description','tikva',
+       
 	'section' => 'section_theme_options_intro',
 	'priority' => 1,
-	'customizer_repeater_title_control' => true
+	'customizer_repeater_title_control' => true,
+   
+	'fields' => array(
+		'link_text' => array(
+			'type'        => 'text',
+			'label'       => esc_attr__( 'Link Text', 'tikva' ),
+			'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
+			'default'     => '',
+		),
+		'link_url' => array(
+			'type'        => 'text',
+			'label'       => esc_attr__( 'Link URL', 'tikva' ),
+			'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
+			'default'     => '',
+		),
+	)
+
 	
  ) ) );
 

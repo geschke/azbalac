@@ -7,12 +7,38 @@ if (! class_exists( 'WP_Customize_Control' )) {
 class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 {
 
-	/**
-	* Define the control type
-	*/
-	public $type = 'tikva-repeater';
+    /**
+    * Define the control type
+    */
+    public $type = 'tikva-repeater';
 
 
+    /**
+     * Label for the control.
+     * Needed for accessing label
+
+     * @access public
+     * @var string
+     */
+    public $label = '';
+    
+    /**
+    * Description for the control.
+    *
+
+    * @access public
+    * @var string
+    */
+    public $description = '';
+
+    /**
+     * The fields that each container row will contain.
+     *
+     * @access public
+     * @var array
+     */
+    public $fields = array();
+    
     public $id;
     private $boxtitle = array();
     private $customizer_repeater_title_control = false;
@@ -22,12 +48,15 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
     public function __construct($manager, $id, $args = array())
     {
         parent::__construct( $manager, $id, $args );
-	
+    
         /*Get options from customizer.php*/
         $this->boxtitle   = __('Customizer Repeater', 'tikva');
-        if (! empty( $this->label )) {
+        /*if (! empty( $this->label )) {
             $this->boxtitle = $this->label;
-        }
+        }*/
+    
+        $this->fields = $args['fields'];
+
 
         if (! empty( $args['customizer_repeater_title_control'] )) {
             $this->customizer_repeater_title_control = $args['customizer_repeater_title_control'];
@@ -58,35 +87,47 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
     public function to_json()
     {
-		//echo "in " . __METHOD__;
+        //echo "in " . __METHOD__;
 
-		parent::to_json();
+        parent::to_json();
 
  /* Get default options */
 //        $defaultValues = json_decode( $this->setting->default );
+    
+        $this->json['default'] = ( isset( $this->default ) ) ? $this->default : $this->setting->default;
 
-       
-		$this->json['default'] = ( isset( $this->default ) ) ? $this->default : $this->setting->default;
-
-		$values = $this->value();
-		
-		  $json = json_decode( $values );
+        $values = $this->value();
+        $this->json['fields'] = $this->fields;
+          $json = json_decode( $values );
 
         if (! is_array( $json )) {
             $json = array( $values );
         }
-		$this->json['value'] = $json;
-
+        $this->json['value'] = $json;
     }
 
     protected function render_content()
     {
-		//echo "in " . __METHOD__;
-      
+        //echo "in " . __METHOD__;
+        ?>
+        <label>
 
-       ?>
+            <span class="customize-control-repeater">
+        <?php
+        // The label has already been sanitized in the Fields class, no need to re-sanitize it.
+        ?>
+                <?php echo esc_html_e($this->label, 'tikva'); ?>
+                <?php if (!empty($this->description)) : ?>
+                    <?php
+                    // The description has already been sanitized in the Fields class, no need to re-sanitize it.
+                    ?>
+                    <span class="description customize-control-description"><?php echo esc_html_e($this->description, 'tikva'); ?></span>
+                <?php endif; ?>
+            </span>
+        Content here...
+        </label>
 
-        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+       
         <div class="customizer-repeater-general-control-repeater">
             <?php
             if (( count( $json ) == 1 && '' === $json[0] ) || empty( $json )) {
@@ -118,17 +159,46 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
     }
 
 
-	public function content_template()
-	{
-		?>
-		<script type="text/html" class="customize-control-repeater-content">
-		<#
-		console.log("foo");
-		console.log(data.value);
-     	#>
-		</script>
-		<?php
-	}
+    public function content_template()
+    {
+
+        ?>
+    
+        <#
+        console.log("foo");
+        console.log(data.value);
+       
+		console.log(data.fields);
+		
+        
+        #>
+         <label>
+
+            <span class="customize-control-repeater">
+        <?php
+        // The label has already been sanitized in the Fields class, no need to re-sanitize it.
+        ?>
+           <# if ( data.label ) { #>
+            <span class="customize-control-title">{{ data.label }}</span>
+            <# } #>
+
+             <# if ( data.description ) { #>
+            <span class="description customize-control-description">{{{ data.description }}}</span>
+            <# } #>
+                
+        </label>
+		<div class="repeater-row-content">
+			<# _.each( data.fields, function( field, i ) { #>
+			<#		console.log(i);
+				console.log(field.type);
+				#>
+			<# }); #>
+			<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'kirki' ); ?></button>
+		</div>	
+
+        
+        <?php
+    }
 
     public function pre_render_content()
     {

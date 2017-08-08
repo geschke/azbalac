@@ -1,5 +1,6 @@
 
 
+
 (function ($) {
 
     // Realtime view of site name

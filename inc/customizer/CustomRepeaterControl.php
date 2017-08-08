@@ -10,7 +10,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
     /**
     * Define the control type
     */
-    public $type = 'tikva-repeater';
+    public $type = 'tikva_repeater';
 
 
     /**
@@ -55,12 +55,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
             $this->boxtitle = $this->label;
         }*/
     
-        $this->fields = $args['fields'];
-
-
-        if (! empty( $args['customizer_repeater_title_control'] )) {
-            $this->customizer_repeater_title_control = $args['customizer_repeater_title_control'];
-        }
+        // fields could be empty due to initialization by WP_Customize_Manager in print_template()
+		if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
+			$args['fields'] = array();
+		}
+		$this->fields = $args['fields'];
 
         
 
@@ -76,9 +75,13 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
         //wp_enqueue_style( 'customizer-repeater-admin-stylesheet', get_template_directory_uri().'/customizer-repeater/css/admin-style.css','1.0.0' );
 
-        wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom_controls.js', array( 'jquery' ), '', true );
+        //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom_controls.js', array( 'jquery' ), '', true );
+
+		wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom-repeater.js', array( 'jquery' ), '', true );
 
         wp_enqueue_script('underscore');
+		
+
         #wp_enqueue_script( 'customizer-repeater-underscorescript', get_template_directory_uri().'/js/underscore-min.js', array( ), '1.8.3', true );
 
         //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri() . '/customizer-repeater/js/customizer_repeater.js', array('jquery', 'jquery-ui-draggable' ), '1.0.1', true  );
@@ -169,34 +172,53 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         console.log(data.value);
        
 		console.log(data.fields);
-		
-        
+		var tikvaRepeaterContainer = {};
+       
         #>
-         <label>
+		<div class="customize-control-repeater-element-container">
+			<div class="customize-control-repeater-element" id="">
+				<label>
+				<?php
+				// The label has already been sanitized in the Fields class, no need to re-sanitize it.
+				?>
+				<# if ( data.label ) { #>
+					<span class="customize-control-title">{{ data.label }}</span>
+					<# } #>
 
-            <span class="customize-control-repeater">
-        <?php
-        // The label has already been sanitized in the Fields class, no need to re-sanitize it.
-        ?>
-           <# if ( data.label ) { #>
-            <span class="customize-control-title">{{ data.label }}</span>
-            <# } #>
+					<# if ( data.description ) { #>
+					<span class="description customize-control-description">{{{ data.description }}}</span>
+					<# } #>
+						
+				</label>
+				<div class="repeater-row-content">
+					<# _.each( data.fields, function( field, name ) { #>
+					<#	
+						//console.log(field.type);
+						console.log(field);
+						#>
+						<# if ( field.type === 'text' ) { #>
+						<div class="repeater-row-label">
+							{{{ name }}}
+						</div>
+						<div class="repeater-row-field">
+							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-field="{{{ field.id }}}">
+							</div>
+						<# } else if (field.type === 'url') { #>
+							field: url // {{{ name }}}
+						<# } #>
 
-             <# if ( data.description ) { #>
-            <span class="description customize-control-description">{{{ data.description }}}</span>
-            <# } #>
-                
-        </label>
-		<div class="repeater-row-content">
-			<# _.each( data.fields, function( field, i ) { #>
-			<#		console.log(i);
-				console.log(field.type);
-				#>
-			<# }); #>
-			<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'kirki' ); ?></button>
-		</div>	
+					<# }); #>
+					
+				</div>	
+				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
+				
+			</div> <!-- customize-control-repeater-element -->
+			
+		</div>
+		<button type="button" class="button add-field customize-repeater-new-field">
+				<?php esc_html_e( 'Add new field', 'tikva' ); ?>
+		</button>
 
-        
         <?php
     }
 

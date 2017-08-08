@@ -1028,13 +1028,13 @@ class Tikva_Customizer
 			'type'        => 'text',
 			'label'       => esc_attr__( 'Link Text', 'tikva' ),
 			'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
-			'default'     => '',
+			'default'     => 'default test for text',
 		),
 		'link_url' => array(
 			'type'        => 'text',
 			'label'       => esc_attr__( 'Link URL', 'tikva' ),
 			'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
-			'default'     => '',
+			'default'     => 'another default test for text',
 		),
 	)
 

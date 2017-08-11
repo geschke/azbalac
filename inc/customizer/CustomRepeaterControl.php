@@ -171,7 +171,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         console.log("foo");
         console.log(data.value);
        
-		console.log(data.fields);
+		//console.log(data.fields);
 		var tikvaRepeaterContainer = {};
        
         #>
@@ -198,10 +198,10 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 						#>
 						<# if ( field.type === 'text' ) { #>
 						<div class="repeater-row-label">
-							{{{ name }}}
+							{{{ field.label }}}
 						</div>
 						<div class="repeater-row-field">
-							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-field="{{{ field.id }}}">
+							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}">
 							</div>
 						<# } else if (field.type === 'url') { #>
 							field: url // {{{ name }}}

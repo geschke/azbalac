@@ -15,7 +15,7 @@ function uuidv4() {
   });
 }
 
-//var elementdata = {}; // todo: better naming
+//var elementData = {}; // todo: better naming
 
 wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
@@ -23,7 +23,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     ready: function() {
         var control = this;
-        //this.elementdata = {};
+        //this.elementData = {};
 
     
         control.initRepeaterControl();
@@ -32,7 +32,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     initRepeaterControl: function() {
         var control = this;
-        var elementdata = {};
+        var elementData = {};
 
 
         var element = $(this.container).find('.customize-control-repeater-element');
@@ -42,8 +42,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         // first initialization
         var newId = uuidv4();
         element.attr('id',newId);
-        elementdata[newId] = {
-                placeholder: true
+        elementData[newId] = {
+                elements: {}
             };
 
 
@@ -60,9 +60,13 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             var newId = uuidv4();
 
             newElement.attr('id',newId);
+            // clear input fields, maybe replace with default (later, when saving is functional)
+            newElement.find('.customize-repeater-input-text').val('');
+
             newElement.appendTo($('.customize-control-repeater-element-container'));
-            elementdata[newId] = {
-                placeholder: true
+            elementData[newId] = {
+                elements: {}
+
             };
           
         });
@@ -73,16 +77,45 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             console.log("clicked remove");
             var removeElem = $(this).parent();
             var removeId = removeElem.attr('id');
-            console.log(elementdata);
+            console.log("elementId: " + removeId);
             removeElem.remove();
-            // todo: find id in elementdata and remove
+            console.log(elementData);
+            elementData = _.omit(elementData,removeId);
+        
+            console.log("after remove:");
+            console.log(elementData);
+            // todo: find id in elementData and remove
 
         });
 
         // initialize key events to handle input fields
         $(document).on('keyup', '.customize-repeater-input-text', function () {
             console.log("on keyup store the whole stuff");
-            
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).attr('data-field'));
+                var dataType = ($(this).attr('data-type'));
+                if (dataType == 'text') {
+                    console.log("data type text");
+                    var newValue = $(this).val();
+                    if (elementData[elementId]["elements"][dataField] == undefined) {
+                        elementData[elementId]["elements"][dataField] = {};
+                    }
+                    elementData[elementId]["elements"][dataField]['type'] = dataType;
+                    elementData[elementId]["elements"][dataField]['name'] = dataField;
+                    elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+                } else if (dataType == 'url') {
+
+                } //...
+                
+
+            }
+            else {
+                console.log("something went wrong here!");
+            }
+            console.log(elementData);
         });
 
     }

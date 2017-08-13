@@ -47,6 +47,14 @@
         });
     });
 
+    //wp.customize('setting_introduction_area_elements', function (value) {
+    //    console.log("in postMessage");
+    //    console.log(value);
+
+        /*value.bind(function (col) {
+            $('#primary-sidebar > div').css('background-color', col);
+        });*/
+    //});
     
 
 })(jQuery);

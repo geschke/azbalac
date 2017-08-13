@@ -25,6 +25,13 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         //this.elementData = {};
 
+
+
+        this.container.on( 'change', function() {
+            console.log("change detected!");
+            control.setting.set( "laaaaaaaaaaaaaaaaaaaaaaaa"+ uuidv4() );
+            
+        });
     
         control.initRepeaterControl();
         
@@ -36,6 +43,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
 
         var element = $(this.container).find('.customize-control-repeater-element');
+
+     
+
+
         //console.log(this.container);
         //console.log(element);
         
@@ -100,7 +111,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                     console.log("data type text");
                     var newValue = $(this).val();
                     if (elementData[elementId]["elements"][dataField] == undefined) {
-                        elementData[elementId]["elements"][dataField] = {};
+                        elementData[elementId]["elements"][dataField] = {}; 
                     }
                     elementData[elementId]["elements"][dataField]['type'] = dataType;
                     elementData[elementId]["elements"][dataField]['name'] = dataField;
@@ -110,15 +121,46 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
                 } //...
                 
-
             }
             else {
                 console.log("something went wrong here!");
             }
             console.log(elementData);
+
+            //control.setting.set("foooooo");
+            var dataField = $(control.container).find('.tikva_repeater_collector');
+            
+            //console.log("FOOOOOOOOOOOOOOO container?");
+            var dataFieldId = dataField.attr('id');
+
+            //var dataField = $(document).find('#tikva_customize_container');
+            
+            dataField = $(document).find('#' + dataFieldId);
+            console.log("dataField:");
+            console.log(dataField);
+            dataField.val( encodeURI( JSON.stringify( elementData )));
+            dataField.trigger('change');
+            //control.setting.set( encodeURI( JSON.stringify( elementData ) ) );
+            
         });
 
-    }
+    },
+
+    /**
+	 * Get the current value of the setting
+	 *
+	 * @return Object
+	 */
+	getValue: function() {
+        
+                'use strict';
+        
+                // The setting is saved in JSON
+                return JSON.parse( decodeURI( this.setting.get() ) );
+        
+            },
+
+
 } );
   
 

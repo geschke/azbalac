@@ -31,6 +31,8 @@ class Tikva_Customizer_Addon
         $this->customizer->get_setting( 'color_fg_sidebar' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_bg_sidebar' )->transport = 'postMessage';
 
+       // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
+        
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }

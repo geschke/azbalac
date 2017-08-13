@@ -109,7 +109,12 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         $this->json['value'] = $json;
     }
 
+
     protected function render_content()
+    {
+    }
+
+    protected function ____render_content()
     {
         //echo "in " . __METHOD__;
         ?>
@@ -169,9 +174,9 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
     
         <#
         console.log("foo");
-        console.log(data.value);
+        console.log(data.section);
        
-		//console.log(data.fields);
+		console.log(data.fields);
 		var tikvaRepeaterContainer = {};
        
         #>
@@ -213,7 +218,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
 				
 			</div> <!-- customize-control-repeater-element -->
-			
+			<input type="text" value="" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
 		</div>
 		<button type="button" class="button add-field customize-repeater-new-field">
 				<?php esc_html_e( 'Add new field', 'tikva' ); ?>

@@ -150,6 +150,7 @@ class Tikva_Customizer_Sanitizer
 
     public function sanitizeRepeater($input)
     {
+        return $input; // testing...
         $input_decoded = json_decode($input, true);
         if (!empty($input_decoded)) {
             foreach ($input_decoded as $boxk => $box) {

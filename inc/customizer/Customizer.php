@@ -1011,18 +1011,18 @@ class Tikva_Customizer
         )));
 
    
-   $wp_customize->add_setting( 'customizer_repeater_example', array(
-         'sanitize_callback' => array($this->sanitizer, 'sanitizeRepeater')
+   $wp_customize->add_setting( 'setting_introduction_area_elements', array(
+         'sanitize_callback' => array($this->sanitizer, 'sanitizeRepeater'),
+         'capability' => 'edit_theme_options'
       ));
 
-      $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'customizer_repeater_example', array(
+      $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
 	'label'   => esc_html__('Example','tikva'),
        'description' => 'Description','tikva',
        
 	'section' => 'section_theme_options_intro',
-	'priority' => 1,
-	'customizer_repeater_title_control' => true,
-   
+    'priority' => 0,   
+    'settings' => 'setting_introduction_area_elements',
 	'fields' => array(
 		'link_text' => array(
 			'type'        => 'text',
@@ -1038,7 +1038,7 @@ class Tikva_Customizer
 		),
 	)
 
-	
+
  ) ) );
 
 

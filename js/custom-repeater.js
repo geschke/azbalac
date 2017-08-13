@@ -30,6 +30,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         this.container.on( 'change', function() {
             console.log("change detected!");
             control.setting.set( "laaaaaaaaaaaaaaaaaaaaaaaa"+ uuidv4() );
+            console.log($(control.container).find('#tikva_repeater_section_theme_options_intro').val());
             
         });
     
@@ -135,10 +136,13 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
             //var dataField = $(document).find('#tikva_customize_container');
             
-            dataField = $(document).find('#' + dataFieldId);
+            //dataField = $(document).find('#' + dataFieldId);
             console.log("dataField:");
             console.log(dataField);
-            dataField.val( encodeURI( JSON.stringify( elementData )));
+            //dataField.val( encodeURI( JSON.stringify( elementData )));
+            $(control.container).find('#tikva_repeater_section_theme_options_intro').val( "foooooo");
+            //$('document').find('#tikva_repeater_section_theme_options_intro').attr( "data-hm","ooooooo");
+            
             dataField.trigger('change');
             //control.setting.set( encodeURI( JSON.stringify( elementData ) ) );
             

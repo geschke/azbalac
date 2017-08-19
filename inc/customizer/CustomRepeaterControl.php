@@ -176,11 +176,77 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         console.log("foo");
         console.log(data.section);
        
-		console.log(data.fields);
-		var tikvaRepeaterContainer = {};
-       
+		//console.log(data.fields);
+        //var elementData = [];
+        console.log(data.value);
+        console.log(_.size(data.value));
+        console.log(typeof data.value);
+        if (data.value && data.value[0] != "") {
+            var elementData = JSON.parse(decodeURI(data.value));
+            //console.log(elementData);
+           
+
+        }
+        console.log("elementData?");
+       console.log(elementData);
+       console.log(typeof elementData);
+      
+       console.log(_.size(elementData));
         #>
 		<div class="customize-control-repeater-element-container">
+
+            <# if (_.size(elementData)) { #>
+            <# _.each(elementData, function (elementItem, elementName) { #>
+                <#
+                console.log("name?")
+                console.log(elementItem);
+                console.log(data.fields.name);
+                #>
+            <#    console.log(elementName); #>
+            <div class="customize-control-repeater-element" id="{{{ elementName }}}">
+				<label>
+				<?php
+				// The label has already been sanitized in the Fields class, no need to re-sanitize it.
+				?>
+				<# if ( data.label ) { #>
+					<span class="customize-control-title">{{ data.label }}</span>
+					<# } #>
+
+					<# if ( data.description ) { #>
+					<span class="description customize-control-description">{{{ data.description }}}</span>
+					<# } #>
+						
+				</label>
+				<div class="repeater-row-content">
+					<# _.each( data.fields, function( field, name ) { #>
+					<#	
+						//console.log(field.type);
+						console.log(field);
+						#>
+						<# if ( field.type === 'text' ) { #>
+						<div class="repeater-row-label">
+							{{{ field.label }}}
+						</div>
+						<div class="repeater-row-field">
+
+							<input class="customize-repeater-input-text" type="{{field.type}}" name="" 
+                            value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" 
+                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
+							</div>
+						<# } else if (field.type === 'textarea') { #>
+                        TYP: textarea
+							field: url // {{{ name }}}
+						<# } #>
+
+					<# }); #>
+				
+				</div>	
+				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
+				
+			</div> <!-- customize-control-repeater-element -->
+            <# });
+            #>
+            <# } else { #>
 			<div class="customize-control-repeater-element" id="">
 				<label>
 				<?php
@@ -206,9 +272,10 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 							{{{ field.label }}}
 						</div>
 						<div class="repeater-row-field">
-							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}">
+							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
 							</div>
-						<# } else if (field.type === 'url') { #>
+						<# } else if (field.type === 'textarea') { #>
+                        TYP: textarea
 							field: url // {{{ name }}}
 						<# } #>
 
@@ -218,8 +285,10 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
 				
 			</div> <!-- customize-control-repeater-element -->
-			<input type="text" value="" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
+            <# } #>
+		
 		</div>
+        <input type="text" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
 		<button type="button" class="button add-field customize-repeater-new-field">
 				<?php esc_html_e( 'Add new field', 'tikva' ); ?>
 		</button>

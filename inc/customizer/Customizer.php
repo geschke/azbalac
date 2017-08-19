@@ -1035,6 +1035,11 @@ class Tikva_Customizer
 			'label'       => esc_attr__( 'Link URL', 'tikva' ),
 			'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
 			'default'     => 'another default test for text',
+        ),
+        'description' => array(
+			'type'        => 'textarea',
+			'label'       => esc_attr__( 'Description', 'tikva' ),
+			'default'     => '',
 		),
 	)
 

@@ -223,19 +223,23 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 						//console.log(field.type);
 						console.log(field);
 						#>
-						<# if ( field.type === 'text' ) { #>
 						<div class="repeater-row-label">
 							{{{ field.label }}}
 						</div>
-						<div class="repeater-row-field">
+                        <# if ( field.type === 'text' ) { #>
+						
+                        <div class="repeater-row-field">
 
 							<input class="customize-repeater-input-text" type="{{field.type}}" name="" 
                             value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" 
                             data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
 							</div>
 						<# } else if (field.type === 'textarea') { #>
-                        TYP: textarea
-							field: url // {{{ name }}}
+                            <div class="repeater-row-field">
+
+							<textarea class="customize-repeater-input-textarea" type="{{field.type}}" name="" 
+                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
+							</div>
 						<# } #>
 
 					<# }); #>
@@ -267,16 +271,20 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 						//console.log(field.type);
 						console.log(field);
 						#>
-						<# if ( field.type === 'text' ) { #>
 						<div class="repeater-row-label">
 							{{{ field.label }}}
 						</div>
-						<div class="repeater-row-field">
+                        <# if ( field.type === 'text' ) { #>
+						
+                        <div class="repeater-row-field">
 							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
 							</div>
-						<# } else if (field.type === 'textarea') { #>
-                        TYP: textarea
-							field: url // {{{ name }}}
+                        <# } else if (field.type === 'textarea') { #>
+                        <div class="repeater-row-field">
+
+							<textarea class="customize-repeater-input-textarea" type="{{field.type}}" name="" 
+                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
+							</div>
 						<# } #>
 
 					<# }); #>

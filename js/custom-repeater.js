@@ -169,6 +169,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             removeElem.remove();
             console.log(elementData);
             elementData = _.omit(elementData,removeId);
+            // todo: clear textareaOldval... maybe clear all temporary variables in another method?
+            
         
             console.log("after remove:");
             console.log(elementData);
@@ -212,6 +214,61 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             control.displayRemoveButtons();
             
         });
+
+
+    // initialize key events to handle input fields
+    var textareaOldval = {};
+    $(document).on('change keyup paste', '.customize-repeater-input-textarea', function () {
+        console.log("on keyup textarea the whole stuff");
+        
+        console.log(currentVal);
+        elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+
+        console.log("oldval:");
+        console.log(textareaOldval);
+
+        var currentVal = $(this).val();
+        console.log("currentval:");
+        console.log(currentVal);
+        if(typeof textareaOldval[elementId] != undefined && currentVal == textareaOldval[elementId]) {
+            return; //check to prevent multiple simultaneous triggers
+        }
+    
+        textareaOldval[elementId] = currentVal;
+
+        if (elementData[elementId] != undefined) {
+            console.log(elementData[elementId]);
+            var dataField = ($(this).attr('data-field'));
+            var dataType = ($(this).attr('data-type'));
+            if (dataType == 'textarea') {
+                console.log("data type textarea");
+
+                var newValue = $(this).val();
+                console.log("value:");
+                console.log(newValue);
+                if (elementData[elementId]["elements"][dataField] == undefined) {
+                    elementData[elementId]["elements"][dataField] = {}; 
+                }
+                elementData[elementId]["elements"][dataField]['type'] = dataType;
+                elementData[elementId]["elements"][dataField]['name'] = dataField;
+                elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+            } else if (dataType == 'url') {
+                    // not necessary here
+            } //...
+            
+        }
+        else {
+            console.log("something went wrong here!");
+        }
+        console.log(elementData);
+
+        control.updateCurrentDataField(elementData);
+        control.displayRemoveButtons();
+        
+    });
+
+
 
     },
 

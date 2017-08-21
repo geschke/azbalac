@@ -1039,7 +1039,7 @@ class Tikva_Customizer
         'description' => array(
 			'type'        => 'textarea',
 			'label'       => esc_attr__( 'Description', 'tikva' ),
-			'default'     => '',
+			'default'     => 'Default value in textarea',
 		),
 	)
 

@@ -1040,7 +1040,14 @@ class Tikva_Customizer
 			'type'        => 'textarea',
 			'label'       => esc_attr__( 'Description', 'tikva' ),
 			'default'     => 'Default value in textarea',
-		),
+        ),
+        'setting_content_area_icon' => array(
+			'type'        => 'select',
+			'label'       =>  __('Select Font Awesome Icon or... ', 'tikva'),
+			'description' => __('Select icon or...','tikva'),
+			'choices' => $this->getFaIcons()
+        ),
+       
 	)
 
 
@@ -1048,7 +1055,7 @@ class Tikva_Customizer
 
 
 
-        /*
+ 
         $contentArea = sprintf("%02d", 1);
 
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_icon', array(
@@ -1066,7 +1073,7 @@ class Tikva_Customizer
             'type' => 'select',
             'choices' => $this->getFaIcons()
         ));
-
+/*
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
             'default' => '',
             'capability' => 'edit_theme_options',

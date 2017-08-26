@@ -26,12 +26,18 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
 
 
-        this.container.on( 'change', function() {
+        this.container.on( 'something', function() {
             console.log("change detected!");
             var dataField = $(control.container).find('.tikva_repeater_collector');
+            console.log("nach 1")
+            console.log(dataField);
             var settingData = dataField.val();
-            control.setting.set( settingData );
+            console.log("nach 2");
             console.log(settingData);
+            
+            control.setting.set( settingData );
+            console.log("nach 3");;
+            return true;
             //console.log($(control.container).find('#tikva_repeater_section_theme_options_intro').val());
             
         });
@@ -71,9 +77,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         console.log("dataField:");
         console.log(dataField);
+        console.log(JSON.stringify( elementData ) );
         $(control.container).find('#' + dataFieldId).val( encodeURI( JSON.stringify( elementData ) ));
         
-        dataField.trigger('change');
+        dataField.trigger('something');
 
     },
 
@@ -216,58 +223,95 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
 
 
-    // initialize key events to handle input fields
-    var textareaOldval = {};
-    $(document).on('change keyup paste', '.customize-repeater-input-textarea', function () {
-        console.log("on keyup textarea the whole stuff");
-        
-        console.log(currentVal);
-        elementId = $(this).parents('.customize-control-repeater-element').attr('id');
-
-        console.log("oldval:");
-        console.log(textareaOldval);
-
-        var currentVal = $(this).val();
-        console.log("currentval:");
-        console.log(currentVal);
-        if(typeof textareaOldval[elementId] != undefined && currentVal == textareaOldval[elementId]) {
-            return; //check to prevent multiple simultaneous triggers
-        }
-    
-        textareaOldval[elementId] = currentVal;
-
-        if (elementData[elementId] != undefined) {
-            console.log(elementData[elementId]);
-            var dataField = ($(this).attr('data-field'));
-            var dataType = ($(this).attr('data-type'));
-            if (dataType == 'textarea') {
-                console.log("data type textarea");
-
-                var newValue = $(this).val();
-                console.log("value:");
-                console.log(newValue);
-                if (elementData[elementId]["elements"][dataField] == undefined) {
-                    elementData[elementId]["elements"][dataField] = {}; 
-                }
-                elementData[elementId]["elements"][dataField]['type'] = dataType;
-                elementData[elementId]["elements"][dataField]['name'] = dataField;
-                elementData[elementId]["elements"][dataField]['value'] = newValue;
-
-            } else if (dataType == 'url') {
-                    // not necessary here
-            } //...
+        // initialize key events to handle input fields
+        var textareaOldval = {};
+        $(document).on('change keyup paste', '.customize-repeater-input-textarea', function () {
+            console.log("on keyup textarea the whole stuff");
             
-        }
-        else {
-            console.log("something went wrong here!");
-        }
-        console.log(elementData);
+            console.log(currentVal);
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
 
-        control.updateCurrentDataField(elementData);
-        control.displayRemoveButtons();
+            console.log("oldval:");
+            console.log(textareaOldval);
+
+            var currentVal = $(this).val();
+            console.log("currentval:");
+            console.log(currentVal);
+            if(typeof textareaOldval[elementId] != undefined && currentVal == textareaOldval[elementId]) {
+                return; //check to prevent multiple simultaneous triggers
+            }
         
-    });
+            textareaOldval[elementId] = currentVal;
 
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).attr('data-field'));
+                var dataType = ($(this).attr('data-type'));
+                if (dataType == 'textarea') {
+                    console.log("data type textarea");
+
+                    var newValue = $(this).val();
+                    console.log("value:");
+                    console.log(newValue);
+                    if (elementData[elementId]["elements"][dataField] == undefined) {
+                        elementData[elementId]["elements"][dataField] = {}; 
+                    }
+                    elementData[elementId]["elements"][dataField]['type'] = dataType;
+                    elementData[elementId]["elements"][dataField]['name'] = dataField;
+                    elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+                } else if (dataType == 'url') {
+                        // not necessary here
+                } //...
+                
+            }
+            else {
+                console.log("something went wrong here!");
+            }
+            console.log(elementData);
+
+            control.updateCurrentDataField(elementData);
+            control.displayRemoveButtons();
+            
+        });
+
+        // initialize key events to handle select fields
+        $(document).on('change', '.customize-repeater-input-select', function () {
+            console.log("on select store the whole stuff");
+
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            
+            console.log("elementid:");
+            console.log(elementId);
+           
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).attr('data-field'));
+                var dataType = ($(this).attr('data-type'));
+                if (dataType == 'select') {
+                    console.log("data type select");
+                    var newValue = $(this).val();
+                    if (elementData[elementId]["elements"][dataField] == undefined) {
+                        elementData[elementId]["elements"][dataField] = {}; 
+                    }
+                    elementData[elementId]["elements"][dataField]['type'] = dataType;
+                    elementData[elementId]["elements"][dataField]['name'] = dataField;
+                    elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+                } else if (dataType == 'url') {
+
+                } //...
+                
+            }
+            else {
+                console.log("something went wrong here!");
+            }
+            console.log(elementData);
+
+            control.updateCurrentDataField(elementData);
+            control.displayRemoveButtons();
+            
+        });
 
 
     },

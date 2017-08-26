@@ -220,7 +220,8 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				<div class="repeater-row-content">
 					<# _.each( data.fields, function( field, name ) { #>
 					<#	
-						//console.log(field.type);
+                        //console.log(field.type);
+                        console.log("current field:");
 						console.log(field);
 						#>
 						<div class="repeater-row-label">
@@ -239,7 +240,34 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
 							<textarea class="customize-repeater-input-textarea" type="{{field.type}}" name="" 
                             data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
-							</div>
+                            </div>
+                        <# } else if (field.type === 'select') { #>
+                            <div class="repeater-row-field">
+                            <#
+                            var selectValue = '';
+                            if (typeof elementItem.elements[name] != 'undefined') {
+                                selectValue = elementItem.elements[name].value;
+                            } else { 
+                                selectValue = field.default; 
+                            }
+                            console.log("select value?");
+                            console.log(selectValue);
+                            #>
+                            <select class="customize-repeater-input-select" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}" data-customize-setting-link="{{{ name }}}">
+                            <# var selectString = '';
+                                _.each(field.choices, function(choiceOption, choiceValue) {
+                                selectString = '';
+                                if (choiceValue == selectValue) {
+                                    selectString = 'selected="selected"';
+                                }
+                                #>
+                                <option {{{ selectString }}} value="{{{ choiceValue }}}"  >{{{ choiceOption }}}</option>
+                            <#
+                            });    
+                            #>
+                    		</select>
+
+							</div>    
 						<# } #>
 
 					<# }); #>

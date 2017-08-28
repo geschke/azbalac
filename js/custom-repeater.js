@@ -154,6 +154,24 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                     $(inputFields).val('');
                 }
             });
+            // todo: empty textarea content or set default
+            var selectFields = newElement.find('.customize-repeater-input-select');
+            _.each( selectFields, function( selectField, selectName ) {
+             
+                if ($(selectField).attr('data-default') != '') {
+                    //console.log("selectField default:");
+                    var selectDefault = $(selectField).attr('data-default');
+                    $(selectField).children('option').each(function(index, optionElem) {
+                        if ($(optionElem).val() == selectDefault) {
+                            $(optionElem).attr('selected','selected');
+                        }
+                    });
+                    //$(selectField).val($(selectField).attr('data-default'));
+                } else {
+                    //console.log("selectField set empty");
+                    $(selectField).children('option').removeAttr("selected");
+                }
+            });
 
 
             newElement.appendTo($('.customize-control-repeater-element-container'));

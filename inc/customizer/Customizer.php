@@ -1045,7 +1045,8 @@ class Tikva_Customizer
 			'type'        => 'select',
 			'label'       =>  __('Select Font Awesome Icon or... ', 'tikva'),
 			'description' => __('Select icon or...','tikva'),
-			'choices' => $this->getFaIcons()
+            'choices' => $this->getFaIcons(),
+            'default' => 'fa-car'
         ),
        
 	)

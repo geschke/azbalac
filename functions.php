@@ -13,6 +13,7 @@ include get_template_directory() . '/inc/info-screen/welcome-screen.php';
 require_once( get_template_directory() . '/inc/customizer/CustomLatestPostControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRadioImageControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
+require_once( get_template_directory() . '/inc/customizer/CustomRepeaterHelper.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 
 

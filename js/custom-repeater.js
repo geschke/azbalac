@@ -84,6 +84,62 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     },
 
+    emptyTemplateEntrySelect: function(selectFields) {
+        _.each( selectFields, function( selectField, selectName ) {
+        
+            if ($(selectField).attr('data-default') != '') {
+                //console.log("selectField default:");
+                var selectDefault = $(selectField).attr('data-default');
+                $(selectField).children('option').each(function(index, optionElem) {
+                    if ($(optionElem).val() == selectDefault) {
+                        $(optionElem).attr('selected','selected');
+                    }
+                });
+                //$(selectField).val($(selectField).attr('data-default'));
+            } else {
+                //console.log("selectField set empty");
+                $(selectField).children('option').removeAttr("selected");
+            }
+        });
+    },
+
+    onChangeSelectUpdate: function( event ) {
+        var control = event.data.control;
+        console.log(this);
+        console.log("on dropdownpages store the whole stuff");
+      
+        elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+        var elementData = event.data.elementData;
+        console.log("elementid:");
+        console.log(elementId);
+       
+        if (elementData[elementId] != undefined) {
+            console.log(elementData[elementId]);
+            var dataField = ($(this).attr('data-field'));
+            var dataType = ($(this).attr('data-type'));
+            if (dataType == 'dropdown-pages' || dataType == 'select') {
+                console.log("data type select/dropdown-pages");
+                var newValue = $(this).val();
+                if (elementData[elementId]["elements"][dataField] == undefined) {
+                    elementData[elementId]["elements"][dataField] = {}; 
+                }
+                elementData[elementId]["elements"][dataField]['type'] = dataType;
+                elementData[elementId]["elements"][dataField]['name'] = dataField;
+                elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+            }
+            
+        }
+        else {
+            console.log("something went wrong here!");
+        }
+        console.log(elementData);
+
+        control.updateCurrentDataField(elementData);
+        control.displayRemoveButtons();
+                
+    },
+
     initRepeaterControl: function() {
         var control = this;
         var elementData = {};
@@ -155,23 +211,11 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 }
             });
             // todo: empty textarea content or set default
+            
             var selectFields = newElement.find('.customize-repeater-input-select');
-            _.each( selectFields, function( selectField, selectName ) {
-             
-                if ($(selectField).attr('data-default') != '') {
-                    //console.log("selectField default:");
-                    var selectDefault = $(selectField).attr('data-default');
-                    $(selectField).children('option').each(function(index, optionElem) {
-                        if ($(optionElem).val() == selectDefault) {
-                            $(optionElem).attr('selected','selected');
-                        }
-                    });
-                    //$(selectField).val($(selectField).attr('data-default'));
-                } else {
-                    //console.log("selectField set empty");
-                    $(selectField).children('option').removeAttr("selected");
-                }
-            });
+            control.emptyTemplateEntrySelect(selectFields);
+            selectFields = newElement.find('.customize-repeater-input-dropdownpages');
+            control.emptyTemplateEntrySelect(selectFields);
 
 
             newElement.appendTo($('.customize-control-repeater-element-container'));
@@ -294,43 +338,15 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
 
         // initialize key events to handle select fields
-        $(document).on('change', '.customize-repeater-input-select', function () {
-            console.log("on select store the whole stuff");
-
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
-            
-            console.log("elementid:");
-            console.log(elementId);
-           
-            if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
-                var dataField = ($(this).attr('data-field'));
-                var dataType = ($(this).attr('data-type'));
-                if (dataType == 'select') {
-                    console.log("data type select");
-                    var newValue = $(this).val();
-                    if (elementData[elementId]["elements"][dataField] == undefined) {
-                        elementData[elementId]["elements"][dataField] = {}; 
-                    }
-                    elementData[elementId]["elements"][dataField]['type'] = dataType;
-                    elementData[elementId]["elements"][dataField]['name'] = dataField;
-                    elementData[elementId]["elements"][dataField]['value'] = newValue;
-
-                } else if (dataType == 'url') {
-
-                } //...
-                
-            }
-            else {
-                console.log("something went wrong here!");
-            }
-            console.log(elementData);
-
-            control.updateCurrentDataField(elementData);
-            control.displayRemoveButtons();
-            
-        });
-
+        $(document).on('change', '.customize-repeater-input-select', 
+            { elementData: elementData,
+              control: control }, 
+            control.onChangeSelectUpdate );
+        $(document).on('change', '.customize-repeater-input-dropdownpages', 
+            { elementData: elementData,
+              control: control }, 
+            control.onChangeSelectUpdate );
+        
 
     },
 

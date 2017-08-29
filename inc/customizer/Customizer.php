@@ -1051,46 +1051,13 @@ class Tikva_Customizer
         'setting_content_area_page' => array(
 			'type'        => 'dropdown-pages',
 			'label'       =>  __('Link to page or...', 'tikva'),
-            #'choices' => $this->getFaIcons(),
+            'choices' => Tikva_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
 	)
     ) ) );
 
 
-    $dropdown = wp_dropdown_pages(
-        array(
-            'name'              => '_customize-dropdown-pages-1',
-            'echo'              => 0,
-            'show_option_none'  => __( '&mdash; Select &mdash;' ),
-            'option_none_value' => '0',
-            'selected'          => 0,
-        )
-    );
-    //print_r($dropdown);
-    $dropdownLines = preg_split("/\n/",$dropdown);
 
-    //var_dump($dropdownLines);
-    
-    foreach ($dropdownLines as $pageEntry) {
-        if (!preg_match("/.*<option.*(class){0,1}.*value.*=.*\"(.*)\".*>(.*)<.*/",$pageEntry,$ma)) {
-            continue;
-        }
-        print "matched: " . $pageEntry . "\n";
-        print_r($ma);
-
-        //print_r($pageEntry);
-    }
-    die;
-    // Hackily add in the data link parameter.
-    //$dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
-
-    /*printf(
-        '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
-        $this->label,
-        $dropdown
-    );*/
-
-    
 
  
         $contentArea = sprintf("%02d", 1);

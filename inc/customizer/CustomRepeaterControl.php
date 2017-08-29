@@ -268,8 +268,35 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                     		</select>
 
 							</div>    
-						<# } #>
+						<# } else if (field.type === 'dropdown-pages') { #>
+                            <div class="repeater-row-field">
+                            <#
+                            var selectValue = '';
+                            if (typeof elementItem.elements[name] != 'undefined') {
+                                selectValue = elementItem.elements[name].value;
+                            } else { 
+                                selectValue = field.default; 
+                            }
+                            console.log("dropdown-page value?");
+                            console.log(selectValue);
+                            #>
+                            <select class="customize-repeater-input-dropdownpages" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}" data-customize-setting-link="{{{ name }}}">
+                            <# var selectString = '';
+                                _.each(field.choices, function(choiceContent, choiceIndex) {
+                                selectString = '';
+                                if (choiceContent.value == selectValue) {
+                                    selectString = 'selected="selected"';
+                                }
+                                #>
+                                <option {{{ selectString }}} value="{{{ choiceContent.value }}}"  >{{{ choiceContent.name }}}</option>
+                            <#
+                            });    
+                            #>
+                    		</select>
 
+							</div>    
+                            
+                        <# } // end if field type #>     
 					<# }); #>
 				
 				</div>	

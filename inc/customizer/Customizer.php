@@ -1053,44 +1053,26 @@ class Tikva_Customizer
 			'label'       =>  __('Link to page or...', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
-	)
+        'setting_content_area_post' => array(
+			'type'        => 'dropdown-pages',
+			'label'       =>  __('Link to Post', 'tikva'),
+            'choices' => Tikva_Custom_Repeater_Helper::getPostDropdownOptions()
+        ),
+    )
     ) ) );
 
 
 
-
  
-        $contentArea = sprintf("%02d", 1);
-
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_icon', array(
-            'default' => '',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeStylesheet')
-        ));
-
-        $wp_customize->add_control('control_content_area_' . $contentArea . '_icon', array(
-            'settings' => 'setting_content_area_' . $contentArea . '_icon',
-            'label' => sprintf(__('Content Area %s: Select Font Awesome Icon or... ', 'tikva'),  $contentArea),
-            'section' => 'section_theme_options_intro',
-            'description' => sprintf(__('Select icon for Content Area %s or...','tikva'), (int) $contentArea),
-            'type' => 'select',
-            'choices' => $this->getFaIcons()
-        ));
-
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_page', array(
-            // note - works with or without capability & type set
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => 'sanitize_post',
-        ));
+    $contentArea = sprintf("%02d", 1);
     
-        $wp_customize->add_control('control_content_area_' . $contentArea . '_page', array(
-            'label' => __('Link to page or...', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'type' => 'dropdown-pages',
-            'settings' => 'setting_content_area_' . $contentArea . '_page',
-        ));
+         
+    
+  
+
+      
+    
+      
 /*
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
             'default' => '',

@@ -1046,15 +1046,51 @@ class Tikva_Customizer
 			'label'       =>  __('Select Font Awesome Icon or... ', 'tikva'),
 			'description' => __('Select icon or...','tikva'),
             'choices' => $this->getFaIcons(),
-            'default' => 'fa-car'
+            //'default' => 'fa-car'
         ),
-       
+        'setting_content_area_page' => array(
+			'type'        => 'dropdown-pages',
+			'label'       =>  __('Link to page or...', 'tikva'),
+            #'choices' => $this->getFaIcons(),
+        ),
 	)
+    ) ) );
 
 
- ) ) );
+    $dropdown = wp_dropdown_pages(
+        array(
+            'name'              => '_customize-dropdown-pages-1',
+            'echo'              => 0,
+            'show_option_none'  => __( '&mdash; Select &mdash;' ),
+            'option_none_value' => '0',
+            'selected'          => 0,
+        )
+    );
+    //print_r($dropdown);
+    $dropdownLines = preg_split("/\n/",$dropdown);
 
+    //var_dump($dropdownLines);
+    
+    foreach ($dropdownLines as $pageEntry) {
+        if (!preg_match("/.*<option.*(class){0,1}.*value.*=.*\"(.*)\".*>(.*)<.*/",$pageEntry,$ma)) {
+            continue;
+        }
+        print "matched: " . $pageEntry . "\n";
+        print_r($ma);
 
+        //print_r($pageEntry);
+    }
+    die;
+    // Hackily add in the data link parameter.
+    //$dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
+
+    /*printf(
+        '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
+        $this->label,
+        $dropdown
+    );*/
+
+    
 
  
         $contentArea = sprintf("%02d", 1);
@@ -1073,6 +1109,20 @@ class Tikva_Customizer
             'description' => sprintf(__('Select icon for Content Area %s or...','tikva'), (int) $contentArea),
             'type' => 'select',
             'choices' => $this->getFaIcons()
+        ));
+
+        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_page', array(
+            // note - works with or without capability & type set
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => 'sanitize_post',
+        ));
+    
+        $wp_customize->add_control('control_content_area_' . $contentArea . '_page', array(
+            'label' => __('Link to page or...', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'type' => 'dropdown-pages',
+            'settings' => 'setting_content_area_' . $contentArea . '_page',
         ));
 /*
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(

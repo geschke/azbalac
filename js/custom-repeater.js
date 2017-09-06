@@ -140,6 +140,33 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 
     },
 
+
+    /*media_upload: function( buttonElem) {
+        var _custom_media = true,
+        _orig_send_attachment = wp.media.editor.send.attachment;
+        //$('body').on('click',button_class, function(e) {
+            var button_id = $(buttonElem).attr('id');
+            console.log(button_id); 
+            var self = $(button_id);
+            var send_attachment_bkp = wp.media.editor.send.attachment;
+            var button = $(button_id);
+            console.log(button);
+            var id = $(buttonElem).attr('id').replace('_button', '');
+            _custom_media = true;
+            wp.media.editor.send.attachment = function(props, attachment){
+                if ( _custom_media  ) {
+                   $('.custom_media_id').val(attachment.id); 
+                   $('.custom_media_url').val(attachment.url);
+                   $('.custom_media_image').attr('src',attachment.url).css('display','block');   
+                } else {
+                    return _orig_send_attachment.apply( button_id, [props, attachment] );
+                }
+            }
+            wp.media.editor.open(buttonElem);
+            return false;
+        //});
+    },*/
+
     initRepeaterControl: function() {
         var control = this;
         var elementData = {};
@@ -336,6 +363,103 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             control.displayRemoveButtons();
             
         });
+
+
+        /*$(document).on('click','#setting_content_area_0_image_button',function(e) {
+            console.log("Image upload, here we go!");
+            //control.media_upload( this );
+        });
+*/
+        var custom_uploader;
+
+        $(document).on('click', '.tikva-repeater-custom-upload-button', function(e) {
+            console.log("upload button pressed?");
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            console.log("elementId: " + elementId);
+
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).parents('.attachment-media-view').attr('data-field'));
+                var dataType = ($(this).parents('.attachment-media-view').attr('data-type'));
+                console.log("dataField: ");
+                console.log(dataField);
+                console.log("dataType:");
+                console.log(dataType);
+                /*    var newValue = $(this).val();
+                    if (elementData[elementId]["elements"][dataField] == undefined) {
+                        elementData[elementId]["elements"][dataField] = {}; 
+                    }
+                    elementData[elementId]["elements"][dataField]['type'] = dataType;
+                    elementData[elementId]["elements"][dataField]['name'] = dataField;
+                    elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+                } else if (dataType == 'url') {
+
+                } //...
+                */
+            }
+            else {
+                console.log("elementData undefined!");
+            }
+            console.log(elementData);
+
+            e.preventDefault();
+    
+            //If the uploader object has already been created, reopen the dialog
+            if (custom_uploader) {
+                custom_uploader.open();
+                return;
+            }
+    
+            //Extend the wp.media object
+            custom_uploader = wp.media.frames.file_frame = wp.media({
+                title: 'Choose Image',
+                button: {
+                    text: 'Choose Image'
+                },
+                multiple: false
+            });
+    
+            //When a file is selected, grab the URL and set it as the text field's value
+            custom_uploader.on('select', function() {
+                attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#setting_content_upload_test').val(attachment.url);
+
+                //if ( _custom_media  ) {
+                // $('.custom_media_id').val(attachment.id); 
+                // $('.custom_media_url').val(attachment.url);
+                $('#setting_content_image').removeClass('placeholder');   
+                var imageTemplate = '<div class="thumbnail thumbnail-image"><img id="setting_content_image_test" class="attachment-thumb" src="" draggable="false" alt=""></div>';
+                $('#setting_content_image').append(imageTemplate);
+                
+                $('#setting_content_image_test').attr('src',attachment.url).css('display','block'); 
+                console.log("Mein Bild: ");
+                console.log(attachment.id);  
+
+                if (elementData[elementId]["elements"][dataField] == undefined) {
+                    elementData[elementId]["elements"][dataField] = {}; 
+                }
+                elementData[elementId]["elements"][dataField]['type'] = dataType;
+                elementData[elementId]["elements"][dataField]['name'] = dataField;
+                elementData[elementId]["elements"][dataField]['value'] = attachment.id;
+
+                console.log("result?");
+                console.log(elementData[elementId]["elements"][dataField]);
+                control.updateCurrentDataField(elementData);
+                control.displayRemoveButtons();
+
+                //} else {
+                //    return _orig_send_attachment.apply( button_id, [props, attachment] );
+                //}
+
+
+            });
+    
+            //Open the uploader dialog
+            custom_uploader.open();
+    
+        });
+
 
         // initialize key events to handle select fields
         $(document).on('change', '.customize-repeater-input-select', 

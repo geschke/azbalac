@@ -101,12 +101,14 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
         $values = $this->value();
         $this->json['fields'] = $this->fields;
-          $json = json_decode( $values );
+        $json = json_decode( $values );
 
         if (! is_array( $json )) {
             $json = array( $values );
         }
+        
         $this->json['value'] = $json;
+        
     }
 
 
@@ -295,11 +297,50 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                     		</select>
 
 							</div>    
-                            
-                        <# } // end if field type #>     
+                        <# } else if (field.type === 'image') { #>
+                            <div class="repeater-row-field">
+
+                            <#
+                            console.log("element image!!!!!!!!!!!!!!!!!!!!!!!");
+                            if (typeof elementItem.elements[name] != 'undefined') {
+                                console.log(elementItem.elements[name].value);
+                                var imageId = elementItem.elements[name].value;
+                                //console.log(wp.media.attachment(imageId).get('url'));
+
+                                wp.media.attachment(imageId).fetch().then(function (data) {
+  // preloading finished
+  // after this you can use your attachment normally
+                                    console.log("results!!!!!!");
+  console.log(wp.media.attachment(imageId).get('url'));
+});
+                             } else { 
+                                 console.log("empty");
+                             } 
+                           #>
+
+
+                                <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
+                                    <div class="setting_content_image placeholder">
+                                        Kein Bild ausgewählt
+                                    </div>
+                                    <div class="actions">
+                                        <input type="text" value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="setting_content_upload"/>
+                                        <button type="button" class="button tikva-repeater-custom-upload-button">Bild auswählen</button>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        <# } // end of "if field type" #>     
 					<# }); #>
 				
 				</div>	
+
+             
+
+
+
+
 				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
 				
 			</div> <!-- customize-control-repeater-element -->
@@ -355,6 +396,28 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 		<button type="button" class="button add-field customize-repeater-new-field">
 				<?php esc_html_e( 'Add new field', 'tikva' ); ?>
 		</button>
+
+
+
+
+        <div class="attachment-media-view">
+				<div id="setting_content_image" class="placeholder">
+						Kein Bild ausgewählt
+				</div>
+				<div class="actions">
+					
+					<input type="text" id="setting_content_upload_test"/>
+					<button type="button" class="button custom-upload-button" id="setting_content_area_0_image_button">Bild auswählen</button>
+					
+				</div>
+			</div>
+
+
+
+
+
+
+
 
         <?php
     }

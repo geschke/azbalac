@@ -34,6 +34,14 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
         }
 	add_action( 'wp_head', 'theme_slug_render_title' );
 }
+
+
+if (! function_exists('tikva_load_wp_media_files')) :
+    // UPLOAD ENGINE
+    function tikva_load_wp_media_files() {
+        wp_enqueue_media();
+    }
+endif;
             
 
 if ( ! function_exists( 'tikva_setup' ) ) :
@@ -114,6 +122,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         add_theme_support( 'title-tag' );
 
+        add_action( 'admin_enqueue_scripts', 'tikva_load_wp_media_files' );
         
         add_action( 'customize_register', 'tikva_register_customizer_repeater' );
         
@@ -142,6 +151,8 @@ if (! function_exists('tikva_register_customize_repeater')) :
     }
 
 endif;
+
+
 
 /**
  * Add color styling from theme

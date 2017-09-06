@@ -1058,6 +1058,12 @@ class Tikva_Customizer
 			'label'       =>  __('Link to Post', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPostDropdownOptions()
         ),
+        'setting_content_area_image' => array(
+            'type'        => 'image',
+            'label' => __('...use image', 'tikva'),
+            'mime_type' => 'image',
+            'description' => __('Image displayed on section background', 'tikva')
+        ),
     )
     ) ) );
 
@@ -1065,7 +1071,7 @@ class Tikva_Customizer
 
  
     $contentArea = sprintf("%02d", 1);
-    
+ 
          
     
   
@@ -1073,7 +1079,7 @@ class Tikva_Customizer
       
     
       
-/*
+
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
             'default' => '',
             'capability' => 'edit_theme_options',
@@ -1092,7 +1098,7 @@ class Tikva_Customizer
             'mime_type' => 'image',
             'description' => __('Image displayed on section background', 'tikva')
         )));
-
+/*
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_title', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_text_field')

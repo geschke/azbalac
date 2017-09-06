@@ -1,7 +1,20 @@
 /* global jQuery */
 /* global wp */
 
-
+function tikvaRepeaterPreloadAttachment(id, payload, callback) {
+    // if it doesn't have URL we probably have to preload it
+    console.log("in preloadAttachment");
+    if (!wp.media.attachment(id).get('url')) {
+      wp.media.attachment(id).fetch().then(function () {
+          console.log("in plA - calle back");
+        callback(wp.media.attachment(id), payload);
+      });
+  
+      return;
+    }
+  
+    callback(wp.media.attachment(id), payload);
+  }
 
 
 (function ($) {

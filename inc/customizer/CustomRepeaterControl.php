@@ -306,13 +306,15 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 console.log(elementItem.elements[name].value);
                                 var imageId = elementItem.elements[name].value;
                                 //console.log(wp.media.attachment(imageId).get('url'));
+                                var payload = elementName;
+                                tikvaRepeaterPreloadAttachment(imageId, payload, function (attachment, elementPayload) {
+                                    console.log("in call of preloadAttachment");
+                                    console.log(elementPayload);
+                                  console.log(attachment.get('url'));
+                                    console.log(wp.media.attachment(imageId).get('url')); // this also works
+                                });
 
-                                wp.media.attachment(imageId).fetch().then(function (data) {
-  // preloading finished
-  // after this you can use your attachment normally
-                                    console.log("results!!!!!!");
-  console.log(wp.media.attachment(imageId).get('url'));
-});
+
                              } else { 
                                  console.log("empty");
                              } 

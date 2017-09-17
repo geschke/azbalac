@@ -306,12 +306,15 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 console.log(elementItem.elements[name].value);
                                 var imageId = elementItem.elements[name].value;
                                 //console.log(wp.media.attachment(imageId).get('url'));
-                                var payload = elementName;
+                                var payload = [];
+                                payload['elementId'] = elementName;
+                                payload['elementName'] = name;
                                 tikvaRepeaterPreloadAttachment(imageId, payload, function (attachment, elementPayload) {
                                     console.log("in call of preloadAttachment");
                                     console.log(elementPayload);
                                   console.log(attachment.get('url'));
-                                    console.log(wp.media.attachment(imageId).get('url')); // this also works
+                                    console.log(wp.media.attachment(imageId).get('url')); 
+                                    tikvaRepeaterPreviewImage(elementPayload, attachment);
                                 });
 
 
@@ -398,28 +401,6 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 		<button type="button" class="button add-field customize-repeater-new-field">
 				<?php esc_html_e( 'Add new field', 'tikva' ); ?>
 		</button>
-
-
-
-
-        <div class="attachment-media-view">
-				<div id="setting_content_image" class="placeholder">
-						Kein Bild ausgewählt
-				</div>
-				<div class="actions">
-					
-					<input type="text" id="setting_content_upload_test"/>
-					<button type="button" class="button custom-upload-button" id="setting_content_area_0_image_button">Bild auswählen</button>
-					
-				</div>
-			</div>
-
-
-
-
-
-
-
 
         <?php
     }

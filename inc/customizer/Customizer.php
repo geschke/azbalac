@@ -1064,6 +1064,12 @@ class Tikva_Customizer
             'mime_type' => 'image',
             'description' => __('Image displayed on section background', 'tikva')
         ),
+        'setting_content_area_image_one' => array(
+            'type'        => 'image',
+            'label' => __('...use image', 'tikva'),
+            'mime_type' => 'image',
+            'description' => __('Another image', 'tikva')
+        ),
     )
     ) ) );
 
@@ -1078,7 +1084,7 @@ class Tikva_Customizer
 
       
     
-      
+     /* 
 
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
             'default' => '',
@@ -1097,7 +1103,7 @@ class Tikva_Customizer
             //'height' => 500,
             'mime_type' => 'image',
             'description' => __('Image displayed on section background', 'tikva')
-        )));
+        )));*/
 /*
         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_title', array(
             'default' => '',

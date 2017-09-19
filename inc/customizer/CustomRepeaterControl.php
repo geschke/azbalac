@@ -77,10 +77,18 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
         //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom_controls.js', array( 'jquery' ), '', true );
 
-		wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom-repeater.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom-repeater.js', array( 'jquery'), '', true );
 
         wp_enqueue_script('underscore');
 		
+        wp_localize_script( 'customizer-repeater-script', 'objectL10n', array(
+            'select_image' => esc_html__( 'Select Image', 'tikva' ),
+            'remove' => esc_html__( 'Remove', 'tikva' ),
+            'change_image' => esc_html__( 'Change Image', 'tikva' ),
+            'no_image_selected' => esc_html__( 'No image selected', 'tikva' )
+            
+
+        ) );
 
         #wp_enqueue_script( 'customizer-repeater-underscorescript', get_template_directory_uri().'/js/underscore-min.js', array( ), '1.8.3', true );
 
@@ -114,58 +122,6 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
     protected function render_content()
     {
-    }
-
-    protected function ____render_content()
-    {
-        //echo "in " . __METHOD__;
-        ?>
-        <label>
-
-            <span class="customize-control-repeater">
-        <?php
-        // The label has already been sanitized in the Fields class, no need to re-sanitize it.
-        ?>
-                <?php echo esc_html_e($this->label, 'tikva'); ?>
-                <?php if (!empty($this->description)) : ?>
-                    <?php
-                    // The description has already been sanitized in the Fields class, no need to re-sanitize it.
-                    ?>
-                    <span class="description customize-control-description"><?php echo esc_html_e($this->description, 'tikva'); ?></span>
-                <?php endif; ?>
-            </span>
-        Content here...
-        </label>
-
-       
-        <div class="customizer-repeater-general-control-repeater">
-            <?php
-            if (( count( $json ) == 1 && '' === $json[0] ) || empty( $json )) {
-                if (! empty( $this_default )) {
-                    $this->iterate_array( $this_default ); ?>
-                    <input type="hidden"
-                           id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                           class="customizer-repeater-colector"
-                           value="<?php echo esc_textarea( json_encode( $this_default ) ); ?>"/>
-                    <?php
-                } else {
-                    $this->iterate_array(); ?>
-                    <input type="hidden"
-                           id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                           class="customizer-repeater-colector"/>
-                    <?php
-                }
-            } else {
-                $this->iterate_array( $json ); ?>
-                <input type="hidden" id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                       class="customizer-repeater-colector" value="<?php echo esc_textarea( $this->value() ); ?>"/>
-                <?php
-            } ?>
-            </div>
-        <button type="button" class="button add_field customizer-repeater-new-field">
-            <?php esc_html_e( 'Add new field', 'your-textdomain' ); ?>
-        </button>
-        <?php
     }
 
 
@@ -326,11 +282,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                     <div class="setting_content_image placeholder">
-                                        Kein Bild ausgewählt
+                                    <?php esc_attr_e( 'No image selected', 'tikva' ); ?>
                                     </div>
                                     <div class="actions">
                                         <input type="text" value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="setting_content_upload"/>
-                                        <button type="button" class="button tikva-repeater-custom-upload-button">Bild auswählen</button>
+                                        <button type="button" class="button tikva-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'tikva' ); ?></button>
                         
                                     </div>
                                 </div>
@@ -399,130 +355,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 		</div>
         <input type="text" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
 		<button type="button" class="button add-field customize-repeater-new-field">
-				<?php esc_html_e( 'Add new field', 'tikva' ); ?>
+				<?php esc_html_e( 'Add new element', 'tikva' ); ?>
 		</button>
 
         <?php
     }
 
-    public function pre_render_content()
-    {
-
-        /*Get default options*/
-        $this_default = json_decode( $this->setting->default );
-
-        /*Get values (json format)*/
-        $values = $this->value();
-
-        /*Decode values*/
-        $json = json_decode( $values );
-
-        if (! is_array( $json )) {
-            $json = array( $values );
-        } ?>
-
-        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-        <div class="customizer-repeater-general-control-repeater">
-            <?php
-            if (( count( $json ) == 1 && '' === $json[0] ) || empty( $json )) {
-                if (! empty( $this_default )) {
-                    $this->iterate_array( $this_default ); ?>
-                    <input type="hidden"
-                           id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                           class="customizer-repeater-colector"
-                           value="<?php echo esc_textarea( json_encode( $this_default ) ); ?>"/>
-                    <?php
-                } else {
-                    $this->iterate_array(); ?>
-                    <input type="hidden"
-                           id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                           class="customizer-repeater-colector"/>
-                    <?php
-                }
-            } else {
-                $this->iterate_array( $json ); ?>
-                <input type="hidden" id="customizer-repeater-<?php echo $this->id; ?>-colector" <?php $this->link(); ?>
-                       class="customizer-repeater-colector" value="<?php echo esc_textarea( $this->value() ); ?>"/>
-                <?php
-            } ?>
-            </div>
-        <button type="button" class="button add_field customizer-repeater-new-field">
-            <?php esc_html_e( 'Add new field', 'your-textdomain' ); ?>
-        </button>
-        <?php
-    }
-
-    private function iterate_array($array = array())
-    {
-        /*Counter that helps checking if the box is first and should have the delete button disabled*/
-        $it = 0;
-        if (!empty($array)) {
-            foreach ($array as $item) { ?>
-                <div class="customizer-repeater-general-control-repeater-container">
-                    <div class="customizer-repeater-customize-control-title">
-                        <?php esc_html_e( $this->boxtitle, 'your-textdomain' ) ?>
-                    </div>
-                    <div class="customizer-repeater-box-content-hidden">
-                        <?php
-                        $title = '';
-                        
-                        if (!empty($item->title)) {
-                            $title = $item->title;
-                        }
-                        
-                        if ($this->customizer_repeater_title_control==true) {
-                            $this->input_control(array(
-                                'label' => __('Title', 'your-textdomain'),
-                                'class' => 'customizer-repeater-title-control',
-                            ), $title);
-                        }
-                        ?>
-                        <input type="hidden" class="customizer-repeater-box-id" value="<?php if (! empty( $this->id )) {
-                            echo esc_attr( $this->id );
-} ?>">
-                        <button type="button" class="customizer-repeater-general-control-remove-field button" <?php if ($it == 0) {
-                            echo 'style="display:none;"';
-} ?>>
-                            <?php esc_html_e( 'Delete field', 'your-textdomain' ); ?>
-                        </button>
-
-                    </div>
-                </div>
-
-                <?php
-                $it++;
-            }
-        } else { ?>
-            <div class="customizer-repeater-general-control-repeater-container">
-                <div class="customizer-repeater-customize-control-title">
-                    <?php esc_html_e( $this->boxtitle, 'your-textdomain' ) ?>
-                </div>
-                <div class="customizer-repeater-box-content-hidden">
-                    <?php
-                    
-                    if ($this->customizer_repeater_title_control == true) {
-                        $this->input_control( array(
-                            'label' => __( 'Title', 'your-textdomain' ),
-                            'class' => 'customizer-repeater-title-control',
-                        ) );
-                    }
-                
-                    ?>
-                    <input type="hidden" class="customizer-repeater-box-id">
-                    <button type="button" class="customizer-repeater-general-control-remove-field button" style="display:none;">
-                        <?php esc_html_e( 'Delete field', 'your-textdomain' ); ?>
-                    </button>
-                </div>
-            </div>
-            <?php
-        }
-    }
-
-    private function input_control($options, $value = '')
-    {
-    ?>
-        <span class="customize-control-title"><?php echo $options['label']; ?></span>
-            <input type="text" value="<?php echo ( !empty($options['sanitize_callback']) ?  call_user_func_array( $options['sanitize_callback'], array( $value ) ) : esc_attr($value) ); ?>" class="<?php echo esc_attr($options['class']); ?>" placeholder="<?php echo $options['label']; ?>"/>
-            <?php
-    }
+  
 }

@@ -155,6 +155,14 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
     },
 
+    emptyTemplateImage: function(mediaView) {
+
+        mediaView.empty();
+        var imageTemplate = '<div class="setting_content_image placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
+        mediaView.append(imageTemplate);
+        
+    },
+
     onChangeSelectUpdate: function( event ) {
         var control = event.data.control;
         console.log(this);
@@ -192,32 +200,6 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 
     },
 
-
-    /*media_upload: function( buttonElem) {
-        var _custom_media = true,
-        _orig_send_attachment = wp.media.editor.send.attachment;
-        //$('body').on('click',button_class, function(e) {
-            var button_id = $(buttonElem).attr('id');
-            console.log(button_id); 
-            var self = $(button_id);
-            var send_attachment_bkp = wp.media.editor.send.attachment;
-            var button = $(button_id);
-            console.log(button);
-            var id = $(buttonElem).attr('id').replace('_button', '');
-            _custom_media = true;
-            wp.media.editor.send.attachment = function(props, attachment){
-                if ( _custom_media  ) {
-                   $('.custom_media_id').val(attachment.id); 
-                   $('.custom_media_url').val(attachment.url);
-                   $('.custom_media_image').attr('src',attachment.url).css('display','block');   
-                } else {
-                    return _orig_send_attachment.apply( button_id, [props, attachment] );
-                }
-            }
-            wp.media.editor.open(buttonElem);
-            return false;
-        //});
-    },*/
 
     initRepeaterControl: function() {
         var control = this;
@@ -295,7 +277,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             control.emptyTemplateEntrySelect(selectFields);
             selectFields = newElement.find('.customize-repeater-input-dropdownpages');
             control.emptyTemplateEntrySelect(selectFields);
-
+            // empty image element content
+            var mediaView = newElement.find('.attachment-media-view');
+            control.emptyTemplateImage(mediaView);
 
             newElement.appendTo($('.customize-control-repeater-element-container'));
             elementData[newId] = {
@@ -309,7 +293,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         $(document).on('click', '.customize-repeater-row-remove', function () {
           
             console.log("clicked remove");
-            var removeElem = $(this).parent();
+            var removeElem = $(this).parents('.customize-control-repeater-element');
             var removeId = removeElem.attr('id');
             console.log("elementId: " + removeId);
 
@@ -417,11 +401,6 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
 
 
-        /*$(document).on('click','#setting_content_area_0_image_button',function(e) {
-            console.log("Image upload, here we go!");
-            //control.media_upload( this );
-        });
-*/
         var custom_uploader;
 
         $(document).on('click', '.tikva-repeater-custom-upload-button', function(e) {
@@ -494,14 +473,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 payload['elementId'] = elementId;
                 payload['elementName'] = dataField;
                 tikvaRepeaterPreviewImage(payload, attachment);
-                //var mediaView = $('#' . elementId).find('.attachment-media-view');
-                /*mediaView.empty();
-                var imageTemplate = '<div class="thumbnail thumbnail-image"><img class="attachment-thumb" src="" draggable="false" alt=""></div>';
-                imageTemplate += '<div class="actions"><button type="button" class="button remove-button tikva-repeater-custom-remove-button">Entfernen</button> <button type="button" class="button upload-button tikva-repeater-custom-upload-button" id="">Bild wechseln</button>  </div>';
-               
-                mediaView.append(imageTemplate);
-                mediaView.find('.attachment-thumb').attr('src',attachment.url).css('display','block'); 
-                */
+                
                 if (elementData[elementId]["elements"][dataField] == undefined) {
                     elementData[elementId]["elements"][dataField] = {}; 
                 }
@@ -540,9 +512,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             console.log(dataType);
 
             mediaView.empty();
+
             var imageTemplate = '<div class="setting_content_image placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
             mediaView.append(imageTemplate);
-            // todo: remove from elementData
 
             elementData[elementId]["elements"][dataField] = {}; 
             control.updateCurrentDataField(elementData);

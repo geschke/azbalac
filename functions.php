@@ -36,10 +36,12 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 }
 
 
-if (! function_exists('tikva_load_wp_media_files')) :
-    // UPLOAD ENGINE
-    function tikva_load_wp_media_files() {
+if (! function_exists('tikva_admin_enqueue_scripts')) :
+    
+    function tikva_admin_enqueue_scripts() {
+        // UPLOAD ENGINE
         wp_enqueue_media();
+        wp_enqueue_style( 'tikva-admin-style', get_template_directory_uri() . '/css/admin.css' );
     }
 endif;
             
@@ -122,7 +124,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         add_theme_support( 'title-tag' );
 
-        add_action( 'admin_enqueue_scripts', 'tikva_load_wp_media_files' );
+        add_action( 'admin_enqueue_scripts', 'tikva_admin_enqueue_scripts' );
         
         add_action( 'customize_register', 'tikva_register_customizer_repeater' );
         

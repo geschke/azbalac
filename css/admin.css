@@ -1,0 +1,103 @@
+
+.button-add-new-element {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button-remove-new-element {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+/* The following styles are from customize-controls.css */
+
+.reordering .add-new-widget,
+.reordering .add-new-menu-item {
+	opacity: 0.2;
+	pointer-events: none;
+	cursor: not-allowed; /* doesn't work in conjunction with pointer-events */
+}
+
+.add-new-widget:before,
+.add-new-menu-item:before,
+#available-menu-items .new-content-item .add-content:before {
+    content: "\f132";
+	display: inline-block;
+	position: relative;
+	left: -2px;
+	top: -1px;
+	font: normal 20px/1 dashicons;
+	vertical-align: middle;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.adding-widget .add-new-widget,
+body.adding-widget .add-new-widget:hover,
+.adding-menu-items .add-new-menu-item,
+.adding-menu-items .add-new-menu-item:hover,
+.add-menu-toggle.open,
+.add-menu-toggle.open:hover {
+	background: #eee;
+	border-color: #929793;
+	color: #32373c;
+	-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+body.adding-widget .add-new-widget:before,
+.adding-menu-items .add-new-menu-item:before,
+#accordion-section-add_menu .add-new-menu-item.open:before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* These are modified styles, based on customize-controls.css */
+ 
+
+.reordering .remove-new-widget,
+.reordering .remove-new-menu-item {
+	opacity: 0.2;
+	pointer-events: none;
+	cursor: not-allowed; /* doesn't work in conjunction with pointer-events */
+}
+
+.remove-new-widget:before,
+.remove-new-menu-item:before,
+#available-menu-items .new-content-item .remove-content:before {
+    content: "\f460";
+	display: inline-block;
+	position: relative;
+	left: -2px;
+	top: -1px;
+	font: normal 20px/1 dashicons;
+	vertical-align: middle;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.removeing-widget .remove-new-widget,
+body.removeing-widget .remove-new-widget:hover,
+.removeing-menu-items .remove-new-menu-item,
+.removeing-menu-items .remove-new-menu-item:hover,
+.remove-menu-toggle.open,
+.remove-menu-toggle.open:hover {
+	background: #eee;
+	border-color: #929793;
+	color: #32373c;
+	-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+body.removeing-widget .remove-new-widget:before,
+.removeing-menu-items .remove-new-menu-item:before,
+#accordion-section-remove_menu .remove-new-menu-item.open:before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

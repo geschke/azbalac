@@ -40,20 +40,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
     public $fields = array();
     
     public $id;
-    private $boxtitle = array();
-    private $customizer_repeater_title_control = false;
-
 
     /*Class constructor*/
     public function __construct($manager, $id, $args = array())
     {
         parent::__construct( $manager, $id, $args );
-    
-        /*Get options from customizer.php*/
-        $this->boxtitle   = __('Customizer Repeater', 'tikva');
-        /*if (! empty( $this->label )) {
-            $this->boxtitle = $this->label;
-        }*/
     
         // fields could be empty due to initialization by WP_Customize_Manager in print_template()
 		if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
@@ -89,8 +80,6 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
             
 
         ) );
-
-        #wp_enqueue_script( 'customizer-repeater-underscorescript', get_template_directory_uri().'/js/underscore-min.js', array( ), '1.8.3', true );
 
         //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri() . '/customizer-repeater/js/customizer_repeater.js', array('jquery', 'jquery-ui-draggable' ), '1.0.1', true  );
     }
@@ -285,8 +274,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                     <?php esc_attr_e( 'No image selected', 'tikva' ); ?>
                                     </div>
                                     <div class="actions">
-                                        <input type="text" value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="setting_content_upload"/>
-                                        <button type="button" class="button tikva-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'tikva' ); ?></button>
+                                         <button type="button" class="button tikva-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'tikva' ); ?></button>
                         
                                     </div>
                                 </div>
@@ -296,14 +284,13 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 					<# }); #>
 				
 				</div>	
-
-             
-
+          
 
 
 
-				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
-				
+                <div>
+				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'tikva' ); ?></button>
+                </div>
 			</div> <!-- customize-control-repeater-element -->
             <# });
             #>
@@ -347,17 +334,18 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 					<# }); #>
 					
 				</div>	
-				<button type="button" class="button customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
+				<button type="button" class="button remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
 				
 			</div> <!-- customize-control-repeater-element -->
             <# } #>
 		
 		</div>
-        <input type="text" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
-		<button type="button" class="button add-field customize-repeater-new-field">
+        <input type="hidden" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
+		<div class="button-add-new-element"><button type="button" class="button add-field add-new-menu-item customize-repeater-new-field">
 				<?php esc_html_e( 'Add new element', 'tikva' ); ?>
-		</button>
-
+        </button>
+        </div>
+       
         <?php
     }
 

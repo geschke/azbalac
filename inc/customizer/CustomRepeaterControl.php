@@ -124,25 +124,38 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         console.log(data.section);
        
 		//console.log(data.fields);
-        //var elementData = [];
+        var elementData = [];
+        elementData['foo'] = "bar";
         console.log(data.value);
         console.log(_.size(data.value));
         console.log(typeof data.value);
         if (data.value && data.value[0] != "") {
+            // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
             //console.log(elementData);
            
 
+        } else {
+            console.log("initialize empty elementData");
+            // initialize empty elements with dummy data
+            var newElementId = uuidv4();
+            var elementData = {};
+            elementData[newElementId] = true;
         }
+      
+    
         console.log("elementData?");
        console.log(elementData);
        console.log(typeof elementData);
       
        console.log(_.size(elementData));
+       console.log("elementData ist::::::");
+       console.log(elementData);
+       console.log(uuidv4());
         #>
 		<div class="customize-control-repeater-element-container">
 
-            <# if (_.size(elementData)) { #>
+            
             <# _.each(elementData, function (elementItem, elementName) { #>
                 <#
                 console.log("name?")
@@ -179,20 +192,20 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                         <div class="repeater-row-field">
 
 							<input class="customize-repeater-input-text" type="{{field.type}}" name="" 
-                            value="<# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" 
+                            value="<# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" 
                             data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
 							</div>
 						<# } else if (field.type === 'textarea') { #>
                             <div class="repeater-row-field">
 
 							<textarea class="customize-repeater-input-textarea" type="{{field.type}}" name="" 
-                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
+                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
                             </div>
                         <# } else if (field.type === 'select') { #>
                             <div class="repeater-row-field">
                             <#
                             var selectValue = '';
-                            if (typeof elementItem.elements[name] != 'undefined') {
+                            if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
                                 selectValue = elementItem.elements[name].value;
                             } else { 
                                 selectValue = field.default; 
@@ -219,7 +232,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             <div class="repeater-row-field">
                             <#
                             var selectValue = '';
-                            if (typeof elementItem.elements[name] != 'undefined') {
+                            if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
                                 selectValue = elementItem.elements[name].value;
                             } else { 
                                 selectValue = field.default; 
@@ -247,7 +260,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
                             <#
                             console.log("element image!!!!!!!!!!!!!!!!!!!!!!!");
-                            if (typeof elementItem.elements[name] != 'undefined') {
+                            if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
                                 console.log(elementItem.elements[name].value);
                                 var imageId = elementItem.elements[name].value;
                                 //console.log(wp.media.attachment(imageId).get('url'));
@@ -285,59 +298,13 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				
 				</div>	
           
-
-
-
                 <div>
 				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'tikva' ); ?></button>
                 </div>
 			</div> <!-- customize-control-repeater-element -->
             <# });
             #>
-            <# } else { #>
-			<div class="customize-control-repeater-element" id="">
-				<label>
-				<?php
-				// The label has already been sanitized in the Fields class, no need to re-sanitize it.
-				?>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{ data.label }}</span>
-					<# } #>
-
-					<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-					<# } #>
-						
-				</label>
-				<div class="repeater-row-content">
-					<# _.each( data.fields, function( field, name ) { #>
-					<#	
-						//console.log(field.type);
-						console.log(field);
-						#>
-						<div class="repeater-row-label">
-							{{{ field.label }}}
-						</div>
-                        <# if ( field.type === 'text' ) { #>
-						
-                        <div class="repeater-row-field">
-							<input class="customize-repeater-input-text" type="{{field.type}}" name="" value="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
-							</div>
-                        <# } else if (field.type === 'textarea') { #>
-                        <div class="repeater-row-field">
-
-							<textarea class="customize-repeater-input-textarea" type="{{field.type}}" name="" 
-                            data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"><# if (typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#}#></textarea>
-							</div>
-						<# } #>
-
-					<# }); #>
-					
-				</div>	
-				<button type="button" class="button remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove', 'tikva' ); ?></button>
-				
-			</div> <!-- customize-control-repeater-element -->
-            <# } #>
+			
 		
 		</div>
         <input type="hidden" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>

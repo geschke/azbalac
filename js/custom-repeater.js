@@ -55,16 +55,18 @@ function tikvaRepeaterPreviewImage(payload, attachment) {
 
 }
 
-(function ($) {
 
 /* Generate unique id, taken from https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
 */
 function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+(function ($) {
+
 
 
 
@@ -163,6 +165,17 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         
     },
 
+    emptyTemplateInputfields: function(inputFields) {
+        _.each( inputFields, function( inputField, inputName ) {
+            
+               if ($(inputField).attr('data-default') != '') {
+                   $(inputField).val($(inputField).attr('data-default'));
+               } else {
+                   $(inputFields).val('');
+               }
+           });
+    },
+
     onChangeSelectUpdate: function( event ) {
         var control = event.data.control;
         console.log(this);
@@ -212,7 +225,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var element = $(this.container).find('.customize-control-repeater-element');
 
         console.log("elementDATAAAAAAAAAAAAAA");
-       // console.log(elementData);
+        console.log(elementData);
         // first initialization
         console.log("elements length");
         console.log(element.length);
@@ -224,21 +237,25 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             element = $(element[0]); // get first element as template 
 
             console.log("elementDATAAAAAAAAAAAAAA");
-            //console.log(elementData);
+            console.log(elementData);
 
-        } else {
+        } /*else {
             console.log("kleiner gleich eins");
             console.log("alte id vorhanden?");
-            if (element.attr('id') == '') { // element not loaded from database
-                // initialie new element, create new element id
+            if (element.attr('id') == ''  ) { // element not loaded from database
+                // initialize new element, create new element id
+                console.log("element not loaded from db");
                 var newId = uuidv4();
                 element.attr('id',newId);
                 elementData[newId] = {
                     elements: {}
                 };
+            } else {
+                console.log("element whatever");
+
             }
 
-        }
+        }*/
 
 
         console.log("FILL HERE");
@@ -249,6 +266,11 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             console.log("altes elementData:");
             console.log(elementData);
 
+        } else {
+            
+            elementData[element.attr('id')] = {
+                elements: {}
+            };
         }
 
        
@@ -263,15 +285,12 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
             // clear input fields, replace with default, if available
             var inputFields = newElement.find('.customize-repeater-input-text');
-            _.each( inputFields, function( inputField, inputName ) {
-             
-                if ($(inputField).attr('data-default') != '') {
-                    $(inputField).val($(inputField).attr('data-default'));
-                } else {
-                    $(inputFields).val('');
-                }
-            });
-            // todo: empty textarea content or set default
+            control.emptyTemplateInputfields(inputFields);
+
+            // empty textarea content or set default
+            var inputFields = newElement.find('.customize-repeater-input-textarea');
+            control.emptyTemplateInputfields(inputFields);
+
             
             var selectFields = newElement.find('.customize-repeater-input-select');
             control.emptyTemplateEntrySelect(selectFields);

@@ -9,6 +9,28 @@
     margin-bottom: 20px !important;
 }
 
+.customize-control-repeater-element-container {
+    margin-bottom: 20px;
+}
+
+.customize-control-repeater-element {
+    margin-bottom: 10px;
+}
+
+.customize-button-repeater-row-remove {
+  
+    margin-bottom: 10px;
+}
+
+/*.repeater-row-label {
+    margin-bottom: 10px;
+}*/
+
+.repeater-row-field {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* The following styles are from customize-controls.css */
 
 .reordering .add-new-widget,

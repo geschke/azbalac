@@ -14,7 +14,7 @@
 ?>
 
 <?php
-$footerStyles = Tikva_Footer::getStyles();
+$footerStyles = Tikva_Section_Footer::getStyles();
 ?>
 
 <div class="site-footer-1" style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
@@ -22,7 +22,7 @@ $footerStyles = Tikva_Footer::getStyles();
 <div role="complementary" class="container">
     
 <?php
-Tikva_Footer::build();
+Tikva_Section_Footer::build();
 // todo: add styling...
 ?>
 </div>

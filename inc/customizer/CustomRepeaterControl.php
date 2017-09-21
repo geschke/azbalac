@@ -298,7 +298,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				
 				</div>	
           
-                <div>
+                <div class="customize-button-repeater-row-remove">
 				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'tikva' ); ?></button>
                 </div>
 			</div> <!-- customize-control-repeater-element -->

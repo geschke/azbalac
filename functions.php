@@ -22,7 +22,7 @@ require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' )
 
 require_once( get_template_directory() . '/inc/customizer/Customizer.php' );
 
-require_once( get_template_directory() . '/inc/class-tikva-footer.php' );
+require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 
 
 

@@ -22,6 +22,7 @@ require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' )
 
 require_once( get_template_directory() . '/inc/customizer/Customizer.php' );
 
+require_once( get_template_directory() . '/inc/sections/SectionContentColumn.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 
 
@@ -41,6 +42,7 @@ if (! function_exists('tikva_admin_enqueue_scripts')) :
     function tikva_admin_enqueue_scripts() {
         // UPLOAD ENGINE
         wp_enqueue_media();
+        wp_enqueue_style( 'wp-color-picker' );
         wp_enqueue_style( 'tikva-admin-style', get_template_directory_uri() . '/css/admin.css' );
     }
 endif;

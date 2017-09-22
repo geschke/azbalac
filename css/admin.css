@@ -15,6 +15,8 @@
 
 .customize-control-repeater-element {
     margin-bottom: 10px;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
 }
 
 .customize-button-repeater-row-remove {

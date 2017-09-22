@@ -155,16 +155,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         #>
 		<div class="customize-control-repeater-element-container">
 
-            
-            <# _.each(elementData, function (elementItem, elementName) { #>
-                <#
-                console.log("name?")
-                console.log(elementItem);
-                console.log(data.fields.name);
-                #>
-            <#    console.log(elementName); #>
-            <div class="customize-control-repeater-element" id="{{{ elementName }}}">
-				<label>
+        <label>
 				<?php
 				// The label has already been sanitized in the Fields class, no need to re-sanitize it.
 				?>
@@ -176,7 +167,17 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 					<span class="description customize-control-description">{{{ data.description }}}</span>
 					<# } #>
 						
-				</label>
+                </label>
+                
+            <# _.each(elementData, function (elementItem, elementName) { #>
+                <#
+                console.log("name?")
+                console.log(elementItem);
+                console.log(data.fields.name);
+                #>
+            <#    console.log(elementName); #>
+            <div class="customize-control-repeater-element" id="{{{ elementName }}}">
+				
 				<div class="repeater-row-content">
 					<# _.each( data.fields, function( field, name ) { #>
 					<#	
@@ -254,8 +255,14 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             #>
                     		</select>
 
-							</div>    
-                        <# } else if (field.type === 'image') { #>
+                            </div>
+                            <# } else if (field.type === 'colorpicker') { #>
+                            <div class="repeater-row-field">
+                                    colorpicker...
+                                    <input type="text" value="#bada55" class="my-color-field" data-default-color="#effeff" />
+
+                            </div>
+                            <# } else if (field.type === 'image') { #>
                             <div class="repeater-row-field">
 
                             <#

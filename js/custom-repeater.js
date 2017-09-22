@@ -67,9 +67,7 @@ function uuidv4() {
 
 (function ($) {
 
-
-
-
+   
 wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     
@@ -218,6 +216,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         var elementData = {};
 
+        $('.my-color-field').wpColorPicker();
+        
+        
 
         control.displayRemoveButtons();
 

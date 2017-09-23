@@ -136,6 +136,33 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     },
 
+    updateCurrentTextField: function(element, elementData, value) {
+        var control = this;
+        elementId = $(element).parents('.customize-control-repeater-element').attr('id');
+        if (elementData[elementId] != undefined) {
+            console.log(elementData[elementId]);
+            var dataField = ($(element).attr('data-field'));
+            var dataType = ($(element).attr('data-type'));
+            console.log("data type a kind of text field");
+        
+            if (elementData[elementId]["elements"][dataField] == undefined) {
+                elementData[elementId]["elements"][dataField] = {}; 
+            }
+            elementData[elementId]["elements"][dataField]['type'] = dataType;
+            elementData[elementId]["elements"][dataField]['name'] = dataField;
+            elementData[elementId]["elements"][dataField]['value'] = value;
+
+            
+        }
+        else {
+            console.log("something went wrong here!");
+        }
+        console.log(elementData);
+
+        control.updateCurrentDataField(elementData);
+        control.displayRemoveButtons();
+    },
+
     emptyTemplateEntrySelect: function(selectFields) {
         _.each( selectFields, function( selectField, selectName ) {
         
@@ -158,7 +185,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
     emptyTemplateImage: function(mediaView) {
 
         mediaView.empty();
-        var imageTemplate = '<div class="setting_content_image placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
+        var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
         mediaView.append(imageTemplate);
         
     },
@@ -216,9 +243,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         var elementData = {};
 
-        $('.my-color-field').wpColorPicker();
-        
-        
+
+       
 
         control.displayRemoveButtons();
 
@@ -477,15 +503,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 attachment = custom_uploader.state().get('selection').first().toJSON();
                 //$('#setting_content_upload_test').val(attachment.url);
 
-                //if ( _custom_media  ) {
-                // $('.custom_media_id').val(attachment.id); 
-                // $('.custom_media_url').val(attachment.url);
-                /*$('#setting_content_image').removeClass('placeholder');   
-                var imageTemplate = '<div class="thumbnail thumbnail-image"><img id="setting_content_image_test" class="attachment-thumb" src="" draggable="false" alt=""></div>';
-                $('#setting_content_image').append(imageTemplate);
-                
-                $('#setting_content_image_test').attr('src',attachment.url).css('display','block'); 
-                */
+               
                 console.log("Mein Bild: ");
                 console.log(attachment.id);  
               
@@ -533,7 +551,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
             mediaView.empty();
 
-            var imageTemplate = '<div class="setting_content_image placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
+            var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
             mediaView.append(imageTemplate);
 
             elementData[elementId]["elements"][dataField] = {}; 
@@ -542,6 +560,32 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         });
         
+
+        var colorPickerOptions = {
+             // a callback to fire whenever the color changes to a valid color
+             change: function(event, ui){
+                 console.log("changed color");
+                 var element = event.target;
+                 var color = ui.color.toString();
+                 console.log(element);
+                 console.log($(element).attr('data-field'));
+                 control.updateCurrentTextField(element, elementData, color);
+             },
+             // a callback to fire when the input is emptied or an invalid color
+             clear: function(event) {
+                 console.log("cleared color");
+                 console.log(event.target);
+                 var element = event.target;
+                 var color = '';
+                 control.updateCurrentTextField(element, elementData, color);
+                 
+             }
+         };
+          
+         $('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
+         
+         
+
 
         // initialize key events to handle select fields
         $(document).on('change', '.customize-repeater-input-select', 

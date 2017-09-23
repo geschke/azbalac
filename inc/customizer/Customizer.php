@@ -1061,6 +1061,12 @@ class Tikva_Customizer
 			'description' => esc_attr__( 'Description of foreground color', 'tikva' ),
 			'default'     => '#554433',
         ),
+        'color_bg' => array(
+			'type'        => 'colorpicker',
+			'label'       => esc_attr__( 'Background color', 'tikva' ),
+			'description' => esc_attr__( 'Description of background color', 'tikva' ),
+			'default'     => '#000000',
+        ),
         'description' => array(
 			'type'        => 'textarea',
 			'label'       => esc_attr__( 'Description', 'tikva' ),

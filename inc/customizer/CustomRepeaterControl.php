@@ -258,8 +258,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             </div>
                             <# } else if (field.type === 'colorpicker') { #>
                             <div class="repeater-row-field">
-                                    colorpicker...
-                                    <input type="text" value="#bada55" class="my-color-field" data-default-color="#effeff" />
+                                  <input type="text" value="<# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="tikva-repeater-color-field" data-default-color="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
 
                             </div>
                             <# } else if (field.type === 'image') { #>
@@ -290,7 +289,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
-                                    <div class="setting_content_image placeholder">
+                                    <div class="placeholder">
                                     <?php esc_attr_e( 'No image selected', 'tikva' ); ?>
                                     </div>
                                     <div class="actions">

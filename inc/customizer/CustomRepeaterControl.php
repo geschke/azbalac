@@ -186,7 +186,8 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 						console.log(field);
 						#>
 						<div class="repeater-row-label">
-							{{{ field.label }}}
+                        <span class="customize-control-title">{{{ field.label }}}</span>
+							
 						</div>
                         <# if ( field.type === 'text' ) { #>
 						
@@ -261,6 +262,61 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                   <input type="text" value="<# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="tikva-repeater-color-field" data-default-color="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
 
                             </div>
+                            <# } else if (field.type === 'radiobutton') { #>
+                            <div class="repeater-row-field">
+                                  
+                                <li id="customize-control-repeater-radio-{{{ name }}}" class="customize-control-radio-container" style="display: list-item;" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
+                                <div class="__customize-control-notifications-container" style=""><ul>
+                                
+                            </ul></div>
+                                
+                                <# var selectString = '';
+                                if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
+                                    selectValue = elementItem.elements[name].value;
+                                } else { 
+                                    selectValue = field.default; 
+                                }
+                                console.log("RADIOOOOOOOOOOOOOOO VALUE");
+                                console.log(selectString);
+                                _.each(field.choices, function(choiceOption, choiceValue) {
+                                    selectString = '';
+                                    if (choiceValue == selectValue) {
+                                        selectString = 'checked="checked"';
+                                    }
+                                #>
+                                <label>
+						        <input type="radio" {{{ selectString }}} class="tikva-customize-repeater-input-radio" value="{{{ choiceValue }}}" name="_customize-control-repeater-radio-{{{ name }}}">{{{ choiceOption }}}<br>
+					            </label>
+
+                                <# }); #>
+							    </li>
+
+                            </div>
+                            <# } else if (field.type === 'checkbox') { #>
+                            <div class="repeater-row-field">
+                                  
+                                <# var selectString = '';
+                                if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
+                                    selectValue = elementItem.elements[name].value;
+                                } else { 
+                                    selectValue = field.default; 
+                                }
+                                if (selectValue == '1') {
+                                    selectString = 'checked="checked"';
+                                }
+                                #>
+
+                                <li id="customize-control-repeater-checkbox-{{{ name }}}" class="" style="display: list-item;">
+							        <label>
+
+					                    <input type="checkbox" class="tikva-customize-repeater-input-checkbox" value="1" {{{ selectString }}} data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
+                                        <# if (field.description) { #>{{{ field.description }}}<# } #>
+                                    </label>
+						        </li>
+
+
+                            </div>
+
                             <# } else if (field.type === 'image') { #>
                             <div class="repeater-row-field">
 

@@ -1101,16 +1101,49 @@ class Tikva_Customizer
             'mime_type' => 'image',
             'description' => __('Another image', 'tikva')
         ),
+        'image_position' => array(
+            'type'      => 'radiobutton',
+            'label' => __('Position of image', 'tikva'),
+            //'default' => '4',
+            'choices' => array(
+                '1' => __('Left', 'tikva'),
+                '4' => __('Center', 'tikva'),
+                '6' => __('Right', 'tikva')
+            ),
+        ),
+        'image_show' => array(
+                'label' => __('Show checkbox', 'tikva'),
+                'type' => 'checkbox',
+                //'default' => 'checked',
+                'description' => __('Check to activate!', 'tikva')
+            ),
     )
     ) ) );
 
-
-
+   
  
     $contentArea = sprintf("%02d", 1);
  
          
-    
+    $wp_customize->add_setting('setting_slider_text_position', array(
+        'default' => '2',
+        'capability' => 'edit_theme_options',
+        'type' => 'option',
+        'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderTextPosition')
+    ));
+
+    $wp_customize->add_control('control_slider_text_position', array(
+        'label' => __('Position of Slider text', 'tikva'),
+        'section' => 'section_theme_options_intro' ,
+        'settings' => 'setting_slider_text_position',
+        'type' => 'radio',
+        'choices' => array(
+            'lalala_' => __('Left', 'tikva'),
+            'lalalala_' => __('Center', 'tikva'),
+            'fooooooooooo_' => __('Right', 'tikva')
+        ),
+    ));
+
   
 
       

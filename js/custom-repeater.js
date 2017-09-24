@@ -562,29 +562,93 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         
 
         var colorPickerOptions = {
-             // a callback to fire whenever the color changes to a valid color
-             change: function(event, ui){
-                 console.log("changed color");
-                 var element = event.target;
-                 var color = ui.color.toString();
-                 console.log(element);
-                 console.log($(element).attr('data-field'));
-                 control.updateCurrentTextField(element, elementData, color);
-             },
-             // a callback to fire when the input is emptied or an invalid color
-             clear: function(event) {
-                 console.log("cleared color");
-                 console.log(event.target);
-                 var element = event.target;
-                 var color = '';
-                 control.updateCurrentTextField(element, elementData, color);
-                 
-             }
-         };
+            // a callback to fire whenever the color changes to a valid color
+            change: function(event, ui){
+                console.log("changed color");
+                var element = event.target;
+                var color = ui.color.toString();
+                console.log(element);
+                console.log($(element).attr('data-field'));
+                control.updateCurrentTextField(element, elementData, color);
+            },
+            // a callback to fire when the input is emptied or an invalid color
+            clear: function(event) {
+                console.log("cleared color");
+                console.log(event.target);
+                var element = event.target;
+                var color = '';
+                control.updateCurrentTextField(element, elementData, color);
+                
+            }
+        };
           
          $('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
          
          
+         $(document).on('change', '.tikva-customize-repeater-input-checkbox', function () {
+            console.log("changed checkbox");
+            console.log(this.checked);
+            
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).attr('data-field'));
+                var dataType = ($(this).attr('data-type'));
+              
+                    var newValue = '';
+                    if (this.checked === true) {
+                        newValue = '1';
+                    }
+
+                    if (elementData[elementId]["elements"][dataField] == undefined) {
+                        elementData[elementId]["elements"][dataField] = {}; 
+                    }
+                    elementData[elementId]["elements"][dataField]['type'] = dataType;
+                    elementData[elementId]["elements"][dataField]['name'] = dataField;
+                    elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+            }
+            else {
+                console.log("something went wrong here!");
+            }
+            console.log(elementData);
+
+            control.updateCurrentDataField(elementData);
+            control.displayRemoveButtons();
+
+        });
+
+        $(document).on('change', '.tikva-customize-repeater-input-radio', function () {
+            console.log("changed radio");
+            var radioName = $(this).attr('name');
+            var newValue = $( "input[type=radio][name=" + radioName + " ]:checked" ).val();
+            console.log(newValue);
+            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            if (elementData[elementId] != undefined) {
+                console.log(elementData[elementId]);
+                var dataField = ($(this).parents('.customize-control-radio-container').attr('data-field'));
+                var dataType = ($(this).parents('.customize-control-radio-container').attr('data-type'));
+                console.log(dataField);
+                console.log(dataType);
+               
+                if (elementData[elementId]["elements"][dataField] == undefined) {
+                    elementData[elementId]["elements"][dataField] = {}; 
+                }
+                elementData[elementId]["elements"][dataField]['type'] = dataType;
+                elementData[elementId]["elements"][dataField]['name'] = dataField;
+                elementData[elementId]["elements"][dataField]['value'] = newValue;
+
+            }
+            else {
+                console.log("something went wrong here!");
+            }
+            console.log(elementData);
+
+            control.updateCurrentDataField(elementData);
+            control.displayRemoveButtons();
+            
+        });
+
 
 
         // initialize key events to handle select fields

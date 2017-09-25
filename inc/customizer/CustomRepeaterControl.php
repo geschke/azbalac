@@ -187,7 +187,9 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 						#>
 						<div class="repeater-row-label">
                         <span class="customize-control-title">{{{ field.label }}}</span>
-							
+						<# if ( field.description ) { #>
+					        <span class="description customize-control-description">{{{ field.description }}}</span>
+					    <# } #>
 						</div>
                         <# if ( field.type === 'text' ) { #>
 						

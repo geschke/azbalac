@@ -1043,108 +1043,122 @@ class Tikva_Customizer
     //'priority' => 100,   
     'settings' => 'setting_introduction_area_elements',
 	'fields' => array(
-		'link_text' => array(
+		'title' => array(
 			'type'        => 'text',
-			'label'       => esc_attr__( 'Link Text', 'tikva' ),
-			'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
-			'default'     => 'default test for text',
+			'label'       => esc_attr__( 'Title', 'tikva' ),
+			//'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
+			//'default'     => 'default test for text',
 		),
-		'link_url' => array(
+		/*'link_url' => array(
 			'type'        => 'text',
 			'label'       => esc_attr__( 'Link URL', 'tikva' ),
 			'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
 			'default'     => 'another default test for text',
-        ),
-        'color_fg' => array(
+        ),*/
+        /*'color_fg' => array(
 			'type'        => 'colorpicker',
 			'label'       => esc_attr__( 'Foreground color', 'tikva' ),
 			'description' => esc_attr__( 'Description of foreground color', 'tikva' ),
 			'default'     => '#554433',
-        ),
-        'color_bg' => array(
+        ),*/
+        /*'color_bg' => array(
 			'type'        => 'colorpicker',
 			'label'       => esc_attr__( 'Background color', 'tikva' ),
 			'description' => esc_attr__( 'Description of background color', 'tikva' ),
 			'default'     => '#000000',
-        ),
-        'description' => array(
+        ),*/
+        'content' => array(
 			'type'        => 'textarea',
-			'label'       => esc_attr__( 'Description', 'tikva' ),
-			'default'     => 'Default value in textarea',
+			'label'       => esc_attr__( 'Text', 'tikva' ),
+			//'default'     => 'Default value in textarea',
         ),
-        'setting_content_area_icon' => array(
+        'icon' => array(
 			'type'        => 'select',
 			'label'       =>  __('Select Font Awesome Icon or... ', 'tikva'),
 			'description' => __('Select icon or...','tikva'),
             'choices' => $this->getFaIcons(),
             //'default' => 'fa-car'
         ),
-        'setting_content_area_page' => array(
+        'image' => array(
+            'type'        => 'image',
+            'label' => __('...use image', 'tikva'),
+            'mime_type' => 'image',
+            'description' => __('Use image instead of icon', 'tikva')
+        ),
+
+        'page' => array(
 			'type'        => 'dropdown-pages',
 			'label'       =>  __('Link to page or...', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
-        'setting_content_area_post' => array(
+        'post' => array(
 			'type'        => 'dropdown-pages',
-			'label'       =>  __('Link to Post', 'tikva'),
+			'label'       =>  __('Link to Post or...', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPostDropdownOptions()
         ),
+        'url' => array(
+			'type'        => 'text',
+			'label'       => esc_attr__( 'Link to any URL', 'tikva' ),
+			//'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
+			//'default'     => 'another default test for text',
+        ),
+        'color_icon' => array(
+			'type'        => 'colorpicker',
+			'label'       => esc_attr__( 'Icon color', 'tikva' ),
+			//'description' => esc_attr__( 'Description of background color', 'tikva' ),
+			//'default'     => '#000000',
+        ),
+
+        'image_shape' => array(
+            'type'      => 'radiobutton',
+            'label' => __('Image shape', 'tikva'),
+            'description' => __('Use image shape for uploaded image:','tikva'),
+            'default' => '2',
+            'choices' => array(
+                '1' => __('Rounded corners', 'tikva'),
+                '2' => __('Circle', 'tikva'),
+                '3' => __('Thumbnail', 'tikva'),
+                '4' => __('No image shape', 'tikva'),
+                
+            ),
+        ),
+        /*
+
+
         'setting_content_area_image' => array(
             'type'        => 'image',
             'label' => __('...use image', 'tikva'),
             'mime_type' => 'image',
             'description' => __('Image displayed on section background', 'tikva')
         ),
-        'setting_content_area_image_one' => array(
-            'type'        => 'image',
-            'label' => __('...use image', 'tikva'),
-            'mime_type' => 'image',
-            'description' => __('Another image', 'tikva')
-        ),
-        'image_position' => array(
+        
+        'image_shape' => array(
             'type'      => 'radiobutton',
-            'label' => __('Position of image', 'tikva'),
-            //'default' => '4',
+            'label' => __('Image shape', 'tikva'),
+            'description' => __('Use image shape for uploaded image:','tikva'),
+            'default' => '2',
             'choices' => array(
-                '1' => __('Left', 'tikva'),
-                '4' => __('Center', 'tikva'),
-                '6' => __('Right', 'tikva')
+                '1' => __('Rounded corners', 'tikva'),
+                '2' => __('Circle', 'tikva'),
+                '3' => __('Thumbnail', 'tikva'),
+                '4' => __('No image shape', 'tikva'),
+                
             ),
         ),
         'image_show' => array(
-                'label' => __('Show checkbox', 'tikva'),
-                'type' => 'checkbox',
-                //'default' => 'checked',
-                'description' => __('Check to activate!', 'tikva')
-            ),
+            'label' => __('Show checkbox', 'tikva'),
+            'type' => 'checkbox',
+            //'default' => 'checked',
+            'description' => __('Check to activate!', 'tikva')
+        ),
+        */
     )
     ) ) );
 
    
  
-    $contentArea = sprintf("%02d", 1);
- 
-         
-    $wp_customize->add_setting('setting_slider_text_position', array(
-        'default' => '2',
-        'capability' => 'edit_theme_options',
-        'type' => 'option',
-        'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderTextPosition')
-    ));
-
-    $wp_customize->add_control('control_slider_text_position', array(
-        'label' => __('Position of Slider text', 'tikva'),
-        'section' => 'section_theme_options_intro' ,
-        'settings' => 'setting_slider_text_position',
-        'type' => 'radio',
-        'choices' => array(
-            'lalala_' => __('Left', 'tikva'),
-            'lalalala_' => __('Center', 'tikva'),
-            'fooooooooooo_' => __('Right', 'tikva')
-        ),
-    ));
-
-  
+        //$contentArea = sprintf("%02d", 1);
+   
 
       
     

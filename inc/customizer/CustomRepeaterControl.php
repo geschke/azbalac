@@ -267,7 +267,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             <# } else if (field.type === 'radiobutton') { #>
                             <div class="repeater-row-field">
                                   
-                                <li id="customize-control-repeater-radio-{{{ name }}}" class="customize-control-radio-container" style="display: list-item;" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
+                                <li class="customize-control-repeater-radio-{{{ name }}} customize-control-radio-container" style="display: list-item;" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                 <div class="__customize-control-notifications-container" style=""><ul>
                                 
                             </ul></div>
@@ -287,7 +287,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                     }
                                 #>
                                 <label>
-						        <input type="radio" {{{ selectString }}} class="tikva-customize-repeater-input-radio" value="{{{ choiceValue }}}" name="_customize-control-repeater-radio-{{{ name }}}">{{{ choiceOption }}}<br>
+						        <input type="radio" {{{ selectString }}} class="tikva-customize-repeater-input-radio" value="{{{ choiceValue }}}" name="_customize-control-repeater-radio-{{{ name }}}-{{{ elementName }}}">{{{ choiceOption }}}<br>
 					            </label>
 
                                 <# }); #>

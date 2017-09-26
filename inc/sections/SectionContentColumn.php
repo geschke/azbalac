@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implements Footer functionality.
+ * Implements Content Sections functionality.
  *
  * @package   WordPress
  * @subpackage tikva
@@ -12,41 +12,138 @@
 class Tikva_Section_Content_Column
 {
 
+    const MAX_COLUMNS = 12;
+
     /* Add Custom Footer Layout */
 
     public static function build()
     {
-        ?>
+        $introActivate =  get_option('setting_introduction_area_activate');
+        $introTitle = get_theme_mod('setting_introduction_area_title');
+        $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
+        $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
+      //echo "<pre>";
+      //var_dump($introActivate);
+      //die;
+      //print_r($introTitle);
+      //print_r($introSubtitle);
+      //print_r($introElements);
+      //echo count($introElements);
       
-        <div class="container marketing">
-        
-              <!-- Three columns of text below the carousel -->
-              <div class="row">
-                <div class="col-lg-4 col-md-4  col-sm-4">
-                  <img class="img-circle" src="http://test.geschke.net/wp-content/themes/tikva/images/tikva_default_header_image.jpg" alt="Generic placeholder image" width="140" height="140">
-                  <h2>Heading</h2>
-                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4 col-md-4  col-sm-4">
-                  <img class="img-circle" src="http://test.geschke.net/wp-content/themes/tikva/images/tikva_default_header_image.jpg" alt="Generic placeholder image" width="140" height="140">
-                  <h2>Heading</h2>
-                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4  col-md-4 col-sm-4">
-                  <img class="img-circle" src="http://test.geschke.net/wp-content/themes/tikva/images/tikva_default_header_image.jpg" alt="Generic placeholder image" width="140" height="140">
-                  <h2>Heading</h2>
-                  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-              </div><!-- /.row -->
-        
-        
+        if (is_object($introElements)) {
+            $numberElements = count(get_object_vars($introElements));
+        } else {
+            $numberElements = 0;
+        }
+        if (!$numberElements) {
+            return;
+        }
+        $columnClass = floor(self::MAX_COLUMNS / $numberElements); // intdiv
 
+        if ($numberElements % self::MAX_COLUMNS > 0) {
+            // do something?
+        }
+      //echo "ColumnClass: $columnClass";
+        ?>
+        <div class="container tikva-introduction">
+
+        <section class="section-introduction" id="section-introduction">
+          <?php if ($introTitle || $introSubtitle) { ?>
+          <div class="container">
+				    <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+              <?php if ($introTitle) { ?><h2 class="section-title"><?php echo $introTitle ?></h2><?php } ?>
+              <?php if ($introSubtitle) { ?><h5 class="section-description"><?php echo $introSubtitle ?></h5><?php } ?>
+						  </div>
+            </div>
+          </div>
+          <?php } ?>
+        <div class="row">
         <?php
-       
+
+        foreach ($introElements as $element) {
+            //var_dump($element);
+            self::showElement($element, $columnClass);
+        }
+     
+        ?>
+        </div><!-- /.row -->
+      </section>
+      </div>
+        <?php
     }
 
 
+    protected static function showElement($element, $columnClass)
+    {
+      $header = '';
+      $title = '';
+      $content = '';
+      if (isset($element->elements->title->value)) {
+        $title = $element->elements->title->value;
+      }
+      if (isset($element->elements->content->value)) {
+        $content = $element->elements->content->value;
+      }
+        if (isset($element->elements->post)) {
+            $url = get_permalink($element->elements->post->value);
+        } elseif (isset($element->elements->page)) {
+            $url = get_page_link($element->elements->page->value);
+        } elseif (isset($element->elements->url)) {
+            $url = $element->elements->url->value;
+        } else {
+            $url = '#';
+        }
+        if (isset($element->elements->icon)) {
+          $colorStyle = '';
+          if (isset($element->elements->color_icon)) {
+            $iconColor = $element->elements->color_icon->value;
+            
+            if ($iconColor) {
+              $colorStyle = 'color: ' . $iconColor . ';';
+            }      
+          }
+  
+
+          $header = '
+          <div class="icon">
+          <i style="' . $colorStyle . '" class="fa fa-4x ' . $element->elements->icon->value . '"></i>
+        </div>';
+        } elseif (isset($element->elements->image)) {
+          $imageShape = '2'; // default circle
+          if (isset($element->elements->image_shape)) {
+            $imageShape = $element->elements->image_shape->value;
+          }
+          switch ($imageShape) {
+            case '1': // rounded corners
+                $imgClass = 'img-rounded';
+            break;
+            case '2': // circle
+                $imgClass = 'img-circle';
+            break;
+            case '3': // thumbnail
+                $imgClass = 'img-thumbnail';
+            break;
+            default: // no image shape
+                $imgClass = '';
+            break;
+          }
+          $attr = array('class' => $imgClass);
+          $image = wp_get_attachment_image($element->elements->image->value,'thumbnail',false,$attr);
+          $header = $image;
+        }
+       
+        printf('<div class="col-lg-%d col-md-%d col-sm-%d introduction-box">', $columnClass, $columnClass, $columnClass);
+        ?>
+                  <?php echo $header; ?>
+                  <h2><?php echo $title; ?></h2>
+                  <p><?php echo $content; ?></p>
+                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button">View details &raquo;</a></p>
+
+
+                     
+      
+        <?php
+        printf(' </div><!-- /.col-lg-%d -->', $columnClass);
+    }
 }

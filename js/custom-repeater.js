@@ -243,7 +243,31 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         var elementData = {};
 
-
+        var colorPickerOptions = {
+            // a callback to fire whenever the color changes to a valid color
+            change: function(event, ui){
+                console.log("changed color");
+                var element = event.target;
+                var color = ui.color.toString();
+                console.log(element);
+                console.log($(element).attr('data-field'));
+                control.updateCurrentTextField(element, elementData, color);
+            },
+            // a callback to fire when the input is emptied or an invalid color
+            clear: function(event) {
+                console.log("cleared color");
+                var element = jQuery(event.target).siblings('.wp-color-picker')[0];
+                var color = '';
+        
+                if (element) {
+                    console.log(event.target);
+                    var color = '';
+                    control.updateCurrentTextField(element, elementData, color);
+    
+                }
+            
+            }
+        };
        
 
         control.displayRemoveButtons();
@@ -325,12 +349,45 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             control.emptyTemplateEntrySelect(selectFields);
             // empty image element content
             var mediaView = newElement.find('.attachment-media-view');
-            control.emptyTemplateImage(mediaView);
+            if (mediaView.length) {
+                control.emptyTemplateImage(mediaView);
+            }
+            // empty colorpicker element and set events
+            var colorpicker = newElement.find('.wp-picker-container');
+            var colorpickerContainer = colorpicker.parent();
+            var colorpickerInput = newElement.find('.tikva-repeater-color-field').prop('outerHTML');
+            colorpicker.remove();
+            colorpickerContainer.append(colorpickerInput);
+            newElement.find('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
+            
+            // empty radio button elements and set new names for radio button group based on element id
+            var radioContainer = newElement.find('.customize-control-radio-container');
+            if (radioContainer.length) {
+                console.log("RadioContainerrrrr vorhanden");
+                _.each( radioContainer, function( radioContainerElement, rcIndex ) {
+                    var dataFieldName = $(radioContainerElement).attr('data-field');
+                    console.log(rcIndex);
+                    console.log(radioContainerElement);
+                    console.log(dataFieldName);
+                    var radioName = '_customize-control-repeater-radio-' + dataFieldName + '-' + newId;
+                    var radioInputElement = $(radioContainerElement).find('.tikva-customize-repeater-input-radio');
+                    _.each( radioInputElement, function(radioInputItem, rcItemIndex ){
+                        console.log(radioInputItem);
+                        $(radioInputItem).attr('name',radioName);
+
+                    });
+
+                });
+                    
+
+            }
+
+            // todo: check checkbox elements
+
 
             newElement.appendTo($('.customize-control-repeater-element-container'));
             elementData[newId] = {
                 elements: {}
-
             };
             control.displayRemoveButtons();
           
@@ -561,26 +618,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
         
 
-        var colorPickerOptions = {
-            // a callback to fire whenever the color changes to a valid color
-            change: function(event, ui){
-                console.log("changed color");
-                var element = event.target;
-                var color = ui.color.toString();
-                console.log(element);
-                console.log($(element).attr('data-field'));
-                control.updateCurrentTextField(element, elementData, color);
-            },
-            // a callback to fire when the input is emptied or an invalid color
-            clear: function(event) {
-                console.log("cleared color");
-                console.log(event.target);
-                var element = event.target;
-                var color = '';
-                control.updateCurrentTextField(element, elementData, color);
-                
-            }
-        };
+      
           
          $('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
          

@@ -14,16 +14,28 @@ class Tikva_Section_Content_Column
 
     const MAX_COLUMNS = 12;
 
-    /* Add Custom Footer Layout */
+    public static function showIntroductionElements($position) 
+    {
+        $introActivate =  get_option('setting_introduction_area_activate');
+        if (intval($introActivate) !== 1) {
+          return '';
+        }
+              
+        if (get_option('setting_introduction_position') != $position) {
+          return '';
+        }
+        self::build();
+    }
 
     public static function build()
     {
-        $introActivate =  get_option('setting_introduction_area_activate');
+       
         $introTitle = get_theme_mod('setting_introduction_area_title');
         $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
         $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
       //echo "<pre>";
       //var_dump($introActivate);
+      //echo "</pre>";
       //die;
       //print_r($introTitle);
       //print_r($introSubtitle);
@@ -138,7 +150,7 @@ class Tikva_Section_Content_Column
                   <?php echo $header; ?>
                   <h2><?php echo $title; ?></h2>
                   <p><?php echo $content; ?></p>
-                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button">View details &raquo;</a></p>
+                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button">Read more &raquo;</a></p>
 
 
                      

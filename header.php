@@ -106,6 +106,8 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
     
       if ( is_front_page()) {
         tikva_show_slider(1);
+        Tikva_Section_Content_Column::showIntroductionElements(1);
+        
       }
 ?>
     </div>
@@ -179,6 +181,8 @@ if ($navbarFixed == 'default') {
             <?php
             if ( is_front_page() ) {
 tikva_show_slider(2);
+Tikva_Section_Content_Column::showIntroductionElements(2);
+
             } 
             ?>
             

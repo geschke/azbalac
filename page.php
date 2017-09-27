@@ -27,7 +27,7 @@ get_header(); ?>
             }
             if ( is_front_page() ) {
                 tikva_show_slider(3);
-                Tikva_Section_Content_Column::build();
+                Tikva_Section_Content_Column::showIntroductionElements(3);
             }
 
 
@@ -98,6 +98,8 @@ get_header(); ?>
  <?php
      if ( is_front_page() ) {
         tikva_show_slider(4);
+        Tikva_Section_Content_Column::showIntroductionElements(4);
+        
       }
      
 get_footer();

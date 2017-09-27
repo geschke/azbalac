@@ -1006,6 +1006,27 @@ class Tikva_Customizer
             'type' => 'checkbox',
         ));
 
+        $wp_customize->add_setting('setting_introduction_position', array(
+            'default' => '2',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderPosition')
+        ));
+
+        $wp_customize->add_control('control_introduction_position', array(
+            'label' => __('Introduction Position', 'tikva'),
+            'section' => 'section_theme_options_intro',
+            'settings' => 'setting_introduction_position',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
+                '2' => __('Between navigation and featured articles', 'tikva'),
+                '3' => __('Between featured articles and content', 'tikva'),
+                '4' => __('Between content and footer', 'tikva'),
+            ),
+        ));
+
+
         $wp_customize->add_setting('setting_introduction_area_title', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_text_field')
@@ -1026,6 +1047,8 @@ class Tikva_Customizer
             'settings' => 'setting_introduction_area_subtitle')
         );
        
+
+
 
 
        

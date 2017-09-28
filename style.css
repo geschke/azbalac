@@ -445,3 +445,11 @@ table > thead:first-child > tr:first-child > td {
 .section-introduction .row .section-description {
     text-align: center;
 }
+
+.containerNew {
+    background-color: green;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }

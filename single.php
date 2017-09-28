@@ -7,16 +7,44 @@
  * @since Tikva 0.1
  */
 
-get_header(); ?>
+ get_header(); ?>
 
 
-<div class="row">
+ <div class="container">
+ 
+   <?php
+   if ( is_front_page() ) {
+tikva_show_slider(2);
 
-    <div class="col-md-9 col-sm-8">
-      
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-			<?php
+   } 
+   ?>
+   
+<div id="main" class="site-main">
+
+	 <div class="row">
+ 
+		 <div id="main-content" class="main-content">
+ 
+			 <?php
+			 $layoutStyle = tikva_get_layout();
+  
+			 if ($layoutStyle['content'] == 2) {
+				 ?>
+				 <div class="<?php echo $layoutStyle['col_2']; ?>">
+					 <?php get_sidebar( 'content' );
+					 get_sidebar();
+					 ?>
+				 </div>
+			 <?php
+			 }
+			 ?>
+ 
+			 <div class="<?php echo $layoutStyle['col_1']; ?>">
+ 
+				 <div id="primary" class="content-area">
+					 <div id="content" class="site-content" role="main">
+ 
+					 <?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
 
@@ -36,19 +64,44 @@ get_header(); ?>
 						comments_template();
 					}
 				endwhile;
-			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
-    </div>
+					?>
 
-    <div class="col-md-3 col-sm-4">
-    <?php
-        get_sidebar( 'content' );
-        get_sidebar();
-    ?>
-    </div>
+					 </div><!-- #content -->
+				 </div><!-- #primary -->
+ 
+			 </div>
+ 
+			 <?php
+ 
+			 if ($layoutStyle['columns'] == 2) {
+				 if ($layoutStyle['content'] == 1) {
+					 ?>
+					 <div class="<?php echo $layoutStyle['col_2']; ?>">
+						 <?php get_sidebar( 'content' );
+						 get_sidebar();
+						 ?>
+					 </div>
+				 <?php
+				 }
+			 } ?>
+ 
+  
+		 </div><!-- #main-content -->
+ 
+	 </div><!-- row -->
 
-    </div><!-- row -->
 
-<?php
-get_footer();
+	 </div><!-- #main -->
+ </div><!-- container -->
+  <?php
+	  
+ get_footer();
+ ?>
+	 
+ 
+ 
+ 
+
+
+
+    

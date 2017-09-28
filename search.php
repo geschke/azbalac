@@ -9,6 +9,13 @@
 
 get_header(); ?>
 
+
+
+<div id="main" class="site-main">
+
+<div class="container">
+
+
 <div class="row">
 
 
@@ -91,5 +98,9 @@ if ($layoutStyle['content'] == 2) {
 
     </div><!-- row -->
 
+
+
+    </div><!-- #main -->
+</div><!-- container -->     
 <?php
 get_footer();

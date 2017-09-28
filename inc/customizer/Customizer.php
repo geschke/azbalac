@@ -1046,7 +1046,16 @@ class Tikva_Customizer
             'section' => 'section_theme_options_intro',
             'settings' => 'setting_introduction_area_subtitle')
         );
-       
+        $wp_customize->add_setting('setting_introduction_area_color_bg', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_introduction_area_color_bg', array(
+        'label' => __('Section Background Color', 'tikva'),
+        'section' => 'section_theme_options_intro',
+        'settings' => 'setting_introduction_area_color_bg',
+        'description' => __('Pick a background color for the introduction section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+    ));
 
 
 

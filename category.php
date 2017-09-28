@@ -12,6 +12,11 @@
 get_header(); ?>
 
 
+<div id="main" class="site-main">
+
+<div class="container">
+
+
 <div class="row">
 
     <div class="col-md-9 col-sm-8">
@@ -67,5 +72,10 @@ get_header(); ?>
     </div>
 
 </div>
+
+
+
+</div><!-- #main -->
+</div><!-- container -->     
 <?php
 get_footer();

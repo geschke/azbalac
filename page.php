@@ -13,21 +13,55 @@
 
 get_header(); ?>
 
+  <?php
+  if ( is_front_page() ) {
+      // todo: wrap into container?
+tikva_show_slider(2);
+
+  } 
+  ?>
+
+
+<?php
+  if ( is_front_page() && tikva_has_featured_posts() ) {
+      ?>
+
+<div id="featured-main" class="featured-main">
+
+<div class="container">
+      <?php
+    // Include the featured content template.
+    get_template_part( 'featured-content' );
+    //   echo "<h1>show featured content</h1>";
+    ?>
+    </div><!-- end container -->
+    </div><!-- end featured-main -->
+    <?php
+}
+?>
+
+<?php
+if ( is_front_page() ) {
+    Tikva_Section_Content_Column::showIntroductionElements(3);
+            }
+?>
+
+<div id="main" class="site-main">
+
+<div class="container">
+
+
+
     <div class="row">
 
         <div id="main-content" class="main-content">
 
             <?php
             $layoutStyle = tikva_get_layout();
-
-            if ( is_front_page() && tikva_has_featured_posts() ) {
-                // Include the featured content template.
-                get_template_part( 'featured-content' );
-                //   echo "<h1>show featured content</h1>";
-            }
+          
             if ( is_front_page() ) {
                 tikva_show_slider(3);
-                Tikva_Section_Content_Column::showIntroductionElements(3);
+                //Tikva_Section_Content_Column::showIntroductionElements(3);
             }
 
 
@@ -98,10 +132,17 @@ get_header(); ?>
  <?php
      if ( is_front_page() ) {
         tikva_show_slider(4);
-        Tikva_Section_Content_Column::showIntroductionElements(4);
+        //Tikva_Section_Content_Column::showIntroductionElements(4);
         
       }
-     
+     ?>
+     	
+</div><!-- container -->
+</div><!-- #main -->
+     <?php
 get_footer();
+?>
+
+
 
 

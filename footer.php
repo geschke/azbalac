@@ -6,11 +6,11 @@
  */
 ?>
 
-		</div><!-- #main -->
-</div><!-- container -->
-
+	
 <?php
-    tikva_display_social_media_buttons(2);
+Tikva_Section_Content_Column::showIntroductionElements(4);
+	tikva_display_social_media_buttons(2);
+	//Tikva_Section_Content_Column::showIntroductionElements(4);
 ?>
 
 <?php
@@ -26,7 +26,9 @@ Tikva_Section_Footer::build();
 // todo: add styling...
 ?>
 </div>
+
 <?php
+//Tikva_Section_Content_Column::showIntroductionElements(4);
 tikva_display_social_media_buttons(3);
 ?>
 

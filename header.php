@@ -82,6 +82,7 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
 /*if ($navbarFixed != 'fixed-top') {
     $description .= ' ' . get_bloginfo( 'description', 'display' );
 }*/ // todo: don't concat in this way, it is the subtitle!
+
 ?>
 <?php if ($navbarFixed == 'default') {
 
@@ -106,16 +107,19 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
     
       if ( is_front_page()) {
         tikva_show_slider(1);
-        Tikva_Section_Content_Column::showIntroductionElements(1);
+        //Tikva_Section_Content_Column::showIntroductionElements(1);
         
       }
 ?>
     </div>
  </div>
 <?php }
-?>
 
-<?php if ($navbarFixed == 'default') {
+if ( is_front_page()) {
+    Tikva_Section_Content_Column::showIntroductionElements(1);
+}
+
+if ($navbarFixed == 'default') {
 ?>
 <div class="container">
 <?php
@@ -175,16 +179,12 @@ if ($navbarFixed == 'default') {
     </div> <!-- header in default navbar -->
 
 <?php }
-?>
-        <div class="container">
-          
-            <?php
-            if ( is_front_page() ) {
-tikva_show_slider(2);
-Tikva_Section_Content_Column::showIntroductionElements(2);
 
-            } 
-            ?>
-            
-        <div id="main" class="site-main">
+if ( is_front_page()) {
+    Tikva_Section_Content_Column::showIntroductionElements(2);
+}
+
+
+?>
+      
 

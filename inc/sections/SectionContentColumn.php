@@ -41,6 +41,14 @@ class Tikva_Section_Content_Column
       //print_r($introSubtitle);
       //print_r($introElements);
       //echo count($introElements);
+      $colorBgData = get_theme_mod('setting_introduction_area_color_bg');
+      
+      if ($colorBgData) {
+          $styleColorBg = ' background-color: ' . $colorBgData . ';';
+      } else {
+          $styleColorBg = '';
+      }
+
       
         if (is_object($introElements)) {
             $numberElements = count(get_object_vars($introElements));
@@ -57,7 +65,8 @@ class Tikva_Section_Content_Column
         }
       //echo "ColumnClass: $columnClass";
         ?>
-        <div class="container tikva-introduction">
+        <div class="tikva-introduction-section" style="<?php echo $styleColorBg; ?>">
+            <div class="container tikva-introduction">
 
         <section class="section-introduction" id="section-introduction">
           <?php if ($introTitle || $introSubtitle) { ?>
@@ -80,8 +89,9 @@ class Tikva_Section_Content_Column
      
         ?>
         </div><!-- /.row -->
-      </section>
-      </div>
+        </section>
+        </div>
+        </div>
         <?php
     }
 

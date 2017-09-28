@@ -14,10 +14,21 @@
  * @since Tikva 0.1
  */
 
+
 get_header(); ?>
   
-<div class="row">
+  <div class="container">
+ 
+   <?php
+   if ( is_front_page() ) {
+tikva_show_slider(2);
 
+   } 
+   ?>
+   
+<div id="main" class="site-main">
+
+<div class="row">
 
 <div id="main-content" class="main-content">
 
@@ -26,7 +37,7 @@ $layoutStyle = tikva_get_layout();
 
 if ( is_front_page() && tikva_has_featured_posts() ) {
     // Include the featured content template.
-    get_template_part( 'featured-content' );
+//    get_template_part( 'featured-content' );
   tikva_show_slider(3);
   Tikva_Section_Content_Column::showIntroductionElements(3);
   
@@ -94,11 +105,16 @@ if ($layoutStyle['content'] == 2) {
 </div><!-- #main-content -->
  
 </div><!-- row -->
+
 <?php
       if ( is_front_page() ) {
 tikva_show_slider(4);
-Tikva_Section_Content_Column::showIntroductionElements(4);
 
       }
-     
+     ?>
+
+</div><!-- #main -->
+</div><!-- container -->     
+     <?php
 get_footer();
+?>

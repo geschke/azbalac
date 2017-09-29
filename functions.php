@@ -689,7 +689,7 @@ function tikva_header_style() {
 	?>
 	<style type="text/css" id="tikva-header-css">
 
-		#site-header-text {
+		#site-header-text, #site-description {
                     display: none;
 		}
 	</style>

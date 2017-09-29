@@ -39,7 +39,9 @@ class Tikva_Customizer
 
         $this->addCustomizerGeneralSettings($wp_customize);
         $this->addCustomizerPostsSettings($wp_customize);
-        $this->addCustomizerIntroductionSettings($wp_customize);
+        $this->addCustomizerIntroductionSectionOptions($wp_customize);
+        $this->addCustomizerIntroductionSectionContent($wp_customize);
+        
         $this->addCustomizerFooterOptions($wp_customize);
         $this->addCustomizerHeaderImageSettings($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
@@ -88,12 +90,21 @@ class Tikva_Customizer
             'panel' => 'panel_theme_options',
         ));
 
-        $wp_customize->add_section('section_theme_options_intro', array(
+        $wp_customize->add_section('section_theme_options_intro_options', array(
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Introduction Area', 'tikva'),
-            'description' => __('Edit Introduction Contents', 'tikva'),
+            'title' => __('Introduction Area Options', 'tikva'),
+            'description' => __('Edit Introduction Section Options', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_intro_content', array(
+            'priority' => 11,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Introduction Area Content', 'tikva'),
+            'description' => __('Edit Introduction Section Content', 'tikva'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -983,95 +994,104 @@ class Tikva_Customizer
 
 
 
-
-    /**
-     * Add Homepage options to Customizer
+ /**
+     * Add Introduction section options to Customizer
      *
      * @param type $wp_customize
      */
-    public function addCustomizerIntroductionSettings($wp_customize)
+     public function addCustomizerIntroductionSectionOptions($wp_customize)
+     {
+ 
+         $wp_customize->add_setting('setting_introduction_area_activate', array(
+             'default' => '1',
+             'capability' => 'edit_theme_options',
+             'type' => 'option',
+             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+         ));
+ 
+         $wp_customize->add_control('control_introduction_area_activate', array(
+             'label' => __('Show introduction section', 'tikva'),
+             'section' => 'section_theme_options_intro_options',
+             'settings' => 'setting_introduction_area_activate',
+             'type' => 'checkbox',
+         ));
+ 
+         $wp_customize->add_setting('setting_introduction_position', array(
+             'default' => '2',
+             'capability' => 'edit_theme_options',
+             'type' => 'option',
+             'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderPosition')
+         ));
+ 
+         $wp_customize->add_control('control_introduction_position', array(
+             'label' => __('Introduction Position', 'tikva'),
+             'section' => 'section_theme_options_intro_options',
+             'settings' => 'setting_introduction_position',
+             'type' => 'radio',
+             'choices' => array(
+                 '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
+                 '2' => __('Between navigation and featured articles', 'tikva'),
+                 '3' => __('Between featured articles and content', 'tikva'),
+                 '4' => __('Between content and footer', 'tikva'),
+             ),
+         ));
+ 
+ 
+         $wp_customize->add_setting('setting_introduction_area_title', array(
+             'default' => '',
+             'sanitize_callback' => 'sanitize_text_field')
+         );
+         $wp_customize->add_control('control_introduction_area_title', array(
+             'label' => __('Section title', 'tikva'),
+             'section' => 'section_theme_options_intro_options',
+             'settings' => 'setting_introduction_area_title')
+         );
+     
+         $wp_customize->add_setting('setting_introduction_area_subtitle', array(
+             'default' => '',
+             'sanitize_callback' => 'sanitize_text_field')
+         );
+         $wp_customize->add_control('control_introduction_area_subtitle', array(
+             'label' => __('Section subtitle', 'tikva'),
+             'section' => 'section_theme_options_intro_options',
+             'settings' => 'setting_introduction_area_subtitle')
+         );
+         $wp_customize->add_setting('setting_introduction_area_color_bg', array(
+         'default' => '',
+         'sanitize_callback' => 'sanitize_hex_color',
+     ));
+     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_introduction_area_color_bg', array(
+         'label' => __('Section Background Color', 'tikva'),
+         'section' => 'section_theme_options_intro_options',
+         'settings' => 'setting_introduction_area_color_bg',
+         'description' => __('Pick a background color for the introduction section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+     ));
+ 
+ 
+
+  
+     }
+
+
+    /**
+     * Add Introduction section options to Customizer
+     *
+     * @param type $wp_customize
+     */
+    public function addCustomizerIntroductionSectionContent($wp_customize)
     {
-
-        $wp_customize->add_setting('setting_introduction_area_activate', array(
-            'default' => '1',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
-        ));
-
-        $wp_customize->add_control('control_introduction_area_activate', array(
-            'label' => __('Show introduction area', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_introduction_area_activate',
-            'type' => 'checkbox',
-        ));
-
-        $wp_customize->add_setting('setting_introduction_position', array(
-            'default' => '2',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeSliderPosition')
-        ));
-
-        $wp_customize->add_control('control_introduction_position', array(
-            'label' => __('Introduction Position', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_introduction_position',
-            'type' => 'radio',
-            'choices' => array(
-                '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
-                '2' => __('Between navigation and featured articles', 'tikva'),
-                '3' => __('Between featured articles and content', 'tikva'),
-                '4' => __('Between content and footer', 'tikva'),
-            ),
-        ));
-
-
-        $wp_customize->add_setting('setting_introduction_area_title', array(
-            'default' => '',
-            'sanitize_callback' => 'sanitize_text_field')
-        );
-        $wp_customize->add_control('control_introduction_area_title', array(
-            'label' => __('Section title', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_introduction_area_title')
-        );
-	
-        $wp_customize->add_setting('setting_introduction_area_subtitle', array(
-            'default' => '',
-            'sanitize_callback' => 'sanitize_text_field')
-        );
-        $wp_customize->add_control('control_introduction_area_subtitle', array(
-            'label' => __('Section subtitle', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_introduction_area_subtitle')
-        );
-        $wp_customize->add_setting('setting_introduction_area_color_bg', array(
-        'default' => '',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_introduction_area_color_bg', array(
-        'label' => __('Section Background Color', 'tikva'),
-        'section' => 'section_theme_options_intro',
-        'settings' => 'setting_introduction_area_color_bg',
-        'description' => __('Pick a background color for the introduction section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
-    ));
-
-
-
-
-       
+      
    
-   $wp_customize->add_setting( 'setting_introduction_area_elements', array(
+        $wp_customize->add_setting( 'setting_introduction_area_elements', array(
          'sanitize_callback' => array($this->sanitizer, 'sanitizeRepeater'),
          'capability' => 'edit_theme_options'
       ));
 
       $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
-	'label'   => esc_html__('Features content','tikva'),
+	'label'   => esc_html__('Introduction section content','tikva'),
        'description' => 'Add as many elements as you want.','tikva',
        
-	'section' => 'section_theme_options_intro',
+	'section' => 'section_theme_options_intro_content',
     //'priority' => 100,   
     'settings' => 'setting_introduction_area_elements',
 	'fields' => array(
@@ -1164,18 +1184,7 @@ class Tikva_Customizer
             'description' => __('Image displayed on section background', 'tikva')
         ),
         
-        'image_shape' => array(
-            'type'      => 'radiobutton',
-            'label' => __('Image shape', 'tikva'),
-            'description' => __('Use image shape for uploaded image:','tikva'),
-            'default' => '2',
-            'choices' => array(
-                '1' => __('Rounded corners', 'tikva'),
-                '2' => __('Circle', 'tikva'),
-                '3' => __('Thumbnail', 'tikva'),
-                '4' => __('No image shape', 'tikva'),
-                
-            ),
+      
         ),
         'image_show' => array(
             'label' => __('Show checkbox', 'tikva'),
@@ -1187,86 +1196,7 @@ class Tikva_Customizer
     )
     ) ) );
 
-   
- 
-        //$contentArea = sprintf("%02d", 1);
-   
-
-      
-    
-     /* 
-
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_image', array(
-            'default' => '',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
-        ));
-
-        $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'control_content_area_' . $contentArea . '_image', array(
-            'label' => __('...use image', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_content_area_' . $contentArea . '_image',
-            'flex_width' => true, // Allow any width, making the specified value recommended. False by default.
-            'flex_height' => true, // Require the resulting image to be exactly as tall as the height attribute (default).
-            //'width' => 1920,
-            //'height' => 500,
-            'mime_type' => 'image',
-            'description' => __('Image displayed on section background', 'tikva')
-        )));*/
-/*
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_title', array(
-            'default' => '',
-            'sanitize_callback' => 'sanitize_text_field')
-        );
-        $wp_customize->add_control('control_content_area_' . $contentArea . '_title', array(
-            'label' => __('Title for the section', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_content_area_' . $contentArea . '_title')
-        );
-
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_description', array(
-            'default' => '',
-            'sanitize_callback' => 'sanitize_text_field')
-        );
-
-        $wp_customize->add_control('control_content_area_' . $contentArea . '_description', array(
-            'label' => __('Description', 'tikva'),
-            'type' => 'textarea',
-            'section' => 'section_theme_options_intro',
-            'settings' => 'setting_content_area_' . $contentArea . '_description'
-        ));
-
-        $wp_customize->add_setting('setting_content_area_' . $contentArea . '_page', array(
-            // note - works with or without capability & type set
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => 'sanitize_post',
-        ));
-
-        $wp_customize->add_control('control_content_area_' . $contentArea . '_page', array(
-            'label' => __('Link to page or...', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'type' => 'dropdown-pages',
-            'settings' => 'setting_content_area_' . $contentArea . '_page',
-        ));
-        
-        
-         $wp_customize->add_setting('setting_content_area_' . $contentArea . '_post', array(
-            // note - works with or without capability & type set
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => 'sanitize_post',
-        ));
-
-        $wp_customize->add_control(new Tikva_Custom_Latest_Post_Control($wp_customize, 'control_content_area_' . $contentArea . '_post', array(
-          
-            'label' => __('Link to Post', 'tikva'),
-            'section' => 'section_theme_options_intro',
-            'type' => 'dropdown-pages',
-            'settings' => 'setting_content_area_' . $contentArea . '_post',
-        )));
-        */
+        // todo: sanitize?
     }
 
     public function getFaIcons()

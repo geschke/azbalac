@@ -157,8 +157,8 @@ class Tikva_Section_Content_Column
        
         printf('<div class="col-lg-%d col-md-%d col-sm-%d introduction-box">', $columnClass, $columnClass, $columnClass);
         ?>
-                  <?php echo $header; ?>
-                  <h2><?php echo $title; ?></h2>
+                  <a href="<?php echo $url; ?>"><?php echo $header; ?></a>
+                  <h2><a class="section-introduction-url" href="<?php echo $url; ?>"><?php echo $title; ?></a></h2>
                   <p><?php echo $content; ?></p>
                   <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button">Read more &raquo;</a></p>
 

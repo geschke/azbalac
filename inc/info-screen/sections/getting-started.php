@@ -22,7 +22,7 @@ $Tikva = wp_get_theme( 'tikva' );
 		<h1><?php esc_html_e( 'Getting started', 'tikva' ); ?></h1>
 
 		<h4><?php esc_html_e( 'Customize whole theme in a single place.' ,'tikva' ); ?></h4>
-		<p><?php esc_html_e( 'Using the WordPress Customizer you can easily customize every aspect of the theme.', 'tikva' ); ?></p>
+		<p><?php esc_html_e( 'Using the WordPress Customizer you can easily customize every feature of the theme.', 'tikva' ); ?></p>
 		<p><a href="<?php echo esc_url( $customizer_url ); ?>" class="button button-primary"><?php esc_html_e( 'Go to Customizer', 'tikva' ); ?></a></p>
 	</div>
 

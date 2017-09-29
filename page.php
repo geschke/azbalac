@@ -124,9 +124,6 @@ if ( is_front_page() ) {
         </div><!-- #main-content -->
 
     </div><!-- row -->
- <?php
-    
-     ?>
      	
 </div><!-- container -->
 </div><!-- #main -->

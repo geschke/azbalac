@@ -2,10 +2,18 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.4.6
+Version 0.5.0
 
 
 ## Version history:
+
+Version 0.5.0
+- New feature: Added an "Introduction Section". This is a special frontpage area as seen in other themes to link to pages, blog entries or external URLs and show some information (fontawesome icon or image, title, description). You can add a maximum of 12 element columns (based on the 12-column Bootstrap framework).
+- More refactoring than ever before! Moved slider and social media button code into their own "section" classes, optimized HTML structure so every section is placed into its own container. This allows different background colors with 100% width. 
+- Fixed color setting of social media buttons
+- Fix: Don't show subtitle if title and subtitle disabled
+- Created a new custom control element: Tikva_Custom_Repeater_Control. It is used to add a flexible number of elements in the introduction section. Currently it supports the following field types: text, textarea, radiobuttons, checkboxes, image, colorpicker, selections
+
 
 Version 0.4.6
  - Font Awesome updated to version 4.6.3

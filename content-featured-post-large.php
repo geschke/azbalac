@@ -12,10 +12,9 @@
     <div class="container">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <h1><?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); ?>
-        </h1>
+        <?php 
+        the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); 
 
-                <?php
                  if (absint(get_option('setting_posts_featured_date'))) {
         
                 if ( 'post' == get_post_type() ) {

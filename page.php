@@ -11,20 +11,14 @@
  * @since Tikva 0.1.8
  */
 
-get_header(); ?>
+get_header(); 
 
-  <?php
-  if ( is_front_page() ) {
-      // todo: wrap into container?
-tikva_show_slider(2);
+if ( is_front_page() ) {
+    Tikva_Section_Slider::showSlider(2);
+} 
 
-  } 
-  ?>
-
-
-<?php
-  if ( is_front_page() && tikva_has_featured_posts() ) {
-      ?>
+if ( is_front_page() && tikva_has_featured_posts() ) {
+?>
 
 <div id="featured-main" class="featured-main">
 
@@ -43,8 +37,14 @@ tikva_show_slider(2);
 <?php
 if ( is_front_page() ) {
     Tikva_Section_Content_Column::showIntroductionElements(3);
-            }
+    Tikva_Section_Slider::showSlider(3);
+               
+}
+
 ?>
+
+
+
 
 <div id="main" class="site-main">
 
@@ -59,12 +59,7 @@ if ( is_front_page() ) {
             <?php
             $layoutStyle = tikva_get_layout();
           
-            if ( is_front_page() ) {
-                tikva_show_slider(3);
-                //Tikva_Section_Content_Column::showIntroductionElements(3);
-            }
-
-
+          
             if ($layoutStyle['content'] == 2) {
                 ?>
                 <div class="<?php echo $layoutStyle['col_2']; ?>">
@@ -130,11 +125,7 @@ if ( is_front_page() ) {
 
     </div><!-- row -->
  <?php
-     if ( is_front_page() ) {
-        tikva_show_slider(4);
-        //Tikva_Section_Content_Column::showIntroductionElements(4);
-        
-      }
+    
      ?>
      	
 </div><!-- container -->

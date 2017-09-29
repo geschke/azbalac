@@ -14,7 +14,8 @@
  
    <?php
    if ( is_front_page() ) {
-tikva_show_slider(2);
+
+Tikva_Section_Slider::showSlider(2);
 
    } 
    ?>

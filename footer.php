@@ -8,9 +8,13 @@
 
 	
 <?php
-Tikva_Section_Content_Column::showIntroductionElements(4);
-	tikva_display_social_media_buttons(2);
-	//Tikva_Section_Content_Column::showIntroductionElements(4);
+if ( is_front_page() ) {
+	Tikva_Section_Slider::showSlider(4);
+	Tikva_Section_Content_Column::showIntroductionElements(4);
+}
+
+Tikva_Section_Social_Media_Buttons::showButtons(2);
+	
 ?>
 
 <?php
@@ -29,7 +33,9 @@ Tikva_Section_Footer::build();
 
 <?php
 //Tikva_Section_Content_Column::showIntroductionElements(4);
-tikva_display_social_media_buttons(3);
+
+Tikva_Section_Social_Media_Buttons::showButtons(3);
+
 ?>
 
 <div class="container">

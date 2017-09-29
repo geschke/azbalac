@@ -87,10 +87,7 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
 <?php if ($navbarFixed == 'default') {
 
 ?>
-    <div>
-    <?php      //  tikva_display_social_media_buttons(3); ?>
-    </div>
-   
+      
     <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg'];  ?>">
 
 <div class="container">
@@ -105,16 +102,15 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
             </div>
       <?php
     
-      if ( is_front_page()) {
-        tikva_show_slider(1);
-        //Tikva_Section_Content_Column::showIntroductionElements(1);
-        
-      }
+    
 ?>
     </div>
  </div>
 <?php }
 
+if ( is_front_page()) {
+    Tikva_Section_Slider::showSlider(1);
+}
 if ( is_front_page()) {
     Tikva_Section_Content_Column::showIntroductionElements(1);
 }

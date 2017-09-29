@@ -21,8 +21,7 @@ get_header(); ?>
  
    <?php
    if ( is_front_page() ) {
-tikva_show_slider(2);
-
+    Tikva_Section_Slider::showSlider(2);
    } 
    ?>
    
@@ -38,10 +37,8 @@ $layoutStyle = tikva_get_layout();
 if ( is_front_page() && tikva_has_featured_posts() ) {
     // Include the featured content template.
 //    get_template_part( 'featured-content' );
-  tikva_show_slider(3);
+  Tikva_Section_Slider::showSlider(3);
   Tikva_Section_Content_Column::showIntroductionElements(3);
-  
-
 }
 
 
@@ -108,8 +105,7 @@ if ($layoutStyle['content'] == 2) {
 
 <?php
       if ( is_front_page() ) {
-tikva_show_slider(4);
-
+Tikva_Section_Slider::showSlider(4);
       }
      ?>
 

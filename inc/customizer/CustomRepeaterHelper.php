@@ -1,6 +1,14 @@
 <?php
 
-
+/**
+ * Customizer Control: Repeater Helper.
+ *
+ * @package     Tikva Controls
+ * @subpackage  Controls
+ * @copyright   Copyright (c) 2017, Ralf Geschke
+ * @license     https://opensource.org/licenses/MIT
+ * @since       2.0
+ */
 class Tikva_Custom_Repeater_Helper
 {
 

@@ -14,6 +14,8 @@ class Tikva_Section_Content_Column
 
     const MAX_COLUMNS = 12;
 
+    protected static $disableReadMore = false;
+
     public static function showIntroductionElements($position) 
     {
         $introActivate =  get_option('setting_introduction_area_activate');
@@ -33,7 +35,12 @@ class Tikva_Section_Content_Column
         $introTitle = get_theme_mod('setting_introduction_area_title');
         $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
         $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
-      //echo "<pre>";
+        $disableReadMore = get_option('setting_introduction_area_readmore');
+        if (intval($disableReadMore) === 1) {
+            self::$disableReadMore = true;
+        }
+      
+        //echo "<pre>";
       //var_dump($introActivate);
       //echo "</pre>";
       //die;
@@ -160,7 +167,9 @@ class Tikva_Section_Content_Column
                   <a href="<?php echo $url; ?>"><?php echo $header; ?></a>
                   <h2><a class="section-introduction-url" href="<?php echo $url; ?>"><?php echo $title; ?></a></h2>
                   <p><?php echo $content; ?></p>
-                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button">Read more &raquo;</a></p>
+                  <?php if (!self::$disableReadMore) { ?>
+                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button"><?php echo __("Read more &raquo;",'tikva'); ?></a></p>
+                  <?php } ?>
 
 
                      

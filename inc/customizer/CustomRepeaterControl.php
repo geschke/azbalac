@@ -3,7 +3,15 @@
 if (! class_exists( 'WP_Customize_Control' )) {
     return null;
 }
-
+/**
+ * Customizer Control: repeater.
+ *
+ * @package     Tikva Controls
+ * @subpackage  Controls
+ * @copyright   Copyright (c) 2017, Ralf Geschke
+ * @license     https://opensource.org/licenses/MIT
+ * @since       2.0
+ */
 class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 {
 

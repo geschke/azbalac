@@ -128,15 +128,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         ?>
     
         <#
-        console.log("foo");
-        console.log(data.section);
-       
-		//console.log(data.fields);
         var elementData = [];
-        elementData['foo'] = "bar";
-        console.log(data.value);
-        console.log(_.size(data.value));
-        console.log(typeof data.value);
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
@@ -144,22 +136,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
            
 
         } else {
-            console.log("initialize empty elementData");
             // initialize empty elements with dummy data
             var newElementId = uuidv4();
             var elementData = {};
             elementData[newElementId] = true;
         }
-      
-    
-        console.log("elementData?");
-       console.log(elementData);
-       console.log(typeof elementData);
-      
-       console.log(_.size(elementData));
-       console.log("elementData ist::::::");
-       console.log(elementData);
-       console.log(uuidv4());
         #>
 		<div class="customize-control-repeater-element-container">
 
@@ -178,21 +159,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                 </label>
                 
             <# _.each(elementData, function (elementItem, elementName) { #>
-                <#
-                console.log("name?")
-                console.log(elementItem);
-                console.log(data.fields.name);
-                #>
-            <#    console.log(elementName); #>
             <div class="customize-control-repeater-element" id="{{{ elementName }}}">
 				
 				<div class="repeater-row-content">
 					<# _.each( data.fields, function( field, name ) { #>
-					<#	
-                        //console.log(field.type);
-                        console.log("current field:");
-						console.log(field);
-						#>
+					
 						<div class="repeater-row-label">
                         <span class="customize-control-title">{{{ field.label }}}</span>
 						<# if ( field.description ) { #>
@@ -222,8 +193,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             } else { 
                                 selectValue = field.default; 
                             }
-                            console.log("select value?");
-                            console.log(selectValue);
+                           
                             #>
                             <select class="customize-repeater-input-select" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}" data-customize-setting-link="{{{ name }}}">
                             <# var selectString = '';
@@ -249,8 +219,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             } else { 
                                 selectValue = field.default; 
                             }
-                            console.log("dropdown-page value?");
-                            console.log(selectValue);
+                           
                             #>
                             <select class="customize-repeater-input-dropdownpages" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}" data-customize-setting-link="{{{ name }}}">
                             <# var selectString = '';
@@ -286,8 +255,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 } else { 
                                     selectValue = field.default; 
                                 }
-                                console.log("RADIOOOOOOOOOOOOOOO VALUE");
-                                console.log(selectString);
+                               
                                 _.each(field.choices, function(choiceOption, choiceValue) {
                                     selectString = '';
                                     if (choiceValue == selectValue) {
@@ -331,25 +299,22 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             <div class="repeater-row-field">
 
                             <#
-                            console.log("element image!!!!!!!!!!!!!!!!!!!!!!!");
+                           
                             if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') {
-                                console.log(elementItem.elements[name].value);
+                                
                                 var imageId = elementItem.elements[name].value;
-                                //console.log(wp.media.attachment(imageId).get('url'));
+                              
                                 var payload = [];
                                 payload['elementId'] = elementName;
                                 payload['elementName'] = name;
                                 tikvaRepeaterPreloadAttachment(imageId, payload, function (attachment, elementPayload) {
-                                    console.log("in call of preloadAttachment");
-                                    console.log(elementPayload);
-                                  console.log(attachment.get('url'));
-                                    console.log(wp.media.attachment(imageId).get('url')); 
                                     tikvaRepeaterPreviewImage(elementPayload, attachment);
                                 });
 
 
                              } else { 
-                                 console.log("empty");
+                                 // todo later: remove else branch
+                                 //console.log("empty"); 
                              } 
                            #>
 

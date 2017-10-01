@@ -43,6 +43,7 @@ class Tikva_Customizer
         $this->addCustomizerIntroductionSectionContent($wp_customize);
         
         $this->addCustomizerFooterOptions($wp_customize);
+        $this->addCustomizerSubfooterOptions($wp_customize);
         $this->addCustomizerHeaderImageSettings($wp_customize);
         $this->addCustomizerHomeOptions($wp_customize);
 
@@ -125,6 +126,17 @@ class Tikva_Customizer
             'description' => __('Set options of Footer', 'tikva'),
             'panel' => 'panel_theme_options',
         ));
+
+        $wp_customize->add_section('section_theme_options_subfooter', array(
+            'priority' => 40,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Subfooter Options', 'tikva'),
+            'description' => __('Set options of Subfooter, i.e. the area under the footer', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+
     }
 
     public function addSliderOptions($wp_customize, $slider)
@@ -829,6 +841,81 @@ class Tikva_Customizer
         )));
     }
 
+
+    /**
+     * Add Subfooter options to Customizer
+     *
+     * @param type $wp_customize
+     */
+     public function addCustomizerSubfooterOptions($wp_customize)
+     {
+ 
+ 
+         $wp_customize->add_setting('setting_subfooter_activate', array(
+             'default' => '1',
+             'capability' => 'edit_theme_options',
+             'type' => 'option',
+             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+         ));
+ 
+         $wp_customize->add_control('control_subfooter_activate', array(
+             'label' => __('Show Subfooter', 'tikva'),
+             'section' => 'section_theme_options_subfooter',
+             'settings' => 'setting_subfooter_activate',
+             'type' => 'checkbox',
+         ));
+
+         $wp_customize->add_setting(
+            'setting_subfooter_color_fg', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_fg', 
+            array('label' => __('Subfooter Foreground Color', 'tikva'),
+            'section' => 'section_theme_options_subfooter',
+            'settings' => 'setting_subfooter_color_fg',
+            'description' => __('Pick a foreground color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+
+        $wp_customize->add_setting(
+            'setting_subfooter_color_link', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_link', 
+            array('label' => __('Subfooter Link Color', 'tikva'),
+            'section' => 'section_theme_options_subfooter',
+            'settings' => 'setting_subfooter_color_link',
+            'description' => __('Pick a link color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+
+        $wp_customize->add_setting(
+            'setting_subfooter_color_bg', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_bg',      array('label' => __('Subfooter Background Color', 'tikva'),
+            'section' => 'section_theme_options_subfooter',
+        'settings' => 'setting_subfooter_color_bg',
+        'description' => __('Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        ));
+
+
+        $wp_customize->add_setting('setting_subfooter_content', array(
+            'default' => __('Powered by WordPress. Theme Tikva by [Ralf Geschke](https://www.geschke.net) .','tikva'),
+            'sanitize_callback' => 'sanitize_text_field')
+        );
+
+        $wp_customize->add_control('control_subfooter_content', array(
+            'label' => __('Subfooter content', 'tikva'),
+            'type' => 'textarea',
+            'section' => 'section_theme_options_subfooter',
+            'settings' => 'setting_subfooter_content'
+        ));
+ 
+
+     }
+
     /**
      * Add Homepage options to Customizer
      *
@@ -1075,7 +1162,7 @@ class Tikva_Customizer
          ));
   
          $wp_customize->add_control('control_introduction_area_readmore', array(
-            'label' => __('Disable "Read more" buttons', 'tikva'),
+            'label' => __('Remove "Read more" buttons', 'tikva'),
             'section' => 'section_theme_options_intro_options',
             'settings' => 'setting_introduction_area_readmore',
             'type' => 'checkbox',

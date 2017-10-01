@@ -450,3 +450,8 @@ table > thead:first-child > tr:first-child > td {
 a.section-introduction-url {
     text-decoration: none;
 }
+
+.subfooter {
+    padding: 10px 0px 10px 0px;
+    
+}

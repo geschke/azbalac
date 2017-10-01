@@ -52,6 +52,8 @@ $navbarFixed = tikva_get_navbar_layout();
             </style>
         <?php
         }
+
+        Tikva_Section_Subfooter::buildStyles();
        ?>
 
         <?php 

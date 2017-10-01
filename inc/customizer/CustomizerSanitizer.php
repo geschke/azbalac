@@ -148,6 +148,27 @@ class Tikva_Customizer_Sanitizer
         return $input;
     }
 
+    public function sanitizeHtml($input)
+    {
+        return wp_kses( $input, array( 
+            'a' => array(
+                'href' => array(),
+                'title' => array()
+            ),
+            'br' => array(),
+            'em' => array(),
+            'i' => array(),
+            'p' => array(),
+            'strong' => array(),
+            'li' => array(),
+            'ul' => array(),
+            'div' => array(
+                'class' => array(),
+                'id' => array(),
+            )
+        ) );
+    }
+
     public function sanitizeRepeater($input)
     {
         return $input; // testing...

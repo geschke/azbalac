@@ -849,7 +849,7 @@ class Tikva_Customizer
      */
      public function addCustomizerSubfooterOptions($wp_customize)
      {
- 
+
  
          $wp_customize->add_setting('setting_subfooter_activate', array(
              'default' => '1',
@@ -862,7 +862,7 @@ class Tikva_Customizer
              'label' => __('Show Subfooter', 'tikva'),
              'section' => 'section_theme_options_subfooter',
              'settings' => 'setting_subfooter_activate',
-             'type' => 'checkbox',
+             'type' => 'checkbox'
          ));
 
          $wp_customize->add_setting(
@@ -894,7 +894,8 @@ class Tikva_Customizer
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
         ));
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_bg',      array('label' => __('Subfooter Background Color', 'tikva'),
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_bg',      
+            array('label' => __('Subfooter Background Color', 'tikva'),
             'section' => 'section_theme_options_subfooter',
         'settings' => 'setting_subfooter_color_bg',
         'description' => __('Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
@@ -902,9 +903,9 @@ class Tikva_Customizer
 
 
         $wp_customize->add_setting('setting_subfooter_content', array(
-            'default' => __('Powered by WordPress. Theme Tikva by [Ralf Geschke](https://www.geschke.net) .','tikva'),
-            'sanitize_callback' => 'sanitize_text_field')
-        );
+            'default' => __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Tikva by <a href="https://www.geschke.net">Ralf Geschke</a>.','tikva'),
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeHtml')
+        ));
 
         $wp_customize->add_control('control_subfooter_content', array(
             'label' => __('Subfooter content', 'tikva'),

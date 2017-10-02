@@ -25,12 +25,12 @@ class Tikva_Custom_Repeater_Helper
         $dropdown = wp_dropdown_pages(
             array(
                 'echo'              => 0,
-                'show_option_none'  => __( '&mdash; Select &mdash;' ),
+                'show_option_none'  => __( '&mdash; Select &mdash;', 'tikva' ),
                 'option_none_value' => '0',
                 'selected'          => 0,
             )
         );
-        //print_r($dropdown);
+     
     
         if (function_exists('simplexml_load_string')) {
             $document = '<temp>' . html_entity_decode($dropdown) . '</temp>'; 

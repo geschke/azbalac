@@ -20,7 +20,7 @@ class Tikva_Section_Footer
             echo '<h3 class="widget-title">' . __('Please Add Widgets', 'tikva') . '</h3>',
             '<div class="error-icon">',
             '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'tikva'), $footerNumber) . '</p>',
-            '<a href="' . esc_url(admin_url('widgets.php')) . '" title="No Widgets Selected">' . __('Click here to go to Widget area.', 'tikva') . '</a>',
+            '<a href="' . esc_url(admin_url('widgets.php')) . '" title="' . __('No Widgets Selected', 'tikva') . '">' . __('Click here to go to Widget area.', 'tikva') . '</a>',
             '</div>';
         };
         echo '</div>';

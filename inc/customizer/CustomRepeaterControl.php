@@ -84,7 +84,9 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
             'select_image' => esc_html__( 'Select Image', 'tikva' ),
             'remove' => esc_html__( 'Remove', 'tikva' ),
             'change_image' => esc_html__( 'Change Image', 'tikva' ),
-            'no_image_selected' => esc_html__( 'No image selected', 'tikva' )
+            'no_image_selected' => esc_html__( 'No image selected', 'tikva' ),
+            'choose_image' => esc_html__( 'Choose Image', 'tikva' )
+            
             
 
         ) );

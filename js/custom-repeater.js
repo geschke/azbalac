@@ -548,9 +548,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
     
             //Extend the wp.media object
             custom_uploader = wp.media.frames.file_frame = wp.media({
-                title: 'Choose Image',
+                title:  objectL10n.choose_image,
                 button: {
-                    text: 'Choose Image'
+                    text:  objectL10n.choose_image
                 },
                 multiple: false
             });

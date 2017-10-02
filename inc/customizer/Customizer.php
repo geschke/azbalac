@@ -95,8 +95,8 @@ class Tikva_Customizer
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Introduction Area Options', 'tikva'),
-            'description' => __('Edit Introduction Section Options', 'tikva'),
+            'title' => __('Lead Area Options', 'tikva'),
+            'description' => __('Edit Lead Section Options', 'tikva'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -104,8 +104,8 @@ class Tikva_Customizer
             'priority' => 11,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Introduction Area Content', 'tikva'),
-            'description' => __('Edit Introduction Section Content', 'tikva'),
+            'title' => __('Lead Area Content', 'tikva'),
+            'description' => __('Edit Lead Section Content', 'tikva'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -1098,7 +1098,7 @@ class Tikva_Customizer
         ));
  
         $wp_customize->add_control('control_introduction_area_activate', array(
-           'label' => __('Show introduction section', 'tikva'),
+           'label' => __('Show lead section', 'tikva'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_activate',
            'type' => 'checkbox',
@@ -1112,7 +1112,7 @@ class Tikva_Customizer
         ));
  
         $wp_customize->add_control('control_introduction_position', array(
-           'label' => __('Introduction Position', 'tikva'),
+           'label' => __('Lead Position', 'tikva'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_position',
            'type' => 'radio',
@@ -1188,7 +1188,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
-        'label'   => esc_html__('Introduction section content', 'tikva'),
+        'label'   => esc_html__('Lead area content', 'tikva'),
         'description' => 'Add as many elements as you want.','tikva',
        
         'section' => 'section_theme_options_intro_content',
@@ -1226,7 +1226,7 @@ class Tikva_Customizer
         ),
         'icon' => array(
             'type'        => 'select',
-            'label'       =>  __('Select Font Awesome Icon or... ', 'tikva'),
+            'label'       =>  __('Select Font Awesome Icon or...', 'tikva'),
             'description' => __('Select icon or...', 'tikva'),
             'choices' => $this->getFaIcons(),
             //'default' => 'fa-car'

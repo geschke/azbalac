@@ -134,8 +134,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
-            console.log(elementData);
-           
+            
 
         } else {
             // initialize empty elements with dummy data
@@ -314,10 +313,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 });
 
 
-                             } else { 
-                                 // todo later: remove else branch
-                                 //console.log("empty"); 
-                             } 
+                             } // else empty
                            #>
 
 

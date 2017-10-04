@@ -1199,7 +1199,7 @@ class Tikva_Customizer
             'type'        => 'text',
             'label'       => esc_attr__( 'Title', 'tikva' ),
             //'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
-            //'default'     => 'default test for text',
+            'default'     => esc_attr__( 'Title', 'tikva' ),
         ),
         /*'link_url' => array(
 			'type'        => 'text',

@@ -76,8 +76,6 @@ if ( ! function_exists( 'tikva_setup' ) ) :
     
         load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
-//        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
-
         // This theme styles the visual editor to resemble the theme style.
         //add_editor_style( array( 'css/editor-style.css', tikva_font_url() ) );
 

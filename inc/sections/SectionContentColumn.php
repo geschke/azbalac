@@ -105,15 +105,15 @@ class Tikva_Section_Content_Column
 
     protected static function showElement($element, $columnClass)
     {
-      $header = '';
-      $title = '';
-      $content = '';
-      if (isset($element->elements->title->value)) {
-        $title = $element->elements->title->value;
-      }
-      if (isset($element->elements->content->value)) {
-        $content = $element->elements->content->value;
-      }
+        $header = '';
+        $title = '';
+        $content = '';
+        if (isset($element->elements->title->value)) {
+            $title = $element->elements->title->value;
+        }
+        if (isset($element->elements->content->value)) {
+            $content = $element->elements->content->value;
+        }
         if (isset($element->elements->post)) {
             $url = get_permalink($element->elements->post->value);
         } elseif (isset($element->elements->page)) {
@@ -124,14 +124,14 @@ class Tikva_Section_Content_Column
             $url = '#';
         }
         if (isset($element->elements->icon)) {
-          $colorStyle = '';
-          if (isset($element->elements->color_icon)) {
-            $iconColor = $element->elements->color_icon->value;
+            $colorStyle = '';
+            if (isset($element->elements->color_icon)) {
+                $iconColor = $element->elements->color_icon->value;
             
-            if ($iconColor) {
-              $colorStyle = 'color: ' . $iconColor . ';';
-            }      
-          }
+                if ($iconColor) {
+                    $colorStyle = 'color: ' . $iconColor . ';';
+                }      
+            }
   
 
           $header = '

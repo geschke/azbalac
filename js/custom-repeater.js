@@ -3,6 +3,16 @@
 
 
 /**
+ * Customizer Control: JavaScript part of repeater control
+ *
+ * @package     Tikva Controls
+ * @subpackage  Controls
+ * @copyright   Copyright (c) 2017, Ralf Geschke
+ * @license     https://opensource.org/licenses/MIT
+ * @since       2.0
+ */
+
+/**
  * Preload image when using image type in repeater
  * 
  * @param {*} id 
@@ -72,10 +82,13 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         this.container.on( 'event_repeater_updated', function() {
             var dataField = $(control.container).find('.tikva_repeater_collector');
             var settingData = dataField.val();
+            //console.log("dataField Content vor set:");
+            //console.log(settingData);
             control.setting.set( settingData );
             return true;
         });
     
+        console.log("VOR initRepeaterControl, sollte nur einmal aufgerufen werden");
         control.initRepeaterControl();
         
     },
@@ -105,6 +118,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
      */
     updateCurrentDataField: function(elementData) {
         var control = this;
+        console.log("elementdata in updateCurrentDataField");
+        console.log(elementData);
         var dataField = $(control.container).find('.tikva_repeater_collector');
         
         var dataFieldId = dataField.attr('id');
@@ -178,19 +193,18 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
     },
 
-    onChangeSelectUpdate: function( event ) {
-        var control = event.data.control;
-      
-        elementId = $(this).parents('.customize-control-repeater-element').attr('id');
-        var elementData = event.data.elementData;
-       
+    onChangeSelectUpdate: function( event, element, elementData ) {
+        var control = this;
+        
+        elementId = element.parents('.customize-control-repeater-element').attr('id');
+        
         if (elementData[elementId] != undefined) {
       
-            var dataField = ($(this).attr('data-field'));
-            var dataType = ($(this).attr('data-type'));
+            var dataField = element.attr('data-field');
+            var dataType = element.attr('data-type');
             if (dataType == 'dropdown-pages' || dataType == 'select') {
              
-                var newValue = $(this).val();
+                var newValue = element.val();
                 if (elementData[elementId]["elements"][dataField] == undefined) {
                     elementData[elementId]["elements"][dataField] = {}; 
                 }
@@ -326,6 +340,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             elementData[newId] = {
                 elements: {}
             };
+            console.log("hinzugefügt, elementdata ist:");
+            console.log(elementData);
+            control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
           
         });
@@ -338,12 +355,15 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             removeElem.remove();
          
             elementData = _.omit(elementData,removeId);
+
+            console.log("removed, elementData ist:");
+            console.log(elementData);
+            
             // todo: clear textareaOldval... maybe clear all temporary variables in another method?
 
             control.updateCurrentDataField(elementData);
 
             control.displayRemoveButtons();
-         
 
         });
 
@@ -564,14 +584,20 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
 
         // initialize key events to handle select fields
-        $(document).on('change', '.customize-repeater-input-select', 
-            { elementData: elementData,
-              control: control }, 
-            control.onChangeSelectUpdate );
-        $(document).on('change', '.customize-repeater-input-dropdownpages', 
-            { elementData: elementData,
-              control: control }, 
-            control.onChangeSelectUpdate );
+       
+        $(document).on('change', '.customize-repeater-input-select', function (event) {
+            console.log("in change vor Aufruf");
+            console.log(elementData);
+            console.log(event);
+            control.onChangeSelectUpdate(event, $(this), elementData);
+        });
+       
+        $(document).on('change', '.customize-repeater-input-dropdownpages', function (event) {
+            console.log("in change vor Aufruf");
+            console.log(elementData);
+            console.log(event);
+            control.onChangeSelectUpdate(event, $(this), elementData);
+        });
         
 
     },

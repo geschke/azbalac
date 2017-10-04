@@ -8,7 +8,8 @@ Version 0.5.0
 ## Version history:
 
 Version 0.5.0
-- New feature: Added an "Introduction Section". This is a special frontpage area as seen in other themes to link to pages, blog entries or external URLs and show some information (fontawesome icon or image, title, description). You can add a maximum of 12 element columns (based on the 12-column Bootstrap framework).
+- New feature: Added an "Lead Section". This is a special frontpage area as seen in other themes to link to pages, blog entries or external URLs and show some information (fontawesome icon or image, title, description). You can add a maximum of 12 element columns (based on the 12-column Bootstrap framework).
+- New feature: Edit subfooter content. You can modify the area under the footer by customizing colors and the text content.
 - More refactoring than ever before! Moved slider and social media button code into their own "section" classes, optimized HTML structure so every section is placed into its own container. This allows different background colors with 100% width. 
 - Fixed color setting of social media buttons
 - Fix: Don't show subtitle if title and subtitle disabled

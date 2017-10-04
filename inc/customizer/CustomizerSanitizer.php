@@ -169,18 +169,27 @@ class Tikva_Customizer_Sanitizer
         ) );
     }
 
+    /**
+    * Sanitizer function from
+    * https://github.com/cristian-ungureanu/customizer-repeater/blob/production/inc/customizer.php
+    * This does not really sanitize the input values, only guarantees allowed HTML tags for post.
+    * Maybe this will be removed in a future version.
+    *
+    * @var $input Input string
+    */
     public function sanitizeRepeater($input)
     {
-        return $input; // testing...
         $input_decoded = json_decode($input, true);
-        if (!empty($input_decoded)) {
-            foreach ($input_decoded as $boxk => $box) {
-                foreach ($box as $key => $value) {
-                    $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
-                }
-            }
-            return json_encode($input_decoded);
+       
+        if (empty($input_decoded)) {
+            return $input;
         }
-        return $input;
+        foreach ($input_decoded as $boxk => $box) {
+            foreach ($box as $key => $value) {
+                $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+            }
+        }
+        return json_encode($input_decoded);
+        
     }
 }

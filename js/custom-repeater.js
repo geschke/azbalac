@@ -11,10 +11,10 @@
  */
 function tikvaRepeaterPreloadAttachment(id, payload, callback) {
     // if it doesn't have URL we probably have to preload it
-    console.log("in preloadAttachment");
+    //console.log("in preloadAttachment");
     if (!wp.media.attachment(id).get('url')) {
       wp.media.attachment(id).fetch().then(function () {
-          console.log("in plA - calle back");
+          //console.log("in plA - calle back");
         callback(wp.media.attachment(id), payload);
       });
       // was:, but what did I want here? element.children('')
@@ -31,10 +31,10 @@ function tikvaRepeaterPreloadAttachment(id, payload, callback) {
  * @param {*} attachment 
  */
 function tikvaRepeaterPreviewImage(payload, attachment) {
-    console.log("in tikvaRepeaterPreviewImage");
-    console.log(payload);
-    console.log(attachment.id);
-    console.log(wp.media.attachment(attachment.id).get('url'));
+    //console.log("in tikvaRepeaterPreviewImage");
+    //console.log(payload);
+    //console.log(attachment.id);
+    //console.log(wp.media.attachment(attachment.id).get('url'));
     var elementId = payload['elementId'];
     var elementName = payload['elementName'];
     
@@ -43,7 +43,7 @@ function tikvaRepeaterPreviewImage(payload, attachment) {
     var placeholder = jQuery(mediaView).find('.placeholder');
     if (placeholder.length) {
         // placeholder element is available, replace with image
-        console.log("placeholder available");
+        //console.log("placeholder available");
         mediaView.empty();
         var imageTemplate = '<div class="thumbnail thumbnail-image"><img class="attachment-thumb" src="" draggable="false" alt=""></div>';
         imageTemplate += '<div class="actions"><button type="button" class="button remove-button tikva-repeater-custom-remove-button">' + objectL10n.remove + '</button> <button type="button" class="button upload-button tikva-repeater-custom-upload-button" id="">' + objectL10n.change_image + '</button>  </div>';
@@ -79,16 +79,16 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
 
         this.container.on( 'something', function() {
-            console.log("change detected!");
+            //console.log("change detected!");
             var dataField = $(control.container).find('.tikva_repeater_collector');
-            console.log("nach 1")
-            console.log(dataField);
+            //console.log("nach 1")
+            //console.log(dataField);
             var settingData = dataField.val();
-            console.log("nach 2");
-            console.log(settingData);
+            //console.log("nach 2");
+            //console.log(settingData);
             
             control.setting.set( settingData );
-            console.log("nach 3");;
+            //console.log("nach 3");;
             return true;
             //console.log($(control.container).find('#tikva_repeater_section_theme_options_intro').val());
             
@@ -127,9 +127,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         
         var dataFieldId = dataField.attr('id');
 
-        console.log("dataField:");
-        console.log(dataField);
-        console.log(JSON.stringify( elementData ) );
+        //console.log("dataField:");
+        //console.log(dataField);
+        //console.log(JSON.stringify( elementData ) );
         $(control.container).find('#' + dataFieldId).val( encodeURI( JSON.stringify( elementData ) ));
         
         dataField.trigger('something');
@@ -140,10 +140,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         elementId = $(element).parents('.customize-control-repeater-element').attr('id');
         if (elementData[elementId] != undefined) {
-            console.log(elementData[elementId]);
+            //console.log(elementData[elementId]);
             var dataField = ($(element).attr('data-field'));
             var dataType = ($(element).attr('data-type'));
-            console.log("data type a kind of text field");
+            //console.log("data type a kind of text field");
         
             if (elementData[elementId]["elements"][dataField] == undefined) {
                 elementData[elementId]["elements"][dataField] = {}; 
@@ -157,7 +157,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         else {
             console.log("something went wrong here!");
         }
-        console.log(elementData);
+        //console.log(elementData);
 
         control.updateCurrentDataField(elementData);
         control.displayRemoveButtons();
@@ -203,20 +203,20 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
     onChangeSelectUpdate: function( event ) {
         var control = event.data.control;
-        console.log(this);
-        console.log("on dropdownpages store the whole stuff");
+        //console.log(this);
+        //console.log("on dropdownpages store the whole stuff");
       
         elementId = $(this).parents('.customize-control-repeater-element').attr('id');
         var elementData = event.data.elementData;
-        console.log("elementid:");
-        console.log(elementId);
+        //console.log("elementid:");
+        //console.log(elementId);
        
         if (elementData[elementId] != undefined) {
-            console.log(elementData[elementId]);
+            //console.log(elementData[elementId]);
             var dataField = ($(this).attr('data-field'));
             var dataType = ($(this).attr('data-type'));
             if (dataType == 'dropdown-pages' || dataType == 'select') {
-                console.log("data type select/dropdown-pages");
+                //console.log("data type select/dropdown-pages");
                 var newValue = $(this).val();
                 if (elementData[elementId]["elements"][dataField] == undefined) {
                     elementData[elementId]["elements"][dataField] = {}; 
@@ -231,7 +231,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         else {
             console.log("something went wrong here!");
         }
-        console.log(elementData);
+        //console.log(elementData);
 
         control.updateCurrentDataField(elementData);
         control.displayRemoveButtons();
@@ -246,21 +246,21 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var colorPickerOptions = {
             // a callback to fire whenever the color changes to a valid color
             change: function(event, ui){
-                console.log("changed color");
+                //console.log("changed color");
                 var element = event.target;
                 var color = ui.color.toString();
-                console.log(element);
-                console.log($(element).attr('data-field'));
+                //console.log(element);
+                //console.log($(element).attr('data-field'));
                 control.updateCurrentTextField(element, elementData, color);
             },
             // a callback to fire when the input is emptied or an invalid color
             clear: function(event) {
-                console.log("cleared color");
+                //console.log("cleared color");
                 var element = jQuery(event.target).siblings('.wp-color-picker')[0];
                 var color = '';
         
                 if (element) {
-                    console.log(event.target);
+                    //console.log(event.target);
                     var color = '';
                     control.updateCurrentTextField(element, elementData, color);
     
@@ -272,23 +272,23 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         control.displayRemoveButtons();
 
-        console.log("in initRepeaterControl");
+        //console.log("in initRepeaterControl");
         var element = $(this.container).find('.customize-control-repeater-element');
 
-        console.log("elementDATAAAAAAAAAAAAAA");
-        console.log(elementData);
+        //console.log("elementDATAAAAAAAAAAAAAA");
+        //console.log(elementData);
         // first initialization
-        console.log("elements length");
-        console.log(element.length);
+        //console.log("elements length");
+        //console.log(element.length);
         if (element.length > 1) {
-            console.log("groesser eins");
+            //console.log("groesser eins");
             // preinitialized elements available?
          
-            console.log(element[0]);
+            //console.log(element[0]);
             element = $(element[0]); // get first element as template 
 
-            console.log("elementDATAAAAAAAAAAAAAA");
-            console.log(elementData);
+            //console.log("elementDATAAAAAAAAAAAAAA");
+            //console.log(elementData);
 
         } /*else {
             console.log("kleiner gleich eins");
@@ -309,13 +309,13 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         }*/
 
 
-        console.log("FILL HERE");
+        //console.log("FILL HERE");
         var prevValue = $(control.container).find('.tikva_repeater_collector').val();
-        console.log(prevValue);
+        //console.log(prevValue);
         if (prevValue != '') {
             elementData = JSON.parse(decodeURI(prevValue));
-            console.log("altes elementData:");
-            console.log(elementData);
+            //console.log("altes elementData:");
+            //console.log(elementData);
 
         } else {
             
@@ -363,16 +363,16 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             // empty radio button elements and set new names for radio button group based on element id
             var radioContainer = newElement.find('.customize-control-radio-container');
             if (radioContainer.length) {
-                console.log("RadioContainerrrrr vorhanden");
+                //console.log("RadioContainerrrrr vorhanden");
                 _.each( radioContainer, function( radioContainerElement, rcIndex ) {
                     var dataFieldName = $(radioContainerElement).attr('data-field');
-                    console.log(rcIndex);
-                    console.log(radioContainerElement);
-                    console.log(dataFieldName);
+                    //console.log(rcIndex);
+                    //console.log(radioContainerElement);
+                    //console.log(dataFieldName);
                     var radioName = '_customize-control-repeater-radio-' + dataFieldName + '-' + newId;
                     var radioInputElement = $(radioContainerElement).find('.tikva-customize-repeater-input-radio');
                     _.each( radioInputElement, function(radioInputItem, rcItemIndex ){
-                        console.log(radioInputItem);
+                        //console.log(radioInputItem);
                         $(radioInputItem).attr('name',radioName);
 
                     });
@@ -395,20 +395,20 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         $(document).on('click', '.customize-repeater-row-remove', function () {
           
-            console.log("clicked remove");
+            //console.log("clicked remove");
             var removeElem = $(this).parents('.customize-control-repeater-element');
             var removeId = removeElem.attr('id');
-            console.log("elementId: " + removeId);
+            //console.log("elementId: " + removeId);
 
 
             removeElem.remove();
-            console.log(elementData);
+            //console.log(elementData);
             elementData = _.omit(elementData,removeId);
             // todo: clear textareaOldval... maybe clear all temporary variables in another method?
             
         
-            console.log("after remove:");
-            console.log(elementData);
+            //console.log("after remove:");
+            //console.log(elementData);
 
             control.updateCurrentDataField(elementData);
 
@@ -419,14 +419,14 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         // initialize key events to handle input fields
         $(document).on('keyup', '.customize-repeater-input-text', function () {
-            console.log("on keyup store the whole stuff");
+            //console.log("on keyup store the whole stuff");
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
+                //console.log(elementData[elementId]);
                 var dataField = ($(this).attr('data-field'));
                 var dataType = ($(this).attr('data-type'));
                 if (dataType == 'text') {
-                    console.log("data type text");
+                    //console.log("data type text");
                     var newValue = $(this).val();
                     if (elementData[elementId]["elements"][dataField] == undefined) {
                         elementData[elementId]["elements"][dataField] = {}; 
@@ -443,7 +443,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             else {
                 console.log("something went wrong here!");
             }
-            console.log(elementData);
+            //console.log(elementData);
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -454,17 +454,17 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         // initialize key events to handle input fields
         var textareaOldval = {};
         $(document).on('change keyup paste', '.customize-repeater-input-textarea', function () {
-            console.log("on keyup textarea the whole stuff");
+            //console.log("on keyup textarea the whole stuff");
             
-            console.log(currentVal);
+            //console.log(currentVal);
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
 
-            console.log("oldval:");
-            console.log(textareaOldval);
+            //console.log("oldval:");
+            //console.log(textareaOldval);
 
             var currentVal = $(this).val();
-            console.log("currentval:");
-            console.log(currentVal);
+            //console.log("currentval:");
+            //console.log(currentVal);
             if(typeof textareaOldval[elementId] != undefined && currentVal == textareaOldval[elementId]) {
                 return; //check to prevent multiple simultaneous triggers
             }
@@ -472,15 +472,15 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             textareaOldval[elementId] = currentVal;
 
             if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
+                //console.log(elementData[elementId]);
                 var dataField = ($(this).attr('data-field'));
                 var dataType = ($(this).attr('data-type'));
                 if (dataType == 'textarea') {
-                    console.log("data type textarea");
+                    //console.log("data type textarea");
 
                     var newValue = $(this).val();
-                    console.log("value:");
-                    console.log(newValue);
+                    //console.log("value:");
+                    //console.log(newValue);
                     if (elementData[elementId]["elements"][dataField] == undefined) {
                         elementData[elementId]["elements"][dataField] = {}; 
                     }
@@ -496,7 +496,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             else {
                 console.log("something went wrong here!");
             }
-            console.log(elementData);
+            //console.log(elementData);
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -507,19 +507,19 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var custom_uploader;
 
         $(document).on('click', '.tikva-repeater-custom-upload-button', function(e) {
-            console.log("upload button pressed?");
+            //console.log("upload button pressed?");
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
-            console.log("elementId: " + elementId);
+            //console.log("elementId: " + elementId);
 
             if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
+                //console.log(elementData[elementId]);
                 var dataField = ($(this).parents('.attachment-media-view').attr('data-field'));
                 var dataType = ($(this).parents('.attachment-media-view').attr('data-type'));
-                console.log("dataField: ");
-                console.log(dataField);
-                console.log("dataType:");
-                console.log(dataType);
+                //console.log("dataField: ");
+                //console.log(dataField);
+                //console.log("dataType:");
+                //console.log(dataType);
                 /*    var newValue = $(this).val();
                     if (elementData[elementId]["elements"][dataField] == undefined) {
                         elementData[elementId]["elements"][dataField] = {}; 
@@ -536,7 +536,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             else {
                 console.log("elementData undefined!");
             }
-            console.log(elementData);
+            //console.log(elementData);
 
             e.preventDefault();
     
@@ -561,8 +561,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 //$('#setting_content_upload_test').val(attachment.url);
 
                
-                console.log("Mein Bild: ");
-                console.log(attachment.id);  
+                //console.log("Mein Bild: ");
+                //console.log(attachment.id);  
               
                 var payload = [];
                 payload['elementId'] = elementId;
@@ -576,8 +576,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 elementData[elementId]["elements"][dataField]['name'] = dataField;
                 elementData[elementId]["elements"][dataField]['value'] = attachment.id;
 
-                console.log("result?");
-                console.log(elementData[elementId]["elements"][dataField]);
+                //console.log("result?");
+                //console.log(elementData[elementId]["elements"][dataField]);
                 control.updateCurrentDataField(elementData);
                 control.displayRemoveButtons();
 
@@ -594,17 +594,17 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
 
         $(document).on('click', '.tikva-repeater-custom-remove-button', function(e) {
-            console.log("remove button pressed?");
+            //console.log("remove button pressed?");
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
-            console.log("elementId: " + elementId);
+            //console.log("elementId: " + elementId);
 
             var dataField = ($(this).parents('.attachment-media-view').attr('data-field'));
             var dataType = ($(this).parents('.attachment-media-view').attr('data-type'));
-            console.log("dataField: ");
-            console.log(dataField);
-            console.log("dataType:");
-            console.log(dataType);
+            //console.log("dataField: ");
+            //console.log(dataField);
+            //console.log("dataType:");
+            //console.log(dataType);
 
             mediaView.empty();
 
@@ -624,12 +624,12 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
          
          
          $(document).on('change', '.tikva-customize-repeater-input-checkbox', function () {
-            console.log("changed checkbox");
-            console.log(this.checked);
+            //console.log("changed checkbox");
+            //console.log(this.checked);
             
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
+                //console.log(elementData[elementId]);
                 var dataField = ($(this).attr('data-field'));
                 var dataType = ($(this).attr('data-type'));
               
@@ -649,7 +649,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             else {
                 console.log("something went wrong here!");
             }
-            console.log(elementData);
+            //console.log(elementData);
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -657,17 +657,17 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
 
         $(document).on('change', '.tikva-customize-repeater-input-radio', function () {
-            console.log("changed radio");
+            //console.log("changed radio");
             var radioName = $(this).attr('name');
             var newValue = $( "input[type=radio][name=" + radioName + " ]:checked" ).val();
-            console.log(newValue);
+            //console.log(newValue);
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
-                console.log(elementData[elementId]);
+                //console.log(elementData[elementId]);
                 var dataField = ($(this).parents('.customize-control-radio-container').attr('data-field'));
                 var dataType = ($(this).parents('.customize-control-radio-container').attr('data-type'));
-                console.log(dataField);
-                console.log(dataType);
+                //console.log(dataField);
+                //console.log(dataType);
                
                 if (elementData[elementId]["elements"][dataField] == undefined) {
                     elementData[elementId]["elements"][dataField] = {}; 
@@ -680,7 +680,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             else {
                 console.log("something went wrong here!");
             }
-            console.log(elementData);
+            //console.log(elementData);
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();

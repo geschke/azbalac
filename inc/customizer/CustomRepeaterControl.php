@@ -113,7 +113,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         if (! is_array( $json )) {
             $json = array( $values );
         }
-        
+      
         $this->json['value'] = $json;
         
     }
@@ -134,7 +134,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
-            //console.log(elementData);
+            console.log(elementData);
            
 
         } else {

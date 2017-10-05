@@ -82,13 +82,11 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         this.container.on( 'event_repeater_updated', function() {
             var dataField = $(control.container).find('.tikva_repeater_collector');
             var settingData = dataField.val();
-            //console.log("dataField Content vor set:");
-            //console.log(settingData);
+         
             control.setting.set( settingData );
             return true;
         });
     
-        console.log("VOR initRepeaterControl, sollte nur einmal aufgerufen werden");
         control.initRepeaterControl();
         
     },
@@ -118,8 +116,6 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
      */
     updateCurrentDataField: function(elementData) {
         var control = this;
-        console.log("elementdata in updateCurrentDataField");
-        console.log(elementData);
         var dataField = $(control.container).find('.tikva_repeater_collector');
         
         var dataFieldId = dataField.attr('id');
@@ -147,9 +143,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
             
         }
-        else {
+        /*else {
             console.log("something went wrong here!");
-        }
+        }*/
       
         control.updateCurrentDataField(elementData);
         control.displayRemoveButtons();
@@ -168,7 +164,6 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 });
                
             } else {
-                //console.log("selectField set empty");
                 $(selectField).children('option').removeAttr("selected");
             }
         });
@@ -215,9 +210,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             }
             
         }
-        else {
+        /*else {
             console.log("something went wrong here!");
-        }
+        }*/
       
         control.updateCurrentDataField(elementData);
         control.displayRemoveButtons();
@@ -340,8 +335,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             elementData[newId] = {
                 elements: {}
             };
-            console.log("hinzugefügt, elementdata ist:");
-            console.log(elementData);
+         
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
           
@@ -356,9 +350,6 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
          
             elementData = _.omit(elementData,removeId);
 
-            console.log("removed, elementData ist:");
-            console.log(elementData);
-            
             // todo: clear textareaOldval... maybe clear all temporary variables in another method?
 
             control.updateCurrentDataField(elementData);
@@ -384,9 +375,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 elementData[elementId]["elements"][dataField]['value'] = newValue;
                 
             }
-            else {
+            /*else {
                 console.log("something went wrong here!");
-            }
+            }*/
         
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -424,10 +415,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
 
             }
-            else {
+            /*else {
                 console.log("something went wrong here!");
-            }
-            //console.log(elementData);
+            }*/
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -543,10 +533,9 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 elementData[elementId]["elements"][dataField]['value'] = newValue;
 
             }
-            else {
+            /*else {
                 console.log("something went wrong here!");
-            }
-         
+            }*/
 
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
@@ -572,10 +561,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 elementData[elementId]["elements"][dataField]['value'] = newValue;
 
             }
-            else {
+            /*else {
                 console.log("something went wrong here!");
-            }
-         
+            }*/
+
             control.updateCurrentDataField(elementData);
             control.displayRemoveButtons();
             
@@ -586,38 +575,16 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         // initialize key events to handle select fields
        
         $(document).on('change', '.customize-repeater-input-select', function (event) {
-            console.log("in change vor Aufruf");
-            console.log(elementData);
-            console.log(event);
             control.onChangeSelectUpdate(event, $(this), elementData);
         });
        
         $(document).on('change', '.customize-repeater-input-dropdownpages', function (event) {
-            console.log("in change vor Aufruf");
-            console.log(elementData);
-            console.log(event);
             control.onChangeSelectUpdate(event, $(this), elementData);
         });
         
 
-    },
+    }
 
-
-
-    /**
-	 * Get the current value of the setting
-	 *
-	 * @return Object
-	 */
-/*	getValue: function() {
-        
-                'use strict';
-        
-                // The setting is saved in JSON
-                return JSON.parse( decodeURI( this.setting.get() ) );
-        
-            },
-*/
 
 } );
   

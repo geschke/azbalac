@@ -36,12 +36,20 @@ class Tikva_Section_Subfooter
      */
     public static function build()
     {
+        
         $footerActivate =  get_option('setting_subfooter_activate',1);
+       
         if (intval($footerActivate) !== 1) {
           return '';
         }
         $content = get_theme_mod('setting_subfooter_content');
-
+        if ($content === false) {
+            // no value in database, so the option is not overwritten, use default
+            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Tikva by <a href="https://www.geschke.net">Ralf Geschke</a>.','tikva');
+        }
+        if (!$content) {
+            return; // no output
+        }
         $styles = self::getStyles();
                ?>
 <div class="subfooter" style="<?php echo $styles['styleColorBg']; echo $styles['styleColorFg']; ?>">

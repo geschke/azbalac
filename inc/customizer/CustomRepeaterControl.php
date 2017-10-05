@@ -67,7 +67,9 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         }
     }
 
-    /*Enqueue resources for the control*/
+    /**
+     * Enqueue resources for the control
+     */
     public function enqueue()
     {
         //wp_enqueue_style( 'customizer-repeater-font-awesome', get_template_directory_uri().'/customizer-repeater/css/font-awesome.min.css','1.0.0' );
@@ -118,12 +120,17 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         
     }
 
-
+    /**
+    * This has to be empty to use underscore JavaScript templates
+    */
     protected function render_content()
     {
     }
 
 
+    /**
+    * Render customizer element content with Underscore's JavaScript template engine
+    */
     public function content_template()
     {
 

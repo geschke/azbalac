@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tikva v0.5.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tikva\n"
 "POT-Creation-Date: 2017-07-31 17:32+0000\n"
-"PO-Revision-Date: 2017-10-02 18:41:25+0000\n"
+"PO-Revision-Date: 2017-10-05 13:18:52+0000\n"
 "Last-Translator: geschke <ralf@kuerbis.org>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -281,51 +281,51 @@ msgstr "Header-Bild - Link zur Homepage"
 msgid "Toggle navigation"
 msgstr "Schalte Navigation"
 
-#: functions.php:220
+#: functions.php:218
 #@ tikva
 msgid "Sidebar 1"
 msgstr "Seitenleiste 1"
 
-#: functions.php:231
+#: functions.php:229
 #, php-format
 #@ tikva
 msgid "Footer Widget Area #%d"
 msgstr "Footer Widget Bereich #%d"
 
-#: functions.php:254
+#: functions.php:252
 #@ tikva
 msgid "Name*"
 msgstr "Name*"
 
-#: functions.php:257
+#: functions.php:255
 #@ tikva
 msgid "Email*"
 msgstr "E-Mail*"
 
-#: functions.php:260
+#: functions.php:258
 #@ tikva
 msgid "Website"
 msgstr "Website"
 
-#: functions.php:283
+#: functions.php:281
 #@ tikva
 msgctxt "label"
 msgid "Search for:"
 msgstr "Suche nach:"
 
-#: functions.php:284
+#: functions.php:282
 #@ tikva
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr "Suche &hellip;"
 
-#: functions.php:412
+#: functions.php:410
 #, php-format
 #@ tikva
 msgid "Page %s"
 msgstr "Seite %s"
 
-#: functions.php:428
+#: functions.php:426
 #@ tikva
 msgid "Header Menu"
 msgstr "Header Menu"
@@ -340,7 +340,7 @@ msgstr "Zurück"
 msgid "Next"
 msgstr "Vor"
 
-#: functions.php:718
+#: functions.php:716
 #, php-format
 #@ tikva
 msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
@@ -501,6 +501,7 @@ msgstr "Bild für Slider"
 
 #: inc/customizer/Customizer.php:177
 #: inc/customizer/Customizer.php:1200
+#: inc/customizer/Customizer.php:1202
 #@ tikva
 msgid "Title"
 msgstr "Titel"
@@ -1104,13 +1105,13 @@ msgstr "Über Tikva Theme"
 msgid "Feedback and Support"
 msgstr "Feedback und Support"
 
-#: functions.php:286
+#: functions.php:284
 #@ tikva
 msgid "Search"
 msgstr "Suche"
 
 #: inc/customizer/CustomRepeaterControl.php:84
-#: inc/customizer/CustomRepeaterControl.php:329
+#: inc/customizer/CustomRepeaterControl.php:325
 #@ tikva
 msgid "Select Image"
 msgstr "Wähle Bild"
@@ -1126,17 +1127,17 @@ msgid "Change Image"
 msgstr "Bild wechseln"
 
 #: inc/customizer/CustomRepeaterControl.php:87
-#: inc/customizer/CustomRepeaterControl.php:326
+#: inc/customizer/CustomRepeaterControl.php:322
 #@ tikva
 msgid "No image selected"
 msgstr "Kein Bild ausgewählt"
 
-#: inc/customizer/CustomRepeaterControl.php:341
+#: inc/customizer/CustomRepeaterControl.php:337
 #@ tikva
 msgid "Remove element"
 msgstr "Entferne Element"
 
-#: inc/customizer/CustomRepeaterControl.php:351
+#: inc/customizer/CustomRepeaterControl.php:347
 #@ tikva
 msgid "Add new element"
 msgstr "Element hinzufügen"
@@ -1187,6 +1188,7 @@ msgid "Pick a background color for the subfooter (default: transparent, i.e. use
 msgstr "Hintergrundfarbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:906
+#: inc/sections/SectionSubfooter.php:48
 #@ tikva
 msgid "Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Tikva by <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
 msgstr "Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme Tikva von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."

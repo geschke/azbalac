@@ -13,6 +13,7 @@ Version 0.5.0
 - More refactoring than ever before! Moved slider and social media button code into their own "section" classes, optimized HTML structure so every section is placed into its own container. This allows different background colors with 100% width. 
 - Fixed color setting of social media buttons
 - Fix: Don't show subtitle if title and subtitle disabled
+- Added live preview of some color settings
 - Created a new custom control element: Tikva_Custom_Repeater_Control. It is used to add a flexible number of elements in the introduction section. Currently it supports the following field types: text, textarea, radiobuttons, checkboxes, image, colorpicker, selections
 
 

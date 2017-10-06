@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tikva v0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-10-06 21:17:24+0000\n"
+"PO-Revision-Date: 2017-10-06 23:37:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -451,7 +451,7 @@ msgstr "Social-Media-Buttons anzeigen"
 #: inc/customizer/Customizer.php:406
 #@ tikva
 msgid "Enter the complete Snapchat page URL (please include http or https!)"
-msgstr "Gib deine Snapchat-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Snapchat-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:405
 #@ tikva
@@ -630,17 +630,17 @@ msgstr "Button-Position"
 #: inc/customizer/Customizer.php:465
 #@ tikva
 msgid "Set options of Social Media Buttons"
-msgstr "Setze Einstellungen der Social-Media-Buttons"
+msgstr "Einstellungen der Social-Media-Buttons setzen"
 
 #: inc/customizer/Customizer.php:464
 #@ tikva
 msgid "Social Media Buttons Options"
-msgstr "Social-Media-Button Einstellungen"
+msgstr "Social-Media-Buttons Einstellungen"
 
 #: inc/customizer/Customizer.php:456
 #@ tikva
 msgid "Configure URLs of your Social Media Buttons"
-msgstr "Konfiguriere URLs der Social-Media-Buttons"
+msgstr "URLs der Social-Media-Buttons konfigurieren"
 
 #: inc/customizer/Customizer.php:455
 #@ tikva
@@ -660,7 +660,7 @@ msgstr "Social-Media-Integration"
 #: inc/customizer/Customizer.php:422
 #@ tikva
 msgid "Enter the complete YouTube channel page URL (please include http or https!)"
-msgstr "Gib deine YouTube-Channel-URL an (bitte inkl. http oder https)"
+msgstr "YouTube-Channel-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:421
 #@ tikva
@@ -670,7 +670,7 @@ msgstr "YouTube"
 #: inc/customizer/Customizer.php:418
 #@ tikva
 msgid "Enter the complete Xing profile page URL (please include http or https!)"
-msgstr "Gib deine Xing-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Xing-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:417
 #@ tikva
@@ -680,7 +680,7 @@ msgstr "Xing"
 #: inc/customizer/Customizer.php:414
 #@ tikva
 msgid "Enter the complete Vine page URL (please include http or https!)"
-msgstr "Gib deine Vine-Seiten-URL an (bitte inkl. http oder https)"
+msgstr "Vine-Seiten-URL-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:413
 #@ tikva
@@ -690,27 +690,17 @@ msgstr "Vine"
 #: inc/customizer/Customizer.php:410
 #@ tikva
 msgid "Enter the Twitter profile page URL (please include http!)"
-msgstr "Gib deine Twitter-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Twitter-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:409
 #@ tikva
 msgid "Twitter"
 msgstr "Twitter"
 
-#: inc/customizer/Customizer.php:402
-#@ tikva
-msgid "Enter the complete Slideshare page URL (please include http or https!)"
-msgstr "Gib deine Slideshare-Seiten-URL an (bitte inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:401
-#@ tikva
-msgid "Slideshare"
-msgstr "Slideshare"
-
 #: inc/customizer/Customizer.php:398
 #@ tikva
 msgid "Enter the complete LinkedIn page URL (please include http or https!)"
-msgstr "Gib deine LinkedIn-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "LinkedIn-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:397
 #@ tikva
@@ -720,7 +710,7 @@ msgstr "LinkedIn"
 #: inc/customizer/Customizer.php:394
 #@ tikva
 msgid "Enter the complete Instagram page URL (please include http or https!)"
-msgstr "Gib deine Instagram-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Instagram-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:393
 #@ tikva
@@ -730,7 +720,7 @@ msgstr "Instagram"
 #: inc/customizer/Customizer.php:390
 #@ tikva
 msgid "Enter the complete Google+ page URL (please include http or https!)"
-msgstr "Gib deine Google+-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Google+--Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:389
 #@ tikva
@@ -740,7 +730,7 @@ msgstr "Google+"
 #: inc/customizer/Customizer.php:386
 #@ tikva
 msgid "Enter the complete GitHub profile page URL (please include http or https!)"
-msgstr "Gib deine GitHub-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "GitHub-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:385
 #@ tikva
@@ -750,7 +740,7 @@ msgstr "GitHub"
 #: inc/customizer/Customizer.php:382
 #@ tikva
 msgid "Enter the complete Facebook profile page URL (please include http or https!)"
-msgstr "Gib deine vollständige Facebook-Profilseiten-URL an (bitte inkl. http oder https)"
+msgstr "Facebook-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:381
 #@ tikva
@@ -1195,7 +1185,7 @@ msgstr "Einstellungen der Navigation"
 #: inc/customizer/Customizer.php:735
 #@ tikva
 msgid "Select your themes alternative color scheme."
-msgstr "Wähle alternative Farbschemata"
+msgstr "Alternative Farbschemata wählen"
 
 #: inc/customizer/Customizer.php:733
 #@ tikva
@@ -1226,111 +1216,121 @@ msgstr "Ralf Geschke"
 #: functions.php:284
 #@ tikva
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: inc/customizer/CustomRepeaterControl.php:89
 #: inc/customizer/CustomRepeaterControl.php:329
 #@ tikva
 msgid "No Image selected"
-msgstr ""
+msgstr "Kein Bild ausgewählt"
 
 #: inc/customizer/Customizer.php:233
 #@ tikva
 msgid "Link to Page"
-msgstr ""
+msgstr "Seite verlinken"
 
 #: inc/customizer/Customizer.php:244
 #@ tikva
 msgid "&hellip;or enter URL to link to"
-msgstr ""
+msgstr "&hellip;oder URL eingeben zur Verlinkung"
+
+#: inc/customizer/Customizer.php:401
+#@ tikva
+msgid "SlideShare"
+msgstr "SlideShare"
+
+#: inc/customizer/Customizer.php:402
+#@ tikva
+msgid "Enter the complete SlideShare page URL (please include http or https!)"
+msgstr "SlideShare-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:555
 #@ tikva
 msgid "Square (rounded corners)"
-msgstr ""
+msgstr "Quadratisch (abgerundete Ecken)"
 
 #: inc/customizer/Customizer.php:1101
 #@ tikva
 msgid "Show Lead Section"
-msgstr ""
+msgstr "Aufmacher-Bereich anzeigen"
 
 #: inc/customizer/Customizer.php:1133
 #@ tikva
 msgid "Section Title"
-msgstr ""
+msgstr "Bereichs-Titel"
 
 #: inc/customizer/Customizer.php:1143
 #@ tikva
 msgid "Subtitle"
-msgstr ""
+msgstr "Untertitel"
 
 #: inc/customizer/Customizer.php:1155
 #@ tikva
 msgid "Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr ""
+msgstr "Hintergrundfarbe für den Aufmacher-Bereich (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:1166
 #@ tikva
 msgid "Remove \"Read more\" Buttons"
-msgstr ""
+msgstr "„Weiterlesen“-Buttons entfernen"
 
 #: inc/customizer/Customizer.php:1191
 #@ tikva
 msgid "Lead Section Content"
-msgstr ""
+msgstr "Aufmacher-Bereich Inhalte"
 
 #: inc/customizer/Customizer.php:1192
 #@ tikva
 msgid "Add as many elements as you want."
-msgstr ""
+msgstr "Eine beliebige Anzahl von Elementen hinzufügen."
 
 #: inc/customizer/Customizer.php:1229
 #@ tikva
 msgid "Select Font Awesome Icon or&hellip;"
-msgstr ""
+msgstr "Font Awesome Icon auswählen oder&hellip;"
 
 #: inc/customizer/Customizer.php:1230
 #@ tikva
 msgid "Select Icon or&hellip;"
-msgstr ""
+msgstr "Icon auswählen oder&hellip;"
 
 #: inc/customizer/Customizer.php:1236
 #@ tikva
 msgid "&hellip;use Image"
-msgstr ""
+msgstr "&hellip;Bild verwenden"
 
 #: inc/customizer/Customizer.php:1238
 #@ tikva
 msgid "Use Image instead of Icon"
-msgstr ""
+msgstr "Bild anstatt eines Icons benutzen"
 
 #: inc/customizer/Customizer.php:1243
 #@ tikva
 msgid "Link to Page or&hellip;"
-msgstr ""
+msgstr "Mit einer Seite verlinken oder&hellip;"
 
 #: inc/customizer/Customizer.php:1248
 #@ tikva
 msgid "Link to Post or&hellip;"
-msgstr ""
+msgstr "Mit einem Beitrag verlinken oder&hellip;"
 
 #: inc/customizer/Customizer.php:1259
 #@ tikva
 msgid "Icon Color"
-msgstr ""
+msgstr "Icon-Farbe"
 
 #: inc/customizer/Customizer.php:1266
 #@ tikva
 msgid "Image Shape"
-msgstr ""
+msgstr "Bild-Kontur"
 
 #: inc/customizer/Customizer.php:1270
 #@ tikva
 msgid "Rounded Corners"
-msgstr ""
+msgstr "Runde Ecken"
 
 #: inc/customizer/Customizer.php:1273
 #@ tikva
 msgid "No Image Shape"
-msgstr ""
+msgstr "Keine Bild-Kontur"
 

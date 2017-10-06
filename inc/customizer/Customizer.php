@@ -204,7 +204,7 @@ class Tikva_Customizer
             'settings' => 'setting_slider_' . $slider . '_text_position',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Left)', 'tikva'),
+                '1' => __('Left', 'tikva'),
                 '2' => __('Center', 'tikva'),
                 '3' => __('Right', 'tikva')
             ),
@@ -230,7 +230,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_' . $slider . '_page', array(
-            'label' => __('Link to page', 'tikva'),
+            'label' => __('Link to Page', 'tikva'),
             'section' => 'section_slider_' . $slider,
             'type' => 'dropdown-pages',
             'settings' => 'setting_slider_' . $slider . '_page',
@@ -1152,7 +1152,7 @@ class Tikva_Customizer
         'label' => __('Section Background Color', 'tikva'),
         'section' => 'section_theme_options_intro_options',
         'settings' => 'setting_introduction_area_color_bg',
-        'description' => __('Pick a background color for the introduction section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        'description' => __('Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
         ));
 
         $wp_customize->add_setting('setting_introduction_area_readmore', array(
@@ -1163,7 +1163,7 @@ class Tikva_Customizer
          ));
   
          $wp_customize->add_control('control_introduction_area_readmore', array(
-            'label' => __('Remove "Read more" buttons', 'tikva'),
+            'label' => __('Remove "Read more" Buttons', 'tikva'),
             'section' => 'section_theme_options_intro_options',
             'settings' => 'setting_introduction_area_readmore',
             'type' => 'checkbox',
@@ -1188,8 +1188,8 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
-        'label'   => esc_html__('Lead area content', 'tikva'),
-        'description' => 'Add as many elements as you want.','tikva',
+        'label'   => esc_html__('Lead Section Content', 'tikva'),
+        'description' => esc_html__('Add as many elements as you want.','tikva'),
        
         'section' => 'section_theme_options_intro_content',
     //'priority' => 100,
@@ -1235,7 +1235,7 @@ class Tikva_Customizer
             'type'        => 'image',
             'label' => __('&hellip;use Image', 'tikva'),
             'mime_type' => 'image',
-            'description' => __('Use image instead of icon', 'tikva')
+            'description' => __('Use Image instead of Icon', 'tikva')
         ),
 
         'page' => array(
@@ -1263,14 +1263,14 @@ class Tikva_Customizer
 
         'image_shape' => array(
             'type'      => 'radiobutton',
-            'label' => __('Image shape', 'tikva'),
+            'label' => __('Image Shape', 'tikva'),
             'description' => __('Use image shape for uploaded image:', 'tikva'),
             'default' => '2',
             'choices' => array(
-                '1' => __('Rounded corners', 'tikva'),
+                '1' => __('Rounded Corners', 'tikva'),
                 '2' => __('Circle', 'tikva'),
                 '3' => __('Thumbnail', 'tikva'),
-                '4' => __('No image shape', 'tikva'),
+                '4' => __('No Image Shape', 'tikva'),
                 
             ),
         ),

@@ -73,7 +73,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
          * replace to change 'tikva' to the name of your theme in all
          * template files.
          */
-    
+
         load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
@@ -713,7 +713,7 @@ endif; // tikva_admin_notice
 
 
 function tikva_excerpt_more( $more ) {
-    return '...<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'tikva' ), get_the_title())  . '</a></p>';
+    return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'tikva' ), get_the_title())  . '</a></p>';
 }
 add_filter( 'excerpt_more', 'tikva_excerpt_more' );
 

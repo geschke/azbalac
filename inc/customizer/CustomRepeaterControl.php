@@ -86,7 +86,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
             'select_image' => esc_html__( 'Select Image', 'tikva' ),
             'remove' => esc_html__( 'Remove', 'tikva' ),
             'change_image' => esc_html__( 'Change Image', 'tikva' ),
-            'no_image_selected' => esc_html__( 'No image selected', 'tikva' ),
+            'no_image_selected' => esc_html__( 'No Image selected', 'tikva' ),
             'choose_image' => esc_html__( 'Choose Image', 'tikva' )
             
             
@@ -326,7 +326,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                     <div class="placeholder">
-                                    <?php esc_attr_e( 'No image selected', 'tikva' ); ?>
+                                    <?php esc_attr_e( 'No Image selected', 'tikva' ); ?>
                                     </div>
                                     <div class="actions">
                                          <button type="button" class="button tikva-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'tikva' ); ?></button>

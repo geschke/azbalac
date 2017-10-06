@@ -241,7 +241,7 @@ class Tikva_Customizer
             'sanitize_callback' => 'esc_url_raw')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_url', array(
-            'label' => __('...or enter URL to link to', 'tikva'),
+            'label' => __('&hellip;or enter URL to link to', 'tikva'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_url')
         );
@@ -552,7 +552,7 @@ class Tikva_Customizer
             'type' => 'radio',
             'choices' => array(
                 '1' => __('Circle', 'tikva'),
-                '2' => __('Square', 'tikva'),
+                '2' => __('Square (rounded corners)', 'tikva'),
             ),
         ));
 
@@ -1098,7 +1098,7 @@ class Tikva_Customizer
         ));
  
         $wp_customize->add_control('control_introduction_area_activate', array(
-           'label' => __('Show lead section', 'tikva'),
+           'label' => __('Show Lead Section', 'tikva'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_activate',
            'type' => 'checkbox',
@@ -1130,7 +1130,7 @@ class Tikva_Customizer
            'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_introduction_area_title', array(
-           'label' => __('Section title', 'tikva'),
+           'label' => __('Section Title', 'tikva'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_title')
         );
@@ -1140,7 +1140,7 @@ class Tikva_Customizer
            'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_introduction_area_subtitle', array(
-           'label' => __('Section subtitle', 'tikva'),
+           'label' => __('Subtitle', 'tikva'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_subtitle')
         );
@@ -1226,26 +1226,26 @@ class Tikva_Customizer
         ),
         'icon' => array(
             'type'        => 'select',
-            'label'       =>  __('Select Font Awesome Icon or...', 'tikva'),
-            'description' => __('Select icon or...', 'tikva'),
+            'label'       =>  __('Select Font Awesome Icon or&hellip;', 'tikva'),
+            'description' => __('Select Icon or&hellip;', 'tikva'),
             'choices' => $this->getFaIcons(),
             //'default' => 'fa-car'
         ),
         'image' => array(
             'type'        => 'image',
-            'label' => __('...use image', 'tikva'),
+            'label' => __('&hellip;use Image', 'tikva'),
             'mime_type' => 'image',
             'description' => __('Use image instead of icon', 'tikva')
         ),
 
         'page' => array(
             'type'        => 'dropdown-pages',
-            'label'       =>  __('Link to page or...', 'tikva'),
+            'label'       =>  __('Link to Page or&hellip;', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
         'post' => array(
             'type'        => 'dropdown-pages',
-            'label'       =>  __('Link to Post or...', 'tikva'),
+            'label'       =>  __('Link to Post or&hellip;', 'tikva'),
             'choices' => Tikva_Custom_Repeater_Helper::getPostDropdownOptions()
         ),
         'url' => array(
@@ -1256,7 +1256,7 @@ class Tikva_Customizer
         ),
         'color_icon' => array(
             'type'        => 'colorpicker',
-            'label'       => esc_attr__( 'Icon color', 'tikva' ),
+            'label'       => esc_attr__( 'Icon Color', 'tikva' ),
             //'description' => esc_attr__( 'Description of background color', 'tikva' ),
             //'default'     => '#000000',
         ),
@@ -1279,7 +1279,7 @@ class Tikva_Customizer
 
         'setting_content_area_image' => array(
             'type'        => 'image',
-            'label' => __('...use image', 'tikva'),
+            'label' => __('&hellip;use image', 'tikva'),
             'mime_type' => 'image',
             'description' => __('Image displayed on section background', 'tikva')
         ),

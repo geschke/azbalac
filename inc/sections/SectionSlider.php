@@ -94,7 +94,7 @@ class Tikva_Section_Slider
             if ($sliderUrl) {
                 echo '<a href="' . $sliderUrl . '">';
             }
-            echo '<img src="' . $sliderElement['image'][0] .'" alt="...">';
+            echo '<img src="' . $sliderElement['image'][0] .'" alt="&hellip;">';
             if ($sliderUrl) {
                 echo '</a>';
             }

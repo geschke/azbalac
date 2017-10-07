@@ -2,10 +2,13 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.5.0
+Version 0.5.1
 
 
 ## Version history:
+
+Version 0.5.1
+- Translation and language fixes
 
 Version 0.5.0
 - New feature: Added an "Lead Section". This is a special frontpage area as seen in other themes to link to pages, blog entries or external URLs and show some information (fontawesome icon or image, title, description). You can add a maximum of 12 element columns (based on the 12-column Bootstrap framework).

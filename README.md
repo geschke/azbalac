@@ -2,10 +2,13 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.5.1
+Version 0.5.2
 
 
 ## Version history:
+
+Version 0.5.2
+- Fixed problem with ampersand in page titles in function which builds page array
 
 Version 0.5.1
 - Translation and language fixes

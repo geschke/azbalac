@@ -38,6 +38,7 @@ class Tikva_Customizer
         $this->addCustomizerColors($wp_customize);
 
         $this->addCustomizerGeneralSettings($wp_customize);
+        $this->addCustomizerTypographySettings($wp_customize);
         $this->addCustomizerPostsSettings($wp_customize);
         $this->addCustomizerIntroductionSectionOptions($wp_customize);
         $this->addCustomizerIntroductionSectionContent($wp_customize);
@@ -66,7 +67,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_section('section_theme_options_general', array(
-            'priority' => 10,
+            'priority' => 100,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('General Settings', 'tikva'),
@@ -74,16 +75,17 @@ class Tikva_Customizer
             'panel' => 'panel_theme_options',
         ));
 
-        $wp_customize->add_section('section_header_image_options', array(
-            'priority' => 15,
+        $wp_customize->add_section('section_theme_options_typography', array(
+            'priority' => 200, 
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Header Image Options', 'tikva'),
+            'title' => __('Typography Settings', 'tikva'),
+            'description' => __('Edit typography settings:  fonts settings of title and body elements.', 'tikva'),
             'panel' => 'panel_theme_options',
         ));
 
         $wp_customize->add_section('section_theme_options_home', array(
-            'priority' => 10,
+            'priority' => 390,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Home Options', 'tikva'),
@@ -91,8 +93,25 @@ class Tikva_Customizer
             'panel' => 'panel_theme_options',
         ));
 
+        $wp_customize->add_section('section_header_image_options', array(
+            'priority' => 400,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Header Image Options', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_posts', array(
+            'priority' => 500,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Posts Settings', 'tikva'),
+            'description' => __('Edit posts settings', 'tikva'),
+            'panel' => 'panel_theme_options',
+        ));
+
         $wp_customize->add_section('section_theme_options_intro_options', array(
-            'priority' => 10,
+            'priority' => 600,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Lead Area Options', 'tikva'),
@@ -101,7 +120,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_section('section_theme_options_intro_content', array(
-            'priority' => 11,
+            'priority' => 700,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Lead Area Content', 'tikva'),
@@ -109,17 +128,9 @@ class Tikva_Customizer
             'panel' => 'panel_theme_options',
         ));
 
-        $wp_customize->add_section('section_theme_options_posts', array(
-            'priority' => 20,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Posts Settings', 'tikva'),
-            'description' => __('Edit posts settings', 'tikva'),
-            'panel' => 'panel_theme_options',
-        ));
-
+     
         $wp_customize->add_section('section_theme_options_footer', array(
-            'priority' => 30,
+            'priority' => 800,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Footer Options', 'tikva'),
@@ -128,7 +139,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_section('section_theme_options_subfooter', array(
-            'priority' => 40,
+            'priority' => 900,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Subfooter Options', 'tikva'),
@@ -772,6 +783,55 @@ class Tikva_Customizer
                 'inverse' => __('Inverse', 'tikva'),
             ),
         ));
+    }
+
+
+  /**
+     * Add Typography options to Customizer
+     *
+     * @param type $wp_customize
+     */
+    public function addCustomizerTypographySettings($wp_customize)
+    {
+
+
+        $wp_customize->add_setting('tikva_layout2', array(
+            'default' => '2',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeLayout')
+        ));
+
+        $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout2', array(
+            'label' => __('Layout', 'tikva'),
+            'description' => __('Set layout of your site.', 'tikva'),
+            'section' => 'section_theme_options_typography',
+            'settings' => 'tikva_layout2',
+            'choices' => array(
+                '1' => get_template_directory_uri() . '/images/admin/1c.png',
+                '2' => get_template_directory_uri() . '/images/admin/2cl.png',
+                '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+            )
+        )));
+
+
+        $wp_customize->add_setting('tikva_stylesheet2', array(
+            'default' => 'slate_accessibility_ready.min.css',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeStylesheet')
+        ));
+
+        $wp_customize->add_control('tikva_stylesheet2', array(
+            'settings' => 'tikva_stylesheet2',
+            'label' => __('Theme Stylesheet', 'tikva'),
+            'section' => 'section_theme_options_typography',
+            'description' => __('Select your themes alternative color scheme.', 'tikva'),
+            'type' => 'select',
+            'choices' => $this->getAvailableStylesheets()
+        ));
+
+     
     }
 
     /**

@@ -794,42 +794,27 @@ class Tikva_Customizer
     public function addCustomizerTypographySettings($wp_customize)
     {
 
-
-        $wp_customize->add_setting('tikva_layout2', array(
-            'default' => '2',
+       $wp_customize->add_setting('setting_typography_headline', array(
             'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeLayout')
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
         ));
 
-        $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout2', array(
-            'label' => __('Layout', 'tikva'),
-            'description' => __('Set layout of your site.', 'tikva'),
+        $wp_customize->add_control(new Tikva_Custom_Font_Control($wp_customize, 
+        'control_typography_headline', array(
+            'label' => __('Headline Font', 'tikva'),
+            'description' => __('Set font of headlines', 'tikva'),
             'section' => 'section_theme_options_typography',
-            'settings' => 'tikva_layout2',
-            'choices' => array(
-                '1' => get_template_directory_uri() . '/images/admin/1c.png',
-                '2' => get_template_directory_uri() . '/images/admin/2cl.png',
-                '3' => get_template_directory_uri() . '/images/admin/2cr.png',
-            )
+            'settings' => 'setting_typography_headline'
+            //'choices' => array(
+            //    '1' => get_template_directory_uri() . '/images/admin/1c.png',
+            //    '2' => get_template_directory_uri() . '/images/admin/2cl.png',
+            //    '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+            //)
         )));
 
 
-        $wp_customize->add_setting('tikva_stylesheet2', array(
-            'default' => 'slate_accessibility_ready.min.css',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeStylesheet')
-        ));
-
-        $wp_customize->add_control('tikva_stylesheet2', array(
-            'settings' => 'tikva_stylesheet2',
-            'label' => __('Theme Stylesheet', 'tikva'),
-            'section' => 'section_theme_options_typography',
-            'description' => __('Select your themes alternative color scheme.', 'tikva'),
-            'type' => 'select',
-            'choices' => $this->getAvailableStylesheets()
-        ));
+    
 
      
     }

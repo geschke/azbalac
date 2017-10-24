@@ -71,7 +71,7 @@ function uuidv4() {
 (function ($) {
 
    
-wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
+wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
 
     
 
@@ -79,15 +79,15 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         var control = this;
         //this.elementData = {};
 
-        this.container.on( 'event_repeater_updated', function() {
-            var dataField = $(control.container).find('.tikva_repeater_collector');
+        this.container.on( 'event_font_updated', function() {
+            var dataField = $(control.container).find('.tikva_font_collector');
             var settingData = dataField.val();
          
             control.setting.set( settingData );
             return true;
         });
     
-        control.initRepeaterControl();
+       // control.initFontControl();
         
     },
 
@@ -220,39 +220,16 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
     },
 
 
-    initRepeaterControl: function() {
+    initFontControl: function() {
         var control = this;
         var elementData = {};
 
-        var colorPickerOptions = {
-            // a callback to fire whenever the color changes to a valid color
-            change: function(event, ui){
-                var element = event.target;
-                var color = ui.color.toString();
-             
-                control.updateCurrentTextField(element, elementData, color);
-            },
-            // a callback to fire when the input is emptied or an invalid color
-            clear: function(event) {
-                var element = jQuery(event.target).siblings('.wp-color-picker')[0];
-                var color = '';
-        
-                if (element) {
-                    var color = '';
-                    control.updateCurrentTextField(element, elementData, color);
-    
-                }
-            
-            }
-        };
        
+        console.log("in initFontControl");
+        var element = $(this.container).find('.customize-control-font-element');
 
-        control.displayRemoveButtons();
-
-        //console.log("in initRepeaterControl");
-        var element = $(this.container).find('.customize-control-repeater-element');
-
-     
+     console.log(element);
+   
         // first initialization
         if (element.length > 1) {
             // preinitialized elements available?
@@ -261,9 +238,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         
         } 
        
-        var prevValue = $(control.container).find('.tikva_repeater_collector').val();
-
-        if (typeof prevValue != 'undefined' && prevValue != '') {
+        var prevValue = $(control.container).find('.tikva_font_collector').val();
+     console.log(prevValue);
+     return;
+        if (prevValue != '') {
             elementData = JSON.parse(decodeURI(prevValue));
           
         } else {
@@ -273,7 +251,8 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             };
         }
 
-       
+        /////////////////////////
+       return;
       
         // initialize button events
         var newButton = $(this.container).find('.customize-repeater-new-field');

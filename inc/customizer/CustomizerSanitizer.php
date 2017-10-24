@@ -192,4 +192,22 @@ class Tikva_Customizer_Sanitizer
         return json_encode($input_decoded);
         
     }
+
+
+    public function sanitizeFont($input)
+    {
+        return $input;
+/*        $input_decoded = json_decode($input, true);
+       
+        if (empty($input_decoded)) {
+            return $input;
+        }
+        foreach ($input_decoded as $boxk => $box) {
+            foreach ($box as $key => $value) {
+                $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+            }
+        }
+        return json_encode($input_decoded);
+ */       
+    }
 }

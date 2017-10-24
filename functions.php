@@ -15,6 +15,7 @@ require_once( get_template_directory() . '/inc/customizer/CustomRadioImageContro
 require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterHelper.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
+require_once( get_template_directory() . '/inc/customizer/CustomFontControl.php' );
 
 
 require_once( get_template_directory() . '/inc/customizer/CustomizerSanitizer.php' );
@@ -129,7 +130,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         add_action( 'admin_enqueue_scripts', 'tikva_admin_enqueue_scripts' );
         
-        add_action( 'customize_register', 'tikva_register_customizer_repeater' );
+        add_action( 'customize_register', 'tikva_register_customize_javascript_template_types' );
         
 
         // Initialize Customizer after all custom controls are loaded
@@ -144,15 +145,16 @@ add_action( 'after_setup_theme', 'tikva_setup' );
 /**
  * Make call to register_control_type to enable underscore JavaScript template integration
 */
-if (! function_exists('tikva_register_customize_repeater')) :
+if (! function_exists('tikva_register_customize_javascript_template_types')) :
 
-    function tikva_register_customizer_repeater($wp_customize)
+    function tikva_register_customize_javascript_template_types($wp_customize)
     {
         // Load our custom control.
         //require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 
         // Register the control type.
         $wp_customize->register_control_type( 'Tikva_Custom_Repeater_Control' );
+        $wp_customize->register_control_type( 'Tikva_Custom_Font_Control' );
     }
 
 endif;

@@ -814,7 +814,24 @@ class Tikva_Customizer
         )));
 
 
-    
+        $wp_customize->add_setting('setting_typography_body', array(
+            'capability' => 'edit_theme_options',
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+        ));
+
+        $wp_customize->add_control(new Tikva_Custom_Font_Control($wp_customize, 
+        'control_typography_body', array(
+            'label' => __('Body Font', 'tikva'),
+            'description' => __('Set font of body content', 'tikva'),
+            'section' => 'section_theme_options_typography',
+            'settings' => 'setting_typography_body'
+            //'choices' => array(
+            //    '1' => get_template_directory_uri() . '/images/admin/1c.png',
+            //    '2' => get_template_directory_uri() . '/images/admin/2cl.png',
+            //    '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+            //)
+        )));
 
      
     }

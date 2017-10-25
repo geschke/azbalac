@@ -109,6 +109,23 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
             $json = array( $values );
         }
       
+        // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
+        $fonts =  array(0 =>  __( '&mdash; Select &mdash;', 'tikva' ));
+        $fonts[1] = 'Georgia, serif';
+        $fonts[2] = '"Palatino Linotype", "Book Antiqua", Palatino, serif"';
+        $fonts[3] = '"Times New Roman", Times, serif';
+        $fonts[4] = 'Arial, Helvetica, sans-serif';
+        $fonts[5] = '"Arial Black", Gadget, sans-serif';
+        $fonts[6] = '"Comic Sans MS", cursive, sans-serif';
+        $fonts[7] = 'Impact, Charcoal, sans-serif';
+        $fonts[8] = '"Lucida Sans Unicode", "Lucida Grande", sans-serif';
+        $fonts[9] = 'Tahoma, Geneva, sans-serif';
+        $fonts[10] = '"Trebuchet MS", Helvetica, sans-serif';
+        $fonts[11] = 'Verdana, Geneva, sans-serif';
+        $fonts[12] = '"Courier New", Courier, monospace';
+        $fonts[13] = '"Lucida Console", Monaco, monospace';
+
+        $this->json['choices'] = $fonts;
         $this->json['value'] = $json;
       
     }
@@ -133,17 +150,17 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         <#
         console.log("in content_template");
         console.log(data);
-/*        if (data.value && data.value[0] != "") {
+        console.log(data.choices);
+        if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
             
 
         } else {
             // initialize empty elements with dummy data
-            var newElementId = uuidv4();
             var elementData = {};
-            elementData[newElementId] = true;
-        }*/
+           elementData['font'] = 0;
+        }
         #>
 		<div class="customize-control-font-element-container">
 
@@ -157,12 +174,48 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
 					<# } #>
 						
             </label>
-                
-           
+            
+            <div class="customize-control-font-element" id="{{{ data.settings.default }}}">
+				
+			    <div class="font-row-content">
 			
+                    <div class="font-row-field">
+                    <#
+                    var selectValue = '';
+                    console.log("vor select");
+                    console.log(elementData);
+
+                    if (typeof elementData.font != 'undefined') {
+                        selectValue = elementData.font;
+                    } else { 
+                        selectValue = 0; 
+                    }
+                    console.log("Bestimmung selectValue:");
+                    console.log(selectValue);
+                    #>
+                    <select class="customize-font-input-select" data-field="{{{ name }}}" data-default="{{{ data.default }}}" data-customize-setting-link="{{{ name }}}">
+                    <# var selectString = '';
+                        _.each(data.choices, function(choiceOption, choiceValue) {
+                        
+                        // console.log(choiceValue);
+                        // console.log(choiceOption);
+                        selectString = '';
+                        if (choiceValue == selectValue) {
+                            selectString = 'selected="selected"';
+                        }
+                        #>
+                        <option {{{ selectString }}} value="{{{ choiceValue }}}"  >{{{ choiceOption }}}</option>
+                    <#
+                    });    
+                    #>
+                    </select>
+
+                    </div>
+                </div>
+            </div>    
 		
 		</div>
-        <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.section }}}" name="tikva_font_{{{ data.section }}}"/>
+        <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.settings.default }}}" name="tikva_font_{{{ data.settings.default }}}"/>
        
         <?php
     }

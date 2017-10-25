@@ -805,12 +805,9 @@ class Tikva_Customizer
             'label' => __('Headline Font', 'tikva'),
             'description' => __('Set font of headlines', 'tikva'),
             'section' => 'section_theme_options_typography',
-            'settings' => 'setting_typography_headline'
-            //'choices' => array(
-            //    '1' => get_template_directory_uri() . '/images/admin/1c.png',
-            //    '2' => get_template_directory_uri() . '/images/admin/2cl.png',
-            //    '3' => get_template_directory_uri() . '/images/admin/2cr.png',
-            //)
+            'settings' => 'setting_typography_headline',
+            'default' => Tikva_Custom_Font_Control::LALA[0]
+         
         )));
 
 
@@ -826,14 +823,10 @@ class Tikva_Customizer
             'description' => __('Set font of body content', 'tikva'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_body'
-            //'choices' => array(
-            //    '1' => get_template_directory_uri() . '/images/admin/1c.png',
-            //    '2' => get_template_directory_uri() . '/images/admin/2cl.png',
-            //    '3' => get_template_directory_uri() . '/images/admin/2cr.png',
-            //)
+           
         )));
 
-     
+
     }
 
     /**

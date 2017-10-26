@@ -16,7 +16,7 @@ require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.ph
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterHelper.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomFontControl.php' );
-
+$tikvaGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
 
 require_once( get_template_directory() . '/inc/customizer/CustomizerSanitizer.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' );

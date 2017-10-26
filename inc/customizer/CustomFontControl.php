@@ -115,25 +115,52 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         }
     
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
-        $fonts =  array(0 =>  __( '&mdash; Select &mdash;', 'tikva' ));
-        $fonts[1] = self::FONT_01;
-        $fonts[2] = '"Palatino Linotype", "Book Antiqua", Palatino, serif"';
-        $fonts[3] = '"Times New Roman", Times, serif';
-        $fonts[4] = 'Arial, Helvetica, sans-serif';
-        $fonts[5] = '"Arial Black", Gadget, sans-serif';
-        $fonts[6] = '"Comic Sans MS", cursive, sans-serif';
-        $fonts[7] = 'Impact, Charcoal, sans-serif';
-        $fonts[8] = '"Lucida Sans Unicode", "Lucida Grande", sans-serif';
-        $fonts[9] = 'Tahoma, Geneva, sans-serif';
-        $fonts[10] = '"Trebuchet MS", Helvetica, sans-serif';
-        $fonts[11] = 'Verdana, Geneva, sans-serif';
-        $fonts[12] = '"Courier New", Courier, monospace';
-        $fonts[13] = '"Lucida Console", Monaco, monospace';
+        $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'tikva' ));
+        $fonts[] = array('c' => 'optgroup_start', 'v' => 'Serif Fonts');
+        $fonts[] = array('k' => 1, 'v' => 'Georgia, serif');
+        $fonts[] = array('k' => 2, 'v' => '"Palatino Linotype", "Book Antiqua", Palatino, serif"');
+        $fonts[] = array('k' => 3, 'v' => '"Times New Roman", Times, serif');
+        $fonts[] = array('c' => 'optgroup_end');
+
+        $fonts[] = array('c' => 'optgroup_start', 'v' => 'Sans Serif Fonts');
+        $fonts[] = array('k' => 10, 'v' => 'Arial, Helvetica, sans-serif');
+        $fonts[] = array('k' => 11, 'v' => '"Arial Black", Gadget, sans-serif');
+        $fonts[] = array('k' => 12, 'v' => '"Comic Sans MS", cursive, sans-serif');
+        $fonts[] = array('k' => 13, 'v' => 'Impact, Charcoal, sans-serif');
+        $fonts[] = array('k' => 14, 'v' => '"Lucida Sans Unicode", "Lucida Grande", sans-serif');
+        $fonts[] = array('k' => 15, 'v' => 'Tahoma, Geneva, sans-serif');
+        $fonts[] = array('k' => 16, 'v' => '"Trebuchet MS", Helvetica, sans-serif');
+        $fonts[] = array('k' => 17, 'v' => 'Verdana, Geneva, sans-serif');
+        $fonts[] = array('c' => 'optgroup_end');
+
+        $fonts[] = array('c' => 'optgroup_start', 'v' => 'Monospace Fonts');
+        $fonts[] = array('k' => 30, 'v' => '"Courier New", Courier, monospace');
+        $fonts[] = array('k' => 31, 'v' => '"Lucida Console", Monaco, monospace');
+        
+        $fonts[] = array('c' => 'optgroup_end');
+        
+    
+        
+        $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+       // print_r($gglfonts);
+        $x = $gglfonts['items'];
+        //print_r($x);
+        $cnt = count($x);
+      
+        $fonts[] = array('c' => 'optgroup_start', 'v' => 'Google Webfonts');
+        
+         foreach ($x as $item) {
+            $fonts[] = array('k' => $item['family'], 'v' => $item['family']);
+         
+        }
+        $fonts[] = array('c' => 'optgroup_end');
+        
+      
 
         // add font choices to json array
         $this->json['choices'] = $fonts;
         $this->json['value'] = $json;
-      
+    
     }
 
     /**
@@ -204,12 +231,29 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                         _.each(data.choices, function(choiceOption, choiceValue) {
                         
                         selectString = '';
-                        if (choiceValue == selectValue) {
-                            selectString = 'selected="selected"';
+
+                        if (typeof choiceOption.c != 'undefined') { // command mode
+                            if (choiceOption.c == 'optgroup_start') {
+                                #>
+                            <optgroup label="{{{ choiceOption.v }}}">
+                            <#
+                            } 
+                            if (choiceOption.c == 'optgroup_end') {
+                            #>
+                            </optgroup>
+                            <#
+                            }
+                            
+
+                        } else { // value mode
+                            if (choiceOption.k == selectValue) {
+                                selectString = 'selected="selected"';
+                            }
+                            #>
+                            <option {{{ selectString }}} value="{{{ choiceOption.k }}}"  >{{{ choiceOption.v }}}</option>
+                            <#
                         }
-                        #>
-                        <option {{{ selectString }}} value="{{{ choiceValue }}}"  >{{{ choiceOption }}}</option>
-                    <#
+                        
                     });    
                     #>
                     </select>

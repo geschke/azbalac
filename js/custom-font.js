@@ -72,6 +72,19 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
                 
     },
 
+    onChangeSizeUpdate: function( event, element, elementData, newValue ) {
+        var control = this;
+        console.log("in onChangeSizeUpdate");
+        elementId = element.parents('.customize-control-font-element').attr('id');
+       
+        elementData['size'] = newValue;
+        console.log("fontsize:");
+        console.log(elementData);
+        
+        control.updateCurrentDataField(elementData, element);
+                
+    },
+
 
     initFontControl: function() {
         var control = this;
@@ -81,6 +94,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         console.log("in initFontControl");
         var element = $(this.container).find('.customize-control-font-element');
 
+        var elementId = element.attr('id');
        
         var prevValue = $(control.container).find('.tikva_font_collector').val();
      
@@ -94,6 +108,23 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         $(this.container).on('change', '.customize-font-input-select', function (event) {
             control.onChangeSelectUpdate(event, $(this), elementData);
         });
+
+        var sizeDefault = 16;
+        if (typeof elementData['size'] != 'undefined') {
+            sizeDefault = elementData['size'];
+        } 
+
+        $('[id="slider_size_' + elementId + '"]').slider({
+            value: sizeDefault, min: 2, max: 120, step: 1,
+            slide: function (event, ui) {
+                $('[id="input_size_' + elementId + '"]').val(ui.value).keyup();
+                
+                control.onChangeSizeUpdate(event, $(this), elementData, ui.value);
+                
+            }
+        });
+        $('[id="input_size_' + elementId + '"]').val($('[id="slider_size_' + elementId + '"]').slider("value"));
+  
        
      
     }

@@ -88,11 +88,23 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
      */
     public function enqueue()
     {
-      
+        global $wp_scripts;
+
 		wp_enqueue_script( 'customizer-font-script', get_template_directory_uri().'/js/custom-font.js', array( 'jquery'), '', true );
 
         wp_enqueue_script('underscore');
-		
+        wp_enqueue_script('jquery-ui');
+        wp_enqueue_script('jquery-ui-slider');
+        
+        // taken from: https://snippets.webaware.com.au/snippets/load-a-nice-jquery-ui-theme-in-wordpress/
+        $ui = $wp_scripts->query('jquery-ui-core');
+        
+        // tell WordPress to load the Smoothness theme from Google CDN
+
+        $protocol = is_ssl() ? 'https' : 'http';
+        $url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
+        wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
+
     }
 
 
@@ -232,18 +244,18 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                         
                         selectString = '';
 
+
                         if (typeof choiceOption.c != 'undefined') { // command mode
                             if (choiceOption.c == 'optgroup_start') {
                                 #>
-                            <optgroup label="{{{ choiceOption.v }}}">
-                            <#
+                                <optgroup label="{{{ choiceOption.v }}}">
+                                <#
                             } 
                             if (choiceOption.c == 'optgroup_end') {
-                            #>
-                            </optgroup>
-                            <#
+                                #>
+                                </optgroup>
+                                <#
                             }
-                            
 
                         } else { // value mode
                             if (choiceOption.k == selectValue) {
@@ -260,11 +272,34 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
 
                     </div>
                 </div>
+         
+	  
+            <label>
+
+                <span class="customize-control-title">
+            <?php
+            // The label has already been sanitized in the Fields class, no need to re-sanitize it.
+            ?>
+                    <?php echo __('Font Size','tikva'); ?>
+                    
+                        <span class="description customize-control-description"><?php echo $this->description; ?></span>
+                    
+                </span>
+
+                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
+
+            </label>
+
+            <div style="padding-top: 10px;">
+                    <div  id="slider_size_{{{ data.identifier }}}"></div>
+            </div>
+
+            <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.identifier }}}" name="tikva_font_{{{ data.identifier }}}"/>
+        
             </div>    
 		
-		</div>
-        <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.identifier }}}" name="tikva_font_{{{ data.identifier }}}"/>
-       
+        </div>
+    
         <?php
     }
 

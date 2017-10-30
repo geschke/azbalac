@@ -29,8 +29,8 @@ class Tikva_Custom_Font_List
 
     );
 
-    const DEFAULT_SIZE = array('body' => 16,
-        'headline' => 20
+    const DEFAULT_SIZE = array('body' => 14,
+        'headline' => 14
     );
     // todo: set default values by initializing Tikva_Custom_Font_Control
 }

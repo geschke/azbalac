@@ -54,6 +54,7 @@ $navbarFixed = tikva_get_navbar_layout();
         }
 
         Tikva_Section_Subfooter::buildStyles();
+        Tikva_Section_Font::buildStyles();
        ?>
 
         <?php 

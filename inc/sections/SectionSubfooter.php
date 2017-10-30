@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implements Footer functionality.
+ * Implements Subfooter functionality.
  *
  * @package   WordPress
  * @subpackage tikva

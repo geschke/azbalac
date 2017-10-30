@@ -1,5 +1,40 @@
 <?php
 
+/**
+ * Default Font list as constant array
+ *
+ * @package     Tikva Controls
+ * @subpackage  Controls
+ * @copyright   Copyright (c) 2017, Ralf Geschke
+ * @license     https://opensource.org/licenses/MIT
+ * @since       0.5.3
+ */
+class Tikva_Custom_Font_List
+{
+    const FONTS = array(
+        '1' => 'Georgia, serif',
+        '2' => '"Palatino Linotype", "Book Antiqua", Palatino, serif',
+        '3' => '"Times New Roman", Times, serif',
+        '10' => 'Arial, Helvetica, sans-serif',
+        '11' => '"Arial Black", Gadget, sans-serif',
+        '12' => '"Comic Sans MS", cursive, sans-serif',
+        '13' => 'Impact, Charcoal, sans-serif',
+        '14' => '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
+        '15' => 'Tahoma, Geneva, sans-serif',
+        '16' => '"Trebuchet MS", Helvetica, sans-serif',
+        '17' => 'Verdana, Geneva, sans-serif',
+        '30' => '"Courier New", Courier, monospace',
+        '31' => '"Lucida Console", Monaco, monospace'
+      
+
+    );
+
+    const DEFAULT_SIZE = array('body' => 16,
+        'headline' => 20
+    );
+    // todo: set default values by initializing Tikva_Custom_Font_Control
+}
+
 if (! class_exists( 'WP_Customize_Control' )) {
     return null;
 }
@@ -10,28 +45,14 @@ if (! class_exists( 'WP_Customize_Control' )) {
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
- * @since       2.0
+ * @since       0.5.3
  */
 class Tikva_Custom_Font_Control extends WP_Customize_Control
 {
 
 
-    const FONT_01 = 'Georgia, serif';
-    const FOMT_02 ='"Palatino Linotype", "Book Antiqua", Palatino, serif"';
-    const LALA = array(1,'lala');
-    /*
-    $fonts[3] = '"Times New Roman", Times, serif';
-    $fonts[4] = 'Arial, Helvetica, sans-serif';
-    $fonts[5] = '"Arial Black", Gadget, sans-serif';
-    $fonts[6] = '"Comic Sans MS", cursive, sans-serif';
-    $fonts[7] = 'Impact, Charcoal, sans-serif';
-    $fonts[8] = '"Lucida Sans Unicode", "Lucida Grande", sans-serif';
-    $fonts[9] = 'Tahoma, Geneva, sans-serif';
-    $fonts[10] = '"Trebuchet MS", Helvetica, sans-serif';
-    $fonts[11] = 'Verdana, Geneva, sans-serif';
-    $fonts[12] = '"Courier New", Courier, monospace';
-    $fonts[13] = '"Lucida Console", Monaco, monospace';
-*/
+    
+   
     /**
     * Define the control type
     */
@@ -65,7 +86,9 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
     
     public $id;
 
-    /*Class constructor*/
+    /**
+     * Class constructor
+    */
     public function __construct($manager, $id, $args = array())
     {
         parent::__construct( $manager, $id, $args );
@@ -129,25 +152,25 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
         $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'tikva' ));
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Serif Fonts');
-        $fonts[] = array('k' => 1, 'v' => 'Georgia, serif');
-        $fonts[] = array('k' => 2, 'v' => '"Palatino Linotype", "Book Antiqua", Palatino, serif"');
-        $fonts[] = array('k' => 3, 'v' => '"Times New Roman", Times, serif');
+        $fonts[] = array('k' => 1, 'v' => Tikva_Custom_Font_List::FONTS['1']);
+        $fonts[] = array('k' => 2, 'v' => Tikva_Custom_Font_List::FONTS['2']);
+        $fonts[] = array('k' => 3, 'v' => Tikva_Custom_Font_List::FONTS['3']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Sans Serif Fonts');
-        $fonts[] = array('k' => 10, 'v' => 'Arial, Helvetica, sans-serif');
-        $fonts[] = array('k' => 11, 'v' => '"Arial Black", Gadget, sans-serif');
-        $fonts[] = array('k' => 12, 'v' => '"Comic Sans MS", cursive, sans-serif');
-        $fonts[] = array('k' => 13, 'v' => 'Impact, Charcoal, sans-serif');
-        $fonts[] = array('k' => 14, 'v' => '"Lucida Sans Unicode", "Lucida Grande", sans-serif');
-        $fonts[] = array('k' => 15, 'v' => 'Tahoma, Geneva, sans-serif');
-        $fonts[] = array('k' => 16, 'v' => '"Trebuchet MS", Helvetica, sans-serif');
-        $fonts[] = array('k' => 17, 'v' => 'Verdana, Geneva, sans-serif');
+        $fonts[] = array('k' => 10, 'v' => Tikva_Custom_Font_List::FONTS['10']);
+        $fonts[] = array('k' => 11, 'v' => Tikva_Custom_Font_List::FONTS['11']);
+        $fonts[] = array('k' => 12, 'v' => Tikva_Custom_Font_List::FONTS['12']);
+        $fonts[] = array('k' => 13, 'v' => Tikva_Custom_Font_List::FONTS['13']);
+        $fonts[] = array('k' => 14, 'v' => Tikva_Custom_Font_List::FONTS['14']);
+        $fonts[] = array('k' => 15, 'v' => Tikva_Custom_Font_List::FONTS['15']);
+        $fonts[] = array('k' => 16, 'v' => Tikva_Custom_Font_List::FONTS['16']);
+        $fonts[] = array('k' => 17, 'v' => Tikva_Custom_Font_List::FONTS['17']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Monospace Fonts');
-        $fonts[] = array('k' => 30, 'v' => '"Courier New", Courier, monospace');
-        $fonts[] = array('k' => 31, 'v' => '"Lucida Console", Monaco, monospace');
+        $fonts[] = array('k' => 30, 'v' => Tikva_Custom_Font_List::FONTS['30']);
+        $fonts[] = array('k' => 31, 'v' => Tikva_Custom_Font_List::FONTS['31']);
         
         $fonts[] = array('c' => 'optgroup_end');
         
@@ -190,8 +213,6 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
     {
         
         ?>
-   
-
         <#
         console.log("in content_template");
         console.log(data);

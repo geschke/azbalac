@@ -28,6 +28,7 @@ require_once( get_template_directory() . '/inc/sections/SectionSlider.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSocialMediaButtons.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSubfooter.php' );
+require_once( get_template_directory() . '/inc/sections/SectionFont.php' );
 
 
 

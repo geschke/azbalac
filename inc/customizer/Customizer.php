@@ -806,8 +806,6 @@ class Tikva_Customizer
             'description' => __('Set font of headlines', 'tikva'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_headline',
-            'default' => Tikva_Custom_Font_Control::LALA[0]
-         
         )));
 
 
@@ -822,7 +820,7 @@ class Tikva_Customizer
             'label' => __('Body Font', 'tikva'),
             'description' => __('Set font of body content', 'tikva'),
             'section' => 'section_theme_options_typography',
-            'settings' => 'setting_typography_body'
+            'settings' => 'setting_typography_body',
            
         )));
 

@@ -65,9 +65,48 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         var newValue = element.val();
 
         elementData['font'] = newValue;
+
         console.log("fontdata:");
         console.log(elementData);
         
+        console.log(typeof newValue);
+        if (isNaN(parseInt(newValue))) { // no number, so we have Google Fonts
+            console.log("google font!!!");
+            // get variants from backend or trigger another event
+            console.log(ajaxurl);
+
+            var mydata = {
+                action: "tikva_get_font_data_action",
+                whatever: 100
+            };
+     
+            $.ajax({
+                type: "POST",
+                url: ajaxurl,
+     
+                dataType: "json",
+                data: mydata,
+                success: function (data, textStatus, jqXHR) {
+                    console.log("success");
+                    console.log(data);
+                    
+                    /*var name = data.name;
+                    var age = data.age;
+                    var color = data.favorite_color;
+                     
+                    $('#display').html('<p>Name: '+name+' Age: '+age+' Favorite Color: '+color+' </p>');
+                    */
+
+                },
+                error: function (errorMessage) {
+     
+                    console.log(errorMessage);
+                }
+             
+            });      
+         
+        
+        }
         control.updateCurrentDataField(elementData, element);
                 
     },

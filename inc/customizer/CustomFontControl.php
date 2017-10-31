@@ -38,6 +38,30 @@ class Tikva_Custom_Font_List
 if (! class_exists( 'WP_Customize_Control' )) {
     return null;
 }
+
+class Tikva_Custom_Font_Request 
+{
+    public function __construct() 
+    {
+        add_action( 'wp_ajax_tikva_get_font_data_action', array($this,'getFontDataAction' ));
+
+    }
+
+    public function getFontDataAction()
+    {
+        global $wpdb; // this is how you get access to the database
+        
+        $whatever = intval( $_POST['whatever'] );
+        
+        $whatever += 10;
+        
+        echo json_encode(array("lala" => "foo"));
+        
+        wp_die(); // this is required to terminate immediately and return a proper response
+    }
+}
+
+
 /**
  * Customizer Control: Font
  *
@@ -294,6 +318,24 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     </div>
                 </div>
          
+                <div class="font-row-content">
+                    <label>
+                    Select font variant:
+                    </label>
+                    <div class="font-row-field">
+                    <#
+                  
+                    #>
+                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default="{{{ data.default }}}" >
+                   
+                            <option  value="0"  ><?php  echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
+                     
+                    </select>
+
+                    </div>
+                </div>
+         
+
 	  
             <label>
 

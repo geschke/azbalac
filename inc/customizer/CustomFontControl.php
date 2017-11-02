@@ -51,11 +51,19 @@ class Tikva_Custom_Font_Request
     {
         global $wpdb; // this is how you get access to the database
         
-        $whatever = intval( $_POST['whatever'] );
+        $searchfont = $_POST['searchfont'];
+
+        $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
         
-        $whatever += 10;
+        $fontData = null;
+        foreach ($gglfonts['items'] as $gglfont) {
+            if ($gglfont['family'] == $searchfont) {
+                $fontData = $gglfont;
+                break;
+            }
+        }
         
-        echo json_encode(array("lala" => "foo"));
+        echo json_encode($fontData);
         
         wp_die(); // this is required to terminate immediately and return a proper response
     }
@@ -244,7 +252,8 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
-            
+            console.log("FOOOOOOOOOOOOOOOOOOOO");
+            console.log(elementData);
 
         } else {
             // initialize empty elements with dummy data
@@ -283,7 +292,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     console.log("Bestimmung selectValue:");
                     console.log(selectValue);
                     #>
-                    <select class="customize-font-input-select" data-field="{{{ data.identifier }}}" data-default="{{{ data.default }}}" >
+                    <select class="customize-font-input-select" data-field="{{{ data.identifier }}}" data-default="{{{ data.default }}}" data-default-selected="{{{ selectValue }}}" >
                     <# var selectString = '';
                         _.each(data.choices, function(choiceOption, choiceValue) {
                         
@@ -318,17 +327,23 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     </div>
                 </div>
          
-                <div class="font-row-content">
+                <div class="font-row-content font-input-select-variant">
                     <label>
                     Select font variant:
                     </label>
                     <div class="font-row-field">
                     <#
-                  
+                    // if gglfont, fill default variant into data-default
+                    var defaultVariant = '';
+                    if (typeof elementData['gglfont'] != 'undefined' && elementData['gglfont'] == true) {
+                        if (typeof elementData['gglfontdata'] != 'undefined' && typeof elementData['gglfontdata']['variant'] != 'undefined') {
+                            defaultVariant = elementData['gglfontdata']['variant'];
+                        }
+                    }
                     #>
-                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default="{{{ data.default }}}" >
+                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default-selected="{{{ defaultVariant }}}" >
                    
-                            <option  value="0"  ><?php  echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
+                            <option value="0"  ><?php  echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
                      
                     </select>
 

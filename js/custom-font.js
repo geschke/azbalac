@@ -249,21 +249,19 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
                 console.log(data);
                 if (data == null) {
                     console.log("no font found");
+                    // maybe later: throw error, show error message
                 } else {
                     console.log("search variant and store filename into elementData array");
-                    //element.trigger('event_font_gglfont_selected', [ element, elementId, data ]);
-
-                    // this does not work due to asynchronous request
-                    // get default (first) first variant to store into elementData
-                    
+                                     
                     if (typeof data.variants != 'undefined') {
                         if (typeof data.files[variant] != 'undefined') {
                             // variant found
                             var file = data.files[variant];
 
                         } else {
-                            var file = data.files[data.variants[0]];
-
+                            // ugly fallback, use first entry, but is this necessary?
+                            var file = ''; // no file submitted, use empty string.
+                            // currently the font file is not used. Was: data.files[data.variants[0]];
                         }
                         console.log("variant and file:");
                         console.log(variant);
@@ -274,42 +272,17 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
                         control.updateCurrentDataField(elementData);
                         // todo: call update function to store elementData
                     }
-                }
-                /*var name = data.name;
-                var age = data.age;
-                var color = data.favorite_color;
-                 
-                $('#display').html('<p>Name: '+name+' Age: '+age+' Favorite Color: '+color+' </p>');
-                */
+                } // else nothing, default variant is regular if nothing chosen or empty
 
             },
             error: function (errorMessage) {
- 
+                // show error?
                 console.log(errorMessage);
             }
          
         });      
      
-        // todo: if nothing chosen, use first option and store into elementData array
-/*
-        elementData['font'] = newValue;
-
-        console.log("fontdata:");
-        console.log(elementData);
-        
-        console.log(typeof newValue);
-        if (isNaN(parseInt(newValue))) { // no number, so we have Google Fonts
-            console.log("google font!!!");
-            // get variants from backend or trigger another event
-            console.log(ajaxurl);
-
-         
-         
-        
-        }
-        
-        control.updateCurrentDataField(elementData, element);
-        */        
+     
     },
 
     onChangeSizeUpdate: function( event, element, elementData, newValue ) {
@@ -360,20 +333,25 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
             console.log(element);
             console.log(data);
 
-            var variantSelect = $('#' + elementId).find('.customize-font-input-select-variant');
-            console.log(variantSelect);
-
-            var selectOption = $(variantSelect).children()[0]; // string "-- select --"
-            variantSelect.empty().append(selectOption); 
+            var selectField = $('#' + elementId).find('.customize-font-input-select-variant');
             
+            var selectOption = $(selectField).children()[0]; // string "-- select --"
+            selectField.empty().append(selectOption); 
+            
+
             _.each(data.variants, function(choiceOption, choiceValue) {
-                // choiceOption this is the identifier string
-                $('<option/>', {
+                // choiceOption is the identifier string
+                var variantData =  {
                     'value': choiceOption,
-                    'text': choiceOption
-                }).appendTo(variantSelect);
-                console.log(choiceValue);
+                    'text': choiceOption                                      
+                };
+
+                if (choiceOption == 'regular') { // regular is the default value
+                    variantData['selected'] = 'selected';
+                }
+                $('<option/>', variantData).appendTo(selectField);
             });
+
         });
 
 
@@ -382,13 +360,17 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         });
 
 
-        var sizeDefault = 16;
+        var sizeDefault = $('[id="input_size_' + elementId + '"]').attr('data-default');
+        if (!sizeDefault) {
+            sizeDefault = 0; // it has to be initialized with some value, fallback if no default size is submitted
+        }
+        // if available, load current size from stored data
         if (typeof elementData['size'] != 'undefined') {
             sizeDefault = elementData['size'];
         } 
 
         $('[id="slider_size_' + elementId + '"]').slider({
-            value: sizeDefault, min: 2, max: 120, step: 1,
+            value: sizeDefault, min: 0, max: 120, step: 1,
             slide: function (event, ui) {
                 $('[id="input_size_' + elementId + '"]').val(ui.value).keyup();
                 

@@ -29,10 +29,7 @@ class Tikva_Custom_Font_List
 
     );
 
-    const DEFAULT_SIZE = array('body' => 14,
-        'headline' => 14
-    );
-    // todo: set default values by initializing Tikva_Custom_Font_Control
+    const DEFAULT_SIZE = 14;
 }
 
 if (! class_exists( 'WP_Customize_Control' )) {
@@ -116,6 +113,8 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
      */
     public $default = '';
     
+    public $defaults;
+
     public $id;
 
     /**
@@ -126,11 +125,11 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         parent::__construct( $manager, $id, $args );
     
         // fields could be empty due to initialization by WP_Customize_Manager in print_template()
-		/*if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
-			$args['fields'] = array();
+		if ( empty( $args['defaults'] ) || ! is_array( $args['defaults'] ) ) {
+			$args['defaults'] = array();
 		}
-		$this->fields = $args['fields'];
-        */
+		$this->defaults = $args['defaults'];
+        
        
 
         if (! empty( $args['id'] )) {
@@ -207,16 +206,15 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         $fonts[] = array('c' => 'optgroup_end');
         
     
-        
+        // build gglfonts options
         $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
-       // print_r($gglfonts);
-        $x = $gglfonts['items'];
-        //print_r($x);
-        $cnt = count($x);
+        $gglfontsItems = $gglfonts['items'];
+   
+        $cnt = count($gglfontsItems);
       
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Google Webfonts');
         
-         foreach ($x as $item) {
+         foreach ($gglfontsItems as $item) {
             $fonts[] = array('k' => $item['family'], 'v' => $item['family']);
          
         }
@@ -227,6 +225,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         // add font choices to json array
         $this->json['choices'] = $fonts;
         $this->json['value'] = $json;
+        $this->json['defaults'] = $this->defaults;
     
     }
 
@@ -291,8 +290,10 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     }
                     console.log("Bestimmung selectValue:");
                     console.log(selectValue);
+                    console.log("DEFAULTTTTTTTTT");
+                    console.log(data.defaults);
                     #>
-                    <select class="customize-font-input-select" data-field="{{{ data.identifier }}}" data-default="{{{ data.default }}}" data-default-selected="{{{ selectValue }}}" >
+                    <select class="customize-font-input-select" data-field="{{{ data.identifier }}}" data-default="{{{ data.defaults.font }}}" data-default-selected="{{{ selectValue }}}" >
                     <# var selectString = '';
                         _.each(data.choices, function(choiceOption, choiceValue) {
                         
@@ -341,7 +342,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                         }
                     }
                     #>
-                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default-selected="{{{ defaultVariant }}}" >
+                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default="{{{ data.defaults.variant }}}" data-default-selected="{{{ defaultVariant }}}" >
                    
                             <option value="0"  ><?php  echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
                      
@@ -364,7 +365,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     
                 </span>
 
-                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
+                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled data-default="{{{ data.defaults.size }}}" value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
 
             </label>
 

@@ -143,28 +143,24 @@ class Tikva_Section_Font
             } elseif (intval($font->font == 0) && is_string($font->font) && strlen($font->font) > 1) {
                 // should be ggl font
                 // todo: optimize - it is not necessary to load google font array and to go through the loop
-                $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+                /*$gglfonts = $GLOBALS['tikvaGoogleFonts']; 
                 $fontData = null;
                 foreach ($gglfonts['items'] as $gglfont) {
                     if ($gglfont['family'] == $font->font) {
                         $fontData = $gglfont;
                         break;
                     }
+                }*/
+              
+                $fontVariant = '';
+                // add variant if not regular
+                if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
+                    $fontVariant = ':' . $font->gglfontdata->variant;
                 }
-                if (!$fontData) {
-                    // gglfont not found, fallback to standard font
-                    $fontFamily = '';
-                } else {
-                    $fontVariant = '';
-                    // add variant if not regular
-                    if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
-                        $fontVariant = ':' . $font->gglfontdata->variant;
-                    }
-                    $cssHeader = '<link rel="stylesheet"
-                    href="https://fonts.googleapis.com/css?family=' . urlencode($fontData['family']) . $fontVariant . '">';
-                    $fontFamily = "'" . $fontData['family'] . "'";
-                  
-                }
+                $cssHeader = '<link rel="stylesheet"
+                href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '">';
+                $fontFamily = "'" . $font->font . "'";
+                
               
 
             } else {

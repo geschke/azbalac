@@ -142,6 +142,7 @@ class Tikva_Section_Font
 
             } elseif (intval($font->font == 0) && is_string($font->font) && strlen($font->font) > 1) {
                 // should be ggl font
+                // todo: optimize - it is not necessary to load google font array and to go through the loop
                 $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
                 $fontData = null;
                 foreach ($gglfonts['items'] as $gglfont) {

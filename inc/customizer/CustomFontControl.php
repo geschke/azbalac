@@ -245,14 +245,11 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         
         ?>
         <#
-        console.log("in content_template");
-        console.log(data);
-        console.log(data.choices);
+      
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
-            console.log("FOOOOOOOOOOOOOOOOOOOO");
-            console.log(elementData);
+         
 
         } else {
             // initialize empty elements with dummy data
@@ -280,25 +277,20 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     <div class="font-row-field">
                     <#
                     var selectValue = '';
-                    console.log("vor select");
-                    console.log(elementData);
+                 
 
                     if (typeof elementData.font != 'undefined' && elementData.font != 0) {
                         selectValue = elementData.font;
                     } else { 
-                        selectValue = data.default; // todo use more complex way to get value if there is more than one element in the custom field
+                        selectValue = data.defaults.font; 
                     }
-                    console.log("Bestimmung selectValue:");
-                    console.log(selectValue);
-                    console.log("DEFAULTTTTTTTTT");
-                    console.log(data.defaults);
+                
                     #>
                     <select class="customize-font-input-select" data-field="{{{ data.identifier }}}" data-default="{{{ data.defaults.font }}}" data-default-selected="{{{ selectValue }}}" >
                     <# var selectString = '';
                         _.each(data.choices, function(choiceOption, choiceValue) {
                         
                         selectString = '';
-
 
                         if (typeof choiceOption.c != 'undefined') { // command mode
                             if (choiceOption.c == 'optgroup_start') {
@@ -336,41 +328,34 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     <#
                     // if gglfont, fill default variant into data-default
                     var defaultVariant = '';
+                    var gglfont = '';
+                    
                     if (typeof elementData['gglfont'] != 'undefined' && elementData['gglfont'] == true) {
+                        gglfont = 'true'; // in html we only have strings
                         if (typeof elementData['gglfontdata'] != 'undefined' && typeof elementData['gglfontdata']['variant'] != 'undefined') {
                             defaultVariant = elementData['gglfontdata']['variant'];
                         }
                     }
                     #>
-                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-default="{{{ data.defaults.variant }}}" data-default-selected="{{{ defaultVariant }}}" >
+                    <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-font-variant="{{{ gglfont }}}"  data-default="{{{ data.defaults.variant }}}" data-default-selected="{{{ defaultVariant }}}" >
                    
-                            <option value="0"  ><?php  echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
+                            <option value="0"  ><?php echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
                      
                     </select>
 
                     </div>
                 </div>
-         
-
 	  
             <label>
-
                 <span class="customize-control-title">
-            <?php
-            // The label has already been sanitized in the Fields class, no need to re-sanitize it.
-            ?>
-                    <?php echo __('Font Size','tikva'); ?>
-                    
-                        <span class="description customize-control-description"><?php echo $this->description; ?></span>
-                    
+                <?php echo __('Font Size','tikva'); ?>
                 </span>
-
-                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled data-default="{{{ data.defaults.size }}}" value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
+                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled data-default="{{{ data.defaults.size }}}" value=""/>
 
             </label>
 
             <div style="padding-top: 10px;">
-                    <div  id="slider_size_{{{ data.identifier }}}"></div>
+                <div  id="slider_size_{{{ data.identifier }}}"></div>
             </div>
 
             <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.identifier }}}" name="tikva_font_{{{ data.identifier }}}"/>

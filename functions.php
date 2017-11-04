@@ -17,8 +17,6 @@ require_once( get_template_directory() . '/inc/customizer/CustomRepeaterHelper.p
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomFontControl.php' );
 
-$tikvaGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' );
-
 require_once( get_template_directory() . '/inc/customizer/CustomizerSanitizer.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' );
 
@@ -731,20 +729,10 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
     require get_template_directory() . '/inc/featured-content.php';
 }
 
-//add_action( 'wp_ajax_tikva_get_font_data_action', 'lalala_action' );
 if (is_admin()) {
+    $tikvaGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
+    
     $tikvaFontRequest = new Tikva_Custom_Font_Request();
     
 }
 
-function lalala_action() {
-	global $wpdb; // this is how you get access to the database
-
-	$whatever = intval( $_POST['whatever'] );
-
-	$whatever += 10;
-
-        echo $whatever;
-
-	wp_die(); // this is required to terminate immediately and return a proper response
-}

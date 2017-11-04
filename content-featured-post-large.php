@@ -19,7 +19,7 @@
         
                 if ( 'post' == get_post_type() ) {
                     tikva_posted_on();
-                    echo '&nbsp';
+                    echo '&nbsp; ';
                 }
                 edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
             
@@ -41,7 +41,7 @@
                 endif;
                 ?>
 
-            <p>
+            <p></p>
             <?php
             if (preg_match('/<!--more.*-->/',$post->post_content)) {
             	the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
@@ -50,7 +50,7 @@
                 the_excerpt();
             }
             ?>
-            </p>
+            
     </article>
     </div>
 </div>

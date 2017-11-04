@@ -132,6 +132,11 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
 
         elementData['font'] = newValue;
 
+        // delete previously set ggl font data to prevent displaying old presets like another variant
+        // if ggl font is chosen, the default variant should be active, i.e. "regular" or empty string
+        if (typeof elementData['gglfontdata'] != 'undefined') {
+            elementData['gglfontdata'] = null;
+        }
         if (isNaN(parseInt(newValue))) { // no number, so we have Google Fonts
             $('#' + elementId).find('.font-input-select-variant').show();
             

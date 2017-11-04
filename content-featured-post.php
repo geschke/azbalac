@@ -36,7 +36,7 @@ echo '<div class="col-lg-' .  $post->themeCols . ' col-md-' . $post->themeCols .
         
             if ( 'post' == get_post_type() ) {
                 tikva_posted_on();
-                echo '&nbsp';
+                echo '&nbsp; ';
             }
             edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
             

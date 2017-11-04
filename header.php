@@ -97,7 +97,7 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
     
     <div class="masthead col-md-12 col-sm-12">
         <h1 id="site-header-text"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
-        <div id="site-description"><?php echo esc_html($subtitleDescription); ?></div>
+        <h2 id="site-description"><?php echo esc_html($subtitleDescription); ?></h2>
          <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">

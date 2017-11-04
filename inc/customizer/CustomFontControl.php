@@ -36,7 +36,6 @@ if (! class_exists( 'WP_Customize_Control' )) {
     return null;
 }
 
-$tikvaGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); // used only here, load when in admin mode, otherwise skip
 
 
 class Tikva_Custom_Font_Request 

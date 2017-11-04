@@ -803,11 +803,11 @@ class Tikva_Customizer
         $wp_customize->add_control(new Tikva_Custom_Font_Control($wp_customize, 
         'control_typography_headline', array(
             'label' => __('Headline Base Font', 'tikva'),
-            'description' => __('Set base font of headlines. The real size of H1 - H6 will be calculated based on the font size. Choose a size of 0 (zero) to use the default font size of the theme.', 'tikva'),
+            'description' => __('Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme.', 'tikva'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_headline',
-            'defaults' => array('font' => 17, // use numerical from Tikva_Custom_Font_List or Ggl font string
-            'size' => 16)
+            /*'defaults' => array('font' => 17, // use numerical from Tikva_Custom_Font_List or Ggl font string
+            'size' => 16)*/
         )));
 
 

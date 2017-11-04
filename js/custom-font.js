@@ -46,9 +46,11 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
             var fontVariant = $(selectField).attr('data-font-variant'); // a kind of fallback in the case that variant data isn't stored into database
             // this can happen in the first case when database is empty and the 
             // variant select field is not updated (changed)
+           
             if (variantSelected != '' || fontVariant == 'true') {
                 if (variantSelected == '') {
                     // default is 'regular'
+                    
                     variantSelected = 'regular';
                 }
                 $(selectField).parents('.font-input-select-variant').show();
@@ -78,7 +80,6 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
                                         'value': choiceOption,
                                         'text': choiceOption      
                                     };
-
                                     if (choiceOption == variantSelected) {
                                         variantData['selected'] = 'selected';
                                     }
@@ -138,7 +139,6 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
             // if no variant is chosen, nothing will be stored
             // default is 'regular'
             elementData['gglfont'] = true;
-
             
             var requestData = {
                 action: "tikva_get_font_data_action",

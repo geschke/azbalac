@@ -9,8 +9,9 @@ Version 0.5.3
 
 Version 0.5.3
 
-- New feature: Choose headline and body font. There is a new section in the theme options: "Typography Settings". You can choose between a list of default fonts and all webfonts powered by Google Fonts. Additional the base size can be changed and in case of using Google Fonts the font variant is selectable. 
-- Backend: New font selecton custom control added. Beside the list of default fonts all Google Fonts could be chosen. 
+- New feature: Choose headline and body font. There is a new section in the theme options: "Typography Settings". You can choose between a list of default fonts and all webfonts powered by Google Fonts. Additional the base size can be changed and in case of using Google Fonts the font variant is selectable.
+- Fix: Subtitle is now a h2 element instead of just being a div.
+- Backend: New font selecton custom control added. It contains the select box to choose a font and a slider to change the font size. Beside the list of default fonts all Google Fonts could be chosen. 
 - Sort order of theme options changed, hopefully the order is cleaner as before.
 
 Version 0.5.2

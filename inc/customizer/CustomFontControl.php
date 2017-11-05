@@ -324,7 +324,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
          
                 <div class="font-row-content font-input-select-variant">
                     <label>
-                    Select font variant:
+                    <?php echo __('Select font variant:', 'tikva'); ?>
                     </label>
                     <div class="font-row-field">
                     <#

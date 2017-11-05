@@ -14,7 +14,7 @@ Version 0.5.3
 - Backend: New font selecton custom control added. It contains the select box to choose a font and a slider to change the font size. Beside the list of default fonts all Google Fonts could be chosen. 
 - Sort order of theme options changed, hopefully the order is cleaner as before.
 - Minor fixes: end marker of nbsp entity added, whitespace between author name and edit icon added
-- todo: Fix for MSIE/Edge problem - header image is sometimes not shown. Aaarrrghhhh
+- Fix for MSIE/Edge problem - header image fade-in removed, JavaScript code optimized
 
 Version 0.5.2
 

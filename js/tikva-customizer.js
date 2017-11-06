@@ -17,6 +17,13 @@
         });
     });
 
+    wp.customize('header_textcolor', function (value) {
+        value.bind(function (col) {
+            $('#header').css('color', col);
+        });
+    });
+
+
     wp.customize('color_bg_header', function (value) {
         value.bind(function (col) {
             $('#header').css('background-color', col);

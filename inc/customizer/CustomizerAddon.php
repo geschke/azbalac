@@ -23,7 +23,8 @@ class Tikva_Customizer_Addon
     {
         $this->customizer->get_setting( 'blogname' )->transport = 'postMessage';
         $this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
-
+        $this->customizer->get_setting( 'header_textcolor' )->transport = 'postMessage';
+        
         $this->customizer->get_setting( 'color_bg_header' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_fg_footer' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_bg_footer' )->transport = 'postMessage';

@@ -2,10 +2,16 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.5.4
+Version 0.5.5
 
 
 ## Version history:
+
+
+Version 0.5.5
+
+- Live preview of header text color added
+
 
 Version 0.5.4 
 

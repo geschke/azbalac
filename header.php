@@ -96,7 +96,7 @@ $subtitleDescription = get_bloginfo( 'description', 'display' );
 <div class="container">
     
     <div class="masthead col-md-12 col-sm-12">
-        <h1 id="site-header-text"><a class="header-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
+        <h1 id="site-header-text"><a class="header-url" style="<?php echo $headerStyles['headerStyleColorFg'];  ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
         <h2 id="site-description"><?php echo esc_html($subtitleDescription); ?></h2>
          <div id="site-header">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

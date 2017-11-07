@@ -20,6 +20,7 @@
     wp.customize('header_textcolor', function (value) {
         value.bind(function (col) {
             $('#header').css('color', col);
+            $('.header-url').css('color', col);
         });
     });
 

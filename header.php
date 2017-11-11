@@ -54,7 +54,7 @@ $navbarFixed = tikva_get_navbar_layout();
         }
 
         Tikva_Section_Subfooter::buildStyles();
-        Tikva_Section_Font::buildStyles();
+        
        ?>
 
         <?php 
@@ -62,7 +62,9 @@ $navbarFixed = tikva_get_navbar_layout();
         
         /* Unfortunately there is no conditional JavaScript solution as it exists for stylesheets.
         */
+        Tikva_Section_Font::buildStyles();
         ?>
+        
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

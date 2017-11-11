@@ -29,12 +29,12 @@ class Tikva_Section_Font
 
     protected static function buildBodyCss($bodyFont)
     {
-        $cssStart = '<style type="text/css">';
+        $cssStart = '<style id="typography-body" type="text/css">';
         $cssEnd = '</style>';
         $css = '';
         $fontSize = null;
 
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($bodyFont);
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($bodyFont, 'typography-body-font');
         
         if (isset($bodyFont->size) && intval($bodyFont->size) != 0) {
             $fontSize = $bodyFont->size . "px";
@@ -47,13 +47,13 @@ class Tikva_Section_Font
         if ($fontFamily) {
             $css .= "
             body {
-                font-family: $fontFamily !important; 
+                font-family: $fontFamily; 
             }";
         }
         if ($fontSize) {
             $css .= "
             body {
-                font-size: $fontSize !important; 
+                font-size: $fontSize; 
             }";
         
         }
@@ -66,12 +66,12 @@ class Tikva_Section_Font
 
     protected static function buildHeadlineCss($headlineFont)
     {
-        $cssStart = '<style type="text/css">';
+        $cssStart = '<style id="typography-headline" type="text/css">';
         $cssEnd = '</style>';
         $css = '';
         $fontSize = null;
         
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($headlineFont);
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($headlineFont, 'typography-headline-font');
 
         if (isset($headlineFont->size) && intval($headlineFont->size) != 0) {
             $sizeBase = intval($headlineFont->size);
@@ -82,7 +82,9 @@ class Tikva_Section_Font
             $sizeH4 = ceil($sizeBase * 1.28) . 'px';
             $sizeH5 = $sizeBase . 'px';
             $sizeH6 = ceil($sizeBase * 0.85) . 'px';
-
+            $sizeSubtitle = floor($sizeBase * 1.5) . 'px';
+            $sizeJumbotronHeading = ceil($sizeBase * 4.5) . 'px';
+            
             //$lineHeightBase = 1.428571429; // maybe later?
             //$lineHeightComputed = floor($sizeBase * $lineHeightBase); // maybe later?
             $fontSize = true;
@@ -95,30 +97,35 @@ class Tikva_Section_Font
         if ($fontFamily) {
             $css .= "
             h1, h2, h3, h4, h5, h6 {
-                font-family: $fontFamily !important; 
+                font-family: $fontFamily; 
             }";
         }
         if ($fontSize) {
             $css .= "
             h1 {
-                font-size: $sizeH1 !important;
+                font-size: $sizeH1;
             }
             h2 {
-                font-size: $sizeH2 !important;
+                font-size: $sizeH2;
             }
             h3 {
-                font-size: $sizeH3 !important;
+                font-size: $sizeH3;
             }
             h4 {
-                font-size: $sizeH4 !important;
+                font-size: $sizeH4;
             }
             h5 {
-                font-size: $sizeH5 !important;
+                font-size: $sizeH5;
             }
             h6 {
-                font-size: $sizeH6 !important;
+                font-size: $sizeH6;
             }
-
+            #site-description {
+                font-size: $sizeSubtitle;
+            }
+            .jumbotron h1 {
+                font-size: $sizeJumbotronHeading;
+            }
             ";
         }
     
@@ -129,7 +136,7 @@ class Tikva_Section_Font
 
     }
     
-    protected static function buildFontFamilyCss($font) 
+    protected static function buildFontFamilyCss($font, $identifier) 
     {
         $cssHeader = '';
         $fontFamily = '';
@@ -157,7 +164,7 @@ class Tikva_Section_Font
                 if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
                     $fontVariant = ':' . $font->gglfontdata->variant;
                 }
-                $cssHeader = '<link rel="stylesheet"
+                $cssHeader = '<link id="' . $identifier . '" rel="stylesheet"
                 href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '">';
                 $fontFamily = "'" . $font->font . "'";
                 

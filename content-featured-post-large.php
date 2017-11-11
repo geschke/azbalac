@@ -13,7 +13,7 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php 
-        the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); 
+        the_title( '<h1 class="entry-title tikva-jumbotron"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); 
 
                  if (absint(get_option('setting_posts_featured_date'))) {
         

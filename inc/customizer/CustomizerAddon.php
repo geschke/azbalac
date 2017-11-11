@@ -32,8 +32,12 @@ class Tikva_Customizer_Addon
         $this->customizer->get_setting( 'color_fg_sidebar' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_bg_sidebar' )->transport = 'postMessage';
 
-       // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
+        // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_typography_headline')->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_typography_body')->transport = 'postMessage';
         
+        //   $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
+       
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
@@ -45,6 +49,8 @@ class Tikva_Customizer_Addon
     */
     public function customizeRegisterLivePreview()
     {
+          
+        
         wp_enqueue_script(
             'tikva-themecustomizer',            //Give the script an ID
             get_template_directory_uri().'/js/tikva-customizer.js', //Point to file
@@ -52,6 +58,10 @@ class Tikva_Customizer_Addon
             '',                         //Define a version (optional)
             true                        //Put script in footer?
         );
+
+        // see https://wordpress.stackexchange.com/questions/106520/wp-localize-script-variable-is-not-defined-in-jquery
+        // wp_localize_script must be called after the script it's being attached!
+        wp_localize_script( 'tikva-themecustomizer', 'tikvaAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
     }
 }
 

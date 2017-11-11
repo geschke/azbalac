@@ -43,6 +43,8 @@ class Tikva_Custom_Font_Request
     public function __construct() 
     {
         add_action( 'wp_ajax_tikva_get_font_data_action', array($this,'getFontDataAction' ));
+        add_action( 'wp_ajax_tikva_get_default_font_data_action', array($this,'getDefaultFontDataAction' ));
+        
 
     }
 
@@ -66,6 +68,18 @@ class Tikva_Custom_Font_Request
         
         wp_die(); // this is required to terminate immediately and return a proper response
     }
+
+    public function getDefaultFontDataAction()
+    {
+        global $wpdb; // this is how you get access to the database
+        
+        
+        
+        echo json_encode(Tikva_Custom_Font_List::FONTS);
+        
+        wp_die(); // this is required to terminate immediately and return a proper response
+    }
+
 }
 
 
@@ -248,10 +262,11 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         ?>
         <#
       
+      
         if (data.value && data.value[0] != "") {
             // predefined values from database
             var elementData = JSON.parse(decodeURI(data.value));
-         
+            
 
         } else {
             // initialize empty elements with dummy data
@@ -334,7 +349,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     
                     if (typeof elementData['gglfont'] != 'undefined' && elementData['gglfont'] == true) {
                         gglfont = 'true'; // in html we only have strings
-                        if (typeof elementData['gglfontdata'] != 'undefined' && typeof elementData['gglfontdata']['variant'] != 'undefined') {
+                        if (typeof elementData['gglfontdata'] != 'undefined' && elementData['gglfontdata'] != null && typeof elementData['gglfontdata']['variant'] != 'undefined') {
                             defaultVariant = elementData['gglfontdata']['variant'];
                         }
                     }

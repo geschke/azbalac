@@ -56,9 +56,7 @@
 
     wp.customize('setting_typography_headline', function (value) {
         value.bind(function (data) {
-            //$('#primary-sidebar > div').css('background-color', col);
             fontData = JSON.parse(decodeURI(data));
-            console.log(fontData);
             var sizeBase = 16; // defined in Bootstrap
             if (fontData['size'] != 0) {
                 var sizeBase = fontData['size'];
@@ -82,9 +80,7 @@
             $('h6').css('font-size', sizeH6);
             $('#site-description').css('font-size',sizeSubtitle);
         
-            console.log(parseInt(fontData['font']));
             if (fontData['gglfont'] == true || isNaN(parseInt(fontData['font']))) { // ggl font
-
 
                 var fontVariant = '';
                 if (typeof fontData['gglfontdata'] != 'undefined' && fontData['gglfontdata'] != null && typeof fontData['gglfontdata']['variant'] != 'undefined' && fontData['gglfontdata']['variant'] != 'regular') {
@@ -93,11 +89,8 @@
 
                 if ($('#typography-headline-font').length) {
 
-                    console.log($('#typography-headline-font').attr('href'));
-                    
                     $('#typography-headline-font').attr('href','https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font'])+ fontVariant);
                 } else {
-                    console.log("add typography headline-font"); 
                     var linkData = {
                         'id': 'typography-headline-font',
                         'href':'https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font']) + fontVariant,
@@ -109,21 +102,16 @@
                 $('h1,h2,h3,h4,h5,h6').css('font-family', fontData['font']);
             
             } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
-                console.log("nothing");
                 $('h1,h2,h3,h4,h5,h6').css('font-family','');
                 if ($('#typography-headline-font').length) {
-                    console.log("something to do");
                     $('#typography-headline-font').remove();
                 }
                 if ($('#typography-headline').length) {
-                    console.log("something to do with headline");
                     $('#typography-headline').remove();
                 }
                 
 
             } else { // default font
-                console.log(fontData['font']);
-
                 var requestData = {
                     action: "tikva_get_default_font_data_action"
                 }
@@ -135,9 +123,7 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        //console.log(res);
                         if (res != null) {
-                            //console.log(res[fontData['font']]);
                             $('h1,h2,h3,h4,h5,h6').css('font-family', res[fontData['font']]);
                         }
                     },
@@ -152,7 +138,7 @@
           
 
         });
-        //console.log(value);
+    
     });
 
 
@@ -160,10 +146,7 @@
     wp.customize('setting_typography_body', function (value) {
         value.bind(function (data) {
             
-            console.log("in setting typo body");
-            //$('#primary-sidebar > div').css('background-color', col);
             fontData = JSON.parse(decodeURI(data));
-            console.log(fontData);
             var sizeBase = 16; // defined in Bootstrap
             if (fontData['size'] != 0) {
                 var sizeBase = fontData['size'];
@@ -173,11 +156,8 @@
 
             $('body').css('font-size', sizeBase);
             $('body .jumbotron').css('font-size', sizeJumbotron);
-            
         
-            console.log(parseInt(fontData['font']));
             if (fontData['gglfont'] == true || isNaN(parseInt(fontData['font']))) { // ggl font
-
 
                 var fontVariant = '';
                 if (typeof fontData['gglfontdata'] != 'undefined' && fontData['gglfontdata'] != null && typeof fontData['gglfontdata']['variant'] != 'undefined' && fontData['gglfontdata']['variant'] != 'regular') {
@@ -186,11 +166,8 @@
 
                 if ($('#typography-body-font').length) {
 
-                    console.log($('#typography-body-font').attr('href'));
-                    
                     $('#typography-body-font').attr('href','https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font'])+ fontVariant);
                 } else {
-                    console.log("add typography body-font"); 
                     var linkData = {
                         'id': 'typography-body-font',
                         'href':'https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font']) + fontVariant,
@@ -203,21 +180,17 @@
             
     
             } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
-                console.log("nothing");
                 $('body').css('font-family','');
                 if ($('#typography-body-font').length) {
-                    console.log("something to do");
                     $('#typography-body-font').remove();
                 }
                 if ($('#typography-body').length) {
-                    console.log("something to do with body");
                     $('#typography-body').remove();
                 }
                 
 
             } else { // default font
-                console.log(fontData['font']);
-
+                
                 var requestData = {
                     action: "tikva_get_default_font_data_action"
                 }
@@ -229,9 +202,7 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        //console.log(res);
                         if (res != null) {
-                            //console.log(res[fontData['font']]);
                             $('body').css('font-family', res[fontData['font']]);
                         }
                     },
@@ -249,14 +220,5 @@
        
     });
 
-    //wp.customize('setting_introduction_area_elements', function (value) {
-    //    console.log("in postMessage");
-    //    console.log(value);
-
-        /*value.bind(function (col) {
-            $('#primary-sidebar > div').css('background-color', col);
-        });*/
-    //});
-    
 
 })(jQuery);

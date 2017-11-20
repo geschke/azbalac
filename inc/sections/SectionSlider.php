@@ -13,6 +13,13 @@
 class Tikva_Section_Slider
 {
 
+    public static function getSlider($position) 
+    {
+        ob_start();
+        self::showSlider($position);
+        $output = ob_get_flush();
+        return $output;
+    }
 
     public static function showSlider($position)
     {

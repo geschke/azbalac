@@ -1,7 +1,7 @@
 <?php
 
 
-
+require_once ( get_template_directory() .'/vendor/autoload.php');
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';

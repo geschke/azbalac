@@ -1,0 +1,23 @@
+{{ header|raw }}
+
+
+{% if is_front_page %}
+    {{ show_slider_2|raw }}
+{% endif %}
+
+{% if is_front_page and tikva_has_featured_posts %}
+
+<div id="featured-main" class="featured-main">
+
+    <div class="container">
+        {{ template_part_featured_content|raw }}
+    </div><!-- end container -->
+    </div><!-- end featured-main -->
+
+
+{% endif %}
+
+
+
+
+ 

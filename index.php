@@ -14,32 +14,39 @@
  * @since Tikva 0.1
  */
 
+$twigLoader = new Twig_Loader_Filesystem(get_template_directory() . '/templates/src/');
+$twig = new Twig_Environment($twigLoader, array(
+    'cache' => get_template_directory() . '/templates/cache/',
+    'debug' => true // todo: set to false when upload to WordPress theme repository
+));
+
+ob_start();
+
+get_header(); 
+
+$header = ob_get_contents();
+ob_end_clean();
+
+$showSlider_2 = '';
+if ( is_front_page() ) {
+    $showSlider_2 = Tikva_Section_Slider::getSlider(2);
+} 
+
+ob_start();
+get_template_part( 'featured-content' );
+$template_part_featured_content = ob_get_contents();
+ob_end_clean();
 
 
- get_header(); 
- 
- if ( is_front_page() ) {
-     Tikva_Section_Slider::showSlider(2);
- } 
- 
- if ( is_front_page() && tikva_has_featured_posts() ) {
- ?>
- 
- <div id="featured-main" class="featured-main">
- 
- <div class="container">
-       <?php
-     // Include the featured content template.
-     get_template_part( 'featured-content' );
-     //   echo "<h1>show featured content</h1>";
-     ?>
-     </div><!-- end container -->
-     </div><!-- end featured-main -->
-     <?php
- }
- ?>
- 
- <?php
+echo $twig->render('index.html.twig', array('header' => $header,
+'is_front_page' => is_front_page(),
+'tikva_has_featured_posts' => tikva_has_featured_posts(),
+'show_slider_2' => $showSlider_2,
+'template_part_featured_content' => $template_part_featured_content
+));
+
+
+
  if ( is_front_page() ) {
      Tikva_Section_Content_Column::showIntroductionElements(3);
      Tikva_Section_Slider::showSlider(3);
@@ -126,5 +133,8 @@ if ($layoutStyle['content'] == 2) {
 </div><!-- #main -->
 </div><!-- container -->     
      <?php
+
+
+
 get_footer();
 ?>

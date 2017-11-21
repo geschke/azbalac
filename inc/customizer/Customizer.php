@@ -726,8 +726,8 @@ class Tikva_Customizer
             'settings' => 'tikva_layout',
             'choices' => array(
                 '1' => get_template_directory_uri() . '/images/admin/1c.png',
-                '2' => get_template_directory_uri() . '/images/admin/2cl.png',
-                '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+                '2' => get_template_directory_uri() . '/images/admin/2cr.png',
+                '3' => get_template_directory_uri() . '/images/admin/2cl.png',
             )
         )));
 

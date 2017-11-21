@@ -16,6 +16,14 @@ class Tikva_Section_Content_Column
 
     protected static $disableReadMore = false;
 
+    public static function getIntroductionElements($position) 
+    {
+        ob_start();
+        self::showIntroductionElements($position);
+        $output = ob_get_flush();
+        return $output;
+    }
+
     public static function showIntroductionElements($position) 
     {
         $introActivate =  get_option('setting_introduction_area_activate');

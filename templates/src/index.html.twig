@@ -18,6 +18,64 @@
 {% endif %}
 
 
-
+{% if is_front_page %}
+    {{  intro_elements_3|raw }}
+    {{ show_slider_3|raw }}
+{% endif %}
 
  
+<div id="main" class="site-main">
+        
+        <div class="container">
+        
+            <div class="row">
+        
+                <div id="main-content" class="main-content">
+
+                    {% if layout_style.content == 2 %}
+
+     <div class="{{ layout_style.col_2 }}">
+         {{ sidebar|raw }}
+     </div>
+     {% endif %}
+
+
+
+    <div class="{{ layout_style.col_1 }}">
+            
+                    <div id="primary" class="content-area">
+                    <div id="content" class="site-content" role="main">
+            
+{% if have_posts %}
+    {% for post in posts %}
+        {{ post|raw}}
+    {% endfor %}
+    {{ paging_nav|raw }}
+{% else %}
+    {{ no_posts|raw }}
+{% endif %}
+
+		</div><!-- #content -->
+	    </div><!-- #primary -->
+
+    </div>
+
+    {% if layout_style.columns == 2 %}
+        {% if layout_style.content == 1 %}
+            <div class="{{ layout_style.col_2 }}">
+                {{ sidebar|raw }}
+            </div>
+        {% endif %}
+    {% endif %}
+  
+     
+    
+</div><!-- #main-content -->
+ 
+</div><!-- row -->
+
+
+</div><!-- #main -->
+</div><!-- container -->     
+ 
+{{ footer|raw }}

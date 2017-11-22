@@ -6,9 +6,9 @@
  * Please note that this is the WordPress construct of pages and that
  * other 'pages' on your WordPress site will use a different template.
  *
- * @package WordPress
- * @subpackage Tikva
- * @since Tikva 0.1.8
+ * @package Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
  */
 
 

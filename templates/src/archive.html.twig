@@ -1,0 +1,44 @@
+
+{{ header|raw }}
+
+
+<div id="main" class="site-main">
+
+<div class="container">
+
+
+<div class="row">
+
+    <div class="col-md-9 col-sm-8">
+	<section id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+            {% if have_posts %}
+
+                <header class="page-header">
+                    <h1 class="page-title">{{ page_title }} schallala</h1>
+                </header><!-- .page-header -->
+        
+                {% for post in posts %}
+                    {{ post|raw}}
+                {% endfor %}
+                {{ paging_nav|raw }}
+            {% else %}
+                {{ no_posts|raw }}
+            {% endif %}
+
+
+		</div><!-- #content -->
+	</section><!-- #primary -->
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+        {{ sidebar|raw }}
+    </div>
+
+</div>
+
+</div><!-- container -->
+</div><!-- #main -->
+
+{{ footer|raw }}

@@ -12,82 +12,96 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Tikva
- * @since Tikva 0.1
+ * @package Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
  */
 
-get_header(); ?>
 
 
-<div id="main" class="site-main">
+$twigLoader = new Twig_Loader_Filesystem(get_template_directory() . '/templates/src/');
+$twig = new Twig_Environment($twigLoader, array(
+    'cache' => get_template_directory() . '/templates/cache/',
+    'debug' => true // todo: set to false when upload to WordPress theme repository
+));
 
-<div class="container">
+ob_start();
+get_header(); 
+$header = ob_get_contents();
+ob_end_clean();
 
 
-<div class="row">
+$layoutStyle = tikva_get_layout();
 
-    <div class="col-md-9 col-sm-8">
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+ob_start();
+get_sidebar('content');
+get_sidebar();
+$sidebar = ob_get_contents();
+ob_end_clean();
 
-			<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_day() ) :
-							printf( __( 'Daily Archives: %s', 'tikva' ), get_the_date() );
+$page_title = '';
+if ( have_posts() ) {
 
-						elseif ( is_month() ) :
-							printf( __( 'Monthly Archives: %s', 'tikva' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'tikva' ) ) );
+	if ( is_day() ) {
+		$page_title = sprintf( __( 'Daily Archives: %s', 'tikva' ), get_the_date() );
+	} elseif ( is_month() ) {
+		$page_title = sprintf( __( 'Monthly Archives: %s', 'tikva' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'tikva' ) ) );
+	} elseif ( is_year() ) {
+		$page_title = sprintf( __( 'Yearly Archives: %s', 'tikva' ), get_the_date( _x( 'Y', 'yearly archives date format', 'tikva' ) ) );
+	} else {
+		$page_title = __( 'Archives', 'tikva' );
+	}
 
-						elseif ( is_year() ) :
-							printf( __( 'Yearly Archives: %s', 'tikva' ), get_the_date( _x( 'Y', 'yearly archives date format', 'tikva' ) ) );
 
-						else :
-							_e( 'Archives', 'tikva' );
+	$tikva_have_posts = true;
+	
+	   
+	// Start the Loop.
+	while ( have_posts() ) {
+		
+		ob_start();
+		the_post(); 
+	
+		get_template_part( 'content',  get_post_format() );
+			
+		$tikva_posts[] = ob_get_contents();
+		ob_end_clean();
+	}
+	// Previous/next post navigation.
+	ob_start();
+	tikva_paging_nav();
+	$tikva_paging_nav = ob_get_contents();
+	ob_end_clean();
+} else {
+	$tikva_have_posts = false;
+	
+	ob_start();
 
-						endif;
-					?>
-				</h1>
-			</header><!-- .page-header -->
+	// If no content, include the "No posts found" template.
+	get_template_part( 'content', 'none' );
+	$tikva_no_posts = ob_get_contents();
+	ob_end_clean();
+	
+}
 
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
 
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
 
-					endwhile;
-					// Previous/next page navigation.
-					tikva_paging_nav();
 
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
 
-				endif;
-			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
-    </div>
-
-    <div class="col-md-3 col-sm-4">
-        <?php
-        get_sidebar( 'content' );
-        get_sidebar();
-        ?>
-    </div>
-
-</div>
-
-</div><!-- container -->
-</div><!-- #main -->
-<?php
+ob_start();
 get_footer();
+$tikva_footer = ob_get_contents();
+ob_end_clean();
+
+
+echo $twig->render('archive.html.twig', array('header' => $header,
+'layout_style' => $layoutStyle,
+'sidebar' => $sidebar,
+'have_posts' => $tikva_have_posts,
+'posts' => $tikva_posts,
+'no_posts' => $tikva_no_posts,
+'paging_nav' => $tikva_paging_nav,
+'footer' => $tikva_footer,
+'page_title' => $page_title
+));            

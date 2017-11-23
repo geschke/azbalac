@@ -36,36 +36,36 @@ ob_end_clean();
 if ( have_posts() ) {
 	$tikva_have_posts = true;
 	
-		$archive_title = sprintf( __( 'Category Archives: %s', 'tikva' ), single_cat_title( '', false ) );
+	$archive_title = sprintf( __( 'Category Archives: %s', 'tikva' ), single_cat_title( '', false ) );
+
+	$term_description = term_description();
+
+	while ( have_posts() ) {
+		
+		ob_start();
+		the_post(); 
 	
-		$term_description = term_description();
-	
-		while ( have_posts() ) {
+		get_template_part( 'content',  get_post_format() );
 			
-			ob_start();
-			the_post(); 
-		
-			get_template_part( 'content',  get_post_format() );
-				
-			$tikva_posts[] = ob_get_contents();
-			ob_end_clean();
-		}
-		// Previous/next post navigation.
-		ob_start();
-		tikva_paging_nav();
-		$tikva_paging_nav = ob_get_contents();
+		$tikva_posts[] = ob_get_contents();
 		ob_end_clean();
-	} else {
-		$tikva_have_posts = false;
-		
-		ob_start();
-	
-		// If no content, include the "No posts found" template.
-		get_template_part( 'content', 'none' );
-		$tikva_no_posts = ob_get_contents();
-		ob_end_clean();
-		
 	}
+	// Previous/next post navigation.
+	ob_start();
+	tikva_paging_nav();
+	$tikva_paging_nav = ob_get_contents();
+	ob_end_clean();
+} else {
+	$tikva_have_posts = false;
+	
+	ob_start();
+
+	// If no content, include the "No posts found" template.
+	get_template_part( 'content', 'none' );
+	$tikva_no_posts = ob_get_contents();
+	ob_end_clean();
+	
+}
 	
 
 

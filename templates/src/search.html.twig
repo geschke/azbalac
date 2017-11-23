@@ -1,0 +1,78 @@
+
+{{ header|raw }}
+
+
+
+<div id="main" class="site-main">
+
+<div class="container">
+
+
+<div class="row">
+
+
+    <div id="main-content" class="main-content">
+
+
+            {% if is_front_page and tikva_has_featured_posts %}
+            
+            <div id="featured-main" class="featured-main">
+            
+                <div class="container">
+                    {{ template_part_featured_content|raw }}
+                </div><!-- end container -->
+            </div><!-- end featured-main -->
+            
+            
+            {% endif %}
+            
+            {% if layout_style.content == 2 %}
+            
+                 <div class="{{ layout_style.col_2 }}">
+                     {{ sidebar|raw }}
+                 </div>
+            {% endif %}
+
+    <div class="{{ layout_style.col_1 }}">
+
+        <div id="primary" class="content-area">
+        <div id="content" class="site-content" role="main">
+
+            {% if have_posts %}
+
+			<header class="page-header">
+				<h1 class="page-title">{{ title_search_results }}</h1>
+			</header><!-- .page-header -->
+
+            {% for post in posts %}
+                {{ post|raw}}
+            {% endfor %}
+            {{ paging_nav|raw }}
+        {% else %}
+            {{ no_posts|raw }}
+        {% endif %}
+        
+
+		    </div><!-- #content -->
+        </div><!-- #primary -->
+    </div>
+
+    {% if layout_style.columns == 2 %}
+    {% if layout_style.content == 1 %}
+        <div class="{{ layout_style.col_2 }}">
+            {{ sidebar|raw }}
+        </div>
+    {% endif %}
+{% endif %}
+
+
+</div><!-- #main-content -->
+
+    </div><!-- row -->
+
+
+
+    </div><!-- #main -->
+</div><!-- container -->     
+
+{{ footer|raw }}

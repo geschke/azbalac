@@ -8,7 +8,7 @@
  * @subpackage Themes
  */
 ?>
-
+lalaaaaa
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php //tikva_post_thumbnail(); ?>
 

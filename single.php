@@ -9,12 +9,6 @@
 
 
 
-$twigLoader = new Twig_Loader_Filesystem(get_template_directory() . '/templates/src/');
-$twig = new Twig_Environment($twigLoader, array(
-    'cache' => get_template_directory() . '/templates/cache/',
-    'debug' => true // todo: set to false when upload to WordPress theme repository
-));
-
 ob_start();
 get_header(); 
 $header = ob_get_contents();
@@ -88,7 +82,7 @@ $tikva_footer = ob_get_contents();
 ob_end_clean();
 
 
-echo $twig->render('single.html.twig', array('header' => $header,
+echo $t7tpl->render('single.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'tikva_has_featured_posts' => tikva_has_featured_posts(),
 'show_slider_2' => $showSlider_2,

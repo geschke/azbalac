@@ -1,7 +1,9 @@
 <?php
 
 
-require_once ( get_template_directory() .'/vendor/autoload.php');
+require_once( get_template_directory() .'/vendor/autoload.php');
+require_once( get_template_directory() . '/inc/template/Template.php' );
+$t7tpl = new Tikva_Template();
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';

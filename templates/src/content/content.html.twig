@@ -1,0 +1,35 @@
+
+
+<article id="post-{{ content.theId|raw }}" {{ content.postClass|raw }}>
+	
+	<header class="entry-header">
+
+		{{ content.theTitle|raw }}
+
+		<div class="entry-meta">
+			{{ content.tikvaPostedOn|raw }}
+		
+			{% if content.commentsPopupLink %}
+				{{ content.commentsPopupLink|raw }}
+			{% endif %}
+
+			{{ content.editPostLink|raw }}
+
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	{% if content.is_search %}
+		<div class="entry-summary">
+			{{ content.theContent|raw }}
+		</div><!-- .entry-summary -->
+	{% else %}
+		<div class="entry-content">
+			{{ content.theContent|raw }}
+		</div><!-- .entry-content -->
+	{% endif %}
+
+	{{ content.theTags|raw }}
+
+
+	{{ content.output|raw }}
+</article><!-- #post-## -->

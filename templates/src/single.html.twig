@@ -27,7 +27,9 @@
   
                             {% if have_posts %}
                             {% for post in posts %}
-                                {{ post|raw}}
+                            
+                                {% include 'content/content.html.twig' with {'content': post.data } %}
+                                {{ post.content|raw}}
                             {% endfor %}
                             {{ paging_nav|raw }}
                         {% else %}

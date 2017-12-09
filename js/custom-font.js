@@ -9,7 +9,7 @@
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
- * @since       2.0
+ * @since       0.5.3
  */
 
 (function ($) {

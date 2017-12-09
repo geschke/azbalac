@@ -3,6 +3,8 @@
 
 require_once( get_template_directory() .'/vendor/autoload.php');
 require_once( get_template_directory() . '/inc/template/Template.php' );
+require_once( get_template_directory() . '/inc/template/DataContainer.php' );
+
 $t7tpl = new Tikva_Template();
 
 // Custom template tags for this theme.

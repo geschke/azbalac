@@ -37,6 +37,7 @@ ob_end_clean();
 
 
 
+$tikvaContainer = Tikva_DataContainer::getInstance();
 
 if ( have_posts() ) {
     $tikva_have_posts = true;
@@ -48,13 +49,19 @@ if ( have_posts() ) {
         ob_start();
         the_post(); 
     
+        ?>LOOOOOOP<?php
         get_template_part( 'content', get_post_format() );
+
+
         if ( comments_open() || get_comments_number() ) {
             comments_template();
         }
 
+        
 
-        $tikva_posts[] = ob_get_contents();
+        $tikva_posts_content  = ob_get_contents();
+        $tikva_posts_data = $tikvaContainer->content;
+        $tikva_posts[] = ['content' => $tikva_posts_content, 'data' => $tikva_posts_data];
         ob_end_clean();
     }
     // Previous/next post navigation.

@@ -33,7 +33,7 @@
                             {% endfor %}
                             {{ paging_nav|raw }}
                         {% else %}
-                            {{ no_posts|raw }}
+                            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
                         {% endif %}
  
                       </div><!-- #content -->

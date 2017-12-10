@@ -1,0 +1,12 @@
+
+<header class="page-header">
+	<h1 class="page-title">{{ content.pageTitle }}</h1>
+</header>
+
+<div class="page-content">
+    <p>{{ content.theContent|raw }}</p>
+
+    {% if content.searchForm %}
+        {{ content.searchForm|raw }}
+    {% endif %}
+</div><!-- .page-content -->

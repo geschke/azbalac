@@ -26,6 +26,7 @@ $sidebar = ob_get_contents();
 ob_end_clean();
 
 
+$tikvaContainer = Tikva_DataContainer::getInstance();
 
 if ( have_posts() ) {
 	$tikva_have_posts = true;
@@ -40,9 +41,12 @@ if ( have_posts() ) {
 		the_post(); 
 	
 		get_template_part( 'content',  get_post_format() );
-			
-		$tikva_posts[] = ob_get_contents();
-		ob_end_clean();
+
+		$tikva_posts_content  = ob_get_contents();
+        $tikva_posts_data = $tikvaContainer->content;
+        $tikva_posts[] = ['content' => $tikva_posts_content, 'data' => $tikva_posts_data];
+        ob_end_clean();
+
 	}
 	// Previous/next post navigation.
 	ob_start();
@@ -52,12 +56,10 @@ if ( have_posts() ) {
 } else {
 	$tikva_have_posts = false;
 	
-	ob_start();
-
 	// If no content, include the "No posts found" template.
 	get_template_part( 'content', 'none' );
-	$tikva_no_posts = ob_get_contents();
-	ob_end_clean();
+
+    $tikva_no_posts =  $tikvaContainer->contentNone;
 	
 }
 	

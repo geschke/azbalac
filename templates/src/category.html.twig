@@ -24,11 +24,13 @@
             </header><!-- .archive-header -->
            
             {% for post in posts %}
-                {{ post|raw}}
+                {% include 'content/content.html.twig' with {'content': post.data } %}
+                {{ post.content|raw}}
+                
             {% endfor %}
             {{ paging_nav|raw }}
         {% else %}
-            {{ no_posts|raw }}
+            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
         {% endif %}
            
 		</div><!-- #content -->

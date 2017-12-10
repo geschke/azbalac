@@ -1,12 +1,17 @@
-# Tikva
+# Tikva7
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.5.5
+### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
+
+Version 0.1
 
 
 ## Version history:
 
+Version 0.1
+
+- This version is derived from the release 0.5.5 of Tikva WordPress theme. It does not add any functionality.
 
 Version 0.5.5
 

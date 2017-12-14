@@ -1,5 +1,16 @@
 <?php
 
+
+
+/**
+ * DataContainer is a simple transporter for frontend data
+ *
+ * @package   Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
+ * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @license   GPL2+
+ */
 class Tikva_DataContainer
 {
     private static $instance = null;

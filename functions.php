@@ -33,6 +33,8 @@ require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSubfooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFont.php' );
 
+require_once( get_template_directory() . '/inc/Featured.php' );
+
 
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {

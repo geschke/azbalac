@@ -8,6 +8,8 @@
  */
 
  
+$tikvaContainer = Tikva_DataContainer::getInstance();
+
 
 ob_start();
 get_header(); 
@@ -33,8 +35,6 @@ $sidebar = ob_get_contents();
 ob_end_clean();
 
 
-
-$tikvaContainer = Tikva_DataContainer::getInstance();
 
 $title_search_results = '';
 if ( have_posts() ) {

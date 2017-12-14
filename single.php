@@ -8,6 +8,8 @@
  */
 
 
+$tikvaContainer = Tikva_DataContainer::getInstance();
+
 
 ob_start();
 get_header(); 
@@ -36,8 +38,6 @@ ob_end_clean();
 
 
 
-
-$tikvaContainer = Tikva_DataContainer::getInstance();
 
 if ( have_posts() ) {
     $tikva_have_posts = true;

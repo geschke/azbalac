@@ -19,7 +19,8 @@
             <div id="featured-main" class="featured-main">
             
                 <div class="container">
-                    {{ template_part_featured_content|raw }}
+                        {% include 'content/content-featured-container.html.twig' with {'featured': featured } %}
+                        
                 </div><!-- end container -->
             </div><!-- end featured-main -->
             

@@ -10,6 +10,7 @@
  */
 
 
+$tikvaContainer = Tikva_DataContainer::getInstance();
 
 ob_start();
 get_header(); 

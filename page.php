@@ -12,6 +12,9 @@
  */
 
 
+$tikvaContainer = Tikva_DataContainer::getInstance();
+
+
 ob_start();
 get_header(); 
 $header = ob_get_contents();
@@ -38,9 +41,6 @@ $sidebar = ob_get_contents();
 ob_end_clean();
 
 
-
-
-$tikvaContainer = Tikva_DataContainer::getInstance();
 
 if ( have_posts() ) {
     $tikva_have_posts = true;

@@ -1,5 +1,15 @@
 <?php
 
+
+/**
+ * Wrapper for Twig PHP template system
+ *
+ * @package   Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
+ * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @license   GPL2+
+ */
 class Tikva_Template
 {
 

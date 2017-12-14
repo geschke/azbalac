@@ -10,16 +10,18 @@
 <div id="featured-main" class="featured-main">
 
     <div class="container">
-        {{ template_part_featured_content|raw }}
+
+        {% include 'content/content-featured-container.html.twig' with {'featured': featured } %}
+
     </div><!-- end container -->
-    </div><!-- end featured-main -->
+</div><!-- end featured-main -->
 
 
 {% endif %}
 
 
 {% if is_front_page %}
-    {{  intro_elements_3|raw }}
+    {{ intro_elements_3|raw }}
     {{ show_slider_3|raw }}
 {% endif %}
 

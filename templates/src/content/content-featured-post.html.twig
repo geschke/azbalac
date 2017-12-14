@@ -16,11 +16,11 @@
 
 
         {% if post.setting_posts_featured_date %}
-            {% if post.post_type == 'post' %}
-                {{ post.posted_on }}&nbsp;
+            {% if post.postType == 'post' %}
+                {{ post.postedOn|raw }}&nbsp;
             {% endif %}
 
-            {{ post.edit_post_link }}
+            {{ post.editPostLink|raw }}
         
         {% endif %}
 

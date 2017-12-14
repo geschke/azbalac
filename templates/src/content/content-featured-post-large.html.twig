@@ -10,7 +10,7 @@
                     {{ post.postedOn|raw }}&nbsp;
                     {% endif %}
 
-                    {{ post.edit_post_link }}
+                    {{ post.editPostLink|raw }}
 
                 {% endif %}
                 
@@ -19,7 +19,6 @@
                 {% endif %}
 
             <p></p>
-        
             {{ post.content|raw }}
             
     </article>

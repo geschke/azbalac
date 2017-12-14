@@ -40,7 +40,7 @@ class Tikva_Featured
 
 
         global $post; // blergh!!!
-
+        
         // if available, use jumbotron with one and only large featured post
         if (isset($this->postsLarge) && is_array($this->postsLarge) && count($this->postsLarge)) {
             foreach ( $this->postsLarge as $order => $post) {

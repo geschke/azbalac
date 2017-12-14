@@ -31,7 +31,7 @@ if (absint(get_option('setting_posts_featured_date'))) {
 
     ob_start(); // todo...
     edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
-    $content['post_link'] = ob_get_contents();
+    $content['editPostLink'] = ob_get_contents();
     ob_end_clean();
     
 } 
@@ -49,9 +49,14 @@ if ( has_post_thumbnail() ) {
 
 if (preg_match('/<!--more.*-->/',$post->post_content)) {
 
-    $content['content'] = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
+    $contentMain = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
+    $contentMain = apply_filters( 'the_content', $contentMain );
+    $content['content'] = $contentMain;
 } else {
-    $content['content'] = get_the_excerpt();
+    $contentMain = get_the_excerpt();
+    $contentMain = apply_filters( 'the_excerpt', get_the_excerpt() );
+
+    $content['content'] = $contentMain;
 }
 
 

@@ -135,10 +135,12 @@ class Tikva_Featured
                     $colsFeaturedFirstIndex--;
                 } else {
                     $post->themeCols = $colsTranslate[$colsFeaturedLast];
+                    $post->linebreak = false;
                     if ($countFeaturedStandard > $postNumber - $colsFeaturedFirst + 1 &&
                         ($postNumber - $colsFeaturedFirst + 1) % $colsFeaturedLast == 1 &&
                         $postNumber != 0) {
-                        echo '</div><div class="row">';
+                            $post->linebreak = true;
+                        #echo '</div><div class="row">';
                     }
                 }
                 $post->postNumber = $postNumber++;
@@ -150,6 +152,7 @@ class Tikva_Featured
                 $contentFeatured[] = $tikvaContainer->contentFeaturedPost;
               
             }
+           
             return $contentFeatured;
         }
         return null;

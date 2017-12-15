@@ -12,6 +12,7 @@ $content = [];
 $content['theId'] = get_the_ID();
 
 $content['themeCols'] = $post->themeCols;
+$content['linebreak'] = $post->linebreak;
 
 $content['postClass'] =  'class="' . join( ' ', get_post_class() ) . '"'; // taken from post-template.php 
 

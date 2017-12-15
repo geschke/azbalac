@@ -46,7 +46,7 @@ if (!class_exists('Tikva_Welcome')) {
          */
         public function Tikva_welcome_register_menu()
         {
-            add_theme_page('About Tikva', 'About Tikva', 'activate_plugins', 'tikva-welcome', array($this, 'Tikva_welcome_screen'));
+            add_theme_page('About Tikva7', 'About Tikva7', 'activate_plugins', 'tikva-welcome', array($this, 'Tikva_welcome_screen'));
         }
 
         /**

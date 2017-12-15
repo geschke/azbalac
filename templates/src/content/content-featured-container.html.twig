@@ -17,6 +17,9 @@
         <div class="row">
 
             {% for content in featured.posts_standard %}
+                {% if content.linebreak %}
+                    </div><div class="row">
+                {% endif %}
                 {% include 'content/content-featured-post.html.twig' with {'post': content } %}
             {% endfor %}
         </div>

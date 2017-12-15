@@ -13,6 +13,8 @@ Version 0.1
 
 - This version is derived from the release 0.5.5 of Tikva WordPress theme. It does not add any functionality.
 
+## Version history of Tikva template:
+
 Version 0.5.5
 
 - New feature: Live preview of typography settings implemented. While choosing a font and set the font size in the Customizer the final design will be shown in the live preview. 

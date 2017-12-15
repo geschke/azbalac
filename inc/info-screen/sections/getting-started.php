@@ -9,7 +9,7 @@ $Tikva = wp_get_theme( 'tikva' );
 
  <div role="tabpanel" class="tab-pane  fade in  active" id="tikva-tab-getting-started">
  
-        <h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva', 'tikva'); ?> 
+        <h1 class="tikva-welcome-title"><?php _e('Welcome to Tikva7', 'tikva'); ?> 
             <?php
         if( !empty($Tikva['Version']) ) { 
             echo sprintf(__("- Version %s",'tikva'), esc_attr( $Tikva['Version'] )); 
@@ -29,8 +29,8 @@ $Tikva = wp_get_theme( 'tikva' );
 	<hr />
 	
 	<div class="tikva-tab-pane-half tikva-tab-pane-first-half">
-		<h3><?php esc_html_e( 'About Tikva theme', 'tikva' ); ?></h3>
-		<p><?php esc_html_e( 'Tikva is a pure and basic WordPress theme which is based on the Bootstrap HTML, CSS, and JS framework. It implements some customization features, e.g. you can switch between more than a dozen predefined styles (mostly taken from the Bootswatch free themes), two navigation bar styles and 18 footer layouts. You can add a simple slider - the theme uses the "carousel" feature of Boostrap and configure the slider position and timing options.  If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation on the WordPress website.', 'tikva' ); ?></p>
+		<h3><?php esc_html_e( 'About Tikva7 theme', 'tikva' ); ?></h3>
+		<p><?php esc_html_e( 'Tikva7 is a pure and basic WordPress theme which is based on the Bootstrap HTML, CSS, and JS framework. It implements some customization features, e.g. you can switch between more than a dozen predefined styles (mostly taken from the Bootswatch free themes), two navigation bar styles and 18 footer layouts. You can add a simple slider - the theme uses the "carousel" feature of Boostrap and configure the slider position and timing options.  If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation on the WordPress website.', 'tikva' ); ?></p>
 
 		<hr />
 

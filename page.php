@@ -12,9 +12,6 @@
  */
 
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
-
-
 ob_start();
 get_header(); 
 $header = ob_get_contents();
@@ -27,10 +24,8 @@ if ( is_front_page() ) {
     $introElements_3 = Tikva_Section_Content_Column::getIntroductionElements(3);
 } 
 
-ob_start();
-get_template_part( 'featured-content' );
-$template_part_featured_content = ob_get_contents();
-ob_end_clean();
+$featured = new Tikva_Featured();
+$featuredPosts = $featured->getFeaturedPosts();
 
 $layoutStyle = tikva_get_layout();
 
@@ -41,6 +36,9 @@ $sidebar = ob_get_contents();
 ob_end_clean();
 
 
+
+
+$tikvaContainer = Tikva_DataContainer::getInstance();
 
 if ( have_posts() ) {
     $tikva_have_posts = true;
@@ -90,6 +88,7 @@ ob_end_clean();
 echo $t7tpl->render('index.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'tikva_has_featured_posts' => tikva_has_featured_posts(),
+'featured' => $featuredPosts,
 'show_slider_2' => $showSlider_2,
 'show_slider_3' => $showSlider_3,
 'template_part_featured_content' => $template_part_featured_content,

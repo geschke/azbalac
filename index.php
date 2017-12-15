@@ -31,11 +31,6 @@ if ( is_front_page() ) {
     $introElements_3 = Tikva_Section_Content_Column::getIntroductionElements(3);
 } 
 
-/*ob_start();
-get_template_part( 'featured-content' );
-$template_part_featured_content = ob_get_contents();
-ob_end_clean();
-*/
 $featured = new Tikva_Featured();
 $featuredPosts = $featured->getFeaturedPosts();
 

@@ -28,8 +28,9 @@
                             {% if have_posts %}
                             {% for post in posts %}
                             
-                                {% include 'content/content.html.twig' with {'content': post.data } %}
-                                {{ post.content|raw}}
+                                {% include 'content/content.html.twig' with {'content': post.data, 'comment': post.commentData } %}
+                              
+
                             {% endfor %}
                             {{ paging_nav|raw }}
                         {% else %}

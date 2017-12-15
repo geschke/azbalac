@@ -44,7 +44,7 @@ if ( have_posts() ) {
     // Start the Loop.
     while ( have_posts() ) {
        
-        ob_start();
+       
         the_post(); 
     
         get_template_part( 'content', get_post_format() );
@@ -55,17 +55,22 @@ if ( have_posts() ) {
         }
 
         
-
-        $tikva_posts_content  = ob_get_contents();
+        $tikva_posts_content = ''; // not needed anymore!
+     
+      
         $tikva_posts_data = $tikvaContainer->content;
-        $tikva_posts[] = ['content' => $tikva_posts_content, 'data' => $tikva_posts_data];
-        ob_end_clean();
+        $tikva_posts_comment = $tikvaContainer->commentData;
+       
+        $tikva_posts[] = ['content' => $tikva_posts_content, 
+            'commentData' => $tikva_posts_comment, 
+            'data' => $tikva_posts_data];
+        
     }
     // Previous/next post navigation.
-    ob_start();
+    //ob_start();
     //tikva_paging_nav();
     //$tikva_paging_nav = ob_get_contents();
-    ob_end_clean();
+    //ob_end_clean();
 }
 else {
     $tikva_have_posts = false;

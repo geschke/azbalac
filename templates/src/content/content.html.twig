@@ -27,6 +27,7 @@
 			{{ content.theContent|raw }}
 		</div><!-- .entry-content -->
 	{% endif %}
+	{% include 'comments.html.twig' with {'content': comment } %}
 
 	{{ content.theTags|raw }}
 

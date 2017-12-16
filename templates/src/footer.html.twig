@@ -1,0 +1,27 @@
+
+{% if content.isFrontPage %} 
+    {{ content.slider_4|raw }}
+    {{ content.introductionElements_4|raw }}
+{% endif %}
+
+{{ content.socialMediaButtons_2|raw }}
+
+
+<div class="site-footer-1" style="{{ content.styles.footerStyleColorBg }} {{ content.styles.footerStyleColorFg }}">
+
+	<div role="complementary" class="container">
+    
+    {{ content.footer|raw }}
+	</div>
+
+
+{{ content.socialMediaButtons_3|raw }}
+
+</div><!-- end site-footer-1 -->
+
+{{ content.subfooter|raw }}
+
+{{ content.wpFooter|raw }}
+<div id="media-width-detection-element"></div>
+</body>
+</html>

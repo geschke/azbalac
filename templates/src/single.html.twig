@@ -59,4 +59,5 @@
       </div><!-- #main -->
   </div><!-- container -->
 
-  {{ footer|raw }}
+  {% include 'footer.html.twig' with {'content': footer } %}
+

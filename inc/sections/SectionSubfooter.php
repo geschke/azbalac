@@ -12,31 +12,40 @@
 class Tikva_Section_Subfooter
 {
 
-    public static function buildStyles() 
+    public static function buildStyles()
     {
+        echo self::getStyles();
+    }
+
+    public static function getStyles() 
+    {
+        $output = '';
         $footerActivate =  get_option('setting_subfooter_activate',1);
         if (intval($footerActivate) !== 1) {
           return '';
         }
         $colorLink = get_theme_mod('setting_subfooter_color_link');
         
-        ?>
-        <style type="text/css">
+        $output .= '<style type="text/css">
          .subfooter a, .subfooter a:hover {
-            color: <?php echo $colorLink; ?> ;
+            color: ' . $colorLink .';
         }
 
-        </style>
-        <?php
-        
+        </style>';
+        return $output;        
     }
     
     /**
      * Add Custom SubFooter Content 
      */
-    public static function build()
+    public static function buildContent()
     {
-        
+        echo self::getContent();
+    }
+
+    public static function getContent()
+    {
+        $output = '';        
         $footerActivate =  get_option('setting_subfooter_activate',1);
        
         if (intval($footerActivate) !== 1) {
@@ -50,23 +59,21 @@ class Tikva_Section_Subfooter
         if (!$content) {
             return; // no output
         }
-        $styles = self::getStyles();
-               ?>
-<div class="subfooter" style="<?php echo $styles['styleColorBg']; echo $styles['styleColorFg']; ?>">
-<div class="container">
+        $styles = self::getStyleData();
+        
+        $output .= '<div class="subfooter" style="' . $styles['styleColorBg'] . $styles['styleColorFg'] . '">
+        <div class="container">
 
     <footer id="colophonsub" class="site-footer" role="contentinfo">
-    <div class="site-info">
-        <?php echo $content; ?>
-        </div><!-- .site-info -->
+    <div class="site-info">' . $content . '</div><!-- .site-info -->
     </footer><!-- #colophonsub -->
 
 </div>
-</div>
-        <?php 
+</div>';
+
     }
 
-    public static function getStyles()
+    public static function getStyleData()
     {
         $colorBg = get_theme_mod('setting_subfooter_color_bg');
 

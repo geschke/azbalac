@@ -16,6 +16,16 @@ class Tikva_Section_Social_Media_Buttons
 
     public static function showButtons($position)
     {
+        $output = self::getButtons($position);
+        if (null === $output) {
+            return null;
+        }
+        echo $output;
+    }
+
+
+    public static function getButtons($position)
+    {
         if (!get_option('setting_social_media_activate')) {
             return null;
         }
@@ -23,12 +33,12 @@ class Tikva_Section_Social_Media_Buttons
         if ($positionOption != $position) {
             return null;
         }
-        self::build();
+        return self::buildButtons();
     }
 
-    public static function build()
+    public static function buildButtons()
     {
-      
+        $output = '';
         $socialButtons = array('social_media_facebook' => 'facebook',
         'social_media_github' => 'github',
         'social_media_google' => 'google-plus',
@@ -52,27 +62,25 @@ class Tikva_Section_Social_Media_Buttons
         }
         $buttonSize = get_option('setting_social_button_size');
         $buttonType = get_option('setting_social_button_type');
-?>
-    
+        $output .= '    
 <div class="row">
 <div class="container">
 <div class="col-md-12 social-media-buttons"> 
-    <div style="text-align: <?php echo $align; ?>;">
+    <div style="text-align: ' . $align . '">';
         
-        
-        <?php
         $socialOutput = '';
         foreach ($socialButtons as $socialOption => $socialIcon) {
             $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType);
         }
-        echo $socialOutput;
-        ?>
-    </div>
+        $output .= $socialOutput;
+        $output .= '
+        </div>
 </div>
 </div>
-</div>
-    <?php
-    }
+</div>';
+
+    return $output;
+}
 
 
     protected static function buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType)

@@ -83,10 +83,10 @@ else {
 }
 
 
-ob_start();
 get_footer();
-$tikva_footer = ob_get_contents();
-ob_end_clean();
+$tikva_footer = $tikvaContainer->footerData;
+var_dump($tikva_footer);
+die;      
 
 
 echo $t7tpl->render('single.html.twig', array('header' => $header,

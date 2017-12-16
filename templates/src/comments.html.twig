@@ -9,7 +9,7 @@
 
             <h2 class="comments-title">
                 
-                {{ content.commentsTitle }}
+                {{ content.commentsTitle|raw }}
             </h2>
 
             {% if content.getCommentPagesCount > 1 and content.optionPageComments %}

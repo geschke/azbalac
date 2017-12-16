@@ -1,4 +1,5 @@
-{{ header|raw }}
+
+{% include 'header.html.twig' with {'content': header } %}
 
 
 {% if is_front_page %}

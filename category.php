@@ -12,10 +12,9 @@
 
 $tikvaContainer = Tikva_DataContainer::getInstance();
 
-ob_start();
 get_header(); 
-$header = ob_get_contents();
-ob_end_clean();
+$header = $tikvaContainer->headerData;
+
 
 
 $layoutStyle = tikva_get_layout();

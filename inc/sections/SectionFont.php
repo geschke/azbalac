@@ -3,28 +3,30 @@
 /**
  * Implements Subfooter functionality.
  *
- * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.3
+ * @package   Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
 class Tikva_Section_Font 
 {
 
+
     public static function buildStyles() 
+    {
+        echo self::getStyles();
+    
+    }
+
+    public static function getStyles()
     {
         $bodyFont = json_decode(urldecode(get_theme_mod('setting_typography_body')));
         $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);
         $cssBody = self::buildBodyCss($bodyFont);
-
-      
-        echo $cssBody;
-        echo $cssHeadline;
-       
-    
+        return $cssBody . $cssHeadline;
     }
 
     protected static function buildBodyCss($bodyFont)

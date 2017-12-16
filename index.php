@@ -17,10 +17,9 @@
 
 $tikvaContainer = Tikva_DataContainer::getInstance();
 
-ob_start();
 get_header(); 
-$header = ob_get_contents();
-ob_end_clean();
+$header = $tikvaContainer->headerData;
+
 
 $showSlider_2 = '';
 $showSlider_3 = '';

@@ -7,12 +7,10 @@
  * @since Tikva7 0.1
  */
 
- 
+$tikvaContainer = Tikva_DataContainer::getInstance();
 
-ob_start();
 get_header(); 
-$header = ob_get_contents();
-ob_end_clean();
+$header = $tikvaContainer->headerData;
 
 $showSlider_2 = '';
 if ( is_front_page() ) {
@@ -31,9 +29,6 @@ get_sidebar();
 $sidebar = ob_get_contents();
 ob_end_clean();
 
-
-
-$tikvaContainer = Tikva_DataContainer::getInstance();
 
 $title_search_results = '';
 if ( have_posts() ) {

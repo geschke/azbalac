@@ -47,7 +47,7 @@ class Tikva_Section_Subfooter
     {
         $output = '';        
         $footerActivate =  get_option('setting_subfooter_activate',1);
-       
+      
         if (intval($footerActivate) !== 1) {
           return '';
         }
@@ -70,7 +70,7 @@ class Tikva_Section_Subfooter
 
 </div>
 </div>';
-
+        return $output;
     }
 
     public static function getStyleData()

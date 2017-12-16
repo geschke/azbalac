@@ -17,12 +17,16 @@ class Tikva_Section_Footer
     {
         $output = '';
         $output .= sprintf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
-        if (!dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
+        if (!is_active_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
             $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'tikva') . '</h3>' .
             '<div class="error-icon">' .
             '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'tikva'), $footerNumber) . '</p>' .
             '<a href="' . esc_url(admin_url('widgets.php')) . '" title="' . __('No Widgets Selected', 'tikva') . '">' . __('Click here to go to Widget area.', 'tikva') . '</a>' . '</div>';
-        };
+        } else {
+            ob_start();
+            dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber));
+            $output .= ob_get_clean();
+        }
         $output .= '</div>';
         return $output;
     }
@@ -45,7 +49,7 @@ class Tikva_Section_Footer
         if (intval($footerActivate) === 1 and ! empty($footerLayout)) {
             $output .= '<div class="row" style="padding: 10px; 0px; 10px;" id="footer">';
             if ($footerLayout == 1) {
-                self::initializeFooterWidget(1, 12);
+                $output .= self::initializeFooterWidget(1, 12);
             } else if ($footerLayout == 2) {
 
                 $output .= self::initializeFooterWidget(1, 6);

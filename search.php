@@ -73,10 +73,9 @@ else {
 }
 
 
-ob_start();
 get_footer();
-$tikva_footer = ob_get_contents();
-ob_end_clean();
+$tikva_footer = $tikvaContainer->footerData;
+
 
 
 echo $t7tpl->render('search.html.twig', array('header' => $header,

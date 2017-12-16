@@ -25,11 +25,11 @@ $content['socialMediaButtons_3'] = Tikva_Section_Social_Media_Buttons::getButton
 
 $content['subfooter'] = Tikva_Section_Subfooter::getContent();
 
-
 ob_start();
 wp_footer(); 
 $content['wpFooter'] = ob_get_clean();
 
 
 $tikvaContainer = Tikva_DataContainer::getInstance();
+
 $tikvaContainer->footerData = $content;

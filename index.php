@@ -38,6 +38,7 @@ $featuredPosts = $featured->getFeaturedPosts();
 $layoutStyle = tikva_get_layout();
 
 
+
 get_sidebar();
 $sidebar = $tikvaContainer->contentSidebar;
 

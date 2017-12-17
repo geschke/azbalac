@@ -15,7 +15,7 @@ class Tikva_Footer
 
     private static function initializeFooterWidget($footerNumber, $columns)
     {
-        printf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
+        printf('<div class="widget-area col-lg-%d col-md-%d col-sm-%d">', $columns, $columns, columns);
         if (!dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
             echo '<h3 class="widget-title">' . __('Please Add Widgets', 'tikva') . '</h3>',
             '<div class="error-icon">',

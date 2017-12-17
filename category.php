@@ -19,11 +19,9 @@ $header = $tikvaContainer->headerData;
 
 $layoutStyle = tikva_get_layout();
 
-ob_start();
-get_sidebar('content');
 get_sidebar();
-$sidebar = ob_get_contents();
-ob_end_clean();
+$sidebar = $tikvaContainer->contentSidebar;
+
 
 
 $tikvaContainer = Tikva_DataContainer::getInstance();

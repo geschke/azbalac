@@ -26,11 +26,32 @@ $content['navbarFixed'] = tikva_get_navbar_layout();
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 
 
+
 $content['subfooterStyles'] = Tikva_Section_Subfooter::getStyles();
 
 ob_start();
 wp_head(); 
 $content['wpHead'] = ob_get_clean();
+
+if (has_nav_menu('header-menu')) {
+    
+
+    $locations = get_theme_mod( 'nav_menu_locations' );
+    var_dump($locations);
+
+
+    wp_nav_menu( array( //'menu' => 'header-menu',
+            'theme_location' => 'header-menu',
+                            'items_wrap' => '%3$s',
+                        'container' => '',
+                        'menu_class'     => 'nav navbar-nav',
+                        'walker' => new HeaderMenuWalker(),
+                        'echo' => true
+                        ) );
+                        die;
+
+}
+die("hard");
 
 $content['sectionFontStyles'] = Tikva_Section_Font::getStyles();
 
@@ -59,16 +80,20 @@ if ( is_front_page()) {
 
 $content['toggleNavigation'] = __( 'Toggle navigation', 'tikva' );
 
-$content['wpNavMenu'] = wp_nav_menu( array( 'theme_location' => 'header-menu',
+$content['wpNavMenu'] = wp_nav_menu( array( 'menu' => 'header-menu',
+        'theme_location' => 'header-menu',
                         'items_wrap' => '%3$s',
                     'container' => '',
                     'menu_class'     => 'nav navbar-nav',
                     'walker' => new HeaderMenuWalker(),
-                    'echo' => false
+                    'echo' => true
                     ) );
 
-
-
+die;                
+                   // print_r(wp_get_nav_menus());
+echo "<pre>";
+print_r($content);
+die;
 $tikvaContainer = Tikva_DataContainer::getInstance();
 
 $tikvaContainer->headerData = $content;

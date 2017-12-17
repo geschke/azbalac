@@ -2,9 +2,11 @@
 /**
  * The Content Sidebar
  *
- * @package WordPress
- * @subpackage tikva
- * @since Tikva 0.1
+ * @package Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
+ * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @license   GPL2+
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) ) {

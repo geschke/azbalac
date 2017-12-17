@@ -64,7 +64,7 @@
             {% if layout_style.columns == 2 %}
                 {% if layout_style.content == 1 %}
                     <div class="{{ layout_style.col_2 }}">
-                        {{ sidebar|raw }}
+                        {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
                     </div>
                 {% endif %}
             {% endif %}

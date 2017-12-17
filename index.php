@@ -10,8 +10,10 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Tikva7
- * @subpackage Themes
+ * @subpackage Tikva7
  * @since Tikva7 0.1
+ * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @license   GPL2+
  */
 
 
@@ -35,11 +37,9 @@ $featuredPosts = $featured->getFeaturedPosts();
 
 $layoutStyle = tikva_get_layout();
 
-ob_start();
-get_sidebar('content');
+
 get_sidebar();
-$sidebar = ob_get_contents();
-ob_end_clean();
+$sidebar = $tikvaContainer->contentSidebar;
 
 
 if ( have_posts() ) {

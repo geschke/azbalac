@@ -3,9 +3,9 @@
 /**
  * Implements Content Sections functionality.
  *
- * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @package   Tikva7
+ * @subpackage Tikva7
+ * @since Tikva7 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */

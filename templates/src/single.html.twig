@@ -47,6 +47,8 @@
               {% if layout_style.columns == 2 and layout_style.content == 1 %}
 
               <div class="{{ layout_style.col_2 }}">
+                    {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
+
                   {{ sidebar|raw }}
               </div>
               {% endif %}

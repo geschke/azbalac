@@ -766,23 +766,25 @@ class Tikva_Customizer
             ),
         ));
 
-        $wp_customize->add_setting('navbar_style_inverse', array(
-            'default' => 'default',
+        $wp_customize->add_setting('navbar_style', array(
+            'default' => 'light',
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyleInverse')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyle')
         ));
 
-        $wp_customize->add_control('navbar_style_inverse', array(
+        $wp_customize->add_control('navbar_style', array(
             'label' => __('Navbar style', 'tikva'),
             'section' => 'section_theme_options_general',
-            'settings' => 'navbar_style_inverse',
+            'settings' => 'navbar_style',
             'type' => 'radio',
             'choices' => array(
-                'default' => __('Default', 'tikva'),
-                'inverse' => __('Inverse', 'tikva'),
+                'light' => __('Light', 'tikva'),
+                'dark' => __('Dark', 'tikva'),
             ),
         ));
+
+        // todo: choose background color of navbar, maybe with presets bg-* colors
     }
 
 

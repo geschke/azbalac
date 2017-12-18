@@ -21,7 +21,7 @@ $content['layoutStyle'] = tikva_get_layout();
 
 $content['bodyStyles'] = tikva_get_body_styles();
 
-$content['navbarFixed'] = tikva_get_navbar_layout();
+$content['navbarFixed'] = tikva_get_navbar_layout(); // fixed-top or default
 
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 

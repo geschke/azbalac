@@ -105,12 +105,12 @@ class Tikva_Customizer_Sanitizer
         return $input;
     }
     
-    public function sanitizeNavbarStyleInverse($input)
+    public function sanitizeNavbarStyle($input)
     {
-        if ($input == 'inverse') {
+        if ($input == 'dark') {
             return $input;
         }
-        return 'default';
+        return 'light';
     }
 
     public function sanitizeNavbarFixed($input)

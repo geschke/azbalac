@@ -6,8 +6,8 @@
  *
  */
 ( function( $ ) {
-	var body    = $( 'body' ),
-		_window = $( window );
+	var body    = $( 'body' );
+		//_window = $( window );
 
 
     var mediaSize = '';
@@ -102,7 +102,7 @@
     };
 
 
-    _window.resize(function () {
+    $( window).resize(function () {
         if (! $('#site-header-image').length) {
             return false;
         }
@@ -233,7 +233,8 @@
 		}
 	} );
 	*/
-    _window.load(function() {
+
+    $(window).on('load', function() {
         if (!$('#site-header-image').length) {
             return;
         }

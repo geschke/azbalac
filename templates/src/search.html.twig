@@ -7,10 +7,9 @@
 <div class="container">
 
 
-<div class="row">
+<div id="main-content" class="row main-content">
 
 
-    <div id="main-content" class="main-content">
 
 
             {% if is_front_page and tikva_has_featured_posts %}
@@ -29,7 +28,8 @@
             {% if layout_style.content == 2 %}
             
                  <div class="{{ layout_style.col_2 }}">
-                     {{ sidebar|raw }}
+                    {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
+                    
                  </div>
             {% endif %}
 
@@ -69,9 +69,8 @@
 {% endif %}
 
 
-</div><!-- #main-content -->
 
-    </div><!-- row -->
+    </div><!-- row and main-content -->
 
 
 

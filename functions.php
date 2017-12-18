@@ -325,7 +325,9 @@ function tikva_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true );
+    wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );
+
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0.0', true );
 
     /*if ( is_singular() && wp_attachment_is_image() ) {
         wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
@@ -425,7 +427,7 @@ add_filter( 'wp_title', 'tikva_wp_title', 10, 2 );
 
 
 function add_class_the_tags($html){
-    $html = str_replace('<a','<a class="btn btn-info btn-xs"',$html);
+    $html = str_replace('<a','<a class="badge badge-info"',$html);
     return $html;
 }
 add_filter('the_tags','add_class_the_tags',10,1);
@@ -485,21 +487,21 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
-                $styleCol_1 = 'col-md-12 col-sm-12';
-                $styleCol_2 = 'col-md-12 col-sm-12';
+                $styleCol_1 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
+                $styleCol_2 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
                 break;
             case 3:
                 $columns = 2;
                 $content = 2; // main content right
-                $styleCol_1 = 'col-md-9 col-sm-8';
-                $styleCol_2 = 'col-md-3 col-sm-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
                 break;
             case 2:
             default:
                 $columns = 2;
                 $content = 1; // main content left
-                $styleCol_1 = 'col-md-9 col-sm-8';
-                $styleCol_2 = 'col-md-3 col-sm-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
                 break;
         }
         return array('columns' => $columns,

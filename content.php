@@ -83,9 +83,7 @@ $content['theContent'] = ob_get_contents();
 ob_end_clean();
 
 ob_start();
-
-	
-	the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','tikva'), ' ','' );
+the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','tikva'), ' ','' );
 $content['theTags'] = ob_get_contents();
 ob_end_clean();
 
@@ -94,17 +92,17 @@ $separator = ' ';
 $content['output'] = '';
 
 if($categories) {
-    $content['output'] .= "<div>";
+    $content['output'] .= '<div><span class="fa fa-th-list"></span> ';
         $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'tikva' );
-        $content['output'] .=  '<ul class="nav nav-pills">';
+        $content['output'] .= '&nbsp;';
         foreach($categories as $category) {
-            $catOutput .= '<li><a href="'.get_category_link( $category->term_id ).'"
+            $catOutput .= '<a class="badge badge-secondary" href="'.get_category_link( $category->term_id ).'"
                 title="' .
                 esc_attr( sprintf( __( "View all posts in %s",'tikva' ), $category->name ) ) . '">'.$category->cat_name
-                .'</a></li>'.$separator;
+                .'</a>'.$separator;
         }
         $content['output'] .= trim($catOutput, $separator);
-        $content['output'] .= '</ul></div>';
+        $content['output'] .= '</div>';
 
     }
 

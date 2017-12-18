@@ -8,23 +8,26 @@
 {{ show_slider_2|raw }}
 {% endif %}    
 
+
+<div class="container">
+
+
  <div id="main" class="site-main">
  
-      <div class="row">
+      <div id="main-content" class="row main-content">
   
-          <div id="main-content" class="main-content">
 
             {% if layout_style.content == 2 %}
 
                   <div class="{{ layout_style.col_2 }}">
-                      {{ sidebar|raw }}
+                    {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
                   </div>
               {% endif %}
   
               <div class="{{ layout_style.col_1 }}">
   
-                  <div id="primary" class="content-area">
-                      <div id="content" class="site-content" role="main">
+                  <div id="primary2" class="content-area2">
+                      <div id="content2" class="site-content2" role="main2">
   
                             {% if have_posts %}
                             {% for post in posts %}
@@ -49,14 +52,13 @@
               <div class="{{ layout_style.col_2 }}">
                     {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
 
-                  {{ sidebar|raw }}
               </div>
               {% endif %}
   
    
-          </div><!-- #main-content -->
+      
   
-      </div><!-- row -->
+      </div><!-- row and main-content -->
  
  
       </div><!-- #main -->

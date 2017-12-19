@@ -541,10 +541,10 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
         $navbarStyleClass = '';
 
         if ($navbarData == 'dark') {
-            $navbarStyleClass .= ' navbar-dark';
+            $navbarStyleClass .= ' navbar-dark bg-dark';
         }
         else { // light
-            $navbarStyleClass .= ' navbar-light';
+            $navbarStyleClass .= ' navbar-light bg-light';
         }
 
         if ($navbarFixed == 'fixed-top') {

@@ -10,11 +10,16 @@
     {{ content.headerImageData|raw }}
 
     {% if content.navbarFixed == 'fixed-top' and content.hasNavMenuHeaderMenu %}
+    
             <style type="text/css">
+            /* Show it is fixed to the top */
                 body {
-                    padding-top: 70px !important;
+                min-height: 75rem !important;
+                padding-top: 4.5rem !important;
                 }
-                body.admin-bar .navbar-fixed-top { top: 28px !important; }
+                body.admin-bar .navbar-fixed-top { 
+                    top: 28px !important; 
+                }
 
                 /* v4 notice above main navbar */
                 .v4-tease {
@@ -83,7 +88,7 @@
 
 {% if content.hasNavMenuHeaderMenu %}
 
-
+{#
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
              
         <div class="collapse navbar-collapse" >
@@ -102,6 +107,7 @@
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Another action with more text</a>
+                
                
               </div>
             </li>
@@ -110,14 +116,13 @@
           
         </div>
       </nav>
+#}
 
 
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-lg {{ content.headerStyles.navbarStyleClass }}" role="navigation">
-        {% if content.navbarFixed == 'fixed-top' %}
-            <div class="container">
-        {% endif %}   
+    <nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }}" role="navigation">
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
         </button>
@@ -142,10 +147,6 @@
                 </ul>
             </div><!--/.nav-collapse -->
         
-
-            {% if content.navbarFixed == 'fixed-top' %}
-                </div>
-            {% endif %}
             
             </nav> <!-- end navbar-->
 

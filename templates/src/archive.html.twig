@@ -1,45 +1,40 @@
 
 {% include 'header.html.twig' with {'content': header } %}
 
-
 <div id="main" class="site-main">
 
-<div class="container">
+    <div class="container">
+        <div class="row">
 
+            <div class="col-md-9 col-sm-8">
+                <section id="primary" class="content-area">
+                    <div id="content" class="site-content" role="main">
 
-<div class="row">
+                        {% if have_posts %}
 
-    <div class="col-md-9 col-sm-8">
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+                            <header class="page-header">
+                                <h1 class="page-title">{{ page_title }} schallala</h1>
+                            </header><!-- .page-header -->
+                    
+                            {% for post in posts %}
+                                {% include 'content/content.html.twig' with {'content': post.data } %}
+                                {{ post.content|raw}}
+                            {% endfor %}
+                            {{ paging_nav|raw }}
+                        {% else %}
+                            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
+                        {% endif %}
 
-            {% if have_posts %}
+                    </div><!-- #content -->
+                </section><!-- #primary -->
+            </div>
 
-                <header class="page-header">
-                    <h1 class="page-title">{{ page_title }} schallala</h1>
-                </header><!-- .page-header -->
-        
-                {% for post in posts %}
-                    {% include 'content/content.html.twig' with {'content': post.data } %}
-                    {{ post.content|raw}}
-                {% endfor %}
-                {{ paging_nav|raw }}
-            {% else %}
-                {% include 'content/content-none.html.twig' with {'content': no_posts } %}
-            {% endif %}
+            <div class="col-md-3 col-sm-4">
+                {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
+            </div>
+        </div>
 
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
-    </div>
-
-    <div class="col-md-3 col-sm-4">
-        {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
-    </div>
-
-</div>
-
-</div><!-- container -->
+    </div><!-- container -->
 </div><!-- #main -->
 
 {% include 'footer.html.twig' with {'content': footer } %}

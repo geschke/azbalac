@@ -52,10 +52,10 @@
             newWidth = 690;
         } else if (mediaSize == 'md') {
             imgData = $.getHeaderImage(1,0);
-            newWidth = 912;
+            newWidth = 930;
         } else { // lg
             imgData = $.getHeaderImage(0,0);
-            newWidth = 1114;
+            newWidth = 1110;
         }
         if (imgData.image != '') {
             $('#site-header').show();

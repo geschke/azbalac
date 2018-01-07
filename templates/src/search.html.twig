@@ -4,78 +4,59 @@
 
 <div id="main" class="site-main">
 
-<div class="container">
-
-
-<div id="main-content" class="row main-content">
-
-
-
+    <div class="container">
+        <div id="main-content" class="row main-content">
 
             {% if is_front_page and tikva_has_featured_posts %}
             
-            <div id="featured-main" class="featured-main">
-            
-                <div class="container">
-                        {% include 'content/content-featured-container.html.twig' with {'featured': featured } %}
-                        
-                </div><!-- end container -->
-            </div><!-- end featured-main -->
-            
-            
+                <div id="featured-main" class="featured-main">
+                
+                    <div class="container">
+                            {% include 'content/content-featured-container.html.twig' with {'featured': featured } %}
+                            
+                    </div><!-- end container -->
+                </div><!-- end featured-main -->
             {% endif %}
             
             {% if layout_style.content == 2 %}
             
-                 <div class="{{ layout_style.col_2 }}">
+                <div class="{{ layout_style.col_2 }}">
                     {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
-                    
-                 </div>
+                </div>
             {% endif %}
 
-    <div class="{{ layout_style.col_1 }}">
+            <div class="{{ layout_style.col_1 }}">
 
-        <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
+                <div id="primary" class="content-area">
+                    <div id="content" class="site-content" role="main">
 
-            {% if have_posts %}
+                        {% if have_posts %}
+                            <header class="page-header">
+                                <h1 class="page-title">{{ title_search_results }}</h1>
+                            </header><!-- .page-header -->
 
-			<header class="page-header">
-				<h1 class="page-title">{{ title_search_results }}</h1>
-			</header><!-- .page-header -->
+                            {% for post in posts %}
+                                {% include 'content/content.html.twig' with {'content': post.data } %}
+                                {{ post.content|raw}}
+                            {% endfor %}
+                            {{ paging_nav|raw }}
+                        {% else %}
+                            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
+                        {% endif %}
+                    </div><!-- #content -->
+                </div><!-- #primary -->
+            </div>
 
-            {% for post in posts %}
-                {% include 'content/content.html.twig' with {'content': post.data } %}
-                {{ post.content|raw}}
-                
-            {% endfor %}
-            {{ paging_nav|raw }}
-        {% else %}
-            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
-        
-        {% endif %}
-        
+            {% if layout_style.columns == 2 %}
+                {% if layout_style.content == 1 %}
+                    <div class="{{ layout_style.col_2 }}">
+                        {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div><!-- row and main-content -->
 
-		    </div><!-- #content -->
-        </div><!-- #primary -->
-    </div>
-
-    {% if layout_style.columns == 2 %}
-    {% if layout_style.content == 1 %}
-        <div class="{{ layout_style.col_2 }}">
-        {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
-        </div>
-    {% endif %}
-{% endif %}
-
-
-
-    </div><!-- row and main-content -->
-
-
-
-    </div><!-- #main -->
-</div><!-- container -->     
-
+    </div><!-- container -->
+</div><!-- #main -->     
 
 {% include 'footer.html.twig' with {'content': footer } %}

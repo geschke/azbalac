@@ -55,73 +55,27 @@
 </head>
 
 
-    <body {{ content.bodyClass|raw }}>
-    <div id="skip-link"><a href="#content" class="sr-only element-focusable">{{ content.skipToMainContent }}</a></div>
+<body {{ content.bodyClass|raw }}>
 
- {% if content.navbarFixed == 'default' %}
-
-      
-    <div id="header" role="banner" style="background-color: {{ content.headerStyles.headerStyleColorBg }} {{ content.headerStyles.headerStyleColorFg }}">
-
-<div class="container">
-    <div class="masthead col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-        <h2 id="site-description">{{ content.subtitleDescription }}</h2>
-         <div id="site-header">
-                <a href="{{ content.homeUrl }}" rel="home">
-                    <img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
-                </a>
-            </div>
-    </div>
- </div>
-{% endif %}
-
-{% if content.isFrontPage %}
-    {{ content.showSlider_1|raw }}
-
-    {{ content.introductionElements.1|raw }}
-{% endif %}
+<div id="skip-link"><a href="#content" class="sr-only element-focusable">{{ content.skipToMainContent }}</a></div>
 
 {% if content.navbarFixed == 'default' %}
+
+
     <div class="container">
+
+        <header class="masthead">
+            <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+            <h2 id="site-description">{{ content.subtitleDescription }}</h2>
+       
+            <div id="site-header">
+                <a href="{{ content.homeUrl }}" rel="home">
+                <img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
+                </a>
+            </div>
 {% endif %}
 
-{% if content.hasNavMenuHeaderMenu %}
-
-{#
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-             
-        <div class="collapse navbar-collapse" >
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Another action with more text</a>
-                
-               
-              </div>
-            </li>
-          
-          </ul>
-          
-        </div>
-      </nav>
-#}
-
-
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }}" role="navigation">
+<nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" role="navigation">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -148,16 +102,20 @@
             </div><!--/.nav-collapse -->
         
             
-            </nav> <!-- end navbar-->
+</nav> <!-- end navbar-->
 
-{% else %}
-    <p>&nbsp;</p>
-{% endif %}
 
 {% if content.navbarFixed == 'default' %}
-        </div> <!-- container -->
-    </div> <!-- header in default navbar -->
+      </header>
+    </div> <!-- /container -->
 {% endif %}
+
+
+{% if content.isFrontPage %}
+    {{ content.showSlider_1|raw }}
+    {{ content.introductionElements.1|raw }}
+{% endif %}
+
 
 {% if content.isFrontPage %}
     {{ content.showIntroductionElements.2|raw }}

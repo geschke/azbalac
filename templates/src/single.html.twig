@@ -1,68 +1,55 @@
 
 {% include 'header.html.twig' with {'content': header } %}
 
- 
-  <div class="container">
-  
 {% if is_front_page %}
-{{ show_slider_2|raw }}
+    {{ show_slider_2|raw }}
 {% endif %}    
 
 
 <div class="container">
-
-
- <div id="main" class="site-main">
+    <div id="main" class="site-main">
  
-      <div id="main-content" class="row main-content">
+        <div id="main-content" class="row main-content">
   
-
             {% if layout_style.content == 2 %}
-
-                  <div class="{{ layout_style.col_2 }}">
+                <div class="{{ layout_style.col_2 }}">
                     {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
-                  </div>
-              {% endif %}
+                </div>
+            {% endif %}
   
-              <div class="{{ layout_style.col_1 }}">
+            <div class="{{ layout_style.col_1 }}">
   
-                  <div id="primary2" class="content-area2">
-                      <div id="content2" class="site-content2" role="main2">
+                <div id="primary2" class="content-area2">
+                    <div id="content2" class="site-content2" role="main2">
   
-                            {% if have_posts %}
+                        {% if have_posts %}
                             {% for post in posts %}
-                            
+                                
                                 {% include 'content/content.html.twig' with {'content': post.data, 'comment': post.commentData } %}
-                              
-
+                            
                             {% endfor %}
                             {{ paging_nav|raw }}
                         {% else %}
                             {% include 'content/content-none.html.twig' with {'content': no_posts } %}
                         {% endif %}
  
-                      </div><!-- #content -->
-                  </div><!-- #primary -->
+                    </div><!-- #content -->
+                </div><!-- #primary -->
   
-              </div>
+            </div>
   
 
-              {% if layout_style.columns == 2 and layout_style.content == 1 %}
+            {% if layout_style.columns == 2 and layout_style.content == 1 %}
 
-              <div class="{{ layout_style.col_2 }}">
+                <div class="{{ layout_style.col_2 }}">
                     {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
-
-              </div>
-              {% endif %}
+                </div>
+            {% endif %}
   
-   
-      
-  
-      </div><!-- row and main-content -->
- 
- 
-      </div><!-- #main -->
-  </div><!-- container -->
+        </div><!-- row and main-content -->
 
-  {% include 'footer.html.twig' with {'content': footer } %}
+    </div><!-- #main -->
+</div><!-- container -->
+
+{% include 'footer.html.twig' with {'content': footer } %}
 

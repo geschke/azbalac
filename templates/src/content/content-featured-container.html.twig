@@ -27,61 +27,6 @@
 
     {% endif %}
     
-    {#
-
-    <div class="container marketing">
-
-             <div class="row">
-        <?php
-        $postNumber = 0;
-        $colsFeaturedFirstIndex = 0;
-		if ($colsFeaturedFirst)
-            $colsFeaturedFirstIndex = $colsFeaturedFirst;
-
-        $colsTranslate = array(3 => 4,
-        2 => 6,
-        1 => 12);
-        foreach ( $featuredStandard as $order => $post ) {
-			setup_postdata( $post );
-            if ($colsFeaturedFirstIndex) {
-                // in first row
-                // 3: 4, 2: 6, 1: 12
-                $post->themeCols = $colsTranslate[$colsFeaturedFirst];
-                $colsFeaturedFirstIndex--;
-            } else {
-                $post->themeCols = $colsTranslate[$colsFeaturedLast];
-                if ($countFeaturedStandard > $postNumber - $colsFeaturedFirst + 1 &&
-                    ($postNumber - $colsFeaturedFirst + 1) % $colsFeaturedLast == 1 &&
-                    $postNumber != 0) {
-                    echo '</div><div class="row">';
-                }
-            }
-            $post->postNumber = $postNumber++;
-
-           	 // Include the featured content template.
-			get_template_part( 'content', 'featured-post' );
-        }
-
-
-        ?>
-            </div>
-        </div>
-
-        <?php
-    }
-
-		/**
-		 * Fires after the tikva featured content.
-		 *
-		 * @since tikva 0.1
-		 */
-		do_action( 'tikva_featured_posts_after' );
-
-		wp_reset_postdata();
-    ?>
-    
-#}
-
 	</div><!-- .featured-content-inner -->
 </div><!-- #featured-content .featured-content -->
 

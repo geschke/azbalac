@@ -79,7 +79,7 @@ get_footer();
 $tikva_footer = $tikvaContainer->footerData;
 
 
-echo $t7tpl->render('index.html.twig', array('header' => $header,
+echo $t7tpl->render('page.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'tikva_has_featured_posts' => tikva_has_featured_posts(),
 'featured' => $featuredPosts,

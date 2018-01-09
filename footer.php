@@ -9,7 +9,7 @@
  if ( is_front_page() ) {
 
 	$content['slider_4'] = Tikva_Section_Slider::getSlider(4);
-	$content['introductionElements_4'] = Tikva_Section_Content_Column::getIntroductionElements(4);
+	$content['showIntroductionElements']['4'] = Tikva_Section_Content_Column::getIntroductionElements(4);
 }
 
 

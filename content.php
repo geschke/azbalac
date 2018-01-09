@@ -15,7 +15,7 @@ $content['theId'] = ob_get_contents();
 ob_end_clean();
 
 ob_start();
-post_class();
+post_class('mb-5');
 $content['postClass'] = ob_get_contents();
 ob_end_clean();
 

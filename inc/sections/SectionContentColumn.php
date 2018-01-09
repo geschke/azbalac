@@ -18,19 +18,19 @@ class Tikva_Section_Content_Column
 
     public static function getIntroductionElements($position) 
     {
+       
         ob_start();
         self::showIntroductionElements($position);
-        $output = ob_get_flush();
+        $output = ob_get_clean();
         return $output;
     }
 
     public static function showIntroductionElements($position) 
     {
-        $introActivate =  get_option('setting_introduction_area_activate');
+        $introActivate =  get_option('setting_introduction_area_activate',1);
         if (intval($introActivate) !== 1) {
           return '';
         }
-              
         if (get_option('setting_introduction_position') != $position) {
           return '';
         }
@@ -43,7 +43,7 @@ class Tikva_Section_Content_Column
         $introTitle = get_theme_mod('setting_introduction_area_title');
         $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
         $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
-        $disableReadMore = get_option('setting_introduction_area_readmore');
+        $disableReadMore = get_option('setting_introduction_area_readmore', false);
         if (intval($disableReadMore) === 1) {
             self::$disableReadMore = true;
         }
@@ -80,18 +80,16 @@ class Tikva_Section_Content_Column
         }
       //echo "ColumnClass: $columnClass";
         ?>
-        <div class="tikva-introduction-section" style="<?php echo $styleColorBg; ?>">
-            <div class="container tikva-introduction">
+        <div class="container tikva-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
+            <div class="tikva-introduction">
 
         <section class="section-introduction" id="section-introduction">
           <?php if ($introTitle || $introSubtitle) { ?>
-          <div class="container">
 				    <div class="row">
-              <div class="col-md-8 col-md-offset-2">
+              <div class="col-md-8 offset-md-2">
               <?php if ($introTitle) { ?><h2 class="section-title"><?php echo $introTitle ?></h2><?php } ?>
               <?php if ($introSubtitle) { ?><h5 class="section-description"><?php echo $introSubtitle ?></h5><?php } ?>
 						  </div>
-            </div>
           </div>
           <?php } ?>
         <div class="row">
@@ -153,10 +151,10 @@ class Tikva_Section_Content_Column
           }
           switch ($imageShape) {
             case '1': // rounded corners
-                $imgClass = 'img-rounded';
+                $imgClass = 'rounded';
             break;
             case '2': // circle
-                $imgClass = 'img-circle';
+                $imgClass = 'rounded-circle';
             break;
             case '3': // thumbnail
                 $imgClass = 'img-thumbnail';

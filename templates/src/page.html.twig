@@ -1,5 +1,5 @@
-
-{% include 'header.html.twig' with {'content': header } %}
+{% include 'header.html.twig' with {'content': header, 
+    'is_front_page': is_front_page } %}
 
 
 {% if is_front_page %}
@@ -65,10 +65,5 @@
 </div><!-- #main -->     
  
 
-{% include 'footer.html.twig' with {'content': footer } %}
-
-
-
-
-
-
+{% include 'footer.html.twig' with {'content': footer,
+    'is_front_page': is_front_page } %}

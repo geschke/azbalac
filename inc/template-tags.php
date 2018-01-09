@@ -33,7 +33,7 @@ if (!function_exists('tikva_paging_nav')) :
         $format = $GLOBALS['wp_rewrite']->using_index_permalinks() && !strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
         $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit('page/%#%', 'paged') : '?paged=%#%';
 
-// Set up paginated links.
+        // Set up paginated links.
         $links = paginate_links(array(
             'base' => $pagenum_link,
             'format' => $format,
@@ -51,10 +51,12 @@ if (!function_exists('tikva_paging_nav')) :
             ?>
             <nav class="navigation paging-navigation" role="navigation">
                 <h2 class="screen-reader-text"><?php _e('Posts navigation', 'tikva'); ?></h2>
-                <ul class="pagination loop-pagination">
+                <ul class="pagination">
                     <?php
                     foreach ($links as $link) {
-                        echo '<li>' . $link . '</li>';
+                        $link = preg_replace('/class="/','class="page-link ',$link); // WordPress - why?!?
+                        $link = preg_replace('/class=\'/','class=\'page-link ',$link); // WordPress - why?!?
+                        echo '<li class="page-item">' . $link . '</li>';
                     }
                     ?>
                 </ul>

@@ -1,7 +1,7 @@
 
-{% if content.isFrontPage %} 
+{% if is_front_page %} 
     {{ content.slider_4|raw }}
-    {{ content.introductionElements_4|raw }}
+    {{ content.showIntroductionElements.4|raw }}
 {% endif %}
 
 {{ content.socialMediaButtons_2|raw }}

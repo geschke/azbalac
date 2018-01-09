@@ -17,7 +17,7 @@ class Tikva_Section_Slider
     {
         ob_start();
         self::showSlider($position);
-        $output = ob_get_flush();
+        $output = ob_get_clean();
         return $output;
     }
 

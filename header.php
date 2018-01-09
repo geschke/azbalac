@@ -68,14 +68,14 @@ $content['customHeader'] = get_custom_header();
 $content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'tikva' );
 
 if ( is_front_page()) {
+    
     $content['showSlider_1'] = Tikva_Section_Slider::getSlider(1);
     $content['showIntroductionElements']['1'] = Tikva_Section_Content_Column::getIntroductionElements(1);
     $content['showIntroductionElements']['2'] = Tikva_Section_Content_Column::getIntroductionElements(2);
+
 }
 
 $content['toggleNavigation'] = __( 'Toggle navigation', 'tikva' );
-
-
 
                     
 

@@ -75,6 +75,12 @@
             </div>
 {% endif %}
 
+
+{% if is_front_page %}
+    {{ content.showSlider_1|raw }}
+    {{ content.showIntroductionElements.1|raw }}
+{% endif %}
+
 <nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" role="navigation">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,15 +117,9 @@
 {% endif %}
 
 
-{% if content.isFrontPage %}
-    {{ content.showSlider_1|raw }}
-    {{ content.introductionElements.1|raw }}
-{% endif %}
 
-
-{% if content.isFrontPage %}
+{% if is_front_page %}
     {{ content.showIntroductionElements.2|raw }}
 {% endif %}
 
-      
 

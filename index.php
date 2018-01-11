@@ -27,10 +27,11 @@ $showSlider_2 = '';
 $showSlider_3 = '';
 $introElements_3 = '';
 if ( is_front_page() ) {
-    $showSlider_2 = Tikva_Section_Slider::getSlider(2);
-    $showSlider_3 = Tikva_Section_Slider::getSlider(3);
+    $showSlider['2'] = Tikva_Section_Slider::getSlider(2);
+    $showSlider['3'] = Tikva_Section_Slider::getSlider(3);
     $introElements_3 = Tikva_Section_Content_Column::getIntroductionElements(3);
 } 
+
 
 $featured = new Tikva_Featured();
 $featuredPosts = $featured->getFeaturedPosts();
@@ -86,8 +87,7 @@ echo $t7tpl->render('index.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'tikva_has_featured_posts' => tikva_has_featured_posts(),
 'featured' => $featuredPosts,
-'show_slider_2' => $showSlider_2,
-'show_slider_3' => $showSlider_3,
+'show_slider' => $showSlider,
 'template_part_featured_content' => $template_part_featured_content,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,

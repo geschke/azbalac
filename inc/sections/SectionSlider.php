@@ -37,11 +37,12 @@ class Tikva_Section_Slider
         // this is too late, so set above...
         //add_action( 'wp_enqueue_scripts', 'tikva_set_slider_text_style' );
     
-        $sliderInterval = get_theme_mod('setting_slider_interval');
-        $sliderPause = get_option('setting_slider_pause') ? 'hover': '';
-        $sliderKeyboard = get_option('setting_slider_keyboard') ? 'true': 'false';
-        $sliderWrap = get_option('setting_slider_wrap') ? 'true': 'false';
-        
+        $sliderInterval = get_theme_mod('setting_slider_interval',5000);
+        $sliderPause = get_option('setting_slider_pause','1') ? 'hover': '';
+        $sliderKeyboard = get_option('setting_slider_keyboard','1') ? 'true': 'false';
+        $sliderWrap = get_option('setting_slider_wrap','1') ? 'true': 'false';
+        $sliderIndicators = get_option('setting_slider_indicators','1') ? true: false;
+       
         for ($i = 1; $i <= 6; $i++) {
             $sliderImage = wp_get_attachment_image_src(absint(get_option('setting_slider_' . $i . '_image')), 'original');
             if ($sliderImage) {
@@ -61,32 +62,35 @@ class Tikva_Section_Slider
         }
         
         ?>
+
         <div class="container"><!-- slider section -->
-                <div id="tikva-slider" class="tikva-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>">
+        <div id="tikvaSlider" class="tikva-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
+        <?php if ($sliderIndicators === true) { ?>
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <?php
             foreach ($sliderData as $idx => $sliderElement) {
-                echo '<li data-target="#tikva-slider" data-slide-to="';
+                echo '<li data-target="#tikvaSlider" data-slide-to="';
                 echo $idx - 1;
                 echo '"';
                 if ($idx == 1) {
                     echo ' class="active"';
                 }
-                echo '></li>';
+                echo '></li>' . "\n";
             }
             ?>
         </ol>
-    
+        <?php }
+        ?>
         <!-- Wrapper for slides -->
             
     
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner">
                 
         <?php
         
         foreach ($sliderData as $idx => $sliderElement) {
-            echo ' <div class="item ';
+            echo ' <div class="carousel-item ';
             if ($idx == 1) {
                 echo 'active';
             }
@@ -101,11 +105,11 @@ class Tikva_Section_Slider
             if ($sliderUrl) {
                 echo '<a href="' . $sliderUrl . '">';
             }
-            echo '<img src="' . $sliderElement['image'][0] .'" alt="&hellip;">';
+            echo '<img class="d-block w-100" src="' . $sliderElement['image'][0] .'" alt="&hellip;">';
             if ($sliderUrl) {
                 echo '</a>';
             }
-            echo ' <div class="carousel-caption';
+            echo ' <div class="carousel-caption d-none d-md-block';
             switch ($sliderElement['text_position']) {
                 case 1:
                     echo " carousel-caption-left";
@@ -140,23 +144,24 @@ class Tikva_Section_Slider
                 echo '</p>';
             }
             echo '</div>    ';
-            echo '</div>';
+            echo '</div>' . "\n";
         }
             ?>
             
         </div>
     
         <!-- Controls -->
-        <a class="left carousel-control" href="#tikva-slider" role="button" data-slide="prev">
-        <span class="icon-prev fa fa-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only"><?php  __( 'Previous', 'tikva' ); ?></span>
+        <a class="carousel-control-prev" href="#tikvaSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"><?php echo  __( 'Previous', 'tikva' ); ?></span>
         </a>
-        <a class="right carousel-control" href="#tikva-slider" role="button" data-slide="next">
-        <span class="icon-next fa fa-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only"><?php  __( 'Next', 'tikva' ); ?></span>
+        <a class="carousel-control-next" href="#tikvaSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"><?php echo  __( 'Next', 'tikva' ); ?></span>
         </a>
     </div>
     </div><!-- end slider section -->
+
             <?php
     }
 

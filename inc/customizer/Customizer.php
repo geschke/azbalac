@@ -375,6 +375,20 @@ class Tikva_Customizer
             'type' => 'checkbox',
         ));
 
+        $wp_customize->add_setting('setting_slider_indicators', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_slider_indicators', array(
+            'label' => __('Show slider indicators', 'tikva'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_indicators',
+            'type' => 'checkbox',
+        ));
+
         for ($i = 1; $i <= 6; $i++) {
             $this->addSliderOptions($wp_customize, $i);
         }

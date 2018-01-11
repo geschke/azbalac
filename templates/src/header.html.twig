@@ -77,8 +77,8 @@
 
 
 {% if is_front_page %}
-    {{ content.showSlider_1|raw }}
-    {{ content.showIntroductionElements.1|raw }}
+    {% if content.showSlider.1 %}</header></div>{{ content.showSlider.1|raw }}<header class="masthead"><div class="container">{% endif %}
+    {% if content.showIntroductionElement.1 %}</header></div>{{ content.showIntroductionElements.1|raw }}<header class="masthead"><div class="container">{% endif %}
 {% endif %}
 
 <nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" role="navigation">

@@ -26,13 +26,15 @@ class Tikva_Section_Social_Media_Buttons
 
     public static function getButtons($position)
     {
-        if (!get_option('setting_social_media_activate')) {
+      
+        if (!get_option('setting_social_media_activate',false)) {
             return null;
         }
-        $positionOption = absint(get_option('setting_social_media_position'));
+        $positionOption = absint(get_option('setting_social_media_position',2));
         if ($positionOption != $position) {
             return null;
         }
+      
         return self::buildButtons();
     }
 
@@ -60,10 +62,10 @@ class Tikva_Section_Social_Media_Buttons
             default:
                 $align = 'center';
         }
-        $buttonSize = get_option('setting_social_button_size');
-        $buttonType = get_option('setting_social_button_type');
+        $buttonSize = get_option('setting_social_button_size','2');
+        $buttonType = get_option('setting_social_button_type','1');
         $output .= '    
-<div class="row">
+
 <div class="container">
 <div class="col-md-12 social-media-buttons"> 
     <div style="text-align: ' . $align . '">';
@@ -75,7 +77,6 @@ class Tikva_Section_Social_Media_Buttons
         $output .= $socialOutput;
         $output .= '
         </div>
-</div>
 </div>
 </div>';
 
@@ -105,6 +106,7 @@ class Tikva_Section_Social_Media_Buttons
         $styleBg = '';
         
         $output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="fa fa-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
+     
         return $output;
     }
 

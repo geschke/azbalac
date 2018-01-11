@@ -13,14 +13,14 @@
 }
 
 
-$content['socialMediaButtons_3'] = Tikva_Section_Social_Media_Buttons::getButtons(2);
+$content['socialMediaButtons']['2'] = Tikva_Section_Social_Media_Buttons::getButtons(2);
 	
 $content['styles'] = Tikva_Section_Footer::getStyles();
 
 $content['footer'] = Tikva_Section_Footer::get();
 
 
-$content['socialMediaButtons_3'] = Tikva_Section_Social_Media_Buttons::getButtons(3);
+$content['socialMediaButtons']['3'] = Tikva_Section_Social_Media_Buttons::getButtons(3);
 
 
 $content['subfooter'] = Tikva_Section_Subfooter::getContent();

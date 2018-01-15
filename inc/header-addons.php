@@ -14,7 +14,11 @@ class HeaderMenuWalker extends Walker_Nav_Menu
     public function start_lvl( &$output, $depth = 0, $args = array() )
     {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n";
+        
+            $output .= "\n$indent<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\n";
+    
+        //echo "depth: $depth<p>\n";
+
     }
 
     // todo: if level > 2 then don't do dropdown
@@ -39,8 +43,9 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 			$t = "\t";
 			$n = "\n";
 		}
-		$indent = str_repeat( $t, $depth );
-		$output .= "$indent</div>{$n}";
+        $indent = str_repeat( $t, $depth );
+            $output .= "$indent</ul>{$n}";
+        //echo "depth end: $depth<p>\n";
 	}
 
 
@@ -62,23 +67,23 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 
         // passed classes
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-        $classes[] = ($args->has_children) ? ( $depth >= 1 ? 'dropdown-submenu dropdown nav-item' : 'dropdown nav-item') : '';
+        $classes[] = ($args->has_children) ? ( $depth >= 1 ? 'dropdown-submenu dropdown' : 'nav-item dropdown ') : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';
 
 
         $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
-
+        
         // build html
-        if ($depth <= 0) {
+        //if ($depth <= 0) {
             $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
-        }
+        //}
 
         // link attributes
         $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-        $attributes .= ($args->has_children) 	    ? ' class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ($depth > 0 ? 'class="dropdown-item"': 'class="nav-link"');
+        $attributes .= ($args->has_children && $depth == 0) ? ' class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ( $args->has_children && $depth > 0 ? ' class="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ($depth > 0 ? ' class="dropdown-item"': ' class="nav-link"')) ;
 
 
         //$attributes .= ' class="nav-link ' . ( $depth > 0 ? 'dropdown-item sub-menu-link' : 'main-menu-link' ) . '"';
@@ -127,9 +132,9 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 			$t = "\t";
 			$n = "\n";
         }
-        if ($depth <= 0) {
+        //if ($depth <= 0) {
             $output .= "</li>{$n}";
-        }
+        //}
 	}
 
 

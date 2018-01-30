@@ -5,12 +5,12 @@
  * The code was previously included in the main functions.php file.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @subpackage Azbalac
+ * @since Azbalac 0.5.0
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Social_Media_Buttons
+class Azbalac_Section_Social_Media_Buttons
 {
 
 
@@ -117,7 +117,7 @@ class Tikva_Section_Social_Media_Buttons
     public static function addSocialButtonStyle()
     {
         wp_enqueue_style(
-            'tikva-default-style',
+            'azbalac-default-style',
             get_template_directory_uri() . '/css/default.css'
         );
          
@@ -148,6 +148,6 @@ class Tikva_Section_Social_Media_Buttons
         }
         
        
-        wp_add_inline_style( 'tikva-default-style', $css );
+        wp_add_inline_style( 'azbalac-default-style', $css );
     }
 }

@@ -3,13 +3,13 @@
 /**
  * Implements Subfooter functionality.
  *
- * @package   Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Font 
+class Azbalac_Section_Font 
 {
 
 
@@ -146,13 +146,13 @@ class Tikva_Section_Font
         if ( isset($font) && is_object($font) && isset($font->font)) {
            
             if (intval($font->font) != 0) {
-                // font from list in Tikva_Custom_Font_List
-                $fontFamily = Tikva_Custom_Font_List::FONTS[$font->font];
+                // font from list in azbalac_Custom_Font_List
+                $fontFamily = Azbalac_Custom_Font_List::FONTS[$font->font];
 
             } elseif (intval($font->font == 0) && is_string($font->font) && strlen($font->font) > 1) {
                 // should be ggl font
                 // todo: optimize - it is not necessary to load google font array and to go through the loop
-                /*$gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+                /*$gglfonts = $GLOBALS['azbalacGoogleFonts']; 
                 $fontData = null;
                 foreach ($gglfonts['items'] as $gglfont) {
                     if ($gglfont['family'] == $font->font) {

@@ -6,19 +6,19 @@ if (! class_exists( 'WP_Customize_Control' )) {
 /**
  * Customizer Control: repeater.
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       2.0
  */
-class Tikva_Custom_Repeater_Control extends WP_Customize_Control
+class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 {
 
     /**
     * Define the control type
     */
-    public $type = 'tikva_repeater';
+    public $type = 'azbalac_repeater';
 
 
     /**
@@ -83,11 +83,11 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
         wp_enqueue_script('underscore');
 		
         wp_localize_script( 'customizer-repeater-script', 'objectL10n', array(
-            'select_image' => esc_html__( 'Select Image', 'tikva' ),
-            'remove' => esc_html__( 'Remove', 'tikva' ),
-            'change_image' => esc_html__( 'Change Image', 'tikva' ),
-            'no_image_selected' => esc_html__( 'No Image selected', 'tikva' ),
-            'choose_image' => esc_html__( 'Choose Image', 'tikva' )
+            'select_image' => esc_html__( 'Select Image', 'azbalac' ),
+            'remove' => esc_html__( 'Remove', 'azbalac' ),
+            'change_image' => esc_html__( 'Change Image', 'azbalac' ),
+            'no_image_selected' => esc_html__( 'No Image selected', 'azbalac' ),
+            'choose_image' => esc_html__( 'Choose Image', 'azbalac' )
             
             
 
@@ -246,7 +246,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                             </div>
                             <# } else if (field.type === 'colorpicker') { #>
                             <div class="repeater-row-field">
-                                  <input type="text" value="<# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="tikva-repeater-color-field" data-default-color="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
+                                  <input type="text" value="<# if (typeof elementItem.elements != 'undefined' && typeof elementItem.elements[name] != 'undefined') { #>{{{ elementItem.elements[name].value }}}<# } else { #>{{{ field.default }}}<#} #>" class="azbalac-repeater-color-field" data-default-color="{{{ field.default }}}" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
 
                             </div>
                             <# } else if (field.type === 'radiobutton') { #>
@@ -271,7 +271,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                     }
                                 #>
                                 <label>
-						        <input type="radio" {{{ selectString }}} class="tikva-customize-repeater-input-radio" value="{{{ choiceValue }}}" name="_customize-control-repeater-radio-{{{ name }}}-{{{ elementName }}}">{{{ choiceOption }}}<br>
+						        <input type="radio" {{{ selectString }}} class="azbalac-customize-repeater-input-radio" value="{{{ choiceValue }}}" name="_customize-control-repeater-radio-{{{ name }}}-{{{ elementName }}}">{{{ choiceOption }}}<br>
 					            </label>
 
                                 <# }); #>
@@ -295,7 +295,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 <li id="customize-control-repeater-checkbox-{{{ name }}}" class="" style="display: list-item;">
 							        <label>
 
-					                    <input type="checkbox" class="tikva-customize-repeater-input-checkbox" value="1" {{{ selectString }}} data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
+					                    <input type="checkbox" class="azbalac-customize-repeater-input-checkbox" value="1" {{{ selectString }}} data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}"/>
                                         <# if (field.description) { #>{{{ field.description }}}<# } #>
                                     </label>
 						        </li>
@@ -315,8 +315,8 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
                                 var payload = [];
                                 payload['elementId'] = elementName;
                                 payload['elementName'] = name;
-                                tikvaRepeaterPreloadAttachment(imageId, payload, function (attachment, elementPayload) {
-                                    tikvaRepeaterPreviewImage(elementPayload, attachment);
+                                azbalacRepeaterPreloadAttachment(imageId, payload, function (attachment, elementPayload) {
+                                    azbalacRepeaterPreviewImage(elementPayload, attachment);
                                 });
 
 
@@ -326,10 +326,10 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                     <div class="placeholder">
-                                    <?php esc_attr_e( 'No Image selected', 'tikva' ); ?>
+                                    <?php esc_attr_e( 'No Image selected', 'azbalac' ); ?>
                                     </div>
                                     <div class="actions">
-                                         <button type="button" class="button tikva-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'tikva' ); ?></button>
+                                         <button type="button" class="button azbalac-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'azbalac' ); ?></button>
                         
                                     </div>
                                 </div>
@@ -341,7 +341,7 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 				</div>	
           
                 <div class="customize-button-repeater-row-remove">
-				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'tikva' ); ?></button>
+				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'azbalac' ); ?></button>
                 </div>
 			</div> <!-- customize-control-repeater-element -->
             <# });
@@ -349,9 +349,9 @@ class Tikva_Custom_Repeater_Control extends WP_Customize_Control
 			
 		
 		</div>
-        <input type="hidden" value="{{{ data.value }}}" class="tikva_repeater_collector" id="tikva_repeater_{{{ data.section }}}" name="tikva_repeater_{{{ data.section }}}"/>
+        <input type="hidden" value="{{{ data.value }}}" class="azbalac_repeater_collector" id="azbalac_repeater_{{{ data.section }}}" name="azbalac_repeater_{{{ data.section }}}"/>
 		<div class="button-add-new-element"><button type="button" class="button add-field add-new-menu-item customize-repeater-new-field">
-				<?php esc_html_e( 'Add new element', 'tikva' ); ?>
+				<?php esc_html_e( 'Add new element', 'azbalac' ); ?>
         </button>
         </div>
        

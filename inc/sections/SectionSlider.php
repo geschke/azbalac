@@ -5,12 +5,12 @@
  * The code was previously included in the main functions.php file.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @subpackage Azbalac
+ * @since Azbalac 0.5.0
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Slider
+class Azbalac_Section_Slider
 {
 
     public static function getSlider($position) 
@@ -35,7 +35,7 @@ class Tikva_Section_Slider
     public static function build()
     {
         // this is too late, so set above...
-        //add_action( 'wp_enqueue_scripts', 'tikva_set_slider_text_style' );
+        //add_action( 'wp_enqueue_scripts', 'azbalac_set_slider_text_style' );
     
         $sliderInterval = get_theme_mod('setting_slider_interval',5000);
         $sliderPause = get_option('setting_slider_pause','1') ? 'hover': '';
@@ -64,13 +64,13 @@ class Tikva_Section_Slider
         ?>
 
         <div class="container"><!-- slider section -->
-        <div id="tikvaSlider" class="tikva-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
+        <div id="azbalacSlider" class="azbalac-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
         <?php if ($sliderIndicators === true) { ?>
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <?php
             foreach ($sliderData as $idx => $sliderElement) {
-                echo '<li data-target="#tikvaSlider" data-slide-to="';
+                echo '<li data-target="#azbalacSlider" data-slide-to="';
                 echo $idx - 1;
                 echo '"';
                 if ($idx == 1) {
@@ -151,13 +151,13 @@ class Tikva_Section_Slider
         </div>
     
         <!-- Controls -->
-        <a class="carousel-control-prev" href="#tikvaSlider" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#azbalacSlider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo  __( 'Previous', 'tikva' ); ?></span>
+        <span class="sr-only"><?php echo  __( 'Previous', 'azbalac' ); ?></span>
         </a>
-        <a class="carousel-control-next" href="#tikvaSlider" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#azbalacSlider" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo  __( 'Next', 'tikva' ); ?></span>
+        <span class="sr-only"><?php echo  __( 'Next', 'azbalac' ); ?></span>
         </a>
     </div>
     </div><!-- end slider section -->
@@ -168,7 +168,7 @@ class Tikva_Section_Slider
     public static function addSliderStyle()
     {
         wp_enqueue_style(
-                'tikva-default-style', get_template_directory_uri() . '/css/default.css'
+                'azbalac-default-style', get_template_directory_uri() . '/css/default.css'
         );
         $custom_css = "
                 .carousel-caption-left {
@@ -177,11 +177,11 @@ class Tikva_Section_Slider
             .carousel-caption-right {
                 text-align: right !important;
             }
-            .tikva-slider {
+            .azbalac-slider {
                 margin-bottom: 10px;
             }";
         
-        wp_add_inline_style('tikva-default-style', $custom_css);
+        wp_add_inline_style('azbalac-default-style', $custom_css);
     }
 
 }

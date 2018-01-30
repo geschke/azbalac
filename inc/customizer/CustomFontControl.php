@@ -3,13 +3,13 @@
 /**
  * Default Font list as constant array
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
  */
-class Tikva_Custom_Font_List
+class azbalac_Custom_Font_List
 {
     const FONTS = array(
         '1' => 'Georgia, serif',
@@ -38,12 +38,12 @@ if (! class_exists( 'WP_Customize_Control' )) {
 
 
 
-class Tikva_Custom_Font_Request 
+class azbalac_Custom_Font_Request 
 {
     public function __construct() 
     {
-        add_action( 'wp_ajax_tikva_get_font_data_action', array($this,'getFontDataAction' ));
-        add_action( 'wp_ajax_tikva_get_default_font_data_action', array($this,'getDefaultFontDataAction' ));
+        add_action( 'wp_ajax_azbalac_get_font_data_action', array($this,'getFontDataAction' ));
+        add_action( 'wp_ajax_azbalac_get_default_font_data_action', array($this,'getDefaultFontDataAction' ));
         
 
     }
@@ -54,7 +54,7 @@ class Tikva_Custom_Font_Request
         
         $searchfont = $_POST['searchfont'];
 
-        $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
         
         $fontData = null;
         foreach ($gglfonts['items'] as $gglfont) {
@@ -75,7 +75,7 @@ class Tikva_Custom_Font_Request
         
         
         
-        echo json_encode(Tikva_Custom_Font_List::FONTS);
+        echo json_encode(azbalac_Custom_Font_List::FONTS);
         
         wp_die(); // this is required to terminate immediately and return a proper response
     }
@@ -86,13 +86,13 @@ class Tikva_Custom_Font_Request
 /**
  * Customizer Control: Font
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
  */
-class Tikva_Custom_Font_Control extends WP_Customize_Control
+class azbalac_Custom_Font_Control extends WP_Customize_Control
 {
 
 
@@ -101,7 +101,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
     /**
     * Define the control type
     */
-    public $type = 'tikva_font';
+    public $type = 'azbalac_font';
 
 
     /**
@@ -197,33 +197,33 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
         }
     
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
-        $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'tikva' ));
+        $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Serif Fonts');
-        $fonts[] = array('k' => 1, 'v' => Tikva_Custom_Font_List::FONTS['1']);
-        $fonts[] = array('k' => 2, 'v' => Tikva_Custom_Font_List::FONTS['2']);
-        $fonts[] = array('k' => 3, 'v' => Tikva_Custom_Font_List::FONTS['3']);
+        $fonts[] = array('k' => 1, 'v' => azbalac_Custom_Font_List::FONTS['1']);
+        $fonts[] = array('k' => 2, 'v' => azbalac_Custom_Font_List::FONTS['2']);
+        $fonts[] = array('k' => 3, 'v' => azbalac_Custom_Font_List::FONTS['3']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Sans Serif Fonts');
-        $fonts[] = array('k' => 10, 'v' => Tikva_Custom_Font_List::FONTS['10']);
-        $fonts[] = array('k' => 11, 'v' => Tikva_Custom_Font_List::FONTS['11']);
-        $fonts[] = array('k' => 12, 'v' => Tikva_Custom_Font_List::FONTS['12']);
-        $fonts[] = array('k' => 13, 'v' => Tikva_Custom_Font_List::FONTS['13']);
-        $fonts[] = array('k' => 14, 'v' => Tikva_Custom_Font_List::FONTS['14']);
-        $fonts[] = array('k' => 15, 'v' => Tikva_Custom_Font_List::FONTS['15']);
-        $fonts[] = array('k' => 16, 'v' => Tikva_Custom_Font_List::FONTS['16']);
-        $fonts[] = array('k' => 17, 'v' => Tikva_Custom_Font_List::FONTS['17']);
+        $fonts[] = array('k' => 10, 'v' => azbalac_Custom_Font_List::FONTS['10']);
+        $fonts[] = array('k' => 11, 'v' => azbalac_Custom_Font_List::FONTS['11']);
+        $fonts[] = array('k' => 12, 'v' => azbalac_Custom_Font_List::FONTS['12']);
+        $fonts[] = array('k' => 13, 'v' => azbalac_Custom_Font_List::FONTS['13']);
+        $fonts[] = array('k' => 14, 'v' => azbalac_Custom_Font_List::FONTS['14']);
+        $fonts[] = array('k' => 15, 'v' => azbalac_Custom_Font_List::FONTS['15']);
+        $fonts[] = array('k' => 16, 'v' => azbalac_Custom_Font_List::FONTS['16']);
+        $fonts[] = array('k' => 17, 'v' => azbalac_Custom_Font_List::FONTS['17']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Monospace Fonts');
-        $fonts[] = array('k' => 30, 'v' => Tikva_Custom_Font_List::FONTS['30']);
-        $fonts[] = array('k' => 31, 'v' => Tikva_Custom_Font_List::FONTS['31']);
+        $fonts[] = array('k' => 30, 'v' => azbalac_Custom_Font_List::FONTS['30']);
+        $fonts[] = array('k' => 31, 'v' => azbalac_Custom_Font_List::FONTS['31']);
         
         $fonts[] = array('c' => 'optgroup_end');
         
     
         // build gglfonts options
-        $gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
         $gglfontsItems = $gglfonts['items'];
    
         $cnt = count($gglfontsItems);
@@ -339,7 +339,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
          
                 <div class="font-row-content font-input-select-variant">
                     <label>
-                    <?php echo __('Select font variant:', 'tikva'); ?>
+                    <?php echo __('Select font variant:', 'azbalac'); ?>
                     </label>
                     <div class="font-row-field">
                     <#
@@ -356,7 +356,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                     #>
                     <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-font-variant="{{{ gglfont }}}"  data-default="{{{ data.defaults.variant }}}" data-default-selected="{{{ defaultVariant }}}" >
                    
-                            <option value="0"  ><?php echo __( '&mdash; Select &mdash;', 'tikva' ); ?></option>
+                            <option value="0"  ><?php echo __( '&mdash; Select &mdash;', 'azbalac' ); ?></option>
                      
                     </select>
 
@@ -365,7 +365,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
 	  
             <label>
                 <span class="customize-control-title">
-                <?php echo __('Font Size','tikva'); ?>
+                <?php echo __('Font Size','azbalac'); ?>
                 </span>
                 <input type="text"  id="input_size_{{{ data.identifier }}}" disabled data-default="{{{ data.defaults.size }}}" value=""/>
 
@@ -375,7 +375,7 @@ class Tikva_Custom_Font_Control extends WP_Customize_Control
                 <div  id="slider_size_{{{ data.identifier }}}"></div>
             </div>
 
-            <input type="hidden" value="{{{ data.value }}}" class="tikva_font_collector" id="tikva_font_{{{ data.identifier }}}" name="tikva_font_{{{ data.identifier }}}"/>
+            <input type="hidden" value="{{{ data.value }}}" class="azbalac_font_collector" id="azbalac_font_{{{ data.identifier }}}" name="azbalac_font_{{{ data.identifier }}}"/>
         
             </div>    
 		

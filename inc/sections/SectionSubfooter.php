@@ -4,12 +4,12 @@
  * Implements Subfooter functionality.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @subpackage Azbalac
+ * @since Azbalac 0.5.0
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Subfooter
+class Azbalac_Section_Subfooter
 {
 
     public static function buildStyles()
@@ -54,7 +54,7 @@ class Tikva_Section_Subfooter
         $content = get_theme_mod('setting_subfooter_content');
         if ($content === false) {
             // no value in database, so the option is not overwritten, use default
-            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Tikva by <a href="https://www.geschke.net">Ralf Geschke</a>.','tikva');
+            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
         }
         if (!$content) {
             return; // no output

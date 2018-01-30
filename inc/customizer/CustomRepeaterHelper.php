@@ -3,13 +3,13 @@
 /**
  * Walker to generate array of pages with ids and indents
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.2
  */
-class Tikva_Walker_Page extends Walker_Page
+class Azbalac_Walker_Page extends Walker_Page
 {
     
 
@@ -50,13 +50,13 @@ class Tikva_Walker_Page extends Walker_Page
 /**
  * Customizer Control: Repeater Helper.
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.0
  */
-class Tikva_Custom_Repeater_Helper
+class Azbalac_Custom_Repeater_Helper
 {
 
     /**
@@ -70,13 +70,13 @@ class Tikva_Custom_Repeater_Helper
     public static function getPageDropdownOptions()
     {
     
-        $walker = new Tikva_Walker_Page();
+        $walker = new Azbalac_Walker_Page();
         wp_list_pages(array('echo' => false,
         'title_li' => '',
         'walker' => $walker));
        
         $pageEntries = $walker->pageEntries;
-        array_unshift($pageEntries, array('name' =>  __( '&mdash; Select &mdash;', 'tikva' ),
+        array_unshift($pageEntries, array('name' =>  __( '&mdash; Select &mdash;', 'azbalac' ),
         'class' => 'level-0',
         'value' => 0));
         return $pageEntries;
@@ -91,7 +91,7 @@ class Tikva_Custom_Repeater_Helper
     public static function getPostDropdownOptions()
     {
         $pageEntries = array();
-        $pageEntries[] = array('name' => __('&mdash; Select &mdash;', 'tikva'),
+        $pageEntries[] = array('name' => __('&mdash; Select &mdash;', 'azbalac'),
         'class' => '',
         'value' => 0 );
         $latest = new WP_Query(array(

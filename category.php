@@ -4,32 +4,32 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  */
 
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = azbalac_DataContainer::getInstance();
 
 get_header(); 
-$header = $tikvaContainer->headerData;
+$header = $azbalacContainer->headerData;
 
 
 
-$layoutStyle = tikva_get_layout();
+$layoutStyle = azbalac_get_layout();
 
 get_sidebar();
-$sidebar = $tikvaContainer->contentSidebar;
+$sidebar = $azbalacContainer->contentSidebar;
 
 
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = azbalac_DataContainer::getInstance();
 
 if ( have_posts() ) {
-	$tikva_have_posts = true;
+	$azbalac_have_posts = true;
 	
-	$archive_title = sprintf( __( 'Category Archives: %s', 'tikva' ), single_cat_title( '', false ) );
+	$archive_title = sprintf( __( 'Category Archives: %s', 'azbalac' ), single_cat_title( '', false ) );
 
 	$term_description = term_description();
 
@@ -40,41 +40,41 @@ if ( have_posts() ) {
 	
 		get_template_part( 'content',  get_post_format() );
 
-		$tikva_posts_content  = ob_get_contents();
-        $tikva_posts_data = $tikvaContainer->content;
-        $tikva_posts[] = ['content' => $tikva_posts_content, 'data' => $tikva_posts_data];
+		$azbalac_posts_content  = ob_get_contents();
+        $azbalac_posts_data = $azbalacContainer->content;
+        $azbalac_posts[] = ['content' => $azbalac_posts_content, 'data' => $azbalac_posts_data];
         ob_end_clean();
 
 	}
 	// Previous/next post navigation.
 	ob_start();
-	tikva_paging_nav();
-	$tikva_paging_nav = ob_get_contents();
+	azbalac_paging_nav();
+	$azbalac_paging_nav = ob_get_contents();
 	ob_end_clean();
 } else {
-	$tikva_have_posts = false;
+	$azbalac_have_posts = false;
 	
 	// If no content, include the "No posts found" template.
 	get_template_part( 'content', 'none' );
 
-    $tikva_no_posts =  $tikvaContainer->contentNone;
+    $azbalac_no_posts =  $azbalacContainer->contentNone;
 	
 }
 	
 
 get_footer();
-$tikva_footer = $tikvaContainer->footerData;
+$azbalac_footer = $azbalacContainer->footerData;
 
 
 
 echo $t7tpl->render('category.html.twig', array('header' => $header,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,
-'have_posts' => $tikva_have_posts,
-'posts' => $tikva_posts,
-'no_posts' => $tikva_no_posts,
-'paging_nav' => $tikva_paging_nav,
-'footer' => $tikva_footer,
+'have_posts' => $azbalac_have_posts,
+'posts' => $azbalac_posts,
+'no_posts' => $azbalac_no_posts,
+'paging_nav' => $azbalac_paging_nav,
+'footer' => $azbalac_footer,
 'archive_title' => $archive_title,
 'term_description' => $term_description
 ));            

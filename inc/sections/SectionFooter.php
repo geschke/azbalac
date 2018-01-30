@@ -3,13 +3,13 @@
 /**
  * Implements Footer functionality.
  *
- * @package   Tikva7
- * @subpackage Tikva7
- * @since tikva 0.1
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Footer
+class Azbalac_Section_Footer
 {
     /* Assign function for widget areas */
 
@@ -18,10 +18,10 @@ class Tikva_Section_Footer
         $output = '';
         $output .= sprintf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
         if (!is_active_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
-            $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'tikva') . '</h3>' .
+            $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'azbalac') . '</h3>' .
             '<div class="error-icon">' .
-            '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'tikva'), $footerNumber) . '</p>' .
-            '<a href="' . esc_url(admin_url('widgets.php')) . '" title="' . __('No Widgets Selected', 'tikva') . '">' . __('Click here to go to Widget area.', 'tikva') . '</a>' . '</div>';
+            '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'azbalac'), $footerNumber) . '</p>' .
+            '<a href="' . esc_url(admin_url('widgets.php')) . '" title="' . __('No Widgets Selected', 'azbalac') . '">' . __('Click here to go to Widget area.', 'azbalac') . '</a>' . '</div>';
         } else {
             ob_start();
             dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber));

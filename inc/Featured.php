@@ -3,14 +3,14 @@
 /**
  * Implements Featured Posts Access Functions
  *
- * @package   Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
 
-class Tikva_Featured 
+class Azbalac_Featured 
 {
 
     private $featuredPosts = null;
@@ -36,7 +36,7 @@ class Tikva_Featured
     {
         $this->parsePosts();
 
-        $tikvaContainer = Tikva_DataContainer::getInstance();
+        $azbalacContainer = Azbalac_DataContainer::getInstance();
 
 
         global $post; // blergh!!!
@@ -47,7 +47,7 @@ class Tikva_Featured
                 setup_postdata( $post );
                 get_template_part('content','featured-post-large');
 
-                $contentFeatured[] = $tikvaContainer->contentFeaturedPostLarge;
+                $contentFeatured[] = $azbalacContainer->contentFeaturedPostLarge;
 
             }
 
@@ -60,7 +60,7 @@ class Tikva_Featured
     public function getStandardPosts() 
     {
         $this->parsePosts();
-        $tikvaContainer = Tikva_DataContainer::getInstance();
+        $azbalacContainer = Azbalac_DataContainer::getInstance();
         
         global $post; // blergh!!!
         if (isset($this->postsStandard) && is_array($this->postsStandard) && count($this->postsStandard)) {
@@ -149,7 +149,7 @@ class Tikva_Featured
                 get_template_part( 'content', 'featured-post' );
                 
               
-                $contentFeatured[] = $tikvaContainer->contentFeaturedPost;
+                $contentFeatured[] = $azbalacContainer->contentFeaturedPost;
               
             }
            
@@ -161,7 +161,7 @@ class Tikva_Featured
     protected function getPosts()
     {
         if (!$this->featuredPosts) {
-            $this->featuredPosts = tikva_get_featured_posts();
+            $this->featuredPosts = azbalac_get_featured_posts();
         }
         return $this->featuredPosts;
     }
@@ -176,7 +176,7 @@ class Tikva_Featured
         $this->postsLarge = [];
         $this->postsStandard = [];
         foreach ($featuredPosts as $featuredPost) {
-            $featured = get_post_meta($featuredPost->ID, 'tikva_featured_post', true);
+            $featured = get_post_meta($featuredPost->ID, 'azbalac_featured_post', true);
             //print "post: " . $featuredPost->ID . "<br/>";
             //var_dump($featured);
             if ($featured == '_1') {

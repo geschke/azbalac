@@ -5,13 +5,13 @@
 /**
  * DataContainer is a simple transporter for frontend data
  *
- * @package   Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_DataContainer
+class Azbalac_DataContainer
 {
     private static $instance = null;
 
@@ -24,7 +24,7 @@ class Tikva_DataContainer
     public static function getInstance() 
     {
         if ( self::$instance === null) {
-            self::$instance = new Tikva_DataContainer();
+            self::$instance = new Azbalac_DataContainer();
         }
         return self::$instance;
     }

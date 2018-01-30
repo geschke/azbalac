@@ -17,16 +17,16 @@
         var width = 0;
         var height = 0;
         var dontscale = 0;
-        if (typeof tikvaHeaderImage[index].url != 'undefined') {
-            siteHeaderImage = tikvaHeaderImage[index].url;
-            height = tikvaHeaderImage[index].height;
-            width = tikvaHeaderImage[index].width;
-            dontscale = tikvaHeaderImage[index].dontscale;
-        } else if (typeof tikvaHeaderImage[fallback].url != 'undefined') {
-            siteHeaderImage  = tikvaHeaderImage[fallback].url;
-            height = tikvaHeaderImage[fallback].height;
-            width = tikvaHeaderImage[fallback].width;
-            dontscale = tikvaHeaderImage[fallback].dontscale;
+        if (typeof azbalacHeaderImage[index].url != 'undefined') {
+            siteHeaderImage = azbalacHeaderImage[index].url;
+            height = azbalacHeaderImage[index].height;
+            width = azbalacHeaderImage[index].width;
+            dontscale = azbalacHeaderImage[index].dontscale;
+        } else if (typeof azbalacHeaderImage[fallback].url != 'undefined') {
+            siteHeaderImage  = azbalacHeaderImage[fallback].url;
+            height = azbalacHeaderImage[fallback].height;
+            width = azbalacHeaderImage[fallback].width;
+            dontscale = azbalacHeaderImage[fallback].dontscale;
         }
         return { image: siteHeaderImage,
             width: width,
@@ -129,7 +129,7 @@
 			return;
 		}
 
-		$( '.menu-toggle' ).on( 'click.tikva', function() {
+		$( '.menu-toggle' ).on( 'click.azbalac', function() {
 			nav.toggleClass( 'toggled-on' );
 		} );
 	} )();
@@ -140,7 +140,7 @@
 	 *
 	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
-/*	_window.on( 'hashchange.tikva', function() {
+/*	_window.on( 'hashchange.azbalac', function() {
 		var element = document.getElementById( location.hash.substring( 1 ) );
 
 		if ( element ) {
@@ -157,7 +157,7 @@
 */
 	$( function() {
 		// Search toggle.
-		$( '.search-toggle' ).on( 'click.tikva', function( event ) {
+		$( '.search-toggle' ).on( 'click.azbalac', function( event ) {
 			var that    = $( this ),
 				wrapper = $( '.search-box-wrapper' );
 
@@ -192,7 +192,7 @@
 				toolbarOffset  = body.is( '.admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
 				mastheadOffset = $( '#masthead' ).offset().top - toolbarOffset;
 
-				_window.on( 'scroll.tikva', function() {
+				_window.on( 'scroll.azbalac', function() {
 					if ( ( window.scrollY > mastheadOffset ) && ( mastheadHeight < 49 ) ) {
 						body.addClass( 'masthead-fixed' );
 					} else {
@@ -203,7 +203,7 @@
 		}
 */
 		// Focus styles for menus.
-		/*$( '.primary-navigation, .secondary-navigation' ).find( 'a' ).on( 'focus.tikva blur.tikva', function() {
+		/*$( '.primary-navigation, .secondary-navigation' ).find( 'a' ).on( 'focus.azbalac blur.azbalac', function() {
 			$( this ).parents().toggleClass( 'focus' );
 		} );
         */

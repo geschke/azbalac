@@ -14,7 +14,7 @@ if (!class_exists('WP_Customize_Control'))
  * @link https://github.com/aristath/kirki
  * @link http://ottopress.com/2012/making-a-custom-control-for-the-theme-customizer/
  */
-class Tikva_Custom_Radio_Image_Control extends WP_Customize_Control
+class Azbalac_Custom_Radio_Image_Control extends WP_Customize_Control
 {
 
     /**
@@ -86,7 +86,7 @@ class Tikva_Custom_Radio_Image_Control extends WP_Customize_Control
  *
  * @link https://github.com/aristath/kirki
  */
-function tikva_customizer_custom_control_radio_image_css() { 
+function azbalac_customizer_custom_control_radio_image_css() { 
 	?>
 	<style>
 	.customize-control-radio-image .image.ui-buttonset input[type=radio] {
@@ -133,4 +133,4 @@ function tikva_customizer_custom_control_radio_image_css() {
 	</style>
 	<?php
 }
-add_action( 'customize_controls_print_styles', 'tikva_customizer_custom_control_radio_image_css' );
+add_action( 'customize_controls_print_styles', 'azbalac_customizer_custom_control_radio_image_css' );

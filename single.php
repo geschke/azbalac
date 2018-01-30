@@ -2,38 +2,38 @@
 /**
  * The Template for displaying all single posts
  *
- * @package Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  */
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 get_header(); 
-$header = $tikvaContainer->headerData;
+$header = $azbalacContainer->headerData;
 
 $showSlider_2 = '';
 if ( is_front_page() ) {
-    $showSlider_2 = Tikva_Section_Slider::getSlider(2);
-    $showSlider_3 = Tikva_Section_Slider::getSlider(3);
-    $introElements_3 = Tikva_Section_Content_Column::getIntroductionElements(3);
+    $showSlider_2 = Azbalac_Section_Slider::getSlider(2);
+    $showSlider_3 = Azbalac_Section_Slider::getSlider(3);
+    $introElements_3 = Azbalac_Section_Content_Column::getIntroductionElements(3);
 } 
 
-$featured = new Tikva_Featured();
+$featured = new Azbalac_Featured();
 $featuredPosts = $featured->getFeaturedPosts();
 
-$layoutStyle = tikva_get_layout();
+$layoutStyle = azbalac_get_layout();
 
 get_sidebar();
-$sidebar = $tikvaContainer->contentSidebar;
+$sidebar = $azbalacContainer->contentSidebar;
 
 
 
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 if ( have_posts() ) {
-    $tikva_have_posts = true;
+    $azbalac_have_posts = true;
  
     
     // Start the Loop.
@@ -50,41 +50,41 @@ if ( have_posts() ) {
         }
 
         
-        $tikva_posts_content = ''; // not needed anymore!
+        $azbalac_posts_content = ''; // not needed anymore!
      
       
-        $tikva_posts_data = $tikvaContainer->content;
-        $tikva_posts_comment = $tikvaContainer->commentData;
+        $azbalac_posts_data = $azbalacContainer->content;
+        $azbalac_posts_comment = $azbalacContainer->commentData;
        
-        $tikva_posts[] = ['content' => $tikva_posts_content, 
-            'commentData' => $tikva_posts_comment, 
-            'data' => $tikva_posts_data];
+        $azbalac_posts[] = ['content' => $azbalac_posts_content, 
+            'commentData' => $azbalac_posts_comment, 
+            'data' => $azbalac_posts_data];
         
     }
     // Previous/next post navigation.
     //ob_start();
-    //tikva_paging_nav();
-    //$tikva_paging_nav = ob_get_contents();
+    //azbalac_paging_nav();
+    //$azbalac_paging_nav = ob_get_contents();
     //ob_end_clean();
 }
 else {
-    $tikva_have_posts = false;
+    $azbalac_have_posts = false;
 
     // If no content, include the "No posts found" template.
     get_template_part( 'content', 'none' );
 
-    $tikva_no_posts =  $tikvaContainer->contentNone;
+    $azbalac_no_posts =  $azbalacContainer->contentNone;
 
 }
 
 
 get_footer();
-$tikva_footer = $tikvaContainer->footerData;
+$azbalac_footer = $azbalacContainer->footerData;
 
 
 echo $t7tpl->render('single.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
-'tikva_has_featured_posts' => tikva_has_featured_posts(),
+'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
 'show_slider_2' => $showSlider_2,
 //'show_slider_3' => $showSlider_3,
@@ -92,10 +92,10 @@ echo $t7tpl->render('single.html.twig', array('header' => $header,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,
-'have_posts' => $tikva_have_posts,
-'posts' => $tikva_posts,
-'no_posts' => $tikva_no_posts,
-//'paging_nav' => $tikva_paging_nav,
-'footer' => $tikva_footer
+'have_posts' => $azbalac_have_posts,
+'posts' => $azbalac_posts,
+'no_posts' => $azbalac_no_posts,
+//'paging_nav' => $azbalac_paging_nav,
+'footer' => $azbalac_footer
 ));            
 

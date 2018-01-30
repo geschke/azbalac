@@ -4,12 +4,12 @@
  * Add-ons for Customizer
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.4.6
+ * @subpackage azbalac
+ * @since azbalac 0.4.6
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Customizer_Addon
+class azbalac_Customizer_Addon
 {
 
     private $customizer;
@@ -52,8 +52,8 @@ class Tikva_Customizer_Addon
           
         
         wp_enqueue_script(
-            'tikva-themecustomizer',            //Give the script an ID
-            get_template_directory_uri().'/js/tikva-customizer.js', //Point to file
+            'azbalac-themecustomizer',            //Give the script an ID
+            get_template_directory_uri().'/js/azbalac-customizer.js', //Point to file
             array( 'jquery','customize-preview' ),  //Define dependencies
             '',                         //Define a version (optional)
             true                        //Put script in footer?
@@ -61,7 +61,7 @@ class Tikva_Customizer_Addon
 
         // see https://wordpress.stackexchange.com/questions/106520/wp-localize-script-variable-is-not-defined-in-jquery
         // wp_localize_script must be called after the script it's being attached!
-        wp_localize_script( 'tikva-themecustomizer', 'tikvaAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
+        wp_localize_script( 'azbalac-themecustomizer', 'azbalacAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
     }
 }
 

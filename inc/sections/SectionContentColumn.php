@@ -3,13 +3,13 @@
 /**
  * Implements Content Sections functionality.
  *
- * @package   Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Content_Column
+class Azbalac_Section_Content_Column
 {
 
     const MAX_COLUMNS = 12;
@@ -80,8 +80,8 @@ class Tikva_Section_Content_Column
         }
       //echo "ColumnClass: $columnClass";
         ?>
-        <div class="container tikva-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
-            <div class="tikva-introduction">
+        <div class="container azbalac-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
+            <div class="azbalac-introduction">
 
         <section class="section-introduction" id="section-introduction">
           <?php if ($introTitle || $introSubtitle) { ?>
@@ -174,7 +174,7 @@ class Tikva_Section_Content_Column
                   <h2><a class="section-introduction-url" href="<?php echo $url; ?>"><?php echo $title; ?></a></h2>
                   <p><?php echo $content; ?></p>
                   <?php if (!self::$disableReadMore) { ?>
-                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button"><?php echo __("Read more &raquo;",'tikva'); ?></a></p>
+                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button"><?php echo __("Read more &raquo;",'azbalac'); ?></a></p>
                   <?php } ?>
 
 

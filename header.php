@@ -15,19 +15,19 @@ $content['bloginfo']['charset'] = get_bloginfo('charset');
 $content['bloginfo']['description'] = get_bloginfo('description');
 $content['bloginfo']['pingback_url'] = get_bloginfo('pingback_url');
 
-$content['headerImageData'] = tikva_get_header_image_data();
+$content['headerImageData'] = azbalac_get_header_image_data();
 
-$content['layoutStyle'] = tikva_get_layout();
+$content['layoutStyle'] = azbalac_get_layout();
 
-$content['bodyStyles'] = tikva_get_body_styles();
+$content['bodyStyles'] = azbalac_get_body_styles();
 
-$content['navbarFixed'] = tikva_get_navbar_layout(); // fixed-top or default
+$content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top or default
 
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 
 
 
-$content['subfooterStyles'] = Tikva_Section_Subfooter::getStyles();
+$content['subfooterStyles'] = azbalac_Section_Subfooter::getStyles();
 
 ob_start();
 wp_head(); 
@@ -48,13 +48,13 @@ if (has_nav_menu('header-menu')) {
 }
 
 
-$content['sectionFontStyles'] = Tikva_Section_Font::getStyles();
+$content['sectionFontStyles'] = azbalac_Section_Font::getStyles();
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( $class ) ) . '"';
 
-$content['skipToMainContent'] = __( 'Skip to main content', 'tikva' );
+$content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 
-$content['headerStyles'] = tikva_get_header_styles($navbarFixed);
+$content['headerStyles'] = azbalac_get_header_styles($navbarFixed);
 
 $content['description'] = get_bloginfo( 'name', 'display' ); // no raw
 $content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // no raw
@@ -65,23 +65,23 @@ $content['headerImage'] = get_header_image(); // no raw
 
 $content['customHeader'] = get_custom_header();
 
-$content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'tikva' );
+$content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac' );
 
 if ( is_front_page()) {
     
-    $content['showSlider']['1'] = Tikva_Section_Slider::getSlider(1);
+    $content['showSlider']['1'] = azbalac_Section_Slider::getSlider(1);
 
-    $content['showIntroductionElements']['1'] = Tikva_Section_Content_Column::getIntroductionElements(1);
-    $content['showIntroductionElements']['2'] = Tikva_Section_Content_Column::getIntroductionElements(2);
+    $content['showIntroductionElements']['1'] = azbalac_Section_Content_Column::getIntroductionElements(1);
+    $content['showIntroductionElements']['2'] = azbalac_Section_Content_Column::getIntroductionElements(2);
 
 }
 
-$content['toggleNavigation'] = __( 'Toggle navigation', 'tikva' );
+$content['toggleNavigation'] = __( 'Toggle navigation', 'azbalac' );
           
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = azbalac_DataContainer::getInstance();
 
-$tikvaContainer->headerData = $content;
+$azbalacContainer->headerData = $content;
 
       
 

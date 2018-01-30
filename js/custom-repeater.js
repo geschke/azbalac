@@ -5,7 +5,7 @@
 /**
  * Customizer Control: JavaScript part of repeater control
  *
- * @package     Tikva Controls
+ * @package     azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
@@ -19,7 +19,7 @@
  * @param {*} payload 
  * @param {*} callback 
  */
-function tikvaRepeaterPreloadAttachment(id, payload, callback) {
+function azbalacRepeaterPreloadAttachment(id, payload, callback) {
     // if it doesn't have URL we probably have to preload it
     if (!wp.media.attachment(id).get('url')) {
       wp.media.attachment(id).fetch().then(function () {
@@ -38,7 +38,7 @@ function tikvaRepeaterPreloadAttachment(id, payload, callback) {
  * @param {*} payload 
  * @param {*} attachment 
  */
-function tikvaRepeaterPreviewImage(payload, attachment) {
+function azbalacRepeaterPreviewImage(payload, attachment) {
     var elementId = payload['elementId'];
     var elementName = payload['elementName'];
     
@@ -49,7 +49,7 @@ function tikvaRepeaterPreviewImage(payload, attachment) {
         // placeholder element is available, replace with image
         mediaView.empty();
         var imageTemplate = '<div class="thumbnail thumbnail-image"><img class="attachment-thumb" src="" draggable="false" alt=""></div>';
-        imageTemplate += '<div class="actions"><button type="button" class="button remove-button tikva-repeater-custom-remove-button">' + objectL10n.remove + '</button> <button type="button" class="button upload-button tikva-repeater-custom-upload-button" id="">' + objectL10n.change_image + '</button>  </div>';
+        imageTemplate += '<div class="actions"><button type="button" class="button remove-button azbalac-repeater-custom-remove-button">' + objectL10n.remove + '</button> <button type="button" class="button upload-button azbalac-repeater-custom-upload-button" id="">' + objectL10n.change_image + '</button>  </div>';
         mediaView.append(imageTemplate);
       
     } 
@@ -71,7 +71,7 @@ function uuidv4() {
 (function ($) {
 
    
-wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
+wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( {
 
     
 
@@ -80,7 +80,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         //this.elementData = {};
 
         this.container.on( 'event_repeater_updated', function() {
-            var dataField = $(control.container).find('.tikva_repeater_collector');
+            var dataField = $(control.container).find('.azbalac_repeater_collector');
             var settingData = dataField.val();
          
             control.setting.set( settingData );
@@ -116,7 +116,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
      */
     updateCurrentDataField: function(elementData) {
         var control = this;
-        var dataField = $(control.container).find('.tikva_repeater_collector');
+        var dataField = $(control.container).find('.azbalac_repeater_collector');
         
         var dataFieldId = dataField.attr('id');
 
@@ -172,7 +172,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
     emptyTemplateImage: function(mediaView) {
         // todo: check function with multiple image elements
         mediaView.empty();
-        var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
+        var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button azbalac-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
         mediaView.append(imageTemplate);
         
     },
@@ -261,7 +261,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         
         } 
        
-        var prevValue = $(control.container).find('.tikva_repeater_collector').val();
+        var prevValue = $(control.container).find('.azbalac_repeater_collector').val();
 
         if (typeof prevValue != 'undefined' && prevValue != '') {
             elementData = JSON.parse(decodeURI(prevValue));
@@ -303,10 +303,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
             // empty colorpicker element and set events
             var colorpicker = newElement.find('.wp-picker-container');
             var colorpickerContainer = colorpicker.parent();
-            var colorpickerInput = newElement.find('.tikva-repeater-color-field').prop('outerHTML');
+            var colorpickerInput = newElement.find('.azbalac-repeater-color-field').prop('outerHTML');
             colorpicker.remove();
             colorpickerContainer.append(colorpickerInput);
-            newElement.find('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
+            newElement.find('.azbalac-repeater-color-field').wpColorPicker(colorPickerOptions);
             
             // empty radio button elements and set new names for radio button group based on element id
             var radioContainer = newElement.find('.customize-control-radio-container');
@@ -316,7 +316,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                     var dataFieldName = $(radioContainerElement).attr('data-field');
                 
                     var radioName = '_customize-control-repeater-radio-' + dataFieldName + '-' + newId;
-                    var radioInputElement = $(radioContainerElement).find('.tikva-customize-repeater-input-radio');
+                    var radioInputElement = $(radioContainerElement).find('.azbalac-customize-repeater-input-radio');
                     _.each( radioInputElement, function(radioInputItem, rcItemIndex ){
                         //console.log(radioInputItem);
                         $(radioInputItem).attr('name',radioName);
@@ -427,7 +427,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         var custom_uploader;
 
-        $(document).on('click', '.tikva-repeater-custom-upload-button', function(e) {
+        $(document).on('click', '.azbalac-repeater-custom-upload-button', function(e) {
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
 
@@ -465,7 +465,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
                 var payload = [];
                 payload['elementId'] = elementId;
                 payload['elementName'] = dataField;
-                tikvaRepeaterPreviewImage(payload, attachment);
+                azbalacRepeaterPreviewImage(payload, attachment);
                 
                 if (elementData[elementId]["elements"][dataField] == undefined) {
                     elementData[elementId]["elements"][dataField] = {}; 
@@ -489,7 +489,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
     
         });
 
-        $(document).on('click', '.tikva-repeater-custom-remove-button', function(e) {
+        $(document).on('click', '.azbalac-repeater-custom-remove-button', function(e) {
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
         
@@ -499,7 +499,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
             mediaView.empty();
 
-            var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button tikva-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
+            var imageTemplate = '<div class="placeholder">' + objectL10n.no_image_selected + '</div><div class="actions"> <button type="button" class="button azbalac-repeater-custom-upload-button">' + objectL10n.select_image + '</button>      </div>';
             mediaView.append(imageTemplate);
 
             elementData[elementId]["elements"][dataField] = {}; 
@@ -509,10 +509,10 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
         });
         
           
-        $('.tikva-repeater-color-field').wpColorPicker(colorPickerOptions);
+        $('.azbalac-repeater-color-field').wpColorPicker(colorPickerOptions);
          
          
-         $(document).on('change', '.tikva-customize-repeater-input-checkbox', function () {
+         $(document).on('change', '.azbalac-customize-repeater-input-checkbox', function () {
             
             elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
@@ -542,7 +542,7 @@ wp.customize.controlConstructor.tikva_repeater = wp.customize.Control.extend( {
 
         });
 
-        $(document).on('change', '.tikva-customize-repeater-input-radio', function () {
+        $(document).on('change', '.azbalac-customize-repeater-input-radio', function () {
           
             var radioName = $(this).attr('name');
             var newValue = $( "input[type=radio][name=" + radioName + " ]:checked" ).val();

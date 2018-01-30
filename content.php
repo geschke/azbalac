@@ -4,7 +4,7 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package tikva
+ * @package azbalac
  * @subpackage Themes
  */
 
@@ -32,9 +32,9 @@ ob_end_clean();
 
 ob_start();
 if ( 'post' == get_post_type() ) {
-	tikva_posted_on();
+	azbalac_posted_on();
 }
-$content['tikvaPostedOn'] = ob_get_contents();
+$content['azbalacPostedOn'] = ob_get_contents();
 ob_end_clean();
 
 $content['commentsPopupLink'] = '';
@@ -42,8 +42,8 @@ $content['commentsPopupLink'] = '';
 if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 	ob_start();
 
-	comments_popup_link( sprintf( __( '<span class="byline-icon fa fa-comment" aria-hidden="true"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'tikva' ), get_the_title()),
-	__( '1 Comment', 'tikva' ), __( '% Comments', 'tikva' ) ); 
+	comments_popup_link( sprintf( __( '<span class="byline-icon fa fa-comment" aria-hidden="true"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'azbalac' ), get_the_title()),
+	__( '1 Comment', 'azbalac' ), __( '% Comments', 'azbalac' ) ); 
 
 	$content['commentsPopupLink'] = ob_get_contents();
 	ob_end_clean();
@@ -52,7 +52,7 @@ if ( ! post_password_required() && ( comments_open() || get_comments_number() ) 
 
 
 ob_start();
-	edit_post_link( sprintf( __( ' <span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span> Edit <span class="screen-reader-text">%s</span>', 'tikva' ), get_the_title()), '<span class="edit-link">', '</span>' );
+	edit_post_link( sprintf( __( ' <span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span> Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
 
 $content['editPostLink'] = ob_get_contents();
 ob_end_clean();
@@ -69,10 +69,10 @@ if ( is_search() )
             the_post_thumbnail('medium');
         }
 
-			the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'tikva'), get_the_title()) );
+			the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()) );
 		    wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
-                        'tikva' ) . '</span>',
+                        'azbalac' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
@@ -83,7 +83,7 @@ $content['theContent'] = ob_get_contents();
 ob_end_clean();
 
 ob_start();
-the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','tikva'), ' ','' );
+the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','azbalac'), ' ','' );
 $content['theTags'] = ob_get_contents();
 ob_end_clean();
 
@@ -93,12 +93,12 @@ $content['output'] = '';
 
 if($categories) {
     $content['output'] .= '<div><span class="fa fa-th-list"></span> ';
-        $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'tikva' );
+        $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'azbalac' );
         $content['output'] .= '&nbsp;';
         foreach($categories as $category) {
             $catOutput .= '<a class="badge badge-secondary" href="'.get_category_link( $category->term_id ).'"
                 title="' .
-                esc_attr( sprintf( __( "View all posts in %s",'tikva' ), $category->name ) ) . '">'.$category->cat_name
+                esc_attr( sprintf( __( "View all posts in %s",'azbalac' ), $category->name ) ) . '">'.$category->cat_name
                 .'</a>'.$separator;
         }
         $content['output'] .= trim($catOutput, $separator);
@@ -107,5 +107,5 @@ if($categories) {
     }
 
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
-$tikvaContainer->content = $content;
+$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer->content = $content;

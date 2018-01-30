@@ -2,36 +2,36 @@
 /**
  * The template for displaying Search Results pages
  *
- * @package Tikva7
- * @subpackage Tikva7
- * @since Tikva7 0.1
+ * @package Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  */
 
-$tikvaContainer = Tikva_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 get_header(); 
-$header = $tikvaContainer->headerData;
+$header = $azbalacContainer->headerData;
 
 $showSlider_2 = '';
 if ( is_front_page() ) {
-    $showSlider_2 = Tikva_Section_Slider::getSlider(2);
+    $showSlider_2 = Azbalac_Section_Slider::getSlider(2);
 } 
 
-$featured = new Tikva_Featured();
+$featured = new Azbalac_Featured();
 $featuredPosts = $featured->getFeaturedPosts();
 
 
-$layoutStyle = tikva_get_layout();
+$layoutStyle = azbalac_get_layout();
 
 get_sidebar();
-$sidebar = $tikvaContainer->contentSidebar;
+$sidebar = $azbalacContainer->contentSidebar;
 
 
 $title_search_results = '';
 if ( have_posts() ) {
-    $tikva_have_posts = true;
+    $azbalac_have_posts = true;
  
-    $title_search_results = sprintf( __( 'Search Results for: %s', 'tikva' ), get_search_query() ); 
+    $title_search_results = sprintf( __( 'Search Results for: %s', 'azbalac' ), get_search_query() ); 
     // Start the Loop.
     while ( have_posts() ) {
        
@@ -43,48 +43,48 @@ if ( have_posts() ) {
             comments_template();
         }
 
-        $tikva_posts_content  = ob_get_contents();
-        $tikva_posts_data = $tikvaContainer->content;
-        $tikva_posts[] = ['content' => $tikva_posts_content, 'data' => $tikva_posts_data];
+        $azbalac_posts_content  = ob_get_contents();
+        $azbalac_posts_data = $azbalacContainer->content;
+        $azbalac_posts[] = ['content' => $azbalac_posts_content, 'data' => $azbalac_posts_data];
         ob_end_clean();
     }
     // Previous/next post navigation.
     ob_start();
-    //tikva_paging_nav();
-    //$tikva_paging_nav = ob_get_contents();
+    //azbalac_paging_nav();
+    //$azbalac_paging_nav = ob_get_contents();
     ob_end_clean();
 }
 else {
-    $tikva_have_posts = false;
+    $azbalac_have_posts = false;
 
     // If no content, include the "No posts found" template.
     get_template_part( 'content', 'none' );
 
-    $tikva_no_posts =  $tikvaContainer->contentNone;
+    $azbalac_no_posts =  $azbalacContainer->contentNone;
 
 }
 
 
 get_footer();
-$tikva_footer = $tikvaContainer->footerData;
+$azbalac_footer = $azbalacContainer->footerData;
 
 
 
 echo $t7tpl->render('search.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
-'tikva_has_featured_posts' => tikva_has_featured_posts(),
+'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
 'show_slider_2' => $showSlider_2,
 'template_part_featured_content' => $template_part_featured_content,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,
-'have_posts' => $tikva_have_posts,
-'posts' => $tikva_posts,
-'no_posts' => $tikva_no_posts,
-'paging_nav' => $tikva_paging_nav,
+'have_posts' => $azbalac_have_posts,
+'posts' => $azbalac_posts,
+'no_posts' => $azbalac_no_posts,
+'paging_nav' => $azbalac_paging_nav,
 'title_search_results' => $title_search_results,
-'footer' => $tikva_footer
+'footer' => $azbalac_footer
 ));            
 
 

@@ -4,10 +4,10 @@
 
 
 {% if is_front_page %}
-    {{ show_slider.2|raw }}
+    {{ show_slider_2|raw }}
 {% endif %}
 
-{% if is_front_page and tikva_has_featured_posts %}
+{% if is_front_page and azbalac_has_featured_posts %}
 
     <div id="featured-main" class="featured-main">
         {% include 'content/content-featured-container.html.twig' with {'featured': featured } %}
@@ -17,7 +17,7 @@
 
 {% if is_front_page %}
     {{ intro_elements_3|raw }}
-    {{ show_slider.3|raw }}
+    {{ show_slider_3|raw }}
 {% endif %}
 
  

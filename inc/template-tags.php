@@ -2,16 +2,16 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Tikva
+ * @package Azbalac
  */
 
-if (!function_exists('tikva_paging_nav')) :
+if (!function_exists('azbalac_paging_nav')) :
     /**
      * Display navigation to next/previous set of posts when applicable.
      *
      * @return void
      */
-    function tikva_paging_nav()
+    function azbalac_paging_nav()
     {
         // Don't print empty markup if there's only one page.
         if ($GLOBALS['wp_query']->max_num_pages < 2) {
@@ -41,8 +41,8 @@ if (!function_exists('tikva_paging_nav')) :
             'current' => $paged,
             'mid_size' => 1,
             'add_args' => array_map('urlencode', $query_args),
-            'prev_text' => __('&laquo; Previous', 'tikva'),
-            'next_text' => __('Next &raquo;', 'tikva'),
+            'prev_text' => __('&laquo; Previous', 'azbalac'),
+            'next_text' => __('Next &raquo;', 'azbalac'),
             'type' => 'array'
         ));
 
@@ -50,7 +50,7 @@ if (!function_exists('tikva_paging_nav')) :
 
             ?>
             <nav class="navigation paging-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php _e('Posts navigation', 'tikva'); ?></h2>
+                <h2 class="screen-reader-text"><?php _e('Posts navigation', 'azbalac'); ?></h2>
                 <ul class="pagination">
                     <?php
                     foreach ($links as $link) {
@@ -68,26 +68,26 @@ if (!function_exists('tikva_paging_nav')) :
 endif;
 
 
-if (!function_exists('get_tikva_posted_on')) :
+if (!function_exists('get_azbalac_posted_on')) :
     /**
      * Print HTML with meta information for the current post-date/time and author.
      *
-     * @since Tikva 0.1.5
+     * @since Azbalac 0.1.5
      */
-    function get_tikva_posted_on()
+    function get_azbalac_posted_on()
     {
         $output = '';
 
         if (is_sticky() && is_home() && !is_paged()) {
-            $output .= '<span class="featured-post">' . __('Sticky', 'tikva') . '</span>&nbsp;&nbsp;';
+            $output .= '<span class="featured-post">' . __('Sticky', 'azbalac') . '</span>&nbsp;&nbsp;';
         }
         // Set up and print post meta information.
-        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon fa fa-clock-o" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'tikva') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
+        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon fa fa-clock-o" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'azbalac') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
             esc_url(get_permalink()),
             esc_attr(get_the_date('c')),
             esc_html(get_the_date())
         );
-        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon fa fa-user" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'tikva') . '%2$s</a></span></span>',
+        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon fa fa-user" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'azbalac') . '%2$s</a></span></span>',
             esc_url(get_author_posts_url(get_the_author_meta('ID'))),
             esc_html(get_the_author())
         );
@@ -96,15 +96,15 @@ if (!function_exists('get_tikva_posted_on')) :
     }
 endif;
 
-if (!function_exists('tikva_posted_on')) :
+if (!function_exists('azbalac_posted_on')) :
     /**
      * Print HTML with meta information for the current post-date/time and author.
      *
-     * @since Tikva 0.1.5
+     * @since Azbalac 0.1.5
      */
-    function tikva_posted_on()
+    function azbalac_posted_on()
     {
-        echo get_tikva_posted_on();
+        echo get_azbalac_posted_on();
     }
 endif;
 

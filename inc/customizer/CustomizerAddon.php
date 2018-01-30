@@ -9,7 +9,7 @@
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class azbalac_Customizer_Addon
+class Azbalac_Customizer_Addon
 {
 
     private $customizer;
@@ -53,7 +53,7 @@ class azbalac_Customizer_Addon
         
         wp_enqueue_script(
             'azbalac-themecustomizer',            //Give the script an ID
-            get_template_directory_uri().'/js/azbalac-customizer.js', //Point to file
+            get_template_directory_uri().'/js/theme-customizer.js', //Point to file
             array( 'jquery','customize-preview' ),  //Define dependencies
             '',                         //Define a version (optional)
             true                        //Put script in footer?

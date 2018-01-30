@@ -18,7 +18,7 @@
  */
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 get_header(); 
 $header = $azbalacContainer->headerData;

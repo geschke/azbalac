@@ -23,5 +23,5 @@ if ( is_home() && current_user_can( 'publish_posts' ) ) {
 }
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 $azbalacContainer->contentNone = $content;

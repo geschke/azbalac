@@ -42,7 +42,7 @@ if (!class_exists('Azbalac_Welcome')) {
         /**
          * Creates the dashboard page
          * @see  add_theme_page()
-         * @since 0.4.4
+         * @since 0.1
          */
         public function azbalac_welcome_register_menu()
         {
@@ -51,7 +51,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Adds an admin notice upon successful activation.
-         * @since 0.4.4
+         * @since 0.1
          */
         public function activation_admin_notice()
         {
@@ -71,13 +71,13 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Display an admin notice linking to the welcome screen
-         * @since 0.4.4
+         * @since 0.1
          */
         public function welcome_admin_notice()
         {
             ?>
             <div class="updated notice azbalac-admin-notice is-dismissible">
-                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing azbalac Theme! Please have a look at the new %swelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
+                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac Theme! Please have a look at the new %swelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
                 
             </div>
             <?php
@@ -85,7 +85,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Ajax callback function to set option to dismiss admin notice of new or updated theme installation
-         * @since 0.4.4
+         * @since 0.1
          */
         public function dismissWelcomeNoticeCallback()
         {
@@ -103,7 +103,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Load welcome screen css and javascript
-         * @since  0.4.4
+         * @since  0.1
          */
         public function azbalac_welcome_style_and_scripts($hook_suffix)
         {
@@ -111,9 +111,10 @@ if (!class_exists('Azbalac_Welcome')) {
             
             wp_enqueue_script('azbalac-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
             if ('appearance_page_azbalac-welcome' == $hook_suffix) {
-                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true);
-                wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '2016082101');
-                wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), '2016082101');
+                wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );       
+                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0', true);
+                wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '2018013001');
+                wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), '2018013001');
             
 
                
@@ -124,7 +125,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Welcome screen content
-         * @since 0.4.4
+         * @since 0.1
          */
         public function azbalac_welcome_screen()
         {
@@ -136,8 +137,8 @@ if (!class_exists('Azbalac_Welcome')) {
             <!-- Nav tabs -->
             <div class="azbalac-wrap">
                 <ul class="azbalac-nav-tabs nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#azbalac-tab-getting-started" aria-controls="azbalac-tab-getting-started" role="tab" data-toggle="tab">Getting started</a></li>
-                    <li><a href="#azbalac-tab-changelog" aria-controls="azbalac-tab-changelog" role="tab" data-toggle="tab">Changelog</a></li>
+                    <li class="active"><a class="nav-link active" id="tab-getting-started" href="#azbalac-tab-getting-started" aria-controls="azbalac-tab-getting-started" role="tab" data-toggle="tab">Getting started</a></li>
+                    <li><a class="nav-link" id="tab-changelog" href="#azbalac-tab-changelog" aria-controls="azbalac-tab-changelog" role="tab" data-toggle="tab">Changelog</a></li>
 
                 </ul>
 
@@ -161,7 +162,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Getting started
-         * @since 0.4.4
+         * @since 0.1
          */
         public function azbalac_welcome_getting_started()
         {
@@ -170,7 +171,7 @@ if (!class_exists('Azbalac_Welcome')) {
 
         /**
          * Changelog
-         * @since 0.4.4
+         * @since 0.1
          */
         public function azbalac_welcome_changelog()
         {
@@ -178,7 +179,7 @@ if (!class_exists('Azbalac_Welcome')) {
         }
 
     }
- //new azbalac_Welcome();
-    $GLOBALS['azbalac_Welcome'] = new Azbalac_Welcome();
+ //new Azbalac_Welcome();
+    $GLOBALS['Azbalac_Welcome'] = new Azbalac_Welcome();
 }
 ?>

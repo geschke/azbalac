@@ -27,7 +27,7 @@ $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a
 
 
 
-$content['subfooterStyles'] = azbalac_Section_Subfooter::getStyles();
+$content['subfooterStyles'] = Azbalac_Section_Subfooter::getStyles();
 
 ob_start();
 wp_head(); 
@@ -48,7 +48,7 @@ if (has_nav_menu('header-menu')) {
 }
 
 
-$content['sectionFontStyles'] = azbalac_Section_Font::getStyles();
+$content['sectionFontStyles'] = Azbalac_Section_Font::getStyles();
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( $class ) ) . '"';
 
@@ -69,17 +69,17 @@ $content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac
 
 if ( is_front_page()) {
     
-    $content['showSlider']['1'] = azbalac_Section_Slider::getSlider(1);
+    $content['showSlider']['1'] = Azbalac_Section_Slider::getSlider(1);
 
-    $content['showIntroductionElements']['1'] = azbalac_Section_Content_Column::getIntroductionElements(1);
-    $content['showIntroductionElements']['2'] = azbalac_Section_Content_Column::getIntroductionElements(2);
+    $content['showIntroductionElements']['1'] = Azbalac_Section_Content_Column::getIntroductionElements(1);
+    $content['showIntroductionElements']['2'] = Azbalac_Section_Content_Column::getIntroductionElements(2);
 
 }
 
 $content['toggleNavigation'] = __( 'Toggle navigation', 'azbalac' );
           
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 $azbalacContainer->headerData = $content;
 

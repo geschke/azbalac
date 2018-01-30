@@ -12,7 +12,7 @@ if (!class_exists('WP_Customize_Control'))
  * 
  * @link https://github.com/aristath/kirki
  */
-class azbalac_Custom_Slider_Control extends WP_Customize_Control
+class Azbalac_Custom_Slider_Control extends WP_Customize_Control
 {
 
     public $type = 'slider';

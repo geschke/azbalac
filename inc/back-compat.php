@@ -32,7 +32,7 @@ add_action( 'after_switch_theme', 'azbalac_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * Twenty Seventeen on WordPress versions prior to 4.7.
  *
- * @since Twenty Seventeen 1.0
+ * @since Azbalac 0.1
  *
  * @global string $wp_version WordPress version.
  */
@@ -44,7 +44,7 @@ function azbalac_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 4.7.
  *
- * @since Twenty Seventeen 1.0
+ * @since Azbalac 0.1
  *
  * @global string $wp_version WordPress version.
  */
@@ -56,9 +56,9 @@ function azbalac_customize() {
 add_action( 'load-customize.php', 'azbalac_customize' );
 
 /**
- * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.7.
+ * Prevents the Theme Preview from being loaded on PHP versions prior to 7.0.
  *
- * @since Twenty Seventeen 1.0
+ * @since Azbalac 0.1
  *
  * @global string $wp_version WordPress version.
  */

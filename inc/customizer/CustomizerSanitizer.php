@@ -5,12 +5,12 @@
  *
  *
  * @package   WordPress
- * @subpackage azbalac
- * @since azbalac 0.4
- * @copyright Copyright (c) 2016, Ralf Geschke.
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
+ * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
-class azbalac_Customizer_Sanitizer
+class Azbalac_Customizer_Sanitizer
 {
 
     public function sanitizeCheckbox($input)
@@ -123,7 +123,7 @@ class azbalac_Customizer_Sanitizer
 
     public function sanitizeStylesheet($input)
     {
-        $stylesheets = azbalac_Customizer::getAvailableStylesheets();
+        $stylesheets = Azbalac_Customizer::getAvailableStylesheets();
         if (!in_array($input, $stylesheets)) {
             return 'slate_accessibility_ready.min.css';
         }

@@ -65,5 +65,5 @@ if ( ! post_password_required() ) {
 
 }
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 $azbalacContainer->commentData = $content;

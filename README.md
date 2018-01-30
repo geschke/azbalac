@@ -1,6 +1,6 @@
 # Azbalac
 
-## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
+## A pure and basic WordPress theme, based on Bootstrap 4.0 framework.
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
@@ -11,9 +11,9 @@ Version 0.1
 
 Version 0.1
 
-- This version is derived from the release 0.5.5 of Azbalac WordPress theme. It does not add any functionality.
+- This version is derived from the release 0.5.5 of Tikva WordPress theme. It does not add any functionality, but contains some fixes.
 
-## Version history of Azbalac template:
+## Version history of Tikva template:
 
 Version 0.5.5
 

@@ -6,8 +6,8 @@
  *
  * @package   WordPress
  * @subpackage Azbalac
- * @since Azbalac 0.5.0
- * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @since Azbalac 0.1
+ * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
 class Azbalac_Section_Social_Media_Buttons

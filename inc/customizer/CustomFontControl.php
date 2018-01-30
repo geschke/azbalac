@@ -9,7 +9,7 @@
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
  */
-class azbalac_Custom_Font_List
+class Azbalac_Custom_Font_List
 {
     const FONTS = array(
         '1' => 'Georgia, serif',
@@ -38,7 +38,7 @@ if (! class_exists( 'WP_Customize_Control' )) {
 
 
 
-class azbalac_Custom_Font_Request 
+class Azbalac_Custom_Font_Request 
 {
     public function __construct() 
     {
@@ -75,7 +75,7 @@ class azbalac_Custom_Font_Request
         
         
         
-        echo json_encode(azbalac_Custom_Font_List::FONTS);
+        echo json_encode(Azbalac_Custom_Font_List::FONTS);
         
         wp_die(); // this is required to terminate immediately and return a proper response
     }
@@ -92,7 +92,7 @@ class azbalac_Custom_Font_Request
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
  */
-class azbalac_Custom_Font_Control extends WP_Customize_Control
+class Azbalac_Custom_Font_Control extends WP_Customize_Control
 {
 
 
@@ -199,25 +199,25 @@ class azbalac_Custom_Font_Control extends WP_Customize_Control
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
         $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Serif Fonts');
-        $fonts[] = array('k' => 1, 'v' => azbalac_Custom_Font_List::FONTS['1']);
-        $fonts[] = array('k' => 2, 'v' => azbalac_Custom_Font_List::FONTS['2']);
-        $fonts[] = array('k' => 3, 'v' => azbalac_Custom_Font_List::FONTS['3']);
+        $fonts[] = array('k' => 1, 'v' => Azbalac_Custom_Font_List::FONTS['1']);
+        $fonts[] = array('k' => 2, 'v' => Azbalac_Custom_Font_List::FONTS['2']);
+        $fonts[] = array('k' => 3, 'v' => Azbalac_Custom_Font_List::FONTS['3']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Sans Serif Fonts');
-        $fonts[] = array('k' => 10, 'v' => azbalac_Custom_Font_List::FONTS['10']);
-        $fonts[] = array('k' => 11, 'v' => azbalac_Custom_Font_List::FONTS['11']);
-        $fonts[] = array('k' => 12, 'v' => azbalac_Custom_Font_List::FONTS['12']);
-        $fonts[] = array('k' => 13, 'v' => azbalac_Custom_Font_List::FONTS['13']);
-        $fonts[] = array('k' => 14, 'v' => azbalac_Custom_Font_List::FONTS['14']);
-        $fonts[] = array('k' => 15, 'v' => azbalac_Custom_Font_List::FONTS['15']);
-        $fonts[] = array('k' => 16, 'v' => azbalac_Custom_Font_List::FONTS['16']);
-        $fonts[] = array('k' => 17, 'v' => azbalac_Custom_Font_List::FONTS['17']);
+        $fonts[] = array('k' => 10, 'v' => Azbalac_Custom_Font_List::FONTS['10']);
+        $fonts[] = array('k' => 11, 'v' => Azbalac_Custom_Font_List::FONTS['11']);
+        $fonts[] = array('k' => 12, 'v' => Azbalac_Custom_Font_List::FONTS['12']);
+        $fonts[] = array('k' => 13, 'v' => Azbalac_Custom_Font_List::FONTS['13']);
+        $fonts[] = array('k' => 14, 'v' => Azbalac_Custom_Font_List::FONTS['14']);
+        $fonts[] = array('k' => 15, 'v' => Azbalac_Custom_Font_List::FONTS['15']);
+        $fonts[] = array('k' => 16, 'v' => Azbalac_Custom_Font_List::FONTS['16']);
+        $fonts[] = array('k' => 17, 'v' => Azbalac_Custom_Font_List::FONTS['17']);
         $fonts[] = array('c' => 'optgroup_end');
 
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Monospace Fonts');
-        $fonts[] = array('k' => 30, 'v' => azbalac_Custom_Font_List::FONTS['30']);
-        $fonts[] = array('k' => 31, 'v' => azbalac_Custom_Font_List::FONTS['31']);
+        $fonts[] = array('k' => 30, 'v' => Azbalac_Custom_Font_List::FONTS['30']);
+        $fonts[] = array('k' => 31, 'v' => Azbalac_Custom_Font_List::FONTS['31']);
         
         $fonts[] = array('c' => 'optgroup_end');
         

@@ -7,7 +7,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 $azbalac = wp_get_theme( 'azbalac' );
 ?>
 
- <div role="tabpanel" class="tab-pane  fade in  active" id="azbalac-tab-getting-started">
+ <div role="tabpanel" class="tab-pane fade show active" id="azbalac-tab-getting-started">
  
         <h1 class="azbalac-welcome-title"><?php _e('Welcome to azbalac', 'azbalac'); ?> 
             <?php
@@ -53,7 +53,7 @@ $azbalac = wp_get_theme( 'azbalac' );
                 
                 	<hr />
 		  <p style="text-align: center;">
-                <?php esc_html_e( 'Thanks again for using azbalac theme!', 'azbalac' ); ?></p>
+                <?php esc_html_e( 'Thanks again for using Azbalac theme!', 'azbalac' ); ?></p>
                   <p style="text-align: right;"><i>
                 <?php esc_html_e( 'Ralf Geschke', 'azbalac' ); ?></i></p>
 	<hr />

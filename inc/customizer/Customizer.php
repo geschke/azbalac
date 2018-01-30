@@ -11,7 +11,7 @@
  * @copyright Copyright (c) 2016, Ralf Geschke.
  * @license   GPL2+
  */
-class azbalac_Customizer
+class Azbalac_Customizer
 {
 
     /**
@@ -25,12 +25,12 @@ class azbalac_Customizer
     {
 
         add_action('customize_register', array($this, 'customizeRegister'));
-        $this->sanitizer = new azbalac_Customizer_Sanitizer();
+        $this->sanitizer = new Azbalac_Customizer_Sanitizer();
     }
 
     public function customizeRegister($wp_customize)
     {
-        $customAddOn = new azbalac_Customizer_Addon($wp_customize);
+        $customAddOn = new Azbalac_Customizer_Addon($wp_customize);
         
         $this->addCustomizerThemePanel($wp_customize);
         $this->addCustomizerSocialButtons($wp_customize);
@@ -733,7 +733,7 @@ class azbalac_Customizer
             'sanitize_callback' => array($this->sanitizer, 'sanitizeLayout')
         ));
 
-        $wp_customize->add_control(new azbalac_Custom_Radio_Image_Control($wp_customize, 'azbalac_layout', array(
+        $wp_customize->add_control(new Azbalac_Custom_Radio_Image_Control($wp_customize, 'azbalac_layout', array(
             'label' => __('Layout', 'azbalac'),
             'description' => __('Set layout of your site.', 'azbalac'),
             'section' => 'section_theme_options_general',
@@ -816,13 +816,13 @@ class azbalac_Customizer
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
         ));
 
-        $wp_customize->add_control(new azbalac_Custom_Font_Control($wp_customize, 
+        $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
         'control_typography_headline', array(
             'label' => __('Headline Base Font', 'azbalac'),
             'description' => __('Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_headline',
-            /*'defaults' => array('font' => 17, // use numerical from azbalac_Custom_Font_List or Ggl font string
+            /*'defaults' => array('font' => 17, // use numerical from Azbalac_Custom_Font_List or Ggl font string
             'size' => 16)*/
         )));
 
@@ -833,7 +833,7 @@ class azbalac_Customizer
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
         ));
 
-        $wp_customize->add_control(new azbalac_Custom_Font_Control($wp_customize, 
+        $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
         'control_typography_body', array(
             'label' => __('Body Font', 'azbalac'),
             'description' => __('Set font of body content. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
@@ -905,7 +905,7 @@ class azbalac_Customizer
         }
 
 
-        $wp_customize->add_control(new azbalac_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
+        $wp_customize->add_control(new Azbalac_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
             'label' => __('Footer Layout', 'azbalac'),
             'description' => __('Set layout of the footer.', 'azbalac'),
             'section' => 'section_theme_options_footer',
@@ -1006,7 +1006,7 @@ class azbalac_Customizer
         ));
 
 
-        $wp_customize->add_control(new azbalac_Custom_Slider_Control($wp_customize, 'featured_articles_max', array(
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'featured_articles_max', array(
             'label' => __('Maximum number of featured articles on homepage', 'azbalac'),
             'section' => 'section_theme_options_home',
             'settings' => 'featured_articles_max',
@@ -1260,7 +1260,7 @@ class azbalac_Customizer
          'capability' => 'edit_theme_options'
         ));
 
-        $wp_customize->add_control( new azbalac_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
+        $wp_customize->add_control( new Azbalac_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
         'label'   => esc_html__('Lead Section Content', 'azbalac'),
         'description' => esc_html__('Add as many elements as you want.','azbalac'),
        
@@ -1314,12 +1314,12 @@ class azbalac_Customizer
         'page' => array(
             'type'        => 'dropdown-pages',
             'label'       =>  __('Link to Page or&hellip;', 'azbalac'),
-            'choices' => azbalac_Custom_Repeater_Helper::getPageDropdownOptions()
+            'choices' => Azbalac_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
         'post' => array(
             'type'        => 'dropdown-pages',
             'label'       =>  __('Link to Post or&hellip;', 'azbalac'),
-            'choices' => azbalac_Custom_Repeater_Helper::getPostDropdownOptions()
+            'choices' => Azbalac_Custom_Repeater_Helper::getPostDropdownOptions()
         ),
         'url' => array(
             'type'        => 'text',

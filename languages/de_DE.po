@@ -2,1372 +2,1311 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tikva v0.5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-11-04 17:37:44+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2018-01-30 12:00+0000\n"
+"PO-Revision-Date: 2018-01-30 12:01+0000\n"
+"Last-Translator: geschke <ralf@geschke.net>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-Language: \n"
 "X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Poedit-Basepath: \n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Textdomain-Support: yes"
+"X-Textdomain-Support: yes\n"
+"Language: de-DE"
 
-#: inc/sections/SectionFooter.php:23
-#@ tikva
-msgid "No Widgets Selected"
-msgstr "Keine Widgets ausgewählt"
+#: content.php:55
+#, php-format
+msgid ""
+" <span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\">"
+"</span> Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
 
-#: inc/sections/SectionContentColumn.php:171
-#@ tikva
-msgid "Read more &raquo;"
-msgstr "Weiterlesen &raquo;"
+#: inc/back-compat.php:40 inc/back-compat.php:67
+#, php-format
+msgid ""
+"Azbalac requires at least PHP version 7.0.0. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
 
-#: inc/customizer/Customizer.php:1369
-#@ tikva
-msgid "Choose Icon"
-msgstr "Icon auswählen"
+#: inc/customizer/CustomFontControl.php:342
+msgid "Select font variant:"
+msgstr ""
 
-#: inc/customizer/Customizer.php:1329
-#@ tikva
-msgid "Thumbnail"
-msgstr "Vorschaubild"
+#: inc/customizer/CustomFontControl.php:368
+msgid "Font Size"
+msgstr ""
 
-#: inc/customizer/Customizer.php:1324
-#@ tikva
-msgid "Use image shape for uploaded image:"
-msgstr "Bilder-Konturen für das Bild wählen:"
+#: inc/customizer/Customizer.php:82
+msgid "Typography Settings"
+msgstr ""
 
-#: inc/customizer/Customizer.php:1310
-#@ tikva
-msgid "Link to any URL"
-msgstr "Link zu einer beliebigen URL"
+#: inc/customizer/Customizer.php:83
+msgid "Edit typography settings:  fonts settings of title and body elements."
+msgstr ""
 
-#: inc/customizer/Customizer.php:1281
-#@ tikva
-msgid "Text"
-msgstr "Text"
+#: inc/customizer/Customizer.php:386
+msgid "Show slider indicators"
+msgstr ""
 
-#: inc/customizer/Customizer.php:1209
-#@ tikva
-msgid "Section Background Color"
-msgstr "Hintergrundfarbe Bereich"
+#: inc/customizer/Customizer.php:796
+msgid "Light"
+msgstr ""
 
-#: inc/customizer/Customizer.php:1172
-#@ tikva
-msgid "Lead Position"
-msgstr "Position Aufmacher"
+#: inc/customizer/Customizer.php:797
+msgid "Dark"
+msgstr ""
 
-#: inc/customizer/Customizer.php:968
-#@ tikva
-msgid "Subfooter content"
-msgstr "Subfooter Inhalt"
+#: inc/customizer/Customizer.php:821
+msgid "Headline Base Font"
+msgstr ""
 
-#: inc/customizer/Customizer.php:963
-#: inc/sections/SectionSubfooter.php:48
-#@ tikva
-msgid "Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Tikva by <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
-msgstr "Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme Tikva von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
+#: inc/customizer/Customizer.php:822
+msgid ""
+"Set base font of headlines. The real size of H1 - H6 will be calculated "
+"based on this size with the same resize factors as in the CSS framework. "
+"Choose a size of 0 (zero) to use the default font size of the theme."
+msgstr ""
 
-#: inc/customizer/Customizer.php:958
-#@ tikva
-msgid "Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: inc/customizer/Customizer.php:838
+msgid "Body Font"
+msgstr ""
 
-#: inc/customizer/Customizer.php:955
-#@ tikva
-msgid "Subfooter Background Color"
-msgstr "Subfooter-Hintergrundfarbe"
+#: inc/customizer/Customizer.php:839
+msgid ""
+"Set font of body content. Choose a size of 0 (zero) to use the default font "
+"size of the theme."
+msgstr ""
 
-#: inc/customizer/Customizer.php:946
-#@ tikva
-msgid "Pick a link color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Link-Farbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:943
-#@ tikva
-msgid "Subfooter Link Color"
-msgstr "Subfooter Link-Farbe"
-
-#: inc/customizer/Customizer.php:934
-#@ tikva
-msgid "Pick a foreground color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Schriftfarbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:931
-#@ tikva
-msgid "Subfooter Foreground Color"
-msgstr "Subfooter-Schriftfarbe"
-
-#: inc/customizer/Customizer.php:919
-#@ tikva
-msgid "Show Subfooter"
-msgstr "Subfooter anzeigen"
-
-#: inc/customizer/Customizer.php:146
-#@ tikva
-msgid "Set options of Subfooter, i.e. the area under the footer"
-msgstr "Einstellungen des Subfooters, d.h. des Bereiches unterhalb des Footers"
-
-#: inc/customizer/Customizer.php:145
-#@ tikva
-msgid "Subfooter Options"
-msgstr "Subfooter-Einstellungen"
-
-#: inc/customizer/Customizer.php:127
-#@ tikva
-msgid "Edit Lead Section Content"
-msgstr "Aufmacher-Bereich Inhalte bearbeiten"
-
-#: inc/customizer/Customizer.php:126
-#@ tikva
-msgid "Lead Area Content"
-msgstr "Aufmacher-Bereich Inhalte"
-
-#: inc/customizer/Customizer.php:118
-#@ tikva
-msgid "Edit Lead Section Options"
-msgstr "Aufmacher-Bereich Einstellungen bearbeiten"
-
-#: inc/customizer/Customizer.php:117
-#@ tikva
-msgid "Lead Area Options"
-msgstr "Aufmacher-Bereich Einstellungen"
-
-#: inc/customizer/Customizer.php:92
-#@ tikva
-msgid "Edit homepage settings"
-msgstr "Homepage-Einstellungen bearbeiten"
-
-#: inc/customizer/Customizer.php:91
-#@ tikva
-msgid "Home Options"
-msgstr "Homepage-Einstellungen"
-
-#: inc/customizer/Customizer.php:66
-#@ tikva
-msgid "Configuration of the theme"
-msgstr "Theme-Konfiguration"
-
-#: inc/customizer/Customizer.php:65
-#@ tikva
-msgid "Theme Options"
-msgstr "Theme-Einstellungen"
-
-#: inc/customizer/CustomRepeaterControl.php:354
-#@ tikva
-msgid "Add new element"
-msgstr "Neues Element hinzufügen"
-
-#: inc/customizer/CustomRepeaterControl.php:344
-#@ tikva
-msgid "Remove element"
-msgstr "Element entfernen"
-
-#: inc/customizer/CustomRepeaterControl.php:90
-#@ tikva
-msgid "Choose Image"
-msgstr "Bild auswählen"
-
-#: inc/customizer/CustomRepeaterControl.php:88
-#@ tikva
-msgid "Change Image"
-msgstr "Bild wechseln"
-
-#: inc/customizer/CustomRepeaterControl.php:87
-#@ tikva
-msgid "Remove"
-msgstr "Entfernen"
-
-#: inc/customizer/CustomRepeaterControl.php:86
-#: inc/customizer/CustomRepeaterControl.php:332
-#@ tikva
-msgid "Select Image"
-msgstr "Bild auswählen"
-
-#: inc/customizer/CustomFontControl.php:186
-#: inc/customizer/CustomFontControl.php:344
-#: inc/customizer/CustomLatestPostControl.php:30
-#: inc/customizer/CustomRepeaterHelper.php:79
-#: inc/customizer/CustomRepeaterHelper.php:94
-#@ tikva
-msgid "&mdash; Select &mdash;"
-msgstr "&mdash; Auswählen &mdash;"
+#: inc/customizer/Customizer.php:979 inc/sections/SectionSubfooter.php:57
+msgid ""
+"Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac by "
+"<a href=\"https://www.geschke.net\">Ralf Geschke</a>."
+msgstr ""
 
 #: inc/info-screen/welcome-screen.php:80
 #, php-format
-#@ tikva
-msgid "Welcome! Thank you for choosing Tikva Theme! Please have a look at the new %swelcome page%s. You will find some information about new or updated features there."
-msgstr "Willkommen! Vielen Dank, dass Sie das Tikva Theme gewählt haben! Bitte besuchen Sie die neue %swelcome page%s. Sie finden dort Informationen über neue oder aktualisierte Features."
-
-#: inc/info-screen/sections/getting-started.php:56
-#@ tikva
-msgid "Thanks again for using Tikva theme!"
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:52
-#@ tikva
-msgid "Your feedback and wishes"
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:51
-#@ tikva
-msgid "And it would be nice to hear from you! Which features do you like, which dislike? Do you miss something, a feature, an option, which could be maybe added in future? Did you find an error or an unexpected behavior? Or could you help by translating the theme into your language, add some documentation or something else? Please provide your feedback, you can use the following formular (currently in german language only, but Google helps to translate ;-) )"
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:49
-#@ tikva
-msgid "The Tikva theme will stay free, with every feature which will be added in future. I have some features in mind, and if there is enough time maybe I will implement them."
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:47
-#@ tikva
-msgid "The theme is actively maintained and developed. But due to the history it didn't try to implement all imaginable WordPress features. And there is no \"pro\" or \"enhanced\" or \"commercial\" version, no upgrade option or soomething else - and there will never be!"
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:46
-#@ tikva
-msgid "Feedback and Support"
-msgstr "Feedback und Support"
-
-#: inc/info-screen/sections/getting-started.php:38
-#@ tikva
-msgid "A word from the author: As I switched the blog software from an own development to WordPress, I searched for a Bootstrap-powered theme. As developer I used Bootstrap before in nearly all web development projects of the last years, so I thought it would be easier to work in a well known environment. There were plenty of themes, some were really good and had a large number of features. I bought a commercial licensed theme, but was a little bit disappointed. And many of the themes had more feature than I ever needed. So I tried to create a small theme which only implemented a minimal set of features which I used on my own web page. It should be a general purpose theme, but I tried to keep near to the Bootstrap style. At first, I like the design, and secondly - you know, I'm a programmer, but not a designer. ;-) That was the birth of Tikva theme, and I'll be happy if you find it useful for you."
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:37
-#@ tikva
-msgid "History"
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:33
-#@ tikva
-msgid "Tikva is a pure and basic WordPress theme which is based on the Bootstrap HTML, CSS, and JS framework. It implements some customization features, e.g. you can switch between more than a dozen predefined styles (mostly taken from the Bootswatch free themes), two navigation bar styles and 18 footer layouts. You can add a simple slider - the theme uses the \"carousel\" feature of Boostrap and configure the slider position and timing options.  If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation on the WordPress website."
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:32
-#@ tikva
-msgid "About Tikva theme"
-msgstr "Über Tikva Theme"
-
-#: inc/info-screen/sections/getting-started.php:26
-#@ tikva
-msgid "Go to Customizer"
-msgstr "Gehe zum Customizer"
-
-#: inc/info-screen/sections/getting-started.php:25
-#@ tikva
-msgid "Using the WordPress Customizer you can easily customize every feature of the theme."
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:24
-#@ tikva
-msgid "Customize whole theme in a single place."
-msgstr ""
-
-#: inc/info-screen/sections/getting-started.php:22
-#@ tikva
-msgid "Getting started"
+msgid ""
+"Welcome! Thank you for choosing Azbalac Theme! Please have a look at the new "
+"%swelcome page%s. You will find some information about new or updated "
+"features there."
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:12
-#@ tikva
-msgid "Welcome to Tikva"
-msgstr "Willkommen bei Tikva"
+msgid "Welcome to azbalac"
+msgstr ""
 
-#: inc/customizer/Customizer.php:849
-#@ tikva
-msgid "Show date and author of featured posts on homepage"
-msgstr "Datum und Autor von hervorgehobenen Beiträgen auf der Homepage anzeigen"
+#: inc/info-screen/sections/getting-started.php:22
+msgid "Getting started"
+msgstr ""
 
-#: inc/customizer/Customizer.php:109
-#@ tikva
-msgid "Edit posts settings"
-msgstr "Beitrags-Einstellungen bearbeiten"
+#: inc/info-screen/sections/getting-started.php:24
+msgid "Customize whole theme in a single place."
+msgstr ""
 
-#: inc/customizer/Customizer.php:108
-#@ tikva
-msgid "Posts Settings"
-msgstr "Beitrags-Einstellungen"
+#: inc/info-screen/sections/getting-started.php:25
+msgid ""
+"Using the WordPress Customizer you can easily customize every feature of the "
+"theme."
+msgstr ""
 
-#: content.php:39
+#: inc/info-screen/sections/getting-started.php:32
+msgid "About Azbalac theme"
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:33
+msgid ""
+"Azbalac is a pure and basic WordPress theme which is based on the Bootstrap "
+"HTML, CSS, and JS framework. It implements some customization features, e.g. "
+"you can switch between more than a dozen predefined styles (mostly taken "
+"from the Bootswatch free themes), two navigation bar styles and 18 footer "
+"layouts. You can add a simple slider - the theme uses the \"carousel\" "
+"feature of Boostrap and configure the slider position and timing options.  "
+"If you want to make changes to the theme's files, those changes are likely "
+"to be overwritten when you next update the theme. In order to prevent that "
+"from happening, you need to create a child theme. For this, please follow "
+"the documentation on the WordPress website."
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:37
+msgid "History"
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:38
+msgid ""
+"A word from the author: As I switched the blog software from an own "
+"development to WordPress, I searched for a Bootstrap-powered theme. As "
+"developer I used Bootstrap before in nearly all web development projects of "
+"the last years, so I thought it would be easier to work in a well known "
+"environment. There were plenty of themes, some were really good and had a "
+"large number of features. I bought a commercial licensed theme, but was a "
+"little bit disappointed. And many of the themes had more feature than I ever "
+"needed. So I tried to create a small theme which only implemented a minimal "
+"set of features which I used on my own web page. It should be a general "
+"purpose theme, but I tried to keep near to the Bootstrap style. At first, I "
+"like the design, and secondly - you know, I'm a programmer, but not a "
+"designer. ;-) That was the birth of azbalac theme, and I'll be happy if you "
+"find it useful for you."
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:47
+msgid ""
+"The theme is actively maintained and developed. But due to the history it "
+"didn't try to implement all imaginable WordPress features. And there is no "
+"\"pro\" or \"enhanced\" or \"commercial\" version, no upgrade option or "
+"soomething else - and there will never be!"
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:49
+msgid ""
+"The azbalac theme will stay free, with every feature which will be added in "
+"future. I have some features in mind, and if there is enough time maybe I "
+"will implement them."
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:51
+msgid ""
+"And it would be nice to hear from you! Which features do you like, which "
+"dislike? Do you miss something, a feature, an option, which could be maybe "
+"added in future? Did you find an error or an unexpected behavior? Or could "
+"you help by translating the theme into your language, add some documentation "
+"or something else? Please provide your feedback, you can use the following "
+"formular (currently in german language only, but Google helps to translate ;-"
+") )"
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:52
+msgid "Your feedback and wishes"
+msgstr ""
+
+#: inc/info-screen/sections/getting-started.php:56
+msgid "Thanks again for using Azbalac theme!"
+msgstr ""
+
+#. Name of the theme
+msgid "Azbalac"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Azbalac - A pure and basic WordPress theme, based on Bootstrap 4 framework."
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.kuerbis.org/azbalac/"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.geschke.net"
+msgstr ""
+
+#: archive.php:37
 #, php-format
-#@ tikva
-msgid " <span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\"></span>Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr " <span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\"></span>Bearbeiten <span class=\"screen-reader-text\">%s</span>"
+msgid "Daily Archives: %s"
+msgstr "Archiv für den Tag: %s"
 
-#: inc/customizer/Customizer.php:894
-#@ tikva
-msgid "Set layout of the footer."
-msgstr "Layout-Einstellungen für den Footer"
-
-#: inc/customizer/Customizer.php:893
-#@ tikva
-msgid "Footer Layout"
-msgstr "Footer-Layout"
-
-#: inc/customizer/Customizer.php:873
-#@ tikva
-msgid "Show footer"
-msgstr "Footer anzeigen"
-
-#: inc/customizer/Customizer.php:137
-#@ tikva
-msgid "Set options of Footer"
-msgstr "Einstellungen für den Footer setzen"
-
-#: inc/customizer/Customizer.php:136
-#@ tikva
-msgid "Footer Options"
-msgstr "Footer-Einstellungen"
-
-#: inc/customizer/Customizer.php:74
-#@ tikva
-msgid "Edit general settings:  colors, main layout, navigation bar."
-msgstr "Allgemeine Einstellungen konfigurieren: Styling, Layout, Navigation"
-
-#: inc/customizer/Customizer.php:73
-#@ tikva
-msgid "General Settings"
-msgstr "Allgemeine Einstellungen"
-
-#: inc/class-tikva-footer.php:23
-#: inc/sections/SectionFooter.php:23
-#@ tikva
-msgid "Click here to go to Widget area."
-msgstr "Hier klicken, um Widgets zu konfigurieren."
-
-#: inc/class-tikva-footer.php:22
-#: inc/sections/SectionFooter.php:22
+#: archive.php:39
 #, php-format
-#@ tikva
-msgid "Remove this message by adding widgets to Footer Widget Area #%d."
-msgstr "Diese Nachricht ist ein Platzhalter und kann entfernt werden durch Hinzufügen von Inhalten im Footer Widget-Bereich #%d."
+msgid "Monthly Archives: %s"
+msgstr "Archiv für den Monat: %s"
 
-#: inc/class-tikva-footer.php:20
-#: inc/sections/SectionFooter.php:20
-#@ tikva
-msgid "Please Add Widgets"
-msgstr "Bitte Widgets hinzufügen"
+#: archive.php:39
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
 
-#: functions.php:231
+#: archive.php:41
 #, php-format
-#@ tikva
-msgid "Footer Widget Area #%d"
-msgstr "Footer Widget-Bereich #%d"
+msgid "Yearly Archives: %s"
+msgstr "Archiv für das Jahr: %s"
 
-#: functions.php:220
-#@ tikva
-msgid "Sidebar 1"
-msgstr "Seitenleiste 1"
+#: archive.php:41
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
 
-#: inc/customizer/Customizer.php:601
-#@ tikva
-msgid "Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Social-Media-Button bei Mouseover (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: archive.php:43
+msgid "Archives"
+msgstr "Archive"
 
-#: inc/customizer/Customizer.php:598
-#@ tikva
-msgid "Button Background Mouseover Color"
-msgstr "Hintergrundfarbe des Buttons bei Mouseover"
-
-#: inc/customizer/Customizer.php:590
-#@ tikva
-msgid "Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Social-Media-Button (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:587
-#@ tikva
-msgid "Button Background Color"
-msgstr "Hintergrundfarbe des Buttons"
-
-#: inc/customizer/Customizer.php:579
-#@ tikva
-msgid "Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Schriftfarbe für das Social-Media-Button Icon (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:576
-#@ tikva
-msgid "Button Foreground (Icon) Color"
-msgstr "Schriftfarbe für das Icon"
-
-#: inc/customizer/Customizer.php:565
-#: inc/customizer/Customizer.php:1328
-#@ tikva
-msgid "Circle"
-msgstr "Rund"
-
-#: inc/customizer/Customizer.php:560
-#@ tikva
-msgid "Button Type"
-msgstr "Button-Typ"
-
-#: inc/customizer/Customizer.php:548
-#@ tikva
-msgid "Large"
-msgstr "Groß"
-
-#: inc/customizer/Customizer.php:547
-#@ tikva
-msgid "Medium"
-msgstr "Mittel"
-
-#: inc/customizer/Customizer.php:546
-#@ tikva
-msgid "Small"
-msgstr "Klein"
-
-#: inc/customizer/Customizer.php:541
-#@ tikva
-msgid "Button Size"
-msgstr "Größe der Buttons"
-
-#: inc/customizer/Customizer.php:528
-#@ tikva
-msgid "Centered"
-msgstr "Zentriert"
-
-#: inc/customizer/Customizer.php:218
-#: inc/customizer/Customizer.php:527
-#@ tikva
-msgid "Left"
-msgstr "Links"
-
-#: inc/customizer/Customizer.php:522
-#@ tikva
-msgid "Button Alignment"
-msgstr "Button-Ausrichtung"
-
-#: inc/customizer/Customizer.php:489
-#@ tikva
-msgid "Show Social Media Buttons"
-msgstr "Social-Media-Buttons anzeigen"
-
-#: inc/customizer/Customizer.php:417
-#@ tikva
-msgid "Enter the complete Snapchat page URL (please include http or https!)"
-msgstr "Snapchat-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:416
-#@ tikva
-msgid "Snapchat"
-msgstr "Snapchat"
-
-#: inc/customizer/Customizer.php:372
-#@ tikva
-msgid "Cycle continuously"
-msgstr "Dauerhafte Bewegung"
-
-#: inc/customizer/Customizer.php:358
-#@ tikva
-msgid "Slider reacts to keyboard events"
-msgstr "Slider reagiert auf Tastatureingaben"
-
-#: inc/customizer/Customizer.php:344
-#@ tikva
-msgid "Pause sliding on mouseenter"
-msgstr "Pausiert die Bewegung des Sliders bei mouseenter"
-
-#: inc/customizer/Customizer.php:330
-#@ tikva
-msgid "Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling)."
-msgstr "Zeit in Millisekunden, die vergehen soll, bevor das nächste Objekt aufgerufen wird (0 für keine automatische Bewegung)"
-
-#: inc/customizer/Customizer.php:329
-#@ tikva
-msgid "Transition delay"
-msgstr "Verzögerung beim Übergang"
-
-#: inc/customizer/Customizer.php:320
-#: inc/customizer/Customizer.php:1180
-#@ tikva
-msgid "Between content and footer"
-msgstr "Zwischen Inhalt und Footer"
-
-#: inc/customizer/Customizer.php:319
-#: inc/customizer/Customizer.php:1179
-#@ tikva
-msgid "Between featured articles and content"
-msgstr "Zwischen hervorgehobenen Beiträgen und Standard-Inhalt"
-
-#: inc/customizer/Customizer.php:318
-#: inc/customizer/Customizer.php:1178
-#@ tikva
-msgid "Between navigation and featured articles"
-msgstr "Zwischen Navigationsleiste und hervorgehobenen Beiträgen"
-
-#: inc/customizer/Customizer.php:317
-#: inc/customizer/Customizer.php:1177
-#@ tikva
-msgid "Above navigation (if navbar position is not fixed)"
-msgstr "Oberhalb Navigationsleiste (wenn Navigationsleiste nicht am oberen Rand fixiert ist)"
-
-#: inc/customizer/Customizer.php:312
-#@ tikva
-msgid "Slider Position"
-msgstr "Slider-Position"
-
-#: inc/customizer/Customizer.php:298
-#@ tikva
-msgid "Show slider"
-msgstr "Slider anzeigen"
-
-#: inc/customizer/Customizer.php:286
-#@ tikva
-msgid "Set generic slider options"
-msgstr "Allgemeine Slider-Einstellungen setzen"
-
-#: inc/customizer/Customizer.php:285
-#@ tikva
-msgid "Slider Options"
-msgstr "Slider-Einstellungen"
-
-#: inc/customizer/Customizer.php:275
-#@ tikva
-msgid "Configuration of Slider"
-msgstr "Slider-Konfiguration"
-
-#: inc/customizer/Customizer.php:274
-#@ tikva
-msgid "Slider Integration"
-msgstr "Slider-Integration"
-
-#: inc/customizer/Customizer.php:233
-#@ tikva
-msgid "Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Schriftfarbe für den Titel und Beschreibung des Sliders (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:230
-#@ tikva
-msgid "Slider Text Color"
-msgstr "Textfarbe Slider"
-
-#: inc/customizer/Customizer.php:220
-#: inc/customizer/Customizer.php:529
-#@ tikva
-msgid "Right"
-msgstr "Rechts"
-
-#: inc/customizer/Customizer.php:219
-#@ tikva
-msgid "Center"
-msgstr "Zentriert"
-
-#: inc/customizer/Customizer.php:213
-#@ tikva
-msgid "Position of Slider text"
-msgstr "Platzierung des Textes auf dem Slider"
-
-#: inc/customizer/Customizer.php:199
-#@ tikva
-msgid "Description"
-msgstr "Beschreibung (Untertitel)"
-
-#: inc/customizer/Customizer.php:188
-#: inc/customizer/Customizer.php:1257
-#: inc/customizer/Customizer.php:1259
-#@ tikva
-msgid "Title"
-msgstr "Titel"
-
-#: inc/customizer/Customizer.php:180
-#@ tikva
-msgid "Image displayed on slider"
-msgstr "Bild für Slider"
-
-#: inc/customizer/Customizer.php:172
-#@ tikva
-msgid "Slider image"
-msgstr "Slider-Bild"
-
-#: inc/customizer/Customizer.php:160
+#: category.php:32
 #, php-format
-#@ tikva
-msgid "Configure Slider #%d"
-msgstr "Slider #%d konfigurieren"
+msgid "Category Archives: %s"
+msgstr "Archiv der Kategorie: %s"
 
-#: inc/customizer/Customizer.php:159
+#: comments.php:24
 #, php-format
-#@ tikva
-msgid "Slider #%d"
-msgstr "Slider #%d"
-
-#: inc/sections/SectionSlider.php:149
-#@ tikva
-msgid "Next"
-msgstr "Vor"
-
-#: inc/sections/SectionSlider.php:145
-#@ tikva
-msgid "Previous"
-msgstr "Zurück"
-
-#: inc/customizer/Customizer.php:100
-#@ tikva
-msgid "Header Image Options"
-msgstr "Header-Bild-Einstellungen"
-
-#: inc/customizer/Customizer.php:510
-#@ tikva
-msgid "Below Footer"
-msgstr "Unterhalb des Footers"
-
-#: inc/customizer/Customizer.php:509
-#@ tikva
-msgid "Between Content and Footer"
-msgstr "Zwischen Inhaltsbereich und Footer"
-
-#: inc/customizer/Customizer.php:503
-#@ tikva
-msgid "Button Position"
-msgstr "Button-Position"
-
-#: inc/customizer/Customizer.php:476
-#@ tikva
-msgid "Set options of Social Media Buttons"
-msgstr "Einstellungen der Social-Media-Buttons setzen"
-
-#: inc/customizer/Customizer.php:475
-#@ tikva
-msgid "Social Media Buttons Options"
-msgstr "Social-Media-Buttons Einstellungen"
-
-#: inc/customizer/Customizer.php:467
-#@ tikva
-msgid "Configure URLs of your Social Media Buttons"
-msgstr "URLs der Social-Media-Buttons konfigurieren"
-
-#: inc/customizer/Customizer.php:466
-#@ tikva
-msgid "Social Media Buttons"
-msgstr "Social-Media-Buttons"
-
-#: inc/customizer/Customizer.php:459
-#@ tikva
-msgid "Configuration of Social Media Buttons"
-msgstr "Konfiguration der Social-Media-Buttons"
-
-#: inc/customizer/Customizer.php:458
-#@ tikva
-msgid "Social Media Integration"
-msgstr "Social-Media-Integration"
-
-#: inc/customizer/Customizer.php:433
-#@ tikva
-msgid "Enter the complete YouTube channel page URL (please include http or https!)"
-msgstr "YouTube-Channel-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:432
-#@ tikva
-msgid "YouTube"
-msgstr "YouTube"
-
-#: inc/customizer/Customizer.php:429
-#@ tikva
-msgid "Enter the complete Xing profile page URL (please include http or https!)"
-msgstr "Xing-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:428
-#@ tikva
-msgid "Xing"
-msgstr "Xing"
-
-#: inc/customizer/Customizer.php:425
-#@ tikva
-msgid "Enter the complete Vine page URL (please include http or https!)"
-msgstr "Vine-Seiten-URL-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:424
-#@ tikva
-msgid "Vine"
-msgstr "Vine"
-
-#: inc/customizer/Customizer.php:421
-#@ tikva
-msgid "Enter the Twitter profile page URL (please include http!)"
-msgstr "Twitter-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:420
-#@ tikva
-msgid "Twitter"
-msgstr "Twitter"
-
-#: inc/customizer/Customizer.php:409
-#@ tikva
-msgid "Enter the complete LinkedIn page URL (please include http or https!)"
-msgstr "LinkedIn-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:408
-#@ tikva
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
-#: inc/customizer/Customizer.php:405
-#@ tikva
-msgid "Enter the complete Instagram page URL (please include http or https!)"
-msgstr "Instagram-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:404
-#@ tikva
-msgid "Instagram"
-msgstr "Instagram"
-
-#: inc/customizer/Customizer.php:401
-#@ tikva
-msgid "Enter the complete Google+ page URL (please include http or https!)"
-msgstr "Google+--Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:400
-#@ tikva
-msgid "Google+"
-msgstr "Google+"
-
-#: inc/customizer/Customizer.php:397
-#@ tikva
-msgid "Enter the complete GitHub profile page URL (please include http or https!)"
-msgstr "GitHub-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:396
-#@ tikva
-msgid "GitHub"
-msgstr "GitHub"
-
-#: inc/customizer/Customizer.php:393
-#@ tikva
-msgid "Enter the complete Facebook profile page URL (please include http or https!)"
-msgstr "Facebook-Profilseiten-URL angeben (inkl. http oder https)"
-
-#: inc/customizer/Customizer.php:392
-#@ tikva
-msgid "Facebook"
-msgstr "Facebook"
-
-#: content.php:67
-#@ tikva
-msgid "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
-msgstr "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
-
-#: content-featured-post-large.php:24
-#: content-featured-post.php:41
-#, php-format
-#@ tikva
-msgid "<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\"></span>Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\"></span>Bearbeite <span class=\"screen-reader-text\">%s</span>"
-
-#: search.php:53
-#, php-format
-#@ tikva
-msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
-
-#: inc/template-tags.php:86
-#@ tikva
-msgid "<span class=\"screen-reader-text\">Author: </span>"
-msgstr "<span class=\"screen-reader-text\">Autor: </span>"
-
-#: inc/template-tags.php:81
-#@ tikva
-msgid "<span class=\"screen-reader-text\">Date: </span>"
-msgstr "<span class=\"screen-reader-text\">Datum: </span>"
-
-#: inc/template-tags.php:78
-#@ tikva
-msgid "Sticky"
-msgstr "Oben halten"
-
-#: inc/template-tags.php:53
-#@ tikva
-msgid "Posts navigation"
-msgstr "Beitrags-Navigation"
-
-#: inc/template-tags.php:45
-#@ tikva
-msgid "Next &raquo;"
-msgstr "Vor &raquo;"
-
-#: inc/template-tags.php:44
-#@ tikva
-msgid "&laquo; Previous"
-msgstr "&laquo; Zurück"
-
-#: inc/post-addons.php:57
-#@ tikva
-msgid "Featured"
-msgstr "Hervorgehoben"
-
-#: inc/post-addons.php:56
-#@ tikva
-msgid "Large Feature (Jumbotron)"
-msgstr "Große Hervorhebung (Jumbotron)"
-
-#: inc/post-addons.php:55
-#@ tikva
-msgid "Not featured"
-msgstr "Keine Hervorhebung"
-
-#: inc/post-addons.php:54
-#@ tikva
-msgid "Featured Post"
-msgstr "Hervorgehobener Beitrag"
-
-#: inc/post-addons.php:52
-#@ tikva
-msgid "Theme Options:"
-msgstr "Theme-Einstellungen:"
-
-#: header.php:133
-#: header.php:136
-#@ tikva
-msgid "Toggle navigation"
-msgstr "Navigation ein-/ausblenden"
-
-#: header.php:103
-#@ tikva
-msgid "Header Image - navigate to homepage"
-msgstr "Header-Bild - Link zur Homepage"
-
-#: header.php:76
-#@ tikva
-msgid "Skip to main content"
-msgstr "Zum Hauptinhalt springen"
-
-#: functions.php:718
-#, php-format
-#@ tikva
-msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
-msgstr "Weiterlesen<span class=\"screen-reader-text\"> bei %1$s </span>&raquo;"
-
-#: functions.php:428
-#@ tikva
-msgid "Header Menu"
-msgstr "Header-Menü"
-
-#: functions.php:412
-#, php-format
-#@ tikva
-msgid "Page %s"
-msgstr "Seite %s"
-
-#: functions.php:284
-#@ tikva
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Suche&#160;&hellip;"
-
-#: functions.php:283
-#@ tikva
-msgctxt "label"
-msgid "Search for:"
-msgstr "Suche nach:"
-
-#: functions.php:260
-#@ tikva
-msgid "Website"
-msgstr "Website"
-
-#: functions.php:257
-#@ tikva
-msgid "Email*"
-msgstr "E-Mail*"
-
-#: functions.php:254
-#@ tikva
-msgid "Name*"
-msgstr "Name*"
-
-#: content.php:79
-#, php-format
-#@ tikva
-msgid "View all posts in %s"
-msgstr "Alle Artikel in %s ansehen"
-
-#: content.php:74
-#@ tikva
-msgid "Category:"
-msgid_plural "Categories:"
-msgstr[0] "Kategorie:"
-msgstr[1] "Kategorien:"
-
-#: content.php:57
-#@ tikva
-msgid "Pages:"
-msgstr "Seiten:"
-
-#: content.php:35
-#@ tikva
-msgid "% Comments"
-msgstr "% Kommentare"
-
-#: content.php:35
-#@ tikva
-msgid "1 Comment"
-msgstr "1 Kommentar"
-
-#: content.php:34
-#, php-format
-#@ tikva
-msgid "<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> Schreibe einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
-
-#: content-none.php:27
-#@ tikva
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft die Suchfunktion."
-
-#: content-none.php:22
-#@ tikva
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Entschuldigung, aber zu deinen Suchbegriffen wurde nichts passendes gefunden. Bitte versuche es mit anderen Stichworten noch einmal."
-
-#: content-none.php:18
-#, php-format
-#@ tikva
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Bereit, um deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte hier</a>."
-
-#: content-none.php:12
-#@ tikva
-msgid "Nothing Found"
-msgstr "Es konnte nichts gefunden werden."
-
-#: content-featured-post-large.php:47
-#: content-featured-post.php:45
-#: content.php:55
-#, php-format
-#@ tikva
-msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
-msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
-
-#: comments.php:65
-#@ tikva
-msgctxt "noun"
-msgid "Comment"
-msgstr "Kommentar"
-
-#: comments.php:59
-#@ tikva
-msgid "Comments are closed."
-msgstr "Kommentare sind geschlossen."
-
-#: comments.php:36
-#: comments.php:54
-#@ tikva
-msgid "Newer Comments &rarr;"
-msgstr "Neuere Kommentare &rarr;"
-
-#: comments.php:35
-#: comments.php:53
-#@ tikva
-msgid "&larr; Older Comments"
-msgstr "&larr; Ältere Kommentare"
-
-#: comments.php:34
-#: comments.php:52
-#@ tikva
-msgid "Comment navigation"
-msgstr "Kommentar-Navigation"
-
-#: comments.php:27
-#, php-format
-#@ tikva
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Ein Gedanke zu &bdquo;%2$s&ldquo;"
 msgstr[1] "%1$s Gedanken zu &bdquo;%2$s&ldquo;"
 
-#: category.php:30
+#: comments.php:30
+msgid "Comment navigation"
+msgstr "Kommentar-Navigation"
+
+#: comments.php:31
+msgid "&larr; Older Comments"
+msgstr "&larr; Ältere Kommentare"
+
+#: comments.php:32
+msgid "Newer Comments &rarr;"
+msgstr "Neuere Kommentare &rarr;"
+
+#: comments.php:45
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: comments.php:51
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentar"
+
+#: content-featured-post-large.php:33 content-featured-post.php:49
 #, php-format
-#@ tikva
-msgid "Category Archives: %s"
-msgstr "Archiv der Kategorie: %s"
+msgid ""
+"<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\">"
+"</span>Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+"<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\">"
+"</span>Bearbeite <span class=\"screen-reader-text\">%s</span>"
 
-#: archive.php:49
-#@ tikva
-msgid "Archives"
-msgstr "Archive"
-
-#: archive.php:46
-#@ tikva
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: archive.php:46
+#: content-featured-post-large.php:52 content-featured-post.php:58
+#: content.php:72
 #, php-format
-#@ tikva
-msgid "Yearly Archives: %s"
-msgstr "Archiv für das Jahr: %s"
+msgid ""
+"Continue reading<span class=\"screen-reader-text\"> on %s</span><span "
+"class=\"meta-nav\"> &raquo;</span>"
+msgstr ""
+"Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span "
+"class=\"meta-nav\"> &raquo;</span>"
 
-#: archive.php:43
-#@ tikva
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "F Y"
+#: content-none.php:11
+msgid "Nothing Found"
+msgstr "Es konnte nichts gefunden werden."
 
-#: archive.php:43
+#: content-none.php:15
 #, php-format
-#@ tikva
-msgid "Monthly Archives: %s"
-msgstr "Archiv für den Monat: %s"
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Bereit, um deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte "
+"hier</a>."
 
-#: archive.php:40
+#: content-none.php:18
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Entschuldigung, aber zu deinen Suchbegriffen wurde nichts passendes gefunden."
+" Bitte versuche es mit anderen Stichworten noch einmal."
+
+#: content-none.php:21
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast."
+" Möglicherweise hilft die Suchfunktion."
+
+#: content.php:45
 #, php-format
-#@ tikva
-msgid "Daily Archives: %s"
-msgstr "Archiv für den Tag: %s"
+msgid ""
+"<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> Leave "
+"a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> "
+"Schreibe einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
 
-#: inc/customizer/Customizer.php:650
-#@ tikva
-msgid "Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: content.php:46
+msgid "1 Comment"
+msgstr "1 Kommentar"
 
-#: inc/customizer/Customizer.php:647
-#@ tikva
-msgid "Footer Background Color"
-msgstr "Footer-Hintergrundfarbe"
+#: content.php:46
+msgid "% Comments"
+msgstr "% Kommentare"
 
-#: inc/customizer/Customizer.php:636
-#@ tikva
-msgid "Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Schriftfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: content.php:74
+msgid "Pages:"
+msgstr "Seiten:"
 
-#: inc/customizer/Customizer.php:633
-#@ tikva
-msgid "Footer Font Color"
-msgstr "Footer-Schriftfarbe"
+#: content.php:86
+msgid "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
+msgstr "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
 
-#: inc/customizer/Customizer.php:623
-#@ tikva
-msgid "Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Header (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: content.php:96
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] "Kategorie:"
+msgstr[1] "Kategorien:"
 
-#: inc/customizer/Customizer.php:620
-#@ tikva
-msgid "Header Background Color"
-msgstr "Header Hintergrundfarbe"
-
-#: inc/customizer/Customizer.php:1025
-#@ tikva
-msgid "You can switch off this option, so no image will be displayed."
-msgstr "Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild erscheint, falls kein Standard-Header-Bild gesetzt ist."
-
-#: inc/customizer/Customizer.php:1022
-#@ tikva
-msgid "Use the example image from the theme if no default header image is set."
-msgstr "Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild gesetzt ist."
-
-#: inc/customizer/Customizer.php:1136
-#@ tikva
-msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
-msgstr "Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
-
-#: inc/customizer/Customizer.php:1133
-#@ tikva
-msgid "Do not resize automatically the extra small header image"
-msgstr "Keine automatische Anpassung des Header-Bildes für sehr kleine Display-Größen."
-
-#: inc/customizer/Customizer.php:1121
-#@ tikva
-msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
-msgstr "Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
-
-#: inc/customizer/Customizer.php:1117
-#@ tikva
-msgid "Header Image (extra small screen)"
-msgstr "Header-Bild (sehr kleine Displays)"
-
-#: inc/customizer/Customizer.php:1104
-#@ tikva
-msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
-msgstr "Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
-
-#: inc/customizer/Customizer.php:1101
-#@ tikva
-msgid "Do not resize automatically the small screen header image"
-msgstr "Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
-
-#: inc/customizer/Customizer.php:1089
-#@ tikva
-msgid "If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar."
-msgstr "Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet (Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
-
-#: inc/customizer/Customizer.php:1085
-#@ tikva
-msgid "Header Image (small screen)"
-msgstr "Header-Bild (kleine Displays)"
-
-#: inc/customizer/Customizer.php:1073
-#@ tikva
-msgid "If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen."
-msgstr "Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
-
-#: inc/customizer/Customizer.php:1070
-#@ tikva
-msgid "Do not resize automatically the medium screen header image"
-msgstr "Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
-
-#: inc/customizer/Customizer.php:1058
-#@ tikva
-msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
-msgstr "Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet (Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
-
-#: inc/customizer/Customizer.php:1054
-#@ tikva
-msgid "Header Image (medium screen)"
-msgstr "Header-Bild (mittlere Displays)"
-
-#: inc/customizer/Customizer.php:1042
-#@ tikva
-msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
-msgstr "Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige Display-Breite angepasst."
-
-#: inc/customizer/Customizer.php:1039
-#@ tikva
-msgid "Do not resize automatically the default header image"
-msgstr "Keine automatische Anpassung des Standard Header-Bildes"
-
-#: inc/customizer/Customizer.php:994
-#@ tikva
-msgid "Maximum number of featured articles on homepage"
-msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
-
-#: inc/customizer/Customizer.php:679
-#@ tikva
-msgid "Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:676
-#@ tikva
-msgid "Sidebar Background Color"
-msgstr "Hintergrundfarbe Sidebar (Widgets)"
-
-#: inc/customizer/Customizer.php:665
-#@ tikva
-msgid "Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Schriftfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
-
-#: inc/customizer/Customizer.php:662
-#@ tikva
-msgid "Sidebar Font Color"
-msgstr "Schriftfarbe Sidebar (Widgets)"
-
-#: inc/customizer/Customizer.php:783
-#@ tikva
-msgid "Inverse"
-msgstr "Invers"
-
-#: inc/customizer/Customizer.php:777
-#@ tikva
-msgid "Navbar style"
-msgstr "Navigationsleiste Style"
-
-#: inc/customizer/Customizer.php:765
-#@ tikva
-msgid "Fixed to top"
-msgstr "Oben fixiert"
-
-#: inc/customizer/Customizer.php:764
-#: inc/customizer/Customizer.php:782
-#@ tikva
-msgid "Default"
-msgstr "Standard"
-
-#: inc/customizer/Customizer.php:759
-#@ tikva
-msgid "Navbar fixed options"
-msgstr "Einstellungen der Navigation"
-
-#: inc/customizer/Customizer.php:746
-#@ tikva
-msgid "Select your themes alternative color scheme."
-msgstr "Alternative Farbschemata wählen"
-
-#: inc/customizer/Customizer.php:744
-#@ tikva
-msgid "Theme Stylesheet"
-msgstr "Theme Stylesheet"
-
-#: inc/customizer/Customizer.php:724
-#@ tikva
-msgid "Set layout of your site."
-msgstr "Setze Layout der Website"
-
-#: inc/customizer/Customizer.php:723
-#@ tikva
-msgid "Layout"
-msgstr "Layout"
-
-#: inc/info-screen/sections/getting-started.php:15
+#: content.php:101
 #, php-format
-#@ tikva
-msgid "- Version %s"
-msgstr "- Version %s"
+msgid "View all posts in %s"
+msgstr "Alle Artikel in %s ansehen"
 
-#: inc/info-screen/sections/getting-started.php:58
-#@ tikva
-msgid "Ralf Geschke"
-msgstr "Ralf Geschke"
+#: functions.php:235
+msgid "Sidebar 1"
+msgstr "Seitenleiste 1"
 
-#: functions.php:286
-#@ tikva
-msgid "Search"
-msgstr "Suchen"
+#: functions.php:246
+#, php-format
+msgid "Footer Widget Area #%d"
+msgstr "Footer Widget-Bereich #%d"
+
+#: functions.php:269
+msgid "Name*"
+msgstr "Name*"
+
+#: functions.php:272
+msgid "Email*"
+msgstr "E-Mail*"
+
+#: functions.php:275
+msgid "Website"
+msgstr "Website"
+
+#: functions.php:298
+msgctxt "label"
+msgid "Search for:"
+msgstr "Suche nach:"
+
+#: functions.php:299
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Suche&#160;&hellip;"
+
+#: functions.php:434
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: functions.php:450
+msgid "Header Menu"
+msgstr "Header-Menü"
+
+#: functions.php:741
+#, php-format
+msgid "Read More <span class=\"screen-reader-text\">on %1$s </span>&raquo;"
+msgstr "Weiterlesen<span class=\"screen-reader-text\"> bei %1$s </span>&raquo;"
+
+#: header.php:55
+msgid "Skip to main content"
+msgstr "Zum Hauptinhalt springen"
+
+#: header.php:68
+msgid "Header Image - navigate to homepage"
+msgstr "Header-Bild - Link zur Homepage"
+
+#: header.php:79
+msgid "Toggle navigation"
+msgstr "Navigation ein-/ausblenden"
+
+#: search.php:34
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: inc/post-addons.php:52
+msgid "Theme Options:"
+msgstr "Theme-Einstellungen:"
+
+#: inc/post-addons.php:54
+msgid "Featured Post"
+msgstr "Hervorgehobener Beitrag"
+
+#: inc/post-addons.php:55
+msgid "Not featured"
+msgstr "Keine Hervorhebung"
+
+#: inc/post-addons.php:56
+msgid "Large Feature (Jumbotron)"
+msgstr "Große Hervorhebung (Jumbotron)"
+
+#: inc/post-addons.php:57
+msgid "Featured"
+msgstr "Hervorgehoben"
+
+#: inc/template-tags.php:44
+msgid "&laquo; Previous"
+msgstr "&laquo; Zurück"
+
+#: inc/template-tags.php:45
+msgid "Next &raquo;"
+msgstr "Vor &raquo;"
+
+#: inc/template-tags.php:53
+msgid "Posts navigation"
+msgstr "Beitrags-Navigation"
+
+#: inc/template-tags.php:82
+msgid "Sticky"
+msgstr "Oben halten"
+
+#: inc/template-tags.php:85
+msgid "<span class=\"screen-reader-text\">Date: </span>"
+msgstr "<span class=\"screen-reader-text\">Datum: </span>"
+
+#: inc/template-tags.php:90
+msgid "<span class=\"screen-reader-text\">Author: </span>"
+msgstr "<span class=\"screen-reader-text\">Autor: </span>"
+
+#: inc/customizer/CustomFontControl.php:200
+#: inc/customizer/CustomFontControl.php:359
+#: inc/customizer/CustomLatestPostControl.php:30
+#: inc/customizer/CustomRepeaterHelper.php:79
+#: inc/customizer/CustomRepeaterHelper.php:94
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Auswählen &mdash;"
+
+#: inc/customizer/CustomRepeaterControl.php:86
+#: inc/customizer/CustomRepeaterControl.php:332
+msgid "Select Image"
+msgstr "Bild auswählen"
+
+#: inc/customizer/CustomRepeaterControl.php:87
+msgid "Remove"
+msgstr "Entfernen"
+
+#: inc/customizer/CustomRepeaterControl.php:88
+msgid "Change Image"
+msgstr "Bild wechseln"
 
 #: inc/customizer/CustomRepeaterControl.php:89
 #: inc/customizer/CustomRepeaterControl.php:329
-#@ tikva
 msgid "No Image selected"
 msgstr "Kein Bild ausgewählt"
 
+#: inc/customizer/CustomRepeaterControl.php:90
+msgid "Choose Image"
+msgstr "Bild auswählen"
+
+#: inc/customizer/CustomRepeaterControl.php:344
+msgid "Remove element"
+msgstr "Element entfernen"
+
+#: inc/customizer/CustomRepeaterControl.php:354
+msgid "Add new element"
+msgstr "Neues Element hinzufügen"
+
+#: inc/customizer/Customizer.php:65
+msgid "Theme Options"
+msgstr "Theme-Einstellungen"
+
+#: inc/customizer/Customizer.php:66
+msgid "Configuration of the theme"
+msgstr "Theme-Konfiguration"
+
+#: inc/customizer/Customizer.php:73
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: inc/customizer/Customizer.php:74
+msgid "Edit general settings:  colors, main layout, navigation bar."
+msgstr "Allgemeine Einstellungen konfigurieren: Styling, Layout, Navigation"
+
+#: inc/customizer/Customizer.php:91
+msgid "Home Options"
+msgstr "Homepage-Einstellungen"
+
+#: inc/customizer/Customizer.php:92
+msgid "Edit homepage settings"
+msgstr "Homepage-Einstellungen bearbeiten"
+
+#: inc/customizer/Customizer.php:100
+msgid "Header Image Options"
+msgstr "Header-Bild-Einstellungen"
+
+#: inc/customizer/Customizer.php:108
+msgid "Posts Settings"
+msgstr "Beitrags-Einstellungen"
+
+#: inc/customizer/Customizer.php:109
+msgid "Edit posts settings"
+msgstr "Beitrags-Einstellungen bearbeiten"
+
+#: inc/customizer/Customizer.php:117
+msgid "Lead Area Options"
+msgstr "Aufmacher-Bereich Einstellungen"
+
+#: inc/customizer/Customizer.php:118
+msgid "Edit Lead Section Options"
+msgstr "Aufmacher-Bereich Einstellungen bearbeiten"
+
+#: inc/customizer/Customizer.php:126
+msgid "Lead Area Content"
+msgstr "Aufmacher-Bereich Inhalte"
+
+#: inc/customizer/Customizer.php:127
+msgid "Edit Lead Section Content"
+msgstr "Aufmacher-Bereich Inhalte bearbeiten"
+
+#: inc/customizer/Customizer.php:136
+msgid "Footer Options"
+msgstr "Footer-Einstellungen"
+
+#: inc/customizer/Customizer.php:137
+msgid "Set options of Footer"
+msgstr "Einstellungen für den Footer setzen"
+
+#: inc/customizer/Customizer.php:145
+msgid "Subfooter Options"
+msgstr "Subfooter-Einstellungen"
+
+#: inc/customizer/Customizer.php:146
+msgid "Set options of Subfooter, i.e. the area under the footer"
+msgstr "Einstellungen des Subfooters, d.h. des Bereiches unterhalb des Footers"
+
+#: inc/customizer/Customizer.php:159
+#, php-format
+msgid "Slider #%d"
+msgstr "Slider #%d"
+
+#: inc/customizer/Customizer.php:160
+#, php-format
+msgid "Configure Slider #%d"
+msgstr "Slider #%d konfigurieren"
+
+#: inc/customizer/Customizer.php:172
+msgid "Slider image"
+msgstr "Slider-Bild"
+
+#: inc/customizer/Customizer.php:180
+msgid "Image displayed on slider"
+msgstr "Bild für Slider"
+
+#: inc/customizer/Customizer.php:188 inc/customizer/Customizer.php:1273
+#: inc/customizer/Customizer.php:1275
+msgid "Title"
+msgstr "Titel"
+
+#: inc/customizer/Customizer.php:199
+msgid "Description"
+msgstr "Beschreibung (Untertitel)"
+
+#: inc/customizer/Customizer.php:213
+msgid "Position of Slider text"
+msgstr "Platzierung des Textes auf dem Slider"
+
+#: inc/customizer/Customizer.php:218 inc/customizer/Customizer.php:541
+msgid "Left"
+msgstr "Links"
+
+#: inc/customizer/Customizer.php:219
+msgid "Center"
+msgstr "Zentriert"
+
+#: inc/customizer/Customizer.php:220 inc/customizer/Customizer.php:543
+msgid "Right"
+msgstr "Rechts"
+
+#: inc/customizer/Customizer.php:230
+msgid "Slider Text Color"
+msgstr "Textfarbe Slider"
+
+#: inc/customizer/Customizer.php:233
+msgid ""
+"Pick a color for the title and description text of this slide (default: "
+"transparent, i.e. use color defined in the theme stylesheet)."
+msgstr ""
+"Schriftfarbe für den Titel und Beschreibung des Sliders (Standard: "
+"transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+
 #: inc/customizer/Customizer.php:244
-#@ tikva
 msgid "Link to Page"
 msgstr "Seite verlinken"
 
 #: inc/customizer/Customizer.php:255
-#@ tikva
 msgid "&hellip;or enter URL to link to"
 msgstr "&hellip;oder URL eingeben zur Verlinkung"
 
-#: inc/customizer/Customizer.php:412
-#@ tikva
+#: inc/customizer/Customizer.php:274
+msgid "Slider Integration"
+msgstr "Slider-Integration"
+
+#: inc/customizer/Customizer.php:275
+msgid "Configuration of Slider"
+msgstr "Slider-Konfiguration"
+
+#: inc/customizer/Customizer.php:285
+msgid "Slider Options"
+msgstr "Slider-Einstellungen"
+
+#: inc/customizer/Customizer.php:286
+msgid "Set generic slider options"
+msgstr "Allgemeine Slider-Einstellungen setzen"
+
+#: inc/customizer/Customizer.php:298
+msgid "Show slider"
+msgstr "Slider anzeigen"
+
+#: inc/customizer/Customizer.php:312
+msgid "Slider Position"
+msgstr "Slider-Position"
+
+#: inc/customizer/Customizer.php:317 inc/customizer/Customizer.php:1193
+msgid "Above navigation (if navbar position is not fixed)"
+msgstr ""
+"Oberhalb Navigationsleiste (wenn Navigationsleiste nicht am oberen Rand "
+"fixiert ist)"
+
+#: inc/customizer/Customizer.php:318 inc/customizer/Customizer.php:1194
+msgid "Between navigation and featured articles"
+msgstr "Zwischen Navigationsleiste und hervorgehobenen Beiträgen"
+
+#: inc/customizer/Customizer.php:319 inc/customizer/Customizer.php:1195
+msgid "Between featured articles and content"
+msgstr "Zwischen hervorgehobenen Beiträgen und Standard-Inhalt"
+
+#: inc/customizer/Customizer.php:320 inc/customizer/Customizer.php:1196
+msgid "Between content and footer"
+msgstr "Zwischen Inhalt und Footer"
+
+#: inc/customizer/Customizer.php:329
+msgid "Transition delay"
+msgstr "Verzögerung beim Übergang"
+
+#: inc/customizer/Customizer.php:330
+msgid ""
+"Number of milliseconds a photo is displayed for (enter 0 for no "
+"automatically cycling)."
+msgstr ""
+"Zeit in Millisekunden, die vergehen soll, bevor das nächste Objekt "
+"aufgerufen wird (0 für keine automatische Bewegung)"
+
+#: inc/customizer/Customizer.php:344
+msgid "Pause sliding on mouseenter"
+msgstr "Pausiert die Bewegung des Sliders bei mouseenter"
+
+#: inc/customizer/Customizer.php:358
+msgid "Slider reacts to keyboard events"
+msgstr "Slider reagiert auf Tastatureingaben"
+
+#: inc/customizer/Customizer.php:372
+msgid "Cycle continuously"
+msgstr "Dauerhafte Bewegung"
+
+#: inc/customizer/Customizer.php:406
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/customizer/Customizer.php:407
+msgid ""
+"Enter the complete Facebook profile page URL (please include http or https!)"
+msgstr "Facebook-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:410
+msgid "GitHub"
+msgstr "GitHub"
+
+#: inc/customizer/Customizer.php:411
+msgid ""
+"Enter the complete GitHub profile page URL (please include http or https!)"
+msgstr "GitHub-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:414
+msgid "Google+"
+msgstr "Google+"
+
+#: inc/customizer/Customizer.php:415
+msgid "Enter the complete Google+ page URL (please include http or https!)"
+msgstr "Google+--Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:418
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/customizer/Customizer.php:419
+msgid "Enter the complete Instagram page URL (please include http or https!)"
+msgstr "Instagram-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:422
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: inc/customizer/Customizer.php:423
+msgid "Enter the complete LinkedIn page URL (please include http or https!)"
+msgstr "LinkedIn-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:426
 msgid "SlideShare"
 msgstr "SlideShare"
 
-#: inc/customizer/Customizer.php:413
-#@ tikva
+#: inc/customizer/Customizer.php:427
 msgid "Enter the complete SlideShare page URL (please include http or https!)"
 msgstr "SlideShare-Profilseiten-URL angeben (inkl. http oder https)"
 
-#: inc/customizer/Customizer.php:566
-#@ tikva
+#: inc/customizer/Customizer.php:430
+msgid "Snapchat"
+msgstr "Snapchat"
+
+#: inc/customizer/Customizer.php:431
+msgid "Enter the complete Snapchat page URL (please include http or https!)"
+msgstr "Snapchat-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:434
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/customizer/Customizer.php:435
+msgid "Enter the Twitter profile page URL (please include http!)"
+msgstr "Twitter-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:438
+msgid "Vine"
+msgstr "Vine"
+
+#: inc/customizer/Customizer.php:439
+msgid "Enter the complete Vine page URL (please include http or https!)"
+msgstr "Vine-Seiten-URL-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:442
+msgid "Xing"
+msgstr "Xing"
+
+#: inc/customizer/Customizer.php:443
+msgid ""
+"Enter the complete Xing profile page URL (please include http or https!)"
+msgstr "Xing-Profilseiten-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:446
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/customizer/Customizer.php:447
+msgid ""
+"Enter the complete YouTube channel page URL (please include http or https!)"
+msgstr "YouTube-Channel-URL angeben (inkl. http oder https)"
+
+#: inc/customizer/Customizer.php:472
+msgid "Social Media Integration"
+msgstr "Social-Media-Integration"
+
+#: inc/customizer/Customizer.php:473
+msgid "Configuration of Social Media Buttons"
+msgstr "Konfiguration der Social-Media-Buttons"
+
+#: inc/customizer/Customizer.php:480
+msgid "Social Media Buttons"
+msgstr "Social-Media-Buttons"
+
+#: inc/customizer/Customizer.php:481
+msgid "Configure URLs of your Social Media Buttons"
+msgstr "URLs der Social-Media-Buttons konfigurieren"
+
+#: inc/customizer/Customizer.php:489
+msgid "Social Media Buttons Options"
+msgstr "Social-Media-Buttons Einstellungen"
+
+#: inc/customizer/Customizer.php:490
+msgid "Set options of Social Media Buttons"
+msgstr "Einstellungen der Social-Media-Buttons setzen"
+
+#: inc/customizer/Customizer.php:503
+msgid "Show Social Media Buttons"
+msgstr "Social-Media-Buttons anzeigen"
+
+#: inc/customizer/Customizer.php:517
+msgid "Button Position"
+msgstr "Button-Position"
+
+#: inc/customizer/Customizer.php:523
+msgid "Between Content and Footer"
+msgstr "Zwischen Inhaltsbereich und Footer"
+
+#: inc/customizer/Customizer.php:524
+msgid "Below Footer"
+msgstr "Unterhalb des Footers"
+
+#: inc/customizer/Customizer.php:536
+msgid "Button Alignment"
+msgstr "Button-Ausrichtung"
+
+#: inc/customizer/Customizer.php:542
+msgid "Centered"
+msgstr "Zentriert"
+
+#: inc/customizer/Customizer.php:555
+msgid "Button Size"
+msgstr "Größe der Buttons"
+
+#: inc/customizer/Customizer.php:560
+msgid "Small"
+msgstr "Klein"
+
+#: inc/customizer/Customizer.php:561
+msgid "Medium"
+msgstr "Mittel"
+
+#: inc/customizer/Customizer.php:562
+msgid "Large"
+msgstr "Groß"
+
+#: inc/customizer/Customizer.php:574
+msgid "Button Type"
+msgstr "Button-Typ"
+
+#: inc/customizer/Customizer.php:579 inc/customizer/Customizer.php:1344
+msgid "Circle"
+msgstr "Rund"
+
+#: inc/customizer/Customizer.php:580
 msgid "Square (rounded corners)"
 msgstr "Quadratisch (abgerundete Ecken)"
 
-#: inc/customizer/Customizer.php:1158
-#@ tikva
+#: inc/customizer/Customizer.php:590
+msgid "Button Foreground (Icon) Color"
+msgstr "Schriftfarbe für das Icon"
+
+#: inc/customizer/Customizer.php:593
+msgid ""
+"Pick a foreground color for the Social Media icon (default: transparent, i.e."
+" use color defined in the theme stylesheet)."
+msgstr ""
+"Schriftfarbe für das Social-Media-Button Icon (Standard: transparent, d.h. "
+"die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:601
+msgid "Button Background Color"
+msgstr "Hintergrundfarbe des Buttons"
+
+#: inc/customizer/Customizer.php:604
+msgid ""
+"Pick a background color for the Social Media icon (default: transparent, i.e."
+" use color defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Social-Media-Button (Standard: transparent, d.h. "
+"die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:612
+msgid "Button Background Mouseover Color"
+msgstr "Hintergrundfarbe des Buttons bei Mouseover"
+
+#: inc/customizer/Customizer.php:615
+msgid ""
+"Pick a background color for the Social Media icon when hovered (default: "
+"transparent, i.e. use color defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Social-Media-Button bei Mouseover (Standard: "
+"transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:634
+msgid "Header Background Color"
+msgstr "Header Hintergrundfarbe"
+
+#: inc/customizer/Customizer.php:637
+msgid ""
+"Pick a background color for the header (default: transparent, i.e. use color "
+"defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Header (Standard: transparent, d.h. die im "
+"Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:647
+msgid "Footer Font Color"
+msgstr "Footer-Schriftfarbe"
+
+#: inc/customizer/Customizer.php:650
+msgid ""
+"Pick a foreground color for the footer (default: transparent, i.e. use color "
+"defined in the theme stylesheet)."
+msgstr ""
+"Schriftfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet "
+"eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:661
+msgid "Footer Background Color"
+msgstr "Footer-Hintergrundfarbe"
+
+#: inc/customizer/Customizer.php:664
+msgid ""
+"Pick a background color for the footer (default: transparent, i.e. use color "
+"defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im "
+"Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:676
+msgid "Sidebar Font Color"
+msgstr "Schriftfarbe Sidebar (Widgets)"
+
+#: inc/customizer/Customizer.php:679
+msgid ""
+"Pick a foreground color for the sidebar (default: transparent, i.e. use "
+"color defined in the theme stylesheet)."
+msgstr ""
+"Schriftfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet "
+"eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:690
+msgid "Sidebar Background Color"
+msgstr "Hintergrundfarbe Sidebar (Widgets)"
+
+#: inc/customizer/Customizer.php:693
+msgid ""
+"Pick a background color for the sidebar (default: transparent, i.e. use "
+"color defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im "
+"Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:737
+msgid "Layout"
+msgstr "Layout"
+
+#: inc/customizer/Customizer.php:738
+msgid "Set layout of your site."
+msgstr "Setze Layout der Website"
+
+#: inc/customizer/Customizer.php:758
+msgid "Theme Stylesheet"
+msgstr "Theme Stylesheet"
+
+#: inc/customizer/Customizer.php:760
+msgid "Select your themes alternative color scheme."
+msgstr "Alternative Farbschemata wählen"
+
+#: inc/customizer/Customizer.php:773
+msgid "Navbar fixed options"
+msgstr "Einstellungen der Navigation"
+
+#: inc/customizer/Customizer.php:778
+msgid "Default"
+msgstr "Standard"
+
+#: inc/customizer/Customizer.php:779
+msgid "Fixed to top"
+msgstr "Oben fixiert"
+
+#: inc/customizer/Customizer.php:791
+msgid "Navbar style"
+msgstr "Navigationsleiste Style"
+
+#: inc/customizer/Customizer.php:865
+msgid "Show date and author of featured posts on homepage"
+msgstr ""
+"Datum und Autor von hervorgehobenen Beiträgen auf der Homepage anzeigen"
+
+#: inc/customizer/Customizer.php:889
+msgid "Show footer"
+msgstr "Footer anzeigen"
+
+#: inc/customizer/Customizer.php:909
+msgid "Footer Layout"
+msgstr "Footer-Layout"
+
+#: inc/customizer/Customizer.php:910
+msgid "Set layout of the footer."
+msgstr "Layout-Einstellungen für den Footer"
+
+#: inc/customizer/Customizer.php:935
+msgid "Show Subfooter"
+msgstr "Subfooter anzeigen"
+
+#: inc/customizer/Customizer.php:947
+msgid "Subfooter Foreground Color"
+msgstr "Subfooter-Schriftfarbe"
+
+#: inc/customizer/Customizer.php:950
+msgid ""
+"Pick a foreground color for the subfooter (default: transparent, i.e. use "
+"color defined in the theme stylesheet)."
+msgstr ""
+"Schriftfarbe für den Subfooter (Standard: transparent, d.h. die im "
+"Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:959
+msgid "Subfooter Link Color"
+msgstr "Subfooter Link-Farbe"
+
+#: inc/customizer/Customizer.php:962
+msgid ""
+"Pick a link color for the subfooter (default: transparent, i.e. use color "
+"defined in the theme stylesheet)."
+msgstr ""
+"Link-Farbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet "
+"eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:971
+msgid "Subfooter Background Color"
+msgstr "Subfooter-Hintergrundfarbe"
+
+#: inc/customizer/Customizer.php:974
+msgid ""
+"Pick a background color for the subfooter (default: transparent, i.e. use "
+"color defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Subfooter (Standard: transparent, d.h. die im "
+"Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:984
+msgid "Subfooter content"
+msgstr "Subfooter Inhalt"
+
+#: inc/customizer/Customizer.php:1010
+msgid "Maximum number of featured articles on homepage"
+msgstr "Maximale Anzahl von hervorgehobenen Beiträgen auf der Homepage"
+
+#: inc/customizer/Customizer.php:1038
+msgid "Use the example image from the theme if no default header image is set."
+msgstr ""
+"Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild "
+"gesetzt ist."
+
+#: inc/customizer/Customizer.php:1041
+msgid "You can switch off this option, so no image will be displayed."
+msgstr ""
+"Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild "
+"erscheint, falls kein Standard-Header-Bild gesetzt ist."
+
+#: inc/customizer/Customizer.php:1055
+msgid "Do not resize automatically the default header image"
+msgstr "Keine automatische Anpassung des Standard Header-Bildes"
+
+#: inc/customizer/Customizer.php:1058
+msgid ""
+"If checked, the default header image will <b>not</b> be resized to fit the "
+"width of the screen."
+msgstr ""
+"Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige "
+"Display-Breite angepasst."
+
+#: inc/customizer/Customizer.php:1070
+msgid "Header Image (medium screen)"
+msgstr "Header-Bild (mittlere Displays)"
+
+#: inc/customizer/Customizer.php:1074
+msgid ""
+"If available, this image will be used with medium devices (desktops, 992px "
+"and up). Please use a minimal width of 912px. It is available when chosen "
+"default navbar."
+msgstr ""
+"Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet "
+"(Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. "
+"Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste "
+"eingesetzt wird."
+
+#: inc/customizer/Customizer.php:1086
+msgid "Do not resize automatically the medium screen header image"
+msgstr ""
+"Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
+
+#: inc/customizer/Customizer.php:1089
+msgid ""
+"If checked, the medium screen header image will <b>not</b> be resized to fit "
+"the width of the screen."
+msgstr ""
+"Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b>"
+" an die jeweilige Display-Breite angepasst."
+
+#: inc/customizer/Customizer.php:1101
+msgid "Header Image (small screen)"
+msgstr "Header-Bild (kleine Displays)"
+
+#: inc/customizer/Customizer.php:1105
+msgid ""
+"If available, this image will be used with small devices (tablets, 768px and "
+"up). Please use a minimal width of 690px. It is available when chosen "
+"default navbar."
+msgstr ""
+"Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet "
+"(Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das "
+"Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste "
+"eingesetzt wird."
+
+#: inc/customizer/Customizer.php:1117
+msgid "Do not resize automatically the small screen header image"
+msgstr ""
+"Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
+
+#: inc/customizer/Customizer.php:1120
+msgid ""
+"If checked, the small screen header image will <b>not</b> be resized to fit "
+"the width of the screen."
+msgstr ""
+"Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> "
+"an die jeweilige Display-Breite angepasst."
+
+#: inc/customizer/Customizer.php:1133
+msgid "Header Image (extra small screen)"
+msgstr "Header-Bild (sehr kleine Displays)"
+
+#: inc/customizer/Customizer.php:1137
+msgid ""
+"If available, this image will be used with extra small devices (phones, less "
+"than 768px). Please use a minimal width of 690px. It is available when "
+"chosen default navbar."
+msgstr ""
+"Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen "
+"verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px "
+"empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-"
+"Navigationsleiste eingesetzt wird."
+
+#: inc/customizer/Customizer.php:1149
+msgid "Do not resize automatically the extra small header image"
+msgstr ""
+"Keine automatische Anpassung des Header-Bildes für sehr kleine Display-"
+"Größen."
+
+#: inc/customizer/Customizer.php:1152
+msgid ""
+"If checked, the extra small header image will <b>not</b> be resized to fit "
+"the width of the screen."
+msgstr ""
+"Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>"
+"nicht</b> an die jeweilige Display-Breite angepasst."
+
+#: inc/customizer/Customizer.php:1174
 msgid "Show Lead Section"
 msgstr "Aufmacher-Bereich anzeigen"
 
-#: inc/customizer/Customizer.php:1190
-#@ tikva
+#: inc/customizer/Customizer.php:1188
+msgid "Lead Position"
+msgstr "Position Aufmacher"
+
+#: inc/customizer/Customizer.php:1206
 msgid "Section Title"
 msgstr "Bereichs-Titel"
 
-#: inc/customizer/Customizer.php:1200
-#@ tikva
+#: inc/customizer/Customizer.php:1216
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: inc/customizer/Customizer.php:1212
-#@ tikva
-msgid "Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet)."
-msgstr "Hintergrundfarbe für den Aufmacher-Bereich (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+#: inc/customizer/Customizer.php:1225
+msgid "Section Background Color"
+msgstr "Hintergrundfarbe Bereich"
 
-#: inc/customizer/Customizer.php:1223
-#@ tikva
+#: inc/customizer/Customizer.php:1228
+msgid ""
+"Pick a background color for the Lead Section (default: transparent, i.e. use "
+"color defined in the theme stylesheet)."
+msgstr ""
+"Hintergrundfarbe für den Aufmacher-Bereich (Standard: transparent, d.h. die "
+"im Stylesheet eingestellte Farbe wird verwendet)."
+
+#: inc/customizer/Customizer.php:1239
 msgid "Remove \"Read more\" Buttons"
 msgstr "„Weiterlesen“-Buttons entfernen"
 
-#: inc/customizer/Customizer.php:1248
-#@ tikva
+#: inc/customizer/Customizer.php:1264
 msgid "Lead Section Content"
 msgstr "Aufmacher-Bereich Inhalte"
 
-#: inc/customizer/Customizer.php:1249
-#@ tikva
+#: inc/customizer/Customizer.php:1265
 msgid "Add as many elements as you want."
 msgstr "Eine beliebige Anzahl von Elementen hinzufügen."
 
-#: inc/customizer/Customizer.php:1286
-#@ tikva
+#: inc/customizer/Customizer.php:1297
+msgid "Text"
+msgstr "Text"
+
+#: inc/customizer/Customizer.php:1302
 msgid "Select Font Awesome Icon or&hellip;"
 msgstr "Font Awesome Icon auswählen oder&hellip;"
 
-#: inc/customizer/Customizer.php:1287
-#@ tikva
+#: inc/customizer/Customizer.php:1303
 msgid "Select Icon or&hellip;"
 msgstr "Icon auswählen oder&hellip;"
 
-#: inc/customizer/Customizer.php:1293
-#@ tikva
+#: inc/customizer/Customizer.php:1309
 msgid "&hellip;use Image"
 msgstr "&hellip;Bild verwenden"
 
-#: inc/customizer/Customizer.php:1295
-#@ tikva
+#: inc/customizer/Customizer.php:1311
 msgid "Use Image instead of Icon"
 msgstr "Bild anstatt eines Icons benutzen"
 
-#: inc/customizer/Customizer.php:1300
-#@ tikva
+#: inc/customizer/Customizer.php:1316
 msgid "Link to Page or&hellip;"
 msgstr "Mit einer Seite verlinken oder&hellip;"
 
-#: inc/customizer/Customizer.php:1305
-#@ tikva
+#: inc/customizer/Customizer.php:1321
 msgid "Link to Post or&hellip;"
 msgstr "Mit einem Beitrag verlinken oder&hellip;"
 
-#: inc/customizer/Customizer.php:1316
-#@ tikva
+#: inc/customizer/Customizer.php:1326
+msgid "Link to any URL"
+msgstr "Link zu einer beliebigen URL"
+
+#: inc/customizer/Customizer.php:1332
 msgid "Icon Color"
 msgstr "Icon-Farbe"
 
-#: inc/customizer/Customizer.php:1323
-#@ tikva
+#: inc/customizer/Customizer.php:1339
 msgid "Image Shape"
 msgstr "Bild-Kontur"
 
-#: inc/customizer/Customizer.php:1327
-#@ tikva
+#: inc/customizer/Customizer.php:1340
+msgid "Use image shape for uploaded image:"
+msgstr "Bilder-Konturen für das Bild wählen:"
+
+#: inc/customizer/Customizer.php:1343
 msgid "Rounded Corners"
 msgstr "Runde Ecken"
 
-#: inc/customizer/Customizer.php:1330
-#@ tikva
+#: inc/customizer/Customizer.php:1345
+msgid "Thumbnail"
+msgstr "Vorschaubild"
+
+#: inc/customizer/Customizer.php:1346
 msgid "No Image Shape"
 msgstr "Keine Bild-Kontur"
 
-#: inc/customizer/CustomFontControl.php:353
-#@ tikva
-msgid "Font Size"
-msgstr ""
+#: inc/customizer/Customizer.php:1385
+msgid "Choose Icon"
+msgstr "Icon auswählen"
 
-#: inc/customizer/Customizer.php:82
-#@ tikva
-msgid "Typography Settings"
-msgstr ""
+#: inc/sections/SectionContentColumn.php:177
+msgid "Read more &raquo;"
+msgstr "Weiterlesen &raquo;"
 
-#: inc/customizer/Customizer.php:83
-#@ tikva
-msgid "Edit typography settings:  fonts settings of title and body elements."
-msgstr ""
+#: inc/sections/SectionFooter.php:21
+msgid "Please Add Widgets"
+msgstr "Bitte Widgets hinzufügen"
 
-#: inc/customizer/Customizer.php:805
-#@ tikva
-msgid "Headline Base Font"
+#: inc/sections/SectionFooter.php:23
+#, php-format
+msgid "Remove this message by adding widgets to Footer Widget Area #%d."
 msgstr ""
+"Diese Nachricht ist ein Platzhalter und kann entfernt werden durch "
+"Hinzufügen von Inhalten im Footer Widget-Bereich #%d."
 
-#: inc/customizer/Customizer.php:806
-#@ tikva
-msgid "Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme."
-msgstr ""
+#: inc/sections/SectionFooter.php:24
+msgid "No Widgets Selected"
+msgstr "Keine Widgets ausgewählt"
 
-#: inc/customizer/Customizer.php:822
-#@ tikva
-msgid "Body Font"
-msgstr ""
+#: inc/sections/SectionFooter.php:24
+msgid "Click here to go to Widget area."
+msgstr "Hier klicken, um Widgets zu konfigurieren."
 
-#: inc/customizer/Customizer.php:823
-#@ tikva
-msgid "Set font of body content. Choose a size of 0 (zero) to use the default font size of the theme."
-msgstr ""
+#: inc/sections/SectionSlider.php:156
+msgid "Previous"
+msgstr "Zurück"
 
+#: inc/sections/SectionSlider.php:160
+msgid "Next"
+msgstr "Vor"
+
+#: inc/info-screen/sections/getting-started.php:15
+#, php-format
+msgid "- Version %s"
+msgstr "- Version %s"
+
+#: inc/info-screen/sections/getting-started.php:26
+msgid "Go to Customizer"
+msgstr "Gehe zum Customizer"
+
+#: inc/info-screen/sections/getting-started.php:46
+msgid "Feedback and Support"
+msgstr "Feedback und Support"
+
+#: inc/info-screen/sections/getting-started.php:58
+msgid "Ralf Geschke"
+msgstr "Ralf Geschke"

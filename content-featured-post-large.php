@@ -60,5 +60,5 @@ if (preg_match('/<!--more.*-->/',$post->post_content)) {
 }
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 $azbalacContainer->contentFeaturedPostLarge = $content;

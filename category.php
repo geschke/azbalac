@@ -10,7 +10,7 @@
  */
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 get_header(); 
 $header = $azbalacContainer->headerData;
@@ -24,7 +24,7 @@ $sidebar = $azbalacContainer->contentSidebar;
 
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 
 if ( have_posts() ) {
 	$azbalac_have_posts = true;

@@ -14,7 +14,7 @@ require_once( get_template_directory() .'/vendor/autoload.php');
 require_once( get_template_directory() . '/inc/template/Template.php' );
 require_once( get_template_directory() . '/inc/template/DataContainer.php' );
 
-$t7tpl = new azbalac_Template();
+$t7tpl = new Azbalac_Template();
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
@@ -378,7 +378,7 @@ function azbalac_bootstrap_styles()
 
     // Register the style like this for a theme:
     wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '20160418','all');
+        '2018013001','all');
         //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
     //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
     //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
@@ -596,6 +596,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
         
         $imageData = array();
 
+     
         if (get_header_image()) {
             $largeImage = get_custom_header();
             //var_dump($largeImage);
@@ -605,7 +606,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
                 'thumbnail' => $largeImage->thumbnail_url,
                 'id' => $largeImage->attachment_id); 
         }
-        elseif (get_option('header_image_example_azbalac')) {
+        elseif (get_option('header_image_example_azbalac', 1)) {
             // fallback to example image if not overwritten or switched off
             $imageData[0] = array('url' => get_template_directory_uri() . '/images/azbalac_default_header_image.jpg',
                 'height' => 213,
@@ -754,7 +755,7 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 if (is_admin()) {
     $azbalacGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
     
-    $azbalacFontRequest = new azbalac_Custom_Font_Request();
+    $azbalacFontRequest = new Azbalac_Custom_Font_Request();
     
 }
 

@@ -107,5 +107,5 @@ if($categories) {
     }
 
 
-$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer = Azbalac_DataContainer::getInstance();
 $azbalacContainer->content = $content;

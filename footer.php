@@ -2,49 +2,34 @@
 /**
  * The template for displaying the footer
  *
- * @since Tikva 0.1
+ * @since Azbalac 0.1
  */
-?>
 
-	
-<?php
-if ( is_front_page() ) {
-	Tikva_Section_Slider::showSlider(4);
-	Tikva_Section_Content_Column::showIntroductionElements(4);
+ $content = [];
+ if ( is_front_page() ) {
+
+	$content['slider_4'] = azbalac_Section_Slider::getSlider(4);
+	$content['showIntroductionElements']['4'] = azbalac_Section_Content_Column::getIntroductionElements(4);
 }
 
-Tikva_Section_Social_Media_Buttons::showButtons(2);
+
+$content['socialMediaButtons']['2'] = azbalac_Section_Social_Media_Buttons::getButtons(2);
 	
-?>
+$content['styles'] = azbalac_Section_Footer::getStyles();
 
-<?php
-$footerStyles = Tikva_Section_Footer::getStyles();
-?>
-
-<div class="site-footer-1" style="<?php echo $footerStyles['footerStyleColorBg'] . $footerStyles['footerStyleColorFg'] ?>">
-
-	<div role="complementary" class="container">
-    
-<?php
-Tikva_Section_Footer::build();
-// todo: add styling...
-?>
-	</div>
-
-<?php
-//Tikva_Section_Content_Column::showIntroductionElements(4);
-
-Tikva_Section_Social_Media_Buttons::showButtons(3);
-
-?>
-</div><!-- end site-footer-1 -->
-
-<?php 
-Tikva_Section_Subfooter::build();
-?>
+$content['footer'] = azbalac_Section_Footer::get();
 
 
-<?php wp_footer(); ?>
-<div id="media-width-detection-element"></div>
-</body>
-</html>
+$content['socialMediaButtons']['3'] = azbalac_Section_Social_Media_Buttons::getButtons(3);
+
+
+$content['subfooter'] = azbalac_Section_Subfooter::getContent();
+
+ob_start();
+wp_footer(); 
+$content['wpFooter'] = ob_get_clean();
+
+
+$azbalacContainer = azbalac_DataContainer::getInstance();
+
+$azbalacContainer->footerData = $content;

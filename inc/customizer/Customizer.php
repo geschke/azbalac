@@ -6,31 +6,31 @@
  * Add custom sections and settings to the Customizer.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.4
+ * @subpackage azbalac
+ * @since azbalac 0.4
  * @copyright Copyright (c) 2016, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Customizer
+class azbalac_Customizer
 {
 
     /**
-     * Tikva_Customizer constructor.
+     * azbalac_Customizer constructor.
      *
      * @access public
-     * @since  tikva 0.4
+     * @since  azbalac 0.4
      * @return void
      */
     public function __construct()
     {
 
         add_action('customize_register', array($this, 'customizeRegister'));
-        $this->sanitizer = new Tikva_Customizer_Sanitizer();
+        $this->sanitizer = new azbalac_Customizer_Sanitizer();
     }
 
     public function customizeRegister($wp_customize)
     {
-        $customAddOn = new Tikva_Customizer_Addon($wp_customize);
+        $customAddOn = new azbalac_Customizer_Addon($wp_customize);
         
         $this->addCustomizerThemePanel($wp_customize);
         $this->addCustomizerSocialButtons($wp_customize);
@@ -62,16 +62,16 @@ class Tikva_Customizer
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Theme Options', 'tikva'),
-            'description' => __('Configuration of the theme', 'tikva'),
+            'title' => __('Theme Options', 'azbalac'),
+            'description' => __('Configuration of the theme', 'azbalac'),
         ));
 
         $wp_customize->add_section('section_theme_options_general', array(
             'priority' => 100,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('General Settings', 'tikva'),
-            'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'tikva'),
+            'title' => __('General Settings', 'azbalac'),
+            'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -79,8 +79,8 @@ class Tikva_Customizer
             'priority' => 200, 
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Typography Settings', 'tikva'),
-            'description' => __('Edit typography settings:  fonts settings of title and body elements.', 'tikva'),
+            'title' => __('Typography Settings', 'azbalac'),
+            'description' => __('Edit typography settings:  fonts settings of title and body elements.', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -88,8 +88,8 @@ class Tikva_Customizer
             'priority' => 390,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Home Options', 'tikva'),
-            'description' => __('Edit homepage settings', 'tikva'),
+            'title' => __('Home Options', 'azbalac'),
+            'description' => __('Edit homepage settings', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -97,7 +97,7 @@ class Tikva_Customizer
             'priority' => 400,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Header Image Options', 'tikva'),
+            'title' => __('Header Image Options', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -105,8 +105,8 @@ class Tikva_Customizer
             'priority' => 500,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Posts Settings', 'tikva'),
-            'description' => __('Edit posts settings', 'tikva'),
+            'title' => __('Posts Settings', 'azbalac'),
+            'description' => __('Edit posts settings', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -114,8 +114,8 @@ class Tikva_Customizer
             'priority' => 600,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Lead Area Options', 'tikva'),
-            'description' => __('Edit Lead Section Options', 'tikva'),
+            'title' => __('Lead Area Options', 'azbalac'),
+            'description' => __('Edit Lead Section Options', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -123,8 +123,8 @@ class Tikva_Customizer
             'priority' => 700,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Lead Area Content', 'tikva'),
-            'description' => __('Edit Lead Section Content', 'tikva'),
+            'title' => __('Lead Area Content', 'azbalac'),
+            'description' => __('Edit Lead Section Content', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -133,8 +133,8 @@ class Tikva_Customizer
             'priority' => 800,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Footer Options', 'tikva'),
-            'description' => __('Set options of Footer', 'tikva'),
+            'title' => __('Footer Options', 'azbalac'),
+            'description' => __('Set options of Footer', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -142,8 +142,8 @@ class Tikva_Customizer
             'priority' => 900,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Subfooter Options', 'tikva'),
-            'description' => __('Set options of Subfooter, i.e. the area under the footer', 'tikva'),
+            'title' => __('Subfooter Options', 'azbalac'),
+            'description' => __('Set options of Subfooter, i.e. the area under the footer', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -156,8 +156,8 @@ class Tikva_Customizer
             'priority' => 30,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => sprintf(__('Slider #%d', 'tikva'), $slider),
-            'description' => sprintf(__('Configure Slider #%d', 'tikva'), $slider),
+            'title' => sprintf(__('Slider #%d', 'azbalac'), $slider),
+            'description' => sprintf(__('Configure Slider #%d', 'azbalac'), $slider),
             'panel' => 'panel_slider_integration',
         ));
 
@@ -169,7 +169,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'control_slider_' . $slider . '_image', array(
-            'label' => __('Slider image', 'tikva'),
+            'label' => __('Slider image', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_image',
             'flex_width' => true, // Allow any width, making the specified value recommended. False by default.
@@ -177,7 +177,7 @@ class Tikva_Customizer
             'width' => 1920,
             'height' => 500,
             'mime_type' => 'image',
-            'description' => __('Image displayed on slider', 'tikva')
+            'description' => __('Image displayed on slider', 'azbalac')
         )));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_title', array(
@@ -185,7 +185,7 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_title', array(
-            'label' => __('Title', 'tikva'),
+            'label' => __('Title', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_title')
         );
@@ -196,7 +196,7 @@ class Tikva_Customizer
         );
 
         $wp_customize->add_control('control_slider_' . $slider . '_description', array(
-            'label' => __('Description', 'tikva'),
+            'label' => __('Description', 'azbalac'),
             'type' => 'textarea',
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_description'
@@ -210,14 +210,14 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_' . $slider . '_text_position', array(
-            'label' => __('Position of Slider text', 'tikva'),
+            'label' => __('Position of Slider text', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_text_position',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Left', 'tikva'),
-                '2' => __('Center', 'tikva'),
-                '3' => __('Right', 'tikva')
+                '1' => __('Left', 'azbalac'),
+                '2' => __('Center', 'azbalac'),
+                '3' => __('Right', 'azbalac')
             ),
         ));
 
@@ -227,10 +227,10 @@ class Tikva_Customizer
         ));
         $wp_customize->add_control(
                 new WP_Customize_Color_Control($wp_customize, 'control_slider_' . $slider . '_text_color', array(
-            'label' => __('Slider Text Color', 'tikva'),
+            'label' => __('Slider Text Color', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_text_color',
-            'description' => __('Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_page', array(
@@ -241,7 +241,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_' . $slider . '_page', array(
-            'label' => __('Link to Page', 'tikva'),
+            'label' => __('Link to Page', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'type' => 'dropdown-pages',
             'settings' => 'setting_slider_' . $slider . '_page',
@@ -252,7 +252,7 @@ class Tikva_Customizer
             'sanitize_callback' => 'esc_url_raw')
         );
         $wp_customize->add_control('control_slider_' . $slider . '_url', array(
-            'label' => __('&hellip;or enter URL to link to', 'tikva'),
+            'label' => __('&hellip;or enter URL to link to', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'settings' => 'setting_slider_' . $slider . '_url')
         );
@@ -271,8 +271,8 @@ class Tikva_Customizer
             'priority' => 1010,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Slider Integration', 'tikva'),
-            'description' => __('Configuration of Slider', 'tikva'),
+            'title' => __('Slider Integration', 'azbalac'),
+            'description' => __('Configuration of Slider', 'azbalac'),
         ));
 
 
@@ -282,8 +282,8 @@ class Tikva_Customizer
             'priority' => 20,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Slider Options', 'tikva'),
-            'description' => __('Set generic slider options', 'tikva'),
+            'title' => __('Slider Options', 'azbalac'),
+            'description' => __('Set generic slider options', 'azbalac'),
             'panel' => 'panel_slider_integration',
         ));
 
@@ -295,7 +295,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_activate', array(
-            'label' => __('Show slider', 'tikva'),
+            'label' => __('Show slider', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_activate',
             'type' => 'checkbox',
@@ -309,15 +309,15 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_position', array(
-            'label' => __('Slider Position', 'tikva'),
+            'label' => __('Slider Position', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_position',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
-                '2' => __('Between navigation and featured articles', 'tikva'),
-                '3' => __('Between featured articles and content', 'tikva'),
-                '4' => __('Between content and footer', 'tikva'),
+                '1' => __('Above navigation (if navbar position is not fixed)', 'azbalac'),
+                '2' => __('Between navigation and featured articles', 'azbalac'),
+                '3' => __('Between featured articles and content', 'azbalac'),
+                '4' => __('Between content and footer', 'azbalac'),
             ),
         ));
         $wp_customize->add_setting('setting_slider_interval', array(
@@ -326,8 +326,8 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_interval', array(
-            'label' => __('Transition delay', 'tikva'),
-            'description' => __('Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling).', 'tikva'),
+            'label' => __('Transition delay', 'azbalac'),
+            'description' => __('Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling).', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_interval',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger'))
@@ -341,7 +341,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_pause', array(
-            'label' => __('Pause sliding on mouseenter', 'tikva'),
+            'label' => __('Pause sliding on mouseenter', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_pause',
             'type' => 'checkbox',
@@ -355,7 +355,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_keyboard', array(
-            'label' => __('Slider reacts to keyboard events', 'tikva'),
+            'label' => __('Slider reacts to keyboard events', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_keyboard',
             'type' => 'checkbox',
@@ -369,9 +369,23 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_slider_wrap', array(
-            'label' => __('Cycle continuously', 'tikva'),
+            'label' => __('Cycle continuously', 'azbalac'),
             'section' => 'section_slider_options',
             'settings' => 'setting_slider_wrap',
+            'type' => 'checkbox',
+        ));
+
+        $wp_customize->add_setting('setting_slider_indicators', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('control_slider_indicators', array(
+            'label' => __('Show slider indicators', 'azbalac'),
+            'section' => 'section_slider_options',
+            'settings' => 'setting_slider_indicators',
             'type' => 'checkbox',
         ));
 
@@ -389,48 +403,48 @@ class Tikva_Customizer
     {
         $socialData = array(
             'facebook' => array('settings_id' => 'social_media_facebook',
-                'label' => __('Facebook', 'tikva'),
-                'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'tikva'),
+                'label' => __('Facebook', 'azbalac'),
+                'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'azbalac'),
             ),
             'github' => array('settings_id' => 'social_media_github',
-                'label' => __('GitHub', 'tikva'),
-                'description' => __('Enter the complete GitHub profile page URL (please include http or https!)', 'tikva'),
+                'label' => __('GitHub', 'azbalac'),
+                'description' => __('Enter the complete GitHub profile page URL (please include http or https!)', 'azbalac'),
             ),
             'googleplus' => array('settings_id' => 'social_media_google',
-                'label' => __('Google+', 'tikva'),
-                'description' => __('Enter the complete Google+ page URL (please include http or https!)', 'tikva'),
+                'label' => __('Google+', 'azbalac'),
+                'description' => __('Enter the complete Google+ page URL (please include http or https!)', 'azbalac'),
             ),
             'instagram' => array('settings_id' => 'social_media_instagram',
-                'label' => __('Instagram', 'tikva'),
-                'description' => __('Enter the complete Instagram page URL (please include http or https!)', 'tikva'),
+                'label' => __('Instagram', 'azbalac'),
+                'description' => __('Enter the complete Instagram page URL (please include http or https!)', 'azbalac'),
             ),
             'linkedin' => array('settings_id' => 'social_media_linkedin',
-                'label' => __('LinkedIn', 'tikva'),
-                'description' => __('Enter the complete LinkedIn page URL (please include http or https!)', 'tikva'),
+                'label' => __('LinkedIn', 'azbalac'),
+                'description' => __('Enter the complete LinkedIn page URL (please include http or https!)', 'azbalac'),
             ),
             'slideshare' => array('settings_id' => 'social_media_slideshare',
-                'label' => __('SlideShare', 'tikva'),
-                'description' => __('Enter the complete SlideShare page URL (please include http or https!)', 'tikva'),
+                'label' => __('SlideShare', 'azbalac'),
+                'description' => __('Enter the complete SlideShare page URL (please include http or https!)', 'azbalac'),
             ),
             'snapchat' => array('settings_id' => 'social_media_snapshat',
-                'label' => __('Snapchat', 'tikva'),
-                'description' => __('Enter the complete Snapchat page URL (please include http or https!)', 'tikva'),
+                'label' => __('Snapchat', 'azbalac'),
+                'description' => __('Enter the complete Snapchat page URL (please include http or https!)', 'azbalac'),
             ),
             'twitter' => array('settings_id' => 'social_media_twitter',
-                'label' => __('Twitter', 'tikva'),
-                'description' => __('Enter the Twitter profile page URL (please include http!)', 'tikva'),
+                'label' => __('Twitter', 'azbalac'),
+                'description' => __('Enter the Twitter profile page URL (please include http!)', 'azbalac'),
             ),
             'vine' => array('settings_id' => 'social_media_vine',
-                'label' => __('Vine', 'tikva'),
-                'description' => __('Enter the complete Vine page URL (please include http or https!)', 'tikva'),
+                'label' => __('Vine', 'azbalac'),
+                'description' => __('Enter the complete Vine page URL (please include http or https!)', 'azbalac'),
             ),
             'xing' => array('settings_id' => 'social_media_xing',
-                'label' => __('Xing', 'tikva'),
-                'description' => __('Enter the complete Xing profile page URL (please include http or https!)', 'tikva')
+                'label' => __('Xing', 'azbalac'),
+                'description' => __('Enter the complete Xing profile page URL (please include http or https!)', 'azbalac')
             ),
             'youtube' => array('settings_id' => 'social_media_youtube',
-                'label' => __('YouTube', 'tikva'),
-                'description' => __('Enter the complete YouTube channel page URL (please include http or https!)', 'tikva')
+                'label' => __('YouTube', 'azbalac'),
+                'description' => __('Enter the complete YouTube channel page URL (please include http or https!)', 'azbalac')
             )
         );
         foreach ($socialData as $key => $value) {
@@ -455,16 +469,16 @@ class Tikva_Customizer
             'priority' => 1000,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Social Media Integration', 'tikva'),
-            'description' => __('Configuration of Social Media Buttons', 'tikva'),
+            'title' => __('Social Media Integration', 'azbalac'),
+            'description' => __('Configuration of Social Media Buttons', 'azbalac'),
         ));
 
         $wp_customize->add_section('section_social_media_buttons', array(
             'priority' => 20,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Social Media Buttons', 'tikva'),
-            'description' => __('Configure URLs of your Social Media Buttons', 'tikva'),
+            'title' => __('Social Media Buttons', 'azbalac'),
+            'description' => __('Configure URLs of your Social Media Buttons', 'azbalac'),
             'panel' => 'panel_social_media_integration',
         ));
 
@@ -472,8 +486,8 @@ class Tikva_Customizer
             'priority' => 10,
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
-            'title' => __('Social Media Buttons Options', 'tikva'),
-            'description' => __('Set options of Social Media Buttons', 'tikva'),
+            'title' => __('Social Media Buttons Options', 'azbalac'),
+            'description' => __('Set options of Social Media Buttons', 'azbalac'),
             'panel' => 'panel_social_media_integration',
         ));
 
@@ -486,7 +500,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_social_media_activate', array(
-            'label' => __('Show Social Media Buttons', 'tikva'),
+            'label' => __('Show Social Media Buttons', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_media_activate',
             'type' => 'checkbox',
@@ -500,14 +514,14 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_social_media_position', array(
-            'label' => __('Button Position', 'tikva'),
+            'label' => __('Button Position', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_media_position',
             'type' => 'radio',
             'choices' => array(
-                // '1' => __('Don\'t show', 'tikva'),
-                '2' => __('Between Content and Footer', 'tikva'),
-                '3' => __('Below Footer', 'tikva'),
+                // '1' => __('Don\'t show', 'azbalac'),
+                '2' => __('Between Content and Footer', 'azbalac'),
+                '3' => __('Below Footer', 'azbalac'),
             ),
         ));
 
@@ -519,14 +533,14 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_social_media_alignment', array(
-            'label' => __('Button Alignment', 'tikva'),
+            'label' => __('Button Alignment', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_media_alignment',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Left', 'tikva'),
-                '2' => __('Centered', 'tikva'),
-                '3' => __('Right', 'tikva'),
+                '1' => __('Left', 'azbalac'),
+                '2' => __('Centered', 'azbalac'),
+                '3' => __('Right', 'azbalac'),
             ),
         ));
 
@@ -538,14 +552,14 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_social_button_size', array(
-            'label' => __('Button Size', 'tikva'),
+            'label' => __('Button Size', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_size',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Small', 'tikva'),
-                '2' => __('Medium', 'tikva'), // lg
-                '3' => __('Large', 'tikva'), // 2x
+                '1' => __('Small', 'azbalac'),
+                '2' => __('Medium', 'azbalac'), // lg
+                '3' => __('Large', 'azbalac'), // 2x
             ),
         ));
 
@@ -557,13 +571,13 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_social_button_type', array(
-            'label' => __('Button Type', 'tikva'),
+            'label' => __('Button Type', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_type',
             'type' => 'radio',
             'choices' => array(
-                '1' => __('Circle', 'tikva'),
-                '2' => __('Square (rounded corners)', 'tikva'),
+                '1' => __('Circle', 'azbalac'),
+                '2' => __('Square (rounded corners)', 'azbalac'),
             ),
         ));
 
@@ -573,10 +587,10 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_fg', array(
-            'label' => __('Button Foreground (Icon) Color', 'tikva'),
+            'label' => __('Button Foreground (Icon) Color', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_color_fg',
-            'description' => __('Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a foreground color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting('setting_social_button_color_bg', array(
@@ -584,10 +598,10 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_bg', array(
-            'label' => __('Button Background Color', 'tikva'),
+            'label' => __('Button Background Color', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_color_bg',
-            'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting('setting_social_button_color_bg_hover', array(
@@ -595,10 +609,10 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_social_button_color_bg_hover', array(
-            'label' => __('Button Background Mouseover Color', 'tikva'),
+            'label' => __('Button Background Mouseover Color', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'setting_social_button_color_bg_hover',
-            'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
     }
 
@@ -617,10 +631,10 @@ class Tikva_Customizer
         $wp_customize->add_control(
                 new WP_Customize_Color_Control(
                 $wp_customize, 'color_bg_header', array(
-            'label' => __('Header Background Color', 'tikva'),
+            'label' => __('Header Background Color', 'azbalac'),
             'section' => 'colors',
             'settings' => 'color_bg_header',
-            'description' => __('Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
         $wp_customize->add_setting(
                 'color_fg_footer', array(
@@ -630,10 +644,10 @@ class Tikva_Customizer
         $wp_customize->add_control(
                 new WP_Customize_Color_Control(
                 $wp_customize, 'color_fg_footer', array(
-            'label' => __('Footer Font Color', 'tikva'),
+            'label' => __('Footer Font Color', 'azbalac'),
             'section' => 'colors',
             'settings' => 'color_fg_footer',
-            'description' => __('Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting(
@@ -644,10 +658,10 @@ class Tikva_Customizer
         $wp_customize->add_control(
                 new WP_Customize_Color_Control(
                 $wp_customize, 'color_bg_footer', array(
-            'label' => __('Footer Background Color', 'tikva'),
+            'label' => __('Footer Background Color', 'azbalac'),
             'section' => 'colors',
             'settings' => 'color_bg_footer',
-            'description' => __('Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
 
@@ -659,10 +673,10 @@ class Tikva_Customizer
         $wp_customize->add_control(
                 new WP_Customize_Color_Control(
                 $wp_customize, 'color_fg_sidebar', array(
-            'label' => __('Sidebar Font Color', 'tikva'),
+            'label' => __('Sidebar Font Color', 'azbalac'),
             'section' => 'colors',
             'settings' => 'color_fg_sidebar',
-            'description' => __('Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting(
@@ -673,10 +687,10 @@ class Tikva_Customizer
         $wp_customize->add_control(
                 new WP_Customize_Color_Control(
                 $wp_customize, 'color_bg_sidebar', array(
-            'label' => __('Sidebar Background Color', 'tikva'),
+            'label' => __('Sidebar Background Color', 'azbalac'),
             'section' => 'colors',
             'settings' => 'color_bg_sidebar',
-            'description' => __('Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
     }
 
@@ -712,38 +726,38 @@ class Tikva_Customizer
     {
 
 
-        $wp_customize->add_setting('tikva_layout', array(
+        $wp_customize->add_setting('azbalac_layout', array(
             'default' => '2',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeLayout')
         ));
 
-        $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'tikva_layout', array(
-            'label' => __('Layout', 'tikva'),
-            'description' => __('Set layout of your site.', 'tikva'),
+        $wp_customize->add_control(new azbalac_Custom_Radio_Image_Control($wp_customize, 'azbalac_layout', array(
+            'label' => __('Layout', 'azbalac'),
+            'description' => __('Set layout of your site.', 'azbalac'),
             'section' => 'section_theme_options_general',
-            'settings' => 'tikva_layout',
+            'settings' => 'azbalac_layout',
             'choices' => array(
                 '1' => get_template_directory_uri() . '/images/admin/1c.png',
-                '2' => get_template_directory_uri() . '/images/admin/2cl.png',
-                '3' => get_template_directory_uri() . '/images/admin/2cr.png',
+                '2' => get_template_directory_uri() . '/images/admin/2cr.png',
+                '3' => get_template_directory_uri() . '/images/admin/2cl.png',
             )
         )));
 
 
-        $wp_customize->add_setting('tikva_stylesheet', array(
+        $wp_customize->add_setting('azbalac_stylesheet', array(
             'default' => 'slate_accessibility_ready.min.css',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeStylesheet')
         ));
 
-        $wp_customize->add_control('tikva_stylesheet', array(
-            'settings' => 'tikva_stylesheet',
-            'label' => __('Theme Stylesheet', 'tikva'),
+        $wp_customize->add_control('azbalac_stylesheet', array(
+            'settings' => 'azbalac_stylesheet',
+            'label' => __('Theme Stylesheet', 'azbalac'),
             'section' => 'section_theme_options_general',
-            'description' => __('Select your themes alternative color scheme.', 'tikva'),
+            'description' => __('Select your themes alternative color scheme.', 'azbalac'),
             'type' => 'select',
             'choices' => $this->getAvailableStylesheets()
         ));
@@ -756,33 +770,35 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('navbar_fixed', array(
-            'label' => __('Navbar fixed options', 'tikva'),
+            'label' => __('Navbar fixed options', 'azbalac'),
             'section' => 'section_theme_options_general',
             'settings' => 'navbar_fixed',
             'type' => 'radio',
             'choices' => array(
-                'default' => __('Default', 'tikva'),
-                'fixed-top' => __('Fixed to top', 'tikva')
+                'default' => __('Default', 'azbalac'),
+                'fixed-top' => __('Fixed to top', 'azbalac')
             ),
         ));
 
-        $wp_customize->add_setting('navbar_style_inverse', array(
-            'default' => 'default',
+        $wp_customize->add_setting('navbar_style', array(
+            'default' => 'light',
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyleInverse')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyle')
         ));
 
-        $wp_customize->add_control('navbar_style_inverse', array(
-            'label' => __('Navbar style', 'tikva'),
+        $wp_customize->add_control('navbar_style', array(
+            'label' => __('Navbar style', 'azbalac'),
             'section' => 'section_theme_options_general',
-            'settings' => 'navbar_style_inverse',
+            'settings' => 'navbar_style',
             'type' => 'radio',
             'choices' => array(
-                'default' => __('Default', 'tikva'),
-                'inverse' => __('Inverse', 'tikva'),
+                'light' => __('Light', 'azbalac'),
+                'dark' => __('Dark', 'azbalac'),
             ),
         ));
+
+        // todo: choose background color of navbar, maybe with presets bg-* colors
     }
 
 
@@ -800,13 +816,13 @@ class Tikva_Customizer
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
         ));
 
-        $wp_customize->add_control(new Tikva_Custom_Font_Control($wp_customize, 
+        $wp_customize->add_control(new azbalac_Custom_Font_Control($wp_customize, 
         'control_typography_headline', array(
-            'label' => __('Headline Base Font', 'tikva'),
-            'description' => __('Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme.', 'tikva'),
+            'label' => __('Headline Base Font', 'azbalac'),
+            'description' => __('Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_headline',
-            /*'defaults' => array('font' => 17, // use numerical from Tikva_Custom_Font_List or Ggl font string
+            /*'defaults' => array('font' => 17, // use numerical from azbalac_Custom_Font_List or Ggl font string
             'size' => 16)*/
         )));
 
@@ -817,10 +833,10 @@ class Tikva_Customizer
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
         ));
 
-        $wp_customize->add_control(new Tikva_Custom_Font_Control($wp_customize, 
+        $wp_customize->add_control(new azbalac_Custom_Font_Control($wp_customize, 
         'control_typography_body', array(
-            'label' => __('Body Font', 'tikva'),
-            'description' => __('Set font of body content. Choose a size of 0 (zero) to use the default font size of the theme.', 'tikva'),
+            'label' => __('Body Font', 'azbalac'),
+            'description' => __('Set font of body content. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_body',
            
@@ -846,7 +862,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_posts_featured_date', array(
-            'label' => __('Show date and author of featured posts on homepage', 'tikva'),
+            'label' => __('Show date and author of featured posts on homepage', 'azbalac'),
             'section' => 'section_theme_options_posts',
             'settings' => 'setting_posts_featured_date',
             'type' => 'checkbox',
@@ -870,7 +886,7 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control('control_footer_activate', array(
-            'label' => __('Show footer', 'tikva'),
+            'label' => __('Show footer', 'azbalac'),
             'section' => 'section_theme_options_footer',
             'settings' => 'setting_footer_activate',
             'type' => 'checkbox',
@@ -889,9 +905,9 @@ class Tikva_Customizer
         }
 
 
-        $wp_customize->add_control(new Tikva_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
-            'label' => __('Footer Layout', 'tikva'),
-            'description' => __('Set layout of the footer.', 'tikva'),
+        $wp_customize->add_control(new azbalac_Custom_Radio_Image_Control($wp_customize, 'control_footer_layout', array(
+            'label' => __('Footer Layout', 'azbalac'),
+            'description' => __('Set layout of the footer.', 'azbalac'),
             'section' => 'section_theme_options_footer',
             'settings' => 'setting_footer_layout',
             'choices' => $footerLayouts
@@ -916,7 +932,7 @@ class Tikva_Customizer
          ));
  
          $wp_customize->add_control('control_subfooter_activate', array(
-             'label' => __('Show Subfooter', 'tikva'),
+             'label' => __('Show Subfooter', 'azbalac'),
              'section' => 'section_theme_options_subfooter',
              'settings' => 'setting_subfooter_activate',
              'type' => 'checkbox'
@@ -928,10 +944,10 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_fg', 
-            array('label' => __('Subfooter Foreground Color', 'tikva'),
+            array('label' => __('Subfooter Foreground Color', 'azbalac'),
             'section' => 'section_theme_options_subfooter',
             'settings' => 'setting_subfooter_color_fg',
-            'description' => __('Pick a foreground color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a foreground color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting(
@@ -940,10 +956,10 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_link', 
-            array('label' => __('Subfooter Link Color', 'tikva'),
+            array('label' => __('Subfooter Link Color', 'azbalac'),
             'section' => 'section_theme_options_subfooter',
             'settings' => 'setting_subfooter_color_link',
-            'description' => __('Pick a link color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+            'description' => __('Pick a link color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting(
@@ -952,20 +968,20 @@ class Tikva_Customizer
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_subfooter_color_bg',      
-            array('label' => __('Subfooter Background Color', 'tikva'),
+            array('label' => __('Subfooter Background Color', 'azbalac'),
             'section' => 'section_theme_options_subfooter',
         'settings' => 'setting_subfooter_color_bg',
-        'description' => __('Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        'description' => __('Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
 
         $wp_customize->add_setting('setting_subfooter_content', array(
-            'default' => __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Tikva by <a href="https://www.geschke.net">Ralf Geschke</a>.','tikva'),
+            'default' => __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac'),
             'sanitize_callback' => array($this->sanitizer, 'sanitizeHtml')
         ));
 
         $wp_customize->add_control('control_subfooter_content', array(
-            'label' => __('Subfooter content', 'tikva'),
+            'label' => __('Subfooter content', 'azbalac'),
             'type' => 'textarea',
             'section' => 'section_theme_options_subfooter',
             'settings' => 'setting_subfooter_content'
@@ -990,8 +1006,8 @@ class Tikva_Customizer
         ));
 
 
-        $wp_customize->add_control(new Tikva_Custom_Slider_Control($wp_customize, 'featured_articles_max', array(
-            'label' => __('Maximum number of featured articles on homepage', 'tikva'),
+        $wp_customize->add_control(new azbalac_Custom_Slider_Control($wp_customize, 'featured_articles_max', array(
+            'label' => __('Maximum number of featured articles on homepage', 'azbalac'),
             'section' => 'section_theme_options_home',
             'settings' => 'featured_articles_max',
             //'type' => 'slider',
@@ -1010,19 +1026,19 @@ class Tikva_Customizer
     public function addCustomizerHeaderImageSettings($wp_customize)
     {
 
-        $wp_customize->add_setting('header_image_example_tikva', array(
+        $wp_customize->add_setting('header_image_example_azbalac', array(
             'capability' => 'edit_theme_options',
             'default' => 1,
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
-        $wp_customize->add_control('header_image_example_tikva', array(
-            'settings' => 'header_image_example_tikva',
-            'label' => __('Use the example image from the theme if no default header image is set.', 'tikva'),
+        $wp_customize->add_control('header_image_example_azbalac', array(
+            'settings' => 'header_image_example_azbalac',
+            'label' => __('Use the example image from the theme if no default header image is set.', 'azbalac'),
             'section' => 'section_header_image_options',
             'type' => 'checkbox',
-            'description' => __('You can switch off this option, so no image will be displayed.', 'tikva'),
+            'description' => __('You can switch off this option, so no image will be displayed.', 'azbalac'),
         ));
 
 
@@ -1036,10 +1052,10 @@ class Tikva_Customizer
 
         $wp_customize->add_control('header_image_large_dontscale', array(
             'settings' => 'header_image_large_dontscale',
-            'label' => __('Do not resize automatically the default header image', 'tikva'),
+            'label' => __('Do not resize automatically the default header image', 'azbalac'),
             'section' => 'section_header_image_options',
             'type' => 'checkbox',
-            'description' => __('If checked, the default header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+            'description' => __('If checked, the default header image will <b>not</b> be resized to fit the width of the screen.', 'azbalac'),
         ));
 
 
@@ -1051,11 +1067,11 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'header_image_medium', array(
-            'label' => __('Header Image (medium screen)', 'tikva'),
+            'label' => __('Header Image (medium screen)', 'azbalac'),
             'section' => 'section_header_image_options',
             'settings' => 'header_image_medium',
             'mime_type' => 'image',
-            'description' => __('If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar.', 'tikva')
+            'description' => __('If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar.', 'azbalac')
         )));
 
         $wp_customize->add_setting('header_image_medium_dontscale', array(
@@ -1067,10 +1083,10 @@ class Tikva_Customizer
 
         $wp_customize->add_control('header_image_medium_dontscale', array(
             'settings' => 'header_image_medium_dontscale',
-            'label' => __('Do not resize automatically the medium screen header image', 'tikva'),
+            'label' => __('Do not resize automatically the medium screen header image', 'azbalac'),
             'section' => 'section_header_image_options',
             'type' => 'checkbox',
-            'description' => __('If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+            'description' => __('If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen.', 'azbalac'),
         ));
 
 
@@ -1082,11 +1098,11 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'header_image_small', array(
-            'label' => __('Header Image (small screen)', 'tikva'),
+            'label' => __('Header Image (small screen)', 'azbalac'),
             'section' => 'section_header_image_options',
             'settings' => 'header_image_small',
             'mime_type' => 'image',
-            'description' => __('If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva')
+            'description' => __('If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar.', 'azbalac')
         )));
 
         $wp_customize->add_setting('header_image_small_dontscale', array(
@@ -1098,10 +1114,10 @@ class Tikva_Customizer
 
         $wp_customize->add_control('header_image_small_dontscale', array(
             'settings' => 'header_image_small_dontscale',
-            'label' => __('Do not resize automatically the small screen header image', 'tikva'),
+            'label' => __('Do not resize automatically the small screen header image', 'azbalac'),
             'section' => 'section_header_image_options',
             'type' => 'checkbox',
-            'description' => __('If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+            'description' => __('If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen.', 'azbalac'),
         ));
 
 
@@ -1114,11 +1130,11 @@ class Tikva_Customizer
         ));
 
         $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'header_image_xsmall', array(
-            'label' => __('Header Image (extra small screen)', 'tikva'),
+            'label' => __('Header Image (extra small screen)', 'azbalac'),
             'section' => 'section_header_image_options',
             'settings' => 'header_image_xsmall',
             'mime_type' => 'image',
-            'description' => __('If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'tikva'),
+            'description' => __('If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar.', 'azbalac'),
         )));
 
         $wp_customize->add_setting('header_image_xsmall_dontscale', array(
@@ -1130,10 +1146,10 @@ class Tikva_Customizer
 
         $wp_customize->add_control('header_image_xsmall_dontscale', array(
             'settings' => 'header_image_xsmall_dontscale',
-            'label' => __('Do not resize automatically the extra small header image', 'tikva'),
+            'label' => __('Do not resize automatically the extra small header image', 'azbalac'),
             'section' => 'section_header_image_options',
             'type' => 'checkbox',
-            'description' => __('If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'tikva'),
+            'description' => __('If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen.', 'azbalac'),
         ));
     }
 
@@ -1155,7 +1171,7 @@ class Tikva_Customizer
         ));
  
         $wp_customize->add_control('control_introduction_area_activate', array(
-           'label' => __('Show Lead Section', 'tikva'),
+           'label' => __('Show Lead Section', 'azbalac'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_activate',
            'type' => 'checkbox',
@@ -1169,15 +1185,15 @@ class Tikva_Customizer
         ));
  
         $wp_customize->add_control('control_introduction_position', array(
-           'label' => __('Lead Position', 'tikva'),
+           'label' => __('Lead Position', 'azbalac'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_position',
            'type' => 'radio',
            'choices' => array(
-               '1' => __('Above navigation (if navbar position is not fixed)', 'tikva'),
-               '2' => __('Between navigation and featured articles', 'tikva'),
-               '3' => __('Between featured articles and content', 'tikva'),
-               '4' => __('Between content and footer', 'tikva'),
+               '1' => __('Above navigation (if navbar position is not fixed)', 'azbalac'),
+               '2' => __('Between navigation and featured articles', 'azbalac'),
+               '3' => __('Between featured articles and content', 'azbalac'),
+               '4' => __('Between content and footer', 'azbalac'),
            ),
         ));
  
@@ -1187,7 +1203,7 @@ class Tikva_Customizer
            'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_introduction_area_title', array(
-           'label' => __('Section Title', 'tikva'),
+           'label' => __('Section Title', 'azbalac'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_title')
         );
@@ -1197,7 +1213,7 @@ class Tikva_Customizer
            'sanitize_callback' => 'sanitize_text_field')
         );
         $wp_customize->add_control('control_introduction_area_subtitle', array(
-           'label' => __('Subtitle', 'tikva'),
+           'label' => __('Subtitle', 'azbalac'),
            'section' => 'section_theme_options_intro_options',
            'settings' => 'setting_introduction_area_subtitle')
         );
@@ -1206,10 +1222,10 @@ class Tikva_Customizer
         'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_introduction_area_color_bg', array(
-        'label' => __('Section Background Color', 'tikva'),
+        'label' => __('Section Background Color', 'azbalac'),
         'section' => 'section_theme_options_intro_options',
         'settings' => 'setting_introduction_area_color_bg',
-        'description' => __('Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet).', 'tikva'),)
+        'description' => __('Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
 
         $wp_customize->add_setting('setting_introduction_area_readmore', array(
@@ -1220,7 +1236,7 @@ class Tikva_Customizer
          ));
   
          $wp_customize->add_control('control_introduction_area_readmore', array(
-            'label' => __('Remove "Read more" Buttons', 'tikva'),
+            'label' => __('Remove "Read more" Buttons', 'azbalac'),
             'section' => 'section_theme_options_intro_options',
             'settings' => 'setting_introduction_area_readmore',
             'type' => 'checkbox',
@@ -1244,9 +1260,9 @@ class Tikva_Customizer
          'capability' => 'edit_theme_options'
         ));
 
-        $wp_customize->add_control( new Tikva_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
-        'label'   => esc_html__('Lead Section Content', 'tikva'),
-        'description' => esc_html__('Add as many elements as you want.','tikva'),
+        $wp_customize->add_control( new azbalac_Custom_Repeater_Control( $wp_customize, 'setting_introduction_area_elements', array(
+        'label'   => esc_html__('Lead Section Content', 'azbalac'),
+        'description' => esc_html__('Add as many elements as you want.','azbalac'),
        
         'section' => 'section_theme_options_intro_content',
     //'priority' => 100,
@@ -1254,80 +1270,80 @@ class Tikva_Customizer
         'fields' => array(
         'title' => array(
             'type'        => 'text',
-            'label'       => esc_attr__( 'Title', 'tikva' ),
-            //'description' => esc_attr__( 'This will be the label for your link', 'tikva' ),
-            'default'     => esc_attr__( 'Title', 'tikva' ),
+            'label'       => esc_attr__( 'Title', 'azbalac' ),
+            //'description' => esc_attr__( 'This will be the label for your link', 'azbalac' ),
+            'default'     => esc_attr__( 'Title', 'azbalac' ),
         ),
         /*'link_url' => array(
 			'type'        => 'text',
-			'label'       => esc_attr__( 'Link URL', 'tikva' ),
-			'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
+			'label'       => esc_attr__( 'Link URL', 'azbalac' ),
+			'description' => esc_attr__( 'This will be the link URL', 'azbalac' ),
 			'default'     => 'another default test for text',
         ),*/
         /*'color_fg' => array(
 			'type'        => 'colorpicker',
-			'label'       => esc_attr__( 'Foreground color', 'tikva' ),
-			'description' => esc_attr__( 'Description of foreground color', 'tikva' ),
+			'label'       => esc_attr__( 'Foreground color', 'azbalac' ),
+			'description' => esc_attr__( 'Description of foreground color', 'azbalac' ),
 			'default'     => '#554433',
         ),*/
         /*'color_bg' => array(
 			'type'        => 'colorpicker',
-			'label'       => esc_attr__( 'Background color', 'tikva' ),
-			'description' => esc_attr__( 'Description of background color', 'tikva' ),
+			'label'       => esc_attr__( 'Background color', 'azbalac' ),
+			'description' => esc_attr__( 'Description of background color', 'azbalac' ),
 			'default'     => '#000000',
         ),*/
         'content' => array(
             'type'        => 'textarea',
-            'label'       => esc_attr__( 'Text', 'tikva' ),
+            'label'       => esc_attr__( 'Text', 'azbalac' ),
             //'default'     => 'Default value in textarea',
         ),
         'icon' => array(
             'type'        => 'select',
-            'label'       =>  __('Select Font Awesome Icon or&hellip;', 'tikva'),
-            'description' => __('Select Icon or&hellip;', 'tikva'),
+            'label'       =>  __('Select Font Awesome Icon or&hellip;', 'azbalac'),
+            'description' => __('Select Icon or&hellip;', 'azbalac'),
             'choices' => $this->getFaIcons(),
             //'default' => 'fa-car'
         ),
         'image' => array(
             'type'        => 'image',
-            'label' => __('&hellip;use Image', 'tikva'),
+            'label' => __('&hellip;use Image', 'azbalac'),
             'mime_type' => 'image',
-            'description' => __('Use Image instead of Icon', 'tikva')
+            'description' => __('Use Image instead of Icon', 'azbalac')
         ),
 
         'page' => array(
             'type'        => 'dropdown-pages',
-            'label'       =>  __('Link to Page or&hellip;', 'tikva'),
-            'choices' => Tikva_Custom_Repeater_Helper::getPageDropdownOptions()
+            'label'       =>  __('Link to Page or&hellip;', 'azbalac'),
+            'choices' => azbalac_Custom_Repeater_Helper::getPageDropdownOptions()
         ),
         'post' => array(
             'type'        => 'dropdown-pages',
-            'label'       =>  __('Link to Post or&hellip;', 'tikva'),
-            'choices' => Tikva_Custom_Repeater_Helper::getPostDropdownOptions()
+            'label'       =>  __('Link to Post or&hellip;', 'azbalac'),
+            'choices' => azbalac_Custom_Repeater_Helper::getPostDropdownOptions()
         ),
         'url' => array(
             'type'        => 'text',
-            'label'       => esc_attr__( 'Link to any URL', 'tikva' ),
-            //'description' => esc_attr__( 'This will be the link URL', 'tikva' ),
+            'label'       => esc_attr__( 'Link to any URL', 'azbalac' ),
+            //'description' => esc_attr__( 'This will be the link URL', 'azbalac' ),
             //'default'     => 'another default test for text',
         ),
         'color_icon' => array(
             'type'        => 'colorpicker',
-            'label'       => esc_attr__( 'Icon Color', 'tikva' ),
-            //'description' => esc_attr__( 'Description of background color', 'tikva' ),
+            'label'       => esc_attr__( 'Icon Color', 'azbalac' ),
+            //'description' => esc_attr__( 'Description of background color', 'azbalac' ),
             //'default'     => '#000000',
         ),
 
         'image_shape' => array(
             'type'      => 'radiobutton',
-            'label' => __('Image Shape', 'tikva'),
-            'description' => __('Use image shape for uploaded image:', 'tikva'),
+            'label' => __('Image Shape', 'azbalac'),
+            'description' => __('Use image shape for uploaded image:', 'azbalac'),
             'default' => '2',
             'choices' => array(
-                '1' => __('Rounded Corners', 'tikva'),
-                '2' => __('Circle', 'tikva'),
-                '3' => __('Thumbnail', 'tikva'),
-                '4' => __('No Image Shape', 'tikva'),
+                '1' => __('Rounded Corners', 'azbalac'),
+                '2' => __('Circle', 'azbalac'),
+                '3' => __('Thumbnail', 'azbalac'),
+                '4' => __('No Image Shape', 'azbalac'),
                 
             ),
         ),
@@ -1336,18 +1352,18 @@ class Tikva_Customizer
 
         'setting_content_area_image' => array(
             'type'        => 'image',
-            'label' => __('&hellip;use image', 'tikva'),
+            'label' => __('&hellip;use image', 'azbalac'),
             'mime_type' => 'image',
-            'description' => __('Image displayed on section background', 'tikva')
+            'description' => __('Image displayed on section background', 'azbalac')
         ),
         
       
         ),
         'image_show' => array(
-            'label' => __('Show checkbox', 'tikva'),
+            'label' => __('Show checkbox', 'azbalac'),
             'type' => 'checkbox',
             //'default' => 'checked',
-            'description' => __('Check to activate!', 'tikva')
+            'description' => __('Check to activate!', 'azbalac')
         ),
         */
         )
@@ -1366,7 +1382,7 @@ class Tikva_Customizer
 
         $faIcons = $wp_filesystem->get_contents(get_template_directory() . '/css/font-awesome/fa-icons.txt');
         $lines = explode(PHP_EOL, $faIcons);
-        $icons[0] = __('Choose Icon', 'tikva');
+        $icons[0] = __('Choose Icon', 'azbalac');
         foreach ($lines as $line) {
             if ($line) {
                 $icons[$line] = $line;

@@ -1,0 +1,47 @@
+
+{% include 'header.html.twig' with {'content': header, 
+    'is_front_page': is_front_page } %}
+
+<div id="main" class="site-main">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-9 col-sm-8">
+
+	            <section id="primary" class="content-area">
+		            <div id="content" class="site-content" role="main">
+
+                        {% if have_posts %}
+
+                            <header class="archive-header">
+                                <h1 class="archive-title">{{ archive_title }}</h1>
+
+                                {% if term_description %}
+                                    <div class="taxonomy-description">{{ term_description }}</div>
+                                {% endif %}
+                            </header><!-- .archive-header -->
+                        
+                            {% for post in posts %}
+                                {% include 'content/content.html.twig' with {'content': post.data } %}
+                            {% endfor %}
+                            {{ paging_nav|raw }}
+                        {% else %}
+                            {% include 'content/content-none.html.twig' with {'content': no_posts } %}
+                        {% endif %}
+		            </div><!-- #content -->
+	            </section><!-- #primary -->
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                {% include 'sidebar/sidebar.html.twig' with {'content': sidebar } %}
+            </div>
+
+        </div>
+    
+    </div><!-- container -->
+</div><!-- #main -->     
+
+{% include 'footer.html.twig' with {'content': footer,
+    'is_front_page': is_front_page } %}

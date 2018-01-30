@@ -12,7 +12,7 @@ if (!class_exists('WP_Customize_Control'))
  * 
  * @link https://github.com/aristath/kirki
  */
-class Tikva_Custom_Slider_Control extends WP_Customize_Control
+class azbalac_Custom_Slider_Control extends WP_Customize_Control
 {
 
     public $type = 'slider';
@@ -88,7 +88,7 @@ class Tikva_Custom_Slider_Control extends WP_Customize_Control
  *
  * @link https://github.com/aristath/kirki
  */
-function tikva_customizer_custom_control_slider_css()
+function azbalac_customizer_custom_control_slider_css()
 {
     ?>
     <style>
@@ -237,4 +237,4 @@ function tikva_customizer_custom_control_slider_css()
     <?php
 }
 // maybe todo later some customizing, currently it is important to work
-//add_action('customize_controls_print_styles', 'tikva_customizer_custom_control_slider_css');
+//add_action('customize_controls_print_styles', 'azbalac_customizer_custom_control_slider_css');

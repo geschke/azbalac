@@ -3,28 +3,30 @@
 /**
  * Implements Subfooter functionality.
  *
- * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.3
+ * @package   Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Font 
+class Azbalac_Section_Font 
 {
 
+
     public static function buildStyles() 
+    {
+        echo self::getStyles();
+    
+    }
+
+    public static function getStyles()
     {
         $bodyFont = json_decode(urldecode(get_theme_mod('setting_typography_body')));
         $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);
         $cssBody = self::buildBodyCss($bodyFont);
-
-      
-        echo $cssBody;
-        echo $cssHeadline;
-       
-    
+        return $cssBody . $cssHeadline;
     }
 
     protected static function buildBodyCss($bodyFont)
@@ -144,13 +146,13 @@ class Tikva_Section_Font
         if ( isset($font) && is_object($font) && isset($font->font)) {
            
             if (intval($font->font) != 0) {
-                // font from list in Tikva_Custom_Font_List
-                $fontFamily = Tikva_Custom_Font_List::FONTS[$font->font];
+                // font from list in azbalac_Custom_Font_List
+                $fontFamily = Azbalac_Custom_Font_List::FONTS[$font->font];
 
             } elseif (intval($font->font == 0) && is_string($font->font) && strlen($font->font) > 1) {
                 // should be ggl font
                 // todo: optimize - it is not necessary to load google font array and to go through the loop
-                /*$gglfonts = $GLOBALS['tikvaGoogleFonts']; 
+                /*$gglfonts = $GLOBALS['azbalacGoogleFonts']; 
                 $fontData = null;
                 foreach ($gglfonts['items'] as $gglfont) {
                     if ($gglfont['family'] == $font->font) {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html {{ content.languageAttributes|raw }}>
+    <head>
+      <meta charset="{{ content.bloginfo.charset }}" />
+      <meta name="description" content="{{ content.bloginfo.description }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="{{ content.bloginfo.pingback_url }}">
+
+    {{ content.headerImageData|raw }}
+
+    {% if content.navbarFixed == 'fixed-top' and content.hasNavMenuHeaderMenu %}
+    
+            <style type="text/css">
+            /* Show it is fixed to the top */
+                body {
+                min-height: 75rem !important;
+                padding-top: 4.5rem !important;
+                }
+                body.admin-bar .navbar-fixed-top { 
+                    top: 28px !important; 
+                }
+
+                /* v4 notice above main navbar */
+                .v4-tease {
+                display: block;
+                padding: 15px 20px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                background-color: #0275d8;
+                }
+                .v4-tease:hover {
+                color: #fff;
+                text-decoration: none;
+                background-color: #0269c2;
+                }
+
+                
+            </style>
+            {% endif %}
+
+            {{ content.subfooterStyles|raw }}
+
+        {{ content.wpHead|raw }}    
+
+        {{ content.sectionFontStyles|raw }}
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+
+<body {{ content.bodyClass|raw }}>
+
+<div id="skip-link"><a href="#content" class="sr-only element-focusable">{{ content.skipToMainContent }}</a></div>
+
+
+{% if content.navbarFixed == 'default' %}
+
+
+    <div class="container">
+
+        <header class="masthead">
+            <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+            <h2 id="site-description">{{ content.subtitleDescription }}</h2>
+       
+            <div id="site-header">
+                <a href="{{ content.homeUrl }}" rel="home">
+                <img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
+                </a>
+            </div>
+{% endif %}
+
+
+{% if is_front_page %}
+    {% if content.showSlider.1 %}</header></div>{{ content.showSlider.1|raw }}<header class="masthead"><div class="container">{% endif %}
+    {% if content.showIntroductionElement.1 %}</header></div>{{ content.showIntroductionElements.1|raw }}<header class="masthead"><div class="container">{% endif %}
+{% endif %}
+
+<nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" role="navigation">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        {# <div id="navbar-header" class="navbar-header">
+                <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse">{{ content.toggleNavigation }}</a></div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">{{ content.toggleNavigation }}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                {% if content.navbarFixed == 'fixed-top' %}
+                    <div id="site-header-text"><a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
+                {% endif %}
+            </div> #}
+            <div class="navbar-collapse collapse" id="navbarSupportedContent"> 
+                <ul class="navbar-nav mr-auto">
+
+                    {{ content.wpNavMenu|raw }}
+                </ul>
+            </div><!--/.nav-collapse -->
+        
+            
+</nav> <!-- end navbar-->
+
+
+{% if content.navbarFixed == 'default' %}
+      </header>
+    </div> <!-- /container -->
+{% endif %}
+
+
+
+{% if is_front_page %}
+    {{ content.showIntroductionElements.2|raw }}
+{% endif %}
+
+

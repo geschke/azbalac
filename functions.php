@@ -1,7 +1,20 @@
 <?php
 
 
+/**
+ * Azbalac only works with PHP 7 and above.
+ */
+if (version_compare(phpversion(), '7.0.0', '<')) {
+	require get_template_directory() . '/inc/back-compat.php';
+	return;
+}
 
+
+require_once( get_template_directory() .'/vendor/autoload.php');
+require_once( get_template_directory() . '/inc/template/Template.php' );
+require_once( get_template_directory() . '/inc/template/DataContainer.php' );
+
+$t7tpl = new azbalac_Template();
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
@@ -29,6 +42,8 @@ require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSubfooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFont.php' );
 
+require_once( get_template_directory() . '/inc/Featured.php' );
+
 
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
@@ -41,20 +56,20 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 }
 
 
-if (! function_exists('tikva_admin_enqueue_scripts')) :
+if (! function_exists('azbalac_admin_enqueue_scripts')) :
     
-    function tikva_admin_enqueue_scripts() {
+    function azbalac_admin_enqueue_scripts() {
         // UPLOAD ENGINE
         wp_enqueue_media();
         wp_enqueue_style( 'wp-color-picker' );
-        wp_enqueue_style( 'tikva-admin-style', get_template_directory_uri() . '/css/admin.css' );
+        wp_enqueue_style( 'azbalac-admin-style', get_template_directory_uri() . '/css/admin.css' );
     }
 endif;
             
 
-if ( ! function_exists( 'tikva_setup' ) ) :
+if ( ! function_exists( 'azbalac_setup' ) ) :
     /**
-     * tikva theme setup.
+     * azbalac theme setup.
      *
      * Set up theme defaults and registers support for various WordPress features.
      *
@@ -62,23 +77,23 @@ if ( ! function_exists( 'tikva_setup' ) ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support post thumbnails.
      *
-     * @since tikva 0.1
+     * @since azbalac 0.1
      */
-    function tikva_setup() {
+    function azbalac_setup() {
 
         /*
-         * Make tikva theme available for translation.
+         * Make azbalac theme available for translation.
          *
          * Translations can be added to the /languages/ directory.
-         * If you're building a theme based on tikva, use a find and
-         * replace to change 'tikva' to the name of your theme in all
+         * If you're building a theme based on azbalac, use a find and
+         * replace to change 'azbalac' to the name of your theme in all
          * template files.
          */
 
-        load_theme_textdomain( 'tikva', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'azbalac', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
-        //add_editor_style( array( 'css/editor-style.css', tikva_font_url() ) );
+        //add_editor_style( array( 'css/editor-style.css', azbalac_font_url() ) );
 
         // Add RSS feed links to <head> for posts and comments.
         add_theme_support( 'automatic-feed-links' );
@@ -86,7 +101,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
         // Enable support for Post Thumbnails, and declare two sizes.
         add_theme_support('post-thumbnails');
         //set_post_thumbnail_size( 672, 372, true );
-        //add_image_size( 'tikva-full-width', 1038, 576, true );
+        //add_image_size( 'azbalac-full-width', 1038, 576, true );
 
         /*
          * Switch default core markup for search form, comment form, and comments
@@ -106,7 +121,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
 
         // This theme allows users to set a custom background.
-        //add_theme_support( 'custom-background', apply_filters( 'tikva_custom_background_args', array(
+        //add_theme_support( 'custom-background', apply_filters( 'azbalac_custom_background_args', array(
         //    'default-color' => 'f5f5f5',
         //) ) );
         add_theme_support( 'custom-background');
@@ -118,7 +133,7 @@ if ( ! function_exists( 'tikva_setup' ) ) :
             'flex-width'    => true,
         	'width'         => 1115,
 	        'flex-height'    => true,
-            'wp-head-callback'       => 'tikva_header_style',
+            'wp-head-callback'       => 'azbalac_header_style',
 
         );
        add_theme_support( 'custom-header', $headerDefaults );
@@ -128,33 +143,33 @@ if ( ! function_exists( 'tikva_setup' ) ) :
 
         add_theme_support( 'title-tag' );
 
-        add_action( 'admin_enqueue_scripts', 'tikva_admin_enqueue_scripts' );
+        add_action( 'admin_enqueue_scripts', 'azbalac_admin_enqueue_scripts' );
         
-        add_action( 'customize_register', 'tikva_register_customize_javascript_template_types' );
+        add_action( 'customize_register', 'azbalac_register_customize_javascript_template_types' );
         
 
         // Initialize Customizer after all custom controls are loaded
-        new Tikva_Customizer();
+        new azbalac_Customizer();
 
         // This theme uses its own gallery styles.
         //add_filter( 'use_default_gallery_style', '__return_false' );
     }
-endif; // tikva_setup
-add_action( 'after_setup_theme', 'tikva_setup' );
+endif; // azbalac_setup
+add_action( 'after_setup_theme', 'azbalac_setup' );
 
 /**
  * Make call to register_control_type to enable underscore JavaScript template integration
 */
-if (! function_exists('tikva_register_customize_javascript_template_types')) :
+if (! function_exists('azbalac_register_customize_javascript_template_types')) :
 
-    function tikva_register_customize_javascript_template_types($wp_customize)
+    function azbalac_register_customize_javascript_template_types($wp_customize)
     {
         // Load our custom control.
         //require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 
         // Register the control type.
-        $wp_customize->register_control_type( 'Tikva_Custom_Repeater_Control' );
-        $wp_customize->register_control_type( 'Tikva_Custom_Font_Control' );
+        $wp_customize->register_control_type( 'azbalac_Custom_Repeater_Control' );
+        $wp_customize->register_control_type( 'azbalac_Custom_Font_Control' );
     }
 
 endif;
@@ -164,17 +179,17 @@ endif;
 /**
  * Set up the content width value based on the theme's design.
  *
- * @see tikva_content_width()
+ * @see azbalac_content_width()
  *
- * @since tikva 0.1
+ * @since azbalac 0.1
  */
 if ( ! isset( $content_width ) ) {
     $content_width = 474;
 }
 
-if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
+if ( ! function_exists( 'azbalac_enqueue_font_awesome' ) ) :
 
-    function tikva_enqueue_font_awesome() 
+    function azbalac_enqueue_font_awesome() 
     {
 
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
@@ -184,9 +199,9 @@ if ( ! function_exists( 'tikva_enqueue_font_awesome' ) ) :
 endif;
 
 
-if ( ! function_exists( 'tikva_get_body_styles' ) ) :
+if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
 
-    function tikva_get_body_styles() 
+    function azbalac_get_body_styles() 
     {
     
         $colorBgSidebar = get_theme_mod('color_bg_sidebar');
@@ -212,12 +227,12 @@ if ( ! function_exists( 'tikva_get_body_styles' ) ) :
     }
 endif;
 
-function theme_tikva_widgets_init()
+function theme_azbalac_widgets_init()
 {
-    $bodyStyles = tikva_get_body_styles();
+    $bodyStyles = azbalac_get_body_styles();
 
     register_sidebar(array(
-        'name' => __("Sidebar 1", 'tikva'),
+        'name' => __("Sidebar 1", 'azbalac'),
         'id' => 'sidebar-1',
         'class' => '',
         'before_widget' => '<div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="well widget %2$s">',
@@ -228,7 +243,7 @@ function theme_tikva_widgets_init()
 
     for ($i = 1; $i <= 6; $i++) {
         register_sidebar(array(
-            'name' => sprintf(__("Footer Widget Area #%d", 'tikva'), $i),
+            'name' => sprintf(__("Footer Widget Area #%d", 'azbalac'), $i),
             'id' => sprintf("footer-sidebar-%d", $i),
             'description' => 'Appears in the footer area',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -241,88 +256,86 @@ function theme_tikva_widgets_init()
 
 if ( function_exists('register_sidebar') ) {
 
-    add_action( 'widgets_init', 'theme_tikva_widgets_init' );
+    add_action( 'widgets_init', 'theme_azbalac_widgets_init' );
  
 }
 
 
-function tikva_comment_fields($fields) {
+function azbalac_comment_fields($fields) {
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
-    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','tikva' ) . '</label> ' .
+    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','azbalac' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'tikva' ) . '</label> ' .
+    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'azbalac' ) . '</label> ' .
         '<div class="col-sm-10"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>';
 
-    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'tikva' ) . '</label>' .
+    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'azbalac' ) . '</label>' .
         '<div class="col-sm-10"><input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>';
 
     return $fields;
 }
 
 // see above...
-add_filter('comment_form_default_fields','tikva_comment_fields');
+add_filter('comment_form_default_fields','azbalac_comment_fields');
 
 
 
-if ( ! function_exists( 'tikva_categorized_blog' ) ) :
+if ( ! function_exists( 'azbalac_categorized_blog' ) ) :
 
-    function tikva_categorized_blog() {
+    function azbalac_categorized_blog() {
         return true;
     }
 endif;
 
-if ( ! function_exists( 'tikva_get_search_form' ) ) :
+if ( ! function_exists( 'azbalac_get_search_form' ) ) :
 
-function tikva_get_search_form() {
+function azbalac_get_search_form() {
 
     $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','tikva' ) . '</label>
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','tikva' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
+    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" />
     </div>
-    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'tikva') ) .'" />
+    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
     </div>
     </form>';
     return $form;
 }
 endif;
 
-add_filter( 'get_search_form', 'tikva_get_search_form' );
+add_filter( 'get_search_form', 'azbalac_get_search_form' );
 
 
 /**
  * Enqueue scripts and styles for the front end.
  *
- * @since tikva 0.1
+ * @since azbalac 0.1
  *
  * @return void
  */
-function tikva_scripts() {
+function azbalac_scripts() {
     // Add Lato font, used in the main stylesheet.
-    //wp_enqueue_style( 'tikva-lato', tikva_font_url(), array(), null );
+    //wp_enqueue_style( 'azbalac-lato', azbalac_font_url(), array(), null );
 
     // Add Genericons font, used in the main stylesheet.
     //wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2' );
 
     // Load our main stylesheet.
-    wp_enqueue_style( 'tikva-style', get_stylesheet_uri(), array());
+    wp_enqueue_style( 'azbalac-style', get_stylesheet_uri(), array());
 
     // Load the Internet Explorer specific stylesheet.
-   // wp_enqueue_script( 'tikva-ie', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'); //get_template_directory_uri() . '/css/ie.css',
-        // array( 'tikva-style', 'genericons' ), '20131205' );
-    //wp_st_add_data( 'tikva-ie', 'conditional', 'lt IE 9' );
+   // wp_enqueue_script( 'azbalac-ie', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'); //get_template_directory_uri() . '/css/ie.css',
+        // array( 'azbalac-style', 'genericons' ), '20131205' );
+    //wp_st_add_data( 'azbalac-ie', 'conditional', 'lt IE 9' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7', true );
-
     /*if ( is_singular() && wp_attachment_is_image() ) {
-        wp_enqueue_script( 'tikva-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
+        wp_enqueue_script( 'azbalac-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
     }*/
 
     /*if ( is_active_sidebar( 'sidebar-3' ) ) {
@@ -330,21 +343,30 @@ function tikva_scripts() {
     }*/
 
     /*if ( is_front_page() && 'slider' == get_theme_mod( 'featured_content_layout' ) ) {
-        wp_enqueue_script( 'tikva-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
-        wp_localize_script( 'tikva-slider', 'featuredSliderDefaults', array(
-            'prevText' => __( 'Previous', 'tikva' ),
-            'nextText' => __( 'Next', 'tikva' )
+        wp_enqueue_script( 'azbalac-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '20131205', true );
+        wp_localize_script( 'azbalac-slider', 'featuredSliderDefaults', array(
+            'prevText' => __( 'Previous', 'azbalac' ),
+            'nextText' => __( 'Next', 'azbalac' )
         ) );
     }*/
 
-    wp_enqueue_script( 'tikva-script', get_template_directory_uri() . '/js/functions.js',
-        array( 'jquery' ), '20160410', true );
+    //wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2017121801', true );
+    wp_enqueue_script( 'azbalac-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.js', array(), '3.2.1', false );
+    
+    wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
+        array(  ), '2017121802', true );
+
+        wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );
+        
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '4.0.0', true );
+        
+
 }
 
 
-function tikva_bootstrap_styles()
+function azbalac_bootstrap_styles()
 {
-    $stylesheetData = get_option('tikva_stylesheet');
+    $stylesheetData = get_option('azbalac_stylesheet');
    
     if ($stylesheetData)
     {
@@ -371,12 +393,12 @@ function tikva_bootstrap_styles()
 
 }
 
-add_action( 'wp_enqueue_scripts', 'tikva_bootstrap_styles' );
-add_action( 'wp_enqueue_scripts', 'tikva_scripts' );
-add_action( 'wp_enqueue_scripts', 'tikva_enqueue_font_awesome' );
+add_action( 'wp_enqueue_scripts', 'azbalac_bootstrap_styles' );
+add_action( 'wp_enqueue_scripts', 'azbalac_scripts' );
+add_action( 'wp_enqueue_scripts', 'azbalac_enqueue_font_awesome' );
 
-add_action( 'wp_enqueue_scripts',  array('Tikva_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
-add_action( 'wp_enqueue_scripts', array('Tikva_Section_Slider','addSliderStyle') );
+add_action( 'wp_enqueue_scripts',  array('azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
+add_action( 'wp_enqueue_scripts', array('azbalac_Section_Slider','addSliderStyle') );
 
 
 /**
@@ -385,13 +407,13 @@ add_action( 'wp_enqueue_scripts', array('Tikva_Section_Slider','addSliderStyle')
  * in head of document, based on current view.
  * in head of document, based on current view.
  *
- * @since Tikva 0.1.4
+ * @since Azbalac 0.1.4
  *
  * @param string $title Default title text for current view.
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function tikva_wp_title( $title, $sep ) {
+function azbalac_wp_title( $title, $sep ) {
         global $paged, $page;
 
         if ( is_feed() ) {
@@ -409,68 +431,68 @@ function tikva_wp_title( $title, $sep ) {
 
         // Add a page number if necessary.
         if ( $paged >= 2 || $page >= 2 ) {
-                $title = "$title $sep " . sprintf( __( 'Page %s', 'tikva' ), max( $paged, $page ) );
+                $title = "$title $sep " . sprintf( __( 'Page %s', 'azbalac' ), max( $paged, $page ) );
         }
 
         return $title;
 }
-add_filter( 'wp_title', 'tikva_wp_title', 10, 2 );
+add_filter( 'wp_title', 'azbalac_wp_title', 10, 2 );
 
 
 
 function add_class_the_tags($html){
-    $html = str_replace('<a','<a class="btn btn-info btn-xs"',$html);
+    $html = str_replace('<a','<a class="badge badge-info"',$html);
     return $html;
 }
 add_filter('the_tags','add_class_the_tags',10,1);
 
-function register_tikva_menus() {
-    register_nav_menus(array('header-menu' => __( 'Header Menu', 'tikva' ),));
+function register_azbalac_menus() {
+    register_nav_menus(array('header-menu' => __( 'Header Menu', 'azbalac' ),));
 }
-add_action( 'init', 'register_tikva_menus' );
+add_action( 'init', 'register_azbalac_menus' );
 
 
 /**
  * A helper conditional function that returns a boolean value.
  *
- * @since tikva 0.1
+ * @since azbalac 0.1
  *
  * @return bool Whether there are featured posts.
  */
-function tikva_has_featured_posts() {
-    return !is_paged() && (bool) tikva_get_featured_posts();
+function azbalac_has_featured_posts() {
+    return !is_paged() && (bool) azbalac_get_featured_posts();
 }
 
 /**
  * Getter function for Featured Content Plugin.
  *
- * @since tikva 0.1
+ * @since azbalac 0.1
  *
  * @return array An array of WP_Post objects.
  */
-function tikva_get_featured_posts() {
+function azbalac_get_featured_posts() {
     /**
-     * Filter the featured posts to return in Tikva.
+     * Filter the featured posts to return in azbalac.
      *
-     * @since tikva 0.1
+     * @since azbalac 0.1
      *
      * @param array|bool $posts Array of featured posts, otherwise false.
      */
-    return apply_filters( 'tikva_get_featured_posts', array() );
+    return apply_filters( 'azbalac_get_featured_posts', array() );
 }
 
 
 
 add_theme_support( 'featured-content', array(
-    'featured_content_filter' => 'tikva_get_featured_posts',
+    'featured_content_filter' => 'azbalac_get_featured_posts',
     'max_posts' => 4,
 ) );
 
-if ( ! function_exists( 'tikva_get_layout' ) ) :
+if ( ! function_exists( 'azbalac_get_layout' ) ) :
 
-    function tikva_get_layout() {
+    function azbalac_get_layout() {
     
-        $layoutData = get_option('tikva_layout');
+        $layoutData = get_option('azbalac_layout');
     
         if (!isset($layoutData) || !$layoutData) {
             $layoutData = 2; // default: content left, sidebar right
@@ -479,21 +501,21 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
-                $styleCol_1 = 'col-md-12 col-sm-12';
-                $styleCol_2 = 'col-md-12 col-sm-12';
+                $styleCol_1 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
+                $styleCol_2 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
                 break;
             case 3:
                 $columns = 2;
                 $content = 2; // main content right
-                $styleCol_1 = 'col-md-9 col-sm-8';
-                $styleCol_2 = 'col-md-3 col-sm-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
                 break;
             case 2:
             default:
                 $columns = 2;
                 $content = 1; // main content left
-                $styleCol_1 = 'col-md-9 col-sm-8';
-                $styleCol_2 = 'col-md-3 col-sm-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
                 break;
         }
         return array('columns' => $columns,
@@ -503,9 +525,9 @@ if ( ! function_exists( 'tikva_get_layout' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
+if ( ! function_exists( 'azbalac_get_navbar_layout' ) ) :
     
-    function tikva_get_navbar_layout() {
+    function azbalac_get_navbar_layout() {
     
          $navbarData = get_option('navbar_fixed');
         
@@ -519,19 +541,19 @@ if ( ! function_exists( 'tikva_get_navbar_layout' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'tikva_get_header_styles' ) ) :
+if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
 
-    function tikva_get_header_styles($navbarFixed) {
+    function azbalac_get_header_styles($navbarFixed) {
          
-        $navbarData = get_option('navbar_style_inverse');
+        $navbarData = get_option('navbar_style');
     
         $navbarStyleClass = '';
 
-        if ($navbarData == 'inverse') {
-            $navbarStyleClass .= ' navbar-inverse';
+        if ($navbarData == 'dark') {
+            $navbarStyleClass .= ' navbar-dark bg-dark';
         }
-        else {
-            $navbarStyleClass .= ' navbar-default';
+        else { // light
+            $navbarStyleClass .= ' navbar-light bg-light';
         }
 
         if ($navbarFixed == 'fixed-top') {
@@ -568,9 +590,9 @@ if ( ! function_exists( 'tikva_get_header_styles' ) ) :
 endif;
 
 
-if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
+if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
 
-    function tikva_get_header_image_data() {
+    function azbalac_get_header_image_data() {
         
         $imageData = array();
 
@@ -583,9 +605,9 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
                 'thumbnail' => $largeImage->thumbnail_url,
                 'id' => $largeImage->attachment_id); 
         }
-        elseif (get_option('header_image_example_tikva')) {
+        elseif (get_option('header_image_example_azbalac')) {
             // fallback to example image if not overwritten or switched off
-            $imageData[0] = array('url' => get_template_directory_uri() . '/images/tikva_default_header_image.jpg',
+            $imageData[0] = array('url' => get_template_directory_uri() . '/images/azbalac_default_header_image.jpg',
                 'height' => 213,
                 'width' => 1115,
                 'thumbnail' => '', // not used here
@@ -664,23 +686,23 @@ if ( ! function_exists( 'tikva_get_header_image_data' ) ) :
        
        
 
-        return '<script type="text/javascript">var tikvaHeaderImage = ' . json_encode($imageData) . '</script>';
+        return '<script type="text/javascript">var azbalacHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;
 
 
 
-if ( ! function_exists( 'tikva_header_style' ) ) :
+if ( ! function_exists( 'azbalac_header_style' ) ) :
 /**
  * Styles the header text displayed on the site.
  *
- * Create your own tikva_header_style() function to override in a child theme.
+ * Create your own azbalac_header_style() function to override in a child theme.
  *
- * @since Tikva 0.2
+ * @since Azbalac 0.2
  *
  * @see twentysixteen_custom_header_and_background().
  */
-function tikva_header_style() {
+function azbalac_header_style() {
 	// If the header text option is untouched, let's bail.
 	if ( display_header_text() ) {
 		return;
@@ -688,7 +710,7 @@ function tikva_header_style() {
 
 	// If the header text has been hidden.
 	?>
-	<style type="text/css" id="tikva-header-css">
+	<style type="text/css" id="azbalac-header-css">
 
 		#site-header-text, #site-description {
                     display: none;
@@ -696,28 +718,28 @@ function tikva_header_style() {
 	</style>
 	<?php
 }
-endif; // tikva_header_style
+endif; // azbalac_header_style
 
 
 
 /*
-if ( ! function_exists('tikva_admin_notice')) :
+if ( ! function_exists('azbalac_admin_notice')) :
 
-function tikva_admin_notice() {
+function azbalac_admin_notice() {
   ?>
-  <div class="updated notice tikva-admin-notice is-dismissible">
-      <p><?php _e( 'Demo of admin notice...', 'tikva' ); ?></p>
+  <div class="updated notice azbalac-admin-notice is-dismissible">
+      <p><?php _e( 'Demo of admin notice...', 'azbalac' ); ?></p>
   </div>
   <?php
 }
-endif; // tikva_admin_notice
+endif; // azbalac_admin_notice
 */
 
 
-function tikva_excerpt_more( $more ) {
-    return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'tikva' ), get_the_title())  . '</a></p>';
+function azbalac_excerpt_more( $more ) {
+    return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'azbalac' ), get_the_title())  . '</a></p>';
 }
-add_filter( 'excerpt_more', 'tikva_excerpt_more' );
+add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
 
 /*
  * Add Featured Content functionality.
@@ -730,9 +752,9 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 }
 
 if (is_admin()) {
-    $tikvaGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
+    $azbalacGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
     
-    $tikvaFontRequest = new Tikva_Custom_Font_Request();
+    $azbalacFontRequest = new azbalac_Custom_Font_Request();
     
 }
 

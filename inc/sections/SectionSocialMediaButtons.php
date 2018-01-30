@@ -5,30 +5,42 @@
  * The code was previously included in the main functions.php file.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @subpackage Azbalac
+ * @since Azbalac 0.5.0
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Social_Media_Buttons
+class Azbalac_Section_Social_Media_Buttons
 {
 
 
     public static function showButtons($position)
     {
-        if (!get_option('setting_social_media_activate')) {
+        $output = self::getButtons($position);
+        if (null === $output) {
             return null;
         }
-        $positionOption = absint(get_option('setting_social_media_position'));
+        echo $output;
+    }
+
+
+    public static function getButtons($position)
+    {
+      
+        if (!get_option('setting_social_media_activate',false)) {
+            return null;
+        }
+        $positionOption = absint(get_option('setting_social_media_position',2));
         if ($positionOption != $position) {
             return null;
         }
-        self::build();
+      
+        return self::buildButtons();
     }
 
-    public static function build()
+    public static function buildButtons()
     {
-      
+        $output = '';
         $socialButtons = array('social_media_facebook' => 'facebook',
         'social_media_github' => 'github',
         'social_media_google' => 'google-plus',
@@ -50,29 +62,26 @@ class Tikva_Section_Social_Media_Buttons
             default:
                 $align = 'center';
         }
-        $buttonSize = get_option('setting_social_button_size');
-        $buttonType = get_option('setting_social_button_type');
-?>
-    
-<div class="row">
+        $buttonSize = get_option('setting_social_button_size','2');
+        $buttonType = get_option('setting_social_button_type','1');
+        $output .= '    
+
 <div class="container">
 <div class="col-md-12 social-media-buttons"> 
-    <div style="text-align: <?php echo $align; ?>;">
+    <div style="text-align: ' . $align . '">';
         
-        
-        <?php
         $socialOutput = '';
         foreach ($socialButtons as $socialOption => $socialIcon) {
             $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType);
         }
-        echo $socialOutput;
-        ?>
-    </div>
+        $output .= $socialOutput;
+        $output .= '
+        </div>
 </div>
-</div>
-</div>
-    <?php
-    }
+</div>';
+
+    return $output;
+}
 
 
     protected static function buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType)
@@ -97,6 +106,7 @@ class Tikva_Section_Social_Media_Buttons
         $styleBg = '';
         
         $output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="fa fa-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
+     
         return $output;
     }
 
@@ -107,7 +117,7 @@ class Tikva_Section_Social_Media_Buttons
     public static function addSocialButtonStyle()
     {
         wp_enqueue_style(
-            'tikva-default-style',
+            'azbalac-default-style',
             get_template_directory_uri() . '/css/default.css'
         );
          
@@ -138,6 +148,6 @@ class Tikva_Section_Social_Media_Buttons
         }
         
        
-        wp_add_inline_style( 'tikva-default-style', $css );
+        wp_add_inline_style( 'azbalac-default-style', $css );
     }
 }

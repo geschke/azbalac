@@ -5,187 +5,83 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  */
-?><!DOCTYPE html>
-<html  <?php language_attributes(); ?>>
-    <head>
-      <meta charset="<?php bloginfo( 'charset' ); ?>" />
-      <meta name="description" content="<?php bloginfo( 'description' ); ?>">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php
-
-echo tikva_get_header_image_data();
-
-$layoutStyle = tikva_get_layout();
-
-$bodyStyles = tikva_get_body_styles();
-
-$navbarFixed = tikva_get_navbar_layout();
-
-        if ($navbarFixed == 'fixed-top' && has_nav_menu('header-menu')) {
-            ?>
-            <style type="text/css">
-                body {
-                    padding-top: 70px !important;
-                }
-                body.admin-bar .navbar-fixed-top { top: 28px !important; }
-                
-                
-                
-/* v4 notice above main navbar */
-.v4-tease {
-  display: block;
-  padding: 15px 20px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  background-color: #0275d8;
-}
-.v4-tease:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #0269c2;
-}
-
-                
-            </style>
-        <?php
-        }
-
-        Tikva_Section_Subfooter::buildStyles();
-        
-       ?>
-
-        <?php 
-        wp_head(); 
-        
-        /* Unfortunately there is no conditional JavaScript solution as it exists for stylesheets.
-        */
-        Tikva_Section_Font::buildStyles();
-        ?>
-        
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-</head>
 
 
-    <body <?php body_class(); ?>>
-    <div id="skip-link"><a href="#content" class="sr-only element-focusable"><?php _e( 'Skip to main content', 'tikva' ); ?></a></div>
-<?php
+$content = [];
 
-$headerStyles = tikva_get_header_styles($navbarFixed);
-?>
+$content['languageAttributes'] = get_language_attributes();
 
-<?php
-$description = get_bloginfo( 'name', 'display' );
-$subtitleDescription = get_bloginfo( 'description', 'display' );
-/*if ($navbarFixed != 'fixed-top') {
-    $description .= ' ' . get_bloginfo( 'description', 'display' );
-}*/ // todo: don't concat in this way, it is the subtitle!
+$content['bloginfo']['charset'] = get_bloginfo('charset');
+$content['bloginfo']['description'] = get_bloginfo('description');
+$content['bloginfo']['pingback_url'] = get_bloginfo('pingback_url');
 
-?>
-<?php if ($navbarFixed == 'default') {
+$content['headerImageData'] = azbalac_get_header_image_data();
 
-?>
-      
-    <div id="header" role="banner" style="background-color: <?php echo $headerStyles['headerStyleColorBg']; ?>; <?php echo $headerStyles['headerStyleColorFg'];  ?>">
+$content['layoutStyle'] = azbalac_get_layout();
 
-<div class="container">
-    
-    <div class="masthead col-md-12 col-sm-12">
-        <h1 id="site-header-text"><a class="header-url" style="<?php echo $headerStyles['headerStyleColorFg'];  ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></h1>
-        <h2 id="site-description"><?php echo esc_html($subtitleDescription); ?></h2>
-         <div id="site-header">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img id="site-header-image" src="<?php header_image(); ?>" width="1" height="1" data-width="<?php echo get_custom_header()->width; ?>" data-height="<?php echo get_custom_header()->height; ?>" alt="<?php _e( 'Header Image - navigate to homepage', 'tikva' ); ?>">
-                </a>
-            </div>
-      <?php
-    
-    
-?>
-    </div>
- </div>
-<?php }
+$content['bodyStyles'] = azbalac_get_body_styles();
 
-if ( is_front_page()) {
-    Tikva_Section_Slider::showSlider(1);
-}
-if ( is_front_page()) {
-    Tikva_Section_Content_Column::showIntroductionElements(1);
-}
+$content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top or default
 
-if ($navbarFixed == 'default') {
-?>
-<div class="container">
-<?php
-}
+$content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
+
+
+
+$content['subfooterStyles'] = azbalac_Section_Subfooter::getStyles();
+
+ob_start();
+wp_head(); 
+$content['wpHead'] = ob_get_clean();
+
 if (has_nav_menu('header-menu')) {
-?>
-    <!-- Fixed navbar -->
-    <div class="navbar <?php echo $headerStyles['navbarStyleClass']; ?>" role="navigation">
-        <?php if ($navbarFixed == 'fixed-top') {
-        ?><div class="container">
-         <?php } ?>   <div id="navbar-header" class="navbar-header">
-                <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse"><?php _e( 'Toggle navigation', 'tikva' ); ?></a></div>
+    
 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only"><?php _e( 'Toggle navigation', 'tikva' ); ?></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+    $content['wpNavMenu'] = wp_nav_menu( array( 
+    'theme_location' => 'header-menu',
+                    'items_wrap' => '%3$s',
+                'container' => '',
+                'menu_class'     => 'nav navbar-nav',
+                'walker' => new HeaderMenuWalker(),
+                'echo' => false
+                ) );
 
-                <?php if ($navbarFixed == 'fixed-top') { ?>
-                <div id="site-header-text"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $description ); ?></a></div>
-                <?php } ?>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <?php
-                    wp_nav_menu( array( 'theme_location' => 'header-menu',
-                        'items_wrap' => '%3$s',
-                    'container' => '',
-                    'menu_class'     => 'nav navbar-nav',
-                    'walker' => new HeaderMenuWalker()
-                    ) );
-
-                    ?>
-
-
-                </ul>
-            </div><!--/.nav-collapse -->
-
-            <?php
-            if ($navbarFixed == 'fixed-top') {
-            ?></div>
-            <?php } ?>
-    </div> <!-- end navbar-->
-
-<?php
 }
-else
-{ ?>
-  <p>&nbsp;</p>
-<?php }
 
-if ($navbarFixed == 'default') {
-    ?>
-</div> <!-- container -->
-    </div> <!-- header in default navbar -->
 
-<?php }
+$content['sectionFontStyles'] = azbalac_Section_Font::getStyles();
+
+$content['bodyClass'] = 'class="' . join( ' ', get_body_class( $class ) ) . '"';
+
+$content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
+
+$content['headerStyles'] = azbalac_get_header_styles($navbarFixed);
+
+$content['description'] = get_bloginfo( 'name', 'display' ); // no raw
+$content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // no raw
+
+$content['homeUrl'] = home_url( '/' ); // no raw
+
+$content['headerImage'] = get_header_image(); // no raw
+
+$content['customHeader'] = get_custom_header();
+
+$content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac' );
 
 if ( is_front_page()) {
-    Tikva_Section_Content_Column::showIntroductionElements(2);
+    
+    $content['showSlider']['1'] = azbalac_Section_Slider::getSlider(1);
+
+    $content['showIntroductionElements']['1'] = azbalac_Section_Content_Column::getIntroductionElements(1);
+    $content['showIntroductionElements']['2'] = azbalac_Section_Content_Column::getIntroductionElements(2);
+
 }
 
+$content['toggleNavigation'] = __( 'Toggle navigation', 'azbalac' );
+          
 
-?>
+$azbalacContainer = azbalac_DataContainer::getInstance();
+
+$azbalacContainer->headerData = $content;
+
       
 

@@ -1,0 +1,48 @@
+
+
+
+{% if not content.postPasswordRequired %}
+
+    <div id="comments" class="comments-area">
+
+        {% if content.haveComments %}
+
+            <h2 class="comments-title">
+                
+                {{ content.commentsTitle|raw }}
+            </h2>
+
+            {% if content.getCommentPagesCount > 1 and content.optionPageComments %}
+
+                <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+                    <h2 class="screen-reader-text">{{ content.commentNavigation }}</h2>
+                    <div class="nav-previous">{{ content.navPrevious }}</div>
+                    <div class="nav-next">{{ content.navNext }}</div>
+                </nav><!-- #comment-nav-above -->
+            {% endif %}
+
+            <ol class="comment-list">
+                {{ content.commentList|raw }}
+            </ol><!-- .comment-list -->
+
+            {% if content.getCommentPagesCount > 1 and content.optionPageComments %}
+            
+                <nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+                    <h1 class="screen-reader-text">{{ content.commentNavigation }}</h1>
+                    <div class="nav-previous">{{ content.navPrevious }}</div>
+                    <div class="nav-next">{{ content.navNext }}</div>
+                </nav><!-- #comment-nav-below -->
+            {% endif %}
+
+            {% if not content.commentsOpen %}
+            
+            <p class="no-comments">{{ content.commentsClosed }}</p>
+            {% endif %}
+
+        {% endif %}
+        
+        {{ content.commentForm|raw }}
+
+    </div><!-- #comments -->
+
+{% endif %}

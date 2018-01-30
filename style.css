@@ -1,14 +1,14 @@
 /*
-Theme Name: Tikva
-Theme URI: https://www.kuerbis.org/tikva/
+Theme Name: azbalac
+Theme URI: https://www.kuerbis.org/azbalac/
 Author: Ralf Geschke
 Author URI: https://www.geschke.net
-Description: Tikva - A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
-Version: 0.5.5
+Description: azbalac - A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, sticky-post, flexible-header, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
-Text Domain: tikva
+Text Domain: azbalac
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -150,8 +150,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     text-decoration: none !important;
 }
 
-/* multilevel dropdown menu, taken from http://bootsnipp.com/snippets/featured/multi-level-dropdown-menu-bs3
-*/
+/*
+ * Multilevel Dropdown for Bootstrap 4 
+ * see https://codepen.io/svnt/pen/beEgre
+ */ 
+/*
 .dropdown-submenu {
     position: relative;
 }
@@ -199,7 +202,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
+*/
+/************************/
 
+
+/* Bootstrap 4 Responsive Navbar with Multi level Dropdowns
+  https://github.com/bootstrapthemesco/bootstrap-4-multi-dropdown-navbar
+*/
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(64, 64, 64);
+}
+.btco-menu li > a {
+    padding: 10px 15px;
+    color: #000;
+
+}
+
+.btco-menu .active a:focus,
+.btco-menu li a:focus ,
+.navbar > .show > a:focus{
+    background: transparent;
+    outline: 0;
+}
+
+
+.dropdown-menu .show > .dropdown-toggle::after{
+    transform: rotate(-90deg);
+}
+
+/***************************/
 
 
 .theme-dropdown .dropdown-menu {

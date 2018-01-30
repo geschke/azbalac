@@ -1,0 +1,16 @@
+
+<div id="secondary">
+
+{% if content.hasNavMenuSecondary %}
+	<nav role="navigation" class="navigation site-navigation secondary-navigation">
+    {{ content.wpNavMenu|raw }}
+	</nav>
+	
+    {% endif %}
+
+    {% if content.isActiveSidebar.sidebar_1 %}
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+        {{ content.sidebar_1|raw }}
+	</div><!-- #primary-sidebar -->
+	{% endif %}
+</div><!-- #secondary -->

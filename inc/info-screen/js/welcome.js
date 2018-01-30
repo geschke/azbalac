@@ -3,12 +3,12 @@
 
     $(function () {
 
-        $('body').on('click', '.tikva-admin-notice .notice-dismiss', function () {
+        $('body').on('click', '.azbalac-admin-notice .notice-dismiss', function () {
             
             $.ajax({
                 url: ajaxurl,
                 data: {
-                    action: 'tikva_dismiss_welcome_notice'
+                    action: 'azbalac_dismiss_welcome_notice'
                 },
                 success: function (data) {
                     //console.log("success");

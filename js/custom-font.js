@@ -5,24 +5,24 @@
 /**
  * Customizer Control: JavaScript part of font control
  *
- * @package     Tikva Controls
+ * @package     Azbalac Controls
  * @subpackage  Controls
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
- * @since       2.0
+ * @since       0.5.3
  */
 
 (function ($) {
 
    
-wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
+wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
 
 
     ready: function() {
         var control = this;
        
         this.container.on( 'event_font_updated', function() {
-            var dataField = $(control.container).find('.tikva_font_collector');
+            var dataField = $(control.container).find('.azbalac_font_collector');
             var settingData = dataField.val();
             
             control.setting.set( settingData );
@@ -57,7 +57,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
                 var fontSelected = $(selectField).parents('.customize-control-font-element').find('.customize-font-input-select').attr('data-default-selected');
 
                 var requestData = {
-                    action: "tikva_get_font_data_action",
+                    action: "azbalac_get_font_data_action",
                     searchfont: fontSelected
                 };
                 $.ajax({
@@ -116,7 +116,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
      */
     updateCurrentDataField: function(elementData) {
         var control = this;
-        var dataField = $(control.container).find('.tikva_font_collector');
+        var dataField = $(control.container).find('.azbalac_font_collector');
         var dataFieldId = dataField.attr('id');
 
         $(control.container).find('#' + dataFieldId).val( encodeURI( JSON.stringify( elementData ) ));
@@ -146,7 +146,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
             elementData['gglfont'] = true;
             
             var requestData = {
-                action: "tikva_get_font_data_action",
+                action: "azbalac_get_font_data_action",
                 searchfont: newValue
             };
      
@@ -203,7 +203,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         var variant = element.val();
 
         var requestData = {
-            action: "tikva_get_font_data_action",
+            action: "azbalac_get_font_data_action",
             searchfont: elementData['font']
         };
  
@@ -261,7 +261,7 @@ wp.customize.controlConstructor.tikva_font = wp.customize.Control.extend( {
         var element = $(this.container).find('.customize-control-font-element');
 
         var elementId = element.attr('id');
-        var prevValue = $(control.container).find('.tikva_font_collector').val();
+        var prevValue = $(control.container).find('.azbalac_font_collector').val();
      
         if (prevValue != '') {
             elementData = JSON.parse(decodeURI(prevValue));

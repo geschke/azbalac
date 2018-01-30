@@ -1,12 +1,19 @@
-# Tikva
+# Azbalac
 
 ## A pure and basic WordPress theme, based on Bootstrap 3.0 framework.
 
-Version 0.5.5
+### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
+
+Version 0.1
 
 
 ## Version history:
 
+Version 0.1
+
+- This version is derived from the release 0.5.5 of Azbalac WordPress theme. It does not add any functionality.
+
+## Version history of Azbalac template:
 
 Version 0.5.5
 
@@ -48,7 +55,7 @@ Version 0.5.0
 - Fixed color setting of social media buttons
 - Fix: Don't show subtitle if title and subtitle disabled
 - Added live preview of some color settings
-- Created a new custom control element: Tikva_Custom_Repeater_Control. It is used to add a flexible number of elements in the introduction section. Currently it supports the following field types: text, textarea, radiobuttons, checkboxes, image, colorpicker, selections
+- Created a new custom control element: Azbalac_Custom_Repeater_Control. It is used to add a flexible number of elements in the introduction section. Currently it supports the following field types: text, textarea, radiobuttons, checkboxes, image, colorpicker, selections
 
 
 Version 0.4.6
@@ -215,5 +222,5 @@ Version 0.1:
 
 ## License:
 
-Tikva is licensed under the General Public License (GPL) v2 or later,
+azbalac is licensed under the General Public License (GPL) v2 or later,
 see http://opensource.org/licenses/GPL-2.0

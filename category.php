@@ -4,78 +4,78 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Tikva
- * @since Tikva 0.1
+ * @package Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  */
 
-get_header(); ?>
 
+$azbalacContainer = azbalac_DataContainer::getInstance();
 
-<div id="main" class="site-main">
-
-<div class="container">
-
-
-<div class="row">
-
-    <div class="col-md-9 col-sm-8">
-
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<?php if ( have_posts() ) : ?>
-
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'tikva' ), single_cat_title( '', false ) ); ?></h1>
-
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .archive-header -->
-
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					tikva_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-    </div>
-
-    <div class="col-md-3 col-sm-4">
-<?php
-    get_sidebar( 'content' );
-    get_sidebar();
-?>
-    </div>
-
-</div>
+get_header(); 
+$header = $azbalacContainer->headerData;
 
 
 
-</div><!-- #main -->
-</div><!-- container -->     
-<?php
+$layoutStyle = azbalac_get_layout();
+
+get_sidebar();
+$sidebar = $azbalacContainer->contentSidebar;
+
+
+
+$azbalacContainer = azbalac_DataContainer::getInstance();
+
+if ( have_posts() ) {
+	$azbalac_have_posts = true;
+	
+	$archive_title = sprintf( __( 'Category Archives: %s', 'azbalac' ), single_cat_title( '', false ) );
+
+	$term_description = term_description();
+
+	while ( have_posts() ) {
+		
+		ob_start();
+		the_post(); 
+	
+		get_template_part( 'content',  get_post_format() );
+
+		$azbalac_posts_content  = ob_get_contents();
+        $azbalac_posts_data = $azbalacContainer->content;
+        $azbalac_posts[] = ['content' => $azbalac_posts_content, 'data' => $azbalac_posts_data];
+        ob_end_clean();
+
+	}
+	// Previous/next post navigation.
+	ob_start();
+	azbalac_paging_nav();
+	$azbalac_paging_nav = ob_get_contents();
+	ob_end_clean();
+} else {
+	$azbalac_have_posts = false;
+	
+	// If no content, include the "No posts found" template.
+	get_template_part( 'content', 'none' );
+
+    $azbalac_no_posts =  $azbalacContainer->contentNone;
+	
+}
+	
+
 get_footer();
+$azbalac_footer = $azbalacContainer->footerData;
+
+
+
+echo $t7tpl->render('category.html.twig', array('header' => $header,
+'layout_style' => $layoutStyle,
+'sidebar' => $sidebar,
+'have_posts' => $azbalac_have_posts,
+'posts' => $azbalac_posts,
+'no_posts' => $azbalac_no_posts,
+'paging_nav' => $azbalac_paging_nav,
+'footer' => $azbalac_footer,
+'archive_title' => $archive_title,
+'term_description' => $term_description
+));            
+

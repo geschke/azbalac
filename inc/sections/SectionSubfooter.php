@@ -4,69 +4,76 @@
  * Implements Subfooter functionality.
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.5.0
+ * @subpackage Azbalac
+ * @since Azbalac 0.5.0
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Section_Subfooter
+class Azbalac_Section_Subfooter
 {
 
-    public static function buildStyles() 
+    public static function buildStyles()
     {
+        echo self::getStyles();
+    }
+
+    public static function getStyles() 
+    {
+        $output = '';
         $footerActivate =  get_option('setting_subfooter_activate',1);
         if (intval($footerActivate) !== 1) {
           return '';
         }
         $colorLink = get_theme_mod('setting_subfooter_color_link');
         
-        ?>
-        <style type="text/css">
+        $output .= '<style type="text/css">
          .subfooter a, .subfooter a:hover {
-            color: <?php echo $colorLink; ?> ;
+            color: ' . $colorLink .';
         }
 
-        </style>
-        <?php
-        
+        </style>';
+        return $output;        
     }
     
     /**
      * Add Custom SubFooter Content 
      */
-    public static function build()
+    public static function buildContent()
     {
-        
+        echo self::getContent();
+    }
+
+    public static function getContent()
+    {
+        $output = '';        
         $footerActivate =  get_option('setting_subfooter_activate',1);
-       
+      
         if (intval($footerActivate) !== 1) {
           return '';
         }
         $content = get_theme_mod('setting_subfooter_content');
         if ($content === false) {
             // no value in database, so the option is not overwritten, use default
-            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Tikva by <a href="https://www.geschke.net">Ralf Geschke</a>.','tikva');
+            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
         }
         if (!$content) {
             return; // no output
         }
-        $styles = self::getStyles();
-               ?>
-<div class="subfooter" style="<?php echo $styles['styleColorBg']; echo $styles['styleColorFg']; ?>">
-<div class="container">
+        $styles = self::getStyleData();
+        
+        $output .= '<div class="subfooter" style="' . $styles['styleColorBg'] . $styles['styleColorFg'] . '">
+        <div class="container">
 
     <footer id="colophonsub" class="site-footer" role="contentinfo">
-    <div class="site-info">
-        <?php echo $content; ?>
-        </div><!-- .site-info -->
+    <div class="site-info">' . $content . '</div><!-- .site-info -->
     </footer><!-- #colophonsub -->
 
 </div>
-</div>
-        <?php 
+</div>';
+        return $output;
     }
 
-    public static function getStyles()
+    public static function getStyleData()
     {
         $colorBg = get_theme_mod('setting_subfooter_color_bg');
 

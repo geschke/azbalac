@@ -4,67 +4,53 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package WordPress
- * @subpackage tikva
- * @since tikva 0.1
+ * @package Azbalac
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
  */
 
+$content = [];
 /*
  * If the current post is protected by a password and the visitor has not yet
  * entered the password we will return early without loading the comments.
  */
-if ( post_password_required() ) {
-	return;
-}
-?>
 
-<div id="comments" class="comments-area">
+if ( ! post_password_required() ) {
+	$content['postPasswordRequired'] = false;
 
-	<?php if ( have_comments() ) : ?>
+	if ( have_comments() ) {
+		$content['haveComments'] = true;
 
-	<h2 class="comments-title">
-		<?php
-			printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'tikva' ),
-				number_format_i18n( get_comments_number() ), get_the_title() );
-		?>
-	</h2>
+		$content['commentsTitle'] = sprintf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'azbalac' ), number_format_i18n( get_comments_number() ), get_the_title() );
+		
+		$content['getCommentPagesCount'] = get_comment_pages_count();
+		$content['optionPageComments'] = get_option('page_comments');
+		
+		if ( $content['getCommentPagesCount'] > 1 && $content['optionPageComments'] ) {
+			$content['commentNavigation'] = __( 'Comment navigation', 'azbalac' ); 
+			$content['navPrevious'] = get_previous_comments_link( __( '&larr; Older Comments', 'azbalac' ) );
+			$content['navNext'] = get_next_comments_link( __( 'Newer Comments &rarr;', 'azbalac' ) );
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'tikva' ); ?></h2>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tikva' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tikva' ) ); ?></div>
-	</nav><!-- #comment-nav-above -->
-	<?php endif; // Check for comment navigation. ?>
+		}
 
-	<ol class="comment-list">
-		<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-				'avatar_size'=> 34,
-			) );
-		?>
-	</ol><!-- .comment-list -->
+		$content['commentList'] = wp_list_comments( array( 'style'      => 'ol',
+															'short_ping' => true,
+															'avatar_size'=> 34,
+															'echo' => false
+														) );
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tikva' ); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tikva' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tikva' ) ); ?></div>
-	</nav><!-- #comment-nav-below -->
-	<?php endif; // Check for comment navigation. ?>
+		$content['commentsOpen'] = comments_open();
+		if ( ! comments_open() ) {
 
-	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments"><?php _e( 'Comments are closed.', 'tikva' ); ?></p>
-	<?php endif; ?>
+			$content['commentsClosed'] = __( 'Comments are closed.', 'azbalac' );
+		}
 
-	<?php endif; // have_comments() ?>
+	}
 
-	<?php
-    $formArgs = array('comment_field'        => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'tikva' ) . '</label>' .
+	
+    $formArgs = ['comment_field' => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'azbalac' ) . '</label>' .
         '<div class="col-sm-10"><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div>',
-    );
+	];
 
     ob_start();
     comment_form($formArgs);
@@ -74,7 +60,10 @@ if ( post_password_required() ) {
     $commentForm = str_replace('<code>','<pre>', $commentForm);
     $commentForm = str_replace('</code>','</pre>', $commentForm);
 
-    echo $commentForm;
-    ?>
+	$content['commentForm'] = $commentForm;
+    
 
-</div><!-- #comments -->
+}
+
+$azbalacContainer = azbalac_DataContainer::getInstance();
+$azbalacContainer->commentData = $content;

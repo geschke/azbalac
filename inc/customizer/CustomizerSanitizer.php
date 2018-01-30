@@ -5,12 +5,12 @@
  *
  *
  * @package   WordPress
- * @subpackage tikva
- * @since tikva 0.4
+ * @subpackage azbalac
+ * @since azbalac 0.4
  * @copyright Copyright (c) 2016, Ralf Geschke.
  * @license   GPL2+
  */
-class Tikva_Customizer_Sanitizer
+class azbalac_Customizer_Sanitizer
 {
 
     public function sanitizeCheckbox($input)
@@ -105,12 +105,12 @@ class Tikva_Customizer_Sanitizer
         return $input;
     }
     
-    public function sanitizeNavbarStyleInverse($input)
+    public function sanitizeNavbarStyle($input)
     {
-        if ($input == 'inverse') {
+        if ($input == 'dark') {
             return $input;
         }
-        return 'default';
+        return 'light';
     }
 
     public function sanitizeNavbarFixed($input)
@@ -123,7 +123,7 @@ class Tikva_Customizer_Sanitizer
 
     public function sanitizeStylesheet($input)
     {
-        $stylesheets = Tikva_Customizer::getAvailableStylesheets();
+        $stylesheets = azbalac_Customizer::getAvailableStylesheets();
         if (!in_array($input, $stylesheets)) {
             return 'slate_accessibility_ready.min.css';
         }

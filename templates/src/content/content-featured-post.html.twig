@@ -1,0 +1,32 @@
+
+
+<div class="col-lg-{{ post.themeCols }} col-md-{{ post.themeCols }} col-sm-{{ post.themeCols }}">
+
+<article id="post-{{ post.theId }}" {{ post.postClass }}>
+
+
+        {% if post.has_post_thumbnail %}
+        <a class="post-thumbnail" href="{{ post.permalink }}">{{ post.thumbnail }}</a>
+      {% endif %}
+
+
+	<header class="entry-header">
+
+        <h2 class="entry-title"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+
+
+        {% if post.setting_posts_featured_date %}
+            {% if post.postType == 'post' %}
+                {{ post.postedOn|raw }}&nbsp;
+            {% endif %}
+
+            {{ post.editPostLink|raw }}
+        
+        {% endif %}
+
+        {{ post.content|raw }}
+         
+	</header><!-- .entry-header -->
+</article><!-- #post-## -->
+
+    </div>

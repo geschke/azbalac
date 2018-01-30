@@ -71,7 +71,7 @@
             var sizeJumbotronHeading = Math.ceil(sizeBase * 4.5).toString() + 'px';
             var sizeSubtitle = Math.floor(sizeBase * 1.5).toString() + 'px';
 
-            $('h1').not(".tikva-jumbotron").css('font-size', sizeH1);
+            $('h1').not(".azbalac-jumbotron").css('font-size', sizeH1);
             $('.jumbotron h1').css('font-size', sizeJumbotronHeading);
             $('h2').css('font-size', sizeH2);
             $('h3').css('font-size', sizeH3);
@@ -113,12 +113,12 @@
 
             } else { // default font
                 var requestData = {
-                    action: "tikva_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action"
                 }
     
                 $.ajax({
                     type: "POST",
-                    url: tikvaAjax.ajaxurl,
+                    url: azbalacAjax.ajaxurl,
          
                     dataType: "json",
                     data: requestData,
@@ -192,12 +192,12 @@
             } else { // default font
                 
                 var requestData = {
-                    action: "tikva_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action"
                 }
     
                 $.ajax({
                     type: "POST",
-                    url: tikvaAjax.ajaxurl,
+                    url: azbalacAjax.ajaxurl,
          
                     dataType: "json",
                     data: requestData,

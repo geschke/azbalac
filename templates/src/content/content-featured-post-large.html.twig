@@ -1,0 +1,29 @@
+<div class="jumbotron">
+    <div class="container">
+        <article id="post-{{ post.theId }}" {{ post.postClass }}>
+
+                <h1 class="entry-title azbalac-jumbotron"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h1>
+        
+                {% if post.setting_posts_featured_date %}
+
+                    {% if post.postType == 'post' %}
+                    {{ post.postedOn|raw }}&nbsp;
+                    {% endif %}
+
+                    {{ post.editPostLink|raw }}
+
+                {% endif %}
+                
+                {% if post.has_post_thumbnail %}
+                  <a class="post-thumbnail" href="{{ post.permalink }}">{{ post.thumbnail }}</a>
+                {% endif %}
+
+            <p></p>
+            {{ post.content|raw }}
+            
+    </article>
+    </div>
+</div>
+
+
+

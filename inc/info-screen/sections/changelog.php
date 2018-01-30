@@ -2,14 +2,14 @@
 /**
  * Changelog
  */
-$Tikva = wp_get_theme('Tikva');
+$azbalac = wp_get_theme('azbalac');
 ?>
 
-<div role="tabpanel" class="tab-pane fade" id="tikva-tab-changelog">
+<div role="tabpanel" class="tab-pane fade" id="azbalac-tab-changelog">
 
 <?php
 
-function tikva_show_changelog()
+function azbalac_show_changelog()
 {
     WP_Filesystem();
     global $wp_filesystem;
@@ -32,7 +32,7 @@ function tikva_show_changelog()
     }
 }
 
-tikva_show_changelog();
+azbalac_show_changelog();
 ?>
 
 </div>

@@ -66,9 +66,25 @@
     <div class="container">
 
         <header class="masthead">
-            <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-            <h2 id="site-description">{{ content.subtitleDescription }}</h2>
-       
+            <div>
+                <div class="row align-items-center{% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
+                    
+                    <div class="col-auto {% if content.customLogoPosition == 3 %} order-12{% endif %}">
+                        {% if content.customLogo %}<a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>{% endif %}
+                    </div>
+                 
+                    <div  class="col-auto ">
+                            {% if content.displayHeaderText %}
+                        <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+                        <h2 id="site-description">{{ content.subtitleDescription }}</h2>
+                        {% else %}
+                        &nbsp;
+                        {% endif %}
+                    </div>
+                  
+                </div>
+                
+            </div>
             <div id="site-header">
                 <a href="{{ content.homeUrl }}" rel="home">
                 <img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">

@@ -138,6 +138,13 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
         );
        add_theme_support( 'custom-header', $headerDefaults );
 
+        // Add theme support for Custom Logo.
+        add_theme_support( 'custom-logo', array(
+            'width'       => 250,
+            'height'      => 250,
+            'flex-width'  => true,
+        ) );
+
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style( 'css/editor-style.css' );
 
@@ -149,7 +156,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
         
 
         // Initialize Customizer after all custom controls are loaded
-        new azbalac_Customizer();
+        new Azbalac_Customizer();
 
         // This theme uses its own gallery styles.
         //add_filter( 'use_default_gallery_style', '__return_false' );

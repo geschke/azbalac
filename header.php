@@ -26,6 +26,17 @@ $content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top or default
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 
 
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+if ( has_custom_logo() ) {
+    $content['customLogo'] = $logo[0];
+//        echo '<img src="'. esc_url( $logo[0] ) .'">';
+} 
+
+$content['customLogoPosition'] = get_option('setting_general_logo_position', 1);
+
+$content['displayHeaderText'] = display_header_text();
+
 
 $content['subfooterStyles'] = Azbalac_Section_Subfooter::getStyles();
 
@@ -50,11 +61,11 @@ if (has_nav_menu('header-menu')) {
 
 $content['sectionFontStyles'] = Azbalac_Section_Font::getStyles();
 
-$content['bodyClass'] = 'class="' . join( ' ', get_body_class( $class ) ) . '"';
+$content['bodyClass'] = 'class="' . join( ' ', get_body_class( ) ) . '"';
 
 $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 
-$content['headerStyles'] = azbalac_get_header_styles($navbarFixed);
+$content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
 $content['description'] = get_bloginfo( 'name', 'display' ); // no raw
 $content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // no raw

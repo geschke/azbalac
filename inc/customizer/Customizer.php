@@ -6,9 +6,9 @@
  * Add custom sections and settings to the Customizer.
  *
  * @package   WordPress
- * @subpackage azbalac
- * @since azbalac 0.4
- * @copyright Copyright (c) 2016, Ralf Geschke.
+ * @subpackage Azbalac
+ * @since Azbalac 0.1
+ * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
 class Azbalac_Customizer
@@ -18,7 +18,7 @@ class Azbalac_Customizer
      * azbalac_Customizer constructor.
      *
      * @access public
-     * @since  azbalac 0.4
+     * @since  Azbalac 0.1
      * @return void
      */
     public function __construct()
@@ -797,6 +797,26 @@ class Azbalac_Customizer
                 'dark' => __('Dark', 'azbalac'),
             ),
         ));
+
+        $wp_customize->add_setting('setting_general_logo_position', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeLogoPosition')
+        ));
+
+        $wp_customize->add_control('control_general_logo_position', array(
+            'label' => __('Custom Logo Position', 'azbalac'),
+            'section' => 'section_theme_options_general',
+            'settings' => 'setting_general_logo_position',
+            'type' => 'radio',
+            'choices' => array(
+                1 => __('Left', 'azbalac'),
+                2 => __('Center', 'azbalac'),
+                3 => __('Right', 'azbalac'),
+            ),
+        ));
+
 
         // todo: choose background color of navbar, maybe with presets bg-* colors
     }

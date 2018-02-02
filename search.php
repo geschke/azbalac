@@ -30,6 +30,7 @@ $sidebar = $azbalacContainer->contentSidebar;
 $title_search_results = '';
 if ( have_posts() ) {
     $azbalac_have_posts = true;
+    $azbalac_no_posts = null;
  
     $title_search_results = sprintf( __( 'Search Results for: %s', 'azbalac' ), get_search_query() ); 
     // Start the Loop.

@@ -121,6 +121,12 @@ class Azbalac_Customizer_Sanitizer
         return 'default';
     }
 
+    public function sanitizeLogoPosition($input)
+    {
+        // default == 1 == left
+        return $this->sanitizeRange($input, 1, 1, 3);
+    }
+
     public function sanitizeStylesheet($input)
     {
         $stylesheets = Azbalac_Customizer::getAvailableStylesheets();

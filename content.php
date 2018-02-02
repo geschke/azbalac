@@ -91,6 +91,7 @@ $categories = get_the_category();
 $separator = ' ';
 $content['output'] = '';
 
+$catOutput = '';
 if($categories) {
     $content['output'] .= '<div><span class="fa fa-th-list"></span> ';
         $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'azbalac' );

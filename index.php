@@ -43,9 +43,9 @@ $layoutStyle = azbalac_get_layout();
 get_sidebar();
 $sidebar = $azbalacContainer->contentSidebar;
 
-
 if ( have_posts() ) {
     $azbalac_have_posts = true;
+    $azbalac_no_posts = null;
  
     
     // Start the Loop.
@@ -88,7 +88,6 @@ echo $t7tpl->render('index.html.twig', array('header' => $header,
 'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
 'show_slider' => $showSlider,
-'template_part_featured_content' => $template_part_featured_content,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,

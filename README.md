@@ -222,5 +222,5 @@ Version 0.1:
 
 ## License:
 
-azbalac is licensed under the General Public License (GPL) v2 or later,
+Azbalac is licensed under the General Public License (GPL) v2 or later,
 see http://opensource.org/licenses/GPL-2.0

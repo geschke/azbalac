@@ -35,9 +35,9 @@ $sidebar = $azbalacContainer->contentSidebar;
 
 
 
-
 if ( have_posts() ) {
     $azbalac_have_posts = true;
+    $azbalac_no_posts = null;
  
     
     // Start the Loop.
@@ -85,7 +85,6 @@ echo $t7tpl->render('page.html.twig', array('header' => $header,
 'featured' => $featuredPosts,
 'show_slider_2' => $showSlider_2,
 'show_slider_3' => $showSlider_3,
-'template_part_featured_content' => $template_part_featured_content,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,

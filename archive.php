@@ -32,6 +32,7 @@ $sidebar = $azbalacContainer->contentSidebar;
 
 $page_title = '';
 if ( have_posts() ) {
+	$azbalac_no_posts = null;
 
 	if ( is_day() ) {
 		$page_title = sprintf( __( 'Daily Archives: %s', 'azbalac' ), get_the_date() );

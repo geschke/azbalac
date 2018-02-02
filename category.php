@@ -28,6 +28,7 @@ $azbalacContainer = Azbalac_DataContainer::getInstance();
 
 if ( have_posts() ) {
 	$azbalac_have_posts = true;
+	$azbalac_no_posts = null;
 	
 	$archive_title = sprintf( __( 'Category Archives: %s', 'azbalac' ), single_cat_title( '', false ) );
 

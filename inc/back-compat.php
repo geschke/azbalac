@@ -49,7 +49,7 @@ function azbalac_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function azbalac_customize() {
-	wp_die( sprintf( __( 'Azbalac requires at least PHP version 7.0.0. You are running version %s. Please upgrade and try again.', 'twentyseventeen' ), phpversion() ), '', array(
+	wp_die( sprintf( __( 'Azbalac requires at least PHP version 7.0.0. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() ), '', array(
 		'back_link' => true,
 	) );
 }

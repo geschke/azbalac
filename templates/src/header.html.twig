@@ -99,7 +99,7 @@
     {% if content.showIntroductionElement.1 %}</header></div>{{ content.showIntroductionElements.1|raw }}<header class="masthead"><div class="container">{% endif %}
 {% endif %}
 
-<nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" role="navigation">
+<nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

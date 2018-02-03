@@ -113,6 +113,19 @@ class Azbalac_Customizer_Sanitizer
         return 'light';
     }
 
+    public function sanitizeNavbarBg($input)
+    {
+        $colors = ['bg-primary','bg-secondary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info', 'bg-light', 
+            'bg-dark', 'bg-white'];
+
+        if (!in_array($input, $colors)) {
+                return 'default';
+            }
+        return $input;
+    }
+
+
+
     public function sanitizeNavbarFixed($input)
     {
         if ($input == 'fixed-top') {
@@ -198,6 +211,8 @@ class Azbalac_Customizer_Sanitizer
         return json_encode($input_decoded);
         
     }
+
+
 
 
     public function sanitizeFont($input)

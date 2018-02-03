@@ -798,6 +798,44 @@ class Azbalac_Customizer
             ),
         ));
 
+        $wp_customize->add_setting('setting_general_navbar_bg', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarBg')
+        ));
+
+        $wp_customize->add_control('control_general_navbar_bg', array(
+            'label' => __('Navigation Background Color', 'azbalac'),
+            'section' => 'section_theme_options_general',
+            'settings' => 'setting_general_navbar_bg',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'bg-primary' => __('bg-primary', 'azbalac'),
+                'bg-secondary' => __('bg-secondary', 'azbalac'),
+                'bg-success' => __('bg-success', 'azbalac'),
+                'bg-danger' => __('bg-danger', 'azbalac'),
+                'bg-warning' => __('bg-warning', 'azbalac'),
+                'bg-info' => __('bg-info', 'azbalac'),
+                'bg-light' => __('bg-light', 'azbalac'),
+                'bg-dark' => __('bg-dark', 'azbalac'),
+                'bg-white' => __('bg-white', 'azbalac'),
+            ),
+        ));
+
+        $wp_customize->add_setting(
+            'setting_general_navbar_bg_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_general_navbar_bg_custom', 
+            array('label' => __('Custom Navigation Background Color', 'azbalac'),
+            'section' => 'section_theme_options_general',
+            'settings' => 'setting_general_navbar_bg_custom',
+            'description' => __('This is optional. If color is set here, the previous option will be overwritten. To disable this option, set to transparent color.', 'azbalac'),)
+        ));
+
         $wp_customize->add_setting('setting_general_logo_position', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -817,8 +855,6 @@ class Azbalac_Customizer
             ),
         ));
 
-
-        // todo: choose background color of navbar, maybe with presets bg-* colors
     }
 
 

@@ -552,15 +552,26 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
 
     function azbalac_get_header_styles($navbarFixed) {
          
-        $navbarData = get_option('navbar_style');
+        $navbarData = get_option('navbar_style', 'light');
     
         $navbarStyleClass = '';
 
         if ($navbarData == 'dark') {
-            $navbarStyleClass .= ' navbar-dark bg-dark';
+            $navbarStyleClass .= ' navbar-dark';
         }
         else { // light
-            $navbarStyleClass .= ' navbar-light bg-light';
+            $navbarStyleClass .= ' navbar-light';
+        }
+
+        $navbarBgData = get_option('setting_general_navbar_bg','default');
+        $navbarBgCustomData = get_theme_mod('setting_general_navbar_bg_custom','');
+        if (!$navbarBgCustomData) { // don't add bg-* setting to navbar class definition if custom background is set
+            if ($navbarBgData == 'default') {
+                $navbarBgSetting = 'bg-' . $navbarData;
+            } else {
+                $navbarBgSetting = $navbarBgData;
+            }
+            $navbarStyleClass .= ' ' . $navbarBgSetting;
         }
 
         if ($navbarFixed == 'fixed-top') {
@@ -590,6 +601,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
         }
 
         return array('navbarStyleClass' => $navbarStyleClass,
+            'navbarBgCustom' => $navbarBgCustomData,
             'headerStyleColorBg' => $headerStyleColorBg,
             'headerStyleColorFg' => $headerStyleColorFg
         );

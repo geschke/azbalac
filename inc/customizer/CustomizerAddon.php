@@ -21,9 +21,10 @@ class Azbalac_Customizer_Addon
 
     public function initPreview()
     {
-        $this->customizer->get_setting( 'blogname' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'header_textcolor' )->transport = 'postMessage';
+        // todo: activate again, bit it should work as expected
+        //$this->customizer->get_setting( 'blogname' )->transport = 'postMessage';
+        //$this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
+        //$this->customizer->get_setting( 'header_textcolor' )->transport = 'postMessage';
         
         $this->customizer->get_setting( 'color_bg_header' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_fg_footer' )->transport = 'postMessage';

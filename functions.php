@@ -133,7 +133,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
             'flex-width'    => true,
         	'width'         => 1115,
 	        'flex-height'    => true,
-            'wp-head-callback'       => 'azbalac_header_style',
+            //'wp-head-callback'       => 'azbalac_header_style',
 
         );
        add_theme_support( 'custom-header', $headerDefaults );
@@ -711,7 +711,9 @@ if ( ! function_exists( 'azbalac_header_style' ) ) :
  * @see twentysixteen_custom_header_and_background().
  */
 function azbalac_header_style() {
-	// If the header text option is untouched, let's bail.
+    // If the header text option is untouched, let's bail.
+    var_dump(display_header_text());
+
 	if ( display_header_text() ) {
 		return;
 	}

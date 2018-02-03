@@ -13,6 +13,9 @@ get_header();
 $header = $azbalacContainer->headerData;
 
 $showSlider_2 = '';
+$showSlider_3 = '';
+$introElements_3 = '';
+
 if ( is_front_page() ) {
     $showSlider_2 = Azbalac_Section_Slider::getSlider(2);
     $showSlider_3 = Azbalac_Section_Slider::getSlider(3);

@@ -2,27 +2,28 @@
 
 (function ($) {
 
+    // todo later
     // Realtime view of site name
-    wp.customize('blogname', function (value) {
+    /*wp.customize('blogname', function (value) {
         value.bind(function (to) {
             $('#site-header-text a').text(to);
         });
     });
-
+*/
     // Realtime view of description
-    wp.customize('blogdescription', function (value) {
+/*    wp.customize('blogdescription', function (value) {
         value.bind(function (to) {
             $('#site-description').text(to);
         });
     });
-
-    wp.customize('header_textcolor', function (value) {
+*/
+/*    wp.customize('header_textcolor', function (value) {
         value.bind(function (col) {
             $('#header').css('color', col);
             $('.header-url').css('color', col);
         });
     });
-
+*/
 
     wp.customize('color_bg_header', function (value) {
         value.bind(function (col) {

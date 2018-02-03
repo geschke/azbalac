@@ -69,11 +69,12 @@
             <div>
                 <div class="row align-items-center{% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
                     
+                    {% if content.customLogo %}
                     <div class="col-auto {% if content.customLogoPosition == 3 %} order-12{% endif %}">
-                        {% if content.customLogo %}<a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>{% endif %}
+                        <a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>
                     </div>
-                 
-                    <div  class="col-auto ">
+                    {% endif %}
+                    <div class="col-auto ">
                             {% if content.displayHeaderText %}
                         <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
                         <h2 id="site-description">{{ content.subtitleDescription }}</h2>
@@ -113,10 +114,15 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                {% if content.navbarFixed == 'fixed-top' %}
-                    <div id="site-header-text"><a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
+                #}
+                {% if content.navbarFixed == 'fixed-top' and content.displayHeaderText %}
+                    <div id="site-header-text">
+                            {% if content.customLogo %}
+                            <a href="{{ content.homeUrl }}"><img style="width: 30px; height: auto;" src="{{ content.customLogo }}"/></a>
+                        {% endif %}
+                        <a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
                 {% endif %}
-            </div> #}
+            
             <div class="navbar-collapse collapse" id="navbarSupportedContent"> 
                 <ul class="navbar-nav mr-auto">
 

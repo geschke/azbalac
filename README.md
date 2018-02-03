@@ -4,12 +4,16 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.1
+Version 0.2
 
 
 ## Version history:
 
-Version 0.1
+Version 0.2
+
+- New feature: Custom Logo with positioning in header. According to the theme guidelines the custom logo function has beed added. A custom logo is an image which can be uploaded from "Appearance > Header" in the admin panel. The logo can be positioned in the general theme settings to be displayed at the left or right side. Additional it can be centered, but this is usable only when not displaying title and subtitle of the site. 
+
+Version 0.1 (internal test version, not released)
 
 - This version is derived from the release 0.5.5 of Tikva WordPress theme. It does not add any functionality, but contains some fixes.
 

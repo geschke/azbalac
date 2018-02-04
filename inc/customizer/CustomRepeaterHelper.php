@@ -52,9 +52,9 @@ class Azbalac_Walker_Page extends Walker_Page
  *
  * @package     Azbalac Controls
  * @subpackage  Controls
- * @copyright   Copyright (c) 2017, Ralf Geschke
+ * @copyright   Copyright (c) 2018, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
- * @since       0.5.0
+ * @since       0.1.0
  */
 class Azbalac_Custom_Repeater_Helper
 {

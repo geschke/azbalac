@@ -23,8 +23,7 @@ get_header();
 $header = $azbalacContainer->headerData;
 
 
-$showSlider_2 = '';
-$showSlider_3 = '';
+$showSlider = [];
 $introElements_3 = '';
 if ( is_front_page() ) {
     $showSlider['2'] = Azbalac_Section_Slider::getSlider(2);

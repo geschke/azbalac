@@ -247,6 +247,37 @@ class Azbalac_Customizer
             'settings' => 'setting_slider_' . $slider . '_page',
         ));
 
+
+        $wp_customize->add_setting('setting_slider_' . $slider . '_post', array(
+            // note - works with or without capability & type set
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => 'sanitize_post',
+        ));
+
+
+        $res = function() {
+            $c = Azbalac_Custom_Repeater_Helper::getPostDropdownOptions();
+            foreach ($c as $value) {
+                $result[$value['value']] = $value['name'];
+            }
+            return $result;
+        };   
+       
+        $wp_customize->add_control('control_slider_' . $slider . '_post', array(
+            'label' => __('&hellip;or Link to Post', 'azbalac'),
+            'section' => 'section_slider_' . $slider,
+            'type' => 'select',
+            'settings' => 'setting_slider_' . $slider . '_post',
+            'choices' => $res()
+        ));
+
+       /* 'post' => array(
+            'type'        => 'dropdown-pages',
+            'label'       =>  __('Link to Post or&hellip;', 'azbalac'),
+            'choices' => Azbalac_Custom_Repeater_Helper::getPostDropdownOptions()
+        ),*/
+
         $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
             'default' => '',
             'sanitize_callback' => 'esc_url_raw')

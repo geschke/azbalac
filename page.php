@@ -18,12 +18,12 @@ $azbalacContainer = Azbalac_DataContainer::getInstance();
 get_header(); 
 $header = $azbalacContainer->headerData;
 
-$showSlider_2 = '';
-$showSlider_3 = '';
+$showSlider = [];
 $introElements_3 = '';
 if ( is_front_page() ) {
-    $showSlider_2 = Azbalac_Section_Slider::getSlider(2);
-    $showSlider_3 = Azbalac_Section_Slider::getSlider(3);
+    $showSlider['2'] = Azbalac_Section_Slider::getSlider(2);
+    $showSlider['3'] = Azbalac_Section_Slider::getSlider(3);
+    
     $introElements_3 = Azbalac_Section_Content_Column::getIntroductionElements(3);
 } 
 
@@ -85,8 +85,7 @@ echo $t7tpl->render('page.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
-'show_slider_2' => $showSlider_2,
-'show_slider_3' => $showSlider_3,
+'show_slider' => $showSlider,
 'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,

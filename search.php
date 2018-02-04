@@ -12,9 +12,10 @@ $azbalacContainer = Azbalac_DataContainer::getInstance();
 get_header(); 
 $header = $azbalacContainer->headerData;
 
-$showSlider_2 = '';
+$showSlider = [];
 if ( is_front_page() ) {
-    $showSlider_2 = Azbalac_Section_Slider::getSlider(2);
+    $showSlider['2'] = Azbalac_Section_Slider::getSlider(2);
+    
 } 
 
 $featured = new Azbalac_Featured();
@@ -75,7 +76,7 @@ echo $t7tpl->render('search.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
-'show_slider_2' => $showSlider_2,
+'show_slider' => $showSlider,
 'template_part_featured_content' => $template_part_featured_content,
 //'intro_elements_3' => $introElements_3,
 'layout_style' => $layoutStyle,

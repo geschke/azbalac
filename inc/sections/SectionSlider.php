@@ -51,6 +51,7 @@ class Azbalac_Section_Slider
                 $sliderData[$i]['description'] = get_theme_mod('setting_slider_' . $i . '_description');
                 $sliderData[$i]['text_position'] = get_option('setting_slider_' . $i . '_text_position');
                 $sliderData[$i]['page'] = get_option('setting_slider_' . $i . '_page');
+                $sliderData[$i]['post'] = get_option('setting_slider_' . $i . '_post');
                 $sliderData[$i]['url'] = get_option('setting_slider_' . $i . '_url');
                 $colorFgText = get_theme_mod('setting_slider_' . $i . '_text_color');
                 if ($colorFgText) {
@@ -99,6 +100,8 @@ class Azbalac_Section_Slider
                 $sliderUrl = $sliderElement['url'];
             } elseif ($sliderElement['page']) {
                 $sliderUrl = get_page_link($sliderElement['page']);
+            } elseif ($sliderElement['post']) {
+                $sliderUrl = get_page_link($sliderElement['post']);
             } else {
                 $sliderUrl = null;
             }

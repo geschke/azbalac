@@ -52,7 +52,7 @@ if ( ! post_password_required() && ( comments_open() || get_comments_number() ) 
 
 
 ob_start();
-	edit_post_link( sprintf( __( ' <span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span> Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
+	edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
 
 $content['editPostLink'] = ob_get_contents();
 ob_end_clean();

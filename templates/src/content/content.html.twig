@@ -7,12 +7,15 @@
 		{{ content.theTitle|raw }}
 
 		<div class="entry-meta">
+			{% if content.azbalacPostedOn %}
 			{{ content.azbalacPostedOn|raw }}
-		
+			&nbsp;
+			{% endif %}
 			{% if content.commentsPopupLink %}
 				{{ content.commentsPopupLink|raw }}
+				&nbsp;
 			{% endif %}
-
+		
 			{{ content.editPostLink|raw }}
 
 		</div><!-- .entry-meta -->

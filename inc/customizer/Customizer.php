@@ -237,6 +237,7 @@ class Azbalac_Customizer
             // note - works with or without capability & type set
             'capability' => 'edit_theme_options',
             'type' => 'option',
+            'default' => 0,
             'sanitize_callback' => 'sanitize_post',
         ));
 
@@ -252,31 +253,35 @@ class Azbalac_Customizer
             // note - works with or without capability & type set
             'capability' => 'edit_theme_options',
             'type' => 'option',
+            'default' => 0,
             'sanitize_callback' => 'sanitize_post',
         ));
 
 
-        $res = function() {
+/*        $res = function() {
             $c = Azbalac_Custom_Repeater_Helper::getPostDropdownOptions();
             foreach ($c as $value) {
                 $result[$value['value']] = $value['name'];
             }
             return $result;
         };   
-       
+  */     
+        $result = null;
         $wp_customize->add_control('control_slider_' . $slider . '_post', array(
             'label' => __('&hellip;or Link to Post', 'azbalac'),
             'section' => 'section_slider_' . $slider,
             'type' => 'select',
             'settings' => 'setting_slider_' . $slider . '_post',
-            'choices' => $res()
+            'choices' => call_user_func(function() {
+                $c = Azbalac_Custom_Repeater_Helper::getPostDropdownOptions();
+                foreach ($c as $value) {
+                    $result[$value['value']] = $value['name'];
+                }
+                return $result;
+            })
+            // $res()
         ));
 
-       /* 'post' => array(
-            'type'        => 'dropdown-pages',
-            'label'       =>  __('Link to Post or&hellip;', 'azbalac'),
-            'choices' => Azbalac_Custom_Repeater_Helper::getPostDropdownOptions()
-        ),*/
 
         $wp_customize->add_setting('setting_slider_' . $slider . '_url', array(
             'default' => '',

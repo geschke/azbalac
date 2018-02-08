@@ -798,6 +798,25 @@ class Azbalac_Customizer
             'choices' => $this->getAvailableStylesheets()
         ));
 
+
+        $wp_customize->add_setting('setting_general_theme', array(
+            'capability' => 'edit_theme_options',
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Theme_Control($wp_customize, 
+        'control_general_theme', array(
+            'label' => __('Theme', 'azbalac'),
+            'description' => __('Select your theme.', 'azbalac'),
+            'section' => 'section_theme_options_general',
+            'settings' => 'setting_general_theme',
+            /*'defaults' => array('font' => 17, // use numerical from Azbalac_Custom_Font_List or Ggl font string
+            'size' => 16)*/
+        )));
+
+
+
         $wp_customize->add_setting('navbar_fixed', array(
             'default' => 'default',
             'capability' => 'edit_theme_options',

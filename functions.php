@@ -29,6 +29,7 @@ require_once( get_template_directory() . '/inc/customizer/CustomSliderControl.ph
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterHelper.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomFontControl.php' );
+require_once( get_template_directory() . '/inc/customizer/CustomThemeControl.php' );
 
 require_once( get_template_directory() . '/inc/customizer/CustomizerSanitizer.php' );
 require_once( get_template_directory() . '/inc/customizer/CustomizerAddon.php' );
@@ -175,8 +176,9 @@ if (! function_exists('azbalac_register_customize_javascript_template_types')) :
         //require_once( get_template_directory() . '/inc/customizer/CustomRepeaterControl.php' );
 
         // Register the control type.
-        $wp_customize->register_control_type( 'azbalac_Custom_Repeater_Control' );
-        $wp_customize->register_control_type( 'azbalac_Custom_Font_Control' );
+        $wp_customize->register_control_type( 'Azbalac_Custom_Repeater_Control' );
+        $wp_customize->register_control_type( 'Azbalac_Custom_Font_Control' );
+        $wp_customize->register_control_type( 'Azbalac_Custom_Theme_Control' );
     }
 
 endif;

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implements Subfooter functionality.
+ * Implements Custom Fonts functionality.
  *
  * @package   Azbalac
  * @subpackage Azbalac

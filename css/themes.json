@@ -2,147 +2,147 @@
   "1":  
     {
         "name": "Bootstrap",
-        "additional": false,
+        "type": "simple",
         "folder": "bootstrap",
         "stylesheet": "bootstrap.min.css"
     },
     "2":
     {
         "name": "Cerulean (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "cerulean.min.css"
     },
     "3":
     {
         "name": "Cosmo (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "cosmo.min.css"
     },
     "5":
     {
         "name": "Darkly (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "darkly.min.css"
     },
     "6":
     {
         "name": "Flatly (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "flatly.min.css"
     },
     "7":
     {
         "name": "Journal (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "journal.min.css"
     },
     "8":
     {
         "name": "KDO_Flatly (Bootswatch modified)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "kdo_flatly.min.css"
     },
     "9":
     {
         "name": "Litera (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "litera.min.css"
     },
     "10":
     {
         "name": "Lux (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "lux.min.css"
     },
     "11":
     {
         "name": "Materia (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "materia.min.css"
     },
     "12":
     {
         "name": "Minty (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "minty.min.css"
     },
     "13":
     {
         "name": "Pulse (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "pulse.min.css"
     },
     "14":
     {
         "name": "Sandstone (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sandstone.min.css"
     },
     "15":
     {
         "name": "Simplex (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "simplex.min.css"
     },
     "16":
     {
         "name": "Sketchy (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sketchy.min.css"
     },
     "17":
     {
         "name": "Slate (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "slate.min.css"
     },
     "18":
     {
         "name": "Solar (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "solar.min.css"
     },
     "19":
     {
         "name": "Spacelab (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "spacelab.min.css"
     },
     "20":
     {
         "name": "Superhero (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "superhero.min.css"
     },
     "21":
     {
         "name": "United (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "united.min.css"
     },
     "22":
     {
         "name": "Yeti (Bootswatch)",
-        "additional": false,
+        "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "yeti.min.css"
     }

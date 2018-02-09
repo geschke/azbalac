@@ -5,6 +5,23 @@ if (! class_exists( 'WP_Customize_Control' )) {
     return null;
 }
 
+class Azbalac_Custom_Theme_Data
+{
+
+    public static function getThemeData()
+    {
+        global $wp_filesystem;
+        if (empty($wp_filesystem)) {
+            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
+            WP_Filesystem();
+        }
+
+
+        $themes = $wp_filesystem->get_contents(get_template_directory() . '/css/themes.json');
+        return json_decode($themes);
+    }
+
+}
 
 /**
  * todo
@@ -23,19 +40,20 @@ class Azbalac_Custom_Theme_Request
     {
         global $wpdb; // this is how you get access to the database
         
-        $searchfont = $_POST['searchfont'];
+        $searchtheme = $_POST['searchtheme'];
 
-        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
-        
-        $fontData = null;
-        foreach ($gglfonts['items'] as $gglfont) {
-            if ($gglfont['family'] == $searchfont) {
-                $fontData = $gglfont;
+        $themeData = Azbalac_Custom_Theme_Data::getThemeData();
+
+        $themeResult = null;
+        foreach ($themeData as $key => $value) {
+            if ($key == $searchtheme) {
+                $themeResult['key'] = $key;
+                $themeResult['value'] = $value;
                 break;
             }
         }
         
-        echo json_encode($fontData);
+        echo json_encode($themeResult);
         
         wp_die(); // this is required to terminate immediately and return a proper response
     }
@@ -140,18 +158,7 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
     }
 
 
-    public function getThemeData()
-    {
-        global $wp_filesystem;
-        if (empty($wp_filesystem)) {
-            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
-            WP_Filesystem();
-        }
-
-
-        $themes = $wp_filesystem->get_contents(get_template_directory() . '/css/themes.json');
-        return json_decode($themes);
-    }
+  
 
     public function to_json()
     {
@@ -174,7 +181,7 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
         $themes[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
 
-        $themeData = $this->getThemeData();
+        $themeData = Azbalac_Custom_Theme_Data::getThemeData();
         
         foreach ($themeData as $key => $value) {
             $themes[] = array('k' => $key, 'v' => $value->name);

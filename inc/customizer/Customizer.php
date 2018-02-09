@@ -782,7 +782,7 @@ class Azbalac_Customizer
         )));
 
 
-        $wp_customize->add_setting('azbalac_stylesheet', array(
+        /*$wp_customize->add_setting('azbalac_stylesheet', array(
             'default' => 'slate_accessibility_ready.min.css',
             'capability' => 'edit_theme_options',
             'type' => 'option',
@@ -796,7 +796,7 @@ class Azbalac_Customizer
             'description' => __('Select your themes alternative color scheme.', 'azbalac'),
             'type' => 'select',
             'choices' => $this->getAvailableStylesheets()
-        ));
+        ));*/
 
 
         $wp_customize->add_setting('setting_general_theme', array(

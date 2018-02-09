@@ -375,34 +375,45 @@ function azbalac_scripts() {
 
 function azbalac_bootstrap_styles()
 {
-    $stylesheetData = get_option('azbalac_stylesheet');
+    $stylesheetSetting = get_theme_mod('setting_general_theme',0);
    
-    if ($stylesheetData)
+    $timestamp = '2018020901';
+  
+    if (!$stylesheetSetting)
     {
-        $stylesheet = $stylesheetData;
+        // fallback to default theme
+        //$stylesheet = $stylesheetData;
+        $themeFolder = 'bootstrap/';
+        $themeCss = 'bootstrap.min.css';
+
     }
     else {
-        $stylesheet = 'slate_accessibility_ready.min.css';
+        $stylesheetData = json_decode(urldecode($stylesheetSetting));
+       
+        if (isset($stylesheetData->theme) && $stylesheetData->theme !== 0) {
+            $themeData = $stylesheetData->data;
+            // todo: check type: currently only "simple", i.e. load css file from folder
+            $themeFolder = $themeData->folder . '/';
+            $themeCss = $themeData->stylesheet;
+
+        } else { // fallback to default theme
+            $themeFolder = 'bootstrap/';
+            $themeCss = 'bootstrap.min.css';
+
+        }
     }
 
-    // Register the style like this for a theme:
-    wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/design/' . $stylesheet, array(),
-        '2018013001','all');
-        //. bi_get_data('bootswatch'), array(), '3.0.3', 'all' );
-    //wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.0.3', 'all' );
-    //wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific.css', array(), '0.9.4', 'all' );
-    //wp_register_style( 'responsive-style', get_stylesheet_uri(), false, '3.0.3' );
-
+    wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/' . $themeFolder . $themeCss, array(), $timestamp,'all');
+     
 
     //  enqueue the style:
     wp_enqueue_style( 'bootstrap-styles' );
-    //wp_enqueue_style( 'font-awesome' );
-    //wp_enqueue_style( 'magnific' );
-    //wp_enqueue_style( 'responsive-style' );
+  
 
 }
 
 add_action( 'wp_enqueue_scripts', 'azbalac_bootstrap_styles' );
+
 add_action( 'wp_enqueue_scripts', 'azbalac_scripts' );
 add_action( 'wp_enqueue_scripts', 'azbalac_enqueue_font_awesome' );
 
@@ -779,6 +790,7 @@ if (is_admin()) {
     $azbalacGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
     
     $azbalacFontRequest = new Azbalac_Custom_Font_Request();
-    
+
+    $azbalacThemeRequest = new Azbalac_Custom_Theme_Request(); // register requests
 }
 

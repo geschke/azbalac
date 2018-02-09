@@ -41,7 +41,8 @@ require_once( get_template_directory() . '/inc/sections/SectionSlider.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSocialMediaButtons.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSubfooter.php' );
-require_once( get_template_directory() . '/inc/sections/SectionFont.php' );
+require_once( get_template_directory() . '/inc/template/ThemeFont.php' );
+require_once( get_template_directory() . '/inc/template/Theme.php' );
 
 require_once( get_template_directory() . '/inc/Featured.php' );
 
@@ -196,16 +197,6 @@ if ( ! isset( $content_width ) ) {
     $content_width = 474;
 }
 
-if ( ! function_exists( 'azbalac_enqueue_font_awesome' ) ) :
-
-    function azbalac_enqueue_font_awesome() 
-    {
-
-        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
-
-    }
-
-endif;
 
 
 if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
@@ -372,53 +363,13 @@ function azbalac_scripts() {
 
 }
 
-
-function azbalac_bootstrap_styles()
-{
-    $stylesheetSetting = get_theme_mod('setting_general_theme',0);
-   
-    $timestamp = '2018020901';
-  
-    if (!$stylesheetSetting)
-    {
-        // fallback to default theme
-        //$stylesheet = $stylesheetData;
-        $themeFolder = 'bootstrap/';
-        $themeCss = 'bootstrap.min.css';
-
-    }
-    else {
-        $stylesheetData = json_decode(urldecode($stylesheetSetting));
-       
-        if (isset($stylesheetData->theme) && $stylesheetData->theme !== 0) {
-            $themeData = $stylesheetData->data;
-            // todo: check type: currently only "simple", i.e. load css file from folder
-            $themeFolder = $themeData->folder . '/';
-            $themeCss = $themeData->stylesheet;
-
-        } else { // fallback to default theme
-            $themeFolder = 'bootstrap/';
-            $themeCss = 'bootstrap.min.css';
-
-        }
-    }
-
-    wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/' . $themeFolder . $themeCss, array(), $timestamp,'all');
-     
-
-    //  enqueue the style:
-    wp_enqueue_style( 'bootstrap-styles' );
-  
-
-}
-
-add_action( 'wp_enqueue_scripts', 'azbalac_bootstrap_styles' );
+add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'setStyles' ));
 
 add_action( 'wp_enqueue_scripts', 'azbalac_scripts' );
-add_action( 'wp_enqueue_scripts', 'azbalac_enqueue_font_awesome' );
+add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueFontAwesome' ) );
 
-add_action( 'wp_enqueue_scripts',  array('azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
-add_action( 'wp_enqueue_scripts', array('azbalac_Section_Slider','addSliderStyle') );
+add_action( 'wp_enqueue_scripts',  array('Azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
+add_action( 'wp_enqueue_scripts', array('Azbalac_Section_Slider','addSliderStyle') );
 
 
 /**

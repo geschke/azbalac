@@ -6,10 +6,10 @@
  * @package   Azbalac
  * @subpackage Azbalac
  * @since Azbalac 0.1
- * @copyright Copyright (c) 2017, Ralf Geschke.
+ * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
-class Azbalac_Section_Font 
+class Azbalac_Theme_Font 
 {
 
 

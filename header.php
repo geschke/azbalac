@@ -59,7 +59,7 @@ if (has_nav_menu('header-menu')) {
 }
 
 
-$content['sectionFontStyles'] = Azbalac_Section_Font::getStyles();
+$content['sectionFontStyles'] = Azbalac_Theme_Font::getStyles();
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( ) ) . '"';
 

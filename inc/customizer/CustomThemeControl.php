@@ -140,6 +140,19 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
     }
 
 
+    public function getThemeData()
+    {
+        global $wp_filesystem;
+        if (empty($wp_filesystem)) {
+            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
+            WP_Filesystem();
+        }
+
+
+        $themes = $wp_filesystem->get_contents(get_template_directory() . '/css/themes.json');
+        return json_decode($themes);
+    }
+
     public function to_json()
     {
         
@@ -160,10 +173,15 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
     
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
         $themes[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
-        $themes[] = array('k' => 1, 'v' => "Whatever");
-        $themes[] = array('k' => 2, 'v' => "Foo");
-        $themes[] = array('k' => 3, 'v' => "Bar");
+
+        $themeData = $this->getThemeData();
         
+        foreach ($themeData as $key => $value) {
+            $themes[] = array('k' => $key, 'v' => $value->name);
+            
+        }
+
+
         
     
         // build gglfonts options

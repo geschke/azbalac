@@ -1,0 +1,32 @@
+{
+  "1":  
+      {
+        
+    "name": "Bootstrap",
+    "additional": false,
+    "folder": "bootstrap",
+    "stylesheet": "bootstrap.min.css"
+    },
+    "2":
+    {
+        "name": "Cerulean (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "cerulean.min.css"
+    },
+    "3":
+    {
+        "name": "Cosmo (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "cosmo.min.css"
+    },
+    "4":
+    {
+        "name": "Cyborg (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "cyborg.min.css"
+    }
+    
+    }

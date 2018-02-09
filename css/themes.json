@@ -1,11 +1,10 @@
 {
   "1":  
-      {
-        
-    "name": "Bootstrap",
-    "additional": false,
-    "folder": "bootstrap",
-    "stylesheet": "bootstrap.min.css"
+    {
+        "name": "Bootstrap",
+        "additional": false,
+        "folder": "bootstrap",
+        "stylesheet": "bootstrap.min.css"
     },
     "2":
     {
@@ -21,12 +20,130 @@
         "folder": "bootswatch",
         "stylesheet": "cosmo.min.css"
     },
-    "4":
+    "5":
     {
-        "name": "Cyborg (Bootswatch)",
+        "name": "Darkly (Bootswatch)",
         "additional": false,
         "folder": "bootswatch",
-        "stylesheet": "cyborg.min.css"
+        "stylesheet": "darkly.min.css"
+    },
+    "6":
+    {
+        "name": "Flatly (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "flatly.min.css"
+    },
+    "7":
+    {
+        "name": "Journal (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "journal.min.css"
+    },
+    "8":
+    {
+        "name": "KDO_Flatly (Bootswatch modified)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "kdo_flatly.min.css"
+    },
+    "9":
+    {
+        "name": "Litera (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "litera.min.css"
+    },
+    "10":
+    {
+        "name": "Lux (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "lux.min.css"
+    },
+    "11":
+    {
+        "name": "Materia (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "materia.min.css"
+    },
+    "12":
+    {
+        "name": "Minty (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "minty.min.css"
+    },
+    "13":
+    {
+        "name": "Pulse (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "pulse.min.css"
+    },
+    "14":
+    {
+        "name": "Sandstone (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "sandstone.min.css"
+    },
+    "15":
+    {
+        "name": "Simplex (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "simplex.min.css"
+    },
+    "16":
+    {
+        "name": "Sketchy (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "sketchy.min.css"
+    },
+    "17":
+    {
+        "name": "Slate (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "slate.min.css"
+    },
+    "18":
+    {
+        "name": "Solar (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "solar.min.css"
+    },
+    "19":
+    {
+        "name": "Spacelab (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "spacelab.min.css"
+    },
+    "20":
+    {
+        "name": "Superhero (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "superhero.min.css"
+    },
+    "21":
+    {
+        "name": "United (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "united.min.css"
+    },
+    "22":
+    {
+        "name": "Yeti (Bootswatch)",
+        "additional": false,
+        "folder": "bootswatch",
+        "stylesheet": "yeti.min.css"
     }
-    
-    }
+}

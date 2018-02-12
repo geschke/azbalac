@@ -311,7 +311,7 @@ add_filter( 'get_search_form', 'azbalac_get_search_form' );
 /**
  * Enqueue scripts and styles for the front end.
  *
- * @since azbalac 0.1
+ * @since Azbalac 0.1
  *
  * @return void
  */

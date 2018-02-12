@@ -145,5 +145,15 @@
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "yeti.min.css"
+    },
+    "23":
+    {
+        "name": "Malibu (Drecksmist)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "malibu.min.css", 
+        "javascripts": [], 
+        "gglfonts": []
+        
     }
 }

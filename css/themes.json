@@ -3,8 +3,8 @@
     {
         "name": "Bootstrap",
         "type": "simple",
-        "folder": "bootstrap",
-        "stylesheet": "bootstrap.min.css"
+        "folder": "bootswatch",
+        "stylesheet": "bstrap.min.css"
     },
     "2":
     {
@@ -148,12 +148,76 @@
     },
     "23":
     {
-        "name": "Malibu (Drecksmist)",
+        "name": "Malibu (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "malibu.min.css", 
         "javascripts": [], 
         "gglfonts": []
         
+    },
+    "24":
+    {
+        "name": "Bolt (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "bolt.min.css"
+    },
+    "25":
+    {
+        "name": "Btcn (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "btcn.min.css"
+    },
+    "26":
+    {
+        "name": "Calabaza (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "calabaza.min.css"
+    },
+    "27":
+    {
+        "name": "Hoff (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "hoff.min.css"
+    },
+    "28":
+    {
+        "name": "Kdo2 (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "kdo2.min.css"
+    },
+    "29":
+    {
+        "name": "Kunsch (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "kunsch.min.css"
+    },
+    "30":
+    {
+        "name": "Minim (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "minim.min.css"
+    },
+   "31":
+    {
+        "name": "Signa (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "signa.min.css"
+    },
+   "32":
+    {
+        "name": "Sonic (Bootswatch modified)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "sonic.min.css"
     }
+
 }

@@ -218,6 +218,38 @@
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sonic.min.css"
+    },
+    "33":
+    {
+        "name": "Aquamarine (Getbootstrap / Pingendo)",
+        "type": "simple",
+        "folder": "getbootstrap/aquamarine/css",
+        "stylesheets": ["theme.css","custom.css"]
+        
+    },
+    "34":
+    {
+        "name": "Elegant (Getbootstrap / Pingendo)",
+        "type": "simple",
+        "folder": "getbootstrap/elegant/css",
+        "stylesheets": ["theme.css","custom.css"]
+        
+    },
+    "35":
+    {
+        "name": "Flat (Getbootstrap / Pingendo)",
+        "type": "simple",
+        "folder": "getbootstrap/flat/css",
+        "stylesheets": ["theme.css","custom.css"]
+        
+    },
+    "36":
+    {
+        "name": "Neon (Getbootstrap / Pingendo)",
+        "type": "simple",
+        "folder": "getbootstrap/neon/css",
+        "stylesheets": ["theme.css","custom.css"]
+        
     }
 
 }

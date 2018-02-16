@@ -24,7 +24,7 @@ class Azbalac_Theme
             // fallback to default theme
             //$stylesheet = $stylesheetData;
             $themeFolder = 'bootstrap/';
-            $themeCss = 'bootstrap.min.css';
+            $themeCss[] = 'bootstrap.min.css';
 
         }
         else {
@@ -34,21 +34,28 @@ class Azbalac_Theme
                 $themeData = $stylesheetData->data;
                 // todo: check type: currently only "simple", i.e. load css file from folder
                 $themeFolder = $themeData->folder . '/';
-                $themeCss = $themeData->stylesheet;
+                if (isset($themeData->stylesheets)) { // multiple stylesheets
+                    foreach ($themeData->stylesheets as $stylesheet) {
+                        $themeCss[] = $stylesheet;
+                    }
+                } else { // single stylesheet
+                    $themeCss[] = $themeData->stylesheet;
 
+                }
+    
             } else { // fallback to default theme
                 $themeFolder = 'bootstrap/';
-                $themeCss = 'bootstrap.min.css';
+                $themeCss[] = 'bootstrap.min.css';
 
             }
         }
 
-        wp_register_style( 'bootstrap-styles', get_template_directory_uri() .'/css/' . $themeFolder . $themeCss, array(), $timestamp,'all');
+        foreach ($themeCss as $key => $stylesheet) {
+            wp_register_style( 'bootstrap-styles_' . $key, get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), $timestamp,'all');
         
-
-        //  enqueue the style:
-        wp_enqueue_style( 'bootstrap-styles' );
-    
+            //  enqueue the style:
+            wp_enqueue_style( 'bootstrap-styles_' . $key );
+        }
 
     }
 

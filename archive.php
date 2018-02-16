@@ -28,6 +28,8 @@ $layoutStyle = azbalac_get_layout();
 
 get_sidebar();
 $sidebar = $azbalacContainer->contentSidebar;
+$azbalac_posts = null;
+$azbalac_paging_nav = null;
 
 
 $page_title = '';

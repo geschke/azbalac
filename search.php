@@ -29,6 +29,9 @@ $sidebar = $azbalacContainer->contentSidebar;
 
 
 $title_search_results = '';
+$azbalac_posts = null;
+$azbalac_paging_nav = null;
+
 if ( have_posts() ) {
     $azbalac_have_posts = true;
     $azbalac_no_posts = null;

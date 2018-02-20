@@ -905,7 +905,7 @@ class Azbalac_Customizer
             'type' => 'radio',
             'choices' => array(
                 1 => __('Left', 'azbalac'),
-                2 => __('Center', 'azbalac'),
+                //2 => __('Center', 'azbalac'), // disabled due to right widget issues, maybe activate later again
                 3 => __('Right', 'azbalac'),
             ),
         ));

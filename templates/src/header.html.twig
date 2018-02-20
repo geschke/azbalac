@@ -67,24 +67,38 @@
 
         <header class="masthead">
             <div>
-                <div class="row align-items-center{% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
+
+              {#  <div class="row justify-content-between">
+                    <div class="col-auto"> #}
+                        <div class="row align-items-center {% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
+                            
+                            {% if content.customLogo %}
+                            <div class="col-auto  {% if content.customLogoPosition == 3 %} order-12{% endif %}">
+                                <a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>
+                            </div>
+                            {% endif %}
+                            <div class="col-auto ">
+                                    {% if content.displayHeaderText %}
+                                <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+                                <h2 id="site-description">{{ content.subtitleDescription }}</h2>
+                                {% else %}
+                                &nbsp;
+                                {% endif %}
+                            </div>
+                            {% if  content.headerWidgetRight %}
+                            <div class="col-auto ml-auto">
+                                    {{ content.headerWidgetRight|raw }}
+                            </div>
+                            {% endif %}
+                        </div>
+                {#    </div>
+                    <div class="col-auto">
+                            {{ content.headerWidgetRight|raw }}
+                        </div>
+
                     
-                    {% if content.customLogo %}
-                    <div class="col-auto {% if content.customLogoPosition == 3 %} order-12{% endif %}">
-                        <a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>
-                    </div>
-                    {% endif %}
-                    <div class="col-auto ">
-                            {% if content.displayHeaderText %}
-                        <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg  }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-                        <h2 id="site-description">{{ content.subtitleDescription }}</h2>
-                        {% else %}
-                        &nbsp;
-                        {% endif %}
-                    </div>
-                  
-                </div>
-                
+                </div> #}
+
             </div>
             <div id="site-header">
                 <a href="{{ content.homeUrl }}" rel="home">
@@ -99,7 +113,7 @@
     {% if content.showIntroductionElement.1 %}</header></div>{{ content.showIntroductionElements.1|raw }}<header class="masthead"><div class="container">{% endif %}
 {% endif %}
 
-<nav class="navbar navbar-expand-sm {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+<nav class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -125,9 +139,13 @@
             
             <div class="navbar-collapse collapse" id="navbarSupportedContent"> 
                 <ul class="navbar-nav mr-auto">
-
                     {{ content.wpNavMenu|raw }}
-                </ul>
+               </ul>
+               {% if content.navigationWidgetRight %}
+                <div>
+                  {{ content.navigationWidgetRight|raw }}
+                </div>
+                {% endif %}
             </div><!--/.nav-collapse -->
         
             

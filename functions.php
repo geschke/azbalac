@@ -40,6 +40,7 @@ require_once( get_template_directory() . '/inc/sections/SectionContentColumn.php
 require_once( get_template_directory() . '/inc/sections/SectionSlider.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSocialMediaButtons.php' );
 require_once( get_template_directory() . '/inc/sections/SectionFooter.php' );
+require_once( get_template_directory() . '/inc/sections/SectionWidgets.php' );
 require_once( get_template_directory() . '/inc/sections/SectionSubfooter.php' );
 require_once( get_template_directory() . '/inc/template/ThemeFont.php' );
 require_once( get_template_directory() . '/inc/template/Theme.php' );
@@ -252,6 +253,27 @@ function theme_azbalac_widgets_init()
             'after_title' => '</h3>',
         ));
     }
+
+    register_sidebar(array(
+        'name' => __("Header Widget Area", 'azbalac'),
+        'id' => "header-widget-right",
+        'description' => 'Appears in the header on right side',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        //'before_title' => '<h3 class="widget-title">',
+        //'after_title' => '</h3>',
+    ));
+    register_sidebar(array(
+        'name' => __("Navigation Right Widget Area", 'azbalac'),
+        'id' => "navigation-widget-right",
+        'description' => 'Appears in the navigation on right side',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        //'before_title' => '<h3 class="widget-title">',
+        //'after_title' => '</h3>',
+    ));
+
+
 }
 
 if ( function_exists('register_sidebar') ) {
@@ -437,7 +459,7 @@ function azbalac_has_featured_posts() {
 /**
  * Getter function for Featured Content Plugin.
  *
- * @since azbalac 0.1
+ * @since Azbalac 0.1
  *
  * @return array An array of WP_Post objects.
  */
@@ -445,7 +467,7 @@ function azbalac_get_featured_posts() {
     /**
      * Filter the featured posts to return in azbalac.
      *
-     * @since azbalac 0.1
+     * @since Azbalac 0.1
      *
      * @param array|bool $posts Array of featured posts, otherwise false.
      */

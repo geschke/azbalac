@@ -81,9 +81,9 @@ class Featured_Content {
 			self::$max_posts = absint( $theme_support[0]['max_posts'] );
 		}
 
-		add_filter( $filter,                              array( __CLASS__, 'get_featured_posts' )    );
-		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
-		add_action( 'pre_get_posts',                      array( __CLASS__, 'pre_get_posts'      )    );
+		add_filter( $filter,  array( __CLASS__, 'get_featured_posts' )    );
+		add_action( 'save_post', array( __CLASS__, 'delete_transient'   )    );
+		add_action( 'pre_get_posts', array( __CLASS__, 'pre_get_posts'      )    );
 	}
 
 	/**
@@ -173,7 +173,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since azbalac 0.1
+	 * @since Azbalac 0.1
 	 *
 	 * @return array Array of sticky posts.
 	 */
@@ -226,7 +226,8 @@ class Featured_Content {
 		}
 
 		$featured = self::get_featured_post_ids();
-
+//var_dump($featured);
+//die;
 		// Bail if no featured posts.
 		if ( ! $featured ) {
 			return;

@@ -25,6 +25,10 @@ $content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top or default
 
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 
+$content['headerWidgetRight'] = Azbalac_Section_Widgets::get('header-widget-right');
+$content['navigationWidgetRight'] = Azbalac_Section_Widgets::get('navigation-widget-right');
+
+
 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );

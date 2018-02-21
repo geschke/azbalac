@@ -38,7 +38,8 @@ class Featured_Content {
 	 * @access public
 	 * @since azbalac 0.1
 	 */
-	public static function setup() {
+	public static function setup() 
+	{
 		add_action( 'init', array( __CLASS__, 'init' ), 30 );
 	}
 
@@ -55,7 +56,8 @@ class Featured_Content {
 	 * @access public
 	 * @since Azbalac 0.1
 	 */
-	public static function init() {
+	public static function init() 
+	{
             
 		$theme_support = get_theme_support( 'featured-content' );
 
@@ -95,7 +97,8 @@ class Featured_Content {
 	 *
 	 * @return array Array of featured posts.
 	 */
-	public static function get_featured_posts() {
+	public static function get_featured_posts()
+	{
 		$post_ids = self::get_featured_post_ids();
 
               
@@ -126,7 +129,8 @@ class Featured_Content {
 	 *
 	 * @return array Array of post IDs.
 	 */
-	public static function get_featured_post_ids() {
+	public static function get_featured_post_ids()
+	{
 
         // todo: delete all other stuff, it's not necessary...
 
@@ -139,7 +143,8 @@ class Featured_Content {
 		$settings = self::get_setting();
 		// Query for featured posts.
 		$featured = get_posts( array(
-			'numberposts' => $settings['quantity'],
+			'numberposts' => -1, // $settings['quantity'],
+			'lang' => '', // workaround for Polylang plugin to get ALL languages. No difference when Polylang isn't installed
             'meta_query' => array(
                 'relation' => 'OR',
                 array(
@@ -177,7 +182,8 @@ class Featured_Content {
 	 *
 	 * @return array Array of sticky posts.
 	 */
-	public static function get_sticky_posts() {
+	public static function get_sticky_posts()
+	{
 		$settings = self::get_setting();
 		return array_slice( get_option( 'sticky_posts', array() ), 0, $settings['quantity'] );
 	}
@@ -193,7 +199,8 @@ class Featured_Content {
 	 * @access public
 	 * @since Azbalac 0.1
 	 */
-	public static function delete_transient() {
+	public static function delete_transient()
+	{
 		delete_transient( 'featured_content_ids' );
 	}
 
@@ -211,7 +218,8 @@ class Featured_Content {
 	 * @param WP_Query $query WP_Query object.
 	 * @return WP_Query Possibly-modified WP_Query.
 	 */
-	public static function pre_get_posts( $query ) {
+	public static function pre_get_posts( $query )
+	{
 
 		// Bail if not home or not main query.
 		if ( ! $query->is_home() || ! $query->is_main_query() ) {
@@ -226,8 +234,7 @@ class Featured_Content {
 		}
 
 		$featured = self::get_featured_post_ids();
-//var_dump($featured);
-//die;
+	
 		// Bail if no featured posts.
 		if ( ! $featured ) {
 			return;
@@ -266,7 +273,8 @@ class Featured_Content {
 	 * @param string $key The key of a recognized setting.
 	 * @return mixed Array of all settings by default. A single value if passed as first parameter.
 	 */
-	public static function get_setting( $key = 'all' ) {
+	public static function get_setting( $key = 'all' ) 
+	{
 		$saved = (array) get_option( 'featured-content' );
 
 		$defaults = array(
@@ -313,7 +321,8 @@ class Featured_Content {
 	 * @param array $input Array of settings input.
 	 * @return array Validated settings output.
 	 */
-	public static function validate_settings( $input ) {
+	public static function validate_settings( $input ) 
+	{
 		$output = array();
 
 		if ( empty( $input['tag-name'] ) ) {
@@ -356,7 +365,8 @@ class Featured_Content {
 	 * @param int $input The value to sanitize.
 	 * @return int A number between 1 and FeaturedContent::$max_posts.
 	 */
-	public static function sanitize_quantity( $input ) {
+	public static function sanitize_quantity( $input )
+	{
 		$quantity = absint( $input );
 
 		if ( $quantity > self::$max_posts ) {

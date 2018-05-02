@@ -236,8 +236,8 @@ function theme_azbalac_widgets_init()
         'name' => __("Sidebar 1", 'azbalac'),
         'id' => 'sidebar-1',
         'class' => '',
-        'before_widget' => '<div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="well widget %2$s">',
-        'after_widget' => "</div>\n",
+        'before_widget' => '<div class="card"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
+        'after_widget' => "</div></div>\n",
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => "</h3>\n"
     ));

@@ -45,13 +45,13 @@
 
     wp.customize('color_fg_sidebar', function (value) {
         value.bind(function (col) {
-            $('#primary-sidebar > div').css('color', col);
+            $('#primary-sidebar > div > div').css('color', col);
         });
     });
 
     wp.customize('color_bg_sidebar', function (value) {
         value.bind(function (col) {
-            $('#primary-sidebar > div').css('background-color', col);
+            $('#primary-sidebar > div > div').css('background-color', col);
         });
     });
 

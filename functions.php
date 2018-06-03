@@ -494,21 +494,21 @@ if ( ! function_exists( 'azbalac_get_layout' ) ) :
             case 1:
                 $columns = 1;
                 $content = 1; // main content in single column
-                $styleCol_1 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
-                $styleCol_2 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12';
+                $styleCol_1 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12';
+                $styleCol_2 = 'col-xl-12 col-lg-12 col-md-12 col-sm-12';
                 break;
             case 3:
                 $columns = 2;
                 $content = 2; // main content right
-                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
-                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4';
                 break;
             case 2:
             default:
                 $columns = 2;
                 $content = 1; // main content left
-                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8 col-xs-8';
-                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-4';
+                $styleCol_1 = 'col-xl-9 col-lg-9 col-md-9 col-sm-8';
+                $styleCol_2 = 'col-xl-3 col-lg-3 col-md-3 col-sm-4';
                 break;
         }
         return array('columns' => $columns,

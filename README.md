@@ -4,10 +4,17 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2
+Version 0.2.1
 
 
 ## Version history:
+
+Version 0.2.1
+
+- Fix: Responsive behaviour in extra small screens now working, the sidebar moves below the main area
+- Fix: Screen width error on small displays like smartphones (taken from Tikva theme)
+- Fix: Width of extra small header image
+- Fix: Sidebar element class changed to "card", because "well" was dropped in Bootstrap 4
 
 Version 0.2
 

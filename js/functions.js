@@ -44,7 +44,7 @@
         var newWidth = 0, newHeight = 0;
         var imgData = {};
         if (mediaSize == 'xs') {
-            newWidth = $('#main').width() - 26;
+            newWidth = $('#main').width(); 
             imgData = $.getHeaderImage(3,0);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {

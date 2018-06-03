@@ -4,10 +4,14 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2.1
+Version 0.2.2
 
 
 ## Version history:
+
+Version 0.2.2
+
+- Fix: Grid size detection and resizing of header image, now ready for Bootstrap 4 grid widths
 
 Version 0.2.1
 

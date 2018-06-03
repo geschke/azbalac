@@ -44,16 +44,19 @@
         var newWidth = 0, newHeight = 0;
         var imgData = {};
         if (mediaSize == 'xs') {
-            newWidth = $('#main').width(); 
+            newWidth = $('#main').width() -30; 
             imgData = $.getHeaderImage(3,0);
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
             imgData = $.getHeaderImage(2,0);
-            newWidth = 690;
+            newWidth = 510;
         } else if (mediaSize == 'md') {
             imgData = $.getHeaderImage(1,0);
+            newWidth = 690;
+        } else if (mediaSize == 'lg') { // lg
+            imgData = $.getHeaderImage(0,0);
             newWidth = 930;
-        } else { // lg
+		} else { // xl
             imgData = $.getHeaderImage(0,0);
             newWidth = 1110;
         }
@@ -84,23 +87,26 @@
     };
 
     $.checkMediaSize = function( ) {
-        var elementSize = $('#media-width-detection-element').width();
-        if (elementSize <= 749) { // 767
-            mediaDetectSize = 'xs';
-        } else if (elementSize >= 750 && elementSize < 970) { // 768 992
+		var elementSize = $('#media-width-detection-element').width();
+		if (elementSize < 540) {
+			mediaDetectSize = 'xs';
+		} else if (elementSize >= 540 && elementSize < 720) { 
             mediaDetectSize = 'sm';
-        } else if (elementSize >= 970 && elementSize < 1170) { // 1200
+        } else if (elementSize >= 720 && elementSize < 960) { 
             mediaDetectSize = 'md';
-        } else { // >= 1200
+        } else if (elementSize >= 960 && elementSize < 1140) { 
             mediaDetectSize = 'lg';
-        }
+        } else { // >= 1200
+            mediaDetectSize = 'xl';
+		}
+		
         if (mediaDetectSize != mediaSize || mediaDetectSize == 'xs') {
             mediaSize = mediaDetectSize;
             $.headerImageResize(mediaSize);
-        }
+		}
 
     };
-
+	
 
     $( window).resize(function () {
         if (! $('#site-header-image').length) {

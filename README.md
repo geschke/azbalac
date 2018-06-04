@@ -4,10 +4,14 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2.2
+Version 0.2.3
 
 
 ## Version history:
+
+Version 0.2.3
+- Fix: Show menu area only when menu or widget content in menu bar is present
+- Fix: Hover colors of Social media icons turned more darken
 
 Version 0.2.2
 

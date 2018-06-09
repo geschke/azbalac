@@ -23,10 +23,14 @@ class Azbalac_Theme_Font
     {
         $bodyFont = json_decode(urldecode(get_theme_mod('setting_typography_body')));
         $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
+        $navbarFont = json_decode(urldecode(get_theme_mod('setting_typography_navbar')));
+        
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);
         $cssBody = self::buildBodyCss($bodyFont);
-        return $cssBody . $cssHeadline;
+        $cssNavbar = self::buildNavbarCss($navbarFont);
+        
+        return $cssBody . $cssHeadline . $cssNavbar;
     }
 
     protected static function buildBodyCss($bodyFont)
@@ -65,6 +69,48 @@ class Azbalac_Theme_Font
         }
         return $css;
     }
+
+    protected static function buildNavbarCss($navbarFont)
+    {
+        $cssStart = '<style id="typography-navbar" type="text/css">';
+        $cssEnd = '</style>';
+        $css = '';
+        $fontSize = null;
+
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($navbarFont, 'typography-navbar-font');
+        
+        if (isset($navbarFont->size) && intval($navbarFont->size) != 0) {
+            $fontSize = $navbarFont->size . "px";
+        } else {
+            // size not set, use default size 
+            $fontSize = null;
+        }
+
+        // font family and size could be used independently
+        if ($fontFamily) {
+            $css .= "
+            nav#navbarMain {
+                font-family: $fontFamily; 
+            }";
+        }
+        if ($fontSize) {
+            $css .= "
+            nav#navbarMain {
+                font-size: $fontSize; 
+            }
+            nav#navbarMain ul.dropdown-menu {
+                font-size: $fontSize; 
+            }
+            ";
+        
+        }
+    
+        if ($css) {
+            return $cssHeader . $cssStart . $css . $cssEnd;
+        }
+        return $css;
+    }
+
 
     protected static function buildHeadlineCss($headlineFont)
     {

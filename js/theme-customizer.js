@@ -225,4 +225,79 @@
     });
 
 
+    wp.customize('setting_typography_navbar', function (value) {
+        value.bind(function (data) {
+            
+            fontData = JSON.parse(decodeURI(data));
+            var sizeBase = 16; // defined in Bootstrap
+            if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
+                var sizeBase = fontData['size'];
+            } 
+
+            $('nav').css('font-size', sizeBase);
+        
+            if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
+
+                var fontVariant = '';
+                if (typeof fontData['gglfontdata'] != 'undefined' && fontData['gglfontdata'] != null && typeof fontData['gglfontdata']['variant'] != 'undefined' && fontData['gglfontdata']['variant'] != 'regular') {
+                    fontVariant = ':' + fontData['gglfontdata']['variant'];
+                }
+
+                if ($('#typography-navbar-font').length) {
+
+                    $('#typography-navbar-font').attr('href','https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font'])+ fontVariant);
+                } else {
+                    var linkData = {
+                        'id': 'typography-navbar-font',
+                        'href':'https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font']) + fontVariant,
+                        'rel': 'stylesheet'
+                    };
+                    $('<link/>',linkData).appendTo("head");
+
+                }
+                $('nav').css('font-family', fontData['font']);
+            
+    
+            } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
+                $('body').css('font-family','');
+                if ($('#typography-navbar-font').length) {
+                    $('#typography-navbar-font').remove();
+                }
+                if ($('#typography-navbar').length) {
+                    $('#typography-navbar').remove();
+                }
+                
+
+            } else { // default font
+                
+                var requestData = {
+                    action: "azbalac_get_default_font_data_action"
+                }
+    
+                $.ajax({
+                    type: "POST",
+                    url: azbalacAjax.ajaxurl,
+         
+                    dataType: "json",
+                    data: requestData,
+                    success: function (res, textStatus, jqXHR) {
+                        if (res != null) {
+                            $('nav').css('font-family', res[fontData['font']]);
+                        }
+                    },
+                    error: function (errorMessage) {
+                        // later: show error?
+                    }
+                 
+                });     
+            }
+
+          
+          
+
+        });
+       
+    });
+
+
 })(jQuery);

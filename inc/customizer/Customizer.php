@@ -938,6 +938,23 @@ class Azbalac_Customizer
         )));
 
 
+        $wp_customize->add_setting('setting_typography_navbar', array(
+            'capability' => 'edit_theme_options',
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
+        'control_typography_navbar', array(
+            'label' => __('Navigation Header Font', 'azbalac'),
+            'description' => __('Set font of navigatoin header, the navbar. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
+            'section' => 'section_theme_options_typography',
+            'settings' => 'setting_typography_navbar',
+           
+        )));
+
+
+
         $wp_customize->add_setting('setting_typography_body', array(
             'capability' => 'edit_theme_options',
             //'type' => 'option',

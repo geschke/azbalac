@@ -36,6 +36,7 @@ class Azbalac_Customizer_Addon
         // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_headline')->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_body')->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_typography_navbar')->transport = 'postMessage';
         
         //   $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
        

@@ -522,7 +522,7 @@ if ( ! function_exists( 'azbalac_get_navbar_layout' ) ) :
     
     function azbalac_get_navbar_layout() {
     
-         $navbarData = get_option('navbar_fixed');
+         $navbarData = get_option('setting_navbar_fixed');
         
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
@@ -538,7 +538,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
 
     function azbalac_get_header_styles($navbarFixed) {
          
-        $navbarData = get_option('navbar_style', 'light');
+        $navbarData = get_option('setting_navbar_style', 'light');
     
         $navbarStyleClass = '';
 
@@ -549,8 +549,8 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             $navbarStyleClass .= ' navbar-light';
         }
 
-        $navbarBgData = get_option('setting_general_navbar_bg','default');
-        $navbarBgCustomData = get_theme_mod('setting_general_navbar_bg_custom','');
+        $navbarBgData = get_option('setting_navbar_bg','default');
+        $navbarBgCustomData = get_theme_mod('setting_navbar_bg_custom','');
         if (!$navbarBgCustomData) { // don't add bg-* setting to navbar class definition if custom background is set
             if ($navbarBgData == 'default') {
                 $navbarBgSetting = 'bg-' . $navbarData;

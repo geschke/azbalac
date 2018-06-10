@@ -38,6 +38,7 @@ class Azbalac_Customizer
         $this->addCustomizerColors($wp_customize);
 
         $this->addCustomizerGeneralSettings($wp_customize);
+        $this->addCustomizerNavigationSettings($wp_customize);
         $this->addCustomizerTypographySettings($wp_customize);
         $this->addCustomizerPostsSettings($wp_customize);
         $this->addCustomizerIntroductionSectionOptions($wp_customize);
@@ -72,6 +73,15 @@ class Azbalac_Customizer
             'theme_supports' => '',
             'title' => __('General Settings', 'azbalac'),
             'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'azbalac'),
+            'panel' => 'panel_theme_options',
+        ));
+
+        $wp_customize->add_section('section_theme_options_navbar', array(
+            'priority' => 100,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Navigation Bar Settings', 'azbalac'),
+            'description' => __('Edit options of main navigation bar.', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -815,82 +825,6 @@ class Azbalac_Customizer
             'size' => 16)*/
         )));
 
-
-
-        $wp_customize->add_setting('navbar_fixed', array(
-            'default' => 'default',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarFixed')
-        ));
-
-        $wp_customize->add_control('navbar_fixed', array(
-            'label' => __('Navbar fixed options', 'azbalac'),
-            'section' => 'section_theme_options_general',
-            'settings' => 'navbar_fixed',
-            'type' => 'radio',
-            'choices' => array(
-                'default' => __('Default', 'azbalac'),
-                'fixed-top' => __('Fixed to top', 'azbalac')
-            ),
-        ));
-
-        $wp_customize->add_setting('navbar_style', array(
-            'default' => 'light',
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyle')
-        ));
-
-        $wp_customize->add_control('navbar_style', array(
-            'label' => __('Navbar style', 'azbalac'),
-            'section' => 'section_theme_options_general',
-            'settings' => 'navbar_style',
-            'type' => 'radio',
-            'choices' => array(
-                'light' => __('Light', 'azbalac'),
-                'dark' => __('Dark', 'azbalac'),
-            ),
-        ));
-
-        $wp_customize->add_setting('setting_general_navbar_bg', array(
-            'default' => 'default', // default is light or dark, according to navbar_style setting
-            'capability' => 'edit_theme_options',
-            'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarBg')
-        ));
-
-        $wp_customize->add_control('control_general_navbar_bg', array(
-            'label' => __('Navigation Background Color', 'azbalac'),
-            'section' => 'section_theme_options_general',
-            'settings' => 'setting_general_navbar_bg',
-            'type' => 'select',
-            'choices' => array(
-                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
-                'bg-primary' => __('bg-primary', 'azbalac'),
-                'bg-secondary' => __('bg-secondary', 'azbalac'),
-                'bg-success' => __('bg-success', 'azbalac'),
-                'bg-danger' => __('bg-danger', 'azbalac'),
-                'bg-warning' => __('bg-warning', 'azbalac'),
-                'bg-info' => __('bg-info', 'azbalac'),
-                'bg-light' => __('bg-light', 'azbalac'),
-                'bg-dark' => __('bg-dark', 'azbalac'),
-                'bg-white' => __('bg-white', 'azbalac'),
-            ),
-        ));
-
-        $wp_customize->add_setting(
-            'setting_general_navbar_bg_custom', array(
-            'default' => '',
-            'sanitize_callback' => 'sanitize_hex_color',
-        ));
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_general_navbar_bg_custom', 
-            array('label' => __('Custom Navigation Background Color', 'azbalac'),
-            'section' => 'section_theme_options_general',
-            'settings' => 'setting_general_navbar_bg_custom',
-            'description' => __('This is optional. If color is set here, the previous option will be overwritten. To disable this option, set to transparent color.', 'azbalac'),)
-        ));
-
         $wp_customize->add_setting('setting_general_logo_position', array(
             'default' => '1',
             'capability' => 'edit_theme_options',
@@ -911,6 +845,95 @@ class Azbalac_Customizer
         ));
 
     }
+
+
+    /**
+     * Add Navigation bar options to Customizer
+     *
+     * @param type $wp_customize
+     */
+    public function addCustomizerNavigationSettings($wp_customize)
+    {
+
+
+        $wp_customize->add_setting('setting_navbar_fixed', array(
+            'default' => 'default',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarFixed')
+        ));
+
+        $wp_customize->add_control('control_navbar_fixed', array(
+            'label' => __('Navbar fixed options', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'setting_navbar_fixed',
+            'type' => 'radio',
+            'choices' => array(
+                'default' => __('Default', 'azbalac'),
+                'fixed-top' => __('Fixed to top', 'azbalac')
+            ),
+        ));
+
+        $wp_customize->add_setting('setting_navbar_style', array(
+            'default' => 'light',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarStyle')
+        ));
+
+        $wp_customize->add_control('control_navbar_style', array(
+            'label' => __('Navbar style', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'setting_navbar_style',
+            'type' => 'radio',
+            'choices' => array(
+                'light' => __('Light', 'azbalac'),
+                'dark' => __('Dark', 'azbalac'),
+            ),
+        ));
+
+        $wp_customize->add_setting('setting_navbar_bg', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarBg')
+        ));
+
+        $wp_customize->add_control('control_navbar_bg', array(
+            'label' => __('Navigation Background Color', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'setting_navbar_bg',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'bg-primary' => __('bg-primary', 'azbalac'),
+                'bg-secondary' => __('bg-secondary', 'azbalac'),
+                'bg-success' => __('bg-success', 'azbalac'),
+                'bg-danger' => __('bg-danger', 'azbalac'),
+                'bg-warning' => __('bg-warning', 'azbalac'),
+                'bg-info' => __('bg-info', 'azbalac'),
+                'bg-light' => __('bg-light', 'azbalac'),
+                'bg-dark' => __('bg-dark', 'azbalac'),
+                'bg-white' => __('bg-white', 'azbalac'),
+            ),
+        ));
+
+        $wp_customize->add_setting(
+            'setting_navbar_bg_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_navbar_bg_custom', 
+            array('label' => __('Custom Navigation Background Color', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'setting_navbar_bg_custom',
+            'description' => __('This is optional. If color is set here, the previous option will be overwritten. To disable this option, set to transparent color.', 'azbalac'),)
+        ));
+
+      
+
+    }
+
 
 
   /**

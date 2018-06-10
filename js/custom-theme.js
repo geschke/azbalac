@@ -3,7 +3,7 @@
 
 
 /**
- * Customizer Control: JavaScript part of font control
+ * Customizer Control: JavaScript part of theme (i.e. Bootstrap theme) loading control
  *
  * @package     Azbalac Controls
  * @subpackage  Controls
@@ -127,64 +127,12 @@ wp.customize.controlConstructor.azbalac_theme = wp.customize.Control.extend( {
             elementData = {};
         }
 
-
         
         // initialize key events to handle select fields
         $(this.container).on('change', '.customize-theme-input-select', function (event) {
             control.onChangeSelectUpdate(event, $(this), elementData);
         });
 
-        /*$(this.container).on('event_font_gglfont_selected', function(event, element, elementId, data) {
-
-            var selectField = $('#' + elementId).find('.customize-font-input-select-variant');
-            
-            var selectOption = $(selectField).children()[0]; // string "-- select --"
-            selectField.empty().append(selectOption); 
-            
-            _.each(data.variants, function(choiceOption, choiceValue) {
-                // choiceOption is the identifier string
-                var variantData =  {
-                    'value': choiceOption,
-                    'text': choiceOption                                      
-                };
-
-                if (choiceOption == 'regular') { // regular is the default value
-                    // but 'regular' is not stored as default, because it's identically
-                    // to an empty string
-                    variantData['selected'] = 'selected';
-                }
-                $('<option/>', variantData).appendTo(selectField);
-            });
-
-        });
-        */
-
-        /*$(this.container).on('change', '.customize-font-input-select-variant', function (event) {
-            control.onChangeSelectVariantUpdate(event, $(this), elementData);
-        });
-*/
-
-        /*var sizeDefault = $('[id="input_size_' + elementId + '"]').attr('data-default');
-        if (!sizeDefault) {
-            sizeDefault = 0; // it has to be initialized with some value, fallback if no default size is submitted, 0 means nothing set, use size defined by theme
-        }
-        // if available, load current size from stored data
-        if (typeof elementData['size'] != 'undefined') {
-            sizeDefault = elementData['size'];
-        } 
-
-        $('[id="slider_size_' + elementId + '"]').slider({
-            value: sizeDefault, min: 0, max: 120, step: 1,
-            slide: function (event, ui) {
-                $('[id="input_size_' + elementId + '"]').val(ui.value).keyup();
-                
-                control.onChangeSizeUpdate(event, $(this), elementData, ui.value);
-                
-            }
-        });
-        $('[id="input_size_' + elementId + '"]').val($('[id="slider_size_' + elementId + '"]').slider("value"));
-  */
-       
      
     }
 

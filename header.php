@@ -51,13 +51,35 @@ $content['wpHead'] = ob_get_clean();
 if (has_nav_menu('header-menu')) {
     
 
+    $navbarWhitespace = intval(get_option('setting_navbar_menu_whitespace','1'));
+    switch ($navbarWhitespace) {
+        case 5:
+            $menuWhitespace = 'mx-4';
+
+        break;
+        case 4:
+            $menuWhitespace = 'mx-3';
+
+        break;
+        case 3:
+            $menuWhitespace = 'mx-2';
+        break;
+        case 2:
+            $menuWhitespace = 'mx-1';
+        break;
+        case 1:
+        default:
+            $menuWhitespace = '';
+    }
+
     $content['wpNavMenu'] = wp_nav_menu( array( 
     'theme_location' => 'header-menu',
                     'items_wrap' => '%3$s',
                 'container' => '',
                 'menu_class'     => 'nav navbar-nav',
                 'walker' => new HeaderMenuWalker(),
-                'echo' => false
+                'echo' => false,
+                'menuWhitespace' => $menuWhitespace
                 ) );
 
 }

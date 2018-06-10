@@ -586,10 +586,27 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             $headerStyleColorFg = '';
         }
 
+        $navbarAlignment = get_option('setting_navbar_menu_alignment','1'); // left is default
+        switch (intval($navbarAlignment)) {
+            case 3: // right
+                $navbarAlignmentClass = ' justify-content-end';
+            break;
+            case 2: // centered
+                $navbarAlignmentClass = ' justify-content-center';
+            break;
+            case 1: 
+            default: // left
+                $navbarAlignmentClass = '';
+            break;
+        }
+    
+
+
         return array('navbarStyleClass' => $navbarStyleClass,
             'navbarBgCustom' => $navbarBgCustomData,
             'headerStyleColorBg' => $headerStyleColorBg,
-            'headerStyleColorFg' => $headerStyleColorFg
+            'headerStyleColorFg' => $headerStyleColorFg,
+            'navbarAlignment' => $navbarAlignmentClass
         );
     }
 endif;

@@ -874,6 +874,47 @@ class Azbalac_Customizer
             ),
         ));
 
+
+        $wp_customize->add_setting('setting_navbar_menu_alignment', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarMenuAlignment')
+        ));
+
+        $wp_customize->add_control('control_navbar_menu_alignment', array(
+            'label' => __('Menu Alignment', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'description' => __('This setting works only if there is no content defined in the navigation widget area. Otherwise the alignment will be fallback to the default value (left).', 'azbalac'),
+            'settings' => 'setting_navbar_menu_alignment',
+            'type' => 'radio',
+            'choices' => array(
+                '1' => __('Left', 'azbalac'),
+                '2' => __('Centered', 'azbalac'),
+                '3' => __('Right', 'azbalac'),
+            ),
+        ));
+
+        $wp_customize->add_setting('setting_navbar_menu_whitespace', array(
+            'default' => 1,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarWhitespace')
+        ));
+
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_navbar_menu_whitespace', array(
+            'label' => __('Maxiblah homepage', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'setting_navbar_menu_whitespace',
+            'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 5,
+                'step' => 1)
+        )));
+
+
         $wp_customize->add_setting('setting_navbar_style', array(
             'default' => 'light',
             'capability' => 'edit_theme_options',

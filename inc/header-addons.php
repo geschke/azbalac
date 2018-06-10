@@ -125,6 +125,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 	 * @param stdClass $args   An object of wp_nav_menu() arguments.
 	 */
 	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+        //print_r($args);
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			$t = '';
 			$n = '';

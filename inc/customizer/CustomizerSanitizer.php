@@ -58,6 +58,24 @@ class Azbalac_Customizer_Sanitizer
         }
         return $input;
     }
+
+    public function sanitizeNavbarMenuAlignment($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 3) {
+            return 2;
+        }
+        return $input;
+    }
+
+    public function sanitizeNavbarWhitespace($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 5) {
+            return 1;
+        }
+        return $input;
+    }
     
     public function sanitizeSocialButtonSize($input)
     {

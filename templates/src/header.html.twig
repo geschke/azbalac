@@ -113,8 +113,9 @@
     {% if content.showIntroductionElement.1 %}</header></div>{{ content.showIntroductionElements.1|raw }}<header class="masthead"><div class="container">{% endif %}
 {% endif %}
 
+
 {% if content.hasNavMenuHeaderMenu or content.navigationWidgetRight %}
-<nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} _mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -138,26 +139,27 @@
                         <a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
                 {% endif %}
             
-            <div class="navbar-collapse collapse" id="navbarSupportedContent"> 
-                <ul class="navbar-nav mr-auto">
+            <div class="navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
+                <ul class="navbar-nav  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
                     {{ content.wpNavMenu|raw }}
                </ul>
                {% if content.navigationWidgetRight %}
                 <div>
                   {{ content.navigationWidgetRight|raw }}
                 </div>
-                {% endif %}
+               {% endif %}
             </div><!--/.nav-collapse -->
         
             
-</nav> <!-- end navbar-->
-{% else %}
-<p>&nbsp;</p>
+    </nav> <!-- end navbar-->
+{# {% else %}
+<p>&nbsp;</p> #}
 {% endif %}
 
 {% if content.navbarFixed == 'default' %}
       </header>
     </div> <!-- /container -->
+    <br/>
 {% endif %}
 
 

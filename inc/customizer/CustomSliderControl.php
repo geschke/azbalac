@@ -15,7 +15,29 @@ if (!class_exists('WP_Customize_Control'))
 class Azbalac_Custom_Slider_Control extends WP_Customize_Control
 {
 
-    public $type = 'slider';
+    /**
+    * Define the control type
+    */
+    public $type = 'azbalac_slider';
+
+
+    /*Class constructor*/
+    public function __construct($manager, $id, $args = array())
+    {
+        parent::__construct( $manager, $id, $args );
+    
+        // fields could be empty due to initialization by WP_Customize_Manager in print_template()
+        if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
+            $args['fields'] = array();
+        }
+        $this->fields = $args['fields'];
+
+        
+
+        if (! empty( $args['id'] )) {
+            $this->id = $args['id'];
+        }
+    }
 
     public function enqueue()
     {
@@ -31,6 +53,11 @@ class Azbalac_Custom_Slider_Control extends WP_Customize_Control
         $protocol = is_ssl() ? 'https' : 'http';
         $url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
         wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
+
+
+        wp_enqueue_script( 'customizer-slider-script', get_template_directory_uri().'/js/custom-slider.js', array( 'jquery'), '', true );
+
+     
     }
 
     public function render_content()
@@ -51,7 +78,7 @@ class Azbalac_Custom_Slider_Control extends WP_Customize_Control
                 <?php endif; ?>
             </span>
 
-            <input type="text"  id="input_<?php echo $this->id; ?>" disabled value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
+            <input class="customize-control-slider-value" type="text"  id="input_<?php echo $this->id; ?>" disabled value="<?php echo $this->value(); ?>" <?php $this->link(); ?>/>
 
         </label>
 

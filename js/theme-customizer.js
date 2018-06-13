@@ -59,7 +59,6 @@
         value.bind(function (data) {
             fontData = JSON.parse(decodeURI(data));
            
-            console.log(fontData);
             var sizeBase = 16; // defined in Bootstrap
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
                
@@ -234,7 +233,7 @@
                 var sizeBase = fontData['size'];
             } 
 
-            $('nav').css('font-size', sizeBase);
+            $('nav#navbarMain').css('font-size', sizeBase);
         
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 
@@ -255,11 +254,11 @@
                     $('<link/>',linkData).appendTo("head");
 
                 }
-                $('nav').css('font-family', fontData['font']);
+                $('nav#navbarMain').css('font-family', fontData['font']);
             
     
             } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
-                $('body').css('font-family','');
+                $('nav#navbarMain').css('font-family','');
                 if ($('#typography-navbar-font').length) {
                     $('#typography-navbar-font').remove();
                 }
@@ -282,7 +281,7 @@
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
                         if (res != null) {
-                            $('nav').css('font-family', res[fontData['font']]);
+                            $('nav#navbarMain').css('font-family', res[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {

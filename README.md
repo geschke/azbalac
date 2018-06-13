@@ -12,6 +12,7 @@ Version 0.2.4
 Version 0.2.4
 - New feature: The font in the navigation bar is now editable with a new customizer option in the typography settings area.
 - New feature: The whitespace between main menu entries in the navigation bar can be modified in five steps. This can be useful when increasing the font size of the menu entries to make the whitespace fit to the font size. 
+- Fix: Live preview of navigation bar font modifications 
 
 Version 0.2.3
 - Fix: Show menu area only when menu or widget content in menu bar is present

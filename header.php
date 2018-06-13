@@ -50,8 +50,22 @@ $content['wpHead'] = ob_get_clean();
 
 if (has_nav_menu('header-menu')) {
     
+    $navbarAlignment = get_option('setting_navbar_menu_alignment','1'); // left is default
+    switch (intval($navbarAlignment)) {
+        case 3: // right
+            $whitespacePosition = 'l';
+        break;
+        case 2: // centered
+            $whitespacePosition = 'm';
+        break;
+        case 1: 
+        default: // left
+            $whitespacePosition = 'r';
+        break;
+    }
 
     $navbarWhitespace = intval(get_option('setting_navbar_menu_whitespace','1'));
+   
     switch ($navbarWhitespace) {
         case 5:
             $menuWhitespace = 'mx-4';
@@ -79,7 +93,9 @@ if (has_nav_menu('header-menu')) {
                 'menu_class'     => 'nav navbar-nav',
                 'walker' => new HeaderMenuWalker(),
                 'echo' => false,
-                'menuWhitespace' => $menuWhitespace
+                'menuWhitespace' => $menuWhitespace,
+                'menuWhitespacePosition' => $whitespacePosition
+
                 ) );
 
 }

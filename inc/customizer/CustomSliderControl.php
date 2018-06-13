@@ -31,7 +31,6 @@ class Azbalac_Custom_Slider_Control extends WP_Customize_Control
             $args['fields'] = array();
         }
         $this->fields = $args['fields'];
-
         
 
         if (! empty( $args['id'] )) {
@@ -59,6 +58,33 @@ class Azbalac_Custom_Slider_Control extends WP_Customize_Control
 
      
     }
+
+
+    
+    public function to_json()
+    {
+        
+        parent::to_json();
+/*
+        // Get default options 
+        $this->json['default'] = ( isset( $this->default ) ) ? $this->default : $this->setting->default;
+
+        // shortcut to use as identifier for the current control in underscore template
+        $this->json['identifier'] = $this->json['settings']['default'];
+
+        $values = $this->value();
+        $json = json_decode( $values );
+
+        if (! is_array( $json )) {
+            $json = array( $values );
+        }
+    
+      
+        $this->json['value'] = $json;
+        $this->json['defaults'] = $this->defaults;
+  */  
+    }
+
 
     public function render_content()
     {

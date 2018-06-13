@@ -73,10 +73,17 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 
         $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
         
-        // build html
-        //if ($depth <= 0) {
-            $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
-        //}
+       
+        $output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . ' ';
+        $argsArray = (array) $args;
+        if ($depth <= 0 &&  isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'm' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {
+            $output .= $argsArray['menuWhitespace'];
+        }
+        $output .= '"><div class="d-flex">';
+        if ($depth <= 0 && isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'l' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {
+            $output .= '<span class="' . $argsArray['menuWhitespace'] . '"></span>';
+        }
+    
 
         // link attributes
         $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
@@ -121,11 +128,11 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 	 *
 	 * @param string   $output Used to append additional content (passed by reference).
 	 * @param WP_Post  $item   Page data object. Not used.
-	 * @param int      $depth  Depth of page. Not Used.
+	 * @param int      $depth  Depth of page. 
 	 * @param stdClass $args   An object of wp_nav_menu() arguments.
 	 */
 	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-        //print_r($args);
+        
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			$t = '';
 			$n = '';
@@ -133,9 +140,15 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 			$t = "\t";
 			$n = "\n";
         }
-        //if ($depth <= 0) {
-            $output .= "</li>{$n}";
-        //}
+        $output .= "</div></li>";
+        $output .= "</li>";
+
+        $argsArray = (array) $args;
+        if ($depth <= 0 && isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'r' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {
+            $output .= '<span class="' . $argsArray['menuWhitespace'] . '"></span>';
+        }
+        $output .= "{$n}"; // why? don't know...
+        
 	}
 
 

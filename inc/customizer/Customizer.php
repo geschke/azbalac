@@ -898,7 +898,8 @@ class Azbalac_Customizer
         $wp_customize->add_setting('setting_navbar_menu_whitespace', array(
             'default' => 1,
             'capability' => 'edit_theme_options',
-            'type' => 'option',
+            'type' => 'option', // necessary!!!
+            'transport' => 'refresh',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarWhitespace')
         ));
 
@@ -907,7 +908,7 @@ class Azbalac_Customizer
             'label' => __('Maxiblah homepage', 'azbalac'),
             'section' => 'section_theme_options_navbar',
             'settings' => 'setting_navbar_menu_whitespace',
-            'type' => 'slider',
+            //'type' => 'slider',
             'choices' => array(
                 'min' => 1,
                 'max' => 5,
@@ -1194,6 +1195,7 @@ class Azbalac_Customizer
         $wp_customize->add_setting('featured_articles_max', array(
             'default' => 10,
             'capability' => 'edit_theme_options',
+            'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeFeaturedArticles')
         ));
 

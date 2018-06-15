@@ -55,6 +55,13 @@ class Azbalac_Customizer_Addon
         ) );
 
 
+        $this->customizer->get_setting( 'setting_subfooter_content' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('setting_subfooter_content', array(
+            'selector' => '.subfooter .site-info',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialSubfooterContent')
+        ));
+
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
 
@@ -73,6 +80,15 @@ class Azbalac_Customizer_Addon
     {
         bloginfo('description');
     }
+
+    /**
+     * Render the subfooter selective refresh partial
+     */
+    public function customizePartialSubfooterContent() 
+    {
+        Azbalac_Section_Subfooter::buildContentRaw();
+    }
+
 
     /**
     * Used by hook: 'customize_preview_init'

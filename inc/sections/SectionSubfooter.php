@@ -51,13 +51,10 @@ class Azbalac_Section_Subfooter
         if (intval($footerActivate) !== 1) {
           return '';
         }
+        $content = self::getContentRaw();
         $content = get_theme_mod('setting_subfooter_content');
         if ($content === false) {
-            // no value in database, so the option is not overwritten, use default
-            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
-        }
-        if (!$content) {
-            return; // no output
+            return;
         }
         $styles = self::getStyleData();
         
@@ -71,6 +68,24 @@ class Azbalac_Section_Subfooter
 </div>
 </div>';
         return $output;
+    }
+
+    public static function buildContentRaw()
+    {
+        echo self::getContentRaw();
+    }
+
+    public static function getContentRaw()
+    {
+        $content = get_theme_mod('setting_subfooter_content');
+        if ($content === false) {
+            // no value in database, so the option is not overwritten, use default
+            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
+        }
+        if (!$content) {
+            return false; // no output
+        }
+        return $content;
     }
 
     public static function getStyleData()

@@ -4,10 +4,13 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2.4
+Version 0.2.5
 
 
 ## Version history:
+
+Version 0.2.5
+- Add some edit shortcuts to improve the customizer user experience
 
 Version 0.2.4
 - New feature: The font in the navigation bar is now editable with a new customizer option in the typography settings area.

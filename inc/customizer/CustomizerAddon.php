@@ -40,8 +40,38 @@ class Azbalac_Customizer_Addon
         
         //   $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
        
+        $this->customizer->get_setting( 'blogname' )->transport        = 'postMessage';
+        $this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
+    
+        $this->customizer->selective_refresh->add_partial( 'blogname', array(
+            'selector' => '#site-header-text a',
+            'container_inclusive' => false,
+            'render_callback' => array($this,'customizePartialBlogName')
+        ) );
+        $this->customizer->selective_refresh->add_partial( 'blogdescription', array(
+            'selector' => '#site-description',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialBlogDescription')
+        ) );
+
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
+    }
+
+    /**
+     * Render the blog name selective refresh partial
+     */
+    public function customizePartialBlogName()
+    {
+        bloginfo('name');
+    }
+
+    /**
+     * Render the blog description selective refesh partial 
+     */
+    public function customizePartialBlogDescription() 
+    {
+        bloginfo('description');
     }
 
     /**

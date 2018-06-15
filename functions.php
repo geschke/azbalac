@@ -152,6 +152,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
         add_editor_style( 'css/editor-style.css' );
 
         add_theme_support( 'title-tag' );
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
         add_action( 'admin_enqueue_scripts', 'azbalac_admin_enqueue_scripts' );
         

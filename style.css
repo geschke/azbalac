@@ -480,7 +480,7 @@ table > thead:first-child > tr:first-child > td {
 }
 
 .section-introduction .row .section-title, 
-.section-introduction .row .section-description {
+.section-introduction .row .section-subtitle {
     text-align: center;
 }
 

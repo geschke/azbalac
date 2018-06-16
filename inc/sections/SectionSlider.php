@@ -6,7 +6,7 @@
  *
  * @package   WordPress
  * @subpackage Azbalac
- * @since Azbalac 0.5.0
+ * @since Azbalac 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */

@@ -54,12 +54,27 @@ class Azbalac_Customizer_Addon
             'render_callback' => array($this, 'customizePartialBlogDescription')
         ) );
 
-
+        
         $this->customizer->get_setting( 'setting_subfooter_content' )->transport = 'postMessage';
         $this->customizer->selective_refresh->add_partial('setting_subfooter_content', array(
             'selector' => '.subfooter .site-info',
             'container_inclusive' => false,
             'render_callback' => array($this, 'customizePartialSubfooterContent')
+        ));
+
+
+        $this->customizer->get_setting( 'setting_introduction_area_title' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('setting_introduction_area_title', array(
+            'selector' => '#section-introduction .section-title',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialIntroductionAreaTitle')
+        ));
+
+        $this->customizer->get_setting( 'setting_introduction_area_subtitle' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('setting_introduction_area_subtitle', array(
+            'selector' => '#section-introduction .section-subtitle',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialIntroductionAreaSubtitle')
         ));
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
@@ -89,6 +104,15 @@ class Azbalac_Customizer_Addon
         Azbalac_Section_Subfooter::buildContentRaw();
     }
 
+    public function customizePartialIntroductionAreaTitle()
+    {
+        echo Azbalac_Section_Content_Column::getIntroductionTitle();
+    }
+
+    public function customizePartialIntroductionAreaSubtitle()
+    {
+        echo Azbalac_Section_Content_Column::getIntroductionSubtitle();
+    }
 
     /**
     * Used by hook: 'customize_preview_init'

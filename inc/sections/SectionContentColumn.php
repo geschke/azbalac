@@ -16,6 +16,16 @@ class Azbalac_Section_Content_Column
 
     protected static $disableReadMore = false;
 
+    public static function getIntroductionTitle()
+    {
+        return get_theme_mod('setting_introduction_area_title');
+    }
+
+    public static function getIntroductionSubtitle()
+    {
+        return get_theme_mod('setting_introduction_area_subtitle');
+    }
+
     public static function getIntroductionElements($position) 
     {
        
@@ -88,7 +98,7 @@ class Azbalac_Section_Content_Column
 				    <div class="row">
               <div class="col-md-8 offset-md-2">
               <?php if ($introTitle) { ?><h2 class="section-title"><?php echo $introTitle ?></h2><?php } ?>
-              <?php if ($introSubtitle) { ?><h5 class="section-description"><?php echo $introSubtitle ?></h5><?php } ?>
+              <?php if ($introSubtitle) { ?><h5 class="section-subtitle"><?php echo $introSubtitle ?></h5><?php } ?>
 						  </div>
           </div>
           <?php } ?>

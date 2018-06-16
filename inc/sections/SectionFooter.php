@@ -17,11 +17,13 @@ class Azbalac_Section_Footer
     {
         $output = '';
         $output .= sprintf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
+       
         if (!is_active_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
             $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'azbalac') . '</h3>' .
             '<div class="error-icon">' .
             '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'azbalac'), $footerNumber) . '</p>' .
-            '<a href="' . esc_url(admin_url('widgets.php')) . '" title="' . __('No Widgets Selected', 'azbalac') . '">' . __('Click here to go to Widget area.', 'azbalac') . '</a>' . '</div>';
+            '<p>' . sprintf(__("If you want to leave the space empty, simply add a text or html widget with no content to the Footer Widget Area #%d.", 'azbalac'), $footerNumber) . '</p>' .
+            '</div>';
         } else {
             ob_start();
             dynamic_sidebar(sprintf("footer-sidebar-%d", $footerNumber));

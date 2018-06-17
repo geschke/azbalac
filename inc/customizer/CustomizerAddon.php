@@ -77,6 +77,16 @@ class Azbalac_Customizer_Addon
             'render_callback' => array($this, 'customizePartialIntroductionAreaSubtitle')
         ));
 
+
+
+        $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('setting_introduction_area_elements', array(
+            'selector' => '.azbalac-introduction .section-introduction-elements',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialIntroductionAreaElements')
+        ));
+
+
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
 
@@ -112,6 +122,11 @@ class Azbalac_Customizer_Addon
     public function customizePartialIntroductionAreaSubtitle()
     {
         echo Azbalac_Section_Content_Column::getIntroductionSubtitle();
+    }
+
+    public function customizePartialIntroductionAreaElements()
+    {
+        echo Azbalac_Section_Content_Column::getElementBox(false);
     }
 
     /**

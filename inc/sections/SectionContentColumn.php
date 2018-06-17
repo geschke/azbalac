@@ -52,29 +52,51 @@ class Azbalac_Section_Content_Column
        
         $introTitle = get_theme_mod('setting_introduction_area_title');
         $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
+       
+      
+      
+       
+        $colorBgData = get_theme_mod('setting_introduction_area_color_bg');
+        
+        if ($colorBgData) {
+            $styleColorBg = ' background-color: ' . $colorBgData . ';';
+        } else {
+            $styleColorBg = '';
+        }
+   
+        ?>
+        <div class="container azbalac-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
+            <div class="azbalac-introduction">
+
+        <section class="section-introduction" id="section-introduction">
+          <?php if ($introTitle || $introSubtitle) { ?>
+				    <div class="row">
+              <div class="col-md-8 offset-md-2">
+              <?php if ($introTitle) { ?><h2 class="section-title"><?php echo $introTitle ?></h2><?php } ?>
+              <?php if ($introSubtitle) { ?><h5 class="section-subtitle"><?php echo $introSubtitle ?></h5><?php } ?>
+						  </div>
+          </div>
+          <?php 
+          } 
+
+          echo self::getElementBox();
+          ?>
+          </section>
+        </div>
+        </div>
+        <?php
+    }
+
+    public static function getElementBox($withRow = true)
+    {
+        $output = '';
         $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
+
         $disableReadMore = get_option('setting_introduction_area_readmore', false);
         if (intval($disableReadMore) === 1) {
             self::$disableReadMore = true;
         }
-      
-        //echo "<pre>";
-      //var_dump($introActivate);
-      //echo "</pre>";
-      //die;
-      //print_r($introTitle);
-      //print_r($introSubtitle);
-      //print_r($introElements);
-      //echo count($introElements);
-      $colorBgData = get_theme_mod('setting_introduction_area_color_bg');
-      
-      if ($colorBgData) {
-          $styleColorBg = ' background-color: ' . $colorBgData . ';';
-      } else {
-          $styleColorBg = '';
-      }
 
-      
         if (is_object($introElements)) {
             $numberElements = count(get_object_vars($introElements));
         } else {
@@ -88,42 +110,23 @@ class Azbalac_Section_Content_Column
         if ($numberElements % self::MAX_COLUMNS > 0) {
             // do something?
         }
-      //echo "ColumnClass: $columnClass";
-        ?>
-        <div class="container azbalac-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
-            <div class="azbalac-introduction">
 
-        <section class="section-introduction" id="section-introduction">
-          <?php if ($introTitle || $introSubtitle) { ?>
-				    <div class="row">
-              <div class="col-md-8 offset-md-2">
-              <?php if ($introTitle) { ?><h2 class="section-title"><?php echo $introTitle ?></h2><?php } ?>
-              <?php if ($introSubtitle) { ?><h5 class="section-subtitle"><?php echo $introSubtitle ?></h5><?php } ?>
-						  </div>
-          </div>
-          <?php } ?>
-        <div class="row">
-        <?php
+        if ($withRow) $output .= '<div class="row section-introduction-elements">';
 
         foreach ($introElements as $element) {
-            //var_dump($element);
-            self::showElement($element, $columnClass);
+            $output .= self::showElement($element, $columnClass);
         }
      
-        ?>
-        </div><!-- /.row -->
-        </section>
-        </div>
-        </div>
-        <?php
+        if ($withRow) $output .= '</div><!-- /.row -->';
+        return $output;
     }
-
 
     protected static function showElement($element, $columnClass)
     {
         $header = '';
         $title = '';
         $content = '';
+        $output = '';
         if (isset($element->elements->title->value)) {
             $title = $element->elements->title->value;
         }
@@ -178,19 +181,15 @@ class Azbalac_Section_Content_Column
           $header = $image;
         }
        
-        printf('<div class="col-lg-%d col-md-%d col-sm-%d introduction-box">', $columnClass, $columnClass, $columnClass);
-        ?>
-                  <a href="<?php echo $url; ?>"><?php echo $header; ?></a>
-                  <h2><a class="section-introduction-url" href="<?php echo $url; ?>"><?php echo $title; ?></a></h2>
-                  <p><?php echo $content; ?></p>
-                  <?php if (!self::$disableReadMore) { ?>
-                  <p><a class="btn btn-default" href="<?php echo $url; ?>" role="button"><?php echo __("Read more &raquo;",'azbalac'); ?></a></p>
-                  <?php } ?>
+        $output .= sprintf('<div class="col-lg-%d col-md-%d col-sm-%d introduction-box">', $columnClass, $columnClass, $columnClass);
 
-
-                     
-      
-        <?php
-        printf(' </div><!-- /.col-lg-%d -->', $columnClass);
+        $output .= '<a href="' . $url . '">' . $header . '</a>';
+        $output .= '<h2><a class="section-introduction-url" href="' . $url . '">' . $title . '</a></h2>';
+        $output .= '<p>' . $content . '</p>';
+        if (!self::$disableReadMore) { 
+            $output .= '<p><a class="btn btn-default" href="' . $url .'" role="button">' . __("Read more &raquo;",'azbalac') . '</a></p>';
+        }
+        $output .= sprintf(' </div><!-- /.col-lg-%d -->', $columnClass);
+        return $output;
     }
 }

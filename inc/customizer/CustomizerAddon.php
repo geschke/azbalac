@@ -125,6 +125,24 @@ class Azbalac_Customizer_Addon
         ));
 
 
+        
+
+        $this->customizer->get_setting( 'setting_footer_activate' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_footer_layout' )->transport = 'postMessage';
+        
+        $this->customizer->selective_refresh->add_partial('setting_footer_activate', array(
+            'selector' => '.azbalac-footer', // todo here...the same as with social media buttons
+            'container_inclusive' => false,
+            'settings' => array(
+                'setting_footer_activate',
+                'setting_footer_layout',
+              
+            ),
+            'render_callback' => array($this, 'customizePartialFooter')
+        ));
+
+
+
         add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
 
@@ -174,8 +192,12 @@ class Azbalac_Customizer_Addon
 
     public function customizePartialSlider()
     {
-        $position = get_option('setting_slider_position');
         echo  Azbalac_Section_Slider::buildContainer();
+    }
+
+    public function customizePartialFooter()
+    {
+        echo  Azbalac_Section_Footer::get();
     }
 
 

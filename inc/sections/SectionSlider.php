@@ -15,24 +15,45 @@ class Azbalac_Section_Slider
 
     public static function getSlider($position) 
     {
-        ob_start();
-        self::showSlider($position);
-        $output = ob_get_clean();
-        return $output;
+        /*if (!get_option('setting_slider_activate')) {
+            return '';
+        }*/
+        if (get_option('setting_slider_position') != $position) {
+            return '';
+        }
+        return self::build();
     }
 
     public static function showSlider($position)
     {
-        if (!get_option('setting_slider_activate')) {
-            return '';
-        }
-        if (get_option('setting_slider_position') != $position) {
-            return '';
-        }
-        self::build();
+        echo self::getSlider($position);
     }
 
     public static function build()
+    {
+        $output = '';
+        
+        $output .= '<div class="container"><!-- slider section -->';
+
+        $output .= self::buildContainer();
+
+        $output .= '</div><!-- end slider section -->';
+
+        return $output;
+    }
+
+    public static function buildContainer()
+    {
+        if (!get_option('setting_slider_activate')) {
+            return '';
+        }
+        ob_start();
+        self::showContainer();
+        $output = ob_get_clean();
+        return $output;
+    }
+
+    public static function showContainer()
     {
         // this is too late, so set above...
         //add_action( 'wp_enqueue_scripts', 'azbalac_set_slider_text_style' );
@@ -64,7 +85,7 @@ class Azbalac_Section_Slider
         
         ?>
 
-        <div class="container"><!-- slider section -->
+        
         <div id="azbalacSlider" class="azbalac-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
         <?php if ($sliderIndicators === true) { ?>
         <!-- Indicators -->
@@ -163,7 +184,7 @@ class Azbalac_Section_Slider
         <span class="sr-only"><?php echo  __( 'Next', 'azbalac' ); ?></span>
         </a>
     </div>
-    </div><!-- end slider section -->
+    
 
             <?php
     }

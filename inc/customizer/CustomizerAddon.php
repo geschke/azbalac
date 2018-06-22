@@ -89,12 +89,6 @@ class Azbalac_Customizer_Addon
         
 
         $this->customizer->get_setting( 'setting_social_media_activate' )->transport = 'postMessage';
-        /*$this->customizer->selective_refresh->add_partial('setting_social_media_activate', array(
-            'selector' => '.social-media-buttons',
-            'container_inclusive' => false,
-            'render_callback' => array($this, 'customizePartialSocialMediaButtons')
-        ));
-*/
         $this->customizer->get_setting( 'setting_social_media_alignment' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_social_button_size' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_social_button_type' )->transport = 'postMessage';
@@ -115,7 +109,23 @@ class Azbalac_Customizer_Addon
             'render_callback' => array($this, 'customizePartialSocialMediaButtons')
         ));
 
-         add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
+        
+        $this->customizer->get_setting( 'setting_slider_activate' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_slider_indicators' )->transport = 'postMessage';
+        
+        $this->customizer->selective_refresh->add_partial('setting_slider_activate', array(
+            'selector' => '.azbalac-slider', // todo here...the same as with social media buttons
+            'container_inclusive' => true,
+            'settings' => array(
+                'setting_slider_activate',
+                'setting_slider_indicators'
+              
+            ),
+            'render_callback' => array($this, 'customizePartialSlider')
+        ));
+
+
+        add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
 
     /**
@@ -161,6 +171,13 @@ class Azbalac_Customizer_Addon
     {
         echo Azbalac_Section_Social_Media_Buttons::getButtonsContainer();
     }
+
+    public function customizePartialSlider()
+    {
+        $position = get_option('setting_slider_position');
+        echo  Azbalac_Section_Slider::buildContainer();
+    }
+
 
     /**
     * Used by hook: 'customize_preview_init'

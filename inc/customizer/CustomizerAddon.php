@@ -86,6 +86,34 @@ class Azbalac_Customizer_Addon
             'render_callback' => array($this, 'customizePartialIntroductionAreaElements')
         ));
 
+        
+
+        $this->customizer->get_setting( 'setting_social_media_activate' )->transport = 'postMessage';
+        /*$this->customizer->selective_refresh->add_partial('setting_social_media_activate', array(
+            'selector' => '.social-media-buttons',
+            'container_inclusive' => false,
+            'render_callback' => array($this, 'customizePartialSocialMediaButtons')
+        ));
+*/
+        $this->customizer->get_setting( 'setting_social_media_alignment' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_social_button_size' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_social_button_type' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_social_button_color_fg' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_social_button_color_bg' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_social_button_color_bg_hover' )->transport = 'postMessage';
+
+        $this->customizer->selective_refresh->add_partial('setting_social_media_activate', array(
+            'selector' => '.social-media-buttons',
+            'container_inclusive' => false,
+            'settings' => array(
+                'setting_social_media_activate',
+                'setting_social_media_alignment',
+                'setting_social_button_size',
+                'setting_social_button_type',
+              
+            ),
+            'render_callback' => array($this, 'customizePartialSocialMediaButtons')
+        ));
 
          add_action('customize_preview_init', array($this, 'customizeRegisterLivePreview'));
     }
@@ -126,7 +154,12 @@ class Azbalac_Customizer_Addon
 
     public function customizePartialIntroductionAreaElements()
     {
-        echo Azbalac_Section_Content_Column::getElementBox(false);
+        echo Azbalac_Section_Content_Column::getElementBox(false); // without surrounding row/box
+    }
+
+    public function customizePartialSocialMediaButtons()
+    {
+        echo Azbalac_Section_Social_Media_Buttons::getButtonsContainer();
     }
 
     /**

@@ -41,6 +41,21 @@ class Azbalac_Section_Social_Media_Buttons
     public static function buildButtons()
     {
         $output = '';
+        
+        $output .= '<div class="container">';
+
+        $output .= self::getButtonsContainer();
+        $output .= '</div>';
+
+        return $output;
+    }
+
+    public static function getButtonsContainer()
+    {
+        $output = '';
+        if (!get_option('setting_social_media_activate',false)) {
+            return $output;
+        }
         $socialButtons = array('social_media_facebook' => 'facebook',
         'social_media_github' => 'github',
         'social_media_google' => 'google-plus',
@@ -64,25 +79,22 @@ class Azbalac_Section_Social_Media_Buttons
         }
         $buttonSize = get_option('setting_social_button_size','2');
         $buttonType = get_option('setting_social_button_type','1');
-        $output .= '    
-
-<div class="container">
-<div class="col-md-12 social-media-buttons"> 
-    <div style="text-align: ' . $align . '">';
         
+
+        $output .= '
+        <div class="col-md-12 social-media-buttons"> 
+        <div style="text-align: ' . $align . '">';
+                
         $socialOutput = '';
         foreach ($socialButtons as $socialOption => $socialIcon) {
             $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType);
         }
         $output .= $socialOutput;
-        $output .= '
-        </div>
-</div>
-</div>';
 
-    return $output;
-}
-
+        $output .= '</div>
+        </div>';
+        return $output;        
+    }
 
     protected static function buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType)
     {
@@ -117,11 +129,12 @@ class Azbalac_Section_Social_Media_Buttons
     public static function addSocialButtonStyle()
     {
         wp_enqueue_style(
-            'azbalac-default-style',
+            'azbalac-default-style-socialmediabuttons',
             get_template_directory_uri() . '/css/default.css'
         );
          
-        $css = '';
+      
+        $css = "\n"; // dummy to generate the style block when no colors defined
         $social_button_color_bg_hover = get_theme_mod('setting_social_button_color_bg_hover');
         $social_button_color_bg = get_theme_mod('setting_social_button_color_bg');
         $social_button_color_fg = get_theme_mod('setting_social_button_color_fg');
@@ -147,7 +160,24 @@ class Azbalac_Section_Social_Media_Buttons
                     ";
         }
         
+        //$js = 'var setting_social_button_color_bg_hover="' . $social_button_color_bg_hover .'";';
        
-        wp_add_inline_style( 'azbalac-default-style', $css );
+        wp_add_inline_style( 'azbalac-default-style-socialmediabuttons', $css );
+
+      
+        //wp_add_inline_script('azbalac-default-script-socialmediabuttons',$js);
+
+        wp_enqueue_script( 'azbalac-social-media-buttons', get_template_directory_uri().'/js/social-media-buttons.js', array( 'jquery'), '', true );
+        
+        //wp_add_inline_script('azbalac-social-media-buttons',$js);
+        wp_localize_script( 'azbalac-social-media-buttons', 'objectSocialMediaButtons', array(
+            'social_button_color_bg_hover' => $social_button_color_bg_hover,
+            'social_button_color_bg' => $social_button_color_bg,
+            'social_button_color_fg' => $social_button_color_fg
+
+        ) );
+
+    
+
     }
 }

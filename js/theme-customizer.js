@@ -2,6 +2,25 @@
 
 (function ($) {
 
+
+    $.setSocialMediaButtonColors = function(colors) {
+
+        var inlineText = '';
+        if (colors.social_button_color_bg_hover) {
+            inlineText +=  ".socialhover { color: " + colors.social_button_color_bg_hover + ' !important; } ';
+        }
+        if (colors.social_button_color_bg) {
+            inlineText += " .innersocialbg { color: " + colors.social_button_color_bg + '; }';
+
+        }
+        if (colors.social_button_color_fg) {
+            inlineText += " .innersocial { color: " + colors.social_button_color_fg + '; }';
+
+        }
+        $('#azbalac-default-style-socialmediabuttons-inline-css').text(inlineText);
+
+    };
+
     // todo later
     // Realtime view of site name
     /*wp.customize('blogname', function (value) {
@@ -52,6 +71,31 @@
     wp.customize('color_bg_sidebar', function (value) {
         value.bind(function (col) {
             $('#primary-sidebar > div > div').css('background-color', col);
+        });
+    });
+
+    wp.customize('setting_social_button_color_fg', function (value) {
+        value.bind(function (col) {
+            //$('.innersocial').css('color', col);
+            objectSocialMediaButtons.social_button_color_fg = col;
+            $.setSocialMediaButtonColors(objectSocialMediaButtons);
+
+        });
+    });
+
+    wp.customize('setting_social_button_color_bg', function (value) {
+        value.bind(function (col) {
+            //$('.innersocialbg').css('color', col);
+            objectSocialMediaButtons.social_button_color_bg = col;
+            $.setSocialMediaButtonColors(objectSocialMediaButtons);
+        });
+    });
+
+    wp.customize('setting_social_button_color_bg_hover', function (value) {
+        value.bind(function (col) {
+            //$('.socialhover').css('color', col);
+            objectSocialMediaButtons.social_button_color_bg_hover = col;
+            $.setSocialMediaButtonColors(objectSocialMediaButtons);
         });
     });
 

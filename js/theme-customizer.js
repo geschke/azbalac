@@ -116,16 +116,18 @@
             var sizeH5 = sizeBase.toString() + 'px';
             var sizeH6 = Math.ceil(sizeBase * 0.85).toString() + 'px';
             var sizeJumbotronHeading = Math.ceil(sizeBase * 4.5).toString() + 'px';
-            var sizeSubtitle = Math.floor(sizeBase * 1.5).toString() + 'px';
+            //var sizeSubtitle = Math.floor(sizeBase * 1.5).toString() + 'px';
 
-            $('h1').not(".azbalac-jumbotron").css('font-size', sizeH1);
+            $('h1').not(".azbalac-jumbotron").not("#site-header-text").css('font-size', sizeH1);
             $('.jumbotron h1').css('font-size', sizeJumbotronHeading);
-            $('h2').css('font-size', sizeH2);
+
+            $('h2').not("#site-description").css('font-size', sizeH2);
+            
             $('h3').css('font-size', sizeH3);
             $('h4').css('font-size', sizeH4);
             $('h5').css('font-size', sizeH5);
             $('h6').css('font-size', sizeH6);
-            $('#site-description').css('font-size',sizeSubtitle);
+            //$('#site-description').css('font-size',sizeSubtitle);
         
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 
@@ -326,6 +328,159 @@
                     success: function (res, textStatus, jqXHR) {
                         if (res != null) {
                             $('nav#navbarMain').css('font-family', res[fontData['font']]);
+                        }
+                    },
+                    error: function (errorMessage) {
+                        // later: show error?
+                    }
+                 
+                });     
+            }
+
+          
+          
+
+        });
+       
+    });
+
+
+    wp.customize('setting_typography_title', function (value) {
+        value.bind(function (data) {
+            
+            fontData = JSON.parse(decodeURI(data));
+            var sizeBase = '2.5rem'; // defined in Bootstrap
+            if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
+                var sizeBase = fontData['size'];
+            } 
+
+            $('#site-header-text a').css('font-size', sizeBase);
+        
+            if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
+
+                var fontVariant = '';
+                if (typeof fontData['gglfontdata'] != 'undefined' && fontData['gglfontdata'] != null && typeof fontData['gglfontdata']['variant'] != 'undefined' && fontData['gglfontdata']['variant'] != 'regular') {
+                    fontVariant = ':' + fontData['gglfontdata']['variant'];
+                }
+
+                if ($('#typography-title-font').length) {
+
+                    $('#typography-title-font').attr('href','https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font'])+ fontVariant);
+                } else {
+                    var linkData = {
+                        'id': 'typography-title-font',
+                        'href':'https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font']) + fontVariant,
+                        'rel': 'stylesheet'
+                    };
+                    $('<link/>',linkData).appendTo("head");
+
+                }
+                $('#site-header-text a').css('font-family', fontData['font']);
+            
+    
+            } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
+                $('#site-header-text a').css('font-family','');
+                $('#site-header-text a').css('font-size','');
+                if ($('#typography-title-font').length) {
+                    $('#typography-title-font').remove();
+                }
+                if ($('#typography-title').length) {
+                    $('#typography-title').remove();
+                }
+                
+
+            } else { // default font
+                
+                var requestData = {
+                    action: "azbalac_get_default_font_data_action"
+                }
+    
+                $.ajax({
+                    type: "POST",
+                    url: azbalacAjax.ajaxurl,
+         
+                    dataType: "json",
+                    data: requestData,
+                    success: function (res, textStatus, jqXHR) {
+                        if (res != null) {
+                            $('#site-header-text a').css('font-family', res[fontData['font']]);
+                        }
+                    },
+                    error: function (errorMessage) {
+                        // later: show error?
+                    }
+                 
+                });     
+            }
+
+          
+          
+
+        });
+       
+    });
+
+
+    wp.customize('setting_typography_subtitle', function (value) {
+        value.bind(function (data) {
+            
+            fontData = JSON.parse(decodeURI(data));
+            var sizeBase = '2rem'; // ?? rem? todo
+            if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
+                var sizeBase = fontData['size'];
+            } 
+
+            $('#site-description').css('font-size', sizeBase);
+        
+            if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
+
+                var fontVariant = '';
+                if (typeof fontData['gglfontdata'] != 'undefined' && fontData['gglfontdata'] != null && typeof fontData['gglfontdata']['variant'] != 'undefined' && fontData['gglfontdata']['variant'] != 'regular') {
+                    fontVariant = ':' + fontData['gglfontdata']['variant'];
+                }
+
+                if ($('#typography-subtitle-font').length) {
+
+                    $('#typography-subtitle-font').attr('href','https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font'])+ fontVariant);
+                } else {
+                    var linkData = {
+                        'id': 'typography-subtitle-font',
+                        'href':'https://fonts.googleapis.com/css?family=' + encodeURI(fontData['font']) + fontVariant,
+                        'rel': 'stylesheet'
+                    };
+                    $('<link/>',linkData).appendTo("head");
+
+                }
+                $('#site-description').css('font-family', fontData['font']);
+            
+    
+            } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
+                $('#site-description').css('font-family','');
+                $('#site-description').css('font-size','');
+                
+                if ($('#typography-subtitle-font').length) {
+                    $('#typography-subtitle-font').remove();
+                }
+                if ($('#typography-subtitle').length) {
+                    $('#typography-subtitle').remove();
+                }
+                
+
+            } else { // default font
+                
+                var requestData = {
+                    action: "azbalac_get_default_font_data_action"
+                }
+    
+                $.ajax({
+                    type: "POST",
+                    url: azbalacAjax.ajaxurl,
+         
+                    dataType: "json",
+                    data: requestData,
+                    success: function (res, textStatus, jqXHR) {
+                        if (res != null) {
+                            $('#site-description').css('font-family', res[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {

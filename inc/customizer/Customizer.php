@@ -986,6 +986,39 @@ class Azbalac_Customizer
     public function addCustomizerTypographySettings($wp_customize)
     {
 
+        $wp_customize->add_setting('setting_typography_title', array(
+            'capability' => 'edit_theme_options',
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
+        'control_typography_title', array(
+            'label' => __('Title Font', 'azbalac'),
+            'description' => __('Set font of website title. Choose a size of 0 (zero) to use the default font size of the theme', 'azbalac'),
+            'section' => 'section_theme_options_typography',
+            'settings' => 'setting_typography_title',
+            /*'defaults' => array('font' => 17, // use numerical from Azbalac_Custom_Font_List or Ggl font string
+            'size' => 16)*/
+        )));
+
+        $wp_customize->add_setting('setting_typography_subtitle', array(
+            'capability' => 'edit_theme_options',
+            //'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
+        'control_typography_subtitle', array(
+            'label' => __('Subtitle Font', 'azbalac'),
+            'description' => __('Set font of website subtitle. Choose a size of 0 (zero) to use the default font size of the theme', 'azbalac'),
+            'section' => 'section_theme_options_typography',
+            'settings' => 'setting_typography_subtitle',
+            /*'defaults' => array('font' => 17, // use numerical from Azbalac_Custom_Font_List or Ggl font string
+            'size' => 16)*/
+        )));
+
+
        $wp_customize->add_setting('setting_typography_headline', array(
             'capability' => 'edit_theme_options',
             //'type' => 'option',
@@ -1012,7 +1045,7 @@ class Azbalac_Customizer
         $wp_customize->add_control(new Azbalac_Custom_Font_Control($wp_customize, 
         'control_typography_navbar', array(
             'label' => __('Navigation Header Font', 'azbalac'),
-            'description' => __('Set font of navigatoin header, the navbar. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
+            'description' => __('Set font of navigation header, the navbar. Choose a size of 0 (zero) to use the default font size of the theme.', 'azbalac'),
             'section' => 'section_theme_options_typography',
             'settings' => 'setting_typography_navbar',
            

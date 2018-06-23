@@ -24,13 +24,17 @@ class Azbalac_Theme_Font
         $bodyFont = json_decode(urldecode(get_theme_mod('setting_typography_body')));
         $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
         $navbarFont = json_decode(urldecode(get_theme_mod('setting_typography_navbar')));
+        $titleFont = json_decode(urldecode(get_theme_mod('setting_typography_title')));
+        $subtitleFont = json_decode(urldecode(get_theme_mod('setting_typography_subtitle')));
         
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);
         $cssBody = self::buildBodyCss($bodyFont);
         $cssNavbar = self::buildNavbarCss($navbarFont);
+        $cssTitle = self::buildTitleCss($titleFont);
+        $cssSubtitle = self::buildSubtitleCss($subtitleFont);
         
-        return $cssBody . $cssHeadline . $cssNavbar;
+        return $cssBody . $cssHeadline . $cssNavbar . $cssTitle . $cssSubtitle;
     }
 
     protected static function buildBodyCss($bodyFont)
@@ -59,6 +63,80 @@ class Azbalac_Theme_Font
         if ($fontSize) {
             $css .= "
             body {
+                font-size: $fontSize; 
+            }";
+        
+        }
+    
+        if ($css) {
+            return $cssHeader . $cssStart . $css . $cssEnd;
+        }
+        return $css;
+    }
+
+    protected static function buildTitleCss($font)
+    {
+        $cssStart = '<style id="typography-title" type="text/css">';
+        $cssEnd = '</style>';
+        $css = '';
+        $fontSize = null;
+
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'typography-title-font');
+        
+        if (isset($font->size) && intval($font->size) != 0) {
+            $fontSize = $font->size . "px";
+        } else {
+            // size not set, use default size 
+            $fontSize = null;
+        }
+
+        // font family and size could be used independently
+        if ($fontFamily) {
+            $css .= "
+            #site-header-text a {
+                font-family: $fontFamily; 
+            }";
+        }
+        if ($fontSize) {
+            $css .= "
+            #site-header-text a {
+                font-size: $fontSize; 
+            }";
+        
+        }
+    
+        if ($css) {
+            return $cssHeader . $cssStart . $css . $cssEnd;
+        }
+        return $css;
+    }
+
+    protected static function buildSubtitleCss($font)
+    {
+        $cssStart = '<style id="typography-subtitle" type="text/css">';
+        $cssEnd = '</style>';
+        $css = '';
+        $fontSize = null;
+
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'typography-subtitle-font');
+        
+        if (isset($font->size) && intval($font->size) != 0) {
+            $fontSize = $font->size . "px";
+        } else {
+            // size not set, use default size 
+            $fontSize = null;
+        }
+
+        // font family and size could be used independently
+        if ($fontFamily) {
+            $css .= "
+            #site-description {
+                font-family: $fontFamily; 
+            }";
+        }
+        if ($fontSize) {
+            $css .= "
+            #site-description {
                 font-size: $fontSize; 
             }";
         

@@ -33,6 +33,11 @@ class Azbalac_Customizer_Addon
         $this->customizer->get_setting( 'color_fg_sidebar' )->transport = 'postMessage';
         $this->customizer->get_setting( 'color_bg_sidebar' )->transport = 'postMessage';
 
+        $this->customizer->get_setting( 'setting_color_fg_title' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_color_fg_subtitle' )->transport = 'postMessage';
+
+        
+
         // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_headline')->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_body')->transport = 'postMessage';

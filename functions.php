@@ -139,7 +139,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
             //'wp-head-callback'       => 'azbalac_header_style',
 
         );
-       add_theme_support( 'custom-header', $headerDefaults );
+        add_theme_support( 'custom-header', $headerDefaults );
 
         // Add theme support for Custom Logo.
         add_theme_support( 'custom-logo', array(
@@ -577,15 +577,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
         }
 
         // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
-        //$colorFgHeaderData = get_theme_mod('color_fg_header');
-        $colorFgHeaderData = get_header_textcolor();
-
-        if ($colorFgHeaderData) {
-            $headerStyleColorFg = ' color: #' . $colorFgHeaderData .';';
-        }
-        else {
-            $headerStyleColorFg = '';
-        }
+       
 
         $navbarAlignment = get_option('setting_navbar_menu_alignment','1'); // left is default
         switch (intval($navbarAlignment)) {
@@ -601,13 +593,16 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             break;
         }
     
-
+        $colorFgTitle = get_theme_mod('setting_color_fg_title','');
+        $colorFgSubtitle = get_theme_mod('setting_color_fg_subtitle','');
+       
 
         return array('navbarStyleClass' => $navbarStyleClass,
             'navbarBgCustom' => $navbarBgCustomData,
             'headerStyleColorBg' => $headerStyleColorBg,
-            'headerStyleColorFg' => $headerStyleColorFg,
-            'navbarAlignment' => $navbarAlignmentClass
+            'navbarAlignment' => $navbarAlignmentClass,
+            'colorFgTitle' => $colorFgTitle,
+            'colorFgSubtitle' => $colorFgSubtitle // maybe todo: replace style in elements with global inline style
         );
     }
 endif;

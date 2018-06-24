@@ -63,6 +63,8 @@
 {% if content.navbarFixed == 'default' %}
 
 
+<div id="header" role="banner" style="{% if content.headerStyles.headerStyleColorBg %}background-color: {{ content.headerStyles.headerStyleColorBg }} {% endif %}{% if content.headerStyles.headerStyleColorFg %}{{ content.headerStyles.headerStyleColorFg }}{% endif %}">
+
     <div class="container">
 
         <header class="masthead">
@@ -79,8 +81,8 @@
                             {% endif %}
                             <div class="col-auto ">
                                     {% if content.displayHeaderText %}
-                                    <h1 id="site-header-text"><a class="header-url" style="{{ content.headerStyles.headerStyleColorFg }}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-                                <h2 class="azbalac-subtitle" id="site-description">{{ content.subtitleDescription }}</h2>
+                                    <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+                                <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
                                 {% else %}
                                 &nbsp;
                                 {% endif %}
@@ -160,7 +162,8 @@
 {% if content.navbarFixed == 'default' %}
       </header>
     </div> <!-- /container -->
- 
+</div><!-- /div id header with default navbar -->
+
 {% endif %}
 
 

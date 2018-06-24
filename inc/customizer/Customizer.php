@@ -669,6 +669,8 @@ class Azbalac_Customizer
      */
     public function addCustomizerColors($wp_customize)
     {
+        $wp_customize->remove_control('header_textcolor'); // remove default option, it is replaced by color setting for title and subtitle
+
         $wp_customize->add_setting(
                 'color_bg_header', array(
             'default' => '',
@@ -682,6 +684,30 @@ class Azbalac_Customizer
             'settings' => 'color_bg_header',
             'description' => __('Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
         ));
+
+
+        $wp_customize->add_setting('setting_color_fg_title', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_color_fg_title', array(
+            'label' => __('Title Font Color', 'azbalac'),
+            'section' => 'colors',
+            'settings' => 'setting_color_fg_title',
+            'description' => __('Pick a foreground color for the title (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+        $wp_customize->add_setting('setting_color_fg_subtitle', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_color_fg_subtitle', array(
+            'label' => __('Subtitle Font Color', 'azbalac'),
+            'section' => 'colors',
+            'settings' => 'setting_color_fg_subtitle',
+            'description' => __('Pick a foreground color for the subtitle (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
         $wp_customize->add_setting(
                 'color_fg_footer', array(
             'default' => '',

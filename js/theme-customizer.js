@@ -74,6 +74,18 @@
         });
     });
 
+    wp.customize('setting_color_fg_title', function (value) {
+        value.bind(function (col) {
+            $('#site-header-text a').css('color', col);
+        });
+    });
+
+    wp.customize('setting_color_fg_subtitle', function (value) {
+        value.bind(function (col) {
+            $('#site-description').css('color', col);
+        });
+    });
+
     wp.customize('setting_social_button_color_fg', function (value) {
         value.bind(function (col) {
             //$('.innersocial').css('color', col);
@@ -274,12 +286,11 @@
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
-            var sizeBase = 16; // defined in Bootstrap
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
-                var sizeBase = fontData['size'];
-            } 
-
-            $('nav#navbarMain').css('font-size', sizeBase);
+                $('nav#navbarMain').css('font-size', fontData['size']);
+            } else {
+                $('nav#navbarMain').css('font-size', '');
+            }
         
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 
@@ -349,13 +360,13 @@
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
-            var sizeBase = '2.5rem'; // defined in Bootstrap
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
-                var sizeBase = fontData['size'];
-            } 
+                $('#site-header-text a').css('font-size', fontData['size']);
+            } else {
+                $('#site-header-text a').css('font-size', '');
+            }
 
-            $('#site-header-text a').css('font-size', sizeBase);
-        
+           
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 
                 var fontVariant = '';
@@ -380,7 +391,7 @@
     
             } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
                 $('#site-header-text a').css('font-family','');
-                $('#site-header-text a').css('font-size','');
+                //$('#site-header-text a').css('font-size','');
                 if ($('#typography-title-font').length) {
                     $('#typography-title-font').remove();
                 }
@@ -425,13 +436,12 @@
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
-            var sizeBase = '2rem'; // ?? rem? todo
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
-                var sizeBase = fontData['size'];
-            } 
-
-            $('#site-description').css('font-size', sizeBase);
-        
+                $('#site-description').css('font-size', fontData['size']);
+            } else {
+                $('#site-description').css('font-size', '');
+            }
+                  
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 
                 var fontVariant = '';
@@ -456,7 +466,7 @@
     
             } else if (parseInt(fontData['font']) == 0) { // no font selected, switch to theme stylesheet font 
                 $('#site-description').css('font-family','');
-                $('#site-description').css('font-size','');
+                //$('#site-description').css('font-size','');
                 
                 if ($('#typography-subtitle-font').length) {
                     $('#typography-subtitle-font').remove();

@@ -122,10 +122,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #site-header-image {
     box-shadow: #000 0em 0em 0em; /* fix for fadeIn bug in firefox */
 }
+
+
+
 /* default: hidden, will be shown by JavaScript */
 #site-header {
     display: none;
+    position: relative;
 }
+
+#site-header img {
+    position: relative;
+}
+
+
+#site-header-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/**********************************/
+
+
+/* default: hidden, will be shown by JavaScript */
+#site-header1 {
+    display: block;
+    position: relative;
+}
+
+#site-header1 img {
+    position: relative;
+}
+
+#site-header-container {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 1000;
+}
+
+#site-header-text a, #site-description {
+   
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+
 
 #site-description {
     font-family: inherit;

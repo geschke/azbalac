@@ -109,6 +109,8 @@ $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
+$content['headerOptions']['show_title_image'] = get_option('setting_header_show_title_image','');
+
 $content['description'] = get_bloginfo( 'name', 'display' ); // no raw
 $content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // no raw
 

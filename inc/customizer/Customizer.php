@@ -39,6 +39,7 @@ class Azbalac_Customizer
 
         $this->addCustomizerGeneralSettings($wp_customize);
         $this->addCustomizerNavigationSettings($wp_customize);
+        $this->addCustomizerHeaderSettings($wp_customize);
         $this->addCustomizerTypographySettings($wp_customize);
         $this->addCustomizerPostsSettings($wp_customize);
         $this->addCustomizerIntroductionSectionOptions($wp_customize);
@@ -75,6 +76,16 @@ class Azbalac_Customizer
             'description' => __('Edit general settings:  colors, main layout, navigation bar.', 'azbalac'),
             'panel' => 'panel_theme_options',
         ));
+
+        $wp_customize->add_section('section_theme_options_header', array(
+            'priority' => 100,
+            'capability' => 'edit_theme_options',
+            'theme_supports' => '',
+            'title' => __('Header Settings', 'azbalac'),
+            'description' => __('Edit options of header.', 'azbalac'),
+            'panel' => 'panel_theme_options',
+        ));
+
 
         $wp_customize->add_section('section_theme_options_navbar', array(
             'priority' => 100,
@@ -999,6 +1010,120 @@ class Azbalac_Customizer
         ));
 
       
+
+    }
+
+    
+    /**
+     * Add Header options to Customizer
+     *
+     * @param type $wp_customize
+     */
+    public function addCustomizerHeaderSettings($wp_customize)
+    {
+
+        $wp_customize->add_setting('setting_header_show_title_image', array(
+            'default' => false,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+         ));
+  
+         $wp_customize->add_control('control_header_title_image', array(
+            'label' => __('Show title and subtitle on header image', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'setting_header_show_title_image',
+            'type' => 'checkbox',
+         ));
+
+         $wp_customize->add_setting(
+            'setting_header_color_bg', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_header_color_bg',      
+            array('label' => __('Transparency Background Color', 'azbalac'),
+            'section' => 'section_theme_options_header',
+        'settings' => 'setting_header_color_bg',
+        'description' => __('Pick a background color of transparency title and subtitle area (default: black).', 'azbalac'),)
+        ));
+
+
+        $wp_customize->add_setting('setting_header_background_transp', array(
+            'default' => 70,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_header_background_transp', array(
+            'label' => __('Set transparency of title and subtitle background', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'setting_header_background_transp',
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 100,
+                'step' => 1)
+        )));
+      
+
+        $wp_customize->add_setting('setting_header_alignment', array(
+            'default' => '1',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger') // maybe restrict later
+        ));
+
+        for ($i = 1; $i <= 6; $i++) {
+            $headerPositions[$i] = get_template_directory_uri() . sprintf("/images/admin/header/option%02d.png", $i);
+        }
+
+
+        $wp_customize->add_control(new Azbalac_Custom_Radio_Image_Control($wp_customize, 'control_header_alignment', array(
+            'label' => __('Alignment', 'azbalac'),
+            'description' => __('Set position of title and subtitle when displayed on header image.', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'setting_header_alignment',
+            'choices' => $headerPositions
+        )));
+
+        $wp_customize->add_setting('setting_header_distance_top', array(
+            'default' => 10,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_header_distance_top', array(
+            'label' => __('Set distance to top/bottom margin', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'setting_header_distance_top',
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 200,
+                'step' => 1)
+        )));
+
+        $wp_customize->add_setting('setting_header_distance_border', array(
+            'default' => 20,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_header_distance_border', array(
+            'label' => __('Set distance to left/right border', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'setting_header_distance_border',
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 400,
+                'step' => 1)
+        )));
+
 
     }
 

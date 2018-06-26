@@ -79,6 +79,7 @@
                                 <a href="{{ content.homeUrl }}"><img src="{{ content.customLogo }}"/></a>
                             </div>
                             {% endif %}
+                            {% if not content.headerOptions.show_title_image %}
                             <div class="col-auto ">
                                     {% if content.displayHeaderText %}
                                     <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
@@ -87,12 +88,14 @@
                                 &nbsp;
                                 {% endif %}
                             </div>
+                            {% endif %}
                             {% if  content.headerWidgetRight %}
                             <div class="col-auto ml-auto">
                                     {{ content.headerWidgetRight|raw }}
                             </div>
                             {% endif %}
                         </div>
+
                 {#    </div>
                     <div class="col-auto">
                             {{ content.headerWidgetRight|raw }}
@@ -102,10 +105,25 @@
                 </div> #}
 
             </div>
+
+
+
             <div id="site-header">
-                <a href="{{ content.homeUrl }}" rel="home">
-                <img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
+                <a href="{{ content.homeUrl }}" rel="home"><img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
                 </a>
+
+                {% if content.headerOptions.show_title_image and content.displayHeaderText %}
+                <div id="site-header-container">
+                <div>
+                <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+         </div>
+         <div>   <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
+         </div>
+            </div>
+                      {% endif %}
+                
+
+            
             </div>
 {% endif %}
 

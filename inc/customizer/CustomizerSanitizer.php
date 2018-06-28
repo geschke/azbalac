@@ -197,11 +197,13 @@ class Azbalac_Customizer_Sanitizer
             'i' => array(),
             'p' => array(),
             'strong' => array(),
+            'small' => array(),
             'li' => array(),
             'ul' => array(),
             'div' => array(
                 'class' => array(),
                 'id' => array(),
+                'style' => array(),
             )
         ) );
     }

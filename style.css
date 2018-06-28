@@ -158,8 +158,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 #site-header-container {
     position: absolute;
-    top: 20px;
-    left: 100px;
+ /*   top: 20px;
+    left: 100px;*/
     z-index: 1000;
 }
 

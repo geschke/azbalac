@@ -1036,16 +1036,15 @@ class Azbalac_Customizer
             'type' => 'checkbox',
          ));
 
-         $wp_customize->add_setting(
-            'setting_header_color_bg', array(
+         $wp_customize->add_setting('setting_header_color_bg', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'control_header_color_bg',      
             array('label' => __('Transparency Background Color', 'azbalac'),
             'section' => 'section_theme_options_header',
-        'settings' => 'setting_header_color_bg',
-        'description' => __('Pick a background color of transparency title and subtitle area (default: black).', 'azbalac'),)
+            'settings' => 'setting_header_color_bg',
+            'description' => __('Pick a background color of transparency title and subtitle area (default: black).', 'azbalac'),)
         ));
 
 
@@ -1062,7 +1061,7 @@ class Azbalac_Customizer
             'settings' => 'setting_header_background_transp',
             //'type' => 'slider',
             'choices' => array(
-                'min' => 1,
+                'min' => 0,
                 'max' => 100,
                 'step' => 1)
         )));
@@ -1101,26 +1100,26 @@ class Azbalac_Customizer
             'settings' => 'setting_header_distance_top',
             //'type' => 'slider',
             'choices' => array(
-                'min' => 1,
-                'max' => 200,
+                'min' => 0,
+                'max' => 500,
                 'step' => 1)
         )));
 
-        $wp_customize->add_setting('setting_header_distance_border', array(
+        $wp_customize->add_setting('setting_header_distance_left', array(
             'default' => 20,
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
         ));
 
-        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_header_distance_border', array(
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_header_distance_left', array(
             'label' => __('Set distance to left/right border', 'azbalac'),
             'section' => 'section_theme_options_header',
-            'settings' => 'setting_header_distance_border',
+            'settings' => 'setting_header_distance_left',
             //'type' => 'slider',
             'choices' => array(
-                'min' => 1,
-                'max' => 400,
+                'min' => 0,
+                'max' => 800,
                 'step' => 1)
         )));
 

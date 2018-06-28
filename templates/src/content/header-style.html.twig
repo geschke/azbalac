@@ -1,0 +1,29 @@
+{% if  header.setting_header_background_transp and header.setting_header_color_bg %}
+<style type="text/css">
+    #site-header-text a, #site-description {
+   
+        background: {{ header.setting_header_color_bg}}; /* fallback color */
+        background: {{ header.setting_header_color_bg }}{{ header.setting_header_background_transp_hex }};
+        
+    }
+</style>
+{% endif %}
+{% if header.setting_header_distance_top or header.setting_header_distance_left %}
+<style type="text/css">
+    #site-header-container {
+        {% if header.setting_header_alignment in [1,4] %}
+        left: {{ header.setting_header_distance_left }}px;
+        {% elseif header.setting_header_alignment in [2,5] %}
+        {# ?? #}
+        {% elseif header.setting_header_alignment in [3,6] %}
+        right: {{ header.setting_header_distance_left }}px;
+        {% endif %}
+        {% if header.setting_header_alignment in [1,2,3] %}
+        top: {{ header.setting_header_distance_top }}px;
+        {# ?? #}
+        {% elseif header.setting_header_alignment in [4,5,6] %}
+        bottom: {{ header.setting_header_distance_top }}px;
+        {% endif %}
+    }
+</style>
+{% endif %}

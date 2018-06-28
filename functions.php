@@ -384,6 +384,16 @@ function azbalac_scripts() {
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '4.0.0', true );
         
 
+    /*if (is_customize_preview()) {
+        wp_enqueue_script( 'azbalac-admin-header', get_template_directory_uri().'/js/admin-options.js', array( 'jquery'), '', true );
+            
+        //wp_add_inline_script('azbalac-social-media-buttons',$js);
+        wp_localize_script( 'azbalac-admin-header', 'objectAdminHeader', array(
+            'setting_header_color_bg' => get_theme_mod('setting_header_color_bg'),
+            'setting_header_background_transp' => get_option('setting_header_background_transp',70) 
+
+        ) );
+    }*/
 }
 
 add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'setStyles' ));

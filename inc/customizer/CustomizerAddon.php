@@ -36,8 +36,25 @@ class Azbalac_Customizer_Addon
         $this->customizer->get_setting( 'setting_color_fg_title' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_color_fg_subtitle' )->transport = 'postMessage';
 
+        $this->customizer->get_setting( 'setting_header_color_bg')->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_header_background_transp')->transport = 'postMessage';
+        //$this->customizer->get_setting( 'setting_header_alignment')->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_header_distance_top')->transport = 'postMessage';
+        $this->customizer->get_setting( 'setting_header_distance_left')->transport = 'postMessage';
         
 
+//        var_dump($this->customizer->get_setting('setting_header_color_bg')->value());
+//        var_dump($this->customizer->get_setting('setting_header_background_transp')->value());
+        
+       /* wp_enqueue_script( 'azbalac-admin-stuff', get_template_directory_uri().'/js/admin-header-options.js', array( 'jquery'), '', true );
+        
+        //wp_add_inline_script('azbalac-social-media-buttons',$js);
+        wp_localize_script( 'azbalac-admin-stuff', 'objectAdminHeader', array(
+            'setting_header_color_bg' => $this->customizer->get_setting('setting_header_color_bg')->value(),
+            'setting_header_background_transp' => $this->customizer->get_setting('setting_header_background_transp')->value()
+
+        ) );
+*/
         // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_headline')->transport = 'postMessage';
         $this->customizer->get_setting( 'setting_typography_body')->transport = 'postMessage';

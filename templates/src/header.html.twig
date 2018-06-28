@@ -38,14 +38,19 @@
 
                 
             </style>
-            {% endif %}
+    {% endif %}
+
+  
 
             {{ content.subfooterStyles|raw }}
 
         {{ content.wpHead|raw }}    
 
         {{ content.sectionFontStyles|raw }}
-
+        {% if content.headerOptions.show_title_image %}
+            {% include 'content/header-style.html.twig' with {'header': content.headerOptions, 
+    'is_front_page': is_front_page } %}
+    {% endif %} 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

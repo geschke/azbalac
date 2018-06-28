@@ -110,6 +110,18 @@ $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
 $content['headerOptions']['show_title_image'] = get_option('setting_header_show_title_image','');
+$content['headerOptions']['setting_header_color_bg'] = get_theme_mod('setting_header_color_bg'); // default black, todo here
+$content['headerOptions']['setting_header_background_transp'] = get_option('setting_header_background_transp',70); // default 70%
+$content['headerOptions']['setting_header_background_transp_hex'] = dechex(round(255 / 100 * $content['headerOptions']['setting_header_background_transp']));
+$content['headerOptions']['setting_header_alignment'] = get_option('setting_header_alignment',1);
+$content['headerOptions']['setting_header_distance_top'] = get_option('setting_header_distance_top',10);
+$content['headerOptions']['setting_header_distance_left'] = get_option('setting_header_distance_left',20);
+
+if (is_customize_preview()) {
+    // transport header options to JavaScript only in Customizer view, otherwise they aren't needed
+    wp_enqueue_script( 'azbalac-admin-header', get_template_directory_uri().'/js/admin-options.js', array( 'jquery'), '', true );
+    wp_localize_script( 'azbalac-admin-header', 'objectAdminHeader', $content['headerOptions'] );
+}
 
 $content['description'] = get_bloginfo( 'name', 'display' ); // no raw
 $content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // no raw

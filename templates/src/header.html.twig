@@ -112,17 +112,18 @@
             </div>
 
 
+            {#
 
             <div id="site-header1" style="display: block; position: relative;">
                 <a href="http://g1.geschke.net/" rel="home"><img id="site-header-image1" src="http://g1.geschke.net/wp-content/themes/azbalac/images/azbalac_default_header_image.jpg" width="1110" height="212" data-width="1115" data-height="0" alt="Header-Bild - Link zur Homepage">
                 </a>
 <!--                <div style="top: 1px; bottom: 1px; left: 0px; right: 0px; position: absolute; border: 1px solid yellow; z-index: 900;">
 -->                    <div id="site-header-container1" class="position-absolute fixed-top" style="top: 10px; border: 1px solid red; z-index: 1000;">
-                        <div style="text-align: center;">
+                        <div class="d-flex justify-content-center">
                             <h1 id="site-header-text1"><a class="header-url" style="color: #a6ce8a; background: #000000aa;" href="http://g1.geschke.net/">foo Deutsch</a></h1>
 
                         </div>
-                        <div style="text-align: center;">
+                        <div class="d-flex justify-content-center">
                             <h2 class="azbalac-subtitle" id="site-description1" ><span style="color: #c790cc; background: #000000aa;">Eine weitere WordPress-Website</span></h2>
                         </div>
                     </div>
@@ -215,21 +216,23 @@
 <!--                </div>
 -->           </div>
 
+#}
+
             <div id="site-header">
                 <a href="{{ content.homeUrl }}" rel="home"><img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
                 </a>
 
                 {% if content.headerOptions.show_title_image and content.displayHeaderText %}
-                <div id="site-header-container">
-                <div>
-                <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-         </div>
-         <div>   <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
-         </div>
-            </div>
-                      {% endif %}
-                
 
+                <div id="site-header-container" class="position-absolute {{ content.headerOptions.header_container.container_class }}" style="">
+                    <div id="site-header-box-title" class="{{ content.headerOptions.header_container.box_class_title }}">
+                        <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+                    </div>
+                    <div id="site-header-box-subtitle" class="{{ content.headerOptions.header_container.box_class_subtitle }}">   
+                        <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
+                    </div>
+                </div>
+                {% endif %}
             
             </div>
 {% endif %}

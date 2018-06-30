@@ -114,6 +114,44 @@ $content['headerOptions']['setting_header_color_bg'] = get_theme_mod('setting_he
 $content['headerOptions']['setting_header_background_transp'] = get_option('setting_header_background_transp',70); // default 70%
 $content['headerOptions']['setting_header_background_transp_hex'] = dechex(round(255 / 100 * $content['headerOptions']['setting_header_background_transp']));
 $content['headerOptions']['setting_header_alignment'] = get_option('setting_header_alignment',1);
+switch (intval($content['headerOptions']['setting_header_alignment'])) {
+    case 2: // top, center
+        $headerContainerClass = ' fixed-top ';
+        $headerBoxClassTitle = ' d-flex justify-content-center ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-center ';
+    
+    break;
+    case 3: // top, right
+        $headerContainerClass = ' fixed-top ';
+        $headerBoxClassTitle = ' d-flex justify-content-end ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-end ';
+    break;
+    case 4: // bottom, left
+        $headerContainerClass = ' fixed-bottom ';
+        $headerBoxClassTitle = ' d-flex justify-content-start ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-start ';
+    break;
+    case 5: // bottom, center
+        $headerContainerClass = ' fixed-bottom ';
+        $headerBoxClassTitle = ' d-flex justify-content-center ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-center';
+    break;
+    case 6: // bottom, right
+        $headerContainerClass = ' fixed-bottom ';
+        $headerBoxClassTitle = ' d-flex justify-content-end ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-end ';
+    break;
+    case 1: // top, left (default)
+    default:
+        $headerContainerClass = ' fixed-top ';
+        $headerBoxClassTitle = ' d-flex justify-content-start ';
+        $headerBoxClassSubtitle = ' d-flex justify-content-start ';
+    break;
+}
+
+$content['headerOptions']['header_container'] = ['container_class' => $headerContainerClass,
+'box_class_title' => $headerBoxClassTitle,
+'box_class_subtitle' => $headerBoxClassSubtitle];
 $content['headerOptions']['setting_header_distance_top'] = get_option('setting_header_distance_top',10);
 $content['headerOptions']['setting_header_distance_left'] = get_option('setting_header_distance_left',20);
 

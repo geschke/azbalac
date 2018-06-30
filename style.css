@@ -147,14 +147,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 /* default: hidden, will be shown by JavaScript */
-#site-header1 {
+/*#site-header1 {
     display: block;
     position: relative;
 }
 
 #site-header1 img {
     position: relative;
-}
+}*/
 
 #site-header-container {
     position: absolute;

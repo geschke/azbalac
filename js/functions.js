@@ -10,7 +10,30 @@
 		//_window = $( window );
 
 
-    var mediaSize = '';
+	var mediaSize = '';
+	var azbalacHeaderImageClassPos = '';
+
+	$.moveHeader = function(moveAbove) {
+		// if title and subtitle is placed as overlay of the header image, 
+		// move this above the header image
+		var headerImage = $('#site-header-container-overlay');
+		if (! headerImage.length) {
+			return false;
+		}
+
+		headerImage.appendTo($('#site-header-container-above')).removeClass('position-absolute');
+		if (headerImage.hasClass('fixed-top')) { // store for later usage
+			azbalacHeaderImageClassPos = 'fixed-top';
+			
+		} else if (headerImage.hasClass('fixed-bottom')) {
+			azbalacHeaderImageClassPos = 'fixed-bottom';
+		}
+		headerImage.removeClass(azbalacHeaderImageClassPos);
+		$('#site-header-container-overlay').addClass('col');
+		console.log(azbalacHeaderImageClassPos);
+
+
+	}
 
     $.getHeaderImage = function(index, fallback) {
         var siteHeaderImage = '';
@@ -32,8 +55,9 @@
             width: width,
             height: height,
             dontscale: dontscale};
-    }
-
+	}
+	
+	
     $.headerImageResize = function(mediaSize) {
         if (! $('#site-header-image').length) {
             return false;
@@ -45,11 +69,13 @@
         var imgData = {};
         if (mediaSize == 'xs') {
             newWidth = $('#main').width() -30; 
-            imgData = $.getHeaderImage(3,0);
+			imgData = $.getHeaderImage(3,0);
+			$.moveHeader();
             //newWidth = 244;
         } else if (mediaSize == 'sm') {
             imgData = $.getHeaderImage(2,0);
-            newWidth = 510;
+			newWidth = 510;
+			$.moveHeader();
         } else if (mediaSize == 'md') {
             imgData = $.getHeaderImage(1,0);
             newWidth = 690;
@@ -59,9 +85,12 @@
 		} else { // xl
             imgData = $.getHeaderImage(0,0);
             newWidth = 1110;
-        }
+		}
+		
+		console.log(mediaSize);
+
         if (imgData.image != '') {
-            $('#site-header').show();
+            $('#site-header-above').show();
 
 
             siteHeaderImage.attr('src', imgData.image);
@@ -81,7 +110,7 @@
 
         } else {
 
-                $('#site-header').hide();
+                $('#site-header-above').hide();
 
         }
     };

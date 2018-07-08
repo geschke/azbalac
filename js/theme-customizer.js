@@ -156,8 +156,8 @@
             if (pos == 2) { 
 
             } else if (pos == 3) {
-                $('#site-header-container').css('left', '');
-                $('#site-header-container').css('right', '100px');
+                $('#site-header-container-overlay').css('left', '');
+                $('#site-header-container-overlay').css('right', '100px');
 
                     
             } else if (pos == 4) {
@@ -167,8 +167,8 @@
             } else if (pos == 6) {
 
             } else { // 1 is default
-                $('#site-header-container').css('right', '');
-                $('#site-header-container').css('left', '100px');
+                $('#site-header-container-overlay').css('right', '');
+                $('#site-header-container-overlay').css('left', '100px');
             }
         });
     });
@@ -177,10 +177,10 @@
         value.bind(function (dist) {
             if ($.inArray( parseInt(objectAdminHeader.setting_header_alignment,10) , [1,2,3]) !== -1) {
                 console.log("hier");
-                $('#site-header-container').css('top', dist +  'px');
+                $('#site-header-container-overlay').css('top', dist +  'px');
             } else {
                 console.log("da");
-                $('#site-header-container').css('bottom', dist +  'px');
+                $('#site-header-container-overlay').css('bottom', dist +  'px');
             }
         });
     });
@@ -191,10 +191,10 @@
                 console.log(objectAdminHeader.setting_header_alignment);
             if ($.inArray( objectAdminHeader.setting_header_alignment, ['1','4']) !== -1) {
                 console.log("warum in 1 und 4?");
-                $('#site-header-container').css('left', dist +  'px');
+                $('#site-header-container-overlay').css('left', dist +  'px');
             } else if ($.inArray( objectAdminHeader.setting_header_alignment, ['3','6']) !== -1) {
                 console.log("in 3 und 6");
-                $('#site-header-container').css('right', dist +  'px');
+                $('#site-header-container-overlay').css('right', dist +  'px');
             } else {
                 console.log("don't know");
             }

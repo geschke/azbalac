@@ -126,22 +126,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 /* default: hidden, will be shown by JavaScript */
-#site-header {
+#site-header-above {
     display: none;
     position: relative;
 }
 
-#site-header img {
+#site-header-above img {
     position: relative;
 }
 
-
-#site-header-content {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-}
 
 /**********************************/
 
@@ -156,7 +149,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     position: relative;
 }*/
 
-#site-header-container {
+#site-header-container-overlay {
 /*    position: absolute;
     top: 20px;
     left: 100px;*/
@@ -170,6 +163,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }*/
+
+.azbalac-subtitle {
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.azbalac-title a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 /*

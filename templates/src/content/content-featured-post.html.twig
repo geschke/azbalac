@@ -12,7 +12,7 @@
 
 	<header class="entry-header">
 
-        <h2 class="entry-title"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+        <h2 class="entry-title"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title|raw }}</a></h2>
 
 
         {% if post.setting_posts_featured_date %}

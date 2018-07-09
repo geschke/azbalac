@@ -1,4 +1,10 @@
 {% if  header.setting_header_background_transp and header.setting_header_color_bg %}
+<script type="text/javascript">
+    var azbalacSettingHeaderColor = { 'bg': '{{ header.setting_header_color_bg }}',
+        'transp': '{{ header.setting_header_background_transp_hex }}'
+        };
+
+</script>
 <style type="text/css">
     #site-header-text a, #site-description {
    

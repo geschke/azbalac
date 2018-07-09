@@ -87,8 +87,8 @@
                             {% if not content.headerOptions.show_title_image %}
                             <div class="col"> {# war col-auto #}
                                     {% if content.displayHeaderText %}
-                                    <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
-                                <h2 class="azbalac-subtitle-above" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
+                                    <h1 id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h1>
+                                <h2 class="azbalac-subtitle-above" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription|raw }}</h2>
                                 {% else %}
                                 &nbsp;
                                 {% endif %}
@@ -122,10 +122,10 @@
 
                 <div id="site-header-container-overlay" class="position-absolute {{ content.headerOptions.header_container.container_class }}" style="">
                     <div id="site-header-box-title" class="{{ content.headerOptions.header_container.box_class_title }}">
-                        <h1 class="azbalac-title" id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description }}</a></h1>
+                        <h1 class="azbalac-title" id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h1>
                     </div>
                     <div id="site-header-box-subtitle" class="{{ content.headerOptions.header_container.box_class_subtitle }}">   
-                        <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription }}</h2>
+                        <h2 class="azbalac-subtitle" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription|raw }}</h2>
                     </div>
                 </div>
                 {% endif %}

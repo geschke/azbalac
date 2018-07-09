@@ -15,9 +15,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
+
+
 /*body {
    padding-bottom: 30px;
  }*/
+
+/* hyphens test */
+/*.azbalac-subtitle {
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; 
+    }
+*/
 
 /* Skip link styling */
 #skip-link {

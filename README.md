@@ -10,6 +10,7 @@ Version 0.2.5
 ## Version history:
 
 Version 0.2.5
+- New feature: Header Settings. This is awesome. You can place the title and subtitle as overlay on the header image, modify their fonts, font size, color, background color (with transparency), alignment and position. This works also on small and very small (smartphone) screens, the responsive behavior is created with small JavaScript. This is a beta release, there are too many possible cases, so it needs testing. 
 - Add some edit shortcuts to improve the customizer user experience
 
 Version 0.2.4

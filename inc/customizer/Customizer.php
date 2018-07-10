@@ -942,9 +942,10 @@ class Azbalac_Customizer
 
 
         $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'control_navbar_menu_whitespace', array(
-            'label' => __('Maxiblah homepage', 'azbalac'),
+            'label' => __('Whitespace settings in Navigation', 'azbalac'),
             'section' => 'section_theme_options_navbar',
             'settings' => 'setting_navbar_menu_whitespace',
+            'description' => __('A higher value means more whitespace.', 'azbalac'),
             //'type' => 'slider',
             'choices' => array(
                 'min' => 1,

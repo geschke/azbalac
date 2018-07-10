@@ -52,7 +52,6 @@ class Azbalac_Section_Subfooter
           return '';
         }
         $content = self::getContentRaw();
-        $content = get_theme_mod('setting_subfooter_content');
         if ($content === false) {
             return;
         }

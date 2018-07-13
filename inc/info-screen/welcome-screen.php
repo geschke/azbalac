@@ -35,8 +35,8 @@ if (!class_exists('Azbalac_Welcome')) {
 
             add_action('wp_ajax_azbalac_dismiss_welcome_notice', array($this, 'dismissWelcomeNoticeCallback'));
 
+//            update_option('azbalac_notice_version_dismissed','foooo');
 
-          
         }
 
         /**
@@ -58,8 +58,10 @@ if (!class_exists('Azbalac_Welcome')) {
            $azbalac = wp_get_theme('azbalac');
 
             //echo $azbalac['Version'];
-            $dismissedNotice = get_option('azbalac_notice_dismissed_version');
-            //$dismissedNotice = 1;
+            $dismissedNotice = get_option('azbalac_notice_version_dismissed');
+            //var_dump(get_option( 'azbalac_lala'));
+            //var_dump($dismissedNotice);
+            //die;
             if (is_admin() && (empty($dismissedNotice) || $azbalac['Version'] != $dismissedNotice)) {
                 //  !function_exists( 'the_field' ) ) {
                 add_action('admin_notices', array($this, 'welcome_admin_notice'));
@@ -89,16 +91,18 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function dismissWelcomeNoticeCallback()
         {
-            //echo "OK!";
             $azbalac = wp_get_theme('azbalac');
 
             
-            // $dismissedNotice = get_option( 'azbalac_notice_dismissed_version');
-            // just overwrite with current theme version
-            update_option('azbalac_notice_dismissed_version', $azbalac['Version']);
+            if (get_option( 'azbalac_notice_version_dismissed') !== false) {
+                // just overwrite with current theme version
+                
+                update_option('azbalac_notice_version_dismissed', $azbalac['Version'], false);
+            } else { // create, if doesn't exist
+                add_option( 'azbalac_notice_version_dismissed', $azbalac['Version'], false);
+            }
+            wp_die(); // this is required to terminate immediately and return a proper response
 
-
-            die(); // this is required to return a proper result
         }
 
         /**
@@ -113,8 +117,8 @@ if (!class_exists('Azbalac_Welcome')) {
             if ('appearance_page_azbalac-welcome' == $hook_suffix) {
                 wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );       
                 wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0', true);
-                wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '2018013001');
-                wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), '2018013001');
+                wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), AZBALAC_DATEVERSION );
+                wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), AZBALAC_DATEVERSION );
             
 
                

@@ -27,10 +27,10 @@ class Azbalac_Section_Social_Media_Buttons
     public static function getButtons($position)
     {
       
-        if (!get_option('setting_social_media_activate',false)) {
+        if (!get_option('azbalac_setting_social_media_activate',false)) {
             return null;
         }
-        $positionOption = absint(get_option('setting_social_media_position',2));
+        $positionOption = absint(get_option('azbalac_setting_social_media_position',2));
         if ($positionOption != $position) {
             return null;
         }
@@ -53,21 +53,21 @@ class Azbalac_Section_Social_Media_Buttons
     public static function getButtonsContainer()
     {
         $output = '';
-        if (!get_option('setting_social_media_activate',false)) {
+        if (!get_option('azbalac_setting_social_media_activate',false)) {
             return $output;
         }
-        $socialButtons = array('social_media_facebook' => 'facebook',
-        'social_media_github' => 'github',
-        'social_media_google' => 'google-plus',
-        'social_media_instagram' => 'instagram',
-        'social_media_linkedin' => 'linkedin',
-        'social_media_slideshare' => 'slideshare',
-        'social_media_snapchat' => 'snapchat',
-        'social_media_twitter' => 'twitter',
-        'social_media_vine' => 'vine',
-        'social_media_xing' => 'xing',
-        'social_media_youtube' => 'youtube');
-        switch (get_option('setting_social_media_alignment')) {
+        $socialButtons = array('azbalac_social_media_facebook' => 'facebook',
+        'azbalac_social_media_github' => 'github',
+        'azbalac_social_media_google' => 'google-plus',
+        'azbalac_social_media_instagram' => 'instagram',
+        'azbalac_social_media_linkedin' => 'linkedin',
+        'azbalac_social_media_slideshare' => 'slideshare',
+        'azbalac_social_media_snapchat' => 'snapchat',
+        'azbalac_social_media_twitter' => 'twitter',
+        'azbalac_social_media_vine' => 'vine',
+        'azbalac_social_media_xing' => 'xing',
+        'azbalac_social_media_youtube' => 'youtube');
+        switch (get_option('azbalac_setting_social_media_alignment')) {
             case 1:
                 $align = 'left';
                 break;
@@ -77,8 +77,8 @@ class Azbalac_Section_Social_Media_Buttons
             default:
                 $align = 'center';
         }
-        $buttonSize = get_option('setting_social_button_size','2');
-        $buttonType = get_option('setting_social_button_type','1');
+        $buttonSize = get_option('azbalac_setting_social_button_size','2');
+        $buttonType = get_option('azbalac_setting_social_button_type','1');
         
 
         $output .= '
@@ -135,9 +135,9 @@ class Azbalac_Section_Social_Media_Buttons
          
       
         $css = "\n"; // dummy to generate the style block when no colors defined
-        $social_button_color_bg_hover = get_theme_mod('setting_social_button_color_bg_hover');
-        $social_button_color_bg = get_theme_mod('setting_social_button_color_bg');
-        $social_button_color_fg = get_theme_mod('setting_social_button_color_fg');
+        $social_button_color_bg_hover = get_theme_mod('azbalac_setting_social_button_color_bg_hover');
+        $social_button_color_bg = get_theme_mod('azbalac_setting_social_button_color_bg');
+        $social_button_color_fg = get_theme_mod('azbalac_setting_social_button_color_fg');
         if ($social_button_color_bg_hover) {
             $css .= ".socialhover {
         color: $social_button_color_bg_hover !important;
@@ -160,7 +160,7 @@ class Azbalac_Section_Social_Media_Buttons
                     ";
         }
         
-        //$js = 'var setting_social_button_color_bg_hover="' . $social_button_color_bg_hover .'";';
+        //$js = 'var azbalac_setting_social_button_color_bg_hover="' . $social_button_color_bg_hover .'";';
        
         wp_add_inline_style( 'azbalac-default-style-socialmediabuttons', $css );
 

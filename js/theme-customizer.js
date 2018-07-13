@@ -44,49 +44,49 @@
     });
 */
 
-    wp.customize('color_bg_header', function (value) {
+    wp.customize('azbalac_color_bg_header', function (value) {
         value.bind(function (col) {
             $('#header').css('background-color', col);
         });
     });
 
-    wp.customize('color_fg_footer', function (value) {
+    wp.customize('azbalac_color_fg_footer', function (value) {
         value.bind(function (col) {
             $('.site-footer-1').css('color', col);
         });
     });
 
-    wp.customize('color_bg_footer', function (value) {
+    wp.customize('azbalac_color_bg_footer', function (value) {
         value.bind(function (col) {
             $('.site-footer-1').css('background-color', col);
         });
     });
 
-    wp.customize('color_fg_sidebar', function (value) {
+    wp.customize('azbalac_color_fg_sidebar', function (value) {
         value.bind(function (col) {
             $('#primary-sidebar > div > div').css('color', col);
         });
     });
 
-    wp.customize('color_bg_sidebar', function (value) {
+    wp.customize('azbalac_color_bg_sidebar', function (value) {
         value.bind(function (col) {
             $('#primary-sidebar > div > div').css('background-color', col);
         });
     });
 
-    wp.customize('setting_color_fg_title', function (value) {
+    wp.customize('azbalac_setting_color_fg_title', function (value) {
         value.bind(function (col) {
             $('#site-header-text a').css('color', col);
         });
     });
 
-    wp.customize('setting_color_fg_subtitle', function (value) {
+    wp.customize('azbalac_setting_color_fg_subtitle', function (value) {
         value.bind(function (col) {
             $('#site-description').css('color', col);
         });
     });
 
-    wp.customize('setting_social_button_color_fg', function (value) {
+    wp.customize('azbalac_setting_social_button_color_fg', function (value) {
         value.bind(function (col) {
             //$('.innersocial').css('color', col);
             objectSocialMediaButtons.social_button_color_fg = col;
@@ -95,7 +95,7 @@
         });
     });
 
-    wp.customize('setting_social_button_color_bg', function (value) {
+    wp.customize('azbalac_setting_social_button_color_bg', function (value) {
         value.bind(function (col) {
             //$('.innersocialbg').css('color', col);
             objectSocialMediaButtons.social_button_color_bg = col;
@@ -103,7 +103,7 @@
         });
     });
 
-    wp.customize('setting_social_button_color_bg_hover', function (value) {
+    wp.customize('azbalac_setting_social_button_color_bg_hover', function (value) {
         value.bind(function (col) {
             //$('.socialhover').css('color', col);
             objectSocialMediaButtons.social_button_color_bg_hover = col;
@@ -111,25 +111,27 @@
         });
     });
 
-    wp.customize('setting_header_color_bg', function (value) {
+    wp.customize('azbalac_setting_header_color_bg', function (value) {
         value.bind(function (color) {
-            var percentValue = objectAdminHeader.setting_header_background_transp;
-            objectAdminHeader.setting_header_color_bg = color;
+            console.log(color);
+            console.log()
+            var percentValue = objectAdminHeader.header_background_transp;
+            objectAdminHeader.header_color_bg = color;
             var colorNew = color + percentValue.toString(16);
             
             $('#site-header-text a').css('background', colorNew);
             $('#site-description').css('background', colorNew);
 
-            console.log(objectAdminHeader.setting_header_color_bg);
-            console.log(objectAdminHeader.setting_header_background_transp);
+            console.log(objectAdminHeader.header_color_bg);
+            console.log(objectAdminHeader.header_background_transp);
         });
     });
 
-    wp.customize('setting_header_background_transp', function (value) {
+    wp.customize('azbalac_setting_header_background_transp', function (value) {
         value.bind(function (percent) {
             var percentValue = parseInt(Math.round(255 / 100 * percent),10);
-            objectAdminHeader.setting_header_background_transp = percent;
-            var color = objectAdminHeader.setting_header_color_bg;
+            objectAdminHeader.header_background_transp = percent;
+            var color = objectAdminHeader.header_color_bg;
             var colorNew = color + percentValue.toString(16);
             console.log(percentValue);
             console.log(percentValue.toString(16));
@@ -143,16 +145,17 @@
         });
     });
 
-    wp.customize('setting_header_alignment', function (value) {
+/*  currently not used, reload page
+  wp.customize('azbalac_setting_header_alignment', function (value) {
         value.bind(function (pos) {
             //$('#site-description').css('color', col);
-            /* 1 = top left
-            2 = top center
-            3 = top right
-            4 = bottom left
-            5 = bottom center
-            6 = bottom right
-            */
+            // 1 = top left
+            //2 = top center
+            //3 = top right
+            //4 = bottom left
+            //5 = bottom center
+            //6 = bottom right
+            
             if (pos == 2) { 
 
             } else if (pos == 3) {
@@ -172,10 +175,10 @@
             }
         });
     });
-
-    wp.customize('setting_header_distance_top', function (value) {
+*/
+    wp.customize('azbalac_setting_header_distance_top', function (value) {
         value.bind(function (dist) {
-            if ($.inArray( parseInt(objectAdminHeader.setting_header_alignment,10) , [1,2,3]) !== -1) {
+            if ($.inArray( parseInt(objectAdminHeader.header_alignment,10) , [1,2,3]) !== -1) {
                 console.log("hier");
                 $('#site-header-container-overlay').css('top', dist +  'px');
             } else {
@@ -185,14 +188,14 @@
         });
     });
 
-    wp.customize('setting_header_distance_left', function (value) {
+    wp.customize('azbalac_setting_header_distance_left', function (value) {
         value.bind(function (dist) {
             console.log("alignment?");
-                console.log(objectAdminHeader.setting_header_alignment);
-            if ($.inArray( objectAdminHeader.setting_header_alignment, ['1','4']) !== -1) {
+                console.log(objectAdminHeader.header_alignment);
+            if ($.inArray( objectAdminHeader.header_alignment, ['1','4']) !== -1) {
                 console.log("warum in 1 und 4?");
                 $('#site-header-container-overlay').css('left', dist +  'px');
-            } else if ($.inArray( objectAdminHeader.setting_header_alignment, ['3','6']) !== -1) {
+            } else if ($.inArray( objectAdminHeader.header_alignment, ['3','6']) !== -1) {
                 console.log("in 3 und 6");
                 $('#site-header-container-overlay').css('right', dist +  'px');
             } else {
@@ -205,7 +208,7 @@
 
 
 
-    wp.customize('setting_typography_headline', function (value) {
+    wp.customize('azbalac_setting_typography_headline', function (value) {
         value.bind(function (data) {
             fontData = JSON.parse(decodeURI(data));
            
@@ -298,7 +301,7 @@
 
 
 
-    wp.customize('setting_typography_body', function (value) {
+    wp.customize('azbalac_setting_typography_body', function (value) {
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
@@ -376,7 +379,7 @@
     });
 
 
-    wp.customize('setting_typography_navbar', function (value) {
+    wp.customize('azbalac_setting_typography_navbar', function (value) {
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
@@ -450,7 +453,7 @@
     });
 
 
-    wp.customize('setting_typography_title', function (value) {
+    wp.customize('azbalac_setting_typography_title', function (value) {
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));
@@ -526,7 +529,7 @@
     });
 
 
-    wp.customize('setting_typography_subtitle', function (value) {
+    wp.customize('azbalac_setting_typography_subtitle', function (value) {
         value.bind(function (data) {
             
             fontData = JSON.parse(decodeURI(data));

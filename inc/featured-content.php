@@ -288,7 +288,7 @@ class Featured_Content {
 		$options = array_intersect_key( $options, $defaults );
 
          
-                $featuredArticlesMax = get_theme_mod('featured_articles_max');
+            $featuredArticlesMax = get_theme_mod('azbalac_setting_featured_articles_max');
                
             if ($featuredArticlesMax !== '')
             {

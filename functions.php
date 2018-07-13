@@ -1,5 +1,6 @@
 <?php
 
+define('AZBALAC_DATEVERSION','2018071201');
 
 /**
  * Azbalac only works with PHP 7 and above.
@@ -14,7 +15,7 @@ require_once( get_template_directory() .'/vendor/autoload.php');
 require_once( get_template_directory() . '/inc/template/Template.php' );
 require_once( get_template_directory() . '/inc/template/DataContainer.php' );
 
-$t7tpl = new Azbalac_Template();
+$aztpl = new Azbalac_Template();
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
@@ -206,7 +207,7 @@ if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
     function azbalac_get_body_styles() 
     {
     
-        $colorBgSidebar = get_theme_mod('color_bg_sidebar');
+        $colorBgSidebar = get_theme_mod('azbalac_color_bg_sidebar');
         if (!$colorBgSidebar) {
             $sidebarStyleColorBg = '';
         }
@@ -214,7 +215,7 @@ if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
             $sidebarStyleColorBg = ' background-color: ' . $colorBgSidebar .';';
         }
        
-        $colorFgSidebar = get_theme_mod('color_fg_sidebar');
+        $colorFgSidebar = get_theme_mod('azbalac_color_fg_sidebar');
         if (!$colorFgSidebar) {
             $sidebarStyleColorFg = '';
         }
@@ -373,11 +374,11 @@ function azbalac_scripts() {
         ) );
     }*/
 
-    //wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2017121801', true );
+    //wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), AZBALAC_DATEVERSION , true );
     wp_enqueue_script( 'azbalac-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.js', array(), '3.2.1', false );
     
     wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
-        array(  ), '2017121802', true );
+        array(  ), AZBALAC_DATEVERSION , true );
 
         wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );
         
@@ -389,8 +390,8 @@ function azbalac_scripts() {
             
         //wp_add_inline_script('azbalac-social-media-buttons',$js);
         wp_localize_script( 'azbalac-admin-header', 'objectAdminHeader', array(
-            'setting_header_color_bg' => get_theme_mod('setting_header_color_bg'),
-            'setting_header_background_transp' => get_option('setting_header_background_transp',70) 
+            'azbalac_setting_header_color_bg' => get_theme_mod('azbalac_setting_header_color_bg'),
+            'azbalac_setting_header_background_transp' => get_option('azbalac_setting_header_background_transp',70) 
 
         ) );
     }*/
@@ -496,7 +497,7 @@ if ( ! function_exists( 'azbalac_get_layout' ) ) :
 
     function azbalac_get_layout() {
     
-        $layoutData = get_option('azbalac_layout');
+        $layoutData = get_option('azbalac_setting_layout');
     
         if (!isset($layoutData) || !$layoutData) {
             $layoutData = 2; // default: content left, sidebar right
@@ -533,7 +534,7 @@ if ( ! function_exists( 'azbalac_get_navbar_layout' ) ) :
     
     function azbalac_get_navbar_layout() {
     
-         $navbarData = get_option('setting_navbar_fixed');
+         $navbarData = get_option('azbalac_setting_navbar_fixed');
         
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
@@ -549,7 +550,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
 
     function azbalac_get_header_styles($navbarFixed) {
          
-        $navbarData = get_option('setting_navbar_style', 'light');
+        $navbarData = get_option('azbalac_setting_navbar_style', 'light');
     
         $navbarStyleClass = '';
 
@@ -560,8 +561,8 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             $navbarStyleClass .= ' navbar-light';
         }
 
-        $navbarBgData = get_option('setting_navbar_bg','default');
-        $navbarBgCustomData = get_theme_mod('setting_navbar_bg_custom','');
+        $navbarBgData = get_option('azbalac_setting_navbar_bg','default');
+        $navbarBgCustomData = get_theme_mod('azbalac_setting_navbar_bg_custom','');
         if (!$navbarBgCustomData) { // don't add bg-* setting to navbar class definition if custom background is set
             if ($navbarBgData == 'default') {
                 $navbarBgSetting = 'bg-' . $navbarData;
@@ -578,7 +579,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
         }
         
-        $colorBgHeaderData = get_theme_mod('color_bg_header');
+        $colorBgHeaderData = get_theme_mod('azbalac_color_bg_header');
         if ($colorBgHeaderData) {
             $headerStyleColorBg = $colorBgHeaderData;
         }
@@ -589,7 +590,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
         // this is currently not used, maybe in another version. The only foreground color is modifiey by CSS definition, because it's displayed as an URL.
        
 
-        $navbarAlignment = get_option('setting_navbar_menu_alignment','1'); // left is default
+        $navbarAlignment = get_option('azbalac_setting_navbar_menu_alignment','1'); // left is default
         switch (intval($navbarAlignment)) {
             case 3: // right
                 $navbarAlignmentClass = ' justify-content-end';
@@ -603,8 +604,8 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             break;
         }
     
-        $colorFgTitle = get_theme_mod('setting_color_fg_title','');
-        $colorFgSubtitle = get_theme_mod('setting_color_fg_subtitle','');
+        $colorFgTitle = get_theme_mod('azbalac_setting_color_fg_title','');
+        $colorFgSubtitle = get_theme_mod('azbalac_setting_color_fg_subtitle','');
        
 
         return array('navbarStyleClass' => $navbarStyleClass,
@@ -634,7 +635,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
                 'thumbnail' => $largeImage->thumbnail_url,
                 'id' => $largeImage->attachment_id); 
         }
-        elseif (get_option('header_image_example_azbalac', 1)) {
+        elseif (get_option('azbalac_setting_header_image_example', 1)) {
             // fallback to example image if not overwritten or switched off
             $imageData[0] = array('url' => get_template_directory_uri() . '/images/azbalac_default_header_image.jpg',
                 'height' => 213,
@@ -647,17 +648,17 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
         }
         if (isset($imageData[0]) && $imageData[0] !== '') {
             
-            if (get_option('header_image_large_dontscale')) {
-                $imageData[0]['dontscale'] = get_option('header_image_large_dontscale');
+            if (get_option('azbalac_setting_header_image_large_dontscale')) {
+                $imageData[0]['dontscale'] = get_option('azbalac_setting_header_image_large_dontscale');
             } else {
                 $imageData[0]['dontscale'] = 0;
             }
         }
         
         
-        $headerImageMediumData = wp_get_attachment_image_src(absint(get_option('header_image_medium')), 'original');
-        $headerImageSmallData = wp_get_attachment_image_src(absint(get_option('header_image_small')), 'original');
-        $headerImageXSmallData = wp_get_attachment_image_src(absint(get_option('header_image_xsmall')), 'original');
+        $headerImageMediumData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_medium')), 'original');
+        $headerImageSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_small')), 'original');
+        $headerImageXSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_xsmall')), 'original');
         
         if (isset($headerImageMediumData) && $headerImageMediumData) {
             
@@ -667,7 +668,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
             $imageData[1]['thumbnail'] = '';
             $imageData[1]['id'] = 0; // if necessary, set to attachment id. But check before.
             
-            if (get_option('header_image_medium_dontscale'))
+            if (get_option('azbalac_setting_header_image_medium_dontscale'))
             {
                 $imageData[1]['dontscale'] = 1;
             } else {
@@ -685,7 +686,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
             $imageData[2]['thumbnail'] = '';
             $imageData[2]['id'] = 0; // if necessary, set to attachment id. But check before.
             
-            if (get_option('header_image_small_dontscale'))
+            if (get_option('azbalac_setting_header_image_small_dontscale'))
             {
                 $imageData[2]['dontscale'] = 1;
             } else {
@@ -703,7 +704,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
             $imageData[3]['thumbnail'] = '';
             $imageData[3]['id'] = 0; // if necessary, set to attachment id. But check before.
             
-            if (get_option('header_image_xsmall_dontscale'))
+            if (get_option('azbalac_setting_header_image_xsmall_dontscale'))
             {
                 $imageData[3]['dontscale'] = 1;
             } else {
@@ -713,8 +714,6 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
             $imageData[3] = '';
         }
        
-       
-
         return '<script type="text/javascript">var azbalacHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;

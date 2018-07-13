@@ -75,7 +75,7 @@ $azbalac_footer = $azbalacContainer->footerData;
 
 
 
-echo $t7tpl->render('search.html.twig', array('header' => $header,
+echo $aztpl->render('search.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
 'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,

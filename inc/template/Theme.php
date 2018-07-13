@@ -15,9 +15,7 @@ class Azbalac_Theme
 
     public static function setStyles()
     {
-        $stylesheetSetting = get_theme_mod('setting_general_theme',0);
-    
-        $timestamp = '2018020901';
+        $stylesheetSetting = get_theme_mod('azbalac_setting_general_theme',0);
     
         if (!$stylesheetSetting)
         {
@@ -51,7 +49,7 @@ class Azbalac_Theme
         }
 
         foreach ($themeCss as $key => $stylesheet) {
-            wp_register_style( 'bootstrap-styles_' . $key, get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), $timestamp,'all');
+            wp_register_style( 'bootstrap-styles_' . $key, get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), AZBALAC_DATEVERSION ,'all');
         
             //  enqueue the style:
             wp_enqueue_style( 'bootstrap-styles_' . $key );

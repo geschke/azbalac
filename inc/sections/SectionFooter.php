@@ -44,10 +44,9 @@ class Azbalac_Section_Footer
     public static function get()
     {
         $output = '';
-        $footerLayout = get_option('setting_footer_layout',3); // 3 is default, three columns with the same width
-        $footerActivate = get_option('setting_footer_activate',1);
+        $footerLayout = get_option('azbalac_setting_footer_layout',3); // 3 is default, three columns with the same width
+        $footerActivate = get_option('azbalac_setting_footer_activate',1);
        
-
         if (intval($footerActivate) === 1 and ! empty($footerLayout)) {
             $output .= '<div class="row" style="padding: 10px; 0px; 10px;" id="footer">';
             if ($footerLayout == 1) {
@@ -134,7 +133,7 @@ class Azbalac_Section_Footer
 
     public static function getStyles()
     {
-        $colorBgFooterData = get_theme_mod('color_bg_footer');
+        $colorBgFooterData = get_theme_mod('azbalac_setting_color_bg_footer');
 
         if ($colorBgFooterData) {
             $footerStyleColorBg = ' background-color: ' . $colorBgFooterData . ';';
@@ -142,7 +141,7 @@ class Azbalac_Section_Footer
             $footerStyleColorBg = '';
         }
 
-        $colorFgFooterData = get_theme_mod('color_fg_footer');
+        $colorFgFooterData = get_theme_mod('azbalac_setting_color_fg_footer');
 
         if ($colorFgFooterData) {
             $footerStyleColorFg = ' color: ' . $colorFgFooterData . ';';

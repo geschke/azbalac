@@ -70,7 +70,7 @@ $azbalac_footer = $azbalacContainer->footerData;
 
 
 
-echo $t7tpl->render('category.html.twig', array('header' => $header,
+echo $aztpl->render('category.html.twig', array('header' => $header,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,
 'have_posts' => $azbalac_have_posts,

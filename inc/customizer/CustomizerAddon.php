@@ -26,43 +26,43 @@ class Azbalac_Customizer_Addon
         //$this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
         //$this->customizer->get_setting( 'header_textcolor' )->transport = 'postMessage';
         
-        $this->customizer->get_setting( 'color_bg_header' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'color_fg_footer' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'color_bg_footer' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_bg_header' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_fg_footer' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_bg_footer' )->transport = 'postMessage';
 
-        $this->customizer->get_setting( 'color_fg_sidebar' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'color_bg_sidebar' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_fg_sidebar' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_bg_sidebar' )->transport = 'postMessage';
 
-        $this->customizer->get_setting( 'setting_color_fg_title' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_color_fg_subtitle' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_fg_title' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_color_fg_subtitle' )->transport = 'postMessage';
 
-        $this->customizer->get_setting( 'setting_header_color_bg')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_header_background_transp')->transport = 'postMessage';
-        //$this->customizer->get_setting( 'setting_header_alignment')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_header_distance_top')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_header_distance_left')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_header_color_bg')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_header_background_transp')->transport = 'postMessage';
+        //$this->customizer->get_setting( 'azbalac_setting_header_alignment')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_header_distance_top')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_header_distance_left')->transport = 'postMessage';
         
 
-//        var_dump($this->customizer->get_setting('setting_header_color_bg')->value());
-//        var_dump($this->customizer->get_setting('setting_header_background_transp')->value());
+//        var_dump($this->customizer->get_setting('azbalac_setting_header_color_bg')->value());
+//        var_dump($this->customizer->get_setting('azbalac_setting_header_background_transp')->value());
         
        /* wp_enqueue_script( 'azbalac-admin-stuff', get_template_directory_uri().'/js/admin-header-options.js', array( 'jquery'), '', true );
         
         //wp_add_inline_script('azbalac-social-media-buttons',$js);
         wp_localize_script( 'azbalac-admin-stuff', 'objectAdminHeader', array(
-            'setting_header_color_bg' => $this->customizer->get_setting('setting_header_color_bg')->value(),
-            'setting_header_background_transp' => $this->customizer->get_setting('setting_header_background_transp')->value()
+            'azbalac_setting_header_color_bg' => $this->customizer->get_setting('azbalac_setting_header_color_bg')->value(),
+            'azbalac_setting_header_background_transp' => $this->customizer->get_setting('azbalac_setting_header_background_transp')->value()
 
         ) );
 */
-        // $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_typography_headline')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_typography_body')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_typography_navbar')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_typography_title')->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_typography_subtitle')->transport = 'postMessage';
+        // $this->customizer->get_setting( 'azbalac_setting_introduction_area_elements' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_typography_headline')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_typography_body')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_typography_navbar')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_typography_title')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_typography_subtitle')->transport = 'postMessage';
         
-        //   $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
+        //   $headlineFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_headline')));
        
         $this->customizer->get_setting( 'blogname' )->transport        = 'postMessage';
         $this->customizer->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -79,23 +79,23 @@ class Azbalac_Customizer_Addon
         ) );
 
         
-        $this->customizer->get_setting( 'setting_subfooter_content' )->transport = 'postMessage';
-        $this->customizer->selective_refresh->add_partial('setting_subfooter_content', array(
+        $this->customizer->get_setting( 'azbalac_setting_subfooter_content' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_subfooter_content', array(
             'selector' => '.subfooter .site-info',
             'container_inclusive' => false,
             'render_callback' => array($this, 'customizePartialSubfooterContent')
         ));
 
 
-        $this->customizer->get_setting( 'setting_introduction_area_title' )->transport = 'postMessage';
-        $this->customizer->selective_refresh->add_partial('setting_introduction_area_title', array(
+        $this->customizer->get_setting( 'azbalac_setting_introduction_area_title' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_introduction_area_title', array(
             'selector' => '#section-introduction .section-title',
             'container_inclusive' => false,
             'render_callback' => array($this, 'customizePartialIntroductionAreaTitle')
         ));
 
-        $this->customizer->get_setting( 'setting_introduction_area_subtitle' )->transport = 'postMessage';
-        $this->customizer->selective_refresh->add_partial('setting_introduction_area_subtitle', array(
+        $this->customizer->get_setting( 'azbalac_setting_introduction_area_subtitle' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_introduction_area_subtitle', array(
             'selector' => '#section-introduction .section-subtitle',
             'container_inclusive' => false,
             'render_callback' => array($this, 'customizePartialIntroductionAreaSubtitle')
@@ -103,8 +103,8 @@ class Azbalac_Customizer_Addon
 
 
 
-        $this->customizer->get_setting( 'setting_introduction_area_elements' )->transport = 'postMessage';
-        $this->customizer->selective_refresh->add_partial('setting_introduction_area_elements', array(
+        $this->customizer->get_setting( 'azbalac_setting_introduction_area_elements' )->transport = 'postMessage';
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_introduction_area_elements', array(
             'selector' => '.azbalac-introduction .section-introduction-elements',
             'container_inclusive' => false,
             'render_callback' => array($this, 'customizePartialIntroductionAreaElements')
@@ -112,37 +112,37 @@ class Azbalac_Customizer_Addon
 
         
 
-        $this->customizer->get_setting( 'setting_social_media_activate' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_media_alignment' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_button_size' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_button_type' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_button_color_fg' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_button_color_bg' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_social_button_color_bg_hover' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_media_activate' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_media_alignment' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_button_size' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_button_type' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_button_color_fg' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_button_color_bg' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_social_button_color_bg_hover' )->transport = 'postMessage';
 
-        $this->customizer->selective_refresh->add_partial('setting_social_media_activate', array(
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_social_media_activate', array(
             'selector' => '.social-media-buttons',
             'container_inclusive' => false,
             'settings' => array(
-                'setting_social_media_activate',
-                'setting_social_media_alignment',
-                'setting_social_button_size',
-                'setting_social_button_type',
+                'azbalac_setting_social_media_activate',
+                'azbalac_setting_social_media_alignment',
+                'azbalac_setting_social_button_size',
+                'azbalac_setting_social_button_type',
               
             ),
             'render_callback' => array($this, 'customizePartialSocialMediaButtons')
         ));
 
         
-        $this->customizer->get_setting( 'setting_slider_activate' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_slider_indicators' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_slider_activate' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_slider_indicators' )->transport = 'postMessage';
         
-        $this->customizer->selective_refresh->add_partial('setting_slider_activate', array(
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_slider_activate', array(
             'selector' => '.azbalac-slider', // todo here...the same as with social media buttons
             'container_inclusive' => true,
             'settings' => array(
-                'setting_slider_activate',
-                'setting_slider_indicators'
+                'azbalac_setting_slider_activate',
+                'azbalac_setting_slider_indicators'
               
             ),
             'render_callback' => array($this, 'customizePartialSlider')
@@ -151,15 +151,15 @@ class Azbalac_Customizer_Addon
 
         
 
-        $this->customizer->get_setting( 'setting_footer_activate' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'setting_footer_layout' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_footer_activate' )->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_footer_layout' )->transport = 'postMessage';
         
-        $this->customizer->selective_refresh->add_partial('setting_footer_activate', array(
+        $this->customizer->selective_refresh->add_partial('azbalac_setting_footer_activate', array(
             'selector' => '.azbalac-footer', // todo here...the same as with social media buttons
             'container_inclusive' => false,
             'settings' => array(
-                'setting_footer_activate',
-                'setting_footer_layout',
+                'azbalac_setting_footer_activate',
+                'azbalac_setting_footer_layout',
               
             ),
             'render_callback' => array($this, 'customizePartialFooter')

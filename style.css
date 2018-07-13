@@ -101,24 +101,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 
-@media (max-width: 575px) {
+@media (max-width: 575.98px) {
     #media-width-detection-element {
         width: 1px;
     }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     #media-width-detection-element {
         width: 540px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
     #media-width-detection-element {
         width: 720px;
     }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     #media-width-detection-element {
         width: 960px;
     }
@@ -558,7 +558,7 @@ a.section-introduction-url {
 
 
 /* Adjust footer edit shortcut button */
-.customize-partial-edit-shortcut-setting_footer_activate > button {
+.customize-partial-edit-shortcut-azbalac_setting_footer_activate > button {
 	margin-left: -20px;
 	
 }

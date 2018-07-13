@@ -20,9 +20,9 @@ $content['permalink'] = get_permalink();
 // esc_url?? check this!
 
 
-if (absint(get_option('setting_posts_featured_date'))) {
+if (absint(get_option('azbalac_setting_posts_featured_date'))) {
 
-    $content['setting_posts_featured_date'] = true;
+    $content['azbalac_setting_posts_featured_date'] = true;
 
     if ( 'post' == get_post_type() ) {
         $content['postType'] = 'post';

@@ -21,11 +21,11 @@ class Azbalac_Theme_Font
 
     public static function getStyles()
     {
-        $bodyFont = json_decode(urldecode(get_theme_mod('setting_typography_body')));
-        $headlineFont = json_decode(urldecode(get_theme_mod('setting_typography_headline')));
-        $navbarFont = json_decode(urldecode(get_theme_mod('setting_typography_navbar')));
-        $titleFont = json_decode(urldecode(get_theme_mod('setting_typography_title')));
-        $subtitleFont = json_decode(urldecode(get_theme_mod('setting_typography_subtitle')));
+        $bodyFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_body')));
+        $headlineFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_headline')));
+        $navbarFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_navbar')));
+        $titleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_title')));
+        $subtitleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_subtitle')));
         
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);

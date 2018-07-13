@@ -15,10 +15,10 @@ class Azbalac_Section_Slider
 
     public static function getSlider($position) 
     {
-        /*if (!get_option('setting_slider_activate')) {
+        /*if (!get_option('azbalac_setting_slider_activate')) {
             return '';
         }*/
-        if (get_option('setting_slider_position') != $position) {
+        if (get_option('azbalac_setting_slider_position') != $position) {
             return '';
         }
         return self::build();
@@ -44,7 +44,7 @@ class Azbalac_Section_Slider
 
     public static function buildContainer()
     {
-        if (!get_option('setting_slider_activate')) {
+        if (!get_option('azbalac_setting_slider_activate')) {
             return '';
         }
         ob_start();
@@ -58,23 +58,23 @@ class Azbalac_Section_Slider
         // this is too late, so set above...
         //add_action( 'wp_enqueue_scripts', 'azbalac_set_slider_text_style' );
     
-        $sliderInterval = get_theme_mod('setting_slider_interval',5000);
-        $sliderPause = get_option('setting_slider_pause','1') ? 'hover': '';
-        $sliderKeyboard = get_option('setting_slider_keyboard','1') ? 'true': 'false';
-        $sliderWrap = get_option('setting_slider_wrap','1') ? 'true': 'false';
-        $sliderIndicators = get_option('setting_slider_indicators','1') ? true: false;
+        $sliderInterval = get_theme_mod('azbalac_setting_slider_interval',5000);
+        $sliderPause = get_option('azbalac_setting_slider_pause','1') ? 'hover': '';
+        $sliderKeyboard = get_option('azbalac_setting_slider_keyboard','1') ? 'true': 'false';
+        $sliderWrap = get_option('azbalac_setting_slider_wrap','1') ? 'true': 'false';
+        $sliderIndicators = get_option('azbalac_setting_slider_indicators','1') ? true: false;
        
         for ($i = 1; $i <= 6; $i++) {
-            $sliderImage = wp_get_attachment_image_src(absint(get_option('setting_slider_' . $i . '_image')), 'original');
+            $sliderImage = wp_get_attachment_image_src(absint(get_option('azbalac_setting_slider_' . $i . '_image')), 'original');
             if ($sliderImage) {
                 $sliderData[$i]['image'] = $sliderImage;
-                $sliderData[$i]['title'] = get_theme_mod('setting_slider_' . $i . '_title');
-                $sliderData[$i]['description'] = get_theme_mod('setting_slider_' . $i . '_description');
-                $sliderData[$i]['text_position'] = get_option('setting_slider_' . $i . '_text_position');
-                $sliderData[$i]['page'] = get_option('setting_slider_' . $i . '_page');
-                $sliderData[$i]['post'] = get_option('setting_slider_' . $i . '_post');
-                $sliderData[$i]['url'] = get_option('setting_slider_' . $i . '_url');
-                $colorFgText = get_theme_mod('setting_slider_' . $i . '_text_color');
+                $sliderData[$i]['title'] = get_theme_mod('azbalac_setting_slider_' . $i . '_title');
+                $sliderData[$i]['description'] = get_theme_mod('azbalac_setting_slider_' . $i . '_description');
+                $sliderData[$i]['text_position'] = get_option('azbalac_setting_slider_' . $i . '_text_position');
+                $sliderData[$i]['page'] = get_option('azbalac_setting_slider_' . $i . '_page');
+                $sliderData[$i]['post'] = get_option('azbalac_setting_slider_' . $i . '_post');
+                $sliderData[$i]['url'] = get_option('azbalac_setting_slider_' . $i . '_url');
+                $colorFgText = get_theme_mod('azbalac_setting_slider_' . $i . '_text_color');
                 if ($colorFgText) {
                     $sliderData[$i]['style'] = ' color: ' . $colorFgText .';';
                 } else {

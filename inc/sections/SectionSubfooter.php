@@ -20,11 +20,11 @@ class Azbalac_Section_Subfooter
     public static function getStyles() 
     {
         $output = '';
-        $footerActivate =  get_option('setting_subfooter_activate',1);
+        $footerActivate =  get_option('azbalac_setting_subfooter_activate',1);
         if (intval($footerActivate) !== 1) {
           return '';
         }
-        $colorLink = get_theme_mod('setting_subfooter_color_link');
+        $colorLink = get_theme_mod('azbalac_setting_subfooter_color_link');
         
         $output .= '<style type="text/css">
          .subfooter a, .subfooter a:hover {
@@ -46,7 +46,7 @@ class Azbalac_Section_Subfooter
     public static function getContent()
     {
         $output = '';        
-        $footerActivate =  get_option('setting_subfooter_activate',1);
+        $footerActivate =  get_option('azbalac_setting_subfooter_activate',1);
       
         if (intval($footerActivate) !== 1) {
           return '';
@@ -76,7 +76,7 @@ class Azbalac_Section_Subfooter
 
     public static function getContentRaw()
     {
-        $content = get_theme_mod('setting_subfooter_content');
+        $content = get_theme_mod('azbalac_setting_subfooter_content');
         if ($content === false) {
             // no value in database, so the option is not overwritten, use default
             $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
@@ -89,7 +89,7 @@ class Azbalac_Section_Subfooter
 
     public static function getStyleData()
     {
-        $colorBg = get_theme_mod('setting_subfooter_color_bg');
+        $colorBg = get_theme_mod('azbalac_setting_subfooter_color_bg');
 
         if ($colorBg) {
             $styleColorBg = ' background-color: ' . $colorBg . ';';
@@ -97,7 +97,7 @@ class Azbalac_Section_Subfooter
             $styleColorBg = '';
         }
 
-        $colorFg = get_theme_mod('setting_subfooter_color_fg');
+        $colorFg = get_theme_mod('azbalac_setting_subfooter_color_fg');
 
         if ($colorFg) {
             $styleColorFg = ' color: ' . $colorFg . ';';

@@ -18,12 +18,12 @@ class Azbalac_Section_Content_Column
 
     public static function getIntroductionTitle()
     {
-        return get_theme_mod('setting_introduction_area_title');
+        return get_theme_mod('azbalac_setting_introduction_area_title');
     }
 
     public static function getIntroductionSubtitle()
     {
-        return get_theme_mod('setting_introduction_area_subtitle');
+        return get_theme_mod('azbalac_setting_introduction_area_subtitle');
     }
 
     public static function getIntroductionElements($position) 
@@ -37,11 +37,12 @@ class Azbalac_Section_Content_Column
 
     public static function showIntroductionElements($position) 
     {
-        $introActivate =  get_option('setting_introduction_area_activate',1);
+        $introActivate =  get_option('azbalac_setting_introduction_area_activate',1);
         if (intval($introActivate) !== 1) {
           return '';
         }
-        if (get_option('setting_introduction_position') != $position) {
+       
+        if (get_option('azbalac_setting_introduction_position',2) != $position) {
           return '';
         }
         self::build();
@@ -50,13 +51,10 @@ class Azbalac_Section_Content_Column
     public static function build()
     {
        
-        $introTitle = get_theme_mod('setting_introduction_area_title');
-        $introSubtitle = get_theme_mod('setting_introduction_area_subtitle');
+        $introTitle = get_theme_mod('azbalac_setting_introduction_area_title');
+        $introSubtitle = get_theme_mod('azbalac_setting_introduction_area_subtitle');
        
-      
-      
-       
-        $colorBgData = get_theme_mod('setting_introduction_area_color_bg');
+        $colorBgData = get_theme_mod('azbalac_setting_introduction_area_color_bg');
         
         if ($colorBgData) {
             $styleColorBg = ' background-color: ' . $colorBgData . ';';
@@ -65,8 +63,8 @@ class Azbalac_Section_Content_Column
         }
    
         ?>
-        <div class="container azbalac-introduction-section my-4" style="<?php echo $styleColorBg; ?>">
-            <div class="azbalac-introduction">
+        <div class="containr azbalac-introduction-section my-4 py-4" style="<?php echo $styleColorBg; ?>">
+            <div class="azbalac-introduction container ">
 
         <section class="section-introduction" id="section-introduction">
           <?php if ($introTitle || $introSubtitle) { ?>
@@ -90,9 +88,9 @@ class Azbalac_Section_Content_Column
     public static function getElementBox($withRow = true)
     {
         $output = '';
-        $introElements = json_decode(urldecode(get_theme_mod('setting_introduction_area_elements')));
+        $introElements = json_decode(urldecode(get_theme_mod('azbalac_setting_introduction_area_elements')));
 
-        $disableReadMore = get_option('setting_introduction_area_readmore', false);
+        $disableReadMore = get_option('azbalac_setting_introduction_area_readmore', false);
         if (intval($disableReadMore) === 1) {
             self::$disableReadMore = true;
         }

@@ -37,7 +37,7 @@ if ( has_custom_logo() ) {
 //        echo '<img src="'. esc_url( $logo[0] ) .'">';
 } 
 
-$content['customLogoPosition'] = get_option('setting_general_logo_position', 1);
+$content['customLogoPosition'] = get_option('azbalac_setting_general_logo_position', 1);
 
 $content['displayHeaderText'] = display_header_text();
 
@@ -50,7 +50,7 @@ $content['wpHead'] = ob_get_clean();
 
 if (has_nav_menu('header-menu')) {
     
-    $navbarAlignment = get_option('setting_navbar_menu_alignment','1'); // left is default
+    $navbarAlignment = get_option('azbalac_setting_navbar_menu_alignment','1'); // left is default
     switch (intval($navbarAlignment)) {
         case 3: // right
             $whitespacePosition = 'l';
@@ -64,7 +64,7 @@ if (has_nav_menu('header-menu')) {
         break;
     }
 
-    $navbarWhitespace = intval(get_option('setting_navbar_menu_whitespace','1'));
+    $navbarWhitespace = intval(get_option('azbalac_setting_navbar_menu_whitespace','1'));
    
     switch ($navbarWhitespace) {
         case 5:
@@ -109,12 +109,12 @@ $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
-$content['headerOptions']['show_title_image'] = get_option('setting_header_show_title_image','');
-$content['headerOptions']['setting_header_color_bg'] = get_theme_mod('setting_header_color_bg'); // default black, todo here
-$content['headerOptions']['setting_header_background_transp'] = get_option('setting_header_background_transp',70); // default 70%
-$content['headerOptions']['setting_header_background_transp_hex'] = dechex(round(255 / 100 * $content['headerOptions']['setting_header_background_transp']));
-$content['headerOptions']['setting_header_alignment'] = get_option('setting_header_alignment',1);
-switch (intval($content['headerOptions']['setting_header_alignment'])) {
+$content['headerOptions']['show_title_image'] = get_option('azbalac_setting_header_show_title_image','');
+$content['headerOptions']['header_color_bg'] = get_theme_mod('azbalac_setting_header_color_bg','#000000'); // default black
+$content['headerOptions']['header_background_transp'] = get_option('azbalac_setting_header_background_transp',70); // default 70%
+$content['headerOptions']['header_background_transp_hex'] = dechex(round(255 / 100 * $content['headerOptions']['header_background_transp']));
+$content['headerOptions']['header_alignment'] = get_option('azbalac_setting_header_alignment',1);
+switch (intval($content['headerOptions']['header_alignment'])) {
     case 2: // top, center
         $headerContainerClass = ' fixed-top ';
         $headerBoxClassTitle = ' d-flex justify-content-center ';
@@ -152,8 +152,8 @@ switch (intval($content['headerOptions']['setting_header_alignment'])) {
 $content['headerOptions']['header_container'] = ['container_class' => $headerContainerClass,
 'box_class_title' => $headerBoxClassTitle,
 'box_class_subtitle' => $headerBoxClassSubtitle];
-$content['headerOptions']['setting_header_distance_top'] = get_option('setting_header_distance_top',10);
-$content['headerOptions']['setting_header_distance_left'] = get_option('setting_header_distance_left',20);
+$content['headerOptions']['header_distance_top'] = get_option('azbalac_setting_header_distance_top',10);
+$content['headerOptions']['header_distance_left'] = get_option('azbalac_setting_header_distance_left',20);
 
 if (is_customize_preview()) {
     // transport header options to JavaScript only in Customizer view, otherwise they aren't needed

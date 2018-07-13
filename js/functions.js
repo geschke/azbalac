@@ -90,6 +90,7 @@
         var siteHeaderImage =  $('#site-header-image');
         var width, height;
 
+		
         var newWidth = 0, newHeight = 0;
         var imgData = {};
         if (mediaSize == 'xs') {
@@ -156,7 +157,6 @@
         } else { // >= 1200
             mediaDetectSize = 'xl';
 		}
-		
         if (mediaDetectSize != mediaSize || mediaDetectSize == 'xs') {
             mediaSize = mediaDetectSize;
             $.headerImageResize(mediaSize);

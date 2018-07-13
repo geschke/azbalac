@@ -82,27 +82,33 @@ class Azbalac_Section_Slider
                 }
             }
         }
-        
         ?>
 
         
         <div id="azbalacSlider" class="azbalac-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
-        <?php if ($sliderIndicators === true) { ?>
+        <?php 
+        if (isset($sliderData) && count($sliderData)) {
+            if ($sliderIndicators === true) { 
+            ?>
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <?php
-            foreach ($sliderData as $idx => $sliderElement) {
-                echo '<li data-target="#azbalacSlider" data-slide-to="';
-                echo $idx - 1;
-                echo '"';
-                if ($idx == 1) {
-                    echo ' class="active"';
+            
+                foreach ($sliderData as $idx => $sliderElement) {
+                    echo '<li data-target="#azbalacSlider" data-slide-to="';
+                    echo $idx - 1;
+                    echo '"';
+                    if ($idx == 1) {
+                        echo ' class="active"';
+                    }
+                    echo '></li>' . "\n";
                 }
-                echo '></li>' . "\n";
-            }
+            
             ?>
         </ol>
-        <?php }
+        <?php
+            } 
+        }
         ?>
         <!-- Wrapper for slides -->
             
@@ -110,70 +116,74 @@ class Azbalac_Section_Slider
         <div class="carousel-inner">
                 
         <?php
-        
-        foreach ($sliderData as $idx => $sliderElement) {
-            echo ' <div class="carousel-item ';
-            if ($idx == 1) {
-                echo 'active';
-            }
-            echo '">';
-            if ($sliderElement['url']) {
-                $sliderUrl = $sliderElement['url'];
-            } elseif ($sliderElement['page']) {
-                $sliderUrl = get_page_link($sliderElement['page']);
-            } elseif ($sliderElement['post']) {
-                $sliderUrl = get_page_link($sliderElement['post']);
-            } else {
-                $sliderUrl = null;
-            }
-            if ($sliderUrl) {
-                echo '<a href="' . $sliderUrl . '">';
-            }
-            echo '<img class="d-block w-100" src="' . $sliderElement['image'][0] .'" alt="&hellip;">';
-            if ($sliderUrl) {
-                echo '</a>';
-            }
-            echo ' <div class="carousel-caption d-none d-md-block';
-            switch ($sliderElement['text_position']) {
-                case 1:
-                    echo " carousel-caption-left";
-                    break;
-                case 3:
-                    echo ' carousel-caption-right';
-                    break;
-                // no default, centered is default
-            }
-            echo '">';
-            if ($sliderElement['title']) {
-                echo '<h3 style="' . $sliderElement['style'] . '">';
-                if ($sliderUrl) {
-                    echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
+        if (isset($sliderData) && count($sliderData)) {
+            foreach ($sliderData as $idx => $sliderElement) {
+                echo ' <div class="carousel-item ';
+                if ($idx == 1) {
+                    echo 'active';
                 }
-                echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['title'] . '</span>';
+                echo '">';
+                if ($sliderElement['url']) {
+                    $sliderUrl = $sliderElement['url'];
+                } elseif ($sliderElement['page']) {
+                    $sliderUrl = get_page_link($sliderElement['page']);
+                } elseif ($sliderElement['post']) {
+                    $sliderUrl = get_page_link($sliderElement['post']);
+                } else {
+                    $sliderUrl = null;
+                }
+                if ($sliderUrl) {
+                    echo '<a href="' . $sliderUrl . '">';
+                }
+                echo '<img class="d-block w-100" src="' . $sliderElement['image'][0] .'" alt="&hellip;">';
                 if ($sliderUrl) {
                     echo '</a>';
                 }
-                echo '</h3>';
-            }
-            if ($sliderElement['description']) {
-                echo '<p>';
-                if ($sliderUrl) {
-                    echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
+                echo ' <div class="carousel-caption d-none d-md-block';
+                switch ($sliderElement['text_position']) {
+                    case 1:
+                        echo " carousel-caption-left";
+                        break;
+                    case 3:
+                        echo ' carousel-caption-right';
+                        break;
+                    // no default, centered is default
                 }
-                echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['description'] . '</span>';
-                
-                if ($sliderUrl) {
-                    echo '</a>';
+                echo '">';
+                if ($sliderElement['title']) {
+                    echo '<h3 style="' . $sliderElement['style'] . '">';
+                    if ($sliderUrl) {
+                        echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
+                    }
+                    echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['title'] . '</span>';
+                    if ($sliderUrl) {
+                        echo '</a>';
+                    }
+                    echo '</h3>';
                 }
-                echo '</p>';
+                if ($sliderElement['description']) {
+                    echo '<p>';
+                    if ($sliderUrl) {
+                        echo '<a style="' . $sliderElement['style'] . '" href="' . $sliderUrl . '">';
+                    }
+                    echo '<span style="' . $sliderElement['style'] . '">' . $sliderElement['description'] . '</span>';
+                    
+                    if ($sliderUrl) {
+                        echo '</a>';
+                    }
+                    echo '</p>';
+                }
+                echo '</div>    ';
+                echo '</div>' . "\n";
             }
-            echo '</div>    ';
-            echo '</div>' . "\n";
         }
             ?>
             
         </div>
     
+        <?php
+        if (isset($sliderData) && count($sliderData)) {
+        ?>
         <!-- Controls -->
         <a class="carousel-control-prev" href="#azbalacSlider" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -183,6 +193,9 @@ class Azbalac_Section_Slider
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only"><?php echo  __( 'Next', 'azbalac' ); ?></span>
         </a>
+        <?php 
+        }
+        ?>
     </div>
     
 

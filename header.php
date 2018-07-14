@@ -154,6 +154,7 @@ $content['headerOptions']['header_container'] = ['container_class' => $headerCon
 'box_class_subtitle' => $headerBoxClassSubtitle];
 $content['headerOptions']['header_distance_top'] = get_option('azbalac_setting_header_distance_top',10);
 $content['headerOptions']['header_distance_left'] = get_option('azbalac_setting_header_distance_left',20);
+$content['headerOptions']['header_distance_between'] = get_option('azbalac_setting_header_distance_between',10);
 
 if (is_customize_preview()) {
     // transport header options to JavaScript only in Customizer view, otherwise they aren't needed

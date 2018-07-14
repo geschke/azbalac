@@ -14,6 +14,13 @@
     }
 </style>
 {% endif %}
+{% if header.header_distance_between %}
+<style type="text/css">
+    #site-header-box-title {
+        margin-bottom: {{ header.header_distance_between }}px;
+    }
+</style>
+{% endif %}
 {% if header.header_distance_top or header.header_distance_left %}
 <style type="text/css">
     #site-header-container-overlay {

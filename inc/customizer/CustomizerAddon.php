@@ -41,6 +41,7 @@ class Azbalac_Customizer_Addon
         //$this->customizer->get_setting( 'azbalac_setting_header_alignment')->transport = 'postMessage';
         $this->customizer->get_setting( 'azbalac_setting_header_distance_top')->transport = 'postMessage';
         $this->customizer->get_setting( 'azbalac_setting_header_distance_left')->transport = 'postMessage';
+        $this->customizer->get_setting( 'azbalac_setting_header_distance_between')->transport = 'postMessage';
         
 
 //        var_dump($this->customizer->get_setting('azbalac_setting_header_color_bg')->value());

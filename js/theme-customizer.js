@@ -206,6 +206,13 @@
         });
     });
 
+    
+    wp.customize('azbalac_setting_header_distance_between', function (value) {
+        value.bind(function (dist) {
+                //console.log(objectAdminHeader.header_alignment);
+            $('#site-header-box-title').css('margin-bottom', dist +  'px');
+        });
+    });
 
 
     wp.customize('azbalac_setting_typography_headline', function (value) {

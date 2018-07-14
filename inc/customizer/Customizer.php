@@ -1117,6 +1117,23 @@ class Azbalac_Customizer
                 'step' => 1)
         )));
 
+        $wp_customize->add_setting('azbalac_setting_header_distance_between', array(
+            'default' => 10,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
+        ));
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'azbalac_control_header_distance_between', array(
+            'label' => __('Set distance between title and subtitle', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'azbalac_setting_header_distance_between',
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 0,
+                'max' => 500,
+                'step' => 1)
+        )));
 
     }
 

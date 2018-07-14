@@ -116,8 +116,7 @@
 			$.moveHeader(false);
 		}
 		
-		//console.log(mediaSize);
-
+		
         if (imgData.image != '') {
             $('#site-header-above').show();
 

@@ -4,16 +4,18 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2.5
+Version 0.2.6
 
 
 ## Version history:
+
+Version 0.2.6
+- Internal: Renamed customizer settings and controls variables to prevent conflicts between Azbalac and other themes
 
 Version 0.2.5
 - New feature: Header Settings. This is awesome. You can place the title and subtitle as overlay on the header image, modify their fonts, font size, color, background color (with transparency), alignment and position. This works also on small and very small (smartphone) screens, the responsive behavior is created with small JavaScript. This is a beta release, there are too many possible cases, so it needs testing. 
 - Add some edit shortcuts to improve the customizer user experience
 - Fix: Show subfooter when content isn't modified
-- Internal: Renamed customizer settings and controls variables to prevent conflicts between Azbalac and other themes
 
 Version 0.2.4
 - New feature: The font in the navigation bar is now editable with a new customizer option in the typography settings area.

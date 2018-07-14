@@ -113,8 +113,8 @@
 
     wp.customize('azbalac_setting_header_color_bg', function (value) {
         value.bind(function (color) {
-            console.log(color);
-            console.log()
+            //console.log(color);
+            //console.log()
             var percentValue = objectAdminHeader.header_background_transp;
             objectAdminHeader.header_color_bg = color;
             var colorNew = color + percentValue.toString(16);
@@ -122,8 +122,8 @@
             $('#site-header-text a').css('background', colorNew);
             $('#site-description').css('background', colorNew);
 
-            console.log(objectAdminHeader.header_color_bg);
-            console.log(objectAdminHeader.header_background_transp);
+            //console.log(objectAdminHeader.header_color_bg);
+            //console.log(objectAdminHeader.header_background_transp);
         });
     });
 
@@ -133,9 +133,9 @@
             objectAdminHeader.header_background_transp = percent;
             var color = objectAdminHeader.header_color_bg;
             var colorNew = color + percentValue.toString(16);
-            console.log(percentValue);
-            console.log(percentValue.toString(16));
-            console.log(colorNew);
+            //console.log(percentValue);
+            //console.log(percentValue.toString(16));
+            //console.log(colorNew);
             $('#site-header-text a').css('background', colorNew);
             $('#site-description').css('background', colorNew);
            
@@ -179,10 +179,10 @@
     wp.customize('azbalac_setting_header_distance_top', function (value) {
         value.bind(function (dist) {
             if ($.inArray( parseInt(objectAdminHeader.header_alignment,10) , [1,2,3]) !== -1) {
-                console.log("hier");
+                //console.log("hier");
                 $('#site-header-container-overlay').css('top', dist +  'px');
             } else {
-                console.log("da");
+                //console.log("da");
                 $('#site-header-container-overlay').css('bottom', dist +  'px');
             }
         });
@@ -190,16 +190,16 @@
 
     wp.customize('azbalac_setting_header_distance_left', function (value) {
         value.bind(function (dist) {
-            console.log("alignment?");
-                console.log(objectAdminHeader.header_alignment);
+            //console.log("alignment?");
+                //console.log(objectAdminHeader.header_alignment);
             if ($.inArray( objectAdminHeader.header_alignment, ['1','4']) !== -1) {
-                console.log("warum in 1 und 4?");
+                //console.log("warum in 1 und 4?");
                 $('#site-header-container-overlay').css('left', dist +  'px');
             } else if ($.inArray( objectAdminHeader.header_alignment, ['3','6']) !== -1) {
-                console.log("in 3 und 6");
+                //console.log("in 3 und 6");
                 $('#site-header-container-overlay').css('right', dist +  'px');
             } else {
-                console.log("don't know");
+                //console.log("don't know");
             }
 
             //$('#site-description').css('color', col);

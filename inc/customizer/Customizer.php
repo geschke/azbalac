@@ -576,7 +576,7 @@ class Azbalac_Customizer
             'settings' => 'azbalac_setting_social_media_position',
             'type' => 'radio',
             'choices' => array(
-                // '1' => __('Don\'t show', 'azbalac'),
+                '1' => __('Above header (with standard navigation)', 'azbalac'),
                 '2' => __('Between Content and Footer', 'azbalac'),
                 '3' => __('Below Footer', 'azbalac'),
             ),

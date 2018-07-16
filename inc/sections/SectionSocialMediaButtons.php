@@ -14,9 +14,9 @@ class Azbalac_Section_Social_Media_Buttons
 {
 
 
-    public static function showButtons($position)
+    public static function showButtons($position, $contentComplete = true)
     {
-        $output = self::getButtons($position);
+        $output = self::getButtons($position, $contentComplete);
         if (null === $output) {
             return null;
         }
@@ -24,7 +24,7 @@ class Azbalac_Section_Social_Media_Buttons
     }
 
 
-    public static function getButtons($position)
+    public static function getButtons($position, $contentComplete = true)
     {
       
         if (!get_option('azbalac_setting_social_media_activate',false)) {
@@ -35,22 +35,22 @@ class Azbalac_Section_Social_Media_Buttons
             return null;
         }
       
-        return self::buildButtons();
+        return self::buildButtons($contentComplete);
     }
 
-    public static function buildButtons()
+    public static function buildButtons($contentComplete = true)
     {
         $output = '';
         
-        $output .= '<div class="container">';
+        if ($contentComplete) $output .= '<div class="container">';
 
-        $output .= self::getButtonsContainer();
-        $output .= '</div>';
+        $output .= self::getButtonsContainer($contentComplete);
+        if ($contentComplete) $output .= '</div>';
 
         return $output;
     }
 
-    public static function getButtonsContainer()
+    public static function getButtonsContainer($contentComplete = true)
     {
         $output = '';
         if (!get_option('azbalac_setting_social_media_activate',false)) {
@@ -81,18 +81,21 @@ class Azbalac_Section_Social_Media_Buttons
         $buttonType = get_option('azbalac_setting_social_button_type','1');
         
 
-        $output .= '
-        <div class="col-md-12 social-media-buttons"> 
-        <div style="text-align: ' . $align . '">';
-                
+        if ($contentComplete) {
+            $output .= '<div class="col-md-12 social-media-buttons"> 
+                    <div style="text-align: ' . $align . '">';
+        }    
         $socialOutput = '';
         foreach ($socialButtons as $socialOption => $socialIcon) {
             $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType);
         }
         $output .= $socialOutput;
 
-        $output .= '</div>
-        </div>';
+
+        if ($contentComplete) {
+            $output .= '</div>
+                        </div>';
+        }
         return $output;        
     }
 

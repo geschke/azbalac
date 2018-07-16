@@ -30,6 +30,7 @@ class Azbalac_Template
             'cache' => get_template_directory() . '/templates/cache/',
             'debug' => true // todo: set to false when upload to WordPress theme repository
         ));
+        $this->twig->addExtension(new Azbalac_Twig_Section_Extension());
     }
 
     public function render(string $name, array $context = array())

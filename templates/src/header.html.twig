@@ -67,6 +67,9 @@
 
 {% if content.navbarFixed == 'default' %}
 
+{% if content.headerOptions.show_title_image %}
+    {{ renderSocialMediaButtons(1)|raw }}
+{% endif %}
 
 <div id="header" role="banner" style="{% if content.headerStyles.headerStyleColorBg %}background-color: {{ content.headerStyles.headerStyleColorBg }} {% endif %}{% if content.headerStyles.headerStyleColorFg %}{{ content.headerStyles.headerStyleColorFg }}{% endif %}">
 
@@ -93,12 +96,21 @@
                                 &nbsp;
                                 {% endif %}
                             </div>
+                            <div class="col-auto ml-auto">
+                                {{ renderSocialMediaButtons(1,false)|raw }}
+                                {% if content.headerWidgetRight %}
+                                <div class="float-right ml-2">
+                                    {{ content.headerWidgetRight|raw }}
+                                </div>
+                                {% endif %}
+                            </div>
+                          
                             {% endif %}
-                            {% if  content.headerWidgetRight %}
+                            {# {% if  content.headerWidgetRight %}
                             <div class="col-auto ml-auto">
                                     {{ content.headerWidgetRight|raw }}
                             </div>
-                            {% endif %}
+                            {% endif %}  #}
                         </div>
 
                 {#    </div>
@@ -166,7 +178,7 @@
                         <a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
                 {% endif %}
             
-            <div class="navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
+            <div class="sticky-top navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
                 <ul class="navbar-nav  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
                     {{ content.wpNavMenu|raw }}
                </ul>

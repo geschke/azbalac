@@ -173,6 +173,9 @@ $content['customHeader'] = get_custom_header();
 
 $content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac' );
 
+$content['socialMediaButtons']['1'] = Azbalac_Section_Social_Media_Buttons::getButtons(1);
+
+
 if ( is_front_page()) {
     
     $content['showSlider']['1'] = Azbalac_Section_Slider::getSlider(1);

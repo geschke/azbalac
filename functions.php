@@ -13,6 +13,8 @@ if (version_compare(phpversion(), '7.0.0', '<')) {
 
 require_once( get_template_directory() .'/vendor/autoload.php');
 require_once( get_template_directory() . '/inc/template/Template.php' );
+require_once( get_template_directory() . '/inc/template/TwigSectionExtension.php' );
+
 require_once( get_template_directory() . '/inc/template/DataContainer.php' );
 
 $aztpl = new Azbalac_Template();

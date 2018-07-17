@@ -599,6 +599,7 @@ class Azbalac_Customizer
                 '2' => __('Centered', 'azbalac'),
                 '3' => __('Right', 'azbalac'),
             ),
+            'description' => __('Hint: The option left and centered are only possible when there are no further elements in the same row beside the social media buttons. If e.g.the site title is displayed at the left, the social media buttons don\'t change the alignment.','azbalac')
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_size', array(

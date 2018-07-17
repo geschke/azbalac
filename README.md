@@ -4,16 +4,19 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts. 
 
-Version 0.2.6
+Version 0.2.7
 
 
 ## Version history:
 
-Version 0.2.6
+Version 0.2.7
 - New feature: Add an option to display the social media buttons above the header image
+- Internal: Created a Twig extension to display content of social media button section. It implements a Twig function which can be used in the templates directly. 
+
+Version 0.2.6
 - Internal: Renamed customizer settings and controls variables to prevent conflicts between Azbalac and other themes
 - New feature: Add an option so set a distance between title and subtitle when displayed on header image
-- Internal: Created a Twig extension to display content of social media button section. It implements a Twig function which can be used in the templates directly. 
+
 
 Version 0.2.5
 - New feature: Header Settings. This is awesome. You can place the title and subtitle as overlay on the header image, modify their fonts, font size, color, background color (with transparency), alignment and position. This works also on small and very small (smartphone) screens, the responsive behavior is created with small JavaScript. This is a beta release, there are too many possible cases, so it needs testing. 

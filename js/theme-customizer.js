@@ -44,31 +44,31 @@
     });
 */
 
-    wp.customize('azbalac_color_bg_header', function (value) {
+    wp.customize('azbalac_setting_color_bg_header', function (value) {
         value.bind(function (col) {
             $('#header').css('background-color', col);
         });
     });
 
-    wp.customize('azbalac_color_fg_footer', function (value) {
+    wp.customize('azbalac_setting_color_fg_footer', function (value) {
         value.bind(function (col) {
             $('.site-footer-1').css('color', col);
         });
     });
 
-    wp.customize('azbalac_color_bg_footer', function (value) {
+    wp.customize('azbalac_setting_color_bg_footer', function (value) {
         value.bind(function (col) {
             $('.site-footer-1').css('background-color', col);
         });
     });
 
-    wp.customize('azbalac_color_fg_sidebar', function (value) {
+    wp.customize('azbalac_setting_color_fg_sidebar', function (value) {
         value.bind(function (col) {
             $('#primary-sidebar > div > div').css('color', col);
         });
     });
 
-    wp.customize('azbalac_color_bg_sidebar', function (value) {
+    wp.customize('azbalac_setting_color_bg_sidebar', function (value) {
         value.bind(function (col) {
             $('#primary-sidebar > div > div').css('background-color', col);
         });

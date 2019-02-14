@@ -209,7 +209,7 @@ if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
     function azbalac_get_body_styles() 
     {
     
-        $colorBgSidebar = get_theme_mod('azbalac_color_bg_sidebar');
+        $colorBgSidebar = get_theme_mod('azbalac_setting_color_bg_sidebar');
         if (!$colorBgSidebar) {
             $sidebarStyleColorBg = '';
         }
@@ -217,7 +217,7 @@ if ( ! function_exists( 'azbalac_get_body_styles' ) ) :
             $sidebarStyleColorBg = ' background-color: ' . $colorBgSidebar .';';
         }
        
-        $colorFgSidebar = get_theme_mod('azbalac_color_fg_sidebar');
+        $colorFgSidebar = get_theme_mod('azbalac_setting_color_fg_sidebar');
         if (!$colorFgSidebar) {
             $sidebarStyleColorFg = '';
         }
@@ -581,7 +581,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
             $navbarStyleClass .= ' '; // todo: set css style when not fixed... or if fixed. hm
         }
         
-        $colorBgHeaderData = get_theme_mod('azbalac_color_bg_header');
+        $colorBgHeaderData = get_theme_mod('azbalac_setting_color_bg_header');
         if ($colorBgHeaderData) {
             $headerStyleColorBg = $colorBgHeaderData;
         }

@@ -29,6 +29,7 @@ if ( is_front_page() ) {
     $showSlider['2'] = Azbalac_Section_Slider::getSlider(2);
     $showSlider['3'] = Azbalac_Section_Slider::getSlider(3);
     $introElements_3 = Azbalac_Section_Content_Column::getIntroductionElements(3);
+
 } 
 
 

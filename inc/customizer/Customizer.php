@@ -1553,7 +1553,7 @@ class Azbalac_Customizer
     {
  
         $wp_customize->add_setting('azbalac_setting_introduction_area_activate', array(
-           'default' => '1',
+           'default' => '0',
            'capability' => 'edit_theme_options',
            'type' => 'option',
            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')

@@ -63,7 +63,7 @@ class Azbalac_Section_Content_Column
         }
    
         ?>
-        <div class="containr azbalac-introduction-section my-4 py-4" style="<?php echo $styleColorBg; ?>">
+        <div class="container azbalac-introduction-section my-4 py-4" style="<?php echo $styleColorBg; ?>">
             <div class="azbalac-introduction container ">
 
         <section class="section-introduction" id="section-introduction">

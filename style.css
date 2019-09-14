@@ -503,7 +503,7 @@ table > thead:first-child > tr:first-child > td {
 
 
 .bypostauthor > article .fn:before {
-    content: "\f408";
+    /*content: "\f408";*/
     margin: 0 2px 0 -2px;
     position: relative;
     top: -1px;

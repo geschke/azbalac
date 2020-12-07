@@ -407,6 +407,8 @@ add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueFontAwesome' ) 
 add_action( 'wp_enqueue_scripts',  array('Azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
 add_action( 'wp_enqueue_scripts', array('Azbalac_Section_Slider','addSliderStyle') );
 
+add_filter('style_loader_tag', array('Azbalac_Theme','styleLoaderTagFilter'),10,2);
+
 
 /**
  * Create a nicely formatted and more specific title element text for output

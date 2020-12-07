@@ -61,9 +61,18 @@ class Azbalac_Theme
     public static function enqueueFontAwesome()
     {
 
-        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
+        wp_enqueue_style( 'azbalac-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
     
     }
   
+
+    public static function styleLoaderTagFilter($html, $handle)
+    {
+
+        if ($handle === 'azbalac-font-awesome') {
+            return str_replace("rel='stylesheet'", "rel='preload' as='font'", $html);
+        }
+        return $html;
+    }
 
 }

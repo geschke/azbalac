@@ -70,7 +70,7 @@ class Azbalac_Theme
     {
 
         if ($handle === 'azbalac-font-awesome') {
-            return str_replace("rel='stylesheet'", "rel='preload' as='font'", $html);
+            return str_replace("rel='stylesheet'", "rel='stylesheet preload prefetch' as='style' crossorigin='anonymous'", $html);
         }
         return $html;
     }

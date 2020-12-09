@@ -377,7 +377,20 @@ function azbalac_scripts() {
     }*/
 
     //wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), AZBALAC_DATEVERSION , true );
-    wp_enqueue_script( 'azbalac-jquery', get_template_directory_uri() . '/js/jquery-3.5.1.min.js', array(), '3.5.1', false );
+
+    // check version of jQuery used in WordPress
+    $jQueryVersion = '3.5.1';
+    $jQueryHandle = (version_compare($GLOBALS['wp_version'], '3.6-alpha1', '>=') ) ? 'jquery-core' : 'jquery';
+
+    // Get the WP built-in version
+    $jQueryVersionWordPress = $GLOBALS['wp_scripts']->registered[$jQueryHandle]->ver;
+
+    // load jQuery only if version does not match
+    if (version_compare($jQueryVersionWordPress, $jQueryVersion, '!=')) {
+        wp_enqueue_script( 'azbalac-jquery', get_template_directory_uri() . '/js/jquery-3.5.1.min.js', array(), $jQueryVersion, false );
+
+    }
+
     
     wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
         array(  ), AZBALAC_DATEVERSION , true );

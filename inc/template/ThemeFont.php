@@ -290,7 +290,7 @@ class Azbalac_Theme_Font
                 if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
                     $fontVariant = ':' . $font->gglfontdata->variant;
                 }
-                $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '">';
+                $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
                 $fontFamily = "'" . $font->font . "'";
                 
               

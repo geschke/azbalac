@@ -1515,7 +1515,7 @@ class Azbalac_Customizer
             'default' => '',
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeInteger')
         ));
 
         $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'azbalac_control_header_image_xsmall', array(

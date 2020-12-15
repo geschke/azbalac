@@ -8,7 +8,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="{{ content.bloginfo.pingback_url }}">
 
-    {{ content.headerImageData|raw }}
 
     {% if content.navbarFixed == 'fixed-top' and content.hasNavMenuHeaderMenu %}
     
@@ -124,11 +123,18 @@
 
             </div>
 
-
-       
-
             <div id="site-header-above">
-                <a href="{{ content.homeUrl }}" rel="home"><img id="site-header-image" src="{{ content.headerImage }}" width="1" height="1" data-width="{{ content.customHeader.width }}" data-height="{{ content.customHeader.height }}" alt="{{ content.headerImageAlt }}">
+                <a href="{{ content.homeUrl }}" rel="home">
+                {% if content.headerImages.0.url %}
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="{{ content.headerImages.0.url }} 1110w">
+                        <source media="(min-width: 992px) and (max-width: 1199.98px)" srcset="{{ content.headerImages.0.url }} 930w">
+                        <source media="(min-width: 768px) and (max-width: 991.98px)" srcset="{{ content.headerImages.1.url }} 690w">
+                        <source media="(min-width: 576px) and (max-width: 767.98px)" srcset="{{ content.headerImages.2.url }} 510w">
+                        <source media="(max-width: 575.98px)" srcset="{{ content.headerImages.3.url }} 476w">
+                        <img id="site-header-image" src="{{ content.headerImages.3.url }}" style="max-width: 100%; width: 100%">
+                    </picture>
+                {% endif %}
                 </a>
 
                 {% if content.headerOptions.show_title_image and content.displayHeaderText %}

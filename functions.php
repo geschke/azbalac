@@ -636,7 +636,7 @@ if ( ! function_exists( 'azbalac_get_header_styles' ) ) :
 endif;
 
 
-if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
+/*if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
 
     function azbalac_get_header_image_data() {
         
@@ -645,7 +645,7 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
        return '<script type="text/javascript">var azbalacHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;
-
+*/
 
 
 if ( ! function_exists( 'azbalac_header_style' ) ) :

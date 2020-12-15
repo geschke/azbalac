@@ -15,7 +15,8 @@ class Azbalac_Theme
 
     /**
      * Return array of header image data with elements url, height, weight, thumbnail, id and dontscale or empty string if 
-     * no image is set
+     * no image is set.
+     * Remark: dontscale is not used anymore since version 0.3. Maybe it's more senseful to add a "dontscale" option for all images, but not for the special size
      */
     public static function getHeaderImageData()
     {
@@ -41,6 +42,7 @@ class Azbalac_Theme
         } else {
             $imageData[0] = '';
         }
+
         if (isset($imageData[0]) && $imageData[0] !== '') {
             
             if (get_option('azbalac_setting_header_image_large_dontscale')) {
@@ -53,7 +55,7 @@ class Azbalac_Theme
         $headerImageMediumData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_medium')), 'original');
         $headerImageSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_small')), 'original');
         $headerImageXSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_xsmall')), 'original');
-        
+       
         if (isset($headerImageMediumData) && $headerImageMediumData) {
             
             $imageData[1]['url'] = $headerImageMediumData[0];
@@ -69,7 +71,12 @@ class Azbalac_Theme
                 $imageData[1]['dontscale'] = 0;
             }
         } else {
-            $imageData[1] = '';
+            if (isset($imageData[0]) && is_array($imageData[0])) {
+                $imageData[1] = $imageData[0];
+            }
+            else {
+                $imageData[1] = '';
+            }
         }
 
         if (isset($headerImageSmallData) && $headerImageSmallData) {
@@ -87,7 +94,14 @@ class Azbalac_Theme
                 $imageData[2]['dontscale'] = 0;
             }
         } else {
-            $imageData[2] = '';
+            if (isset($imageData[1]) && is_array($imageData[1])) {
+                $imageData[2] = $imageData[1];
+            } elseif (isset($imageData[0]) && is_array($imageData[0])) {
+                $imageData[2] = $imageData[0];
+            }
+            else {
+                $imageData[2] = '';
+            }
         }
 
          if (isset($headerImageXSmallData) && $headerImageXSmallData) {
@@ -104,8 +118,17 @@ class Azbalac_Theme
             } else {
                 $imageData[3]['dontscale'] = 0;
             }
-        } else {
-            $imageData[3] = '';
+        } else { // fallback to image with higher resolution
+            if (isset($imageData[2]) && is_array($imageData[2])) {
+                $imageData[3] = $imageData[2];
+            } elseif (isset($imageData[1]) && is_array($imageData[1])) {
+                $imageData[3] = $imageData[1];
+            } elseif (isset($imageData[0]) && is_array($imageData[0])) {
+                $imageData[3] = $imageData[0];
+            }
+            else {
+                $imageData[3] = '';
+            }
         }
         return $imageData;
     }

@@ -4,9 +4,35 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts.
 
-Version 0.2.9
+Version 0.3.0
 
 ## Version history
+
+Version 0.3.0
+
+- Improvement: header image loading with picture element, removed working, but crappy JavaScript code to load header image. This is a huge improvement, so it's worth to bump the version number!
+- Fix: save extra small image didn't work (used wrong sanitizer)
+
+Version 0.2.14
+
+- Improvement: font switch added to CSS files
+- Internal: license changed to GPL 3 or higher
+
+Version 0.2.13
+
+- Improvement: check jQuery versions before loading, because WordPress 5.6 includes the current jQuery 3.5.1 version, so there is no need to load in twice.
+
+Version 0.2.12
+
+- Update: jQuery and Bootstrap updated, moved to bundle version of Bootstrap which includes popper.js
+
+Version 0.2.11
+
+- Fix: prefetch, preload and so on
+
+Version 0.2.10
+
+- Add preloading for font-awesome and Google fonts
 
 Version 0.2.9
 
@@ -60,7 +86,7 @@ Version 0.2.1
 Version 0.2
 
 - Support of Polylang (and similar plugins). The language switcher can be displayed as widget in the header on the right side or in the navigation bar.
-- New feature: Custom Logo with positioning in header. According to the theme guidelines the custom logo function has beed added. A custom logo is an image which can be uploaded from "Appearance > Header" in the admin panel. The logo can be positioned in the general theme settings to be displayed at the left or right side. Additional it can be centered, but this is usable only when not displaying title and subtitle of the site. 
+- New feature: Custom Logo with positioning in header. According to the theme guidelines the custom logo function has beed added. A custom logo is an image which can be uploaded from "Appearance > Header" in the admin panel. The logo can be positioned in the general theme settings to be displayed at the left or right side. Additional it can be centered, but this is usable only when not displaying title and subtitle of the site.
 
 Version 0.1 (internal test version, not released)
 

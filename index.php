@@ -97,7 +97,6 @@ echo $aztpl->render('index.html.twig', array('header' => $header,
 'posts' => $azbalac_posts,
 'no_posts' => $azbalac_no_posts,
 'paging_nav' => $azbalac_paging_nav,
-'footer' => $azbalac_footer,
-'header_images' => Azbalac_Theme::getHeaderImageData()
+'footer' => $azbalac_footer
 ));            
 

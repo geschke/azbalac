@@ -15,7 +15,7 @@ $content['bloginfo']['charset'] = get_bloginfo('charset');
 $content['bloginfo']['description'] = get_bloginfo('description');
 $content['bloginfo']['pingback_url'] = get_bloginfo('pingback_url');
 
-$content['headerImageData'] = azbalac_get_header_image_data();
+//$content['headerImageData'] = azbalac_get_header_image_data();
 
 $content['layoutStyle'] = azbalac_get_layout();
 
@@ -167,7 +167,9 @@ $content['subtitleDescription'] = get_bloginfo( 'description', 'display' ); // n
 
 $content['homeUrl'] = home_url( '/' ); // no raw
 
-$content['headerImage'] = get_header_image(); // no raw
+//$content['headerImage'] = get_header_image(); // no raw // replaced
+$content['headerImages'] = Azbalac_Theme::getHeaderImageData();
+
 
 $content['customHeader'] = get_custom_header();
 

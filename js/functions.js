@@ -257,13 +257,13 @@
 
 
 
-	$(window).on('load', function() {
+/*	$(window).on('load', function() {
 		console.log("in load");
 			if (!$('#site-header-image').length) {
 					return;
 			}
 		//	$.checkMediaSize();
-	});
+	});*/
 
 	$( ".innersocial" ).hover(
 		function() {

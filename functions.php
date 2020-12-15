@@ -640,98 +640,9 @@ if ( ! function_exists( 'azbalac_get_header_image_data' ) ) :
 
     function azbalac_get_header_image_data() {
         
-        $imageData = array();
-
-     
-        if (get_header_image()) {
-            $largeImage = get_custom_header();
-            //var_dump($largeImage);
-            $imageData[0] = array('url' => $largeImage->url,
-                'height' => $largeImage->height,
-                'width' => $largeImage->width,
-                'thumbnail' => $largeImage->thumbnail_url,
-                'id' => $largeImage->attachment_id); 
-        }
-        elseif (get_option('azbalac_setting_header_image_example', 1)) {
-            // fallback to example image if not overwritten or switched off
-            $imageData[0] = array('url' => get_template_directory_uri() . '/images/azbalac_default_header_image.jpg',
-                'height' => 213,
-                'width' => 1115,
-                'thumbnail' => '', // not used here
-                'id' => 0);
-
-        } else {
-            $imageData[0] = '';
-        }
-        if (isset($imageData[0]) && $imageData[0] !== '') {
-            
-            if (get_option('azbalac_setting_header_image_large_dontscale')) {
-                $imageData[0]['dontscale'] = get_option('azbalac_setting_header_image_large_dontscale');
-            } else {
-                $imageData[0]['dontscale'] = 0;
-            }
-        }
-        
-        
-        $headerImageMediumData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_medium')), 'original');
-        $headerImageSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_small')), 'original');
-        $headerImageXSmallData = wp_get_attachment_image_src(absint(get_option('azbalac_setting_header_image_xsmall')), 'original');
-        
-        if (isset($headerImageMediumData) && $headerImageMediumData) {
-            
-            $imageData[1]['url'] = $headerImageMediumData[0];
-            $imageData[1]['width'] = $headerImageMediumData[1];
-            $imageData[1]['height'] = $headerImageMediumData[2];
-            $imageData[1]['thumbnail'] = '';
-            $imageData[1]['id'] = 0; // if necessary, set to attachment id. But check before.
-            
-            if (get_option('azbalac_setting_header_image_medium_dontscale'))
-            {
-                $imageData[1]['dontscale'] = 1;
-            } else {
-                $imageData[1]['dontscale'] = 0;
-            }
-        } else {
-            $imageData[1] = '';
-        }
-
-        if (isset($headerImageSmallData) && $headerImageSmallData) {
-            
-            $imageData[2]['url'] = $headerImageSmallData[0];
-            $imageData[2]['width'] = $headerImageSmallData[1];
-            $imageData[2]['height'] = $headerImageSmallData[2];
-            $imageData[2]['thumbnail'] = '';
-            $imageData[2]['id'] = 0; // if necessary, set to attachment id. But check before.
-            
-            if (get_option('azbalac_setting_header_image_small_dontscale'))
-            {
-                $imageData[2]['dontscale'] = 1;
-            } else {
-                $imageData[2]['dontscale'] = 0;
-            }
-        } else {
-            $imageData[2] = '';
-        }
-
-         if (isset($headerImageXSmallData) && $headerImageXSmallData) {
-            
-            $imageData[3]['url'] = $headerImageXSmallData[0];
-            $imageData[3]['width'] = $headerImageXSmallData[1];
-            $imageData[3]['height'] = $headerImageXSmallData[2];
-            $imageData[3]['thumbnail'] = '';
-            $imageData[3]['id'] = 0; // if necessary, set to attachment id. But check before.
-            
-            if (get_option('azbalac_setting_header_image_xsmall_dontscale'))
-            {
-                $imageData[3]['dontscale'] = 1;
-            } else {
-                $imageData[3]['dontscale'] = 0;
-            }
-        } else {
-            $imageData[3] = '';
-        }
+       $imageData = Azbalac_Theme::getHeaderImageData();
        
-        return '<script type="text/javascript">var azbalacHeaderImage = ' . json_encode($imageData) . '</script>';
+       return '<script type="text/javascript">var azbalacHeaderImage = ' . json_encode($imageData) . '</script>';
     }
 endif;
 
@@ -749,8 +660,7 @@ if ( ! function_exists( 'azbalac_header_style' ) ) :
  */
 function azbalac_header_style() {
     // If the header text option is untouched, let's bail.
-    var_dump(display_header_text());
-
+    
 	if ( display_header_text() ) {
 		return;
 	}

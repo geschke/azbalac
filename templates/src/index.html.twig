@@ -2,6 +2,86 @@
 {% include 'header.html.twig' with {'content': header, 
     'is_front_page': is_front_page } %}
 
+     <div class="container">
+        
+        <div id="test-content" class="row main-content">
+        <div class="col">
+
+  {{ header_images.3.url }} {{ header_images.3.width }}<br/>
+  {{ header_images.2.url }} {{ header_images.2.width }}<br/>
+  {{ header_images.1.url }} {{ header_images.1.width }}<br/>
+  {{ header_images.0.url }} {{ header_images.0.width }}<br/>
+
+{# sizes="(max-width:1140px) 100vw, (max-width: 1260px) 70vw, calc(50vw - 100px)" #}
+
+{# 
+ sizes="(max-width: 575.98px) 476px, 
+        (min-width: 576px) and (max-width: 767.98px) 510px, 
+        (min-width: 768px) and (max-width: 991.98px) 690px, 
+        (min-width: 992px) and (max-width: 1199.98px) 930px,
+
+  
+<picture>
+<source media="(min-width: 1200px)" srcset="{{ header_images.0.url }} 1110w" sizes="(min-width: 1200px) 80vw" width="1110">
+<source media="(min-width: 992px)" srcset="{{ header_images.0.url }} 930w" sizes="(min-width: 992px) 80vw" width="930">
+<source media="(min-width: 768px)" srcset="{{ header_images.1.url }} 690w" sizes="(min-width: 768px) 690px">
+<source media="(min-width: 576px)" srcset="{{ header_images.2.url }} 510w" sizes="(min-width: 576px) 510px">
+<source media="(max-width: 575.98px)" srcset="{{ header_images.3.url }} 476w" sizes="(max-width: 575.98px) 476px">
+<img src="{{ header_images.0.url }}"
+ sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw">
+
+</picture>
+
+#}
+<picture>
+<source media="(min-width: 1200px)" srcset="{{ header_images.0.url }} 1110w">
+<source media="(min-width: 992px) and (max-width: 1199.98px)" srcset="{{ header_images.0.url }} 930w">
+<source media="(min-width: 768px) and (max-width: 991.98px)" srcset="{{ header_images.1.url }} 690w">
+<source media="(min-width: 576px) and (max-width: 767.98px)" srcset="{{ header_images.2.url }} 510w">
+<source media="(max-width: 575.98px)" srcset="{{ header_images.3.url }} 476w">
+<img id="site-header-image2" src="{{ header_images.3.url }}" style="max-width: 100%"
+
+>
+
+</picture>
+{#
+       <img srcset="{{ header_images.0.url }} 1200w,
+        {{ header_images.1.url }} {{ header_images.1.width }}w,
+        {{ header_images.2.url }} {{ header_images.2.width }}w,
+        {{ header_images.3.url }} {{ header_images.3.width }}w"
+      
+        sizes="
+        (min-width: 1201px) 1110px,
+        (min-width: 1px) and (max-width: 1200px) 600px
+        "
+        src="{{ header_images.3.url }}" >
+        #}
+   <br/>
+ {# <img srcset="	https://media.kulturbanause.de/2014/09/responsive-images/large.jpg 900w,
+      					https://media.kulturbanause.de/2014/09/responsive-images/medium.jpg 600w,
+      					https://media.kulturbanause.de/2014/09/responsive-images/small.jpg 320w" 
+                          sizes="		(min-width: 50em) 33vw, 
+            			(min-width: 28em) 50vw, 
+                      100vw" src="https://media.kulturbanause.de/2014/09/responsive-images/small.jpg" alt="">
+                      <br/>
+#}
+
+                     <img srcset="https://media.kulturbanause.de/2014/09/responsive-images/large.jpg 900w,
+      					https://media.kulturbanause.de/2014/09/responsive-images/medium.jpg 600w,
+      					https://media.kulturbanause.de/2014/09/responsive-images/small.jpg 320w" 
+                          sizes="(min-width: 1200px) 900px, 
+            			(min-width: 599px) 589px, 
+                       280px" src="https://media.kulturbanause.de/2014/09/responsive-images/small.jpg" alt=""> 
+       <br/>
+       <picture>
+          <source media="(max-width: 991px)" srcset="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/elva-480w-close-portrait.jpg">
+          <source media="(min-width: 992px)" srcset="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/elva-800w.jpg">
+          <img src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+        </picture>             
+foooooo
+</div>
+</div>
+</div>
 
 {% if is_front_page %}
     {{ show_slider.2|raw }}
@@ -26,6 +106,7 @@
     <div class="container">
         
         <div id="main-content" class="row main-content">
+       
             {% if layout_style.content == 2 %}
 
                 <div class="{{ layout_style.col_2 }}">

@@ -1031,6 +1031,23 @@ class Azbalac_Customizer
             'type' => 'checkbox',
          ));
 
+
+         $wp_customize->add_setting('azbalac_setting_header_move_title_small', array(
+            'default' => false,
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+         ));
+  
+         $wp_customize->add_control('azbalac_control_header_move_title_small', array(
+            'label' => __('If title is positioned as overlay on the header image, move title and subtile above the header image on small screens', 'azbalac'),
+            'section' => 'section_theme_options_header',
+            'settings' => 'azbalac_setting_header_move_title_small',
+            'type' => 'checkbox',
+         ));
+
+
+
          $wp_customize->add_setting('azbalac_setting_header_color_bg', array(
             'default' => '#000000',
             'sanitize_callback' => 'sanitize_hex_color',

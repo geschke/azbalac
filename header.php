@@ -110,6 +110,8 @@ $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
 $content['headerOptions']['show_title_image'] = get_option('azbalac_setting_header_show_title_image','');
+$content['headerOptions']['move_title_small'] = get_option('azbalac_setting_header_move_title_small','');
+
 $content['headerOptions']['header_color_bg'] = get_theme_mod('azbalac_setting_header_color_bg','#000000'); // default black
 $content['headerOptions']['header_background_transp'] = get_option('azbalac_setting_header_background_transp',70); // default 70%
 $content['headerOptions']['header_background_transp_hex'] = dechex(round(255 / 100 * $content['headerOptions']['header_background_transp']));

@@ -1,12 +1,17 @@
-# Azbalac
+# Azbalac Theme
 
 ## A pure and basic WordPress theme, based on Bootstrap 4.0 framework.
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts.
 
-Version 0.3.0
+Version 0.3.1
 
 ## Version history
+
+Version 0.3.1
+
+- Cleanup of JavaScript code due to header image settings
+- New: Add option to move title and subtitle above the header image (if it is placed on the header image) on small displays. Previously this was done automatically, now the behavior can be customized.
 
 Version 0.3.0
 

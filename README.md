@@ -4,9 +4,13 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts.
 
-Version 0.3.1
+Version 0.3.2
 
 ## Version history
+
+Version 0.3.2
+
+- Fix: Use h2 instead of h1 for main titles. This should improve SEO performance.
 
 Version 0.3.1
 

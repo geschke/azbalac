@@ -4,7 +4,7 @@ Theme URI: https://www.kuerbis.org/azbalac/
 Author: Ralf Geschke
 Author URI: https://www.geschke.net
 Description: Azbalac - A pure and basic WordPress theme, based on Bootstrap 4 framework.
-Version: 0.3.1
+Version: 0.3.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0
 Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, flexible-header, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
@@ -194,6 +194,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 h1.azbalac-title {
     margin-bottom: 0px;
 }
+
+h2.azbalac-title {
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+}
+
+h2.azbalac-title-noimage {
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+}
+
 /*
 #site-description {
     font-family: inherit;

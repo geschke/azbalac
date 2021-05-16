@@ -4,9 +4,15 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts.
 
-Version 0.3.3
+Version 0.3.4
 
 ## Version history
+
+Version 0.3.4
+
+- Fix: Add necessary changes due to Twig 3
+- Update: First version which depends on Twig 3 template engine
+- Update: Twig 3 needs PHP 7.2.5, so increased the required PHP version in the style.css file
 
 Version 0.3.3
 

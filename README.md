@@ -2,7 +2,7 @@
 
 ## A pure and basic WordPress theme, based on Bootstrap 4.0 framework.
 
-### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to seperate the frontend from the backend output generation parts.
+### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts.
 
 Version 0.3.4
 

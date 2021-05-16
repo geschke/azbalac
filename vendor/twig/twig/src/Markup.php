@@ -45,5 +45,3 @@ class Markup implements \Countable, \JsonSerializable
         return $this->content;
     }
 }
-
-class_alias('Twig\Markup', 'Twig_Markup');

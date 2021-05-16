@@ -24,12 +24,11 @@ class Azbalac_Template
     public function initialize()
     {
 
-
-        $twigLoader = new Twig_Loader_Filesystem(get_template_directory() . '/templates/src/');
-        $this->twig = new Twig_Environment($twigLoader, array(
+        $twigLoader = new \Twig\Loader\FilesystemLoader(get_template_directory() . '/templates/src/');
+        $this->twig = new \Twig\Environment($twigLoader, [
             'cache' => get_template_directory() . '/templates/cache/',
             'debug' => true // todo: set to false when upload to WordPress theme repository
-        ));
+        ]);
         $this->twig->addExtension(new Azbalac_Twig_Section_Extension());
     }
 

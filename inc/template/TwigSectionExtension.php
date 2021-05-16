@@ -10,16 +10,17 @@
  * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
-class Azbalac_Twig_Section_Extension extends Twig_Extension 
+class Azbalac_Twig_Section_Extension extends \Twig\Extension\AbstractExtension
 {
 
 
 
     public function getFunctions()
     {
-        return array(
-            new Twig_Function('renderSocialMediaButtons', array($this,'renderSocialMediaButtons')),
-        );
+
+        return [
+            new \Twig\TwigFunction('renderSocialMediaButtons', array($this, 'renderSocialMediaButtons')),
+        ];
     }
 
     /**
@@ -30,12 +31,9 @@ class Azbalac_Twig_Section_Extension extends Twig_Extension
      *
      * @return string The next value in the cycle
      */
-    public function renderSocialMediaButtons($position,$contentComplete = true)
+    public function renderSocialMediaButtons($position, $contentComplete = true)
     {
 
-        return Azbalac_Section_Social_Media_Buttons::getButtons($position,$contentComplete);
-
+        return Azbalac_Section_Social_Media_Buttons::getButtons($position, $contentComplete);
     }
-
-
 }

@@ -1,10 +1,6 @@
 ``format_datetime``
 ===================
 
-.. versionadded:: 2.12
-
-    The ``format_datetime`` filter was added in Twig 2.12.
-
 The ``format_datetime`` filter formats a date time:
 
 .. code-block:: twig
@@ -73,3 +69,5 @@ Arguments
 * ``dateFormat``: The date format
 * ``timeFormat``: The time format
 * ``pattern``: A date time pattern
+* ``timezone``: The date timezone
+* ``calendar``: The calendar (Gregorian by default)

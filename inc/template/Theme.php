@@ -178,10 +178,10 @@ class Azbalac_Theme
     }
 
 
-    public static function enqueueFontAwesome()
+    public static function enqueueBootstrapIcons()
     {
 
-        wp_enqueue_style( 'azbalac-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
+        wp_enqueue_style( 'azbalac-bootstrap-icons', get_template_directory_uri() . '/css/icons/bootstrap-icons.css' ); // maybe todo: minimize
     
     }
   

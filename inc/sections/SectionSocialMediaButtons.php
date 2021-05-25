@@ -105,7 +105,7 @@ class Azbalac_Section_Social_Media_Buttons
         if (!$url) {
             return '';
         }
-        $faType = ($buttonType == 2) ? 'fa-square' : 'fa-circle';
+        $faType = ($buttonType == 2) ? 'bi-square-fill' : 'ba-circle-fill';
         switch ($buttonSize) {
             case 1:
                 $faSize = ' ';

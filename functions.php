@@ -415,7 +415,7 @@ function azbalac_scripts() {
 add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'setStyles' ));
 
 add_action( 'wp_enqueue_scripts', 'azbalac_scripts' );
-add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueFontAwesome' ) );
+add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueBootstrapIcons' ) );
 
 add_action( 'wp_enqueue_scripts',  array('Azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
 add_action( 'wp_enqueue_scripts', array('Azbalac_Section_Slider','addSliderStyle') );

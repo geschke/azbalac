@@ -42,7 +42,7 @@ $content['commentsPopupLink'] = '';
 if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 	ob_start();
 
-	comments_popup_link( sprintf( __( '<span class="byline-icon fa fa-comment" aria-hidden="true"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'azbalac' ), get_the_title()),
+	comments_popup_link( sprintf( __( '<span class="byline-icon bi bi-chat-text" aria-hidden="true"></span> Leave a comment<span class="screen-reader-text"> on %s</span>', 'azbalac' ), get_the_title()),
 	__( '1 Comment', 'azbalac' ), __( '% Comments', 'azbalac' ) ); 
 
 	$content['commentsPopupLink'] = ob_get_contents();
@@ -52,7 +52,7 @@ if ( ! post_password_required() && ( comments_open() || get_comments_number() ) 
 
 
 ob_start();
-	edit_post_link( sprintf( __( '<span class="byline-icon fa fa-pencil-square-o" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
+	edit_post_link( sprintf( __( '<span class="byline-icon bi bi-pencil-square" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
 
 $content['editPostLink'] = ob_get_contents();
 ob_end_clean();
@@ -83,7 +83,7 @@ $content['theContent'] = ob_get_contents();
 ob_end_clean();
 
 ob_start();
-the_tags( __('<span class="byline-icon fa fa-tags"></span> Tags: ','azbalac'), ' ','' );
+the_tags( __('<span class="byline-icon bi bi-tags"></span> Tags: ','azbalac'), ' ','' );
 $content['theTags'] = ob_get_contents();
 ob_end_clean();
 
@@ -93,11 +93,11 @@ $content['output'] = '';
 
 $catOutput = '';
 if($categories) {
-    $content['output'] .= '<div><span class="fa fa-th-list"></span> ';
+    $content['output'] .= '<div><span class="bi bi-list"></span> ';
         $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'azbalac' );
         $content['output'] .= '&nbsp;';
         foreach($categories as $category) {
-            $catOutput .= '<a class="badge badge-secondary" href="'.get_category_link( $category->term_id ).'"
+            $catOutput .= '<a class="badge bg-secondary" href="'.get_category_link( $category->term_id ).'"
                 title="' .
                 esc_attr( sprintf( __( "View all posts in %s",'azbalac' ), $category->name ) ) . '">'.$category->cat_name
                 .'</a>'.$separator;

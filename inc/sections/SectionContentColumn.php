@@ -153,7 +153,7 @@ class Azbalac_Section_Content_Column
 
           $header = '
           <div class="icon">
-          <i style="' . $colorStyle . '" class="fa fa-4x ' . $element->elements->icon->value . '"></i>
+          <i style="fontsize: 3rem; ' . $colorStyle . '" class="bi ' . $element->elements->icon->value . '"></i>
         </div>';
         } elseif (isset($element->elements->image)) {
           $imageShape = '2'; // default circle

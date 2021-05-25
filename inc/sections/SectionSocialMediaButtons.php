@@ -56,17 +56,25 @@ class Azbalac_Section_Social_Media_Buttons
         if (!get_option('azbalac_setting_social_media_activate',false)) {
             return $output;
         }
-        $socialButtons = array('azbalac_social_media_facebook' => 'facebook',
-        'azbalac_social_media_github' => 'github',
-        'azbalac_social_media_google' => 'google-plus',
-        'azbalac_social_media_instagram' => 'instagram',
-        'azbalac_social_media_linkedin' => 'linkedin',
-        'azbalac_social_media_slideshare' => 'slideshare',
-        'azbalac_social_media_snapchat' => 'snapchat',
-        'azbalac_social_media_twitter' => 'twitter',
-        'azbalac_social_media_vine' => 'vine',
-        'azbalac_social_media_xing' => 'xing',
-        'azbalac_social_media_youtube' => 'youtube');
+        $socialButtons = array(
+            'azbalac_social_media_discord' => 'discord',
+            'azbalac_social_media_facebook' => 'facebook',
+            'azbalac_social_media_github' => 'github',
+            'azbalac_social_media_google' => 'google',
+            'azbalac_social_media_instagram' => 'instagram',
+            'azbalac_social_media_linkedin' => 'linkedin',
+            'azbalac_social_media_mastodon' => 'mastodon',
+            //'azbalac_social_media_slideshare' => 'slideshare',
+            'azbalac_social_media_skype' => 'skype',
+            'azbalac_social_media_slack' => 'slack',
+            //'azbalac_social_media_snapchat' => 'snapchat',
+            'azbalac_social_media_telegram' => 'telegram',
+            'azbalac_social_media_twitch' => 'twitch',
+            'azbalac_social_media_twitter' => 'twitter',
+            //'azbalac_social_media_vine' => 'vine',
+            //'azbalac_social_media_xing' => 'xing',
+            'azbalac_social_media_whatsapp' => 'whatsapp',
+            'azbalac_social_media_youtube' => 'youtube');
         switch (get_option('azbalac_setting_social_media_alignment')) {
             case 1:
                 $align = 'left';
@@ -105,7 +113,7 @@ class Azbalac_Section_Social_Media_Buttons
         if (!$url) {
             return '';
         }
-        $faType = ($buttonType == 2) ? 'bi-square-fill' : 'ba-circle-fill';
+        $faType = ($buttonType == 2) ? 'bi-square-fill' : 'bi-circle-fill';
         switch ($buttonSize) {
             case 1:
                 $faSize = ' ';
@@ -120,7 +128,7 @@ class Azbalac_Section_Social_Media_Buttons
         $styleFg = '';
         $styleBg = '';
         
-        $output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="fa fa-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
+        $output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="fa bi-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
      
         return $output;
     }

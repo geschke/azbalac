@@ -93,7 +93,7 @@ $content['output'] = '';
 
 $catOutput = '';
 if($categories) {
-    $content['output'] .= '<div><span class="bi bi-list"></span> ';
+    $content['output'] .= '<div><span class="bi bi-view-stacked"></span> ';
         $content['output'] .= _n( 'Category:', 'Categories:', count($categories), 'azbalac' );
         $content['output'] .= '&nbsp;';
         foreach($categories as $category) {

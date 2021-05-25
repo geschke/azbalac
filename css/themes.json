@@ -1,152 +1,194 @@
 {
-  "1":  
+  "10":  
     {
         "name": "Bootstrap",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "bstrap.min.css"
     },
-    "2":
+    "20":
     {
         "name": "Cerulean (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "cerulean.min.css"
     },
-    "3":
+    "30":
     {
         "name": "Cosmo (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "cosmo.min.css"
     },
-    "5":
+    "40":
+    {
+        "name": "Cyborg (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "cyborg.min.css"
+    },
+    "50":
     {
         "name": "Darkly (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "darkly.min.css"
     },
-    "6":
+    "60":
     {
         "name": "Flatly (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "flatly.min.css"
     },
-    "7":
+    "70":
     {
         "name": "Journal (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "journal.min.css"
     },
-    "8":
+    "80":
     {
         "name": "KDO_Flatly (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "kdo_flatly.min.css"
     },
-    "9":
+    "90":
     {
         "name": "Litera (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "litera.min.css"
     },
-    "10":
+    "100":
+    {
+        "name": "Lumen (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "lumen.min.css"
+    },
+    "110":
     {
         "name": "Lux (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "lux.min.css"
     },
-    "11":
+    "120":
     {
         "name": "Materia (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "materia.min.css"
     },
-    "12":
+    "130":
     {
         "name": "Minty (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "minty.min.css"
     },
-    "13":
+    "133":
+    {
+        "name": "Morph (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "morph.min.css"
+    },
+    "140":
     {
         "name": "Pulse (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "pulse.min.css"
     },
-    "14":
+    "143":
+    {
+        "name": "Quartz (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "quartz.min.css"
+    },
+    "150":
     {
         "name": "Sandstone (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sandstone.min.css"
     },
-    "15":
+    "160":
     {
         "name": "Simplex (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "simplex.min.css"
     },
-    "16":
+    "170":
     {
         "name": "Sketchy (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sketchy.min.css"
     },
-    "17":
+    "180":
     {
         "name": "Slate (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "slate.min.css"
     },
-    "18":
+    "190":
     {
         "name": "Solar (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "solar.min.css"
     },
-    "19":
+    "200":
     {
         "name": "Spacelab (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "spacelab.min.css"
     },
-    "20":
+    "210":
     {
         "name": "Superhero (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "superhero.min.css"
     },
-    "21":
+    "220":
     {
         "name": "United (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "united.min.css"
     },
-    "22":
+    "223":
+    {
+        "name": "Vapor (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "vapor.min.css"
+    },
+    "230":
     {
         "name": "Yeti (Bootswatch)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "yeti.min.css"
     },
-    "23":
+    "233":
+    {
+        "name": "Zephyr (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "zephyr.min.css"
+    },
+    "240":
     {
         "name": "Malibu (Bootswatch modified)",
         "type": "simple",
@@ -156,100 +198,68 @@
         "gglfonts": []
         
     },
-    "24":
+    "250":
     {
         "name": "Bolt (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "bolt.min.css"
     },
-    "25":
+    "260":
     {
         "name": "Btcn (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "btcn.min.css"
     },
-    "26":
+    "270":
     {
         "name": "Calabaza (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "calabaza.min.css"
     },
-    "27":
+    "280":
     {
         "name": "Hoff (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "hoff.min.css"
     },
-    "28":
+    "290":
     {
         "name": "Kdo2 (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "kdo2.min.css"
     },
-    "29":
+    "300":
     {
         "name": "Kunsch (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "kunsch.min.css"
     },
-    "30":
+    "310":
     {
         "name": "Minim (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "minim.min.css"
     },
-   "31":
+   "320":
     {
         "name": "Signa (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "signa.min.css"
     },
-   "32":
+   "330":
     {
         "name": "Sonic (Bootswatch modified)",
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "sonic.min.css"
-    },
-    "33":
-    {
-        "name": "Aquamarine (Getbootstrap / Pingendo)",
-        "type": "simple",
-        "folder": "getbootstrap/aquamarine/css",
-        "stylesheets": ["theme.css","custom.css"]
-        
-    },
-    "34":
-    {
-        "name": "Elegant (Getbootstrap / Pingendo)",
-        "type": "simple",
-        "folder": "getbootstrap/elegant/css",
-        "stylesheets": ["theme.css","custom.css"]
-        
-    },
-    "35":
-    {
-        "name": "Flat (Getbootstrap / Pingendo)",
-        "type": "simple",
-        "folder": "getbootstrap/flat/css",
-        "stylesheets": ["theme.css","custom.css"]
-        
-    },
-    "36":
-    {
-        "name": "Neon (Getbootstrap / Pingendo)",
-        "type": "simple",
-        "folder": "getbootstrap/neon/css",
-        "stylesheets": ["theme.css","custom.css"]
-        
     }
 
 }

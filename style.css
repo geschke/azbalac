@@ -235,6 +235,27 @@ h2.azbalac-title-noimage {
     text-decoration: none !important;
 }
 
+
+/* Social Media Buttons
+*/
+.azbalac-social-1 .bi {
+    width: 1rem;
+    height: 1rem;
+}
+
+.azbalac-social-2 .bi {
+    width: 2rem;
+    height: 2rem;
+}
+
+.azbalac-social-3 .bi {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+
+
 /*
  * Multilevel Dropdown for Bootstrap 4 
  * see https://codepen.io/svnt/pen/beEgre

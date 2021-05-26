@@ -116,40 +116,33 @@ class Azbalac_Section_Social_Media_Buttons
         $faType = ($buttonType == 2) ? 'bi-square-fill' : 'bi-circle-fill';
         switch ($buttonSize) {
             case 1:
-                
-                $fontSize = ' ';
+                $sizeClass = 'azbalac-social-1';
                 break;
             case 2:
+                $sizeClass = 'azbalac-social-2';
                 
-                $fontSize = "font-size: 2rem!important;";
                 break;
             case 3:
-                
-                $fontSize = "font-size: 3rem!important;";
+                $sizeClass = 'azbalac-social-3';
+
                 break;
         }
         $styleFg = '';
         $styleBg = '';
         
-        //$output = sprintf('<a target="_blank" href="%s"><span class="fa-stack %s"><i %s class="fa %s fa-stack-2x innersocialbg"></i><i %s class="bi bi-%s fa-stack-1x  innersocial"></i></span></a>', esc_url($url), $faSize, $styleBg, $faType, $styleFg, $socialIcon);
-        $svgName =  'css/icons/svg/' . $socialIcon . '.svg';
+        $svgName =  'css/icons/svg/' . $socialIcon . '.svg'; // works only with extension .php, so all svg files have been renamed to .svg.php
 
         ob_start();
         get_template_part( $svgName);
         $svgText = ob_get_clean();
-$foo = '
 
-        <div class="fs-2 mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-octagon-fill" viewBox="0 0 16 16">
-<path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"></path>
-</svg>
-        Heading
-      </div>
-';
-        //$output = $svgText;
+        $f = '<div style="text-align: center"><a class="azbalac-social-3" target="_blank" role="img" href="https://www.facebook.com/rgeschke"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg></a>';
+        
         //$output = sprintf('<a target="_blank" href="%s"><i style="%s" class="bi bi-%s border border-primary border-2 rounded p-2 _innersocial"></i></a> ', esc_url($url), $fontSize, $socialIcon);
-        $output = sprintf('<div class="azbalac-social" target="_blank" role="img" href="%s">%s FOO</div> ',  esc_url($url), $svgText);
-     $output .= $foo;
+        $output = sprintf('<a class="btn btn-primary %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
+    
         return $output;
     }
 

@@ -463,7 +463,7 @@ add_filter( 'wp_title', 'azbalac_wp_title', 10, 2 );
 
 
 function add_class_the_tags($html){
-    $html = str_replace('<a','<a class="badge badge-info"',$html);
+    $html = str_replace('<a','<a class="badge bg-info"',$html);
     return $html;
 }
 add_filter('the_tags','add_class_the_tags',10,1);

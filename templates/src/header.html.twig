@@ -62,8 +62,11 @@
 
 <body {{ content.bodyClass|raw }}>
 
-<div id="skip-link"><a href="#content" class="sr-only element-focusable">{{ content.skipToMainContent }}</a></div>
-
+<div class="visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">{{ content.skipToMainContent }}</a>
+  </div>
+</div>
 
 {% if content.navbarFixed == 'default' %}
 
@@ -159,24 +162,14 @@
 {% endif %}
 
 
-
 {% if content.hasNavMenuHeaderMenu or content.navigationWidgetRight %}
-    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}_fixed-top _navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <div class="container-fluid">
         
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
-        {# <div id="navbar-header" class="navbar-header">
-                <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse">{{ content.toggleNavigation }}</a></div>
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">{{ content.toggleNavigation }}</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                #}
+       
                 {% if content.navbarFixed == 'fixed-top' and content.displayHeaderText %}
                     <div id="site-header-text">
                             {% if content.customLogo %}
@@ -186,7 +179,7 @@
                 {% endif %}
             
             <div class="sticky-top navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
-                <ul class="navbar-nav  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
+                <ul class="navbar-nav  mb-2 mb-lg-0  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
                     {{ content.wpNavMenu|raw }}
                </ul>
                {% if content.navigationWidgetRight %}
@@ -196,10 +189,8 @@
                {% endif %}
             </div><!--/.nav-collapse -->
         
-            
+    </div>
     </nav> <!-- end navbar-->
-{# {% else %}
-<p>&nbsp;</p> #}
 {% endif %}
 
 {% if content.navbarFixed == 'default' %}

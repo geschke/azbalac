@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Azbalac v0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-05-26 00:30+0000\n"
+"PO-Revision-Date: 2021-05-26 12:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgid ""
 ") )"
 msgstr ""
 
-#: archive.php:46
+#: archive.php:50
 msgid "Archives"
 msgstr "Archive"
 
@@ -451,12 +451,11 @@ msgid "Email*"
 msgstr "E-Mail*"
 
 #: inc/customizer/Customizer.php:464
-#, fuzzy
 #| msgid ""
 #| "Enter the complete SlideShare page URL (please include http or https!)"
 msgid ""
 "Enter the complete Discord profile page URL (please include http or https!)"
-msgstr "SlideShare-Profilseiten-URL angeben (inkl. http oder https)"
+msgstr "Discord-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:468
 msgid ""
@@ -469,12 +468,11 @@ msgid ""
 msgstr "GitHub-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:476
-#, fuzzy
 #| msgid ""
 #| "Enter the complete Xing profile page URL (please include http or https!)"
 msgid ""
 "Enter the complete Google profile page URL (please include http or https!)"
-msgstr "Xing-Profilseiten-URL angeben (inkl. http oder https)"
+msgstr "Google-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:480
 msgid "Enter the complete Instagram page URL (please include http or https!)"
@@ -485,22 +483,19 @@ msgid "Enter the complete LinkedIn page URL (please include http or https!)"
 msgstr "LinkedIn-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:488
-#, fuzzy
 #| msgid "Enter the complete Google+ page URL (please include http or https!)"
 msgid "Enter the complete Mastodon page URL (please include http or https!)"
-msgstr "Google+--Profilseiten-URL angeben (inkl. http oder https)"
+msgstr "Mastodon-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:496
-#, fuzzy
 #| msgid "Enter the complete Vine page URL (please include http or https!)"
 msgid "Enter the complete Skype page URL (please include http or https!)"
-msgstr "Vine-Seiten-URL-Profilseiten-URL angeben (inkl. http oder https)"
+msgstr "Skype-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:500
-#, fuzzy
 #| msgid "Enter the complete Snapchat page URL (please include http or https!)"
 msgid "Enter the complete Slack page URL (please include http or https!)"
-msgstr "Snapchat-Profilseiten-URL angeben (inkl. http oder https)"
+msgstr "Slack-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:532
 msgid ""
@@ -509,11 +504,11 @@ msgstr "YouTube-Channel-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:508
 msgid "Enter the Telegram profile page URL (please include http!)"
-msgstr ""
+msgstr "Telegram-Profil-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:512
 msgid "Enter the Twitch profile page URL (please include http!)"
-msgstr ""
+msgstr "Twitch-Profil-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:516
 msgid "Enter the Twitter profile page URL (please include http!)"
@@ -521,7 +516,7 @@ msgstr "Twitter-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:528
 msgid "Enter the WhatsApp profile page URL (please include http!)"
-msgstr ""
+msgstr "WhatsApp-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:467
 msgid "Facebook"
@@ -619,7 +614,7 @@ msgstr "Header-Menü"
 
 #: inc/customizer/Customizer.php:84
 msgid "Header Settings"
-msgstr ""
+msgstr "Einstellungen Kopfbereich"
 
 #: functions.php:262
 msgid "Header Widget Area"
@@ -795,7 +790,7 @@ msgstr "Links"
 
 #: inc/customizer/Customizer.php:992
 msgid "Light"
-msgstr ""
+msgstr "Hell"
 
 #: inc/customizer/Customizer.php:1760
 msgid "Link to any URL"
@@ -819,7 +814,7 @@ msgstr "LinkedIn"
 
 #: inc/customizer/Customizer.php:487
 msgid "Mastodon"
-msgstr ""
+msgstr "Mastodon"
 
 #: inc/customizer/Customizer.php:1444
 msgid "Maximum number of featured articles on homepage"
@@ -1170,7 +1165,7 @@ msgstr "Bild auswählen"
 
 #: inc/customizer/Customizer.php:880
 msgid "Select your theme."
-msgstr ""
+msgstr "Farbschema auswählen"
 
 #: inc/customizer/Customizer.php:1238
 msgid ""
@@ -1298,11 +1293,11 @@ msgstr "Zum Hauptinhalt springen"
 
 #: inc/customizer/Customizer.php:495
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: inc/customizer/Customizer.php:499
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
 #: inc/customizer/Customizer.php:180
 #, php-format
@@ -1399,7 +1394,7 @@ msgstr ""
 
 #: inc/customizer/Customizer.php:507
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: inc/customizer/Customizer.php:1731
 msgid "Text"

@@ -56,6 +56,9 @@ class Azbalac_Section_Social_Media_Buttons
         if (!get_option('azbalac_setting_social_media_activate',false)) {
             return $output;
         }
+        /*
+         Slideshare, Snapchat, Vine and Xing buttons taken from Font Awesome 5 
+         */
         $socialButtons = array(
             'azbalac_social_media_discord' => 'discord',
             'azbalac_social_media_facebook' => 'facebook',
@@ -64,15 +67,15 @@ class Azbalac_Section_Social_Media_Buttons
             'azbalac_social_media_instagram' => 'instagram',
             'azbalac_social_media_linkedin' => 'linkedin',
             'azbalac_social_media_mastodon' => 'mastodon',
-            //'azbalac_social_media_slideshare' => 'slideshare',
+            'azbalac_social_media_slideshare' => 'slideshare',
             'azbalac_social_media_skype' => 'skype',
             'azbalac_social_media_slack' => 'slack',
-            //'azbalac_social_media_snapchat' => 'snapchat',
+            'azbalac_social_media_snapchat' => 'snapchat',
             'azbalac_social_media_telegram' => 'telegram',
             'azbalac_social_media_twitch' => 'twitch',
             'azbalac_social_media_twitter' => 'twitter',
-            //'azbalac_social_media_vine' => 'vine',
-            //'azbalac_social_media_xing' => 'xing',
+            'azbalac_social_media_vine' => 'vine',
+            'azbalac_social_media_xing' => 'xing',
             'azbalac_social_media_whatsapp' => 'whatsapp',
             'azbalac_social_media_youtube' => 'youtube');
         switch (get_option('azbalac_setting_social_media_alignment')) {
@@ -141,7 +144,7 @@ class Azbalac_Section_Social_Media_Buttons
 </svg></a>';
         
         //$output = sprintf('<a target="_blank" href="%s"><i style="%s" class="bi bi-%s border border-primary border-2 rounded p-2 _innersocial"></i></a> ', esc_url($url), $fontSize, $socialIcon);
-        $output = sprintf('<a class="btn btn-primary %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
+        $output = sprintf('<a class=" %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
     
         return $output;
     }

@@ -578,7 +578,7 @@ class Azbalac_Customizer
 
 
         $wp_customize->add_setting('azbalac_setting_social_media_activate', array(
-            'default' => '',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
@@ -1620,7 +1620,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_example', array(
             'capability' => 'edit_theme_options',
-            'default' => 1,
+            'default' => '1',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1637,7 +1637,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_large_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1668,7 +1668,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_medium_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1699,7 +1699,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_small_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1731,7 +1731,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_xsmall_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1821,7 +1821,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_introduction_area_readmore', array(
-            'default' => false,
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
@@ -1891,9 +1891,9 @@ class Azbalac_Customizer
         ),
         'icon' => array(
             'type'        => 'select',
-            'label'       =>  __('Select Font Awesome Icon or&hellip;', 'azbalac'),
+            'label'       =>  __('Select Icon or&hellip;', 'azbalac'),
             'description' => __('Select Icon or&hellip;', 'azbalac'),
-            'choices' => $this->getFaIcons(),
+            'choices' => $this->getBootstrapIcons(),
             //'default' => 'fa-car'
         ),
         'image' => array(
@@ -1964,7 +1964,7 @@ class Azbalac_Customizer
         // todo: sanitize?
     }
 
-    public function getFaIcons()
+    public function getBootstrapIcons()
     {
         global $wp_filesystem;
         if (empty($wp_filesystem)) {
@@ -1972,14 +1972,19 @@ class Azbalac_Customizer
             WP_Filesystem();
         }
 
-        $faIcons = $wp_filesystem->get_contents(get_template_directory() . '/css/font-awesome/fa-icons.txt');
-        $lines = explode(PHP_EOL, $faIcons);
-        $icons[0] = __('Choose Icon', 'azbalac');
-        foreach ($lines as $line) {
-            if ($line) {
+        $iconsJson = $wp_filesystem->get_contents(get_template_directory() . '/css/icons/bootstrap-icons.json');
+        $icons = json_decode($iconsJson, true);
+
+        $iconList[0] = __('Choose Icon', 'azbalac');
+        foreach ($icons as $key => $icon) {
+            //print_r($icon);
+            $iconList[$key] = $key;
+            /*if ($line) {
                 $icons[$line] = $line;
-            }
+            }*/
+
         }
-        return $icons;
+        ksort($iconList);
+        return $iconList;
     }
 }

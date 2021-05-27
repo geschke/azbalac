@@ -28,7 +28,7 @@ class Azbalac_Section_Content_Column
 
     public static function getIntroductionElements($position) 
     {
-       
+      
         ob_start();
         self::showIntroductionElements($position);
         $output = ob_get_clean();
@@ -37,8 +37,9 @@ class Azbalac_Section_Content_Column
 
     public static function showIntroductionElements($position) 
     {
-        $introActivate =  get_option('azbalac_setting_introduction_area_activate',0);
-        if (intval($introActivate) !== 1) {
+        $introActive =  get_option('azbalac_setting_introduction_area_activate',0);
+        //echo "active? " . $introActivate;
+        if (intval($introActive) !== 1) {
           return '';
         }
        
@@ -90,7 +91,7 @@ class Azbalac_Section_Content_Column
         $output = '';
         $introElements = json_decode(urldecode(get_theme_mod('azbalac_setting_introduction_area_elements')));
 
-        $disableReadMore = get_option('azbalac_setting_introduction_area_readmore', false);
+        $disableReadMore = get_option('azbalac_setting_introduction_area_readmore', 0);
         if (intval($disableReadMore) === 1) {
             self::$disableReadMore = true;
         }
@@ -153,7 +154,7 @@ class Azbalac_Section_Content_Column
 
           $header = '
           <div class="icon">
-          <i style="fontsize: 3rem; ' . $colorStyle . '" class="bi ' . $element->elements->icon->value . '"></i>
+          <i style="font-size: 4rem; ' . $colorStyle . '" class="bi bi-' . $element->elements->icon->value . '"></i>
         </div>';
         } elseif (isset($element->elements->image)) {
           $imageShape = '2'; // default circle
@@ -185,7 +186,7 @@ class Azbalac_Section_Content_Column
         $output .= '<h2><a class="section-introduction-url" href="' . $url . '">' . $title . '</a></h2>';
         $output .= '<p>' . $content . '</p>';
         if (!self::$disableReadMore) { 
-            $output .= '<p><a class="btn btn-default" href="' . $url .'" role="button">' . __("Read more &raquo;",'azbalac') . '</a></p>';
+            $output .= '<p><a class="btn btn-primary" href="' . $url .'" role="button">' . __("Read more &raquo;",'azbalac') . '</a></p>';
         }
         $output .= sprintf(' </div><!-- /.col-lg-%d -->', $columnClass);
         return $output;

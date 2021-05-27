@@ -15,11 +15,10 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeCheckbox($input)
     {
-        if ($input == 1) {
-            return 1;
-        } else {
-            return '';
-        }
+        if ($input == '1') {
+            return '1';
+        } 
+        return '0';
     }
 
     public function sanitizeInteger($input)

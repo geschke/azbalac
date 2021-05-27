@@ -89,8 +89,14 @@ class Azbalac_Section_Social_Media_Buttons
                 $align = 'center';
         }
         $buttonSize = get_option('azbalac_setting_social_button_size','2');
-        $buttonType = get_option('azbalac_setting_social_button_type','1');
-        
+        $buttonType = get_option('azbalac_setting_social_button_type','0');
+        $borderWidth = get_option('azbalac_setting_social_button_border_width','3');
+        $borderColor = get_option('azbalac_setting_social_button_border_color','');
+        $borderColorCustom = get_theme_mod('azbalac_setting_social_button_border_color_custom');
+        $bgColor = get_option('azbalac_setting_social_button_bg_color','');
+        $bgColorCustom = get_theme_mod('azbalac_setting_social_button_bg_color_custom');
+        $fgColor = get_option('azbalac_setting_social_button_fg_color','');
+        $fgColorCustom = get_theme_mod('azbalac_setting_social_button_fg_color_custom');
 
         if ($contentComplete) {
             $output .= '<div class="col-md-12 social-media-buttons"> 
@@ -98,7 +104,7 @@ class Azbalac_Section_Social_Media_Buttons
         }    
         $socialOutput = '';
         foreach ($socialButtons as $socialOption => $socialIcon) {
-            $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType);
+            $socialOutput .= self::buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType, $borderWidth, $borderColor, $borderColorCustom, $bgColor, $bgColorCustom, $fgColor, $fgColorCustom);
         }
         $output .= $socialOutput;
 
@@ -110,13 +116,32 @@ class Azbalac_Section_Social_Media_Buttons
         return $output;        
     }
 
-    protected static function buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType)
+    protected static function buildSocialButton($socialOption, $socialIcon, $buttonSize, $buttonType, $borderWidth, $borderColor, $borderColorCustom, $bgColor, $bgColorCustom, $fgColor, $fgColorCustom)
     {
         $url = get_theme_mod($socialOption);
         if (!$url) {
             return '';
         }
-        $faType = ($buttonType == 2) ? 'bi-square-fill' : 'bi-circle-fill';
+        switch (intval($buttonType)) {
+            case 0:
+                $buttonTypeStyle = '';
+                break;
+            case 1:
+                $buttonTypeStyle = ''; // Button - special case, currently not supported
+                break;
+            case 2:
+                $buttonTypeStyle = 'border '; // Border Square
+                break;
+            case 3:
+                $buttonTypeStyle = 'border rounded '; // Border Rounded
+                break;
+            case 4:
+                $buttonTypeStyle = 'border rounded-circle '; // Border Circle
+                break;
+        }
+        $borderWidthStyle = 'border-' . $borderWidth . ' '; // is sanitized from 1 to 5, default 3, only used if chosen border type
+
+
         switch ($buttonSize) {
             case 1:
                 $sizeClass = 'azbalac-social-1';
@@ -138,13 +163,38 @@ class Azbalac_Section_Social_Media_Buttons
         ob_start();
         get_template_part( $svgName);
         $svgText = ob_get_clean();
-
-        $f = '<div style="text-align: center"><a class="azbalac-social-3" target="_blank" role="img" href="https://www.facebook.com/rgeschke"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-</svg></a>';
+       
+        $svgText = str_replace('svg ','svg style=" " ', $svgText);
         
-        //$output = sprintf('<a target="_blank" href="%s"><i style="%s" class="bi bi-%s border border-primary border-2 rounded p-2 _innersocial"></i></a> ', esc_url($url), $fontSize, $socialIcon);
-        $output = sprintf('<a class=" %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
+        $svgText = str_replace('bi ','bi ' . $buttonTypeStyle, $svgText);
+        if ($buttonTypeStyle) {
+            $svgText = str_replace('bi ','bi ' . $borderWidthStyle, $svgText);
+        }
+        if ($borderColorCustom) {
+            $svgText = str_replace('style=" ', 'style=" border-color: ' . $borderColorCustom . '!important;', $svgText);
+        } elseif ($borderColor) {
+            $svgText = str_replace('bi ', 'bi border-' . $borderColor . ' ', $svgText);
+        }
+        if ($bgColorCustom) {
+            $svgText = str_replace('style=" ', 'style=" background-color: ' . $bgColorCustom . '!important;', $svgText);
+        } elseif ($bgColor) {
+            $svgText = str_replace('bi ', 'bi bg-' . $bgColor . ' ', $svgText);
+        }
+        if ($fgColorCustom) {
+            $svgText = str_replace('style=" ', 'style=" color: ' . $fgColorCustom . '!important;', $svgText);
+        } elseif ($fgColor) {
+            $svgText = str_replace('bi ', 'bi text-' . $fgColor . ' ', $svgText);
+        }
+
+     
+
+        /* '<div style="text-align: center"><a class="azbalac-social-3" target="_blank" role="img" href="https://www.facebook.com/rgeschke"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+</svg></a>';*/
+
+
+        
+        $output = sprintf('<a class="azbalac-social-button %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
     
         return $output;
     }
@@ -155,14 +205,25 @@ class Azbalac_Section_Social_Media_Buttons
      */
     public static function addSocialButtonStyle()
     {
+        // todo: optimize this stuff...
         wp_enqueue_style(
             'azbalac-default-style-socialmediabuttons',
             get_template_directory_uri() . '/css/default.css'
         );
+
          
       
         $css = "\n"; // dummy to generate the style block when no colors defined
-        $social_button_color_bg_hover = get_theme_mod('azbalac_setting_social_button_color_bg_hover');
+
+        $css .= '.azbalac-social-button .bi:hover { fill: #000; }';
+
+        $hoverColor = get_theme_mod('azbalac_setting_social_button_fg_color_custom_hover');
+        if ($hoverColor) {
+            $css .= '.azbalac-social-button .bi:hover { fill: ' . $hoverColor . '; }';
+    
+        }
+
+        /*$social_button_color_bg_hover = get_theme_mod('azbalac_setting_social_button_color_bg_hover');
         $social_button_color_bg = get_theme_mod('azbalac_setting_social_button_color_bg');
         $social_button_color_fg = get_theme_mod('azbalac_setting_social_button_color_fg');
         if ($social_button_color_bg_hover) {
@@ -185,7 +246,7 @@ class Azbalac_Section_Social_Media_Buttons
         }
         
                     ";
-        }
+        }*/
         
         //$js = 'var azbalac_setting_social_button_color_bg_hover="' . $social_button_color_bg_hover .'";';
        

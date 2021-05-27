@@ -89,11 +89,21 @@ class Azbalac_Customizer_Sanitizer
     public function sanitizeSocialButtonType($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 2) {
-            return 1;
+        if ($input < 0 || $input > 4) {
+            return 0;
         }
         return $input;
     }
+
+    public function sanitizeSocialButtonBorderWidth($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 5) {
+            return "3";
+        }
+        return $input;
+    }
+
 
     public function sanitizeLayout($input)
     {
@@ -142,6 +152,14 @@ class Azbalac_Customizer_Sanitizer
         return $input;
     }
 
+    public function sanitizeBootstrapColorSet($input)
+    {
+        $colors = ['primary','secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'white'];
+        if (!in_array($input, $colors)) {
+                return 'default';
+            }
+        return $input;
+    }
 
 
     public function sanitizeNavbarFixed($input)

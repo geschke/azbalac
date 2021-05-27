@@ -650,7 +650,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_type', array(
-            'default' => '1',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonType')
@@ -660,15 +660,173 @@ class Azbalac_Customizer
             'label' => __('Button Type', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'azbalac_setting_social_button_type',
-            'type' => 'radio',
+            'type' => 'select',
             'choices' => array(
-                '1' => __('Circle', 'azbalac'),
-                '2' => __('Square (rounded corners)', 'azbalac'),
+                // default no styling
+                '0' => __('Default style', 'azbalac'),
+                //'1' => __('Button', 'azbalac'), // currently not supported, maybe add in future
+                '2' => __('Border Square', 'azbalac'),
+                '3' => __('Border Rounded', 'azbalac'),
+                '4' => __('Border Circle', 'azbalac'),
+                
             ),
         ));
 
+        $wp_customize->add_setting('azbalac_setting_social_button_border_width', array(
+            'default' => '3',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonBorderWidth')
+        ));
 
-        $wp_customize->add_setting('azbalac_setting_social_button_color_fg', array(
+        $wp_customize->add_control('azbalac_control_social_button_border_width', array(
+            'label' => __('Border Width', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_width',
+            
+            'type' => 'select',
+            'choices' => array(
+                // default no styling
+                '1' => __('Width 1', 'azbalac'),
+                '2' => __('Width 2', 'azbalac'),
+                '3' => __('Width 3 (Default)', 'azbalac'),
+                '4' => __('Width 4', 'azbalac'),
+                '5' => __('Width 5', 'azbalac'),
+                
+            ),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_border_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_border_color', array(
+            'label' => __('Border Color (if chosen border type)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick a border color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_border_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_border_color_custom', array(
+            'label' => __('Custom Border Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_color_custom',
+            'description' => __('Pick a border color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+
+        $wp_customize->add_setting('azbalac_setting_social_button_bg_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_bg_color', array(
+            'label' => __('Background Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_bg_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick a background color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_bg_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_bg_color_custom', array(
+            'label' => __('Custom Background Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_bg_color_custom',
+            'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_fg_color', array(
+            'label' => __('Icon (Foreground) Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick an icon color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_fg_color_custom', array(
+            'label' => __('Custom Icon (Foreground) Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color_custom',
+            'description' => __('Pick an icon color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+        // maybe todo: use another option (ligther, darker?) when hovered?
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color_custom_hover', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_fg_color_custom_hover', array(
+            'label' => __('Custom Icon Mouseover Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color_custom_hover',
+            'description' => __('Pick an icon color for the Social Media icon when mouseovered (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+        
+/*        $wp_customize->add_setting('azbalac_setting_social_button_color_fg', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
         ));
@@ -699,7 +857,7 @@ class Azbalac_Customizer
             'section' => 'section_social_media_position',
             'settings' => 'azbalac_setting_social_button_color_bg_hover',
             'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
-        ));
+        ));*/
     }
 
     /**

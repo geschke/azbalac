@@ -180,7 +180,7 @@ class Azbalac_Section_Content_Column
           $header = $image;
         }
        
-        $output .= sprintf('<div class="col-lg-%d col-md-%d col-sm-%d introduction-box">', $columnClass, $columnClass, $columnClass);
+        $output .= sprintf('<div class="col-lg-%d col-md-%d col-sm-%d mb-2 introduction-box">', $columnClass, $columnClass, $columnClass);
 
         $output .= '<a href="' . $url . '">' . $header . '</a>';
         $output .= '<h2><a class="section-introduction-url" href="' . $url . '">' . $title . '</a></h2>';

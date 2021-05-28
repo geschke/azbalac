@@ -240,7 +240,7 @@ function theme_azbalac_widgets_init()
         'name' => __("Sidebar 1", 'azbalac'),
         'id' => 'sidebar-1',
         'class' => '',
-        'before_widget' => '<div class="card"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
+        'before_widget' => '<div class="card mb-3"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
         'after_widget' => "</div></div>\n",
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => "</h3>\n"
@@ -321,10 +321,10 @@ if ( ! function_exists( 'azbalac_get_search_form' ) ) :
 function azbalac_get_search_form() {
 
     $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    <div class="mb-3 form-floating">
+    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" /><label class="_screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
     </div>
-    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
+    <div class="mb-3"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
     </div>
     </form>';
     return $form;
@@ -394,8 +394,7 @@ function azbalac_scripts() {
     
     wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
         array(  ), AZBALAC_DATEVERSION , true );
-
-       
+        
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true );
         
 

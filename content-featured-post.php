@@ -14,7 +14,8 @@ $content['theId'] = get_the_ID();
 $content['themeCols'] = $post->themeCols;
 $content['linebreak'] = $post->linebreak;
 
-$content['postClass'] =  'class="' . join( ' ', get_post_class() ) . '"'; // taken from post-template.php 
+
+$content['postClass'] = 'class="mb-4 ' . join( ' ', get_post_class() ) . '"'; // taken from post-template.php 
 
 $content['title'] = get_the_title();
 

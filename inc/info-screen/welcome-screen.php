@@ -115,8 +115,8 @@ if (!class_exists('Azbalac_Welcome')) {
             
             wp_enqueue_script('azbalac-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
             if ('appearance_page_azbalac-welcome' == $hook_suffix) {
-                wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );       
-                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0', true);
+                
+                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true);
                 wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), AZBALAC_DATEVERSION );
                 wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), AZBALAC_DATEVERSION );
             

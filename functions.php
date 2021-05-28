@@ -395,9 +395,8 @@ function azbalac_scripts() {
     wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
         array(  ), AZBALAC_DATEVERSION , true );
 
-        //wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );
-        
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4.5.3', true );
+       
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true );
         
 
     /*if (is_customize_preview()) {

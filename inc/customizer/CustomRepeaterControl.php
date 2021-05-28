@@ -326,10 +326,10 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                     <div class="placeholder">
-                                    <?php esc_attr_e( 'No Image selected', 'azbalac' ); ?>
+                                    <?php esc_html_e( 'No Image selected', 'azbalac' ); ?>
                                     </div>
                                     <div class="actions">
-                                         <button type="button" class="button azbalac-repeater-custom-upload-button"><?php esc_attr_e( 'Select Image', 'azbalac' ); ?></button>
+                                         <button type="button" class="button azbalac-repeater-custom-upload-button"><?php esc_html_e( 'Select Image', 'azbalac' ); ?></button>
                         
                                     </div>
                                 </div>
@@ -341,7 +341,7 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 				</div>	
           
                 <div class="customize-button-repeater-row-remove">
-				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_attr_e( 'Remove element', 'azbalac' ); ?></button>
+				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_html_e( 'Remove element', 'azbalac' ); ?></button>
                 </div>
 			</div> <!-- customize-control-repeater-element -->
             <# });

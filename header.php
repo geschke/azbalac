@@ -48,6 +48,10 @@ ob_start();
 wp_head(); 
 $content['wpHead'] = ob_get_clean();
 
+ob_start();
+wp_body_open();
+$content['wpBodyOpen'] = ob_get_clean();
+
 if (has_nav_menu('header-menu')) {
     
     $navbarAlignment = get_option('azbalac_setting_navbar_menu_alignment','1'); // left is default

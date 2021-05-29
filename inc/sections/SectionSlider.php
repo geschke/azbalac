@@ -18,7 +18,8 @@ class Azbalac_Section_Slider
         /*if (!get_option('azbalac_setting_slider_activate')) {
             return '';
         }*/
-        if (get_option('azbalac_setting_slider_position') != $position) {
+
+        if (get_option('azbalac_setting_slider_position','2') != $position) {
             return '';
         }
         return self::build();
@@ -31,6 +32,7 @@ class Azbalac_Section_Slider
 
     public static function build()
     {
+        
         $output = '';
         
         $output .= '<div class="container"><!-- slider section -->';
@@ -44,9 +46,12 @@ class Azbalac_Section_Slider
 
     public static function buildContainer()
     {
+      
+      
         if (!get_option('azbalac_setting_slider_activate')) {
             return '';
         }
+      
         ob_start();
         self::showContainer();
         $output = ob_get_clean();
@@ -85,17 +90,18 @@ class Azbalac_Section_Slider
         ?>
 
         
-        <div id="azbalacSlider" class="azbalac-slider carousel slide" data-ride="carousel" data-interval="<?php echo $sliderInterval; ?>" data-pause="<?php echo $sliderPause; ?>" data-wrap="<?php echo $sliderWrap; ?>" data-keyboard="<?php echo $sliderKeyboard; ?>" >
+        <div id="azbalacSlider" class="azbalac-slider carousel slide" data-bs-ride="carousel" data-bs-interval="<?php echo $sliderInterval; ?>" data-bs-pause="<?php echo $sliderPause; ?>" data-bs-wrap="<?php echo $sliderWrap; ?>" data-bs-keyboard="<?php echo $sliderKeyboard; ?>" >
         <?php 
         if (isset($sliderData) && count($sliderData)) {
             if ($sliderIndicators === true) { 
             ?>
+        
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <?php
             
                 foreach ($sliderData as $idx => $sliderElement) {
-                    echo '<li data-target="#azbalacSlider" data-slide-to="';
+                    echo '<li data-bs-target="#azbalacSlider" data-bs-slide-to="';
                     echo $idx - 1;
                     echo '"';
                     if ($idx == 1) {
@@ -177,29 +183,20 @@ class Azbalac_Section_Slider
                 echo '</div>' . "\n";
             }
         }
-            ?>
-            
-        </div>
+        echo '</div>';
     
-        <?php
         if (isset($sliderData) && count($sliderData)) {
-        ?>
-        <!-- Controls -->
-        <a class="carousel-control-prev" href="#azbalacSlider" role="button" data-slide="prev">
+          echo '<!-- Controls -->
+        <a class="carousel-control-prev" href="#azbalacSlider" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo  __( 'Previous', 'azbalac' ); ?></span>
+        <span class="visually-hidden">' . __( 'Previous', 'azbalac')  . '</span>
         </a>
-        <a class="carousel-control-next" href="#azbalacSlider" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#azbalacSlider" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only"><?php echo  __( 'Next', 'azbalac' ); ?></span>
-        </a>
-        <?php 
+        <span class="visually-hidden">' . __( 'Next', 'azbalac' ) . '</span>
+        </a>';
         }
-        ?>
-    </div>
-    
-
-            <?php
+        echo '</div>';
     }
 
     public static function addSliderStyle()

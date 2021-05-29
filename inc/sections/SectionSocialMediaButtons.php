@@ -258,12 +258,12 @@ class Azbalac_Section_Social_Media_Buttons
         wp_enqueue_script( 'azbalac-social-media-buttons', get_template_directory_uri().'/js/social-media-buttons.js', array( 'jquery'), '', true );
         
         //wp_add_inline_script('azbalac-social-media-buttons',$js);
-        wp_localize_script( 'azbalac-social-media-buttons', 'objectSocialMediaButtons', array(
+        /*wp_localize_script( 'azbalac-social-media-buttons', 'objectSocialMediaButtons', array(
             'social_button_color_bg_hover' => $social_button_color_bg_hover,
             'social_button_color_bg' => $social_button_color_bg,
             'social_button_color_fg' => $social_button_color_fg
 
-        ) );
+        ) );*/
 
     
 

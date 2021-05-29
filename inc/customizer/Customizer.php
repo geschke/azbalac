@@ -345,7 +345,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_slider_activate', array(
-            'default' => '',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')

@@ -204,7 +204,8 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeHtml($input)
     {
-        return wp_kses( $input, array( 
+        return wp_kses_post($input); // everything what is allowed in post type should be allowed here
+        /*return wp_kses( $input, array( 
             'a' => array(
                 'href' => array(),
                 'title' => array()
@@ -222,7 +223,7 @@ class Azbalac_Customizer_Sanitizer
                 'id' => array(),
                 'style' => array(),
             )
-        ) );
+        ) );*/
     }
 
     /**

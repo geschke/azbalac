@@ -1,0 +1,55 @@
+ <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">{{ post.category|raw }}</strong>
+          <h3 class="mb-0"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title|raw }}</a></h3>
+          <div class="mb-1 text-muted">{% if post.postType == 'post' %}{{ post.postedOn|raw }}{% endif %}
+
+          </div>
+          <p class="card-text mb-auto">   {{ post.content|raw }}</p>
+          <a href="{{ post.permalink }}" class="stretched-link">{{ post.continueReadingText|raw }}</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         {% if post.has_post_thumbnail %}
+                 {{ post.thumbnail|raw }}
+                {% endif %}
+          
+
+        </div>
+      </div>
+    </div>
+
+
+{#
+
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold"><a href="{{ post.permalink }}" rel="bookmark">{{ post.title|raw }}</a></h1>
+        <p class="col-md-8 fs-4">
+         {% if post.azbalac_setting_posts_featured_date %}
+
+                    {% if post.postType == 'post' %}
+                    {{ post.postedOn|raw }}&nbsp;
+                    {% endif %}
+
+                    {{ post.editPostLink|raw }}
+
+          {% endif %}
+                
+                {% if post.has_post_thumbnail %}
+                  <a class="post-thumbnail" href="{{ post.permalink }}">{{ post.thumbnail }}</a>
+                {% endif %}
+        
+        </p>
+        <div class="col-md-10 fs-4">
+        
+            {{ post.content|raw }}
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+#}
+

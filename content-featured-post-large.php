@@ -49,12 +49,14 @@ if ( has_post_thumbnail() ) {
 
 if (preg_match('/<!--more.*-->/',$post->post_content)) {
 
-    $contentMain = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()) );
+    //$contentMain = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()) );
     $contentMain = apply_filters( 'the_content', $contentMain );
     $content['content'] = $contentMain;
 } else {
-    $contentMain = get_the_excerpt();
+    //$contentMain = get_the_excerpt();
     $contentMain = apply_filters( 'the_excerpt', get_the_excerpt() );
+    $contentMain .= '<span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()); 
+
 
     $content['content'] = $contentMain;
 }

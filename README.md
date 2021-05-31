@@ -4,10 +4,16 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.4.0
-
+Version 0.4.1
 
 ## Version history
+
+Version 0.4.1
+
+- New: Add Magazine-style featured content type
+- Fix: Post image won't be shown on content page anymore
+- Update: Content excerpt handling, don't add "Read more" button automatically
+- Fix: Many fixes to due featured content posts
 
 Version 0.4.0
 

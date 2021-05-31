@@ -54,7 +54,9 @@ class AzbalacMetaboxes
             __('Featured Post', 'azbalac'),
             array('_0' => __('Not featured', 'azbalac'),
                 '_1' => __('Large Feature (Jumbotron)', 'azbalac'),
-                '_2' => __('Featured', 'azbalac')),
+                '_2' => __('Featured Classic', 'azbalac'),
+                '_3' => __('Featured Mag Style 1', 'azbalac')
+            ),
             ''
         );
 

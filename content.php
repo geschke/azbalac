@@ -64,13 +64,15 @@ if ( is_search() )
 	$content['is_search'] = true;
 	the_excerpt(); 
 } else {
+	
 	$content['is_search'] = false;
-	    if (has_post_thumbnail()) {
+		// new: don't show article image/thumbnail in front of the article
+	    /*if (has_post_thumbnail()) {
             the_post_thumbnail('medium');
-        }
+        }*/
 
 			the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()) );
-		    wp_link_pages( array(
+		  wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:',
                         'azbalac' ) . '</span>',
 				'after'       => '</div>',

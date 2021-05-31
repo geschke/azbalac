@@ -108,7 +108,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
         add_theme_support('post-thumbnails');
         //set_post_thumbnail_size( 672, 372, true );
         //add_image_size( 'azbalac-full-width', 1038, 576, true );
-
+        add_image_size( 'azbalac-featured-post-mag-style1', 200, 300, true );
         /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
@@ -694,7 +694,7 @@ endif; // azbalac_admin_notice
 function azbalac_excerpt_more( $more ) {
     return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'azbalac' ), get_the_title())  . '</a></p>';
 }
-add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
+//add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
 
 /*
  * Add Featured Content functionality.

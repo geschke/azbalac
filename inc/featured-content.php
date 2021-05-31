@@ -154,7 +154,11 @@ class Featured_Content {
                 array(
                     'key' => 'azbalac_featured_post',
                     'value' => '_2'
-                )
+								),
+								array(
+									'key' => 'azbalac_featured_post',
+									'value' => '_3'
+							)
             )
 		) );
 
@@ -371,10 +375,10 @@ class Featured_Content {
 
 		if ( $quantity > self::$max_posts ) {
 			$quantity = self::$max_posts;
-		} else if ( 1 > $quantity ) {
+		} elseif ( 1 > $quantity ) {
 			$quantity = 1;
 		}
-
+		
 		return $quantity;
 	}
 

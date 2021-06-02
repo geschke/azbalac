@@ -75,6 +75,16 @@ class Azbalac_Customizer_Sanitizer
         }
         return $input;
     }
+
+    public function sanitizeNavbarTopSpacing($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 30) { // rem is value / 2, so 15 rem should be enough
+            return 9; // 4.5 rem
+        }
+        return $input;
+    }
+
     
     public function sanitizeSocialButtonSize($input)
     {
@@ -163,7 +173,7 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeNavbarFixed($input)
     {
-        if ($input == 'fixed-top') {
+        if ($input == 'fixed-top' || $input == 'top-aligned') {
             return $input;
         }
         return 'default';

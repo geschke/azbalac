@@ -4,9 +4,15 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.4.1
+Version 0.4.2
 
 ## Version history
+
+Version 0.4.2
+
+- New: Add top-aligned navbar setting (with scrolling, so it's not fixed to top)
+- New: Add option to set custom spacing between navbar and content when using fixed-top navigation, e.g. when using larger font size in navbar
+- Fix: Strange behaviour of navbar menu position switching in fixed-top navbar when scrolling page content
 
 Version 0.4.1
 
@@ -19,6 +25,9 @@ Version 0.4.0
 
 - Major Update: Replace Bootstrap 4 with Bootstrap 5, Font Awesome with Bootstrap Icons
 - Many fixes due to new Bootstrap version
+- Fix: Slider ready for Bootstrap 5
+- Update: New social media buttons, switched to Bootstrap Icons; missing icons taken from Font Awesome
+- Update: New social media button styling options (template preset colors and custom colurs for icon and background, new button type)
 
 Version 0.3.4
 

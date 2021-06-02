@@ -1087,9 +1087,31 @@ class Azbalac_Customizer
             'type' => 'radio',
             'choices' => array(
                 'default' => __('Default', 'azbalac'),
-                'fixed-top' => __('Fixed to top', 'azbalac')
+                'top-aligned' => __('Top-Aligned', 'azbalac'),
+                'fixed-top' => __('Top-Aligned, fixed to top', 'azbalac')
             ),
         ));
+
+        $wp_customize->add_setting('azbalac_setting_navbar_top_spacing', array(
+            'default' => 9,
+            'capability' => 'edit_theme_options',
+            'type' => 'option', // necessary!!!
+            'transport' => 'refresh',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarTopSpacing')
+        ));
+
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'azbalac_control_navbar_top_spacing', array(
+            'label' => __('Top Spacing (only available with fixed-top navigation bar)', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'azbalac_setting_navbar_top_spacing',
+            'description' => __('When using fixed-top navigation with larger header font size, you can adjust the spacing to the page content here.', 'azbalac'),
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 30,
+                'step' => 1)
+        )));
 
 
         $wp_customize->add_setting('azbalac_setting_navbar_menu_alignment', array(

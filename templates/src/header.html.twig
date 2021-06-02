@@ -8,14 +8,13 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="{{ content.bloginfo.pingback_url }}">
 
-
     {% if content.navbarFixed == 'fixed-top' and content.hasNavMenuHeaderMenu %}
     
             <style type="text/css">
             /* Show it is fixed to the top */
                 body {
                 min-height: 75rem !important;
-                padding-top: 4.5rem !important;
+                padding-top: {{ content.navigationTopSpacing }}rem !important;
                 }
                 body.admin-bar .navbar-fixed-top { 
                     top: 28px !important; 
@@ -66,11 +65,14 @@
   </div>
 </div>
 
+
+
+
 {% if content.navbarFixed == 'default' %}
 
-{% if content.headerOptions.show_title_image %}
-    {{ renderSocialMediaButtons(1)|raw }}
-{% endif %}
+  {% if content.headerOptions.show_title_image %}
+      {{ renderSocialMediaButtons(1)|raw }}
+  {% endif %}
 
 <div id="header" role="banner" style="{% if content.headerStyles.headerStyleColorBg %}background-color: {{ content.headerStyles.headerStyleColorBg }} {% endif %}{% if content.headerStyles.headerStyleColorFg %}{{ content.headerStyles.headerStyleColorFg }}{% endif %}">
 
@@ -79,8 +81,6 @@
         <header class="masthead">
             <div>
 
-              {#  <div class="row justify-content-between">
-                    <div class="col-auto"> #}
                         <div id="site-header-container-above" class="row align-items-center {% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
                             
                             {% if content.customLogo %}
@@ -89,9 +89,9 @@
                             </div>
                             {% endif %}
                             {% if not content.headerOptions.show_title_image %}
-                            <div class="col"> {# war col-auto #}
+                            <div class="col">
                                     {% if content.displayHeaderText %}
-                                    <h2 class="azbalac-title-noimage" id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h2>
+                                    <h2 class="azbalac-title-noimage" id="_site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h2>
                                 <h2 class="azbalac-subtitle-above" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription|raw }}</h2>
                                 {% else %}
                                 &nbsp;
@@ -107,20 +107,9 @@
                             </div>
                           
                             {% endif %}
-                            {# {% if  content.headerWidgetRight %}
-                            <div class="col-auto ml-auto">
-                                    {{ content.headerWidgetRight|raw }}
-                            </div>
-                            {% endif %}  #}
+                           
                         </div>
 
-                {#    </div>
-                    <div class="col-auto">
-                            {{ content.headerWidgetRight|raw }}
-                        </div>
-
-                    
-                </div> #}
 
             </div>
 
@@ -160,15 +149,16 @@
 {% endif %}
 
 
+
 {% if content.hasNavMenuHeaderMenu or content.navigationWidgetRight %}
-    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}_fixed-top _navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top {% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
     <div class="container-fluid">
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
        
-                {% if content.navbarFixed == 'fixed-top' and content.displayHeaderText %}
+                {% if (content.navbarFixed == 'fixed-top' or content.navbarFixed == 'top-aligned') and content.displayHeaderText %}
                     <div id="site-header-text">
                             {% if content.customLogo %}
                             <a href="{{ content.homeUrl }}"><img style="width: 30px; height: auto;" src="{{ content.customLogo }}"/></a>
@@ -176,7 +166,7 @@
                         <a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
                 {% endif %}
             
-            <div class="sticky-top navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
+            <div class="navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
                 <ul class="navbar-nav  mb-2 mb-lg-0  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
                     {{ content.wpNavMenu|raw }}
                </ul>

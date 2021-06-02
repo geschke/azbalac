@@ -554,7 +554,9 @@ if ( ! function_exists( 'azbalac_get_navbar_layout' ) ) :
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
          }
-         else {
+         elseif ($navbarData == 'top-aligned') {
+            $navbarFixed = 'top-aligned';
+         } else {
             $navbarFixed = 'default';
          }
          return $navbarFixed;

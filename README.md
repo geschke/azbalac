@@ -4,9 +4,13 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.4.2
+Version 0.4.3
 
 ## Version history
+
+Version 0.4.3
+
+- New: Add option to hide "Nothing found" message on homepage if chosen "Your latest posts" and no posts are available, because they will be displayed as featured content
 
 Version 0.4.2
 

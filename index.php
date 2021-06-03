@@ -45,6 +45,12 @@ $sidebar = $azbalacContainer->contentSidebar;
 $azbalac_posts = null;
 $azbalac_paging_nav = null;
 
+
+// hide "nothing found" in homepage if mo more posts are found (because all posts are in the featured content list or similar reasons)
+$hideNoPosts = get_option('azbalac_setting_homepage_hide_empty','0');
+
+
+
 if ( have_posts() ) {
     $azbalac_have_posts = true;
     $azbalac_no_posts = null;
@@ -87,6 +93,7 @@ $azbalac_footer = $azbalacContainer->footerData;
 
 echo $aztpl->render('index.html.twig', array('header' => $header,
 'is_front_page' => is_front_page(),
+'hide_no_posts' => $hideNoPosts,
 'azbalac_has_featured_posts' => azbalac_has_featured_posts(),
 'featured' => $featuredPosts,
 'show_slider' => $showSlider,

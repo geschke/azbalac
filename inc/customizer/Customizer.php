@@ -1630,6 +1630,23 @@ class Azbalac_Customizer
                 'max' => 100,
                 'step' => 1)
         )));
+
+        $wp_customize->add_setting('azbalac_setting_homepage_hide_empty', array(
+            'capability' => 'edit_theme_options',
+            'default' => false,
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('azbalac_control_homepage_hide_empty', array(
+            'settings' => 'azbalac_setting_homepage_hide_empty',
+            'label' => __('Hide "Nothing found" message on homepage if chosen last blog entries and no blog entry is available', 'azbalac'),
+            'section' => 'section_theme_options_home',
+            'type' => 'checkbox',
+            //'description' => __('You can switch off this option, so no image will be displayed.', 'azbalac'),
+        ));
+
+
     }
 
     /**

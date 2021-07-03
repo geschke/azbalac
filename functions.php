@@ -88,7 +88,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
     function azbalac_setup() {
 
         /*
-         * Make azbalac theme available for translation.
+         * Make Azbalac One theme available for translation.
          *
          * Translations can be added to the /languages/ directory.
          * If you're building a theme based on azbalac, use a find and

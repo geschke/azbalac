@@ -79,7 +79,7 @@ if (!class_exists('Azbalac_Welcome')) {
         {
             ?>
             <div class="updated notice azbalac-admin-notice is-dismissible">
-                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac Theme! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
+                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac One! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
                 
             </div>
             <?php

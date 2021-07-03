@@ -1,12 +1,16 @@
-# Azbalac Theme
+# Azbalac One
 
 ## A pure and basic WordPress theme, based on Bootstrap 5.0 framework
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.4.3
+Version 0.4.4
 
 ## Version history
+
+Version 0.4.4
+
+- Renamed to Azbalac One
 
 Version 0.4.3
 

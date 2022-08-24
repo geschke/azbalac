@@ -48,6 +48,10 @@ $content['displayHeaderText'] = display_header_text();
 
 $content['subfooterStyles'] = Azbalac_Section_Subfooter::getStyles();
 
+// has to be called before wp_body_open, because wp_enqueue_style is used
+$content['sectionFontStyles'] = Azbalac_Theme_Font::getStyles();
+
+
 ob_start();
 wp_head(); 
 $content['wpHead'] = ob_get_clean();
@@ -108,8 +112,6 @@ if (has_nav_menu('header-menu')) {
 
 }
 
-
-$content['sectionFontStyles'] = Azbalac_Theme_Font::getStyles();
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( ) ) . '"';
 

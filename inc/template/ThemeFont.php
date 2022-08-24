@@ -33,7 +33,8 @@ class Azbalac_Theme_Font
         $cssNavbar = self::buildNavbarCss($navbarFont);
         $cssTitle = self::buildTitleCss($titleFont);
         $cssSubtitle = self::buildSubtitleCss($subtitleFont);
-        
+       
+
         return $cssBody . $cssHeadline . $cssNavbar . $cssTitle . $cssSubtitle;
     }
 
@@ -44,7 +45,7 @@ class Azbalac_Theme_Font
         $css = '';
         $fontSize = null;
 
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($bodyFont, 'typography-body-font');
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($bodyFont, 'azbalac-typography-body-font');
         
         if (isset($bodyFont->size) && intval($bodyFont->size) != 0) {
             $fontSize = $bodyFont->size . "px";
@@ -81,7 +82,7 @@ class Azbalac_Theme_Font
         $css = '';
         $fontSize = null;
 
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'typography-title-font');
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'azbalac-typography-title-font');
         
         if (isset($font->size) && intval($font->size) != 0) {
             $fontSize = $font->size . "px";
@@ -118,7 +119,7 @@ class Azbalac_Theme_Font
         $css = '';
         $fontSize = null;
 
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'typography-subtitle-font');
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($font, 'azbalac-typography-subtitle-font');
         
         if (isset($font->size) && intval($font->size) != 0) {
             $fontSize = $font->size . "px";
@@ -155,7 +156,7 @@ class Azbalac_Theme_Font
         $css = '';
         $fontSize = null;
 
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($navbarFont, 'typography-navbar-font');
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($navbarFont, 'azbalac-typography-navbar-font');
         
         if (isset($navbarFont->size) && intval($navbarFont->size) != 0) {
             $fontSize = $navbarFont->size . "px";
@@ -197,7 +198,7 @@ class Azbalac_Theme_Font
         $css = '';
         $fontSize = null;
         
-        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($headlineFont, 'typography-headline-font');
+        list($fontFamily, $cssHeader) = self::buildFontFamilyCss($headlineFont, 'azbalac-typography-headline-font');
 
         if (isset($headlineFont->size) && intval($headlineFont->size) != 0) {
             $sizeBase = intval($headlineFont->size);
@@ -290,7 +291,10 @@ class Azbalac_Theme_Font
                 if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
                     $fontVariant = ':' . $font->gglfontdata->variant;
                 }
-                $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
+
+                wp_enqueue_style($identifier, '//fonts.googleapis.com/css2?family=' . urlencode($font->font) . $fontVariant . '&display=swap', array(), null );
+
+                //$cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
                 $fontFamily = "'" . $font->font . "'";
                 
               

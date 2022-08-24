@@ -117,9 +117,9 @@ class Azbalac_Customizer_Addon
         $this->customizer->get_setting( 'azbalac_setting_social_media_alignment' )->transport = 'postMessage';
         $this->customizer->get_setting( 'azbalac_setting_social_button_size' )->transport = 'postMessage';
         $this->customizer->get_setting( 'azbalac_setting_social_button_type' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'azbalac_setting_social_button_color_fg' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'azbalac_setting_social_button_color_bg' )->transport = 'postMessage';
-        $this->customizer->get_setting( 'azbalac_setting_social_button_color_bg_hover' )->transport = 'postMessage';
+        //$this->customizer->get_setting( 'azbalac_setting_social_button_color_fg' )->transport = 'postMessage';
+        //$this->customizer->get_setting( 'azbalac_setting_social_button_color_bg' )->transport = 'postMessage';
+        //$this->customizer->get_setting( 'azbalac_setting_social_button_color_bg_hover' )->transport = 'postMessage';
 
         $this->customizer->selective_refresh->add_partial('azbalac_setting_social_media_activate', array(
             'selector' => '.social-media-buttons',

@@ -42,7 +42,11 @@ if ( have_posts() ) {
 		$page_title = sprintf( __( 'Monthly Archives: %s', 'azbalac' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'azbalac' ) ) );
 	} elseif ( is_year() ) {
 		$page_title = sprintf( __( 'Yearly Archives: %s', 'azbalac' ), get_the_date( _x( 'Y', 'yearly archives date format', 'azbalac' ) ) );
-	} else {
+	} elseif ($title = get_the_archive_title()) {
+		$page_title = $title;
+
+	}
+	else {
 		$page_title = __( 'Archives', 'azbalac' );
 	}
 
@@ -89,7 +93,6 @@ get_footer();
 $azbalac_footer = $azbalacContainer->footerData;
 
 
-
 echo $aztpl->render('archive.html.twig', array('header' => $header,
 'layout_style' => $layoutStyle,
 'sidebar' => $sidebar,
@@ -98,5 +101,5 @@ echo $aztpl->render('archive.html.twig', array('header' => $header,
 'no_posts' => $azbalac_no_posts,
 'paging_nav' => $azbalac_paging_nav,
 'footer' => $azbalac_footer,
-'page_title' => $page_title
+'page_title' => $page_title 
 ));            

@@ -79,7 +79,7 @@ if (!class_exists('Azbalac_Welcome')) {
         {
             ?>
             <div class="updated notice azbalac-admin-notice is-dismissible">
-                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac Theme! Please have a look at the new %swelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
+                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac One! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
                 
             </div>
             <?php
@@ -115,8 +115,8 @@ if (!class_exists('Azbalac_Welcome')) {
             
             wp_enqueue_script('azbalac-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
             if ('appearance_page_azbalac-welcome' == $hook_suffix) {
-                wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );       
-                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.0', true);
+                
+                wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true);
                 wp_enqueue_style('azbalac-admin-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), AZBALAC_DATEVERSION );
                 wp_enqueue_style('azbalac-welcome-screen-css', get_template_directory_uri() . '/inc/info-screen/css/welcome.css', array(), AZBALAC_DATEVERSION );
             
@@ -141,8 +141,8 @@ if (!class_exists('Azbalac_Welcome')) {
             <!-- Nav tabs -->
             <div class="azbalac-wrap">
                 <ul class="azbalac-nav-tabs nav nav-tabs" role="tablist">
-                    <li class="active"><a class="nav-link active" id="tab-getting-started" href="#azbalac-tab-getting-started" aria-controls="azbalac-tab-getting-started" role="tab" data-toggle="tab">Getting started</a></li>
-                    <li><a class="nav-link" id="tab-changelog" href="#azbalac-tab-changelog" aria-controls="azbalac-tab-changelog" role="tab" data-toggle="tab">Changelog</a></li>
+                    <li class="active"><a class="nav-link active" id="tab-getting-started" href="#azbalac-tab-getting-started" aria-controls="azbalac-tab-getting-started" role="tab" data-bs-toggle="tab">Getting started</a></li>
+                    <li><a class="nav-link" id="tab-changelog" href="#azbalac-tab-changelog" aria-controls="azbalac-tab-changelog" role="tab" data-bs-toggle="tab">Changelog</a></li>
 
                 </ul>
 

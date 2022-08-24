@@ -15,11 +15,10 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeCheckbox($input)
     {
-        if ($input == 1) {
-            return 1;
-        } else {
-            return '';
-        }
+        if ($input == '1') {
+            return '1';
+        } 
+        return '0';
     }
 
     public function sanitizeInteger($input)
@@ -76,6 +75,16 @@ class Azbalac_Customizer_Sanitizer
         }
         return $input;
     }
+
+    public function sanitizeNavbarTopSpacing($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 30) { // rem is value / 2, so 15 rem should be enough
+            return 9; // 4.5 rem
+        }
+        return $input;
+    }
+
     
     public function sanitizeSocialButtonSize($input)
     {
@@ -89,11 +98,21 @@ class Azbalac_Customizer_Sanitizer
     public function sanitizeSocialButtonType($input)
     {
         $input = absint($input);
-        if ($input < 1 || $input > 2) {
-            return 1;
+        if ($input < 0 || $input > 4) {
+            return 0;
         }
         return $input;
     }
+
+    public function sanitizeSocialButtonBorderWidth($input)
+    {
+        $input = absint($input);
+        if ($input < 1 || $input > 5) {
+            return "3";
+        }
+        return $input;
+    }
+
 
     public function sanitizeLayout($input)
     {
@@ -142,11 +161,19 @@ class Azbalac_Customizer_Sanitizer
         return $input;
     }
 
+    public function sanitizeBootstrapColorSet($input)
+    {
+        $colors = ['primary','secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'white'];
+        if (!in_array($input, $colors)) {
+                return 'default';
+            }
+        return $input;
+    }
 
 
     public function sanitizeNavbarFixed($input)
     {
-        if ($input == 'fixed-top') {
+        if ($input == 'fixed-top' || $input == 'top-aligned') {
             return $input;
         }
         return 'default';
@@ -187,7 +214,8 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeHtml($input)
     {
-        return wp_kses( $input, array( 
+        return wp_kses_post($input); // everything what is allowed in post type should be allowed here
+        /*return wp_kses( $input, array( 
             'a' => array(
                 'href' => array(),
                 'title' => array()
@@ -205,7 +233,7 @@ class Azbalac_Customizer_Sanitizer
                 'id' => array(),
                 'style' => array(),
             )
-        ) );
+        ) );*/
     }
 
     /**

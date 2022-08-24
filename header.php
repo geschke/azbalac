@@ -21,20 +21,24 @@ $content['layoutStyle'] = azbalac_get_layout();
 
 $content['bodyStyles'] = azbalac_get_body_styles();
 
-$content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top or default
+$content['navbarFixed'] = azbalac_get_navbar_layout(); // fixed-top, top-aligned or default
 
 $content['hasNavMenuHeaderMenu'] = has_nav_menu('header-menu'); // ok, this is a bit ugly...
 
 $content['headerWidgetRight'] = Azbalac_Section_Widgets::get('header-widget-right');
 $content['navigationWidgetRight'] = Azbalac_Section_Widgets::get('navigation-widget-right');
 
+$topSpacing = get_option('azbalac_setting_navbar_top_spacing',9);
 
+$content['navigationTopSpacing'] = strval((float) $topSpacing / 2);
 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
+
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) {
+    
     $content['customLogo'] = $logo[0];
-//        echo '<img src="'. esc_url( $logo[0] ) .'">';
+        //echo '<img src="'. esc_url( $logo[0] ) .'">';
 } 
 
 $content['customLogoPosition'] = get_option('azbalac_setting_general_logo_position', 1);
@@ -44,9 +48,17 @@ $content['displayHeaderText'] = display_header_text();
 
 $content['subfooterStyles'] = Azbalac_Section_Subfooter::getStyles();
 
+// has to be called before wp_body_open, because wp_enqueue_style is used
+$content['sectionFontStyles'] = Azbalac_Theme_Font::getStyles();
+
+
 ob_start();
 wp_head(); 
 $content['wpHead'] = ob_get_clean();
+
+ob_start();
+wp_body_open();
+$content['wpBodyOpen'] = ob_get_clean();
 
 if (has_nav_menu('header-menu')) {
     
@@ -100,8 +112,6 @@ if (has_nav_menu('header-menu')) {
 
 }
 
-
-$content['sectionFontStyles'] = Azbalac_Theme_Font::getStyles();
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( ) ) . '"';
 

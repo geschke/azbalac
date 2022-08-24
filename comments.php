@@ -48,14 +48,17 @@ if ( ! post_password_required() ) {
 	}
 
 	
-    $formArgs = ['comment_field' => '<div class="form-group comment-form-comment"><label class="col-sm-2 control-label" for="comment">' . _x( 'Comment', 'noun', 'azbalac' ) . '</label>' .
-        '<div class="col-sm-10"><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div>',
+    $formArgs = ['comment_field' => '<div class="mb-3 comment-form-comment">' .
+        '<div class="col-sm-10 form-floating"><textarea class="form-control" id="comment" name="comment" style="height: 200px" placeholder="' . _x( 'Comment', 'noun', 'azbalac' )  . '" aria-required="true"></textarea>' . 
+				'<label class="form-label" for="comment">' . _x( 'Comment', 'noun', 'azbalac' ) . '</label>' .
+				'</div></div>',
+				'submit_field' => '<div class="mb-5 form-submit">%1$s %2$s</div>'
 	];
 
     ob_start();
     comment_form($formArgs);
     $commentForm = ob_get_clean();
-    $commentForm = str_replace('class="comment-form"','class="form-horizontal comment-form"', $commentForm);
+    $commentForm = str_replace('class="comment-form"','class="comment-form"', $commentForm);
     $commentForm = str_replace('id="submit"','id="submit" class="btn btn-primary"', $commentForm);
     $commentForm = str_replace('<code>','<pre>', $commentForm);
     $commentForm = str_replace('</code>','</pre>', $commentForm);

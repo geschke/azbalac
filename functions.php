@@ -1,11 +1,11 @@
 <?php
 
-define('AZBALAC_DATEVERSION','2018071201');
+define('AZBALAC_DATEVERSION','2021052501');
 
 /**
  * Azbalac only works with PHP 7 and above.
  */
-if (version_compare(phpversion(), '7.0.0', '<')) {
+if (version_compare(phpversion(), '7.2.5', '<')) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
@@ -88,7 +88,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
     function azbalac_setup() {
 
         /*
-         * Make azbalac theme available for translation.
+         * Make Azbalac One theme available for translation.
          *
          * Translations can be added to the /languages/ directory.
          * If you're building a theme based on azbalac, use a find and
@@ -108,7 +108,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
         add_theme_support('post-thumbnails');
         //set_post_thumbnail_size( 672, 372, true );
         //add_image_size( 'azbalac-full-width', 1038, 576, true );
-
+        add_image_size( 'azbalac-featured-post-mag-style1', 200, 300, true );
         /*
          * Switch default core markup for search form, comment form, and comments
          * to output valid HTML5.
@@ -240,7 +240,7 @@ function theme_azbalac_widgets_init()
         'name' => __("Sidebar 1", 'azbalac'),
         'id' => 'sidebar-1',
         'class' => '',
-        'before_widget' => '<div class="card"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
+        'before_widget' => '<div class="card mb-3"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
         'after_widget' => "</div></div>\n",
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => "</h3>\n"
@@ -321,10 +321,10 @@ if ( ! function_exists( 'azbalac_get_search_form' ) ) :
 function azbalac_get_search_form() {
 
     $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="form-group"><label class="screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" />
+    <div class="mb-3 form-floating">
+    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" /><label class="_screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
     </div>
-    <div class="form-group"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
+    <div class="mb-3"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
     </div>
     </form>';
     return $form;
@@ -394,10 +394,8 @@ function azbalac_scripts() {
     
     wp_enqueue_script( 'azbalac-script', get_template_directory_uri() . '/js/functions.js',
         array(  ), AZBALAC_DATEVERSION , true );
-
-        //wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.12.9', true );
         
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4.5.3', true );
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true );
         
 
     /*if (is_customize_preview()) {
@@ -415,7 +413,7 @@ function azbalac_scripts() {
 add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'setStyles' ));
 
 add_action( 'wp_enqueue_scripts', 'azbalac_scripts' );
-add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueFontAwesome' ) );
+add_action( 'wp_enqueue_scripts', array('Azbalac_Theme', 'enqueueBootstrapIcons' ) );
 
 add_action( 'wp_enqueue_scripts',  array('Azbalac_Section_Social_Media_Buttons','addSocialButtonStyle' ) );
 add_action( 'wp_enqueue_scripts', array('Azbalac_Section_Slider','addSliderStyle') );
@@ -463,7 +461,7 @@ add_filter( 'wp_title', 'azbalac_wp_title', 10, 2 );
 
 
 function add_class_the_tags($html){
-    $html = str_replace('<a','<a class="badge badge-info"',$html);
+    $html = str_replace('<a','<a class="badge bg-info"',$html);
     return $html;
 }
 add_filter('the_tags','add_class_the_tags',10,1);
@@ -556,7 +554,9 @@ if ( ! function_exists( 'azbalac_get_navbar_layout' ) ) :
          if ($navbarData == 'fixed-top') {
             $navbarFixed = 'fixed-top';
          }
-         else {
+         elseif ($navbarData == 'top-aligned') {
+            $navbarFixed = 'top-aligned';
+         } else {
             $navbarFixed = 'default';
          }
          return $navbarFixed;
@@ -696,7 +696,7 @@ endif; // azbalac_admin_notice
 function azbalac_excerpt_more( $more ) {
     return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'azbalac' ), get_the_title())  . '</a></p>';
 }
-add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
+//add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
 
 /*
  * Add Featured Content functionality.

@@ -79,7 +79,7 @@ class Azbalac_Section_Subfooter
         $content = get_theme_mod('azbalac_setting_subfooter_content');
         if ($content === false) {
             // no value in database, so the option is not overwritten, use default
-            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
+            $content = __('Powered by <a href="https://wordpress.org">WordPress</a>. Theme Azbalac One by <a href="https://www.geschke.net">Ralf Geschke</a>.','azbalac');
         }
         if (!$content) {
             return false; // no output

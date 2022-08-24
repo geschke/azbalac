@@ -136,18 +136,19 @@ class Azbalac_Theme
     public static function setStyles()
     {
         $stylesheetSetting = get_theme_mod('azbalac_setting_general_theme',0);
-    
+        
+       
         if (!$stylesheetSetting)
         {
             // fallback to default theme
             //$stylesheet = $stylesheetData;
-            $themeFolder = 'bootstrap/';
+            $themeFolder = '';
             $themeCss[] = 'bootstrap.min.css';
 
         }
         else {
             $stylesheetData = json_decode(urldecode($stylesheetSetting));
-        
+      
             if (isset($stylesheetData->theme) && $stylesheetData->theme !== 0) {
                 $themeData = $stylesheetData->data;
                 // todo: check type: currently only "simple", i.e. load css file from folder
@@ -162,26 +163,27 @@ class Azbalac_Theme
                 }
     
             } else { // fallback to default theme
-                $themeFolder = 'bootstrap/';
+               
+                $themeFolder = '';
                 $themeCss[] = 'bootstrap.min.css';
 
             }
         }
 
         foreach ($themeCss as $key => $stylesheet) {
-            wp_register_style( 'bootstrap-styles_' . $key, get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), AZBALAC_DATEVERSION ,'all');
+            wp_register_style( 'azbalac-bootstrap-styles', get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), AZBALAC_DATEVERSION ,'all');
         
             //  enqueue the style:
-            wp_enqueue_style( 'bootstrap-styles_' . $key );
+            wp_enqueue_style( 'azbalac-bootstrap-styles' );
         }
 
     }
 
 
-    public static function enqueueFontAwesome()
+    public static function enqueueBootstrapIcons()
     {
 
-        wp_enqueue_style( 'azbalac-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
+        wp_enqueue_style( 'azbalac-bootstrap-icons', get_template_directory_uri() . '/css/icons/bootstrap-icons.css' ); // maybe todo: minimize
     
     }
   

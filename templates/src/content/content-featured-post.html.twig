@@ -2,7 +2,7 @@
 
 <div class="col-lg-{{ post.themeCols }} col-md-{{ post.themeCols }} col-sm-{{ post.themeCols }}">
 
-<article id="post-{{ post.theId }}" {{ post.postClass }}>
+<article id="post-{{ post.theId }}" {{ post.postClass|raw }}>
 
 
         {% if post.has_post_thumbnail %}
@@ -25,6 +25,7 @@
         {% endif %}
 
         {{ post.content|raw }}
+        
          
 	</header><!-- .entry-header -->
 </article><!-- #post-## -->

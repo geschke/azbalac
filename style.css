@@ -1,16 +1,16 @@
 /*
-Theme Name: Azbalac
+Theme Name: Azbalac One
 Theme URI: https://www.kuerbis.org/azbalac/
 Author: Ralf Geschke
 Author URI: https://www.geschke.net
-Description: Azbalac - A pure and basic WordPress theme, based on Bootstrap 4 framework.
-Version: 0.3.4
+Description: Azbalac One - A pure and basic WordPress theme, based on Bootstrap 5 framework.
+Version: 0.5.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0
 Tags: blog, news, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, flexible-header, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
 Text Domain: azbalac
-Tested up to: 5.7.2
-Requires PHP: 7.2.5
+Tested up to: 6.0.1
+Requires PHP: 7.4
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -234,6 +234,27 @@ h2.azbalac-title-noimage {
     margin-right: 5px;
     text-decoration: none !important;
 }
+
+
+/* Social Media Buttons
+*/
+.azbalac-social-1 .bi {
+    width: 1rem;
+    height: 1rem;
+}
+
+.azbalac-social-2 .bi {
+    width: 2rem;
+    height: 2rem;
+}
+
+.azbalac-social-3 .bi {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+
 
 /*
  * Multilevel Dropdown for Bootstrap 4 
@@ -581,3 +602,9 @@ a.section-introduction-url {
 	margin-left: -20px;
 	
 }
+
+/* Taken from blog example */
+@media (min-width: 768px) {
+    .h-md-250 { height: 300px; }
+  }
+  

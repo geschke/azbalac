@@ -8,14 +8,13 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="{{ content.bloginfo.pingback_url }}">
 
-
     {% if content.navbarFixed == 'fixed-top' and content.hasNavMenuHeaderMenu %}
     
             <style type="text/css">
             /* Show it is fixed to the top */
                 body {
                 min-height: 75rem !important;
-                padding-top: 4.5rem !important;
+                padding-top: {{ content.navigationTopSpacing }}rem !important;
                 }
                 body.admin-bar .navbar-fixed-top { 
                     top: 28px !important; 
@@ -51,25 +50,29 @@
             {% include 'content/header-style.html.twig' with {'header': content.headerOptions, 
     'is_front_page': is_front_page } %}
     {% endif %} 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        
 
 </head>
 
 
 <body {{ content.bodyClass|raw }}>
 
-<div id="skip-link"><a href="#content" class="sr-only element-focusable">{{ content.skipToMainContent }}</a></div>
+{{ content.wpBodyOpen|raw }}
+
+<div class="visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">{{ content.skipToMainContent }}</a>
+  </div>
+</div>
+
+
 
 
 {% if content.navbarFixed == 'default' %}
 
-{% if content.headerOptions.show_title_image %}
-    {{ renderSocialMediaButtons(1)|raw }}
-{% endif %}
+  {% if content.headerOptions.show_title_image %}
+      {{ renderSocialMediaButtons(1)|raw }}
+  {% endif %}
 
 <div id="header" role="banner" style="{% if content.headerStyles.headerStyleColorBg %}background-color: {{ content.headerStyles.headerStyleColorBg }} {% endif %}{% if content.headerStyles.headerStyleColorFg %}{{ content.headerStyles.headerStyleColorFg }}{% endif %}">
 
@@ -78,8 +81,6 @@
         <header class="masthead">
             <div>
 
-              {#  <div class="row justify-content-between">
-                    <div class="col-auto"> #}
                         <div id="site-header-container-above" class="row align-items-center {% if content.customLogoPosition == 2 %} justify-content-center{% elseif content.customLogoPosition == 3 %} justify-content-between{% endif %}">
                             
                             {% if content.customLogo %}
@@ -88,7 +89,7 @@
                             </div>
                             {% endif %}
                             {% if not content.headerOptions.show_title_image %}
-                            <div class="col"> {# war col-auto #}
+                            <div class="col">
                                     {% if content.displayHeaderText %}
                                     <h2 class="azbalac-title-noimage" id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h2>
                                 <h2 class="azbalac-subtitle-above" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription|raw }}</h2>
@@ -106,20 +107,9 @@
                             </div>
                           
                             {% endif %}
-                            {# {% if  content.headerWidgetRight %}
-                            <div class="col-auto ml-auto">
-                                    {{ content.headerWidgetRight|raw }}
-                            </div>
-                            {% endif %}  #}
+                           
                         </div>
 
-                {#    </div>
-                    <div class="col-auto">
-                            {{ content.headerWidgetRight|raw }}
-                        </div>
-
-                    
-                </div> #}
 
             </div>
 
@@ -161,23 +151,14 @@
 
 
 {% if content.hasNavMenuHeaderMenu or content.navigationWidgetRight %}
-    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top navbar-fixed-top{% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <nav id="navbarMain" class="navbar navbar-expand-sm justify-content-between {% if content.navbarFixed == 'fixed-top' %}fixed-top {% endif %} {{ content.headerStyles.navbarStyleClass }} mb-3" {% if content.headerStyles.navbarBgCustom %}style="background-color: {{ content.headerStyles.navbarBgCustom }};" {% endif %}role="navigation">
+    <div class="container-fluid">
         
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
-        {# <div id="navbar-header" class="navbar-header">
-                <div id="navbar-toggle-screenreader"><a href="#" class="sr-only element-focusable" data-toggle="collapse" data-target=".navbar-collapse">{{ content.toggleNavigation }}</a></div>
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">{{ content.toggleNavigation }}</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                #}
-                {% if content.navbarFixed == 'fixed-top' and content.displayHeaderText %}
+       
+                {% if (content.navbarFixed == 'fixed-top' or content.navbarFixed == 'top-aligned') and content.displayHeaderText %}
                     <div id="site-header-text">
                             {% if content.customLogo %}
                             <a href="{{ content.homeUrl }}"><img style="width: 30px; height: auto;" src="{{ content.customLogo }}"/></a>
@@ -185,8 +166,8 @@
                         <a class="navbar-brand" href="{{ content.homeUrl }}">{{ content.description }}</a></div>
                 {% endif %}
             
-            <div class="sticky-top navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
-                <ul class="navbar-nav  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
+            <div class="navbar-collapse collapse  {{ content.headerStyles.navbarAlignment }}" id="navbarSupportedContent"> 
+                <ul class="navbar-nav  mb-2 mb-lg-0  {% if content.navigationWidgetRight %}mr-auto{% endif %}">
                     {{ content.wpNavMenu|raw }}
                </ul>
                {% if content.navigationWidgetRight %}
@@ -196,10 +177,8 @@
                {% endif %}
             </div><!--/.nav-collapse -->
         
-            
+    </div>
     </nav> <!-- end navbar-->
-{# {% else %}
-<p>&nbsp;</p> #}
 {% endif %}
 
 {% if content.navbarFixed == 'default' %}
@@ -209,9 +188,82 @@
 
 {% endif %}
 
+{#
+
+
+<div class="container">
+  
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="300" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-muted">Nov 11</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<div class="container px-4 py-5" id="featured-3">
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+        </div>
+        <h2>Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="#" class="icon-link">
+          Call to action
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+        </div>
+        <h2>Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="#" class="icon-link">
+          Call to action
+        </a>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+        </div>
+        <h2>Featured title</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="#" class="icon-link">
+          Call to action
+        </a>
+      </div>
+    </div>
+  </div>
+
+  #}
 
 {% if is_front_page %}
     {{ content.showIntroductionElements.2|raw }}
 {% endif %}
-
-

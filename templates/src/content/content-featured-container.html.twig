@@ -10,6 +10,22 @@
         {% endfor %}
     {% endif %}
 
+    {% if featured.posts_mag_style1 %}
+    <div class="container py-4">
+    <div class="row mb-2">
+        {% for content in featured.posts_mag_style1 %}
+        
+         {% include 'content/content-featured-post-mag-style1.html.twig' with {'post': content } %}
+         {% if loop.index is even and not loop.last %}
+            </div>
+            <div class="row mb-2">
+         {% endif %}
+        
+        {% endfor %}
+        </div>
+    </div>        
+    {% endif %}
+
 
     {% if featured.posts_standard %}
     <div class="container marketing">

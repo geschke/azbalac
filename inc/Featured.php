@@ -17,6 +17,7 @@ class Azbalac_Featured
 
     private $postsLarge = null;
     private $postsStandard = null;
+    private $postsFeaturedMagStyle1 = null;
 
     public function __construct()
     {
@@ -28,7 +29,38 @@ class Azbalac_Featured
     {
         
         return ['posts_large' => $this->getLargePosts(),
-                'posts_standard' => $this->getStandardPosts()];
+                'posts_standard' => $this->getStandardPosts(),
+                'posts_mag_style1' => $this->getMagStyle1Posts()];
+        
+    }
+
+    public function getMagStyle1Posts()
+    {
+        // todo later: generalize
+        $this->parsePosts();
+
+        $azbalacContainer = Azbalac_DataContainer::getInstance();
+
+
+        global $post; // blergh!!!
+        
+        // if available, get all posts with this identifier _3
+        if (isset($this->postsFeaturedMagStyle1) && is_array($this->postsFeaturedMagStyle1) && count($this->postsFeaturedMagStyle1)) {
+            //$postIndex = 1; // we're using Twig, so this is not necessary
+            foreach ( $this->postsFeaturedMagStyle1 as $order => $post) {
+                setup_postdata( $post );
+                //$post->postIndex = $postIndex;
+
+                get_template_part('content','featured-post-mag-style1');
+                
+                $contentFeatured[] = $azbalacContainer->contentFeaturedPostMagStyle1;
+
+                //$postIndex++;
+            }
+
+            return $contentFeatured;
+        }
+        return null;
         
     }
 
@@ -170,11 +202,12 @@ class Azbalac_Featured
     {
         $featuredPosts = $this->getPosts();
 
-        if ($this->postsLarge !== null && $this->postsStandard !== null) {
+        if ($this->postsLarge !== null && $this->postsStandard !== null && $this->postsFeaturedMagStyle1 !== null) {
             return;
         }
         $this->postsLarge = [];
         $this->postsStandard = [];
+        $this->postsFeaturedMagStyle1 = [];
         foreach ($featuredPosts as $featuredPost) {
             $featured = get_post_meta($featuredPost->ID, 'azbalac_featured_post', true);
             //print "post: " . $featuredPost->ID . "<br/>";
@@ -183,6 +216,8 @@ class Azbalac_Featured
                 $this->postsLarge[] = $featuredPost;
             } elseif ($featured == '_2') {
                 $this->postsStandard[] = $featuredPost;
+            } elseif ($featured == '_3') {
+                $this->postsFeaturedMagStyle1[] = $featuredPost;
             }
         }
 

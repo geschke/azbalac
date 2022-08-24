@@ -79,7 +79,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
         if ($depth <= 0 &&  isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'm' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {
             $output .= $argsArray['menuWhitespace'];
         }
-        $output .= '"><div class="d-flex">';
+        $output .= '"><div class="">';
         if ($depth <= 0 && isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'l' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {
             $output .= '<span class="' . $argsArray['menuWhitespace'] . '"></span>';
         }
@@ -90,7 +90,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-        $attributes .= ($args->has_children && $depth == 0) ? ' class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ( $args->has_children && $depth > 0 ? ' class="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ($depth > 0 ? ' class="dropdown-item"': ' class="nav-link"')) ;
+        $attributes .= ($args->has_children && $depth == 0) ? ' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ( $args->has_children && $depth > 0 ? ' class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ($depth > 0 ? ' class="dropdown-item"': ' class="nav-link"')) ;
 
 
         //$attributes .= ' class="nav-link ' . ( $depth > 0 ? 'dropdown-item sub-menu-link' : 'main-menu-link' ) . '"';
@@ -141,7 +141,7 @@ class HeaderMenuWalker extends Walker_Nav_Menu
 			$n = "\n";
         }
         $output .= "</div></li>";
-        $output .= "</li>";
+        //$output .= "</li>";
 
         $argsArray = (array) $args;
         if ($depth <= 0 && isset($argsArray['menuWhitespacePosition']) && $argsArray['menuWhitespacePosition'] == 'r' && isset($argsArray['menuWhitespace']) && $argsArray['menuWhitespace']) {

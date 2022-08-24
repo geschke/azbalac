@@ -82,12 +82,12 @@ if (!function_exists('get_azbalac_posted_on')) :
             $output .= '<span class="featured-post">' . __('Sticky', 'azbalac') . '</span>&nbsp;&nbsp;';
         }
         // Set up and print post meta information.
-        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon fa fa-clock-o" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'azbalac') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
+        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon bi bi-clock" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'azbalac') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
             esc_url(get_permalink()),
             esc_attr(get_the_date('c')),
             esc_html(get_the_date())
         );
-        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon fa fa-user" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'azbalac') . '%2$s</a></span></span>',
+        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon bi bi-person" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'azbalac') . '%2$s</a></span></span>',
             esc_url(get_author_posts_url(get_the_author_meta('ID'))),
             esc_html(get_the_author())
         );

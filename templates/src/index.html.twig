@@ -43,6 +43,8 @@
                                 {% include 'content/content.html.twig' with {'content': post.data } %}
                             {% endfor %}
                             {{ paging_nav|raw }}
+                        {% elseif is_front_page and hide_no_posts %}    
+                          {# dont' show anything #}
                         {% else %}
                             {% include 'content/content-none.html.twig' with {'content': no_posts } %}
 

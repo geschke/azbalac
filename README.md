@@ -1,12 +1,48 @@
-# Azbalac Theme
+# Azbalac One
 
-## A pure and basic WordPress theme, based on Bootstrap 4.0 framework.
+## A pure and basic WordPress theme, based on Bootstrap 5.0 framework
 
-### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts.
+### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.3.4
+Version 0.5.0
 
 ## Version history
+
+Version 0.5.0
+
+- Fix: Title font preview in customizer when title is set above header image
+- Fix: Removed unnecessary get_settings() requests to azbalac_setting_social_button_color_*
+- Breaking: Removed @import of Google fonts in Bootswatch CSS files due to GDPR/DSGVO issues. Usage of Azbalac typography settings is recommended.
+- Update: Uses wp_enqueue_styles() instead of the static Google font URL, making it possible to use plugins to embed Google fonts locally (e.g. [Embed Google Fonts](https://wordpress.org/plugins/embed-google-fonts/))
+
+Version 0.4.4
+
+- Renamed to Azbalac One
+
+Version 0.4.3
+
+- New: Add option to hide "Nothing found" message on homepage if chosen "Your latest posts" and no posts are available, because they will be displayed as featured content
+
+Version 0.4.2
+
+- New: Add top-aligned navbar setting (with scrolling, so it's not fixed to top)
+- New: Add option to set custom spacing between navbar and content when using fixed-top navigation, e.g. when using larger font size in navbar
+- Fix: Strange behaviour of navbar menu position switching in fixed-top navbar when scrolling page content
+
+Version 0.4.1
+
+- New: Add Magazine-style featured content type
+- Fix: Post image won't be shown on content page anymore
+- Update: Content excerpt handling, don't add "Read more" button automatically
+- Fix: Many fixes to due featured content posts
+
+Version 0.4.0
+
+- Major Update: Replace Bootstrap 4 with Bootstrap 5, Font Awesome with Bootstrap Icons
+- Many fixes due to new Bootstrap version
+- Fix: Slider ready for Bootstrap 5
+- Update: New social media buttons, switched to Bootstrap Icons; missing icons taken from Font Awesome
+- Update: New social media button styling options (template preset colors and custom colurs for icon and background, new button type)
 
 Version 0.3.4
 

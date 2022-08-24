@@ -345,7 +345,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_slider_activate', array(
-            'default' => '',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
@@ -459,6 +459,10 @@ class Azbalac_Customizer
     public function addCustomizerSocialButtons($wp_customize)
     {
         $socialData = array(
+            'discord' => array('settings_id' => 'azbalac_social_media_discord',
+                'label' => __('Discord', 'azbalac'),
+                'description' => __('Enter the complete Discord profile page URL (please include http or https!)', 'azbalac'),
+            ),
             'facebook' => array('settings_id' => 'azbalac_social_media_facebook',
                 'label' => __('Facebook', 'azbalac'),
                 'description' => __('Enter the complete Facebook profile page URL (please include http or https!)', 'azbalac'),
@@ -467,9 +471,9 @@ class Azbalac_Customizer
                 'label' => __('GitHub', 'azbalac'),
                 'description' => __('Enter the complete GitHub profile page URL (please include http or https!)', 'azbalac'),
             ),
-            'googleplus' => array('settings_id' => 'azbalac_social_media_google',
-                'label' => __('Google+', 'azbalac'),
-                'description' => __('Enter the complete Google+ page URL (please include http or https!)', 'azbalac'),
+            'google' => array('settings_id' => 'azbalac_social_media_google',
+                'label' => __('Google', 'azbalac'),
+                'description' => __('Enter the complete Google profile page URL (please include http or https!)', 'azbalac'),
             ),
             'instagram' => array('settings_id' => 'azbalac_social_media_instagram',
                 'label' => __('Instagram', 'azbalac'),
@@ -479,13 +483,33 @@ class Azbalac_Customizer
                 'label' => __('LinkedIn', 'azbalac'),
                 'description' => __('Enter the complete LinkedIn page URL (please include http or https!)', 'azbalac'),
             ),
+            'mastodon' => array('settings_id' => 'azbalac_social_media_mastodon',
+                'label' => __('Mastodon', 'azbalac'),
+                'description' => __('Enter the complete Mastodon page URL (please include http or https!)', 'azbalac'),
+            ),
             'slideshare' => array('settings_id' => 'azbalac_social_media_slideshare',
                 'label' => __('SlideShare', 'azbalac'),
                 'description' => __('Enter the complete SlideShare page URL (please include http or https!)', 'azbalac'),
             ),
-            'snapchat' => array('settings_id' => 'azbalac_social_media_snapshat',
+            'skype' => array('settings_id' => 'azbalac_social_media_skype',
+                'label' => __('Skype', 'azbalac'),
+                'description' => __('Enter the complete Skype page URL (please include http or https!)', 'azbalac'),
+            ),
+            'slack' => array('settings_id' => 'azbalac_social_media_slack',
+                'label' => __('Slack', 'azbalac'),
+                'description' => __('Enter the complete Slack page URL (please include http or https!)', 'azbalac'),
+            ),
+            'snapchat' => array('settings_id' => 'azbalac_social_media_snapchat',
                 'label' => __('Snapchat', 'azbalac'),
                 'description' => __('Enter the complete Snapchat page URL (please include http or https!)', 'azbalac'),
+            ),
+            'telegram' => array('settings_id' => 'azbalac_social_media_telegram',
+                'label' => __('Telegram', 'azbalac'),
+                'description' => __('Enter the Telegram profile page URL (please include http!)', 'azbalac'),
+            ),
+            'twitch' => array('settings_id' => 'azbalac_social_media_twitch',
+                'label' => __('Twitch', 'azbalac'),
+                'description' => __('Enter the Twitch profile page URL (please include http!)', 'azbalac'),
             ),
             'twitter' => array('settings_id' => 'azbalac_social_media_twitter',
                 'label' => __('Twitter', 'azbalac'),
@@ -498,6 +522,10 @@ class Azbalac_Customizer
             'xing' => array('settings_id' => 'azbalac_social_media_xing',
                 'label' => __('Xing', 'azbalac'),
                 'description' => __('Enter the complete Xing profile page URL (please include http or https!)', 'azbalac')
+            ),
+            'whatsapp' => array('settings_id' => 'azbalac_social_media_whatsapp',
+                'label' => __('WhatsApp', 'azbalac'),
+                'description' => __('Enter the WhatsApp profile page URL (please include http!)', 'azbalac'),
             ),
             'youtube' => array('settings_id' => 'azbalac_social_media_youtube',
                 'label' => __('YouTube', 'azbalac'),
@@ -550,7 +578,7 @@ class Azbalac_Customizer
 
 
         $wp_customize->add_setting('azbalac_setting_social_media_activate', array(
-            'default' => '',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
@@ -622,7 +650,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_type', array(
-            'default' => '1',
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonType')
@@ -632,15 +660,173 @@ class Azbalac_Customizer
             'label' => __('Button Type', 'azbalac'),
             'section' => 'section_social_media_position',
             'settings' => 'azbalac_setting_social_button_type',
-            'type' => 'radio',
+            'type' => 'select',
             'choices' => array(
-                '1' => __('Circle', 'azbalac'),
-                '2' => __('Square (rounded corners)', 'azbalac'),
+                // default no styling
+                '0' => __('Default style', 'azbalac'),
+                //'1' => __('Button', 'azbalac'), // currently not supported, maybe add in future
+                '2' => __('Border Square', 'azbalac'),
+                '3' => __('Border Rounded', 'azbalac'),
+                '4' => __('Border Circle', 'azbalac'),
+                
             ),
         ));
 
+        $wp_customize->add_setting('azbalac_setting_social_button_border_width', array(
+            'default' => '3',
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeSocialButtonBorderWidth')
+        ));
 
-        $wp_customize->add_setting('azbalac_setting_social_button_color_fg', array(
+        $wp_customize->add_control('azbalac_control_social_button_border_width', array(
+            'label' => __('Border Width', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_width',
+            
+            'type' => 'select',
+            'choices' => array(
+                // default no styling
+                '1' => __('Width 1', 'azbalac'),
+                '2' => __('Width 2', 'azbalac'),
+                '3' => __('Width 3 (Default)', 'azbalac'),
+                '4' => __('Width 4', 'azbalac'),
+                '5' => __('Width 5', 'azbalac'),
+                
+            ),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_border_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_border_color', array(
+            'label' => __('Border Color (if chosen border type)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick a border color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_border_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_border_color_custom', array(
+            'label' => __('Custom Border Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_border_color_custom',
+            'description' => __('Pick a border color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+
+        $wp_customize->add_setting('azbalac_setting_social_button_bg_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_bg_color', array(
+            'label' => __('Background Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_bg_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick a background color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_bg_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_bg_color_custom', array(
+            'label' => __('Custom Background Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_bg_color_custom',
+            'description' => __('Pick a background color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color', array(
+            'default' => 'default', // default is light or dark, according to navbar_style setting
+            'capability' => 'edit_theme_options',
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeBootstrapColorSet')
+        ));
+
+        $wp_customize->add_control('azbalac_control_social_button_fg_color', array(
+            'label' => __('Icon (Foreground) Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color',
+            'type' => 'select',
+            'choices' => array(
+                'default' => __( '&mdash; Select &mdash;', 'azbalac' ),
+                'primary' => __('primary', 'azbalac'),
+                'secondary' => __('secondary', 'azbalac'),
+                'success' => __('success', 'azbalac'),
+                'danger' => __('danger', 'azbalac'),
+                'warning' => __('warning', 'azbalac'),
+                'info' => __('info', 'azbalac'),
+                'light' => __('light', 'azbalac'),
+                'dark' => __('dark', 'azbalac'),
+                'white' => __('white', 'azbalac'),
+            ),
+            'description' => __('Pick an icon color from theme stylesheet or choose your own).', 'azbalac'),
+        ));
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color_custom', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_fg_color_custom', array(
+            'label' => __('Custom Icon (Foreground) Color (overwrites previous setting)', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color_custom',
+            'description' => __('Pick an icon color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+        // maybe todo: use another option (ligther, darker?) when hovered?
+
+        $wp_customize->add_setting('azbalac_setting_social_button_fg_color_custom_hover', array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_hex_color',
+        ));
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'azbalac_control_social_button_fg_color_custom_hover', array(
+            'label' => __('Custom Icon Mouseover Color', 'azbalac'),
+            'section' => 'section_social_media_position',
+            'settings' => 'azbalac_setting_social_button_fg_color_custom_hover',
+            'description' => __('Pick an icon color for the Social Media icon when mouseovered (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac'),)
+        ));
+
+        
+/*        $wp_customize->add_setting('azbalac_setting_social_button_color_fg', array(
             'default' => '',
             'sanitize_callback' => 'sanitize_hex_color',
         ));
@@ -671,7 +857,7 @@ class Azbalac_Customizer
             'section' => 'section_social_media_position',
             'settings' => 'azbalac_setting_social_button_color_bg_hover',
             'description' => __('Pick a background color for the Social Media icon when hovered (default: transparent, i.e. use color defined in the theme stylesheet).', 'azbalac'),)
-        ));
+        ));*/
     }
 
     /**
@@ -901,9 +1087,31 @@ class Azbalac_Customizer
             'type' => 'radio',
             'choices' => array(
                 'default' => __('Default', 'azbalac'),
-                'fixed-top' => __('Fixed to top', 'azbalac')
+                'top-aligned' => __('Top-Aligned', 'azbalac'),
+                'fixed-top' => __('Top-Aligned, fixed to top', 'azbalac')
             ),
         ));
+
+        $wp_customize->add_setting('azbalac_setting_navbar_top_spacing', array(
+            'default' => 9,
+            'capability' => 'edit_theme_options',
+            'type' => 'option', // necessary!!!
+            'transport' => 'refresh',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeNavbarTopSpacing')
+        ));
+
+
+        $wp_customize->add_control(new Azbalac_Custom_Slider_Control($wp_customize, 'azbalac_control_navbar_top_spacing', array(
+            'label' => __('Top Spacing (only available with fixed-top navigation bar)', 'azbalac'),
+            'section' => 'section_theme_options_navbar',
+            'settings' => 'azbalac_setting_navbar_top_spacing',
+            'description' => __('When using fixed-top navigation with larger header font size, you can adjust the spacing to the page content here.', 'azbalac'),
+            //'type' => 'slider',
+            'choices' => array(
+                'min' => 1,
+                'max' => 30,
+                'step' => 1)
+        )));
 
 
         $wp_customize->add_setting('azbalac_setting_navbar_menu_alignment', array(
@@ -1422,6 +1630,23 @@ class Azbalac_Customizer
                 'max' => 100,
                 'step' => 1)
         )));
+
+        $wp_customize->add_setting('azbalac_setting_homepage_hide_empty', array(
+            'capability' => 'edit_theme_options',
+            'default' => false,
+            'type' => 'option',
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+        ));
+
+        $wp_customize->add_control('azbalac_control_homepage_hide_empty', array(
+            'settings' => 'azbalac_setting_homepage_hide_empty',
+            'label' => __('Hide "Nothing found" message on homepage if chosen last blog entries and no blog entry is available', 'azbalac'),
+            'section' => 'section_theme_options_home',
+            'type' => 'checkbox',
+            //'description' => __('You can switch off this option, so no image will be displayed.', 'azbalac'),
+        ));
+
+
     }
 
     /**
@@ -1434,7 +1659,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_example', array(
             'capability' => 'edit_theme_options',
-            'default' => 1,
+            'default' => '1',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1451,7 +1676,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_large_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1482,7 +1707,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_medium_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1513,7 +1738,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_small_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1545,7 +1770,7 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_xsmall_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => 0,
+            'default' => '0',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
@@ -1635,7 +1860,7 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_introduction_area_readmore', array(
-            'default' => false,
+            'default' => '0',
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
@@ -1705,9 +1930,9 @@ class Azbalac_Customizer
         ),
         'icon' => array(
             'type'        => 'select',
-            'label'       =>  __('Select Font Awesome Icon or&hellip;', 'azbalac'),
+            'label'       =>  __('Select Icon or&hellip;', 'azbalac'),
             'description' => __('Select Icon or&hellip;', 'azbalac'),
-            'choices' => $this->getFaIcons(),
+            'choices' => $this->getBootstrapIcons(),
             //'default' => 'fa-car'
         ),
         'image' => array(
@@ -1778,7 +2003,7 @@ class Azbalac_Customizer
         // todo: sanitize?
     }
 
-    public function getFaIcons()
+    public function getBootstrapIcons()
     {
         global $wp_filesystem;
         if (empty($wp_filesystem)) {
@@ -1786,14 +2011,19 @@ class Azbalac_Customizer
             WP_Filesystem();
         }
 
-        $faIcons = $wp_filesystem->get_contents(get_template_directory() . '/css/font-awesome/fa-icons.txt');
-        $lines = explode(PHP_EOL, $faIcons);
-        $icons[0] = __('Choose Icon', 'azbalac');
-        foreach ($lines as $line) {
-            if ($line) {
+        $iconsJson = $wp_filesystem->get_contents(get_template_directory() . '/css/icons/bootstrap-icons.json');
+        $icons = json_decode($iconsJson, true);
+
+        $iconList[0] = __('Choose Icon', 'azbalac');
+        foreach ($icons as $key => $icon) {
+            //print_r($icon);
+            $iconList[$key] = $key;
+            /*if ($line) {
                 $icons[$line] = $line;
-            }
+            }*/
+
         }
-        return $icons;
+        ksort($iconList);
+        return $iconList;
     }
 }

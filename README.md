@@ -4,9 +4,16 @@
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.4.4
+Version 0.5.0
 
 ## Version history
+
+Version 0.5.0
+
+- Fix: Title font preview in customizer when title is set above header image
+- Fix: Removed unnecessary get_settings() requests to azbalac_setting_social_button_color_*
+- Breaking: Removed @import of Google fonts in Bootswatch CSS files due to GDPR/DSGVO issues. Usage of Azbalac typography settings is recommended.
+- Update: Uses wp_enqueue_styles() instead of the static Google font URL, making it possible to use plugins to embed Google fonts locally (e.g. [Embed Google Fonts](https://wordpress.org/plugins/embed-google-fonts/))
 
 Version 0.4.4
 

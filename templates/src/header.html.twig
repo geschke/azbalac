@@ -91,7 +91,7 @@
                             {% if not content.headerOptions.show_title_image %}
                             <div class="col">
                                     {% if content.displayHeaderText %}
-                                    <h2 class="azbalac-title-noimage" id="_site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h2>
+                                    <h2 class="azbalac-title-noimage" id="site-header-text"><a class="header-url" style="{% if content.headerStyles.colorFgTitle %}color: {{ content.headerStyles.colorFgTitle }};{% endif %}" href="{{ content.homeUrl }}">{{ content.description|raw }}</a></h2>
                                 <h2 class="azbalac-subtitle-above" id="site-description" style="{% if content.headerStyles.colorFgSubtitle %}color: {{ content.headerStyles.colorFgSubtitle }};{% endif %}">{{ content.subtitleDescription|raw }}</h2>
                                 {% else %}
                                 &nbsp;

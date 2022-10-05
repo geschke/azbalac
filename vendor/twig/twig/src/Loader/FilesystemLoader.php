@@ -51,7 +51,7 @@ class FilesystemLoader implements LoaderInterface
      */
     public function getPaths(string $namespace = self::MAIN_NAMESPACE): array
     {
-        return isset($this->paths[$namespace]) ? $this->paths[$namespace] : [];
+        return $this->paths[$namespace] ?? [];
     }
 
     /**
@@ -183,9 +183,9 @@ class FilesystemLoader implements LoaderInterface
         }
 
         try {
-            $this->validateName($name);
-
             list($namespace, $shortname) = $this->parseName($name);
+
+            $this->validateName($shortname);
         } catch (LoaderError $e) {
             if (!$throw) {
                 return null;
@@ -252,10 +252,6 @@ class FilesystemLoader implements LoaderInterface
     {
         if (false !== strpos($name, "\0")) {
             throw new LoaderError('A template name cannot contain NUL bytes.');
-        }
-
-        if ($this->isAbsolutePath($name)) {
-            throw new LoaderError(sprintf('A template name cannot be an absolute path (%s).', $name));
         }
 
         $name = ltrim($name, '/');

@@ -25,6 +25,7 @@ class Azbalac_Theme_Font
         $headlineFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_headline')));
         $navbarFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_navbar')));
         $titleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_title')));
+      
         $subtitleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_subtitle')));
         
         
@@ -32,6 +33,7 @@ class Azbalac_Theme_Font
         $cssBody = self::buildBodyCss($bodyFont);
         $cssNavbar = self::buildNavbarCss($navbarFont);
         $cssTitle = self::buildTitleCss($titleFont);
+      
         $cssSubtitle = self::buildSubtitleCss($subtitleFont);
        
 
@@ -77,6 +79,7 @@ class Azbalac_Theme_Font
 
     protected static function buildTitleCss($font)
     {
+        
         $cssStart = '<style id="typography-title" type="text/css">';
         $cssEnd = '</style>';
         $css = '';
@@ -266,14 +269,20 @@ class Azbalac_Theme_Font
     protected static function buildFontFamilyCss($font, $identifier) 
     {
         $fontFamily = '';
-       
+      
         if ( isset($font) && is_object($font) && isset($font->font)) {
            
+
+         
+            
             if (intval($font->font) != 0) {
                 // font from list in azbalac_Custom_Font_List
+              
                 $fontFamily = Azbalac_Custom_Font_List::FONTS[$font->font];
 
-            } elseif (intval($font->font == 0) && is_string($font->font) && strlen($font->font) > 1) {
+            
+            } elseif ((intval($font->font) == 0) && is_string($font->font) && strlen($font->font) > 1) {
+              
                 // should be ggl font
                 // todo: optimize - it is not necessary to load google font array and to go through the loop
                 /*$gglfonts = $GLOBALS['azbalacGoogleFonts']; 
@@ -294,11 +303,13 @@ class Azbalac_Theme_Font
                 wp_enqueue_style($identifier, '//fonts.googleapis.com/css2?family=' . urlencode($font->font) . $fontVariant . '&display=swap', array(), null );
 
                 //old, only for reference: $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
+                    
                 $fontFamily = "'" . $font->font . "'";
                 
               
 
             } else {
+              
                 $fontFamily = '';
                 // no font selected
             }

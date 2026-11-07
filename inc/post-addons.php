@@ -11,9 +11,6 @@ class AzbalacMetaboxes
 
     public function __construct()
     {
-        global $data;
-        $this->data = $data;
-
         add_action('add_meta_boxes', array($this, 'azbalac_add_meta_boxes'));
         add_action('save_post', array($this, 'azbalac_save_meta_boxes'));
     }
@@ -64,7 +61,6 @@ class AzbalacMetaboxes
 
     public function azbalac_post_options()
     {
-        $data = $this->data;
         $this->pageOptions(); //        get_template_part('inc/page_options');
         //require_once( get_template_directory() . '/inc/page_options.php' );
     }

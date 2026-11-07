@@ -16,6 +16,13 @@ class Azbalac_Custom_Slider_Control extends WP_Customize_Control
 {
 
     /**
+     * Additional control fields.
+     *
+     * @var array
+     */
+    public $fields = array();
+
+    /**
     * Define the control type
     */
     public $type = 'azbalac_slider';

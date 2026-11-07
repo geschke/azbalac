@@ -15,6 +15,13 @@ class Azbalac_Customizer
 {
 
     /**
+     * Sanitizer used by the theme's Customizer settings.
+     *
+     * @var Azbalac_Customizer_Sanitizer
+     */
+    private $sanitizer;
+
+    /**
      * azbalac_Customizer constructor.
      *
      * @access public

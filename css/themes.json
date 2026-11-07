@@ -6,6 +6,13 @@
         "folder": "bootswatch",
         "stylesheet": "bstrap.min.css"
     },
+    "15":
+    {
+        "name": "Brite (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "brite.min.css"
+    },
     "20":
     {
         "name": "Cerulean (Bootswatch)",
@@ -173,6 +180,13 @@
         "type": "simple",
         "folder": "bootswatch",
         "stylesheet": "vapor.min.css"
+    },
+    "226":
+    {
+        "name": "Versa (Bootswatch)",
+        "type": "simple",
+        "folder": "bootswatch",
+        "stylesheet": "versa.min.css"
     },
     "230":
     {

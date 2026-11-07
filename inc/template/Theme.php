@@ -170,6 +170,11 @@ class Azbalac_Theme
             }
         }
 
+        // Currently, only the "simple" theme type is supported.
+        // Each configured theme uses a single CSS file.
+        // Multiple stylesheets are planned but not yet fully supported.
+        // TODO: Add handling for other theme types if needed.
+
         foreach ($themeCss as $key => $stylesheet) {
             wp_register_style( 'azbalac-bootstrap-styles', get_template_directory_uri() .'/css/' . $themeFolder . $stylesheet, array(), AZBALAC_DATEVERSION ,'all');
         

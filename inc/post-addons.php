@@ -37,16 +37,67 @@ class AzbalacMetaboxes
             return;
         }
 
-        foreach ($_POST as $key => $value) {
-            if (strstr($key, 'azbalac_')) {
-                update_post_meta($post_id, $key, $value);
-            }
+        if (wp_is_post_revision($post_id)) {
+            return;
         }
+
+        if (
+            !isset($_POST['azbalac_meta_box_nonce'])
+            || !is_string($_POST['azbalac_meta_box_nonce'])
+        ) {
+            return;
+        }
+
+        $nonce = sanitize_text_field(
+            wp_unslash($_POST['azbalac_meta_box_nonce'])
+        );
+
+        if (!wp_verify_nonce($nonce, 'azbalac_save_meta_boxes')) {
+            return;
+        }
+
+        if (!current_user_can('edit_post', $post_id)) {
+            return;
+        }
+
+        if (!in_array(get_post_type($post_id), array('post', 'page'), true)) {
+            return;
+        }
+
+        if (
+            !isset($_POST['azbalac_featured_post'])
+            || !is_string($_POST['azbalac_featured_post'])
+        ) {
+            return;
+        }
+
+        $featured_post = sanitize_key(
+            wp_unslash($_POST['azbalac_featured_post'])
+        );
+
+        $allowed_values = array('_0', '_1', '_2', '_3');
+
+        if (!in_array($featured_post, $allowed_values, true)) {
+            return;
+        }
+
+        update_post_meta(
+            $post_id,
+            'azbalac_featured_post',
+            $featured_post
+        );
     }
 
     public function pageOptions()
     {
-        echo '<h2 style="margin-top:0;">' . _e('Theme Options:', 'azbalac') . '</h2>';
+        wp_nonce_field(
+            'azbalac_save_meta_boxes',
+            'azbalac_meta_box_nonce'
+        );
+
+        echo '<h2 style="margin-top:0;">'
+            . esc_html__('Theme Options:', 'azbalac')
+            . '</h2>';
         $this->azbalac_select('featured_post',
             __('Featured Post', 'azbalac'),
             array('_0' => __('Not featured', 'azbalac'),

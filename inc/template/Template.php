@@ -25,9 +25,17 @@ class Azbalac_Template
     {
 
         $twigLoader = new \Twig\Loader\FilesystemLoader(get_template_directory() . '/templates/src/');
+        $cacheDirectory = WP_CONTENT_DIR . '/cache/azbalac/twig';
+        $twigCache = false;
+
+        if ((is_dir($cacheDirectory) || wp_mkdir_p($cacheDirectory)) && is_writable($cacheDirectory)) {
+            $twigCache = $cacheDirectory;
+        }
+
         $this->twig = new \Twig\Environment($twigLoader, [
-            'cache' => get_template_directory() . '/templates/cache/',
-            'debug' => true // todo: set to false when upload to WordPress theme repository
+            'cache' => $twigCache,
+            'debug' => defined('WP_DEBUG') && WP_DEBUG,
+            'auto_reload' => true,
         ]);
         $this->twig->addExtension(new Azbalac_Twig_Section_Extension());
     }

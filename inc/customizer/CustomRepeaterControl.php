@@ -140,7 +140,7 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
         var elementData = [];
         if (data.value && data.value[0] != "") {
             // predefined values from database
-            var elementData = JSON.parse(decodeURI(data.value));
+            var elementData = JSON.parse(decodeURIComponent(data.value));
             
 
         } else {

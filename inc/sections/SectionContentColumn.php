@@ -141,7 +141,17 @@ class Azbalac_Section_Content_Column
         } else {
             $url = '#';
         }
-        if (isset($element->elements->icon)) {
+        $icon = '';
+        if (isset($element->elements->icon->value)) {
+            $icon = sanitize_key($element->elements->icon->value);
+        }
+
+        $imageId = 0;
+        if (isset($element->elements->image->value)) {
+            $imageId = absint($element->elements->image->value);
+        }
+
+        if ($icon !== '' && $icon !== '0') {
             $colorStyle = '';
             if (isset($element->elements->color_icon)) {
                 $iconColor = $element->elements->color_icon->value;
@@ -154,9 +164,9 @@ class Azbalac_Section_Content_Column
 
           $header = '
           <div class="icon">
-          <i style="font-size: 4rem; ' . $colorStyle . '" class="bi bi-' . $element->elements->icon->value . '"></i>
+          <i style="font-size: 4rem; ' . $colorStyle . '" class="bi bi-' . $icon . '"></i>
         </div>';
-        } elseif (isset($element->elements->image)) {
+        } elseif ($imageId > 0) {
           $imageShape = '2'; // default circle
           if (isset($element->elements->image_shape)) {
             $imageShape = $element->elements->image_shape->value;
@@ -176,7 +186,7 @@ class Azbalac_Section_Content_Column
             break;
           }
           $attr = array('class' => $imgClass);
-          $image = wp_get_attachment_image($element->elements->image->value,'thumbnail',false,$attr);
+          $image = wp_get_attachment_image($imageId, 'thumbnail', false, $attr);
           $header = $image;
         }
        

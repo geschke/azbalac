@@ -120,7 +120,9 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         
         var dataFieldId = dataField.attr('id');
 
-        $(control.container).find('#' + dataFieldId).val( encodeURI( JSON.stringify( elementData ) ));
+        $(control.container).find('#' + dataFieldId).val(
+            encodeURIComponent(JSON.stringify(elementData))
+        );
         
         dataField.trigger('event_repeater_updated');
 
@@ -264,7 +266,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         var prevValue = $(control.container).find('.azbalac_repeater_collector').val();
 
         if (typeof prevValue != 'undefined' && prevValue != '') {
-            elementData = JSON.parse(decodeURI(prevValue));
+            elementData = JSON.parse(decodeURIComponent(prevValue));
           
         } else {
             

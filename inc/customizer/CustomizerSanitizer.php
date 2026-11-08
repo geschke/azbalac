@@ -237,27 +237,131 @@ class Azbalac_Customizer_Sanitizer
     }
 
     /**
-    * Sanitizer function from
-    * https://github.com/cristian-ungureanu/customizer-repeater/blob/production/inc/customizer.php
-    * This does not really sanitize the input values, only guarantees allowed HTML tags for post.
-    * Maybe this will be removed in a future version.
-    *
-    * @var $input Input string
-    */
+     * Sanitize the nested data produced by the introduction-area repeater.
+     *
+     * @param string $input URI-encoded JSON repeater data.
+     * @return string Sanitized URI-encoded JSON repeater data.
+     */
     public function sanitizeRepeater($input)
     {
-        $input_decoded = json_decode($input, true);
-       
-        if (empty($input_decoded)) {
-            return $input;
+        if (!is_string($input) || $input === '') {
+            return '';
         }
-        foreach ($input_decoded as $boxk => $box) {
-            foreach ($box as $key => $value) {
-                $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+
+        $decoded_input = rawurldecode($input);
+        $input_decoded = json_decode($decoded_input, true);
+
+        if (
+            json_last_error() !== JSON_ERROR_NONE
+            || !is_array($input_decoded)
+        ) {
+            return '';
+        }
+
+        $allowed_fields = array(
+            'title' => 'text',
+            'content' => 'textarea',
+            'icon' => 'select',
+            'image' => 'image',
+            'page' => 'dropdown-pages',
+            'post' => 'dropdown-pages',
+            'url' => 'text',
+            'color_icon' => 'colorpicker',
+            'image_shape' => 'radiobutton',
+        );
+
+        $sanitized_elements = array();
+
+        foreach ($input_decoded as $element_id => $element) {
+            if (
+                !is_array($element)
+                || !isset($element['elements'])
+                || !is_array($element['elements'])
+            ) {
+                continue;
+            }
+
+            $sanitized_element_id = sanitize_key($element_id);
+
+            if ($sanitized_element_id === '') {
+                continue;
+            }
+
+            $sanitized_elements[$sanitized_element_id] = array(
+                'elements' => array(),
+            );
+
+            foreach ($element['elements'] as $field_name => $field) {
+                if (
+                    !isset($allowed_fields[$field_name])
+                    || !is_array($field)
+                    || !array_key_exists('value', $field)
+                    || !is_scalar($field['value'])
+                ) {
+                    continue;
+                }
+
+                $field_value = (string) $field['value'];
+
+                switch ($field_name) {
+                    case 'title':
+                        $field_value = sanitize_text_field($field_value);
+                        break;
+
+                    case 'content':
+                        $field_value = wp_kses_post($field_value);
+                        break;
+
+                    case 'icon':
+                        $field_value = sanitize_key($field_value);
+                        break;
+
+                    case 'image':
+                    case 'page':
+                    case 'post':
+                        $field_value = absint($field_value);
+                        break;
+
+                    case 'url':
+                        $field_value = esc_url_raw($field_value);
+                        break;
+
+                    case 'color_icon':
+                        $field_value = sanitize_hex_color($field_value);
+
+                        if ($field_value === null) {
+                            $field_value = '';
+                        }
+                        break;
+
+                    case 'image_shape':
+                        if (
+                            !in_array(
+                                $field_value,
+                                array('1', '2', '3', '4'),
+                                true
+                            )
+                        ) {
+                            $field_value = '2';
+                        }
+                        break;
+                }
+
+                $sanitized_elements[$sanitized_element_id]['elements'][$field_name] = array(
+                    'type' => $allowed_fields[$field_name],
+                    'name' => $field_name,
+                    'value' => $field_value,
+                );
             }
         }
-        return json_encode($input_decoded);
-        
+
+        $sanitized_json = wp_json_encode($sanitized_elements);
+
+        if ($sanitized_json === false) {
+            return '';
+        }
+
+        return rawurlencode($sanitized_json);
     }
 
 

@@ -1940,7 +1940,7 @@ class Azbalac_Customizer
             'label'       =>  __('Select Icon or&hellip;', 'azbalac'),
             'description' => __('Select Icon or&hellip;', 'azbalac'),
             'choices' => $this->getBootstrapIcons(),
-            //'default' => 'fa-car'
+            'default' => '0',
         ),
         'image' => array(
             'type'        => 'image',

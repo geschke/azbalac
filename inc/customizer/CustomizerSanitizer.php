@@ -310,7 +310,7 @@ class Azbalac_Customizer_Sanitizer
                         break;
 
                     case 'icon':
-                        $field_value = sanitize_key($field_value);
+                        $field_value = $this->sanitizeBootstrapIcon($field_value);
                         break;
 
                     case 'image':
@@ -359,6 +359,35 @@ class Azbalac_Customizer_Sanitizer
         }
 
         return rawurlencode($sanitized_json);
+    }
+
+    private function sanitizeBootstrapIcon($input)
+    {
+        $icon = sanitize_key($input);
+
+        if ($icon === '' || $icon === '0') {
+            return '0';
+        }
+
+        $iconFile = get_template_directory() . '/css/icons/bootstrap-icons.json';
+
+        if (!is_readable($iconFile)) {
+            return '0';
+        }
+
+        $iconJson = file_get_contents($iconFile);
+
+        if ($iconJson === false) {
+            return '0';
+        }
+
+        $icons = json_decode($iconJson, true);
+
+        if (!is_array($icons) || !array_key_exists($icon, $icons)) {
+            return '0';
+        }
+
+        return $icon;
     }
 
 

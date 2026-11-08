@@ -1,11 +1,11 @@
 <?php
 
-define('AZBALAC_DATEVERSION','2021052501');
+define('AZBALAC_DATEVERSION','2026110801');
 
 /**
- * Azbalac only works with PHP 7 and above.
+ * Azbalac requires PHP 8.1 or newer.
  */
-if (version_compare(phpversion(), '7.2.5', '<')) {
+if (version_compare(PHP_VERSION, '8.1', '<')) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }

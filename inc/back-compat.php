@@ -37,7 +37,7 @@ add_action( 'after_switch_theme', 'azbalac_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function azbalac_upgrade_notice() {
-	$message = sprintf( __( 'Azbalac requires at least PHP version 7.0.0. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() );
+	$message = sprintf( __( 'Azbalac requires at least PHP version 8.1. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -49,14 +49,14 @@ function azbalac_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function azbalac_customize() {
-	wp_die( sprintf( __( 'Azbalac requires at least PHP version 7.0.0. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() ), '', array(
+	wp_die( sprintf( __( 'Azbalac requires at least PHP version 8.1. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() ), '', array(
 		'back_link' => true,
 	) );
 }
 add_action( 'load-customize.php', 'azbalac_customize' );
 
 /**
- * Prevents the Theme Preview from being loaded on PHP versions prior to 7.0.
+ * Prevents the Theme Preview from being loaded on PHP versions prior to 8.1.
  *
  * @since Azbalac 0.1
  *
@@ -64,7 +64,7 @@ add_action( 'load-customize.php', 'azbalac_customize' );
  */
 function azbalac_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'Azbalac requires at least PHP version 7.0.0. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() ) );
+		wp_die( sprintf( __( 'Azbalac requires at least PHP version 8.1. You are running version %s. Please upgrade and try again.', 'azbalac' ), phpversion() ) );
 	}
 }
 add_action( 'template_redirect', 'azbalac_preview' );

@@ -1,12 +1,25 @@
 # Azbalac One
 
-## A pure and basic WordPress theme, based on Bootstrap 5.0 framework
+## A pure and basic WordPress theme, based on Bootstrap 5.3 framework
 
 ### This is an experimental release of a new generation WordPress theme. It uses the Twig template engine to separate the frontend from the backend output generation parts
 
-Version 0.5.2
+Version 0.6.0
 
 ## Version history
+
+Version 0.6.0
+
+- Update: Improved compatibility with modern WordPress and PHP 8.3.
+- Update: Updated Bootstrap and Bootswatch themes to 5.3.8 and modernized remaining Bootstrap markup and classes.
+- Update: Updated Twig to 3.30.0 and moved its compiled template cache to the WordPress cache directory.
+- Fix: Repaired Customizer sanitization and persistence for repeater, theme, slider and introduction settings.
+- Fix: Corrected slider rendering, active slide handling and Bootstrap 5 indicators.
+- Fix: Corrected featured content, archive, search form and Welcome Screen behavior.
+- Security: Hardened metabox and AJAX handling with nonce, capability, validation and sanitization checks.
+- Security: Improved contextual validation and escaping throughout Customizer and frontend output.
+- Internal: Replaced executable SVG icon files with validated SVG assets and updated Bootstrap Icons integration.
+- Internal: Removed obsolete compatibility code and unused legacy assets.
 
 Version 0.5.2
 

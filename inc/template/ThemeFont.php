@@ -253,7 +253,7 @@ class Azbalac_Theme_Font
             #site-description {
                 font-size: $sizeSubtitle;
             }
-            .jumbotron h1 {
+            .azbalac-featured-large h1 {
                 font-size: $sizeJumbotronHeading;
             }
             ";

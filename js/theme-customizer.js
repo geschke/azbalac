@@ -234,8 +234,11 @@
             var sizeJumbotronHeading = Math.ceil(sizeBase * 4.5).toString() + 'px';
             //var sizeSubtitle = Math.floor(sizeBase * 1.5).toString() + 'px';
 
-            $('h1').not(".azbalac-jumbotron").not("#site-header-text").css('font-size', sizeH1);
-            $('.jumbotron h1').css('font-size', sizeJumbotronHeading);
+            $('h1')
+                .not('.azbalac-featured-large h1')
+                .not('#site-header-text')
+                .css('font-size', sizeH1);
+            $('.azbalac-featured-large h1').css('font-size', sizeJumbotronHeading);
 
             $('h2').not("#site-description").css('font-size', sizeH2);
             
@@ -321,7 +324,7 @@
             var sizeJumbotron = Math.ceil(sizeBase * 1.5).toString() + 'px';
 
             $('body').css('font-size', sizeBase);
-            $('body .jumbotron').css('font-size', sizeJumbotron);
+            $('.azbalac-featured-large').css('font-size', sizeJumbotron);
         
             if (typeof fontData['gglfont'] != 'undefined' && (fontData['gglfont'] == true || isNaN(parseInt(fontData['font'])))) { // ggl font
 

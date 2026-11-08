@@ -287,19 +287,47 @@ if ( function_exists('register_sidebar') ) {
 }
 
 
-function azbalac_comment_fields($fields) {
+function azbalac_comment_fields($fields)
+{
     $commenter = wp_get_current_commenter();
-    $req = get_option( 'require_name_email' );
-    $aria_req = ( $req ? " aria-required='true'" : '' );
+    $required = get_option('require_name_email');
+    $ariaRequired = $required ? ' aria-required="true"' : '';
 
-    $fields['author'] = '<div class="form-group comment-form-author">' . '<label class="col-sm-2 control-label" for="author">' . __( 'Name*','azbalac' ) . '</label> ' .
-        '<div class="col-sm-10"><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>';
+    $fields['author'] =
+        '<div class="row mb-3 comment-form-author">' .
+            '<label class="col-sm-2 col-form-label" for="author">' .
+                esc_html__('Name*', 'azbalac') .
+            '</label>' .
+            '<div class="col-sm-10">' .
+                '<input class="form-control" id="author" name="author" type="text" value="' .
+                    esc_attr($commenter['comment_author']) .
+                    '" size="30"' . $ariaRequired . '>' .
+            '</div>' .
+        '</div>';
 
-    $fields['email'] = '<div class="form-group comment-form-email"><label class="col-sm-2 control-label" for="email">' . __( 'Email*', 'azbalac' ) . '</label> ' .
-        '<div class="col-sm-10"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>';
+    $fields['email'] =
+        '<div class="row mb-3 comment-form-email">' .
+            '<label class="col-sm-2 col-form-label" for="email">' .
+                esc_html__('Email*', 'azbalac') .
+            '</label>' .
+            '<div class="col-sm-10">' .
+                '<input class="form-control" id="email" name="email" type="email" value="' .
+                    esc_attr($commenter['comment_author_email']) .
+                    '" size="30"' . $ariaRequired . '>' .
+            '</div>' .
+        '</div>';
 
-    $fields['url'] = '<div class="form-group comment-form-url"><label class="col-sm-2 control-label" for="url">' . __( 'Website', 'azbalac' ) . '</label>' .
-        '<div class="col-sm-10"><input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>';
+    $fields['url'] =
+        '<div class="row mb-3 comment-form-url">' .
+            '<label class="col-sm-2 col-form-label" for="url">' .
+                esc_html__('Website', 'azbalac') .
+            '</label>' .
+            '<div class="col-sm-10">' .
+                '<input class="form-control" id="url" name="url" type="url" value="' .
+                    esc_attr($commenter['comment_author_url']) .
+                    '" size="30">' .
+            '</div>' .
+        '</div>';
 
     return $fields;
 }

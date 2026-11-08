@@ -158,11 +158,11 @@ class Azbalac_Section_Social_Media_Buttons
         $styleFg = '';
         $styleBg = '';
         
-        $svgName =  'css/icons/svg/' . $socialIcon . '.svg'; // works only with extension .php, so all svg files have been renamed to .svg.php
+        $svgText = self::getSocialIconSvg($socialIcon);
 
-        ob_start();
-        get_template_part( $svgName);
-        $svgText = ob_get_clean();
+        if ($svgText === '') {
+            return '';
+        }
        
         $svgText = str_replace('svg ','svg style=" " ', $svgText);
         
@@ -197,6 +197,55 @@ class Azbalac_Section_Social_Media_Buttons
         $output = sprintf('<a class="azbalac-social-button %s" target="_blank" role="img" href="%s">%s</a> ',  $sizeClass, esc_url($url), $svgText);
     
         return $output;
+    }
+
+    private static function getSocialIconSvg($icon)
+    {
+        $allowedIcons = array(
+            'discord',
+            'facebook',
+            'github',
+            'google',
+            'instagram',
+            'linkedin',
+            'mastodon',
+            'slideshare',
+            'skype',
+            'slack',
+            'snapchat',
+            'telegram',
+            'twitch',
+            'twitter',
+            'vine',
+            'xing',
+            'whatsapp',
+            'youtube',
+        );
+
+        $icon = sanitize_key($icon);
+
+        if (!in_array($icon, $allowedIcons, true)) {
+            return '';
+        }
+
+        $iconPaths = array(
+            get_theme_file_path('css/icons/svg/' . $icon . '.svg'),
+            get_theme_file_path('css/icons/custom-svg/' . $icon . '.svg'),
+        );
+
+        foreach ($iconPaths as $iconPath) {
+            if (!is_readable($iconPath)) {
+                continue;
+            }
+
+            $svg = file_get_contents($iconPath);
+
+            if ($svg !== false) {
+                return $svg;
+            }
+        }
+
+        return '';
     }
 
  

@@ -399,10 +399,11 @@ class Azbalac_Customizer
         );
 
         $wp_customize->add_setting('azbalac_setting_slider_pause', array(
-            'default' => '1',
+            'default' => true,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_slider_pause', array(
@@ -413,10 +414,11 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_slider_keyboard', array(
-            'default' => '1',
+            'default' => true,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_slider_keyboard', array(
@@ -427,10 +429,11 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_slider_wrap', array(
-            'default' => '1',
+            'default' => true,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_slider_wrap', array(
@@ -441,10 +444,11 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_slider_indicators', array(
-            'default' => '1',
+            'default' => true,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_slider_indicators', array(
@@ -586,10 +590,11 @@ class Azbalac_Customizer
 
 
         $wp_customize->add_setting('azbalac_setting_social_media_activate', array(
-            'default' => '0',
+            'default' => false,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_social_media_activate', array(
@@ -1237,7 +1242,8 @@ class Azbalac_Customizer
             'default' => false,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
          ));
   
          $wp_customize->add_control('azbalac_control_header_title_image', array(
@@ -1252,7 +1258,8 @@ class Azbalac_Customizer
             'default' => false,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
          ));
   
          $wp_customize->add_control('azbalac_control_header_move_title_small', array(
@@ -1476,10 +1483,11 @@ class Azbalac_Customizer
     public function addCustomizerPostsSettings($wp_customize)
     {
         $wp_customize->add_setting('azbalac_setting_posts_featured_date', array(
-            'default' => '',
+            'default' => false,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_posts_featured_date', array(
@@ -1500,10 +1508,11 @@ class Azbalac_Customizer
 
 
         $wp_customize->add_setting('azbalac_setting_footer_activate', array(
-            'default' => '1',
+            'default' => true,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_footer_activate', array(
@@ -1546,10 +1555,11 @@ class Azbalac_Customizer
 
  
          $wp_customize->add_setting('azbalac_setting_subfooter_activate', array(
-             'default' => '1',
+             'default' => true,
              'capability' => 'edit_theme_options',
              'type' => 'option',
-             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+             'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+             'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
          ));
  
          $wp_customize->add_control('azbalac_control_subfooter_activate', array(
@@ -1643,7 +1653,8 @@ class Azbalac_Customizer
             'capability' => 'edit_theme_options',
             'default' => false,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_homepage_hide_empty', array(
@@ -1667,9 +1678,10 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_example', array(
             'capability' => 'edit_theme_options',
-            'default' => '1',
+            'default' => true,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_header_image_example', array(
@@ -1684,9 +1696,10 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_large_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => '0',
+            'default' => false,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_header_image_large_dontscale', array(
@@ -1715,9 +1728,10 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_medium_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => '0',
+            'default' => false,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_header_image_medium_dontscale', array(
@@ -1746,9 +1760,10 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_small_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => '0',
+            'default' => false,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_header_image_small_dontscale', array(
@@ -1778,9 +1793,10 @@ class Azbalac_Customizer
 
         $wp_customize->add_setting('azbalac_setting_header_image_xsmall_dontscale', array(
             'capability' => 'edit_theme_options',
-            'default' => '0',
+            'default' => false,
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
 
         $wp_customize->add_control('azbalac_control_header_image_xsmall_dontscale', array(
@@ -1803,10 +1819,11 @@ class Azbalac_Customizer
     {
  
         $wp_customize->add_setting('azbalac_setting_introduction_area_activate', array(
-           'default' => '0',
+           'default' => false,
            'capability' => 'edit_theme_options',
            'type' => 'option',
-           'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+           'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+           'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));
  
         $wp_customize->add_control('azbalac_control_introduction_area_activate', array(
@@ -1868,10 +1885,11 @@ class Azbalac_Customizer
         ));
 
         $wp_customize->add_setting('azbalac_setting_introduction_area_readmore', array(
-            'default' => '0',
+            'default' => false,
             'capability' => 'edit_theme_options',
             'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
+            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
          ));
   
          $wp_customize->add_control('azbalac_control_introduction_area_readmore', array(

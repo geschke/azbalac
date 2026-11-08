@@ -333,7 +333,7 @@ Version 0.1:
 
 - The [Bootstrap](https://getbootstrap.com) project, which is licensed under the MIT license
 - Thomas Park and the contributors of the great [Bootswatch](https://bootswatch.com/) project.
-- [Font Awesome](https://fontawesome.com/v4.7.0/)
+
 
 ## License:
 

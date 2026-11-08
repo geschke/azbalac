@@ -49,19 +49,6 @@ require_once( get_template_directory() . '/inc/template/ThemeFont.php' );
 require_once( get_template_directory() . '/inc/template/Theme.php' );
 
 require_once( get_template_directory() . '/inc/Featured.php' );
-
-
-
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-    	function theme_slug_render_title() {
-           ?>
-            <title><?php wp_title( '|', true, 'right' ); ?></title>
-            <?php
-        }
-	add_action( 'wp_head', 'theme_slug_render_title' );
-}
-
-
 if (! function_exists('azbalac_admin_enqueue_scripts')) :
     
     function azbalac_admin_enqueue_scripts() {
@@ -156,6 +143,10 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
 
         add_theme_support( 'title-tag' );
         add_theme_support( 'customize-selective-refresh-widgets' );
+        add_theme_support( 'featured-content', array(
+            'featured_content_filter' => 'azbalac_get_featured_posts',
+            'max_posts' => 4,
+        ) );
 
         add_action( 'admin_enqueue_scripts', 'azbalac_admin_enqueue_scripts' );
         
@@ -405,45 +396,6 @@ add_action( 'wp_enqueue_scripts', array('Azbalac_Section_Slider','addSliderStyle
 add_filter('style_loader_tag', array('Azbalac_Theme','styleLoaderTagFilter'),10,2);
 
 
-/**
- * Create a nicely formatted and more specific title element text for output
- * in head of document, based on current view.
- * in head of document, based on current view.
- * in head of document, based on current view.
- *
- * @since Azbalac 0.1.4
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
- */
-function azbalac_wp_title( $title, $sep ) {
-        global $paged, $page;
-
-        if ( is_feed() ) {
-                return $title;
-        }
-
-        // Add the site name.
-        $title .= get_bloginfo( 'name' );
-
-        // Add the site description for the home/front page.
-        $site_description = get_bloginfo( 'description', 'display' );
-        if ( $site_description && ( is_home() || is_front_page() ) ) {
-                $title = "$title $sep $site_description";
-        }
-
-        // Add a page number if necessary.
-        if ( $paged >= 2 || $page >= 2 ) {
-                $title = "$title $sep " . sprintf( __( 'Page %s', 'azbalac' ), max( $paged, $page ) );
-        }
-
-        return $title;
-}
-add_filter( 'wp_title', 'azbalac_wp_title', 10, 2 );
-
-
-
 function add_class_the_tags($html){
     $html = str_replace('<a','<a class="badge bg-info"',$html);
     return $html;
@@ -484,14 +436,6 @@ function azbalac_get_featured_posts() {
      */
     return apply_filters( 'azbalac_get_featured_posts', array() );
 }
-
-
-
-add_theme_support( 'featured-content', array(
-    'featured_content_filter' => 'azbalac_get_featured_posts',
-    'max_posts' => 4,
-) );
-
 if ( ! function_exists( 'azbalac_get_layout' ) ) :
 
     function azbalac_get_layout() {

@@ -318,15 +318,25 @@ endif;
 
 if ( ! function_exists( 'azbalac_get_search_form' ) ) :
 
-function azbalac_get_search_form() {
+function azbalac_get_search_form()
+{
+    $form = sprintf(
+        '<form role="search" method="get" id="searchform" class="searchform" action="%1$s">
+            <div class="mb-3 form-floating">
+                <input class="form-control" type="search" placeholder="%2$s" value="%3$s" name="s" id="s">
+                <label class="form-label" for="s">%4$s</label>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" id="searchsubmit" value="%5$s">
+            </div>
+        </form>',
+        esc_url(home_url('/')),
+        esc_attr_x('Search &hellip;', 'placeholder', 'azbalac'),
+        esc_attr(get_search_query(false)),
+        esc_html_x('Search for:', 'label', 'azbalac'),
+        esc_attr_x('Search', 'submit button', 'azbalac')
+    );
 
-    $form = '<form role="form search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div class="mb-3 form-floating">
-    <input class="form-control" type="text" placeholder="' . _x( 'Search &hellip;','placeholder','azbalac' ) . '" value="' . get_search_query() . '" name="s" id="s" /><label class="_screen-reader-text" for="s">' . _x( 'Search for:','label','azbalac' ) . '</label>
-    </div>
-    <div class="mb-3"><input class="btn btn-primary" type="submit" id="searchsubmit" value="'. esc_attr__( __( 'Search', 'azbalac') ) .'" />
-    </div>
-    </form>';
     return $form;
 }
 endif;

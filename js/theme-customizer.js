@@ -278,7 +278,8 @@
 
             } else { // default font
                 var requestData = {
-                    action: "azbalac_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action",
+                    nonce: azbalacAjax.nonce
                 }
     
                 $.ajax({
@@ -288,8 +289,8 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        if (res != null) {
-                            $('h1,h2,h3,h4,h5,h6').css('font-family', res[fontData['font']]);
+                        if (res.success && res.data) {
+                            $('h1,h2,h3,h4,h5,h6').css('font-family', res.data[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {
@@ -357,7 +358,8 @@
             } else { // default font
                 
                 var requestData = {
-                    action: "azbalac_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action",
+                    nonce: azbalacAjax.nonce
                 }
     
                 $.ajax({
@@ -367,8 +369,8 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        if (res != null) {
-                            $('body').css('font-family', res[fontData['font']]);
+                        if (res.success && res.data) {
+                            $('body').css('font-family', res.data[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {
@@ -431,7 +433,8 @@
             } else { // default font
                 
                 var requestData = {
-                    action: "azbalac_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action",
+                    nonce: azbalacAjax.nonce
                 }
     
                 $.ajax({
@@ -441,8 +444,8 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        if (res != null) {
-                            $('nav#navbarMain').css('font-family', res[fontData['font']]);
+                        if (res.success && res.data) {
+                            $('nav#navbarMain').css('font-family', res.data[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {
@@ -507,7 +510,8 @@
             } else { // default font
                 
                 var requestData = {
-                    action: "azbalac_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action",
+                    nonce: azbalacAjax.nonce
                 }
     
                 $.ajax({
@@ -517,8 +521,8 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        if (res != null) {
-                            $('#site-header-text a').css('font-family', res[fontData['font']]);
+                        if (res.success && res.data) {
+                            $('#site-header-text a').css('font-family', res.data[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {
@@ -583,7 +587,8 @@
             } else { // default font
                 
                 var requestData = {
-                    action: "azbalac_get_default_font_data_action"
+                    action: "azbalac_get_default_font_data_action",
+                    nonce: azbalacAjax.nonce
                 }
     
                 $.ajax({
@@ -593,8 +598,8 @@
                     dataType: "json",
                     data: requestData,
                     success: function (res, textStatus, jqXHR) {
-                        if (res != null) {
-                            $('#site-description').css('font-family', res[fontData['font']]);
+                        if (res.success && res.data) {
+                            $('#site-description').css('font-family', res.data[fontData['font']]);
                         }
                     },
                     error: function (errorMessage) {

@@ -58,17 +58,19 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
 
                 var requestData = {
                     action: "azbalac_get_font_data_action",
-                    searchfont: fontSelected
+                    searchfont: fontSelected,
+                    nonce: azbalacFontAjax.nonce
                 };
                 $.ajax({
                     type: "POST",
-                    url: ajaxurl,
+                    url: azbalacFontAjax.ajaxurl,
          
                     dataType: "json",
                     data: requestData,
-                    success: function (data, textStatus, jqXHR) {
+                    success: function (response, textStatus, jqXHR) {
                         
-                        if (data != null) {
+                        if (response.success && response.data) {
+                            var data = response.data;
                         
                             if (typeof data.variants != 'undefined') {
                          
@@ -147,18 +149,20 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
             
             var requestData = {
                 action: "azbalac_get_font_data_action",
-                searchfont: newValue
+                searchfont: newValue,
+                nonce: azbalacFontAjax.nonce
             };
      
             $.ajax({
                 type: "POST",
-                url: ajaxurl,
+                url: azbalacFontAjax.ajaxurl,
      
                 dataType: "json",
                 data: requestData,
-                success: function (data, textStatus, jqXHR) {
+                success: function (response, textStatus, jqXHR) {
                     
-                    if (data != null) {
+                    if (response.success && response.data) {
+                        var data = response.data;
                         // trigger action which builds array of variants
                         element.trigger('event_font_gglfont_selected', [ element, elementId, data ]);
 
@@ -204,17 +208,19 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
 
         var requestData = {
             action: "azbalac_get_font_data_action",
-            searchfont: elementData['font']
+            searchfont: elementData['font'],
+            nonce: azbalacFontAjax.nonce
         };
  
         $.ajax({
             type: "POST",
-            url: ajaxurl,
+            url: azbalacFontAjax.ajaxurl,
  
             dataType: "json",
             data: requestData,
-            success: function (data, textStatus, jqXHR) {
-                if (data != null) {
+            success: function (response, textStatus, jqXHR) {
+                if (response.success && response.data) {
+                    var data = response.data;
                     // search variant and store filename into elementData array
                                      
                     if (typeof data.variants != 'undefined') {

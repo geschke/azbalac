@@ -50,34 +50,44 @@ class Azbalac_Custom_Font_Request
 
     public function getFontDataAction()
     {
-        global $wpdb; // this is how you get access to the database
-        
-        $searchfont = $_POST['searchfont'];
+        check_ajax_referer('azbalac_customizer_ajax', 'nonce');
+
+        if (!current_user_can('edit_theme_options')) {
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+        }
+
+        if (!isset($_POST['searchfont'])) {
+            wp_send_json_error(array('message' => __('Missing font name.', 'azbalac')), 400);
+        }
+
+        $searchfont = sanitize_text_field(wp_unslash($_POST['searchfont']));
 
         $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
         
         $fontData = null;
         foreach ($gglfonts['items'] as $gglfont) {
-            if ($gglfont['family'] == $searchfont) {
+            if ($gglfont['family'] === $searchfont) {
                 $fontData = $gglfont;
                 break;
             }
         }
-        
-        echo json_encode($fontData);
-        
-        wp_die(); // this is required to terminate immediately and return a proper response
+
+        if ($fontData === null) {
+            wp_send_json_error(array('message' => __('Font not found.', 'azbalac')), 404);
+        }
+
+        wp_send_json_success($fontData);
     }
 
     public function getDefaultFontDataAction()
     {
-        global $wpdb; // this is how you get access to the database
-        
-        
-        
-        echo json_encode(Azbalac_Custom_Font_List::FONTS);
-        
-        wp_die(); // this is required to terminate immediately and return a proper response
+        check_ajax_referer('azbalac_customizer_ajax', 'nonce');
+
+        if (!current_user_can('edit_theme_options')) {
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+        }
+
+        wp_send_json_success(Azbalac_Custom_Font_List::FONTS);
     }
 
 }
@@ -161,6 +171,11 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
         global $wp_scripts;
 
 		wp_enqueue_script( 'customizer-font-script', get_template_directory_uri().'/js/custom-font.js', array( 'jquery'), '', true );
+
+        wp_localize_script('customizer-font-script', 'azbalacFontAjax', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('azbalac_customizer_ajax'),
+        ));
 
         wp_enqueue_script('underscore');
         wp_enqueue_script('jquery-ui');

@@ -91,18 +91,16 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function dismissWelcomeNoticeCallback()
         {
-            $azbalac = wp_get_theme('azbalac');
+            check_ajax_referer('azbalac_dismiss_welcome_notice', 'nonce');
 
-            
-            if (get_option( 'azbalac_notice_version_dismissed') !== false) {
-                // just overwrite with current theme version
-                
-                update_option('azbalac_notice_version_dismissed', $azbalac['Version'], false);
-            } else { // create, if doesn't exist
-                add_option( 'azbalac_notice_version_dismissed', $azbalac['Version'], false);
+            if (!current_user_can('edit_theme_options')) {
+                wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
             }
-            wp_die(); // this is required to terminate immediately and return a proper response
 
+            $azbalac = wp_get_theme('azbalac');
+            update_option('azbalac_notice_version_dismissed', $azbalac->get('Version'), false);
+
+            wp_send_json_success();
         }
 
         /**
@@ -114,6 +112,10 @@ if (!class_exists('Azbalac_Welcome')) {
             //echo "hook_suffix: " . $hook_suffix;
             
             wp_enqueue_script('azbalac-welcome-screen-js', get_template_directory_uri() . '/inc/info-screen/js/welcome.js', array('jquery'));
+            wp_localize_script('azbalac-welcome-screen-js', 'azbalacWelcome', array(
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('azbalac_dismiss_welcome_notice'),
+            ));
             if ('appearance_page_azbalac-welcome' == $hook_suffix) {
                 
                 wp_enqueue_script('azbalac-admin-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.1', true);

@@ -38,35 +38,45 @@ class Azbalac_Custom_Theme_Request
 
     public function getThemeDataAction()
     {
-        global $wpdb; // this is how you get access to the database
-        
-        $searchtheme = $_POST['searchtheme'];
+        check_ajax_referer('azbalac_customizer_ajax', 'nonce');
+
+        if (!current_user_can('edit_theme_options')) {
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+        }
+
+        if (!isset($_POST['searchtheme'])) {
+            wp_send_json_error(array('message' => __('Missing theme name.', 'azbalac')), 400);
+        }
+
+        $searchtheme = sanitize_text_field(wp_unslash($_POST['searchtheme']));
 
         $themeData = Azbalac_Custom_Theme_Data::getThemeData();
 
         $themeResult = null;
         foreach ($themeData as $key => $value) {
-            if ($key == $searchtheme) {
+            if ($key === $searchtheme) {
                 $themeResult['key'] = $key;
                 $themeResult['value'] = $value;
                 break;
             }
         }
-        
-        echo json_encode($themeResult);
-        
-        wp_die(); // this is required to terminate immediately and return a proper response
+
+        if ($themeResult === null) {
+            wp_send_json_error(array('message' => __('Theme not found.', 'azbalac')), 404);
+        }
+
+        wp_send_json_success($themeResult);
     }
 
     public function getDefaultThemeDataAction()
     {
-        global $wpdb; // this is how you get access to the database
-        
-        
-        
-        echo json_encode(Azbalac_Custom_Font_List::FONTS);
-        
-        wp_die(); // this is required to terminate immediately and return a proper response
+        check_ajax_referer('azbalac_customizer_ajax', 'nonce');
+
+        if (!current_user_can('edit_theme_options')) {
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+        }
+
+        wp_send_json_success(Azbalac_Custom_Font_List::FONTS);
     }
 
 }
@@ -150,6 +160,11 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
         global $wp_scripts;
 
 		wp_enqueue_script( 'customizer-theme-script', get_template_directory_uri().'/js/custom-theme.js', array( 'jquery'), '', true );
+
+        wp_localize_script('customizer-theme-script', 'azbalacThemeAjax', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('azbalac_customizer_ajax'),
+        ));
 
         wp_enqueue_script('underscore');
         

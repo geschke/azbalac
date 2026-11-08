@@ -6,9 +6,11 @@
         $('body').on('click', '.azbalac-admin-notice .notice-dismiss', function () {
             
             $.ajax({
-                url: ajaxurl,
+                type: 'POST',
+                url: azbalacWelcome.ajaxurl,
                 data: {
-                    action: 'azbalac_dismiss_welcome_notice'
+                    action: 'azbalac_dismiss_welcome_notice',
+                    nonce: azbalacWelcome.nonce
                 },
                 success: function (data) {
                     //console.log("success");

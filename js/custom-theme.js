@@ -68,18 +68,20 @@ wp.customize.controlConstructor.azbalac_theme = wp.customize.Control.extend( {
            
             var requestData = {
                 action: "azbalac_get_theme_data_action",
-                searchtheme: newValue
+                searchtheme: newValue,
+                nonce: azbalacThemeAjax.nonce
             };
      
             $.ajax({
                 type: "POST",
-                url: ajaxurl,
+                url: azbalacThemeAjax.ajaxurl,
      
                 dataType: "json",
                 data: requestData,
-                success: function (data, textStatus, jqXHR) {
+                success: function (response, textStatus, jqXHR) {
                     
-                    if (data != null) {
+                    if (response.success && response.data) {
+                        var data = response.data;
                      
                         console.log(data);
                         elementData['data'] = data.value; // we only need values, theme id is set before

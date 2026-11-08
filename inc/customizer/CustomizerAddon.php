@@ -245,7 +245,10 @@ class Azbalac_Customizer_Addon
 
         // see https://wordpress.stackexchange.com/questions/106520/wp-localize-script-variable-is-not-defined-in-jquery
         // wp_localize_script must be called after the script it's being attached!
-        wp_localize_script( 'azbalac-themecustomizer', 'azbalacAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
+        wp_localize_script('azbalac-themecustomizer', 'azbalacAjax', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('azbalac_customizer_ajax'),
+        ));
     }
 }
 

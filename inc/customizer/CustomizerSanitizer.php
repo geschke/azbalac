@@ -15,10 +15,7 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeCheckbox($input)
     {
-        if ($input == '1') {
-            return '1';
-        } 
-        return '0';
+        return in_array($input, array(true, 1, '1'), true);
     }
 
     public function sanitizeInteger($input)

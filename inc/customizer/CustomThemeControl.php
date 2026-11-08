@@ -18,7 +18,21 @@ class Azbalac_Custom_Theme_Data
 
 
         $themes = $wp_filesystem->get_contents(get_template_directory() . '/css/themes.json');
-        return json_decode($themes);
+        $themeData = json_decode($themes);
+
+        return is_object($themeData) ? $themeData : new stdClass();
+    }
+
+    public static function getTheme($themeId)
+    {
+        $themeId = (string) $themeId;
+        $themes = self::getThemeData();
+
+        if (!isset($themes->{$themeId})) {
+            return null;
+        }
+
+        return $themes->{$themeId};
     }
 
 }
@@ -249,7 +263,7 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
       
         if (data.value && data.value[0] != "") {
             // predefined values from database
-            var elementData = JSON.parse(decodeURI(data.value));
+            var elementData = JSON.parse(decodeURIComponent(data.value[0]));
             
 
         } else {

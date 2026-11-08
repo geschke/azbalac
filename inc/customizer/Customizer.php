@@ -1042,7 +1042,7 @@ class Azbalac_Customizer
         $wp_customize->add_setting('azbalac_setting_general_theme', array(
             'capability' => 'edit_theme_options',
             //'type' => 'option',
-            'sanitize_callback' => array($this->sanitizer, 'sanitizeFont')
+            'sanitize_callback' => array($this->sanitizer, 'sanitizeTheme')
         ));
 
         $wp_customize->add_control(new Azbalac_Custom_Theme_Control($wp_customize, 

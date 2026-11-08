@@ -380,4 +380,36 @@ class Azbalac_Customizer_Sanitizer
         return json_encode($input_decoded);
  */       
     }
+
+    public function sanitizeTheme($input)
+    {
+        if (!is_string($input)) {
+            return '';
+        }
+
+        $themeSetting = json_decode(rawurldecode($input), true);
+
+        if (!is_array($themeSetting) || !array_key_exists('theme', $themeSetting)) {
+            return '';
+        }
+
+        $themeId = sanitize_text_field((string) $themeSetting['theme']);
+
+        if ($themeId === '' || $themeId === '0') {
+            return rawurlencode(wp_json_encode(array(
+                'theme' => 0,
+            )));
+        }
+
+        $themeData = Azbalac_Custom_Theme_Data::getTheme($themeId);
+
+        if ($themeData === null) {
+            return '';
+        }
+
+        return rawurlencode(wp_json_encode(array(
+            'theme' => $themeId,
+            'data' => $themeData,
+        )));
+    }
 }

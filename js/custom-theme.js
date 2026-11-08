@@ -45,7 +45,7 @@ wp.customize.controlConstructor.azbalac_theme = wp.customize.Control.extend( {
         var dataField = $(control.container).find('.azbalac_theme_collector');
         var dataFieldId = dataField.attr('id');
 
-        $(control.container).find('#' + dataFieldId).val( encodeURI( JSON.stringify( elementData ) ));
+        $(control.container).find('#' + dataFieldId).val( encodeURIComponent( JSON.stringify( elementData ) ));
         dataField.trigger('event_theme_updated'); 
     },
 
@@ -123,7 +123,7 @@ wp.customize.controlConstructor.azbalac_theme = wp.customize.Control.extend( {
         var prevValue = $(control.container).find('.azbalac_theme_collector').val();
      
         if (prevValue != '') {
-            elementData = JSON.parse(decodeURI(prevValue));
+            elementData = JSON.parse(decodeURIComponent(prevValue));
             // todo: if gglfont, get variants and select chosen variant
         } else {
             elementData = {};

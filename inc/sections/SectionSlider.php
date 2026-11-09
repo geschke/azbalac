@@ -77,8 +77,8 @@ class Azbalac_Section_Slider
                 $sliderData[$i]['title'] = get_theme_mod('azbalac_setting_slider_' . $i . '_title');
                 $sliderData[$i]['description'] = get_theme_mod('azbalac_setting_slider_' . $i . '_description');
                 $sliderData[$i]['text_position'] = get_option('azbalac_setting_slider_' . $i . '_text_position');
-                $sliderData[$i]['page'] = get_option('azbalac_setting_slider_' . $i . '_page');
-                $sliderData[$i]['post'] = get_option('azbalac_setting_slider_' . $i . '_post');
+                $sliderData[$i]['page'] = absint(get_option('azbalac_setting_slider_' . $i . '_page', 0));
+                $sliderData[$i]['post'] = absint(get_option('azbalac_setting_slider_' . $i . '_post', 0));
                 $sliderData[$i]['url'] = get_option('azbalac_setting_slider_' . $i . '_url');
                 $colorFgText = get_theme_mod('azbalac_setting_slider_' . $i . '_text_color');
                 if ($colorFgText) {

@@ -27,6 +27,56 @@ class Azbalac_Customizer_Sanitizer
         return 0;
     }
 
+    public function validateSliderPage($validity, $value)
+    {
+        return $this->validateSliderPostReference(
+            $validity,
+            $value,
+            'page',
+            __('The selected slider page does not exist or is not a valid page.', 'azbalac')
+        );
+    }
+
+    public function validateSliderPost($validity, $value)
+    {
+        return $this->validateSliderPostReference(
+            $validity,
+            $value,
+            'post',
+            __('The selected slider post does not exist or is not a valid post.', 'azbalac')
+        );
+    }
+
+    private function validateSliderPostReference($validity, $value, $postType, $message)
+    {
+        if ($value === '' || $value === null || $value === 0 || $value === '0') {
+            return $validity;
+        }
+
+        $postId = filter_var(
+            $value,
+            FILTER_VALIDATE_INT,
+            array('options' => array('min_range' => 1))
+        );
+
+        if ($postId === false) {
+            $validity->add('invalid_slider_reference', $message);
+            return $validity;
+        }
+
+        $post = get_post($postId);
+
+        if (
+            !($post instanceof WP_Post)
+            || $post->post_type !== $postType
+            || in_array($post->post_status, array('trash', 'auto-draft'), true)
+        ) {
+            $validity->add('invalid_slider_reference', $message);
+        }
+
+        return $validity;
+    }
+
     public function sanitizeFeaturedArticles($input)
     {
         $input = intval($input);

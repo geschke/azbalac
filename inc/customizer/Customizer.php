@@ -266,7 +266,8 @@ class Azbalac_Customizer
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'default' => 0,
-            'sanitize_callback' => 'sanitize_post',
+            'validate_callback' => array($this->sanitizer, 'validateSliderPage'),
+            'sanitize_callback' => 'absint',
         ));
 
         $wp_customize->add_control('azbalac_control_slider_' . $slider . '_page', array(
@@ -282,7 +283,8 @@ class Azbalac_Customizer
             'capability' => 'edit_theme_options',
             'type' => 'option',
             'default' => 0,
-            'sanitize_callback' => 'sanitize_post',
+            'validate_callback' => array($this->sanitizer, 'validateSliderPost'),
+            'sanitize_callback' => 'absint',
         ));
 
 

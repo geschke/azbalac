@@ -130,7 +130,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
 
     updateCurrentTextField: function(element, elementData, value) {
         var control = this;
-        elementId = $(element).parents('.customize-control-repeater-element').attr('id');
+        var elementId = $(element).parents('.customize-control-repeater-element').attr('id');
         if (elementData[elementId] != undefined) {
           
             var dataField = ($(element).attr('data-field'));
@@ -193,7 +193,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
     onChangeSelectUpdate: function( event, element, elementData ) {
         var control = this;
         
-        elementId = element.parents('.customize-control-repeater-element').attr('id');
+        var elementId = element.parents('.customize-control-repeater-element').attr('id');
         
         if (elementData[elementId] != undefined) {
       
@@ -363,7 +363,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         // initialize key events to handle input fields
         $(document).on('keyup', '.customize-repeater-input-text', function () {
            
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
              
                 var dataField = ($(this).attr('data-field'));
@@ -391,7 +391,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         var textareaOldval = {};
         $(document).on('change keyup paste', '.customize-repeater-input-textarea', function () {
          
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
 
             var currentVal = $(this).val();
         
@@ -430,7 +430,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         var custom_uploader;
 
         $(document).on('click', '.azbalac-repeater-custom-upload-button', function(e) {
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
 
             if (elementData[elementId] != undefined) {
@@ -492,7 +492,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
         });
 
         $(document).on('click', '.azbalac-repeater-custom-remove-button', function(e) {
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             var mediaView = $(this).parents('.attachment-media-view');
         
             var dataField = ($(this).parents('.attachment-media-view').attr('data-field'));
@@ -516,7 +516,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
          
          $(document).on('change', '.azbalac-customize-repeater-input-checkbox', function () {
             
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
                
                 var dataField = ($(this).attr('data-field'));
@@ -549,7 +549,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
             var radioName = $(this).attr('name');
             var newValue = $( "input[type=radio][name=" + radioName + " ]:checked" ).val();
            
-            elementId = $(this).parents('.customize-control-repeater-element').attr('id');
+            var elementId = $(this).parents('.customize-control-repeater-element').attr('id');
             if (elementData[elementId] != undefined) {
               
                 var dataField = ($(this).parents('.customize-control-radio-container').attr('data-field'));

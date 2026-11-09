@@ -171,19 +171,18 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
      */
     public function enqueue()
     {
-        global $wp_scripts;
-
-		wp_enqueue_script( 'customizer-theme-script', get_template_directory_uri().'/js/custom-theme.js', array( 'jquery'), '', true );
+		wp_enqueue_script(
+            'customizer-theme-script',
+            get_template_directory_uri() . '/js/custom-theme.js',
+            array('jquery', 'customize-controls'),
+            AZBALAC_DATEVERSION,
+            true
+        );
 
         wp_localize_script('customizer-theme-script', 'azbalacThemeAjax', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('azbalac_customizer_ajax'),
         ));
-
-        wp_enqueue_script('underscore');
-        
-       
-
     }
 
 

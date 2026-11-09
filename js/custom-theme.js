@@ -52,7 +52,7 @@ wp.customize.controlConstructor.azbalac_theme = wp.customize.Control.extend( {
    
     onChangeSelectUpdate: function( event, element, elementData ) {
         var control = this;
-        elementId = element.parents('.customize-control-theme-element').attr('id');
+        var elementId = element.parents('.customize-control-theme-element').attr('id');
         
         var newValue = element.val();
 

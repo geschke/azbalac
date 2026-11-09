@@ -78,9 +78,15 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 
         //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom_controls.js', array( 'jquery' ), '', true );
 
-		wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom-repeater.js', array( 'jquery'), '', true );
+		wp_enqueue_media();
 
-        wp_enqueue_script('underscore');
+		wp_enqueue_script(
+            'customizer-repeater-script',
+            get_template_directory_uri() . '/js/custom-repeater.js',
+            array('jquery', 'underscore', 'customize-controls', 'media-editor'),
+            AZBALAC_DATEVERSION,
+            true
+        );
 		
         wp_localize_script( 'customizer-repeater-script', 'objectL10n', array(
             'select_image' => esc_html__( 'Select Image', 'azbalac' ),

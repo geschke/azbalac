@@ -32,6 +32,7 @@ class Azbalac_Custom_Latest_Post_Control extends WP_Customize_Control
                     $latest->the_post();
                     echo "<option " . selected($this->value(), get_the_ID()) . " value='" . get_the_ID() . "'>" . the_title('', '', false) . "</option>";
                 }
+                wp_reset_postdata();
                 ?>
             </select>
         </label>

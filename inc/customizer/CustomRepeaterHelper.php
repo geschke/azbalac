@@ -107,6 +107,8 @@ class Azbalac_Custom_Repeater_Helper
             'value' => get_the_ID());
          
         }
+        wp_reset_postdata();
+
         return $pageEntries;
     }
 }

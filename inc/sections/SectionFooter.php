@@ -48,7 +48,7 @@ class Azbalac_Section_Footer
         $footerActivate = get_option('azbalac_setting_footer_activate',1);
        
         if (intval($footerActivate) === 1 and ! empty($footerLayout)) {
-            $output .= '<div class="row" style="padding: 10px; 0px; 10px;" id="footer">';
+            $output .= '<div class="row" style="padding: 10px 0 10px;" id="footer">';
             if ($footerLayout == 1) {
                 $output .= self::initializeFooterWidget(1, 12);
             } else if ($footerLayout == 2) {

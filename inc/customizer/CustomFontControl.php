@@ -168,27 +168,18 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
      */
     public function enqueue()
     {
-        global $wp_scripts;
-
-		wp_enqueue_script( 'customizer-font-script', get_template_directory_uri().'/js/custom-font.js', array( 'jquery'), '', true );
+		wp_enqueue_script(
+            'customizer-font-script',
+            get_template_directory_uri() . '/js/custom-font.js',
+            array('jquery', 'customize-controls', 'underscore'),
+            AZBALAC_DATEVERSION,
+            true
+        );
 
         wp_localize_script('customizer-font-script', 'azbalacFontAjax', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('azbalac_customizer_ajax'),
         ));
-
-        wp_enqueue_script('underscore');
-        wp_enqueue_script('jquery-ui');
-        wp_enqueue_script('jquery-ui-slider');
-        
-        // taken from: https://snippets.webaware.com.au/snippets/load-a-nice-jquery-ui-theme-in-wordpress/
-        $ui = $wp_scripts->query('jquery-ui-core');
-        
-        // tell WordPress to load the Smoothness theme from Google CDN
-
-        $protocol = is_ssl() ? 'https' : 'http';
-        $url = "$protocol://ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css";
-        wp_enqueue_style('jquery-ui-smoothness', $url, false, null);
 
     }
 
@@ -382,12 +373,12 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
                 <span class="customize-control-title">
                 <?php echo __('Font Size','azbalac'); ?>
                 </span>
-                <input type="text"  id="input_size_{{{ data.identifier }}}" disabled data-default="{{{ data.defaults.size }}}" value=""/>
+                <input type="number" class="customize-font-size-number" id="input_size_{{{ data.identifier }}}" min="0" max="120" step="1" data-default="{{{ data.defaults.size }}}" value=""/>
 
             </label>
 
             <div style="padding-top: 10px;">
-                <div  id="slider_size_{{{ data.identifier }}}"></div>
+                <input type="range" class="customize-font-size-range" id="slider_size_{{{ data.identifier }}}" min="0" max="120" step="1" value="0"/>
             </div>
 
             <input type="hidden" value="{{{ data.value }}}" class="azbalac_font_collector" id="azbalac_font_{{{ data.identifier }}}" name="azbalac_font_{{{ data.identifier }}}"/>

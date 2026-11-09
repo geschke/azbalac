@@ -92,8 +92,6 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
             
 
         ) );
-
-        //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri() . '/customizer-repeater/js/customizer_repeater.js', array('jquery', 'jquery-ui-draggable' ), '1.0.1', true  );
     }
 
 

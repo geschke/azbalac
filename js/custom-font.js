@@ -314,7 +314,9 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
         });
 
 
-        var sizeDefault = $('[id="input_size_' + elementId + '"]').attr('data-default');
+        var sizeInput = $(control.container).find('.customize-font-size-number');
+        var sizeRange = $(control.container).find('.customize-font-size-range');
+        var sizeDefault = sizeInput.attr('data-default');
         if (!sizeDefault) {
             sizeDefault = 0; // it has to be initialized with some value, fallback if no default size is submitted, 0 means nothing set, use size defined by theme
         }
@@ -323,16 +325,28 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
             sizeDefault = elementData['size'];
         } 
 
-        $('[id="slider_size_' + elementId + '"]').slider({
-            value: sizeDefault, min: 0, max: 120, step: 1,
-            slide: function (event, ui) {
-                $('[id="input_size_' + elementId + '"]').val(ui.value).keyup();
-                
-                control.onChangeSizeUpdate(event, $(this), elementData, ui.value);
-                
-            }
+        sizeDefault = Math.min(120, Math.max(0, parseInt(sizeDefault, 10) || 0));
+        sizeInput.val(sizeDefault);
+        sizeRange.val(sizeDefault);
+
+        sizeRange.on('input change', function (event) {
+            var value = parseInt($(this).val(), 10);
+            sizeInput.val(value);
+            control.onChangeSizeUpdate(event, $(this), elementData, value);
         });
-        $('[id="input_size_' + elementId + '"]').val($('[id="slider_size_' + elementId + '"]').slider("value"));
+
+        sizeInput.on('input change', function (event) {
+            var value = parseInt($(this).val(), 10);
+
+            if (isNaN(value)) {
+                return;
+            }
+
+            value = Math.min(120, Math.max(0, value));
+            $(this).val(value);
+            sizeRange.val(value);
+            control.onChangeSizeUpdate(event, $(this), elementData, value);
+        });
   
        
      

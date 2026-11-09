@@ -80,10 +80,19 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 
 		wp_enqueue_media();
 
+        wp_enqueue_style('wp-color-picker');
+
+        wp_enqueue_style(
+            'azbalac-admin-style',
+            get_template_directory_uri() . '/css/admin.css',
+            array('wp-color-picker'),
+            AZBALAC_DATEVERSION
+        );
+
 		wp_enqueue_script(
             'customizer-repeater-script',
             get_template_directory_uri() . '/js/custom-repeater.js',
-            array('jquery', 'underscore', 'customize-controls', 'media-editor'),
+            array('jquery', 'underscore', 'customize-controls', 'media-editor', 'wp-color-picker'),
             AZBALAC_DATEVERSION,
             true
         );

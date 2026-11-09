@@ -49,16 +49,6 @@ require_once( get_template_directory() . '/inc/template/ThemeFont.php' );
 require_once( get_template_directory() . '/inc/template/Theme.php' );
 
 require_once( get_template_directory() . '/inc/Featured.php' );
-if (! function_exists('azbalac_admin_enqueue_scripts')) :
-    
-    function azbalac_admin_enqueue_scripts() {
-        // UPLOAD ENGINE
-        wp_enqueue_media();
-        wp_enqueue_style( 'wp-color-picker' );
-        wp_enqueue_style( 'azbalac-admin-style', get_template_directory_uri() . '/css/admin.css' );
-    }
-endif;
-            
 
 if ( ! function_exists( 'azbalac_setup' ) ) :
     /**
@@ -148,8 +138,6 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
             'max_posts' => 4,
         ) );
 
-        add_action( 'admin_enqueue_scripts', 'azbalac_admin_enqueue_scripts' );
-        
         add_action( 'customize_register', 'azbalac_register_customize_javascript_template_types' );
         
 

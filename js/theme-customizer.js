@@ -217,7 +217,7 @@
 
     wp.customize('azbalac_setting_typography_headline', function (value) {
         value.bind(function (data) {
-            fontData = JSON.parse(decodeURI(data));
+            fontData = JSON.parse(decodeURIComponent(data));
            
             var sizeBase = 16; // defined in Bootstrap
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
@@ -315,7 +315,7 @@
     wp.customize('azbalac_setting_typography_body', function (value) {
         value.bind(function (data) {
             
-            fontData = JSON.parse(decodeURI(data));
+            fontData = JSON.parse(decodeURIComponent(data));
             var sizeBase = 16; // defined in Bootstrap
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
                 var sizeBase = fontData['size'];
@@ -394,7 +394,7 @@
     wp.customize('azbalac_setting_typography_navbar', function (value) {
         value.bind(function (data) {
             
-            fontData = JSON.parse(decodeURI(data));
+            fontData = JSON.parse(decodeURIComponent(data));
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
                 $('nav#navbarMain').css('font-size', fontData['size']);
             } else {
@@ -469,7 +469,7 @@
     wp.customize('azbalac_setting_typography_title', function (value) {
         value.bind(function (data) {
             
-            fontData = JSON.parse(decodeURI(data));
+            fontData = JSON.parse(decodeURIComponent(data));
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
                 $('#site-header-text a').css('font-size', fontData['size']);
             } else {
@@ -546,7 +546,7 @@
     wp.customize('azbalac_setting_typography_subtitle', function (value) {
         value.bind(function (data) {
             
-            fontData = JSON.parse(decodeURI(data));
+            fontData = JSON.parse(decodeURIComponent(data));
             if (typeof fontData['size'] != 'undefined' && fontData['size'] != 0) {
                 $('#site-description').css('font-size', fontData['size']);
             } else {

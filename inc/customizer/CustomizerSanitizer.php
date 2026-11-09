@@ -395,19 +395,83 @@ class Azbalac_Customizer_Sanitizer
 
     public function sanitizeFont($input)
     {
-        return $input;
-/*        $input_decoded = json_decode($input, true);
-       
-        if (empty($input_decoded)) {
-            return $input;
+        if (!is_string($input) || $input === '') {
+            return '';
         }
-        foreach ($input_decoded as $boxk => $box) {
-            foreach ($box as $key => $value) {
-                $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+
+        $fontSetting = json_decode(rawurldecode($input), true);
+
+        if (
+            !is_array($fontSetting)
+            || !array_key_exists('font', $fontSetting)
+            || !is_scalar($fontSetting['font'])
+        ) {
+            return '';
+        }
+
+        $font = (string) $fontSetting['font'];
+        $sanitizedFont = array(
+            'font' => 0,
+            'size' => isset($fontSetting['size']) ? min(absint($fontSetting['size']), 120) : 0,
+            'gglfont' => false,
+        );
+
+        if ($font === '' || $font === '0') {
+            return rawurlencode(wp_json_encode($sanitizedFont));
+        }
+
+        if (ctype_digit($font)) {
+            if (!array_key_exists($font, Azbalac_Custom_Font_List::FONTS)) {
+                return '';
+            }
+
+            $sanitizedFont['font'] = absint($font);
+            return rawurlencode(wp_json_encode($sanitizedFont));
+        }
+
+        $webfonts = isset($GLOBALS['azbalacGoogleFonts']) && is_array($GLOBALS['azbalacGoogleFonts'])
+            ? $GLOBALS['azbalacGoogleFonts']
+            : require get_template_directory() . '/inc/customizer/webfonts.php';
+        $fontData = null;
+
+        if (!empty($webfonts['items']) && is_array($webfonts['items'])) {
+            foreach ($webfonts['items'] as $webfont) {
+                if (
+                    is_array($webfont)
+                    && isset($webfont['family'])
+                    && $webfont['family'] === $font
+                ) {
+                    $fontData = $webfont;
+                    break;
+                }
             }
         }
-        return json_encode($input_decoded);
- */       
+
+        if ($fontData === null) {
+            return '';
+        }
+
+        $variant = 'regular';
+        if (
+            isset($fontSetting['gglfontdata'])
+            && is_array($fontSetting['gglfontdata'])
+            && isset($fontSetting['gglfontdata']['variant'])
+            && is_scalar($fontSetting['gglfontdata']['variant'])
+            && isset($fontData['variants'])
+            && is_array($fontData['variants'])
+            && in_array((string) $fontSetting['gglfontdata']['variant'], $fontData['variants'], true)
+        ) {
+            $variant = (string) $fontSetting['gglfontdata']['variant'];
+        }
+
+        $sanitizedFont['font'] = $fontData['family'];
+        $sanitizedFont['gglfont'] = true;
+        $sanitizedFont['gglfontdata'] = array(
+            'variant' => $variant,
+            'file' => isset($fontData['files'][$variant]) ? esc_url_raw($fontData['files'][$variant]) : '',
+        );
+
+        return rawurlencode(wp_json_encode($sanitizedFont));
     }
 
     public function sanitizeTheme($input)

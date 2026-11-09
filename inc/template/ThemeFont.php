@@ -21,12 +21,12 @@ class Azbalac_Theme_Font
 
     public static function getStyles()
     {
-        $bodyFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_body')));
-        $headlineFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_headline')));
-        $navbarFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_navbar')));
-        $titleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_title')));
+        $bodyFont = json_decode(rawurldecode((string) get_theme_mod('azbalac_setting_typography_body')));
+        $headlineFont = json_decode(rawurldecode((string) get_theme_mod('azbalac_setting_typography_headline')));
+        $navbarFont = json_decode(rawurldecode((string) get_theme_mod('azbalac_setting_typography_navbar')));
+        $titleFont = json_decode(rawurldecode((string) get_theme_mod('azbalac_setting_typography_title')));
       
-        $subtitleFont = json_decode(urldecode(get_theme_mod('azbalac_setting_typography_subtitle')));
+        $subtitleFont = json_decode(rawurldecode((string) get_theme_mod('azbalac_setting_typography_subtitle')));
         
         
         $cssHeadline = self::buildHeadlineCss($headlineFont);
@@ -49,8 +49,8 @@ class Azbalac_Theme_Font
 
         $fontFamily = self::buildFontFamilyCss($bodyFont, 'azbalac-typography-body-font');
         
-        if (isset($bodyFont->size) && intval($bodyFont->size) != 0) {
-            $fontSize = $bodyFont->size . "px";
+        if (isset($bodyFont->size) && absint($bodyFont->size) > 0 && absint($bodyFont->size) <= 120) {
+            $fontSize = absint($bodyFont->size) . "px";
         } else {
             // size not set, use default size 
             $fontSize = null;
@@ -87,8 +87,8 @@ class Azbalac_Theme_Font
 
         $fontFamily = self::buildFontFamilyCss($font, 'azbalac-typography-title-font');
         
-        if (isset($font->size) && intval($font->size) != 0) {
-            $fontSize = $font->size . "px";
+        if (isset($font->size) && absint($font->size) > 0 && absint($font->size) <= 120) {
+            $fontSize = absint($font->size) . "px";
         } else {
             // size not set, use default size 
             $fontSize = null;
@@ -124,8 +124,8 @@ class Azbalac_Theme_Font
 
         $fontFamily = self::buildFontFamilyCss($font, 'azbalac-typography-subtitle-font');
         
-        if (isset($font->size) && intval($font->size) != 0) {
-            $fontSize = $font->size . "px";
+        if (isset($font->size) && absint($font->size) > 0 && absint($font->size) <= 120) {
+            $fontSize = absint($font->size) . "px";
         } else {
             // size not set, use default size 
             $fontSize = null;
@@ -161,8 +161,8 @@ class Azbalac_Theme_Font
 
         $fontFamily = self::buildFontFamilyCss($navbarFont, 'azbalac-typography-navbar-font');
         
-        if (isset($navbarFont->size) && intval($navbarFont->size) != 0) {
-            $fontSize = $navbarFont->size . "px";
+        if (isset($navbarFont->size) && absint($navbarFont->size) > 0 && absint($navbarFont->size) <= 120) {
+            $fontSize = absint($navbarFont->size) . "px";
         } else {
             // size not set, use default size 
             $fontSize = null;
@@ -203,8 +203,8 @@ class Azbalac_Theme_Font
         
         $fontFamily = self::buildFontFamilyCss($headlineFont, 'azbalac-typography-headline-font');
 
-        if (isset($headlineFont->size) && intval($headlineFont->size) != 0) {
-            $sizeBase = intval($headlineFont->size);
+        if (isset($headlineFont->size) && absint($headlineFont->size) > 0 && absint($headlineFont->size) <= 120) {
+            $sizeBase = absint($headlineFont->size);
             // size calculations from Bootstrap framework
             $sizeH1 = floor($sizeBase * 2.6) . 'px';
             $sizeH2 = floor($sizeBase * 2.15) . 'px';
@@ -275,13 +275,18 @@ class Azbalac_Theme_Font
 
          
             
-            if (intval($font->font) != 0) {
+            $fontValue = (string) $font->font;
+
+            if (ctype_digit($fontValue) && array_key_exists($fontValue, Azbalac_Custom_Font_List::FONTS)) {
                 // font from list in azbalac_Custom_Font_List
               
-                $fontFamily = Azbalac_Custom_Font_List::FONTS[$font->font];
+                $fontFamily = Azbalac_Custom_Font_List::FONTS[$fontValue];
 
             
-            } elseif ((intval($font->font) == 0) && is_string($font->font) && strlen($font->font) > 1) {
+            } elseif (
+                !ctype_digit($fontValue)
+                && preg_match('/^[\p{L}\p{N} ._-]+$/u', $fontValue)
+            ) {
               
                 // should be ggl font
                 // todo: optimize - it is not necessary to load google font array and to go through the loop
@@ -296,15 +301,19 @@ class Azbalac_Theme_Font
               
                 $fontVariant = '';
                 // add variant if not regular
-                if (isset($font->gglfontdata->variant) && $font->gglfontdata->variant != 'regular') {
+                if (
+                    isset($font->gglfontdata->variant)
+                    && $font->gglfontdata->variant !== 'regular'
+                    && preg_match('/^[a-z0-9]+$/', $font->gglfontdata->variant)
+                ) {
                     $fontVariant = ':' . $font->gglfontdata->variant;
                 }
 
-                wp_enqueue_style($identifier, '//fonts.googleapis.com/css2?family=' . urlencode($font->font) . $fontVariant . '&display=swap', array(), null );
+                wp_enqueue_style($identifier, 'https://fonts.googleapis.com/css2?family=' . rawurlencode($fontValue) . $fontVariant . '&display=swap', array(), null );
 
                 //old, only for reference: $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
                     
-                $fontFamily = "'" . $font->font . "'";
+                $fontFamily = "'" . $fontValue . "'";
                 
               
 

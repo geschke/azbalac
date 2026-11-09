@@ -280,7 +280,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
       
         if (data.value && data.value[0] != "") {
             // predefined values from database
-            var elementData = JSON.parse(decodeURI(data.value));
+            var elementData = JSON.parse(decodeURIComponent(data.value));
             
 
         } else {

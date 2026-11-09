@@ -299,20 +299,25 @@ class Azbalac_Theme_Font
                     }
                 }*/
               
-                $fontVariant = '';
-                // add variant if not regular
-                if (
-                    isset($font->gglfontdata->variant)
-                    && $font->gglfontdata->variant !== 'regular'
-                    && preg_match('/^[a-z0-9]+$/', $font->gglfontdata->variant)
-                ) {
-                    $fontVariant = ':' . $font->gglfontdata->variant;
+                $fontQuery = str_replace('%20', '+', rawurlencode($fontValue));
+                $variant = isset($font->gglfontdata->variant)
+                    ? strtolower((string) $font->gglfontdata->variant)
+                    : 'regular';
+
+                if ($variant === 'italic') {
+                    $fontQuery .= ':ital@1';
+                } elseif (preg_match('/^([1-9]00)$/', $variant, $matches)) {
+                    $fontQuery .= ':wght@' . $matches[1];
+                } elseif (preg_match('/^([1-9]00)italic$/', $variant, $matches)) {
+                    $fontQuery .= ':ital,wght@1,' . $matches[1];
                 }
 
-                wp_enqueue_style($identifier, 'https://fonts.googleapis.com/css2?family=' . rawurlencode($fontValue) . $fontVariant . '&display=swap', array(), null );
-
-                //old, only for reference: $cssHeader = '<link id="' . $identifier . '" rel="stylesheet prefetch preload" as="style" href="https://fonts.googleapis.com/css?family=' . urlencode($font->font) . $fontVariant . '&display=swap">';
-                    
+                wp_enqueue_style(
+                    $identifier,
+                    'https://fonts.googleapis.com/css2?family=' . $fontQuery . '&display=swap',
+                    array(),
+                    null
+                );
                 $fontFamily = "'" . $fontValue . "'";
                 
               

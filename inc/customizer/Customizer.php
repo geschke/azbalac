@@ -287,15 +287,6 @@ class Azbalac_Customizer
             'sanitize_callback' => 'absint',
         ));
 
-
-/*        $res = function() {
-            $c = Azbalac_Custom_Repeater_Helper::getPostDropdownOptions();
-            foreach ($c as $value) {
-                $result[$value['value']] = $value['name'];
-            }
-            return $result;
-        };   
-  */     
         $result = null;
         $wp_customize->add_control('azbalac_control_slider_' . $slider . '_post', array(
             'label' => __('&hellip;or Link to Post', 'azbalac'),
@@ -309,7 +300,6 @@ class Azbalac_Customizer
                 }
                 return $result;
             })
-            // $res()
         ));
 
 
@@ -2044,12 +2034,7 @@ class Azbalac_Customizer
 
         $iconList[0] = __('Choose Icon', 'azbalac');
         foreach ($icons as $key => $icon) {
-            //print_r($icon);
             $iconList[$key] = $key;
-            /*if ($line) {
-                $icons[$line] = $line;
-            }*/
-
         }
         ksort($iconList);
         return $iconList;

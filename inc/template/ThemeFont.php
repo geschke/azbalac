@@ -287,18 +287,6 @@ class Azbalac_Theme_Font
                 !ctype_digit($fontValue)
                 && preg_match('/^[\p{L}\p{N} ._-]+$/u', $fontValue)
             ) {
-              
-                // should be ggl font
-                // todo: optimize - it is not necessary to load google font array and to go through the loop
-                /*$gglfonts = $GLOBALS['azbalacGoogleFonts']; 
-                $fontData = null;
-                foreach ($gglfonts['items'] as $gglfont) {
-                    if ($gglfont['family'] == $font->font) {
-                        $fontData = $gglfont;
-                        break;
-                    }
-                }*/
-              
                 $fontQuery = str_replace('%20', '+', rawurlencode($fontValue));
                 $variant = isset($font->gglfontdata->variant)
                     ? strtolower((string) $font->gglfontdata->variant)

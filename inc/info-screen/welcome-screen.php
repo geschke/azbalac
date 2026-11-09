@@ -25,7 +25,6 @@ if (!class_exists('Azbalac_Welcome')) {
 
 
             /* activation notice */
-            //add_action( 'load-themes.php', array( $this, 'activation_admin_notice' ) );
             $this->activation_admin_notice();
 
             /* load welcome screen */
@@ -34,8 +33,6 @@ if (!class_exists('Azbalac_Welcome')) {
             add_action('azbalac_welcome', array($this, 'azbalac_welcome_changelog'), 50);
 
             add_action('wp_ajax_azbalac_dismiss_welcome_notice', array($this, 'dismissWelcomeNoticeCallback'));
-
-//            update_option('azbalac_notice_version_dismissed','foooo');
 
         }
 
@@ -57,18 +54,10 @@ if (!class_exists('Azbalac_Welcome')) {
         {
            $azbalac = wp_get_theme('azbalac');
 
-            //echo $azbalac['Version'];
             $dismissedNotice = get_option('azbalac_notice_version_dismissed');
-            //var_dump(get_option( 'azbalac_lala'));
-            //var_dump($dismissedNotice);
-            //die;
             if (is_admin() && (empty($dismissedNotice) || $azbalac['Version'] != $dismissedNotice)) {
-                //  !function_exists( 'the_field' ) ) {
                 add_action('admin_notices', array($this, 'welcome_admin_notice'));
             }
-            //if ( is_admin() && ('themes.php' == $pagenow) && isset( $_GET['activated'] ) ) {
-//			add_action( 'admin_notices', array( $this, 'Awada_lite_welcome_admin_notice' ), 99 );
-//		}
         }
 
         /**

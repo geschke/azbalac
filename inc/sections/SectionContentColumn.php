@@ -38,7 +38,6 @@ class Azbalac_Section_Content_Column
     public static function showIntroductionElements($position) 
     {
         $introActive =  get_option('azbalac_setting_introduction_area_activate',0);
-        //echo "active? " . $introActivate;
         if (intval($introActive) !== 1) {
           return '';
         }

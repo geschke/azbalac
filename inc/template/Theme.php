@@ -24,7 +24,6 @@ class Azbalac_Theme
      
         if (get_header_image()) {
             $largeImage = get_custom_header();
-            //var_dump($largeImage);
             $imageData[0] = array('url' => $largeImage->url,
                 'height' => $largeImage->height,
                 'width' => $largeImage->width,

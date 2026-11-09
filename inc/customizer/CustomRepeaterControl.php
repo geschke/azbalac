@@ -72,12 +72,6 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
      */
     public function enqueue()
     {
-        //wp_enqueue_style( 'customizer-repeater-font-awesome', get_template_directory_uri().'/customizer-repeater/css/font-awesome.min.css','1.0.0' );
-
-        //wp_enqueue_style( 'customizer-repeater-admin-stylesheet', get_template_directory_uri().'/customizer-repeater/css/admin-style.css','1.0.0' );
-
-        //wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri().'/js/custom_controls.js', array( 'jquery' ), '', true );
-
 		wp_enqueue_media();
 
         wp_enqueue_style('wp-color-picker');
@@ -112,12 +106,7 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 
     public function to_json()
     {
-        //echo "in " . __METHOD__;
-
         parent::to_json();
-
- /* Get default options */
-//        $defaultValues = json_decode( $this->setting->default );
     
         $this->json['default'] = ( isset( $this->default ) ) ? $this->default : $this->setting->default;
 

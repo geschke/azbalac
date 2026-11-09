@@ -206,7 +206,7 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
             $json = array( $values );
         }
     
-        // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
+        // Add the default Bootstrap entry.
         $themes[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
 
         $themeData = Azbalac_Custom_Theme_Data::getThemeData();
@@ -215,26 +215,6 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
             $themes[] = array('k' => $key, 'v' => $value->name);
             
         }
-
-
-        
-    
-        // build gglfonts options
-/*        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
-        $gglfontsItems = $gglfonts['items'];
-   
-        $cnt = count($gglfontsItems);
-      
-        $fonts[] = array('c' => 'optgroup_start', 'v' => 'Google Webfonts');
-        
-         foreach ($gglfontsItems as $item) {
-            $fonts[] = array('k' => $item['family'], 'v' => $item['family']);
-         
-        }
-        $fonts[] = array('c' => 'optgroup_end');
-  */      
-      
-
         // add font choices to json array
         $this->json['choices'] = $themes;
         $this->json['value'] = $json;

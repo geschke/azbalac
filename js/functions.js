@@ -83,6 +83,7 @@
 
   $.checkMediaSize = function( ) {
 		var elementSize = $('#media-width-detection-element').width();
+		var mediaDetectSize;
 		if (elementSize < 540) {
 			mediaDetectSize = 'xs';
 		} else if (elementSize >= 540 && elementSize < 720) { 

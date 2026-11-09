@@ -462,7 +462,7 @@ wp.customize.controlConstructor.azbalac_repeater = wp.customize.Control.extend( 
     
             //When a file is selected, grab the URL and set it as the text field's value
             custom_uploader.on('select', function() {
-                attachment = custom_uploader.state().get('selection').first().toJSON();
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
               
                 var payload = [];
                 payload['elementId'] = elementId;

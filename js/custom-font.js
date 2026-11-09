@@ -128,7 +128,7 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
    
     onChangeSelectUpdate: function( event, element, elementData ) {
         var control = this;
-        elementId = element.parents('.customize-control-font-element').attr('id');
+        var elementId = element.parents('.customize-control-font-element').attr('id');
         
         var newValue = element.val();
 
@@ -202,7 +202,7 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
 
     onChangeSelectVariantUpdate: function( event, element, elementData ) {
         var control = this;
-        elementId = element.parents('.customize-control-font-element').attr('id');
+        var elementId = element.parents('.customize-control-font-element').attr('id');
         
         var variant = element.val();
 
@@ -250,7 +250,7 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
 
     onChangeSizeUpdate: function( event, element, elementData, newValue ) {
         var control = this;
-        elementId = element.parents('.customize-control-font-element').attr('id');
+        var elementId = element.parents('.customize-control-font-element').attr('id');
        
         elementData['size'] = newValue;
         

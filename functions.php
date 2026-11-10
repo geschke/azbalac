@@ -1,6 +1,6 @@
 <?php
 
-define('AZBALAC_DATEVERSION','2026110801');
+define('AZBALAC_DATEVERSION','2026111001');
 
 /**
  * Azbalac requires PHP 8.1 or newer.

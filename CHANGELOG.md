@@ -2,6 +2,16 @@
 
 ## Azbalac One
 
+Version 0.6.1
+
+- Update: Replaced jQuery UI slider and button controls with native HTML5 range and radio controls.
+- Fix: Improved font setting validation and output, including CSS2-compatible Google Fonts URLs and variants.
+- Fix: Corrected Customizer script dependencies, accidental JavaScript globals and media resource loading.
+- Security: Added type and existence validation for slider post and page references when saving Customizer settings.
+- Fix: Corrected remaining Bootstrap 5 navigation spacing, footer padding, content landmark and custom query cleanup issues.
+- Internal: Removed obsolete jQuery UI resources, debug code and superseded implementation remnants.
+- Documentation: Separated the project README from the changelog and refreshed the Welcome Screen text and changelog output.
+
 Version 0.6.0
 
 - Update: Improved compatibility with modern WordPress and PHP 8.3.

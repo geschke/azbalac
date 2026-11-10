@@ -30,12 +30,15 @@ $azbalac = wp_get_theme( 'azbalac' );
 	
 	<div class="azbalac-tab-pane-half azbalac-tab-pane-first-half">
 		<h3><?php esc_html_e( 'About Azbalac One', 'azbalac' ); ?></h3>
-		<p><?php esc_html_e( 'Azbalac is a pure and basic WordPress theme which is based on the Bootstrap HTML, CSS, and JS framework. It implements some customization features, e.g. you can switch between more than a dozen predefined styles (mostly taken from the Bootswatch free themes), two navigation bar styles and 18 footer layouts. You can add a simple slider - the theme uses the "carousel" feature of Boostrap and configure the slider position and timing options.  If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation on the WordPress website.', 'azbalac' ); ?></p>
+		<p><?php esc_html_e( 'Azbalac One is a classic WordPress theme based on Bootstrap 5 and Twig 3. It provides a focused set of customization options without introducing a page builder, block-theme architecture, frontend build system, or commercial feature tier.', 'azbalac' ); ?></p>
+		<p><?php esc_html_e( 'You can choose from multiple Bootswatch designs and customize the navigation, header, footer, colors, typography, featured content, slider, introduction area, and social-media buttons through the WordPress Customizer.', 'azbalac' ); ?></p>
+		<p><?php esc_html_e( 'Changes to the theme source should preferably be implemented in a child theme because a theme update may overwrite modified files.', 'azbalac' ); ?></p>
 
 		<hr />
 
 		<h3><?php esc_html_e( 'History', 'azbalac' ); ?></h3>
-		<p><?php esc_html_e( 'A word from the author: As I switched the blog software from an own development to WordPress, I searched for a Bootstrap-powered theme. As developer I used Bootstrap before in nearly all web development projects of the last years, so I thought it would be easier to work in a well known environment. There were plenty of themes, some were really good and had a large number of features. I bought a commercial licensed theme, but was a little bit disappointed. And many of the themes had more feature than I ever needed. So I tried to create a small theme which only implemented a minimal set of features which I used on my own web page. It should be a general purpose theme, but I tried to keep near to the Bootstrap style. At first, I like the design, and secondly - you know, I\'m a programmer, but not a designer. ;-) That was the birth of the theme Azbalac One, and I\'ll be happy if you find it useful for you.', 'azbalac' ); ?></p>
+		<p><?php esc_html_e( 'A word from the author: When I moved my blog from custom software to WordPress, I looked for a Bootstrap-powered theme. I already knew Bootstrap from many web projects, so working in a familiar environment seemed like the natural choice.', 'azbalac' ); ?></p>
+		<p><?php esc_html_e( 'Many available themes were either too limited or offered far more features and complexity than I needed. I therefore created a small, general-purpose theme that stays close to Bootstrap and contains the features I actually use. I am a programmer rather than a designer, after all. ;-) That was the birth of Azbalac One, and I am happy if you find it useful too.', 'azbalac' ); ?></p>
 		
 	</div>
         
@@ -44,11 +47,11 @@ $azbalac = wp_get_theme( 'azbalac' );
 	<div class="azbalac-tab-pane-half">
 	
 		<h3><?php esc_html_e( 'Feedback and Support', 'azbalac' ); ?></h3>
-                <p><?php esc_html_e( 'The theme is actively maintained and developed. But due to the history it didn\'t try to implement all imaginable WordPress features. And there is no "pro" or "enhanced" or "commercial" version, no upgrade option or something else - and there will never be!', 'azbalac' ); ?></p>
+                <p><?php esc_html_e( 'The theme is actively maintained, but it deliberately does not try to implement every imaginable WordPress feature. There is no "Pro", enhanced, or commercial edition, and there will never be one.', 'azbalac' ); ?></p>
                 <p>
-                <?php esc_html_e( 'The Azbalac One theme will stay free, with every feature which will be added in future. I have some features in mind, and if there is enough time maybe I will implement them.', 'azbalac' ); ?></p>
+                <?php esc_html_e( 'Azbalac One will remain free, including features added in the future. I still have some ideas in mind and may implement them when time permits.', 'azbalac' ); ?></p>
                 <p>
-                <?php esc_html_e( 'And it would be nice to hear from you! Which features do you like, which dislike? Do you miss something, a feature, an option, which could be maybe added in future? Did you find an error or an unexpected behavior? Or could you help by translating the theme into your language, add some documentation or something else? Please provide your feedback, you can use the following formular (currently in german language only, but Google helps to translate ;-) )', 'azbalac' ); ?></p>
+		<?php esc_html_e( 'I would be happy to hear from you. Which features do you like or dislike? Are you missing an option, have you found an error or unexpected behavior, or would you like to help with a translation or documentation? You can use the following feedback form, which is currently available in German only.', 'azbalac' ); ?></p>
 		<p><a href="https://www.kuerbis.org/feedback/" class="button" target="_blank"><?php esc_html_e( 'Your feedback and wishes', 'azbalac' ); ?></a></p>
                 
                 	<hr />

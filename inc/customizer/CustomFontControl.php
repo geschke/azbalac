@@ -3,8 +3,7 @@
 /**
  * Default Font list as constant array
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
@@ -53,11 +52,11 @@ class Azbalac_Custom_Font_Request
         check_ajax_referer('azbalac_customizer_ajax', 'nonce');
 
         if (!current_user_can('edit_theme_options')) {
-            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac-one')), 403);
         }
 
         if (!isset($_POST['searchfont'])) {
-            wp_send_json_error(array('message' => __('Missing font name.', 'azbalac')), 400);
+            wp_send_json_error(array('message' => __('Missing font name.', 'azbalac-one')), 400);
         }
 
         $searchfont = sanitize_text_field(wp_unslash($_POST['searchfont']));
@@ -73,7 +72,7 @@ class Azbalac_Custom_Font_Request
         }
 
         if ($fontData === null) {
-            wp_send_json_error(array('message' => __('Font not found.', 'azbalac')), 404);
+            wp_send_json_error(array('message' => __('Font not found.', 'azbalac-one')), 404);
         }
 
         wp_send_json_success($fontData);
@@ -84,7 +83,7 @@ class Azbalac_Custom_Font_Request
         check_ajax_referer('azbalac_customizer_ajax', 'nonce');
 
         if (!current_user_can('edit_theme_options')) {
-            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac-one')), 403);
         }
 
         wp_send_json_success(Azbalac_Custom_Font_List::FONTS);
@@ -96,8 +95,7 @@ class Azbalac_Custom_Font_Request
 /**
  * Customizer Control: Font
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.3
@@ -203,7 +201,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
         }
     
         // Default font list from https://www.w3schools.com/cssref/css_websafe_fonts.asp
-        $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
+        $fonts[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac-one' ));
         $fonts[] = array('c' => 'optgroup_start', 'v' => 'Serif Fonts');
         $fonts[] = array('k' => 1, 'v' => Azbalac_Custom_Font_List::FONTS['1']);
         $fonts[] = array('k' => 2, 'v' => Azbalac_Custom_Font_List::FONTS['2']);
@@ -345,7 +343,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
          
                 <div class="font-row-content font-input-select-variant">
                     <label>
-                    <?php echo __('Select font variant:', 'azbalac'); ?>
+                    <?php echo __('Select font variant:', 'azbalac-one'); ?>
                     </label>
                     <div class="font-row-field">
                     <#
@@ -362,7 +360,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
                     #>
                     <select class="customize-font-input-select-variant" data-field="{{{ data.identifier }}}" data-font-variant="{{{ gglfont }}}"  data-default="{{{ data.defaults.variant }}}" data-default-selected="{{{ defaultVariant }}}" >
                    
-                            <option value="0"  ><?php echo __( '&mdash; Select &mdash;', 'azbalac' ); ?></option>
+                            <option value="0"  ><?php echo __( '&mdash; Select &mdash;', 'azbalac-one' ); ?></option>
                      
                     </select>
 
@@ -371,7 +369,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
 	  
             <label>
                 <span class="customize-control-title">
-                <?php echo __('Font Size','azbalac'); ?>
+                <?php echo __('Font Size','azbalac-one'); ?>
                 </span>
                 <input type="number" class="customize-font-size-number" id="input_size_{{{ data.identifier }}}" min="0" max="120" step="1" data-default="{{{ data.defaults.size }}}" value=""/>
 

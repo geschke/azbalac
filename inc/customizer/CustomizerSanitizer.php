@@ -4,9 +4,8 @@
  * Implements Sanitizer functionality.
  *
  *
- * @package   WordPress
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */
@@ -33,7 +32,7 @@ class Azbalac_Customizer_Sanitizer
             $validity,
             $value,
             'page',
-            __('The selected slider page does not exist or is not a valid page.', 'azbalac')
+            __('The selected slider page does not exist or is not a valid page.', 'azbalac-one')
         );
     }
 
@@ -43,7 +42,7 @@ class Azbalac_Customizer_Sanitizer
             $validity,
             $value,
             'post',
-            __('The selected slider post does not exist or is not a valid post.', 'azbalac')
+            __('The selected slider post does not exist or is not a valid post.', 'azbalac-one')
         );
     }
 

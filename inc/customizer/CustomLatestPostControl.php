@@ -27,7 +27,7 @@ class Azbalac_Custom_Latest_Post_Control extends WP_Customize_Control
             <span class="customize-control-title "><?php echo esc_html($this->label); ?></span>
             <select <?php $this->link(); ?>>
                 <?php
-                echo '<option value="">' . __('&mdash; Select &mdash;', 'azbalac') . '</option>';
+                echo '<option value="">' . __('&mdash; Select &mdash;', 'azbalac-one') . '</option>';
                 while ($latest->have_posts()) {
                     $latest->the_post();
                     echo "<option " . selected($this->value(), get_the_ID()) . " value='" . get_the_ID() . "'>" . the_title('', '', false) . "</option>";

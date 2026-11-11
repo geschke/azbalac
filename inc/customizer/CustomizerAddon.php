@@ -3,9 +3,8 @@
 /**
  * Add-ons for Customizer
  *
- * @package   WordPress
- * @subpackage azbalac
- * @since azbalac 0.4.6
+ * @package Azbalac_One
+ * @since 0.4.6
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */

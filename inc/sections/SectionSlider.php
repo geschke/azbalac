@@ -4,9 +4,8 @@
  * Implements Slider Sections functionality.
  * The code was previously included in the main functions.php file.
  *
- * @package   WordPress
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
@@ -116,7 +115,7 @@ class Azbalac_Section_Slider
                     . $activeClass
                     . $ariaCurrent
                     . ' aria-label="'
-                    . esc_attr(sprintf(__('Slide %d', 'azbalac'), $idx + 1))
+                    . esc_attr(sprintf(__('Slide %d', 'azbalac-one'), $idx + 1))
                     . '"></button>' . "\n";
                 }
             ?>
@@ -200,11 +199,11 @@ class Azbalac_Section_Slider
         echo '<!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#azbalacSlider" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">' . esc_html__( 'Previous', 'azbalac')  . '</span>
+        <span class="visually-hidden">' . esc_html__( 'Previous', 'azbalac-one')  . '</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#azbalacSlider" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">' . esc_html__( 'Next', 'azbalac' ) . '</span>
+        <span class="visually-hidden">' . esc_html__( 'Next', 'azbalac-one' ) . '</span>
         </button>';
         echo '</div>';
     }

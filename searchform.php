@@ -2,7 +2,7 @@
 /**
  * Search form template controller.
  *
- * @package Azbalac
+ * @package Azbalac_One
  */
 
 global $aztpl;
@@ -17,10 +17,10 @@ echo $aztpl->render(
         'action_url' => home_url('/'),
         'aria_label' => !empty($args['aria_label'])
             ? $args['aria_label']
-            : _x('Site search', 'aria label', 'azbalac'),
-        'placeholder' => _x('Search …', 'placeholder', 'azbalac'),
+            : _x('Site search', 'aria label', 'azbalac-one'),
+        'placeholder' => _x('Search …', 'placeholder', 'azbalac-one'),
         'search_query' => get_search_query(false),
-        'field_label' => _x('Search for:', 'label', 'azbalac'),
-        'submit_label' => _x('Search', 'submit button', 'azbalac'),
+        'field_label' => _x('Search for:', 'label', 'azbalac-one'),
+        'submit_label' => _x('Search', 'submit button', 'azbalac-one'),
     )
 );

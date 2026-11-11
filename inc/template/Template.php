@@ -4,9 +4,8 @@
 /**
  * Wrapper for Twig PHP template system
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
@@ -25,7 +24,7 @@ class Azbalac_Template
     {
 
         $twigLoader = new \Twig\Loader\FilesystemLoader(get_template_directory() . '/templates/src/');
-        $cacheDirectory = WP_CONTENT_DIR . '/cache/azbalac/twig';
+        $cacheDirectory = WP_CONTENT_DIR . '/cache/azbalac-one/twig';
         $twigCache = false;
 
         if ((is_dir($cacheDirectory) || wp_mkdir_p($cacheDirectory)) && is_writable($cacheDirectory)) {

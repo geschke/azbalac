@@ -3,7 +3,7 @@
 define('AZBALAC_DATEVERSION','2026111001');
 
 /**
- * Azbalac requires PHP 8.1 or newer.
+ * Azbalac One requires PHP 8.1 or newer.
  */
 if (version_compare(PHP_VERSION, '8.1', '<')) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -60,7 +60,7 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support post thumbnails.
      *
-     * @since azbalac 0.1
+     * @since 0.1
      */
     function azbalac_setup() {
 
@@ -69,11 +69,11 @@ if ( ! function_exists( 'azbalac_setup' ) ) :
          *
          * Translations can be added to the /languages/ directory.
          * If you're building a theme based on azbalac, use a find and
-         * replace to change 'azbalac' to the name of your theme in all
+         * replace to change 'azbalac-one' to the name of your theme in all
          * template files.
          */
 
-        load_theme_textdomain( 'azbalac', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'azbalac-one', get_template_directory() . '/languages' );
 
         // This theme styles the visual editor to resemble the theme style.
         //add_editor_style( array( 'css/editor-style.css', azbalac_font_url() ) );
@@ -175,7 +175,7 @@ endif;
  *
  * @see azbalac_content_width()
  *
- * @since azbalac 0.1
+ * @since 0.1
  */
 if ( ! isset( $content_width ) ) {
     $content_width = 474;
@@ -216,7 +216,7 @@ function theme_azbalac_widgets_init()
     $bodyStyles = azbalac_get_body_styles();
 
     register_sidebar(array(
-        'name' => __("Sidebar 1", 'azbalac'),
+        'name' => __("Sidebar 1", 'azbalac-one'),
         'id' => 'sidebar-1',
         'class' => '',
         'before_widget' => '<div class="card mb-3"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
@@ -227,7 +227,7 @@ function theme_azbalac_widgets_init()
 
     for ($i = 1; $i <= 6; $i++) {
         register_sidebar(array(
-            'name' => sprintf(__("Footer Widget Area #%d", 'azbalac'), $i),
+            'name' => sprintf(__("Footer Widget Area #%d", 'azbalac-one'), $i),
             'id' => sprintf("footer-sidebar-%d", $i),
             'description' => 'Appears in the footer area',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -238,7 +238,7 @@ function theme_azbalac_widgets_init()
     }
 
     register_sidebar(array(
-        'name' => __("Header Widget Area", 'azbalac'),
+        'name' => __("Header Widget Area", 'azbalac-one'),
         'id' => "header-widget-right",
         'description' => 'Appears in the header on right side',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -247,7 +247,7 @@ function theme_azbalac_widgets_init()
         //'after_title' => '</h3>',
     ));
     register_sidebar(array(
-        'name' => __("Navigation Right Widget Area", 'azbalac'),
+        'name' => __("Navigation Right Widget Area", 'azbalac-one'),
         'id' => "navigation-widget-right",
         'description' => 'Appears in the navigation on right side',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -275,7 +275,7 @@ function azbalac_comment_fields($fields)
     $fields['author'] =
         '<div class="row mb-3 comment-form-author">' .
             '<label class="col-sm-2 col-form-label" for="author">' .
-                esc_html__('Name*', 'azbalac') .
+                esc_html__('Name*', 'azbalac-one') .
             '</label>' .
             '<div class="col-sm-10">' .
                 '<input class="form-control" id="author" name="author" type="text" value="' .
@@ -287,7 +287,7 @@ function azbalac_comment_fields($fields)
     $fields['email'] =
         '<div class="row mb-3 comment-form-email">' .
             '<label class="col-sm-2 col-form-label" for="email">' .
-                esc_html__('Email*', 'azbalac') .
+                esc_html__('Email*', 'azbalac-one') .
             '</label>' .
             '<div class="col-sm-10">' .
                 '<input class="form-control" id="email" name="email" type="email" value="' .
@@ -299,7 +299,7 @@ function azbalac_comment_fields($fields)
     $fields['url'] =
         '<div class="row mb-3 comment-form-url">' .
             '<label class="col-sm-2 col-form-label" for="url">' .
-                esc_html__('Website', 'azbalac') .
+                esc_html__('Website', 'azbalac-one') .
             '</label>' .
             '<div class="col-sm-10">' .
                 '<input class="form-control" id="url" name="url" type="url" value="' .
@@ -326,7 +326,7 @@ endif;
 /**
  * Enqueue scripts and styles for the front end.
  *
- * @since Azbalac 0.1
+ * @since 0.1
  *
  * @return void
  */
@@ -363,7 +363,7 @@ function add_class_the_tags($html){
 add_filter('the_tags','add_class_the_tags',10,1);
 
 function register_azbalac_menus() {
-    register_nav_menus(array('header-menu' => __( 'Header Menu', 'azbalac' ),));
+    register_nav_menus(array('header-menu' => __( 'Header Menu', 'azbalac-one' ),));
 }
 add_action( 'init', 'register_azbalac_menus' );
 
@@ -371,7 +371,7 @@ add_action( 'init', 'register_azbalac_menus' );
 /**
  * A helper conditional function that returns a boolean value.
  *
- * @since azbalac 0.1
+ * @since 0.1
  *
  * @return bool Whether there are featured posts.
  */
@@ -382,7 +382,7 @@ function azbalac_has_featured_posts() {
 /**
  * Getter function for Featured Content Plugin.
  *
- * @since Azbalac 0.1
+ * @since 0.1
  *
  * @return array An array of WP_Post objects.
  */
@@ -390,7 +390,7 @@ function azbalac_get_featured_posts() {
     /**
      * Filter the featured posts to return in azbalac.
      *
-     * @since Azbalac 0.1
+     * @since 0.1
      *
      * @param array|bool $posts Array of featured posts, otherwise false.
      */
@@ -542,7 +542,7 @@ if ( ! function_exists( 'azbalac_header_style' ) ) :
  *
  * Create your own azbalac_header_style() function to override in a child theme.
  *
- * @since Azbalac 0.2
+ * @since 0.2
  *
  * @see twentysixteen_custom_header_and_background().
  */
@@ -573,7 +573,7 @@ if ( ! function_exists('azbalac_admin_notice')) :
 function azbalac_admin_notice() {
   ?>
   <div class="updated notice azbalac-admin-notice is-dismissible">
-      <p><?php _e( 'Demo of admin notice...', 'azbalac' ); ?></p>
+      <p><?php _e( 'Demo of admin notice...', 'azbalac-one' ); ?></p>
   </div>
   <?php
 }
@@ -582,7 +582,7 @@ endif; // azbalac_admin_notice
 
 
 function azbalac_excerpt_more( $more ) {
-    return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'azbalac' ), get_the_title())  . '</a></p>';
+    return '&hellip;<br/> <p> <a rel="bookmark" class="read-more btn btn-primary" href="'. get_permalink( get_the_ID() ) . '">' . sprintf(__( 'Read More <span class="screen-reader-text">on %1$s </span>&raquo;', 'azbalac-one' ), get_the_title())  . '</a></p>';
 }
 //add_filter( 'excerpt_more', 'azbalac_excerpt_more' );
 

@@ -3,9 +3,8 @@
 /**
  * Implements Content Sections functionality.
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
@@ -210,7 +209,7 @@ class Azbalac_Section_Content_Column
             $output .= sprintf(
                 '<p><a class="btn btn-primary" href="%s" role="button">%s</a></p>',
                 esc_url($url),
-                wp_kses_post(__("Read more &raquo;", 'azbalac'))
+                wp_kses_post(__("Read more &raquo;", 'azbalac-one'))
             );
         }
         $output .= sprintf(' </div><!-- /.col-lg-%d -->', $columnClass);

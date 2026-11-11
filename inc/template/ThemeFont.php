@@ -3,9 +3,8 @@
 /**
  * Implements Custom Fonts functionality.
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac One 0.5
+ * @package Azbalac_One
+ * @since 0.5
  * @copyright Copyright (c) 2022, Ralf Geschke.
  * @license   GPL2+
  */

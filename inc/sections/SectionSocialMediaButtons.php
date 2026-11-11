@@ -4,9 +4,8 @@
  * Implements Social Media Buttons Sections functionality.
  * The code was previously included in the main functions.php file.
  *
- * @package   WordPress
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */

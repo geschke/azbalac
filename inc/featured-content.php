@@ -1,6 +1,6 @@
 <?php
 /**
- * Azbalac Featured Content
+ * Azbalac One Featured Content
  *
  * This module allows you to define a subset of posts to be displayed
  * in the theme's Featured Content area.
@@ -21,7 +21,7 @@ class Featured_Content {
 	 *
 	 * @see Featured_Content::init()
 	 *
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @static
 	 * @access public
@@ -36,7 +36,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since azbalac 0.1
+	 * @since 0.1
 	 */
 	public static function setup() 
 	{
@@ -54,7 +54,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 */
 	public static function init() 
 	{
@@ -93,7 +93,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @return array Array of featured posts.
 	 */
@@ -125,7 +125,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @return array Array of post IDs.
 	 */
@@ -182,7 +182,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @return array Array of sticky posts.
 	 */
@@ -201,7 +201,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 */
 	public static function delete_transient()
 	{
@@ -217,7 +217,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @param WP_Query $query WP_Query object.
 	 * @return WP_Query Possibly-modified WP_Query.
@@ -272,7 +272,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @param string $key The key of a recognized setting.
 	 * @return mixed Array of all settings by default. A single value if passed as first parameter.
@@ -320,7 +320,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @param array $input Array of settings input.
 	 * @return array Validated settings output.
@@ -364,7 +364,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Azbalac 0.1
+	 * @since 0.1
 	 *
 	 * @param int $input The value to sanitize.
 	 * @return int A number between 1 and FeaturedContent::$max_posts.

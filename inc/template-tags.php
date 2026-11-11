@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Azbalac
+ * @package Azbalac_One
  */
 
 if (!function_exists('azbalac_paging_nav')) :
@@ -41,8 +41,8 @@ if (!function_exists('azbalac_paging_nav')) :
             'current' => $paged,
             'mid_size' => 1,
             'add_args' => array_map('urlencode', $query_args),
-            'prev_text' => __('&laquo; Previous', 'azbalac'),
-            'next_text' => __('Next &raquo;', 'azbalac'),
+            'prev_text' => __('&laquo; Previous', 'azbalac-one'),
+            'next_text' => __('Next &raquo;', 'azbalac-one'),
             'type' => 'array'
         ));
 
@@ -50,7 +50,7 @@ if (!function_exists('azbalac_paging_nav')) :
 
             ?>
             <nav class="navigation paging-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php _e('Posts navigation', 'azbalac'); ?></h2>
+                <h2 class="screen-reader-text"><?php _e('Posts navigation', 'azbalac-one'); ?></h2>
                 <ul class="pagination">
                     <?php
                     foreach ($links as $link) {
@@ -72,22 +72,22 @@ if (!function_exists('get_azbalac_posted_on')) :
     /**
      * Print HTML with meta information for the current post-date/time and author.
      *
-     * @since Azbalac 0.1.5
+     * @since 0.1.5
      */
     function get_azbalac_posted_on()
     {
         $output = '';
 
         if (is_sticky() && is_home() && !is_paged()) {
-            $output .= '<span class="featured-post">' . __('Sticky', 'azbalac') . '</span>&nbsp;&nbsp;';
+            $output .= '<span class="featured-post">' . __('Sticky', 'azbalac-one') . '</span>&nbsp;&nbsp;';
         }
         // Set up and print post meta information.
-        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon bi bi-clock" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'azbalac') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
+        $output .= sprintf('<span class="entry-date"><a href="%1$s" rel="bookmark"><span class="byline-icon bi bi-clock" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Date: </span>', 'azbalac-one') . '<time class="entry-date" datetime="%2$s">%3$s</time></a></span>&nbsp;&nbsp;&nbsp;',
             esc_url(get_permalink()),
             esc_attr(get_the_date('c')),
             esc_html(get_the_date())
         );
-        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon bi bi-person" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'azbalac') . '%2$s</a></span></span>',
+        $output .= sprintf('<span class="byline"><span class="author vcard"><a class="url fn n" href="%1$s" rel="author"><span class="byline-icon bi bi-person" aria-hidden="true"></span>' . __('<span class="screen-reader-text">Author: </span>', 'azbalac-one') . '%2$s</a></span></span>',
             esc_url(get_author_posts_url(get_the_author_meta('ID'))),
             esc_html(get_the_author())
         );
@@ -100,7 +100,7 @@ if (!function_exists('azbalac_posted_on')) :
     /**
      * Print HTML with meta information for the current post-date/time and author.
      *
-     * @since Azbalac 0.1.5
+     * @since 0.1.5
      */
     function azbalac_posted_on()
     {

@@ -96,14 +96,14 @@ class AzbalacMetaboxes
         );
 
         echo '<h2 style="margin-top:0;">'
-            . esc_html__('Theme Options:', 'azbalac')
+            . esc_html__('Theme Options:', 'azbalac-one')
             . '</h2>';
         $this->azbalac_select('featured_post',
-            __('Featured Post', 'azbalac'),
-            array('_0' => __('Not featured', 'azbalac'),
-                '_1' => __('Large Feature (Jumbotron)', 'azbalac'),
-                '_2' => __('Featured Classic', 'azbalac'),
-                '_3' => __('Featured Mag Style 1', 'azbalac')
+            __('Featured Post', 'azbalac-one'),
+            array('_0' => __('Not featured', 'azbalac-one'),
+                '_1' => __('Large Feature (Jumbotron)', 'azbalac-one'),
+                '_2' => __('Featured Classic', 'azbalac-one'),
+                '_3' => __('Featured Mag Style 1', 'azbalac-one')
             ),
             ''
         );

@@ -3,9 +3,8 @@
 /**
  * Implements Featured Posts Access Functions
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */

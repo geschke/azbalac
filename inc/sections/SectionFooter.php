@@ -3,9 +3,8 @@
 /**
  * Implements Footer functionality.
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  * @copyright Copyright (c) 2017, Ralf Geschke.
  * @license   GPL2+
  */
@@ -19,10 +18,10 @@ class Azbalac_Section_Footer
         $output .= sprintf('<div class="widget-area col-md-%d col-sm-%d">', $columns, $columns);
        
         if (!is_active_sidebar(sprintf("footer-sidebar-%d", $footerNumber))) {
-            $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'azbalac') . '</h3>' .
+            $output .= '<h3 class="widget-title">' . __('Please Add Widgets', 'azbalac-one') . '</h3>' .
             '<div class="error-icon">' .
-            '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'azbalac'), $footerNumber) . '</p>' .
-            '<p>' . sprintf(__("If you want to leave the space empty, simply add a text or html widget with no content to the Footer Widget Area #%d.", 'azbalac'), $footerNumber) . '</p>' .
+            '<p>' . sprintf(__('Remove this message by adding widgets to Footer Widget Area #%d.', 'azbalac-one'), $footerNumber) . '</p>' .
+            '<p>' . sprintf(__("If you want to leave the space empty, simply add a text or html widget with no content to the Footer Widget Area #%d.", 'azbalac-one'), $footerNumber) . '</p>' .
             '</div>';
         } else {
             ob_start();

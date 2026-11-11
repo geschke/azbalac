@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Azbalac v0.1\n"
+"Project-Id-Version: Azbalac One 0.6.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-11-11 11:46+0000\n"
@@ -20,6 +20,7 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes\n"
+"X-Domain: azbalac-one\n"
 "Language: de_DE"
 
 #: content.php:46
@@ -117,10 +118,9 @@ msgid ""
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:32
-#, fuzzy
-#| msgid "About Azbalac theme"
+#: inc/info-screen/welcome-screen.php:47 inc/info-screen/welcome-screen.php:48
 msgid "About Azbalac One"
-msgstr "Über Azbalac Theme"
+msgstr "Über Azbalac One"
 
 #: inc/customizer/Customizer.php:612
 msgid "Above header (with standard navigation)"
@@ -177,12 +177,14 @@ msgid ""
 "still have some ideas in mind and may implement them when time permits."
 msgstr ""
 
-#: inc/back-compat.php:40 inc/back-compat.php:52 inc/back-compat.php:67
+#: inc/back-compat.php:36 inc/back-compat.php:48 inc/back-compat.php:63
 #, php-format
 msgid ""
-"Azbalac requires at least PHP version 8.1. You are running version %s. "
+"Azbalac One requires at least PHP version 8.1. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
+"Azbalac One benötigt mindestens PHP 8.1. Installiert ist Version %s. Bitte "
+"aktualisieren Sie PHP und versuchen Sie es erneut."
 
 #: inc/customizer/Customizer.php:751
 msgid "Background Color"
@@ -707,7 +709,7 @@ msgid "https://www.geschke.net"
 msgstr ""
 
 #. URI of the theme
-msgid "https://www.kuerbis.org/azbalac/"
+msgid "https://www.kuerbis.org/azbalac-one/"
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:54
@@ -1193,19 +1195,13 @@ msgstr "Beitrags-Navigation"
 msgid "Posts Settings"
 msgstr "Beitrags-Einstellungen"
 
-#: inc/customizer/Customizer.php:1602
-msgid ""
-"Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac by "
-"<a href=\"https://www.geschke.net\">Ralf Geschke</a>."
-msgstr ""
-"Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme "
-"Azbalac von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
-
-#: inc/sections/SectionSubfooter.php:82
+#: inc/customizer/Customizer.php:1601 inc/sections/SectionSubfooter.php:81
 msgid ""
 "Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac "
 "One by <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
 msgstr ""
+"Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme "
+"Azbalac One von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
 
 #: inc/sections/SectionSlider.php:203
 msgid "Previous"
@@ -1696,21 +1692,17 @@ msgstr "Website"
 
 #: inc/info-screen/sections/getting-started.php:12
 msgid "Welcome to Azbalac One!"
-msgstr ""
+msgstr "Willkommen bei Azbalac One!"
 
-#: inc/info-screen/welcome-screen.php:71
-#, fuzzy, php-format
-#| msgid ""
-#| "Welcome! Thank you for choosing Azbalac Theme! Please have a look at the "
-#| "new %swelcome page%s. You will find some information about new or updated "
-#| "features there."
+#: inc/info-screen/welcome-screen.php:77
+#, php-format
 msgid ""
 "Welcome! Thank you for choosing Azbalac One! Please have a look at the new "
 "%sWelcome page%s. You will find some information about new or updated "
 "features there."
 msgstr ""
-"Willkommen! Vielen Dank, dass Sie das Azbalac Theme gewählt haben! Bitte "
-"besuchen Sie die neue %swelcome page%s. Sie finden dort Informationen über "
+"Willkommen! Vielen Dank, dass Sie Azbalac One gewählt haben! Bitte besuchen "
+"Sie die neue %sWillkommensseite%s. Sie finden dort Informationen über "
 "neue oder aktualisierte Features."
 
 #: inc/customizer/Customizer.php:531

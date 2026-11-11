@@ -115,7 +115,7 @@ if (has_nav_menu('header-menu')) {
 
 $content['bodyClass'] = 'class="' . join( ' ', get_body_class( ) ) . '"';
 
-$content['skipToMainContent'] = __( 'Skip to main content', 'azbalac' );
+$content['skipToMainContent'] = __( 'Skip to main content', 'azbalac-one' );
 
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
@@ -185,7 +185,7 @@ $content['headerImages'] = Azbalac_Theme::getHeaderImageData();
 
 $content['customHeader'] = get_custom_header();
 
-$content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac' );
+$content['headerImageAlt'] = __( 'Header Image - navigate to homepage', 'azbalac-one' );
 
 $content['socialMediaButtons']['1'] = Azbalac_Section_Social_Media_Buttons::getButtons(1);
 
@@ -199,7 +199,7 @@ if ( is_front_page()) {
 
 }
 
-$content['toggleNavigation'] = __( 'Toggle navigation', 'azbalac' );
+$content['toggleNavigation'] = __( 'Toggle navigation', 'azbalac-one' );
           
 
 $azbalacContainer = Azbalac_DataContainer::getInstance();

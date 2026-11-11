@@ -43,7 +43,13 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function azbalac_welcome_register_menu()
         {
-            add_theme_page('About Azbalac', 'About Azbalac', 'activate_plugins', 'azbalac-welcome', array($this, 'azbalac_welcome_screen'));
+            add_theme_page(
+                __('About Azbalac One', 'azbalac-one'),
+                __('About Azbalac One', 'azbalac-one'),
+                'edit_theme_options',
+                'azbalac-welcome',
+                array($this, 'azbalac_welcome_screen')
+            );
         }
 
         /**
@@ -52,7 +58,7 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function activation_admin_notice()
         {
-           $azbalac = wp_get_theme('azbalac');
+           $azbalac = wp_get_theme( get_template() );
 
             $dismissedNotice = get_option('azbalac_notice_version_dismissed');
             if (is_admin() && (empty($dismissedNotice) || $azbalac['Version'] != $dismissedNotice)) {
@@ -68,7 +74,7 @@ if (!class_exists('Azbalac_Welcome')) {
         {
             ?>
             <div class="updated notice azbalac-admin-notice is-dismissible">
-                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac One! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there.', 'azbalac'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
+                <p><?php echo sprintf(esc_html__('Welcome! Thank you for choosing Azbalac One! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there.', 'azbalac-one'), '<a href="' . esc_url(admin_url('themes.php?page=azbalac-welcome')) . '">', '</a>'); ?></p>
                 
             </div>
             <?php
@@ -83,10 +89,10 @@ if (!class_exists('Azbalac_Welcome')) {
             check_ajax_referer('azbalac_dismiss_welcome_notice', 'nonce');
 
             if (!current_user_can('edit_theme_options')) {
-                wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+                wp_send_json_error(array('message' => __('Permission denied.', 'azbalac-one')), 403);
             }
 
-            $azbalac = wp_get_theme('azbalac');
+            $azbalac = wp_get_theme( get_template() );
             update_option('azbalac_notice_version_dismissed', $azbalac->get('Version'), false);
 
             wp_send_json_success();
@@ -98,7 +104,7 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function azbalac_welcome_style_and_scripts($hook_suffix)
         {
-            $azbalac = wp_get_theme('azbalac');
+            $azbalac = wp_get_theme( get_template() );
             $dismissedNotice = get_option('azbalac_notice_version_dismissed');
 
             if (empty($dismissedNotice) || $azbalac->get('Version') != $dismissedNotice) {

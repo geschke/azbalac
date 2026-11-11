@@ -2,9 +2,8 @@
 /**
  * The Template for displaying all single posts
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 

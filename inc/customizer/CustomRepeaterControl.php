@@ -6,8 +6,7 @@ if (! class_exists( 'WP_Customize_Control' )) {
 /**
  * Customizer Control: repeater.
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       2.0
@@ -92,11 +91,11 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
         );
 		
         wp_localize_script( 'customizer-repeater-script', 'objectL10n', array(
-            'select_image' => esc_html__( 'Select Image', 'azbalac' ),
-            'remove' => esc_html__( 'Remove', 'azbalac' ),
-            'change_image' => esc_html__( 'Change Image', 'azbalac' ),
-            'no_image_selected' => esc_html__( 'No Image selected', 'azbalac' ),
-            'choose_image' => esc_html__( 'Choose Image', 'azbalac' )
+            'select_image' => esc_html__( 'Select Image', 'azbalac-one' ),
+            'remove' => esc_html__( 'Remove', 'azbalac-one' ),
+            'change_image' => esc_html__( 'Change Image', 'azbalac-one' ),
+            'no_image_selected' => esc_html__( 'No Image selected', 'azbalac-one' ),
+            'choose_image' => esc_html__( 'Choose Image', 'azbalac-one' )
             
             
 
@@ -328,10 +327,10 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 
                                 <div class="attachment-media-view" data-type="{{{ field.type }}}" data-field="{{{ name }}}" data-default="{{{ field.default }}}">
                                     <div class="placeholder">
-                                    <?php esc_html_e( 'No Image selected', 'azbalac' ); ?>
+                                    <?php esc_html_e( 'No Image selected', 'azbalac-one' ); ?>
                                     </div>
                                     <div class="actions">
-                                         <button type="button" class="button azbalac-repeater-custom-upload-button"><?php esc_html_e( 'Select Image', 'azbalac' ); ?></button>
+                                         <button type="button" class="button azbalac-repeater-custom-upload-button"><?php esc_html_e( 'Select Image', 'azbalac-one' ); ?></button>
                         
                                     </div>
                                 </div>
@@ -343,7 +342,7 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 				</div>	
           
                 <div class="customize-button-repeater-row-remove">
-				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_html_e( 'Remove element', 'azbalac' ); ?></button>
+				    <button type="button" class="button button-remove-new-element remove-new-menu-item customize-repeater-row-remove"><?php esc_html_e( 'Remove element', 'azbalac-one' ); ?></button>
                 </div>
 			</div> <!-- customize-control-repeater-element -->
             <# });
@@ -353,7 +352,7 @@ class Azbalac_Custom_Repeater_Control extends WP_Customize_Control
 		</div>
         <input type="hidden" value="{{{ data.value }}}" class="azbalac_repeater_collector" id="azbalac_repeater_{{{ data.section }}}" name="azbalac_repeater_{{{ data.section }}}"/>
 		<div class="button-add-new-element"><button type="button" class="button add-field add-new-menu-item customize-repeater-new-field">
-				<?php esc_html_e( 'Add new element', 'azbalac' ); ?>
+				<?php esc_html_e( 'Add new element', 'azbalac-one' ); ?>
         </button>
         </div>
        

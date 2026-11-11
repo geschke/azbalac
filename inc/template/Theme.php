@@ -3,9 +3,8 @@
 /**
  * Implements Custom Theme functionality.
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.2
+ * @package Azbalac_One
+ * @since 0.2
  * @copyright Copyright (c) 2020, Ralf Geschke.
  * @license   GPL2+
  */

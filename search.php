@@ -2,9 +2,8 @@
 /**
  * The template for displaying Search Results pages
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 $azbalacContainer = Azbalac_DataContainer::getInstance();
@@ -36,7 +35,7 @@ if ( have_posts() ) {
     $azbalac_have_posts = true;
     $azbalac_no_posts = null;
  
-    $title_search_results = sprintf( __( 'Search Results for: %s', 'azbalac' ), get_search_query() ); 
+    $title_search_results = sprintf( __( 'Search Results for: %s', 'azbalac-one' ), get_search_query() ); 
     // Start the Loop.
     while ( have_posts() ) {
        

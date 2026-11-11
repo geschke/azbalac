@@ -4,9 +4,8 @@
 /**
  * Twig template engine extension for section contents
  *
- * @package   Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.3
+ * @package Azbalac_One
+ * @since 0.3
  * @copyright Copyright (c) 2018, Ralf Geschke.
  * @license   GPL2+
  */

@@ -6,15 +6,14 @@
  * For example, puts together date-based pages if no date.php file exists.
  *
  * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Azbalac
+ * new template file for each specific one. For example, Azbalac One
  * already has tag.php for Tag archives, category.php for Category archives,
  * and author.php for Author archives.
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 
@@ -37,17 +36,17 @@ if ( have_posts() ) {
 	$azbalac_no_posts = null;
 
 	if ( is_day() ) {
-		$page_title = sprintf( __( 'Daily Archives: %s', 'azbalac' ), get_the_date() );
+		$page_title = sprintf( __( 'Daily Archives: %s', 'azbalac-one' ), get_the_date() );
 	} elseif ( is_month() ) {
-		$page_title = sprintf( __( 'Monthly Archives: %s', 'azbalac' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'azbalac' ) ) );
+		$page_title = sprintf( __( 'Monthly Archives: %s', 'azbalac-one' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'azbalac-one' ) ) );
 	} elseif ( is_year() ) {
-		$page_title = sprintf( __( 'Yearly Archives: %s', 'azbalac' ), get_the_date( _x( 'Y', 'yearly archives date format', 'azbalac' ) ) );
+		$page_title = sprintf( __( 'Yearly Archives: %s', 'azbalac-one' ), get_the_date( _x( 'Y', 'yearly archives date format', 'azbalac-one' ) ) );
 	} elseif ($title = get_the_archive_title()) {
 		$page_title = $title;
 
 	}
 	else {
-		$page_title = __( 'Archives', 'azbalac' );
+		$page_title = __( 'Archives', 'azbalac-one' );
 	}
 
 

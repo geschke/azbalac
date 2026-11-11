@@ -2,7 +2,7 @@
 /**
  * Changelog
  */
-$azbalac = wp_get_theme('azbalac');
+$azbalac = wp_get_theme( get_template() );
 ?>
 
 <div role="tabpanel" class="tab-pane fade" id="azbalac-tab-changelog">
@@ -14,14 +14,14 @@ function azbalac_show_changelog()
     $changelogFile = get_template_directory() . '/CHANGELOG.md';
 
     if (!is_readable($changelogFile)) {
-        echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac') . '</p>';
+        echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac-one') . '</p>';
         return;
     }
 
     $changelog = file_get_contents($changelogFile);
 
     if ($changelog === false) {
-        echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac') . '</p>';
+        echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac-one') . '</p>';
         return;
     }
 

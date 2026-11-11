@@ -4,9 +4,8 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 
@@ -32,7 +31,7 @@ if ( have_posts() ) {
 	$azbalac_have_posts = true;
 	$azbalac_no_posts = null;
 	
-	$archive_title = sprintf( __( 'Category Archives: %s', 'azbalac' ), single_cat_title( '', false ) );
+	$archive_title = sprintf( __( 'Category Archives: %s', 'azbalac-one' ), single_cat_title( '', false ) );
 
 	$term_description = term_description();
 

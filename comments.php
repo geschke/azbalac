@@ -4,9 +4,8 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 $content = [];
@@ -21,15 +20,15 @@ if ( ! post_password_required() ) {
 	if ( have_comments() ) {
 		$content['haveComments'] = true;
 
-		$content['commentsTitle'] = sprintf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'azbalac' ), number_format_i18n( get_comments_number() ), get_the_title() );
+		$content['commentsTitle'] = sprintf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'azbalac-one' ), number_format_i18n( get_comments_number() ), get_the_title() );
 		
 		$content['getCommentPagesCount'] = get_comment_pages_count();
 		$content['optionPageComments'] = get_option('page_comments');
 		
 		if ( $content['getCommentPagesCount'] > 1 && $content['optionPageComments'] ) {
-			$content['commentNavigation'] = __( 'Comment navigation', 'azbalac' ); 
-			$content['navPrevious'] = get_previous_comments_link( __( '&larr; Older Comments', 'azbalac' ) );
-			$content['navNext'] = get_next_comments_link( __( 'Newer Comments &rarr;', 'azbalac' ) );
+			$content['commentNavigation'] = __( 'Comment navigation', 'azbalac-one' ); 
+			$content['navPrevious'] = get_previous_comments_link( __( '&larr; Older Comments', 'azbalac-one' ) );
+			$content['navNext'] = get_next_comments_link( __( 'Newer Comments &rarr;', 'azbalac-one' ) );
 
 		}
 
@@ -42,15 +41,15 @@ if ( ! post_password_required() ) {
 		$content['commentsOpen'] = comments_open();
 		if ( ! comments_open() ) {
 
-			$content['commentsClosed'] = __( 'Comments are closed.', 'azbalac' );
+			$content['commentsClosed'] = __( 'Comments are closed.', 'azbalac-one' );
 		}
 
 	}
 
 	
     $formArgs = ['comment_field' => '<div class="mb-3 comment-form-comment">' .
-        '<div class="col-sm-10 form-floating"><textarea class="form-control" id="comment" name="comment" style="height: 200px" placeholder="' . _x( 'Comment', 'noun', 'azbalac' )  . '" aria-required="true"></textarea>' . 
-				'<label class="form-label" for="comment">' . _x( 'Comment', 'noun', 'azbalac' ) . '</label>' .
+        '<div class="col-sm-10 form-floating"><textarea class="form-control" id="comment" name="comment" style="height: 200px" placeholder="' . _x( 'Comment', 'noun', 'azbalac-one' )  . '" aria-required="true"></textarea>' . 
+				'<label class="form-label" for="comment">' . _x( 'Comment', 'noun', 'azbalac-one' ) . '</label>' .
 				'</div></div>',
 				'submit_field' => '<div class="mb-5 form-submit">%1$s %2$s</div>'
 	];

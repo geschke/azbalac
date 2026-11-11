@@ -3,8 +3,7 @@
 /**
  * Walker to generate array of pages with ids and indents
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2017, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.5.2
@@ -50,8 +49,7 @@ class Azbalac_Walker_Page extends Walker_Page
 /**
  * Customizer Control: Repeater Helper.
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2018, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.1.0
@@ -76,7 +74,7 @@ class Azbalac_Custom_Repeater_Helper
         'walker' => $walker));
        
         $pageEntries = $walker->pageEntries;
-        array_unshift($pageEntries, array('name' =>  __( '&mdash; Select &mdash;', 'azbalac' ),
+        array_unshift($pageEntries, array('name' =>  __( '&mdash; Select &mdash;', 'azbalac-one' ),
         'class' => 'level-0',
         'value' => 0));
         return $pageEntries;
@@ -91,7 +89,7 @@ class Azbalac_Custom_Repeater_Helper
     public static function getPostDropdownOptions()
     {
         $pageEntries = array();
-        $pageEntries[] = array('name' => __('&mdash; Select &mdash;', 'azbalac'),
+        $pageEntries[] = array('name' => __('&mdash; Select &mdash;', 'azbalac-one'),
         'class' => '',
         'value' => 0 );
         $latest = new WP_Query(array(

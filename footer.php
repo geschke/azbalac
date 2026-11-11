@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer
  *
- * @since Azbalac 0.1
+ * @since 0.1
  */
 
  $content = [];

@@ -59,11 +59,11 @@ class Azbalac_Custom_Theme_Request
         check_ajax_referer('azbalac_customizer_ajax', 'nonce');
 
         if (!current_user_can('edit_theme_options')) {
-            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac-one')), 403);
         }
 
         if (!isset($_POST['searchtheme'])) {
-            wp_send_json_error(array('message' => __('Missing theme name.', 'azbalac')), 400);
+            wp_send_json_error(array('message' => __('Missing theme name.', 'azbalac-one')), 400);
         }
 
         $searchtheme = sanitize_text_field(wp_unslash($_POST['searchtheme']));
@@ -80,7 +80,7 @@ class Azbalac_Custom_Theme_Request
         }
 
         if ($themeResult === null) {
-            wp_send_json_error(array('message' => __('Theme not found.', 'azbalac')), 404);
+            wp_send_json_error(array('message' => __('Theme not found.', 'azbalac-one')), 404);
         }
 
         wp_send_json_success($themeResult);
@@ -91,7 +91,7 @@ class Azbalac_Custom_Theme_Request
         check_ajax_referer('azbalac_customizer_ajax', 'nonce');
 
         if (!current_user_can('edit_theme_options')) {
-            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac')), 403);
+            wp_send_json_error(array('message' => __('Permission denied.', 'azbalac-one')), 403);
         }
 
         wp_send_json_success(Azbalac_Custom_Font_List::FONTS);
@@ -103,8 +103,7 @@ class Azbalac_Custom_Theme_Request
 /**
  * Customizer Control: Font
  *
- * @package     Azbalac Controls
- * @subpackage  Controls
+ * @package Azbalac_One
  * @copyright   Copyright (c) 2018, Ralf Geschke
  * @license     https://opensource.org/licenses/MIT
  * @since       0.1
@@ -211,7 +210,7 @@ class Azbalac_Custom_Theme_Control extends WP_Customize_Control
         }
     
         // Add the default Bootstrap entry.
-        $themes[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac' ));
+        $themes[] = array('k' => 0, 'v' => __( '&mdash; Select &mdash;', 'azbalac-one' ));
 
         $themeData = Azbalac_Custom_Theme_Data::getThemeData();
         

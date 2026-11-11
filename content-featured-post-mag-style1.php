@@ -2,9 +2,8 @@
 /**
  * The template for displaying large featured posts on the front page
  *
- * @package Azbalac
- * @subpackage Azbalac
- * @since Azbalac 0.1
+ * @package Azbalac_One
+ * @since 0.1
  */
 
 
@@ -22,7 +21,7 @@ $content['permalink'] = get_permalink();
 // esc_url?? check this!
 
 
-$content['continueReadingText'] = sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title());
+$content['continueReadingText'] = sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac-one'), get_the_title());
 
 
 //$content['postIndex'] = $post->postIndex; // not necessary using Twig
@@ -38,7 +37,7 @@ $content['continueReadingText'] = sprintf( __('Continue reading<span class="scre
     }
 
     ob_start(); // todo...
-    edit_post_link( sprintf( __( '<span class="byline-icon bi bi-pencil-square" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'azbalac' ), get_the_title()), '<span class="edit-link">', '</span>' );
+    edit_post_link( sprintf( __( '<span class="byline-icon bi bi-pencil-square" aria-hidden="true"></span>Edit <span class="screen-reader-text">%s</span>', 'azbalac-one' ), get_the_title()), '<span class="edit-link">', '</span>' );
     $content['editPostLink'] = ob_get_contents();
     ob_end_clean();
     
@@ -58,7 +57,7 @@ if ( has_post_thumbnail() ) {
 
 /*if (preg_match('/<!--more.*-->/',$post->post_content)) {
 
-    $contentMain = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac'), get_the_title()) );
+    $contentMain = get_the_content( '<br/><span class="btn btn-primary">'. sprintf( __('Continue reading<span class="screen-reader-text"> on %s</span><span class="meta-nav"> &raquo;</span>', 'azbalac-one'), get_the_title()) );
     $contentMain = apply_filters( 'the_content', $contentMain );
     $content['content'] = $contentMain;
 } else {*/

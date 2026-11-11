@@ -10,14 +10,18 @@ class Azbalac_Custom_Theme_Data
 
     public static function getThemeData()
     {
-        global $wp_filesystem;
-        if (empty($wp_filesystem)) {
-            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
-            WP_Filesystem();
+        $themesFile = get_template_directory() . '/css/themes.json';
+
+        if (!is_readable($themesFile)) {
+            return new stdClass();
         }
 
+        $themes = file_get_contents($themesFile);
 
-        $themes = $wp_filesystem->get_contents(get_template_directory() . '/css/themes.json');
+        if ($themes === false) {
+            return new stdClass();
+        }
+
         $themeData = json_decode($themes);
 
         return is_object($themeData) ? $themeData : new stdClass();

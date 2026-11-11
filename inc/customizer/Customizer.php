@@ -2023,16 +2023,27 @@ class Azbalac_Customizer
 
     public function getBootstrapIcons()
     {
-        global $wp_filesystem;
-        if (empty($wp_filesystem)) {
-            require_once ( ABSPATH . '/wp-admin/includes/file.php' );
-            WP_Filesystem();
+        $iconList = array(
+            0 => __('Choose Icon', 'azbalac'),
+        );
+        $iconsFile = get_template_directory() . '/css/icons/bootstrap-icons.json';
+
+        if (!is_readable($iconsFile)) {
+            return $iconList;
         }
 
-        $iconsJson = $wp_filesystem->get_contents(get_template_directory() . '/css/icons/bootstrap-icons.json');
+        $iconsJson = file_get_contents($iconsFile);
+
+        if ($iconsJson === false) {
+            return $iconList;
+        }
+
         $icons = json_decode($iconsJson, true);
 
-        $iconList[0] = __('Choose Icon', 'azbalac');
+        if (!is_array($icons)) {
+            return $iconList;
+        }
+
         foreach ($icons as $key => $icon) {
             $iconList[$key] = $key;
         }

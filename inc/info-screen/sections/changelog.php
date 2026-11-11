@@ -11,18 +11,14 @@ $azbalac = wp_get_theme('azbalac');
 
 function azbalac_show_changelog()
 {
-    global $wp_filesystem;
+    $changelogFile = get_template_directory() . '/CHANGELOG.md';
 
-    if (empty($wp_filesystem)) {
-        require_once ABSPATH . '/wp-admin/includes/file.php';
-
-        if (!WP_Filesystem()) {
-            echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac') . '</p>';
-            return;
-        }
+    if (!is_readable($changelogFile)) {
+        echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac') . '</p>';
+        return;
     }
 
-    $changelog = $wp_filesystem->get_contents(get_template_directory() . '/CHANGELOG.md');
+    $changelog = file_get_contents($changelogFile);
 
     if ($changelog === false) {
         echo '<p>' . esc_html__('The changelog could not be loaded.', 'azbalac') . '</p>';

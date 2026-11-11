@@ -124,9 +124,6 @@ if (!class_exists('Azbalac_Welcome')) {
          */
         public function azbalac_welcome_screen()
         {
-            require_once( ABSPATH . 'wp-load.php' );
-            require_once( ABSPATH . 'wp-admin/admin.php' );
-            require_once( ABSPATH . 'wp-admin/admin-header.php' );
             ?>
 
             <!-- Nav tabs -->

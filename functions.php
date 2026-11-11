@@ -597,8 +597,6 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 }
 
 if (is_admin()) {
-    $azbalacGoogleFonts = require_once( get_template_directory() . '/inc/customizer/webfonts.php' ); 
-    
     $azbalacFontRequest = new Azbalac_Custom_Font_Request();
 
     $azbalacThemeRequest = new Azbalac_Custom_Theme_Request(); // register requests

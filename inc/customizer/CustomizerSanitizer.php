@@ -478,9 +478,7 @@ class Azbalac_Customizer_Sanitizer
             return rawurlencode(wp_json_encode($sanitizedFont));
         }
 
-        $webfonts = isset($GLOBALS['azbalacGoogleFonts']) && is_array($GLOBALS['azbalacGoogleFonts'])
-            ? $GLOBALS['azbalacGoogleFonts']
-            : require get_template_directory() . '/inc/customizer/webfonts.php';
+        $webfonts = azbalac_get_google_fonts();
         $fontData = null;
 
         if (!empty($webfonts['items']) && is_array($webfonts['items'])) {

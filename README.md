@@ -41,6 +41,26 @@ Theme options are available through the WordPress Customizer. Changes to the the
 
 See [CHANGELOG.md](CHANGELOG.md) for the complete version history, including the history of the earlier Tikva theme from which Azbalac One originated.
 
+## Updating the Google Fonts catalog
+
+The Customizer uses a static Google Fonts catalog so normal WordPress requests never require a Google API key or a live Developer API request. To refresh the catalog, create a Google Fonts Developer API key and run the maintenance script from the theme directory:
+
+```bash
+GOOGLE_FONTS_API_KEY="..." php tools/update-webfonts.php
+```
+
+With PowerShell:
+
+```powershell
+$env:GOOGLE_FONTS_API_KEY = "..."
+php tools/update-webfonts.php
+Remove-Item Env:GOOGLE_FONTS_API_KEY
+```
+
+The key is used only for this command and must not be committed. The script replaces `inc/customizer/webfonts.php` with a validated, compact list containing the available font families and variants.
+
+The `tools` directory is needed only for theme maintenance and is not used by WordPress at runtime. It may be omitted from a production deployment or removed from the production server after the font catalog has been updated.
+
 ## Third-party components
 
 - [Bootstrap](https://getbootstrap.com/), licensed under the MIT License

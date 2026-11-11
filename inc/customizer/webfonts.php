@@ -1,55 +1,30 @@
-<?php 
+<?php
+
 return array (
-  'kind' => 'webfonts#webfontList',
+  'generated' => '2026-11-11',
+  'source' => 'Google Fonts Developer API',
   'items' => 
   array (
     0 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'ABeeZee',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => 'italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/abeezee/v11/mE5BOuZKGln_Ex0uYKpIaw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/abeezee/v11/kpplLynmYgP0YtlJA3atRw.ttf',
-      ),
     ),
     1 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Abel',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/abel/v8/RpUKfqNxoyNe_ka23bzQ2A.ttf',
-      ),
     ),
     2 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Abhaya Libre',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -58,129 +33,147 @@ return array (
         3 => '700',
         4 => '800',
       ),
-      'subsets' => 
-      array (
-        0 => 'sinhala',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/abhayalibre/v3/zTLc5Jxv6yvb1nHyqBasVy3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/abhayalibre/v3/wBjdF6T34NCo7wQYXgzrc5MQuUSAwdHsY8ov_6tk1oA.ttf',
-        600 => 'http://fonts.gstatic.com/s/abhayalibre/v3/wBjdF6T34NCo7wQYXgzrc2v8CylhIUtwUiYO7Z2wXbE.ttf',
-        700 => 'http://fonts.gstatic.com/s/abhayalibre/v3/wBjdF6T34NCo7wQYXgzrc0D2ttfZwueP-QU272T9-k4.ttf',
-        800 => 'http://fonts.gstatic.com/s/abhayalibre/v3/wBjdF6T34NCo7wQYXgzrc_qsay_1ZmRGmC8pVRdIfAg.ttf',
-      ),
     ),
     3 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Abril Fatface',
-      'category' => 'display',
+      'family' => 'Aboreto',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/abrilfatface/v9/X1g_KwGeBV3ajZIXQ9VnDojjx0o0jr6fNXxPgYh_a8Q.ttf',
       ),
     ),
     4 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aclonica',
-      'category' => 'sans-serif',
+      'family' => 'Abril Fatface',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/aclonica/v8/M6pHZMPwK3DiBSlo3jwAKQ.ttf',
       ),
     ),
     5 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Acme',
-      'category' => 'sans-serif',
+      'family' => 'Abyssinica SIL',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/acme/v7/-J6XNtAHPZBEbsifCdBt-g.ttf',
       ),
     ),
     6 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Actor',
-      'category' => 'sans-serif',
+      'family' => 'Aclonica',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/actor/v7/ugMf40CrRK6Jf6Yz_xNSmQ.ttf',
       ),
     ),
     7 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Adamina',
-      'category' => 'serif',
+      'family' => 'Acme',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/adamina/v10/RUQfOodOMiVVYqFZcSlT9w.ttf',
-      ),
     ),
     8 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Actor',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    9 => 
+    array (
+      'family' => 'Adamina',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    10 => 
+    array (
+      'family' => 'ADLaM Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    11 => 
+    array (
       'family' => 'Advent Pro',
-      'category' => 'sans-serif',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    12 => 
+    array (
+      'family' => 'Afacad',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    13 => 
+    array (
+      'family' => 'Afacad Flux',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    14 => 
+    array (
+      'family' => 'Agbalumo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    15 => 
+    array (
+      'family' => 'Agdasima',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    16 => 
+    array (
+      'family' => 'Agrave Pro',
       'variants' => 
       array (
         0 => '100',
@@ -191,12533 +184,1249 @@ return array (
         5 => '600',
         6 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/adventpro/v7/87-JOpSUecTG50PBYK4ysi3USBnSvpkopQaUR-2r7iU.ttf',
-        200 => 'http://fonts.gstatic.com/s/adventpro/v7/URTSSjIp0Wr-GrjxFdFWnGeudeTO44zf-ht3k-KNzwg.ttf',
-        300 => 'http://fonts.gstatic.com/s/adventpro/v7/sJaBfJYSFgoB80OL1_66m0eOrDcLawS7-ssYqLr2Xp4.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/adventpro/v7/1NxMBeKVcNNH2H46AUR3wfesZW2xOQ-xsNqO47m55DA.ttf',
-        500 => 'http://fonts.gstatic.com/s/adventpro/v7/7kBth2-rT8tP40RmMMXMLJp-63r6doWhTEbsfBIRJ7A.ttf',
-        600 => 'http://fonts.gstatic.com/s/adventpro/v7/3Jo-2maCzv2QLzQBzaKHV_pTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/adventpro/v7/M4I6QiICt-ey_wZTpR2gKwJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    9 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aguafina Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/aguafinascript/v6/65g7cgMtMGnNlNyq_Z6CvMxLhO8OSNnfAp53LK1_iRs.ttf',
-      ),
-    ),
-    10 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Akronim',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/akronim/v7/qA0L2CSArk3tuOWE1AR1DA.ttf',
-      ),
-    ),
-    11 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aladin',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/aladin/v6/PyuJ5cVHkduO0j5fAMKvAA.ttf',
-      ),
-    ),
-    12 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aldrich',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/aldrich/v8/kMMW1S56gFx7RP_mW1g-Eg.ttf',
-      ),
-    ),
-    13 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alef',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alef/v9/ENvZ_P0HBDQxNZYCQO0lUA.ttf',
-        700 => 'http://fonts.gstatic.com/s/alef/v9/VDgZJhEwudtOzOFQpZ8MEA.ttf',
-      ),
-    ),
-    14 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alegreya',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-        4 => '900',
-        5 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alegreya/v9/62J3atXd6bvMU4qO_ca-eA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/alegreya/v9/cbshnQGxwmlHBjUil7DaIfesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/alegreya/v9/5oZtdI5-wQwgAFrd9erCsaCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/alegreya/v9/IWi8e5bpnqhMRsZKTcTUWgJKKGfqHaYFsRG-T3ceEVo.ttf',
-        900 => 'http://fonts.gstatic.com/s/alegreya/v9/oQeMxX-vxGImzDgX6nxA7KCWcynf_cDxXwCLxiixG1c.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/alegreya/v9/-L71QLH_XqgYWaI1GbOVhp0EAVxt0G0biEntp43Qt6E.ttf',
-      ),
-    ),
-    15 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alegreya SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-        4 => '900',
-        5 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alegreyasc/v8/3ozeFnTbygMK6PfHh8B-iqCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/alegreyasc/v8/GOqmv3FLsJ2r6ZALMZVBmkeOrDcLawS7-ssYqLr2Xp4.ttf',
-        700 => 'http://fonts.gstatic.com/s/alegreyasc/v8/M9OIREoxDkvynwTpBAYUq3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/alegreyasc/v8/5PCoU7IUfCicpKBJtBmP6c_zJjSACmk0BRPxQqhnNLU.ttf',
-        900 => 'http://fonts.gstatic.com/s/alegreyasc/v8/M9OIREoxDkvynwTpBAYUqyenaqEuufTBk9XMKnKmgDA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/alegreyasc/v8/5PCoU7IUfCicpKBJtBmP6U_yTOUGsoC54csJe1b-IRw.ttf',
-      ),
-    ),
-    16 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alegreya Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '500',
-        7 => '500italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '800',
-        11 => '800italic',
-        12 => '900',
-        13 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/alegreyasans/v6/TKyx_-JJ6MdpQruNk-t-PJFGFO4uyVFMfB6LZsii7kI.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/gRkSP2lBpqoMTVxg7DmVn2cDnjsrnI9_xJ-5gnBaHsE.ttf',
-        300 => 'http://fonts.gstatic.com/s/alegreyasans/v6/11EDm-lum6tskJMBbdy9acB1LjARzAvdqa1uQC32v70.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/WfiXipsmjqRqsDBQ1bA9CnfqlVoxTUFFx1C8tBqmbcg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/alegreyasans/v6/KYNzioYhDai7mTMnx_gDgn8f0n03UdmQgF_CLvNR2vg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/TKyx_-JJ6MdpQruNk-t-PD4G9C9ttb0Oz5Cvf0qOitE.ttf',
-        500 => 'http://fonts.gstatic.com/s/alegreyasans/v6/11EDm-lum6tskJMBbdy9aQqQmZ7VjhwksfpNVG0pqGc.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/WfiXipsmjqRqsDBQ1bA9Cs7DCVO6wo6i5LKIyZDzK40.ttf',
-        700 => 'http://fonts.gstatic.com/s/alegreyasans/v6/11EDm-lum6tskJMBbdy9aVCbmAUID8LN-q3pJpOk3Ys.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/WfiXipsmjqRqsDBQ1bA9CpF66r9C4AnxxlBlGd7xY4g.ttf',
-        800 => 'http://fonts.gstatic.com/s/alegreyasans/v6/11EDm-lum6tskJMBbdy9acxnD5BewVtRRHHljCwR2bM.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/WfiXipsmjqRqsDBQ1bA9CicOAJ_9MkLPbDmrtXDPbIU.ttf',
-        900 => 'http://fonts.gstatic.com/s/alegreyasans/v6/11EDm-lum6tskJMBbdy9aW42xlVP-j5dagE7-AU2zwg.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/alegreyasans/v6/WfiXipsmjqRqsDBQ1bA9ChRaDUI9aE8-k7PrIG2iiuo.ttf',
-      ),
     ),
     17 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alegreya Sans SC',
-      'category' => 'sans-serif',
+      'family' => 'Agu Display',
       'variants' => 
       array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '500',
-        7 => '500italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '800',
-        11 => '800italic',
-        12 => '900',
-        13 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/trwFkDJLOJf6hqM93944kVnzStfdnFU-MXbO84aBs_M.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/qG3gA9iy5RpXMH4crZboqqakMVR0XlJhO7VdJ8yYvA4.ttf',
-        300 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/AjAmkoP1y0Vaad0UPPR46-1IqtfxJspFjzJp0SaQRcI.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/0VweK-TO3aQgazdxg8fs0CnTKaH808trtzttbEg4yVA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/6kgb6ZvOagoVIRZyl8XV-EklWX-XdLVn1WTiuGuvKIU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/trwFkDJLOJf6hqM93944kTfqo69HNOlCNZvbwAmUtiA.ttf',
-        500 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/AjAmkoP1y0Vaad0UPPR46_hHTluI57wqxl55RvSYo3s.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/0VweK-TO3aQgazdxg8fs0NqVvxKdFVwqwzilqfVd39U.ttf',
-        700 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/AjAmkoP1y0Vaad0UPPR4600aId5t1FC-xZ8nmpa_XLk.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/0VweK-TO3aQgazdxg8fs0IBYn3VD6xMEnodOh8pnFw4.ttf',
-        800 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/AjAmkoP1y0Vaad0UPPR46wQgSHD3Lo1Mif2Wkk5swWA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/0VweK-TO3aQgazdxg8fs0HStmCm6Rs90XeztCALm0H8.ttf',
-        900 => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/AjAmkoP1y0Vaad0UPPR461Rf9EWUSEX_PR1d_gLKfpM.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/alegreyasanssc/v6/0VweK-TO3aQgazdxg8fs0IvtwEfTCJoOJugANj-jWDI.ttf',
+        0 => 'regular',
       ),
     ),
     18 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alex Brush',
-      'category' => 'handwriting',
+      'family' => 'Aguafina Script',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alexbrush/v8/ooh3KJFbKJSUoIRWfiu8o_esZW2xOQ-xsNqO47m55DA.ttf',
       ),
     ),
     19 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alfa Slab One',
-      'category' => 'display',
+      'family' => 'Akatab',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alfaslabone/v7/Qx6FPcitRwTC_k88tLPc-Yjjx0o0jr6fNXxPgYh_a8Q.ttf',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
       ),
     ),
     20 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alice',
-      'category' => 'serif',
+      'family' => 'Akaya Kanadaka',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alice/v9/wZTAfivekBqIg-rk63nFvQ.ttf',
       ),
     ),
     21 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alike',
-      'category' => 'serif',
+      'family' => 'Akaya Telivigala',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alike/v10/Ho8YpRKNk_202fwDiGNIyw.ttf',
       ),
     ),
     22 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Alike Angular',
-      'category' => 'serif',
+      'family' => 'Akronim',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/alikeangular/v8/OpeCu4xxI3qO1C7CZcJtPT3XH2uEnVI__ynTBvNyki8.ttf',
       ),
     ),
     23 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Allan',
-      'category' => 'display',
+      'family' => 'Akshar',
       'variants' => 
       array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/allan/v9/T3lemhgZmLQkQI2Qc2bQHA.ttf',
-        700 => 'http://fonts.gstatic.com/s/allan/v9/zSxQiwo7wgnr7KkMXhSiag.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
       ),
     ),
     24 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Allerta',
-      'category' => 'sans-serif',
+      'family' => 'Akt',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/allerta/v8/s9FOEuiJFTNbMe06ifzV8g.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
       ),
     ),
     25 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Allerta Stencil',
-      'category' => 'sans-serif',
+      'family' => 'Aladin',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/allertastencil/v8/CdSZfRtHbQrBohqmzSdDYFf2eT4jUldwg_9fgfY_tHc.ttf',
       ),
     ),
     26 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Allura',
-      'category' => 'handwriting',
+      'family' => 'Alan Sans',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/allura/v6/4hcqgZanyuJ2gMYWffIR6A.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
       ),
     ),
     27 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Almendra',
-      'category' => 'serif',
+      'family' => 'Alata',
       'variants' => 
       array (
         0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/almendra/v10/PDpbB-ZF7deXAAEYPkQOeg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/almendra/v10/CNWLyiDucqVKVgr4EMidi_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/almendra/v10/ZpLdQMj7Q2AFio4nNO6A76CWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/almendra/v10/-tXHKMcnn6FqrhJV3l1e3QJKKGfqHaYFsRG-T3ceEVo.ttf',
       ),
     ),
     28 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Almendra Display',
-      'category' => 'display',
+      'family' => 'Alatsi',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/almendradisplay/v8/2Zuu97WJ_ez-87yz5Ai8fF6uyC_qD11hrFQ6EGgTJWI.ttf',
       ),
     ),
     29 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Almendra SC',
-      'category' => 'serif',
+      'family' => 'Albert Sans',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/almendrasc/v8/IuiLd8Fm9I6raSalxMoWeaCWcynf_cDxXwCLxiixG1c.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
     30 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amarante',
-      'category' => 'display',
+      'family' => 'Aldrich',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amarante/v5/2dQHjIBWSpydit5zkJZnOw.ttf',
       ),
     ),
     31 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amaranth',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amaranth/v8/7VcBog22JBHsHXHdnnycTA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/amaranth/v8/UrJlRY9LcVERJSvggsdBqPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/amaranth/v8/j5OFHqadfxyLnQRxFeox6qCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/amaranth/v8/BHyuYFj9nqLFNvOvGh0xTwJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    32 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amatic SC',
-      'category' => 'handwriting',
+      'family' => 'Alef',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    32 => 
+    array (
+      'family' => 'Alegreya',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'hebrew',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amaticsc/v10/MldbRWLFytvqxU1y81xSVg.ttf',
-        700 => 'http://fonts.gstatic.com/s/amaticsc/v10/IDnkRTPGcrSVo50UyYNK7y3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
       ),
     ),
     33 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amethysta',
-      'category' => 'serif',
+      'family' => 'Alegreya Sans',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amethysta/v6/1jEo9tOFIJDolAUpBnWbnA.ttf',
+        0 => '100',
+        1 => '100italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '700',
+        9 => '700italic',
+        10 => '800',
+        11 => '800italic',
+        12 => '900',
+        13 => '900italic',
       ),
     ),
     34 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Alegreya Sans SC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '700',
+        9 => '700italic',
+        10 => '800',
+        11 => '800italic',
+        12 => '900',
+        13 => '900italic',
+      ),
+    ),
+    35 => 
+    array (
+      'family' => 'Alegreya SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '500',
+        3 => '500italic',
+        4 => '700',
+        5 => '700italic',
+        6 => '800',
+        7 => '800italic',
+        8 => '900',
+        9 => '900italic',
+      ),
+    ),
+    36 => 
+    array (
+      'family' => 'Aleo',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    37 => 
+    array (
+      'family' => 'Alex Brush',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    38 => 
+    array (
+      'family' => 'Alexandria',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    39 => 
+    array (
+      'family' => 'Alfa Slab One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    40 => 
+    array (
+      'family' => 'Alice',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    41 => 
+    array (
+      'family' => 'Alien Block',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    42 => 
+    array (
+      'family' => 'Alike',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    43 => 
+    array (
+      'family' => 'Alike Angular',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    44 => 
+    array (
+      'family' => 'Alkalami',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    45 => 
+    array (
+      'family' => 'Alkatra',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    46 => 
+    array (
+      'family' => 'Allan',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    47 => 
+    array (
+      'family' => 'Allerta',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    48 => 
+    array (
+      'family' => 'Allerta Stencil',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    49 => 
+    array (
+      'family' => 'Allison',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    50 => 
+    array (
+      'family' => 'Allkin',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    51 => 
+    array (
+      'family' => 'Allura',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    52 => 
+    array (
+      'family' => 'Almarai',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+        3 => '800',
+      ),
+    ),
+    53 => 
+    array (
+      'family' => 'Almendra',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    54 => 
+    array (
+      'family' => 'Almendra Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    55 => 
+    array (
+      'family' => 'Almendra SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    56 => 
+    array (
+      'family' => 'Alumni Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    57 => 
+    array (
+      'family' => 'Alumni Sans Collegiate One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    58 => 
+    array (
+      'family' => 'Alumni Sans Inline One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    59 => 
+    array (
+      'family' => 'Alumni Sans Pinstripe',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    60 => 
+    array (
+      'family' => 'Alumni Sans SC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    61 => 
+    array (
+      'family' => 'Alyamama',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    62 => 
+    array (
+      'family' => 'Amarante',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    63 => 
+    array (
+      'family' => 'Amaranth',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    64 => 
+    array (
+      'family' => 'Amarna',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    65 => 
+    array (
+      'family' => 'Amatic SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    66 => 
+    array (
+      'family' => 'Amethysta',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    67 => 
+    array (
       'family' => 'Amiko',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '600',
         2 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amiko/v2/A7bjc3cOLJtGgpPGnxyHsw.ttf',
-        600 => 'http://fonts.gstatic.com/s/amiko/v2/BaZst4RZ4sDyD3mH-BfVaA.ttf',
-        700 => 'http://fonts.gstatic.com/s/amiko/v2/6syx43mQ07VvOmpFc0G9Lg.ttf',
-      ),
-    ),
-    35 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amiri',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amiri/v9/ATARrPmSew75SlpOw2YABQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/amiri/v9/3t1yTQlLUXBw8htrqlXBrw.ttf',
-        700 => 'http://fonts.gstatic.com/s/amiri/v9/WQsR_moz-FNqVwGYgptqiA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/amiri/v9/uF8aNEyD0bxMeTBg9bFDSPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    36 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Amita',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/amita/v3/RhdhGBXSJqkHo6g7miTEcQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/amita/v3/cIYA2Lzp7l2pcGsqpUidBg.ttf',
-      ),
-    ),
-    37 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Anaheim',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/anaheim/v5/t-z8aXHMpgI2gjN_rIflKA.ttf',
-      ),
-    ),
-    38 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Andada',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/andada/v9/rSFaDqNNQBRw3y19MB5Y4w.ttf',
-      ),
-    ),
-    39 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Andika',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/andika/v9/oe-ag1G0lcqZ3IXfeEgaGg.ttf',
-      ),
-    ),
-    40 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Angkor',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/angkor/v10/DLpLgIS-8F10ecwKqCm95Q.ttf',
-      ),
-    ),
-    41 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Annie Use Your Telescope',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/annieuseyourtelescope/v8/2cuiO5VmaR09C8SLGEQjGqbp7mtG8sPlcZvOaO8HBak.ttf',
-      ),
-    ),
-    42 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Anonymous Pro',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'greek',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/anonymouspro/v11/Zhfjj_gat3waL4JSju74E-V_5zh5b-_HiooIRUBwn1A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/anonymouspro/v11/q0u6LFHwttnT_69euiDbWKwIsuKDCXG0NQm7BvAgx-c.ttf',
-        700 => 'http://fonts.gstatic.com/s/anonymouspro/v11/WDf5lZYgdmmKhO8E1AQud--Cz_5MeePnXDAcLNWyBME.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/anonymouspro/v11/_fVr_XGln-cetWSUc-JpfA1LL9bfs7wyIp6F8OC9RxA.ttf',
-      ),
-    ),
-    43 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Antic',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/antic/v9/hEa8XCNM7tXGzD0Uk0AipA.ttf',
-      ),
-    ),
-    44 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Antic Didone',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/anticdidone/v6/r3nJcTDuOluOL6LGDV1vRy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    45 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Antic Slab',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/anticslab/v6/PSbJCTKkAS7skPdkd7AKEvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    46 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Anton',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/anton/v9/XIbCenm-W0IRHWYIh7CGUQ.ttf',
-      ),
-    ),
-    47 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arapey',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arapey/v6/dqu823lrSYn8T2gApTdslA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/arapey/v6/pY-Xi5JNBpaWxy2tZhEm5A.ttf',
-      ),
-    ),
-    48 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arbutus',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arbutus/v7/Go_hurxoUsn5MnqNVQgodQ.ttf',
-      ),
-    ),
-    49 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arbutus Slab',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arbutusslab/v6/6k3Yp6iS9l4jRIpynA8qMy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    50 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Architects Daughter',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/architectsdaughter/v8/RXTgOOQ9AAtaVOHxx0IUBMCy0EhZjHzu-y0e6uLf4Fg.ttf',
-      ),
-    ),
-    51 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Archivo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/archivo/v3/r-UxY2mA_5pDuZN717veMA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/archivo/v3/xM6Bws4B8M6CBFj_NjFDmQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/archivo/v3/kolpDHEnC87zFuFfslSCevesZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/archivo/v3/MKuleTj-xvH_kzDLSfxAny3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/archivo/v3/ujChrOQvaQhWGqGyAyvouPesZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/archivo/v3/yabYJWzTLFXwCTAuo02FTC3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/archivo/v3/pOE88CC9eYkEsVEVFu184_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/archivo/v3/KPG24G28nybJri09faZ5fy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    52 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Archivo Black',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/archivoblack/v7/WoAoVT7K3k7hHfxKbvB6B51XQG8isOYYJhPIYAyrESQ.ttf',
-      ),
-    ),
-    53 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Archivo Narrow',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/archivonarrow/v8/DsLzC9scoPnrGiwYYMQXppTvAuddT2xDMbdz0mdLyZY.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/archivonarrow/v8/vqsrtPCpTU3tJlKfuXP5zUpmlyBQEFfdE6dERLXdQGQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/archivonarrow/v8/M__Wu4PAmHf4YZvQM8tWsFZXnRfcj2QuLtpR7YorIko.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/archivonarrow/v8/wG6O733y5zHl4EKCOh8rSQPEI7VifuA7dF_atQng58I.ttf',
-        600 => 'http://fonts.gstatic.com/s/archivonarrow/v8/M__Wu4PAmHf4YZvQM8tWsAYHMmBTXW-z0TFb_R_tMpQ.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/archivonarrow/v8/wG6O733y5zHl4EKCOh8rSQFfhWXBmyfiPDGj4ZvwGNU.ttf',
-        700 => 'http://fonts.gstatic.com/s/archivonarrow/v8/M__Wu4PAmHf4YZvQM8tWsMLtdzs3iyjn_YuT226ZsLU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/archivonarrow/v8/wG6O733y5zHl4EKCOh8rSTg5KB8MNJ4uPAETq9naQO8.ttf',
-      ),
-    ),
-    54 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aref Ruqaa',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arefruqaa/v4/kbqI055uLQz2hkccTTrYPfesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/arefruqaa/v4/RT-Q5DVI9arM6ZKux-UmTAJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    55 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arima Madurai',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '700',
-        6 => '800',
-        7 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'vietnamese',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/arimamadurai/v3/Q0tjl46beRRcUe3RlWWNrdyXLlNBCUjoM1yKFfVCFUI.ttf',
-        200 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4rArwWuxcSSKq67BdR6k5Rg.ttf',
-        300 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4joJ52uD-1fmXmi8u0n_zsc.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/arimamadurai/v3/8fNfThKRw_pr7MwgNdcHiW_MnNA9OgK8I1F23mNWOpE.ttf',
-        500 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4v_2zpxNHQ3utWt_82o9dAo.ttf',
-        700 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4qiiXuG_rGcOxkuidirlnJE.ttf',
-        800 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4khKLu0CevfTHM1eXjGnvQo.ttf',
-        900 => 'http://fonts.gstatic.com/s/arimamadurai/v3/EsCGNPwBfkMk17-w_DTJ4kZ0oshA7r_PlGegwiHddT8.ttf',
-      ),
-    ),
-    56 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arimo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'hebrew',
-        4 => 'greek',
-        5 => 'latin',
-        6 => 'greek-ext',
-        7 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arimo/v11/Gpeo80g-5ji2CcyXWnzh7g.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/arimo/v11/_OdGbnX2-qQ96C4OjhyuPw.ttf',
-        700 => 'http://fonts.gstatic.com/s/arimo/v11/ZItXugREyvV9LnbY_gxAmw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/arimo/v11/__nOLWqmeXdhfr0g7GaFePesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    57 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arizonia',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arizonia/v8/yzJqkHZqryZBTM7RKYV9Wg.ttf',
-      ),
-    ),
-    58 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Armata',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/armata/v8/1H8FwGgIRrbYtxSfXhOHlQ.ttf',
-      ),
-    ),
-    59 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arsenal',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arsenal/v2/PkcjwJ0AdgwImdsRdyzQQQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/arsenal/v2/FvYQ_YMyIFZw-8dXMYPhHg.ttf',
-        700 => 'http://fonts.gstatic.com/s/arsenal/v2/6R-JWA0Y5N2Lvul2TLOH3_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/arsenal/v2/AnUIg26c0nuMZMpNWtsDFy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    60 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Artifika',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/artifika/v8/Ekfp4H4QG7D-WsABDOyj8g.ttf',
-      ),
-    ),
-    61 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arvo',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arvo/v10/vvWPwz-PlZEwjOOIKqoZzA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/arvo/v10/id5a4BCjbenl5Gkqonw_Rw.ttf',
-        700 => 'http://fonts.gstatic.com/s/arvo/v10/OB3FDST7U38u3OjPK_vvRQ.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/arvo/v10/Hvl2MuWoXLaCy2v6MD4Yvw.ttf',
-      ),
-    ),
-    62 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Arya',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/arya/v3/xEVqtU3v8QLospHKpDaYEw.ttf',
-        700 => 'http://fonts.gstatic.com/s/arya/v3/N13tgOvG7VTXawiI-fJiQA.ttf',
-      ),
-    ),
-    63 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Asap',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/asap/v7/2lf-1MDR8tsTpEtvJmr2hA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/asap/v7/mwxNHf8QS8gNWCAMwkJNIg.ttf',
-        500 => 'http://fonts.gstatic.com/s/asap/v7/bSf7UzaPFkjzB9TuOPVhgw.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/asap/v7/RUbFVj3EkB2Yo9QDVzDKLw.ttf',
-        600 => 'http://fonts.gstatic.com/s/asap/v7/aj9e6BCAPmcrrkHyAtWfSg.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/asap/v7/lSgrQWENLu3EVBpHYwzirw.ttf',
-        700 => 'http://fonts.gstatic.com/s/asap/v7/o5RUA7SsJ80M8oDFBnrDbg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/asap/v7/_rZz9y2oXc09jT5T6BexLQ.ttf',
-      ),
-    ),
-    64 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Asap Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/asapcondensed/v2/WnB1QP0n-KM9-GXLGChcYSavnWbQ852KImK774Atfew.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/asapcondensed/v2/qnSL07X2cz9966iZSWZCBfYZB3dvQ7xQFxvHcvx7fMA.ttf',
-        500 => 'http://fonts.gstatic.com/s/asapcondensed/v2/TyBiCbCbffkYs45BrMexjI_Y-6sQdpH-OU-ZdWEi-4E.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/asapcondensed/v2/9jDg2d4w2asxgWRh6ddxUYiIPHHw_LT0InVaNEq3i9o.ttf',
-        600 => 'http://fonts.gstatic.com/s/asapcondensed/v2/TyBiCbCbffkYs45BrMexjKfWDuPM568rGzS6rTUUBAI.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/asapcondensed/v2/9jDg2d4w2asxgWRh6ddxUSWF8ZKt6Ad7F4DSH_awyvE.ttf',
-        700 => 'http://fonts.gstatic.com/s/asapcondensed/v2/TyBiCbCbffkYs45BrMexjDuwRdwRx6RgmD2V-BAnY3I.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/asapcondensed/v2/9jDg2d4w2asxgWRh6ddxUWd8_gdoFFngi4b8GzqPlPw.ttf',
-      ),
-    ),
-    65 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Asar',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/asar/v4/mSmn3H5CcMA84CZ586X7WQ.ttf',
-      ),
-    ),
-    66 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Asset',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/asset/v8/hfPmqY-JzuR1lULlQf9iTg.ttf',
-      ),
-    ),
-    67 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Assistant',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '600',
-        4 => '700',
-        5 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/assistant/v2/xXstfiHQzjB9j5ZxYTBoZy3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/assistant/v2/vPC3tCw3LOzCSeGCtVp5Wi3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/assistant/v2/2iDwv6DBtyixlK5YHngp1w.ttf',
-        600 => 'http://fonts.gstatic.com/s/assistant/v2/Y4UC5nQA69lWpfV0itoWLi3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/assistant/v2/dZywGH4pMxP6OVyrppOJxy3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/assistant/v2/-mTR0sX8a0RsadH4AMDT8C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
     68 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Astloch',
-      'category' => 'display',
+      'family' => 'Amiri',
       'variants' => 
       array (
         0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/astloch/v8/fmbitVmHYLQP7MGPuFgpag.ttf',
-        700 => 'http://fonts.gstatic.com/s/astloch/v8/aPkhM2tL-tz1jX6aX2rvo_esZW2xOQ-xsNqO47m55DA.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     69 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Asul',
-      'category' => 'sans-serif',
+      'family' => 'Amiri Quran',
       'variants' => 
       array (
         0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/asul/v7/9qpsNR_OOwyOYyo2N0IbBw.ttf',
-        700 => 'http://fonts.gstatic.com/s/asul/v7/uO8uNmxaq87-DdPmkEg5Gg.ttf',
       ),
     ),
     70 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Athiti',
-      'category' => 'sans-serif',
+      'family' => 'Amita',
       'variants' => 
       array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/athiti/v2/Ge5skdKwzxRPajVLdOJuIg.ttf',
-        300 => 'http://fonts.gstatic.com/s/athiti/v2/OoT7lj4AaSp1JpGJLKn3CA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/athiti/v2/e7eiIKP18Iz9Kg1xat6AYw.ttf',
-        500 => 'http://fonts.gstatic.com/s/athiti/v2/W3pP-ANXfsMOVOG-cqqMFw.ttf',
-        600 => 'http://fonts.gstatic.com/s/athiti/v2/kYx3dtUYNEuUlzWczYzsmQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/athiti/v2/tyXFOxQyZGXfqHhtqSikdw.ttf',
+        0 => 'regular',
+        1 => '700',
       ),
     ),
     71 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Atma',
-      'category' => 'display',
+      'family' => 'Anaheim',
       'variants' => 
       array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'bengali',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/atma/v3/noxn2r6cT3JgmEDt6Ip5pQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/atma/v3/dkXPrLoE_uqcgUFj4JdfRQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/atma/v3/Htksg3ZXeAEbSvUdTQX-uw.ttf',
-        600 => 'http://fonts.gstatic.com/s/atma/v3/EGUwD65ZZn9IIHp5Y36b4A.ttf',
-        700 => 'http://fonts.gstatic.com/s/atma/v3/-fkXl3wADUHjobbwO9d-Wg.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
       ),
     ),
     72 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Atomic Age',
-      'category' => 'display',
+      'family' => 'Ancizar Sans',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/atomicage/v9/WvBMe4FxANIKpo6Oi0mVJ_esZW2xOQ-xsNqO47m55DA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
     73 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Aubrey',
-      'category' => 'display',
+      'family' => 'Ancizar Serif',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/aubrey/v10/zo9w8klO8bmOQIMajQ2aTA.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
       ),
     ),
     74 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Audiowide',
-      'category' => 'display',
+      'family' => 'Andada Pro',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/audiowide/v6/yGcwRZB6VmoYhPUYT-mEow.ttf',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => 'italic',
+        6 => '500italic',
+        7 => '600italic',
+        8 => '700italic',
+        9 => '800italic',
       ),
     ),
     75 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Autour One',
-      'category' => 'display',
+      'family' => 'Andika',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/autourone/v7/2xmQBcg7FN72jaQRFZPIDvesZW2xOQ-xsNqO47m55DA.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     76 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Average',
-      'category' => 'serif',
+      'family' => 'Anek Bangla',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/average/v6/aHUibBqdDbVYl5FM48pxyQ.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     77 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Average Sans',
-      'category' => 'sans-serif',
+      'family' => 'Anek Devanagari',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/averagesans/v6/dnU3R-5A_43y5bIyLztPsS3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     78 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Averia Gruesa Libre',
-      'category' => 'display',
+      'family' => 'Anek Gujarati',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/averiagruesalibre/v6/10vbZTOoN6T8D-nvDzwRFyXcKHuZXlCN8VkWHpkUzKM.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     79 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Averia Libre',
-      'category' => 'display',
+      'family' => 'Anek Gurmukhi',
       'variants' => 
       array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/averialibre/v6/r6hGL8sSLm4dTzOPXgx5XacQoVhARpoaILP7amxE_8g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/averialibre/v6/I6wAYuAvOgT7el2ePj2nkina0FLWfcB-J_SAYmcAXaI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/averialibre/v6/rYVgHZZQICWnhjguGsBspC3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/averialibre/v6/1etzuoNxVHR8F533EkD1WfMZXuCXbOrAvx5R0IT5Oyo.ttf',
-        700 => 'http://fonts.gstatic.com/s/averialibre/v6/r6hGL8sSLm4dTzOPXgx5XUD2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/averialibre/v6/I6wAYuAvOgT7el2ePj2nkvAs9-1nE9qOqhChW0m4nDE.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     80 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Averia Sans Libre',
-      'category' => 'display',
+      'family' => 'Anek Kannada',
       'variants' => 
       array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/averiasanslibre/v6/_9-jTfQjaBsWAF_yp5z-V4CP_KG_g80s1KXiBtJHoNc.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/averiasanslibre/v6/o7BEIK-fG3Ykc5Rzteh88YuyGu4JqttndUh4gRKxic0.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/averiasanslibre/v6/yRJpjT39KxACO9F31mj_LqV8_KRn4epKAjTFK1s1fsg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/averiasanslibre/v6/COEzR_NPBSUOl3pFwPbPoCZU2HnUZT1xVKaIrHDioao.ttf',
-        700 => 'http://fonts.gstatic.com/s/averiasanslibre/v6/_9-jTfQjaBsWAF_yp5z-V8QwVOrz1y5GihpZmtKLhlI.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/averiasanslibre/v6/o7BEIK-fG3Ykc5Rzteh88bXy1DXgmJcVtKjM5UWamMs.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     81 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Averia Serif Libre',
-      'category' => 'display',
+      'family' => 'Anek Latin',
       'variants' => 
       array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/yvITAdr5D1nlsdFswJAb8SmC4gFJ2PHmfdVKEd_5S9M.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/YOLFXyye4sZt6AZk1QybCG2okl0bU63CauowU4iApig.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/fdtF30xa_Erw0zAzOoG4BZqY66i8AUyI16fGqw0iAew.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/o9qhvK9iT5iDWfyhQUe-6Ru_b0bTq5iipbJ9hhgHJ6U.ttf',
-        700 => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/yvITAdr5D1nlsdFswJAb8Q50KV5TaOVolur4zV2iZsg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/averiaseriflibre/v7/YOLFXyye4sZt6AZk1QybCNxohRXP4tNDqG3X4Hqn21k.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     82 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bad Script',
-      'category' => 'handwriting',
+      'family' => 'Anek Malayalam',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/badscript/v6/cRyUs0nJ2eMQFHwBsZNRXfesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     83 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bahiana',
-      'category' => 'display',
+      'family' => 'Anek Odia',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bahiana/v2/uUnBWf2QkuMyfXPof7lcwQ.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     84 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo',
-      'category' => 'display',
+      'family' => 'Anek Tamil',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'devanagari',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloo/v3/uFkbq9GEAWUcT0XNeptJ1Q.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     85 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Bhai',
-      'category' => 'display',
+      'family' => 'Anek Telugu',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'gujarati',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloobhai/v3/FQvpC-04bh2QINuWAdnNW_esZW2xOQ-xsNqO47m55DA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
       ),
     ),
     86 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Bhaijaan',
-      'category' => 'display',
+      'family' => 'Angkor',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'arabic',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloobhaijaan/v2/WADJjVg5Kkv7JQ_7Ty9eDj083UVTX9pxrhfn5xHQ3fY.ttf',
       ),
     ),
     87 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Bhaina',
-      'category' => 'display',
+      'family' => 'Annapurna SIL',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'oriya',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloobhaina/v3/HxxbxOVf9WQem_hKo1MXSi3USBnSvpkopQaUR-2r7iU.ttf',
+        1 => '700',
       ),
     ),
     88 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Chettan',
-      'category' => 'display',
+      'family' => 'Annie Use Your Telescope',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'malayalam',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloochettan/v3/ODsFofLybGVOJ90e_EwdFbyYXtM25qb63HASTPtoTFA.ttf',
       ),
     ),
     89 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Da',
-      'category' => 'display',
+      'family' => 'Anonymous Pro',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'bengali',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/balooda/v3/RAJ0l2eJl_HDURCVxRE1iQ.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     90 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Paaji',
-      'category' => 'display',
+      'family' => 'Anta',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'gurmukhi',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloopaaji/v3/KeqAjVRzso6QUEfpMLQ-7KCWcynf_cDxXwCLxiixG1c.ttf',
       ),
     ),
     91 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Tamma',
-      'category' => 'display',
+      'family' => 'Antic',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'kannada',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/balootamma/v3/-FKAYy14SAfG8Gc6YAAaMaCWcynf_cDxXwCLxiixG1c.ttf',
       ),
     ),
     92 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Tammudu',
-      'category' => 'display',
+      'family' => 'Antic Didone',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'telugu',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/balootammudu/v3/_VlYJH4sGzgC_fTDQEKfT6ESp5dI1YWe8pDCvQ6RhbI.ttf',
       ),
     ),
     93 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baloo Thambi',
-      'category' => 'display',
+      'family' => 'Antic Slab',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'vietnamese',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baloothambi/v3/qXK3dZIeU-O-HruaN5cK0y3USBnSvpkopQaUR-2r7iU.ttf',
       ),
     ),
     94 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Balthazar',
-      'category' => 'serif',
+      'family' => 'Anton',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/balthazar/v6/WgbaSIs6dJAGXJ0qbz2xlw.ttf',
       ),
     ),
     95 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bangers',
-      'category' => 'display',
+      'family' => 'Anton SC',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bangers/v10/WAffdge5w99Xif-DLeqmcA.ttf',
       ),
     ),
     96 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Barrio',
-      'category' => 'display',
+      'family' => 'Antonio',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/barrio/v2/kzvMfZB0agZKzXC5yyRwWA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
       ),
     ),
     97 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Basic',
-      'category' => 'sans-serif',
+      'family' => 'Anuphan',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/basic/v7/hNII2mS5Dxw5C0u_m3mXgA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
       ),
     ),
     98 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Battambang',
-      'category' => 'display',
+      'family' => 'Anybody',
       'variants' => 
       array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/battambang/v11/MzrUfQLefYum5vVGM3EZVPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/battambang/v11/dezbRtMzfzAA99DmrCYRMgJKKGfqHaYFsRG-T3ceEVo.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
     99 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Baumans',
-      'category' => 'display',
+      'family' => 'Aoboshi One',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/baumans/v7/o0bFdPW1H5kd5saqqOcoVg.ttf',
       ),
     ),
     100 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bayon',
-      'category' => 'display',
+      'family' => 'AR One Sans',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bayon/v10/yTubusjTnpNRZwA4_50iVw.ttf',
+        1 => '500',
+        2 => '600',
+        3 => '700',
       ),
     ),
     101 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Belgrano',
-      'category' => 'serif',
+      'family' => 'Arapey',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/belgrano/v8/iq8DUa2s7g6WRCeMiFrmtQ.ttf',
+        1 => 'italic',
       ),
     ),
     102 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bellefair',
-      'category' => 'serif',
+      'family' => 'Arbutus',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bellefair/v3/V_AInB3Ikm6UgW6_YKlk2g.ttf',
       ),
     ),
     103 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Belleza',
-      'category' => 'sans-serif',
+      'family' => 'Arbutus Slab',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/belleza/v6/wchA3BWJlVqvIcSeNZyXew.ttf',
       ),
     ),
     104 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'BenchNine',
-      'category' => 'sans-serif',
+      'family' => 'Architects Daughter',
       'variants' => 
       array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/benchnine/v6/ah9xtUy9wLQ3qnWa2p-piS3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/benchnine/v6/h3OAlYqU3aOeNkuXgH2Q2w.ttf',
-        700 => 'http://fonts.gstatic.com/s/benchnine/v6/qZpi6ZVZg3L2RL_xoBLxWS3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
       ),
     ),
     105 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bentham',
-      'category' => 'serif',
+      'family' => 'Archivo',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bentham/v8/5-Mo8Fe7yg5tzV0GlQIuzQ.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
     106 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Berkshire Swash',
-      'category' => 'handwriting',
+      'family' => 'Archivo Black',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/berkshireswash/v6/4RZJjVRPjYnC2939hKCAimKfbtsIjCZP_edQljX9gR0.ttf',
       ),
     ),
     107 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bevan',
-      'category' => 'display',
+      'family' => 'Archivo Narrow',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bevan/v9/Rtg3zDsCeQiaJ_Qno22OJA.ttf',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
       ),
     ),
     108 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bigelow Rules',
-      'category' => 'display',
+      'family' => 'Are You Serious',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bigelowrules/v6/FEJCPLwo07FS-6SK6Al50X8f0n03UdmQgF_CLvNR2vg.ttf',
       ),
     ),
     109 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bigshot One',
-      'category' => 'display',
+      'family' => 'Aref Ruqaa',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bigshotone/v8/wSyZjBNTWDQHnvWE2jt6j6CWcynf_cDxXwCLxiixG1c.ttf',
+        1 => '700',
       ),
     ),
     110 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bilbo',
-      'category' => 'handwriting',
+      'family' => 'Aref Ruqaa Ink',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bilbo/v7/-ty-lPs5H7OIucWbnpFrkA.ttf',
+        1 => '700',
       ),
     ),
     111 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bilbo Swash Caps',
-      'category' => 'handwriting',
+      'family' => 'Arima',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bilboswashcaps/v9/UB_-crLvhx-PwGKW1oosDmYeFSdnSpRYv5h9gpdlD1g.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
       ),
     ),
     112 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'BioRhyme',
-      'category' => 'serif',
+      'family' => 'Arimo',
       'variants' => 
       array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
         3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/biorhyme/v2/bj-6g_1gJHCc9xQZtLWL36CWcynf_cDxXwCLxiixG1c.ttf',
-        300 => 'http://fonts.gstatic.com/s/biorhyme/v2/jWqHmLFlu30n7xp12uZd8qCWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/biorhyme/v2/n6v5UkVPy_CjbP3fvsu1CA.ttf',
-        700 => 'http://fonts.gstatic.com/s/biorhyme/v2/36KN76U1iKt5TFDm2lBz0KCWcynf_cDxXwCLxiixG1c.ttf',
-        800 => 'http://fonts.gstatic.com/s/biorhyme/v2/k6bYbUnESjLYnworWvSTL6CWcynf_cDxXwCLxiixG1c.ttf',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
       ),
     ),
     113 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'BioRhyme Expanded',
-      'category' => 'serif',
+      'family' => 'Arizonia',
       'variants' => 
       array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/biorhymeexpanded/v3/FKL4Vyxmq2vsiDrSOzz2sC7oxZzNh3ej55UHm-HviBI.ttf',
-        300 => 'http://fonts.gstatic.com/s/biorhymeexpanded/v3/FKL4Vyxmq2vsiDrSOzz2sFu4cYPPksG4MRjB5UiYPPw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/biorhymeexpanded/v3/hgBNpgjTRZzGmZxqN5OuVjndr_hij4ilAk2n1d1AhsE.ttf',
-        700 => 'http://fonts.gstatic.com/s/biorhymeexpanded/v3/FKL4Vyxmq2vsiDrSOzz2sMVisRVfPEfQ0jijOMQbr0Q.ttf',
-        800 => 'http://fonts.gstatic.com/s/biorhymeexpanded/v3/FKL4Vyxmq2vsiDrSOzz2sIv1v1eCT6RPbcYZYQ1T1CE.ttf',
+        0 => 'regular',
       ),
     ),
     114 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Biryani',
-      'category' => 'sans-serif',
+      'family' => 'Armata',
       'variants' => 
       array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '600',
-        4 => '700',
-        5 => '800',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/biryani/v3/Xx38YzyTFF8n6mRS1Yd88vesZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/biryani/v3/u-bneRbizmFMd0VQp5Ze6vesZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/biryani/v3/W7bfR8-IY76Xz0QoB8L2xw.ttf',
-        600 => 'http://fonts.gstatic.com/s/biryani/v3/1EdcPCVxBR2txgjrza6_YPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/biryani/v3/qN2MTZ0j1sKSCtfXLB2dR_esZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/biryani/v3/DJyziS7FEy441v22InYdevesZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/biryani/v3/trcLkrIut0lM_PPSyQfAMPesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => 'regular',
       ),
     ),
     115 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bitter',
-      'category' => 'serif',
+      'family' => 'Arsenal',
       'variants' => 
       array (
         0 => 'regular',
         1 => 'italic',
         2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bitter/v12/w_BNdJvVZDRmqy5aSfB2kQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/bitter/v12/TC0FZEVzXQIGgzmRfKPZbA.ttf',
-        700 => 'http://fonts.gstatic.com/s/bitter/v12/4dUtr_4BvHuoRU35suyOAg.ttf',
+        3 => '700italic',
       ),
     ),
     116 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Black Ops One',
-      'category' => 'display',
+      'family' => 'Arsenal SC',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/blackopsone/v9/2XW-DmDsGbDLE372KrMW1Yjjx0o0jr6fNXxPgYh_a8Q.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     117 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bokor',
-      'category' => 'display',
+      'family' => 'Artifika',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bokor/v10/uAKdo0A85WW23Gs6mcbw7A.ttf',
       ),
     ),
     118 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bonbon',
-      'category' => 'handwriting',
+      'family' => 'Arvo',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bonbon/v9/IW3u1yzG1knyW5oz0s9_6Q.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     119 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Boogaloo',
-      'category' => 'display',
+      'family' => 'Arya',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/boogaloo/v8/4Wu1tvFMoB80fSu8qLgQfQ.ttf',
+        1 => '700',
       ),
     ),
     120 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bowlby One',
-      'category' => 'display',
+      'family' => 'Asap',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bowlbyone/v9/eKpHjHfjoxM2bX36YNucefesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
     121 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bowlby One SC',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bowlbyonesc/v9/8ZkeXftTuzKBtmxOYXoRedDkZCMxWJecxjvKm2f8MJw.ttf',
-      ),
-    ),
-    122 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Brawler',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/brawler/v8/3gfSw6imxQnQxweVITqUrg.ttf',
-      ),
-    ),
-    123 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bree Serif',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/breeserif/v7/5h9crBVIrvZqgf34FHcnEfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    124 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bubblegum Sans',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bubblegumsans/v6/Y9iTUUNz6lbl6TrvV4iwsytnKWgpfO2iSkLzTz-AABg.ttf',
-      ),
-    ),
-    125 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bubbler One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bubblerone/v6/e8S0qevkZAFaBybtt_SU4qCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    126 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Buda',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '300',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/buda/v8/hLtAmNUmEMJH2yx7NGUjnA.ttf',
-      ),
-    ),
-    127 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Buenard',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/buenard/v9/NSpMPGKAUgrLrlstYVvIXQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/buenard/v9/yUlGE115dGr7O9w9FlP3UvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    128 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bungee',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bungee/v3/0jM4G9s968t1_tpwzM9UDg.ttf',
-      ),
-    ),
-    129 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bungee Hairline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bungeehairline/v3/8Li3dr3whdkxuk7pmLaZaSom6rTIagUDR1YFcrrRZjQ.ttf',
-      ),
-    ),
-    130 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bungee Inline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bungeeinline/v3/Tb-1914q4rFpjT-F66PLCYjjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    131 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bungee Outline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bungeeoutline/v3/PcidvzXIcqS2Qwxm_iG6bLAREgn5xbW23GEXXnhMQ5Y.ttf',
-      ),
-    ),
-    132 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Bungee Shade',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/bungeeshade/v3/HSW7pxPYXBWkq7OSnuXoeC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    133 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Butcherman',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/butcherman/v9/bxiJmD567sPBVpJsT0XR0vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    134 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Butterfly Kids',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/butterflykids/v6/J4NTF5M25htqeTffYImtlUZaDk62iwTBnbnvwSjZciA.ttf',
-      ),
-    ),
-    135 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cabin',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cabin/v12/XeuAFYo2xAPHxZGBbQtHhA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cabin/v12/0tJ9k3DI5xC4GBgs1E_Jxw.ttf',
-        500 => 'http://fonts.gstatic.com/s/cabin/v12/HgsCQ-k3_Z_uQ86aFolNBg.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/cabin/v12/50sjhrGE0njyO-7mGDhGP_esZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/cabin/v12/eUDAvKhBtmTCkeVBsFk34A.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/cabin/v12/sFQpQDBd3G2om0Nl5dD2CvesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/cabin/v12/4EKhProuY1hq_WCAomq9Dg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cabin/v12/K83QKi8MOKLEqj6bgZ7LrfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    136 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cabin Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cabincondensed/v11/B0txb0blf2N29WdYPJjMSiQPsWWoiv__AzYJ9Zzn9II.ttf',
-        500 => 'http://fonts.gstatic.com/s/cabincondensed/v11/Ez4zJbsGr2BgXcNUWBVgEARL_-ABKXdjsJSPT0lc2Bk.ttf',
-        600 => 'http://fonts.gstatic.com/s/cabincondensed/v11/Ez4zJbsGr2BgXcNUWBVgELS5sSASxc8z4EQTQj7DCAI.ttf',
-        700 => 'http://fonts.gstatic.com/s/cabincondensed/v11/Ez4zJbsGr2BgXcNUWBVgEMAWgzcA047xWLixhLCofl8.ttf',
-      ),
-    ),
-    137 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cabin Sketch',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cabinsketch/v11/d9fijO34zQajqQvl3YHRCS3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/cabinsketch/v11/ki3SSN5HMOO0-IOLOj069ED2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    138 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Caesar Dressing',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/caesardressing/v6/2T_WzBgE2Xz3FsyJMq34T9gR43u4FvCuJwIfF5Zxl6Y.ttf',
-      ),
-    ),
-    139 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cagliostro',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cagliostro/v6/i85oXbtdSatNEzss99bpj_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    140 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cairo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '600',
-        4 => '700',
-        5 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/cairo/v2/9BU6Hrio9syG9zwo_CNPXg.ttf',
-        300 => 'http://fonts.gstatic.com/s/cairo/v2/mpy3SIEJVOIfFnVLujcRDg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cairo/v2/-tPnHq7mmAjcjJRSjsuZGA.ttf',
-        600 => 'http://fonts.gstatic.com/s/cairo/v2/Ct_3a0tcTEyNNSnuZKDd7g.ttf',
-        700 => 'http://fonts.gstatic.com/s/cairo/v2/ONxTSBYfmg-V5CkIwS_5gQ.ttf',
-        900 => 'http://fonts.gstatic.com/s/cairo/v2/Fm-hIVCp5OI5mO4Ec71jcw.ttf',
-      ),
-    ),
-    141 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Calligraffitti',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/calligraffitti/v9/vLVN2Y-z65rVu1R7lWdvyDXz_orj3gX0_NzfmYulrko.ttf',
-      ),
-    ),
-    142 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cambay',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cambay/v3/etU9Bab4VuhzS-OKsb1VXg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cambay/v3/ZEz9yNqpEOgejaw1rBhugQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/cambay/v3/jw9niBxa04eEhnSwTWCEgw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cambay/v3/j-5v_uUr0NXTumWN0siOiaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    143 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cambo',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cambo/v6/PnwpRuTdkYCf8qk4ajmNRA.ttf',
-      ),
-    ),
-    144 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Candal',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/candal/v7/x44dDW28zK7GR1gGDBmj9g.ttf',
-      ),
-    ),
-    145 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cantarell',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cantarell/v7/p5ydP_uWQ5lsFzcP_XVMEw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cantarell/v7/DTCLtOSqP-7dgM-V_xKUjqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/cantarell/v7/Yir4ZDsCn4g1kWopdg-ehC3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cantarell/v7/weehrwMeZBXb0QyrWnRwFXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    146 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cantata One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cantataone/v7/-a5FDvnBqaBMDaGgZYnEfqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    147 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cantora One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cantoraone/v7/oI-DS62RbHI8ZREjp73ehqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    148 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Capriola',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/capriola/v5/JxXPlkdzWwF9Cwelbvi9jA.ttf',
-      ),
-    ),
-    149 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cardo',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-        1 => 'latin',
-        2 => 'greek-ext',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cardo/v9/jbkF2_R0FKUEZTq5dwSknQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cardo/v9/pcv4Np9tUkq0YREYUcEEJQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/cardo/v9/lQN30weILimrKvp8rZhF1w.ttf',
-      ),
-    ),
-    150 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Carme',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/carme/v8/08E0NP1eRBEyFRUadmMfgA.ttf',
-      ),
-    ),
-    151 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Carrois Gothic',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/carroisgothic/v7/GCgb7bssGpwp7V5ynxmWy2x3d0cwUleGuRTmCYfCUaM.ttf',
-      ),
-    ),
-    152 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Carrois Gothic SC',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/carroisgothicsc/v7/bVp4nhwFIXU-r3LqUR8DSJTdPW1ioadGi2uRiKgJVCY.ttf',
-      ),
-    ),
-    153 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Carter One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/carterone/v9/5X_LFvdbcB7OBG7hBgZ7fPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    154 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Catamaran',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/catamaran/v4/ilWHBiy0krUPdlmYxDuqC6CWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/catamaran/v4/hFc-HKSsGk6M-psujei1MC3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/catamaran/v4/Aaag4ccR7Oh_4eai-jbrYC3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/catamaran/v4/MdNkM-DU8f6R-25Nxpr_XA.ttf',
-        500 => 'http://fonts.gstatic.com/s/catamaran/v4/83WSX3F86qsvj1Z4EI0tQi3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/catamaran/v4/a9PlHHnuBWiGGk0TwuFKTi3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/catamaran/v4/PpgVtUHUdnBZYNpnzGbScy3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/catamaran/v4/6VjB_uSfn3DZ93IQv58CmC3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/catamaran/v4/5ys9TqpQc9Q6gHqbSox6py3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    155 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Caudex',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-        1 => 'latin',
-        2 => 'greek-ext',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/caudex/v7/PWEexiHLDmQbn2b1OPZWfg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/caudex/v7/XjMZF6XCisvV3qapD4oJdw.ttf',
-        700 => 'http://fonts.gstatic.com/s/caudex/v7/PetCI4GyQ5Q3LiOzUu_mMg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/caudex/v7/yT8YeHLjaJvQXlUEYOA8gqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    156 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Caveat',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/caveat/v3/8I23b6N-6rRVbh-C_Vx3yA.ttf',
-        700 => 'http://fonts.gstatic.com/s/caveat/v3/LkaFtQENGJry2eUMwGRTeA.ttf',
-      ),
-    ),
-    157 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Caveat Brush',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/caveatbrush/v3/_d7bgsk3hfC4DXnUEeYKsy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    158 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cedarville Cursive',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cedarvillecursive/v8/cuCe6HrkcqrWTWTUE7dw-41zwq9-z_Lf44CzRAA0d0Y.ttf',
-      ),
-    ),
-    159 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ceviche One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cevicheone/v8/WOaXIMBD4VYMy39MsobJhKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    160 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Changa',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/changa/v3/QNWVD9FzsnhVmHzE7HryDQ.ttf',
-        300 => 'http://fonts.gstatic.com/s/changa/v3/OKZ0H1bMg3M9EZMVzgQ9fg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/changa/v3/7_e8qktkj6uKM0DamZJY9Q.ttf',
-        500 => 'http://fonts.gstatic.com/s/changa/v3/KrXcHYf9ILB8aFWCj0Vfxg.ttf',
-        600 => 'http://fonts.gstatic.com/s/changa/v3/6uCpqxwcsYkfV0M8Ls6WPA.ttf',
-        700 => 'http://fonts.gstatic.com/s/changa/v3/vAXzeaPkdpxlejFN7h0ibw.ttf',
-        800 => 'http://fonts.gstatic.com/s/changa/v3/H3IsiH2Fx0Pc4_OU4HSpng.ttf',
-      ),
-    ),
-    161 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Changa One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/changaone/v10/dr4qjce4W3kxFrZRkVD87fesZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/changaone/v10/wJVQlUs1lAZel-WdTo2U9y3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    162 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chango',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chango/v6/3W3AeMMtRTH08t5qLOjBmg.ttf',
-      ),
-    ),
-    163 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chathura',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '300',
-        2 => 'regular',
-        3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/chathura/v3/7tUse0wFXIOSPewsdeNXPvesZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/chathura/v3/Gmhr6ULHnPDt9spOZrHOfKCWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/chathura/v3/7hRNO-_zjRopkcP2n1rr8g.ttf',
-        700 => 'http://fonts.gstatic.com/s/chathura/v3/BO9LvNAseMQ3n1tKWH-uTKCWcynf_cDxXwCLxiixG1c.ttf',
-        800 => 'http://fonts.gstatic.com/s/chathura/v3/prh_X_5NSsBQefIdGi5B6KCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    164 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chau Philomene One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chauphilomeneone/v7/KKc5egCL-a2fFVoOA2x6tBFi5dxgSTdxqnMJgWkBJcg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/chauphilomeneone/v7/eJj1PY_iN4KiIuyOvtMHJP6uyLkxyiC4WcYA74sfquE.ttf',
-      ),
-    ),
-    165 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chela One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chelaone/v6/h5O0dEnpnIq6jQnWxZybrA.ttf',
-      ),
-    ),
-    166 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chelsea Market',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chelseamarket/v5/qSdzwh2A4BbNemy78sJLfAAI1i8fIftCBXsBF2v9UMI.ttf',
-      ),
-    ),
-    167 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chenla',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chenla/v10/aLNpdAUDq2MZbWz2U1a16g.ttf',
-      ),
-    ),
-    168 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cherry Cream Soda',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cherrycreamsoda/v8/OrD-AUnFcZeeKa6F_c0_WxOiHiuAPYA9ry3O1RG2XIU.ttf',
-      ),
-    ),
-    169 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cherry Swash',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cherryswash/v5/HqOk7C7J1TZ5i3L-ejF0vi3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/cherryswash/v5/-CfyMyQqfucZPQNB0nvYyED2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    170 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chewy',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chewy/v9/hcDN5cvQdIu6Bx4mg_TSyw.ttf',
-      ),
-    ),
-    171 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chicle',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chicle/v6/xg4q57Ut9ZmyFwLp51JLgg.ttf',
-      ),
-    ),
-    172 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chivo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-        6 => '900',
-        7 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/chivo/v9/NB24D2RW9gYUd3ctGd-AhA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/chivo/v9/A0NbKkUXhyt-4OxUzvrNT_esZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/chivo/v9/L88PEuzS9eRfHRZhAPhZyw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/chivo/v9/Oe3-Q-a2kBzPnhHck_baMg.ttf',
-        700 => 'http://fonts.gstatic.com/s/chivo/v9/zC8JLnJuu9Lw0_rA3_VYhg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/chivo/v9/2M3ifXA84fdnDIxoCi18JvesZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/chivo/v9/JAdkiWd46QCW4vOsj3dzTA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/chivo/v9/LoszYnE86q2wJEOjCigBQ_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    173 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Chonburi',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/chonburi/v2/jd9PfbW0x_8Myt_XeUxvSQ.ttf',
-      ),
-    ),
-    174 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cinzel',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-        2 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cinzel/v7/GF7dy_Nc-a6EaHYSyGd-EA.ttf',
-        700 => 'http://fonts.gstatic.com/s/cinzel/v7/nYcFQ6_3pf_6YDrOFjBR8Q.ttf',
-        900 => 'http://fonts.gstatic.com/s/cinzel/v7/FTBj72ozM2cEOSxiVsRb3A.ttf',
-      ),
-    ),
-    175 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cinzel Decorative',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-        2 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cinzeldecorative/v6/fmgK7oaJJIXAkhd9798yQgT5USbJx2F82lQbogPy2bY.ttf',
-        700 => 'http://fonts.gstatic.com/s/cinzeldecorative/v6/pXhIVnhFtL_B9Vb1wq2F95-YYVDmZkJErg0zgx9XuZI.ttf',
-        900 => 'http://fonts.gstatic.com/s/cinzeldecorative/v6/pXhIVnhFtL_B9Vb1wq2F97Khqbv0zQZa0g-9HOXAalU.ttf',
-      ),
-    ),
-    176 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Clicker Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/clickerscript/v5/Zupmk8XwADjufGxWB9KThBnpV0hQCek3EmWnCPrvGRM.ttf',
-      ),
-    ),
-    177 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Coda',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v13',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/coda/v13/yHDvulhg-P-p2KRgRrnUYw.ttf',
-        800 => 'http://fonts.gstatic.com/s/coda/v13/6ZIw0sbALY0KTMWllZB3hQ.ttf',
-      ),
-    ),
-    178 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Coda Caption',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        800 => 'http://fonts.gstatic.com/s/codacaption/v11/YDl6urZh-DUFhiMBTgAnz_qsay_1ZmRGmC8pVRdIfAg.ttf',
-      ),
-    ),
-    179 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Codystar',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/codystar/v5/EVaUzfJkcb8Zqx9kzQLXqqCWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/codystar/v5/EN-CPFKYowSI7SuR7-0cZA.ttf',
-      ),
-    ),
-    180 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Coiny',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'vietnamese',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/coiny/v3/B-pC9lRxssd2RDK37Rdekw.ttf',
-      ),
-    ),
-    181 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Combo',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/combo/v6/Nab98KjR3JZSSPGtzLyXNw.ttf',
-      ),
-    ),
-    182 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Comfortaa',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/comfortaa/v11/r_tUZNl0G8xCoOmp_JkSCi3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/comfortaa/v11/lZx6C1VViPgSOhCBUP7hXA.ttf',
-        700 => 'http://fonts.gstatic.com/s/comfortaa/v11/fND5XPYKrF2tQDwwfWZJIy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    183 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Coming Soon',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/comingsoon/v8/Yz2z3IAe2HSQAOWsSG8COKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    184 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Concert One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/concertone/v8/N5IWCIGhUNdPZn_efTxKN6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    185 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Condiment',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/condiment/v5/CstmdiPpgFSV0FUNL5LrJA.ttf',
-      ),
-    ),
-    186 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Content',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/content/v9/l8qaLjygvOkDEU2G6-cjfQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/content/v9/7PivP8Zvs2qn6F6aNbSQe_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    187 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Contrail One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/contrailone/v7/b41KxjgiyqX-hkggANDU6C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    188 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Convergence',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/convergence/v6/eykrGz1NN_YpQmkAZjW-qKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    189 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cookie',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cookie/v8/HxeUC62y_YdDbiFlze357A.ttf',
-      ),
-    ),
-    190 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Copse',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/copse/v7/wikLrtPGjZDvZ5w2i5HLWg.ttf',
-      ),
-    ),
-    191 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Corben',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/corben/v11/tTysMZkt-j8Y5yhkgsoajQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/corben/v11/lirJaFSQWdGQuV--fksg5g.ttf',
-      ),
-    ),
-    192 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '500',
-        5 => '500italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorant/v6/diggKPcUerIA8GQWRVxsVS3USBnSvpkopQaUR-2r7iU.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/cormorant/v6/UydD9tmk-DfLnEFRr_bBZy9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorant/v6/9vWr5LgrNEgvhv1P3z9uuQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cormorant/v6/zzcH3j00ejnIc8jicdcz6KCWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorant/v6/lwoiMb1lzDf49h802vpRUy3USBnSvpkopQaUR-2r7iU.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/cormorant/v6/UydD9tmk-DfLnEFRr_bBZ8CNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorant/v6/LKEtp8XimHLN0gSYqnV9qy3USBnSvpkopQaUR-2r7iU.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/cormorant/v6/UydD9tmk-DfLnEFRr_bBZ5Z7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorant/v6/vOi7JV5F3JmPzXDgUqUwgS3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cormorant/v6/UydD9tmk-DfLnEFRr_bBZ3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    193 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant Garamond',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '500',
-        5 => '500italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVXDeRRUpi2fYbqcTC9PsYaU.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAjZXe39LdglsIzDOvKnCCso.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/EI2hhCO6kSfLAy-Dpd8fd7_BES7rBA-D9Lo3vCx9yHc.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/eGTlzchVxDKKvK6d7drzlkVlEttMzBRhK_wsRQ4MqEE.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVSkwnhSVYGQY4MSUB3uw374.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAq8qrY1CcUgPLrA3ytfr3SY.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVVc2xdGA7R8efE0K6NwSoyI.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAqms9Rm_p2hhD4xhClOGPEw.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/iEjm9hVxcattz37Y8gZwVdNg01MkafbqNYmDx8wt95c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cormorantgaramond/v5/zuqx3k1yUEl3Eavo-ZPEAvEntfLz8TC-DlAIEJQEwCA.ttf',
-      ),
-    ),
-    194 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant Infant',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '500',
-        5 => '500italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorantinfant/v5/MYRpw6pQIf0XStsiZXQWA_alucuYFvoGqpCMGloCN2Y.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/PK34LKusK6SSQFR2m5-LZgNCjGMFnYSoo4kW2wZNowE.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/q5F0I_a42y_qtMoOtqdjagGlf-pqPDOheSBqZOVpkRo.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/U6OamtMgLoVs0zd53Z1pNpbq6_N3pcDBvA-VsecMIAA.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorantinfant/v5/MYRpw6pQIf0XStsiZXQWA4PJQ8Vh-2Qw35Pq7cVYzdo.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/PK34LKusK6SSQFR2m5-LZq9x-au7fLBTFpfuT52_G64.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorantinfant/v5/MYRpw6pQIf0XStsiZXQWA9G0tNuOpbNMRdNl4S5e-n0.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/PK34LKusK6SSQFR2m5-LZkZbdnTqrL_1WMEFjxg0OwY.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorantinfant/v5/MYRpw6pQIf0XStsiZXQWAx-3ZynwDtU_450Ho62jf_I.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cormorantinfant/v5/PK34LKusK6SSQFR2m5-LZmKEEmz9BBHY1o7RrRAiUXQ.ttf',
-      ),
-    ),
-    195 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorantsc/v5/CCo4fI9EYzhUJcvojQ9Em6cQoVhARpoaILP7amxE_8g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorantsc/v5/o2HxNCgvhmwJdltu-68tzC3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorantsc/v5/CCo4fI9EYzhUJcvojQ9Em5MQuUSAwdHsY8ov_6tk1oA.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorantsc/v5/CCo4fI9EYzhUJcvojQ9Em2v8CylhIUtwUiYO7Z2wXbE.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorantsc/v5/CCo4fI9EYzhUJcvojQ9Em0D2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    196 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant Unicase',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorantunicase/v5/-0mwRHhjEGfrz-UDHJ_78TyAYAK5JX1-zBpfFXu9t3Y.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorantunicase/v5/THO7JMNV6qRoZlg7dU5RUz01TLsHlMvD1uPU3gXOh9s.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorantunicase/v5/-0mwRHhjEGfrz-UDHJ_78WActzpz5sLElWWJpZBcHK4.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorantunicase/v5/-0mwRHhjEGfrz-UDHJ_78U0bQT13XmwBbvkXy6Yb64Y.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorantunicase/v5/-0mwRHhjEGfrz-UDHJ_78Z5CFeQBXku3ADXbkP2V7W8.ttf',
-      ),
-    ),
-    197 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cormorant Upright',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/cormorantupright/v4/PwJT_lCdbLUyVq-tARIPhjCfCvaSiUMfec2BKBTMAaw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/cormorantupright/v4/0n68kajKjTOJn9EPQkf1a-ojtTJJf2MtgkoRSid3NcM.ttf',
-        500 => 'http://fonts.gstatic.com/s/cormorantupright/v4/PwJT_lCdbLUyVq-tARIPhiWhx5Kr-bzfZXhgF-AnSvk.ttf',
-        600 => 'http://fonts.gstatic.com/s/cormorantupright/v4/PwJT_lCdbLUyVq-tARIPhuDigFx2V_wQ4SOTZdg5a2s.ttf',
-        700 => 'http://fonts.gstatic.com/s/cormorantupright/v4/PwJT_lCdbLUyVq-tARIPhuO6SP7lRr11seyd3AkK37Q.ttf',
-      ),
-    ),
-    198 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Courgette',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/courgette/v5/2YO0EYtyE9HUPLZprahpZA.ttf',
-      ),
-    ),
-    199 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cousine',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'hebrew',
-        4 => 'greek',
-        5 => 'latin',
-        6 => 'greek-ext',
-        7 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cousine/v12/GYX4bPXObJNJo63QJEUnLg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cousine/v12/1WtIuajLoo8vjVwsrZ3eOg.ttf',
-        700 => 'http://fonts.gstatic.com/s/cousine/v12/FXEOnNUcCzhdtoBxiq-lovesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cousine/v12/y_AZ5Sz-FwL1lux2xLSTZS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    200 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Coustard',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/coustard/v8/iO2Rs5PmqAEAXoU3SkMVBg.ttf',
-        900 => 'http://fonts.gstatic.com/s/coustard/v8/W02OCWO6OfMUHz6aVyegQ6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    201 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Covered By Your Grace',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/coveredbyyourgrace/v7/6ozZp4BPlrbDRWPe3EBGA6CVUMdvnk-GcAiZQrX9Gek.ttf',
-      ),
-    ),
-    202 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Crafty Girls',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/craftygirls/v7/0Sv8UWFFdhQmesHL32H8oy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    203 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Creepster',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/creepster/v6/0vdr5kWJ6aJlOg5JvxnXzQ.ttf',
-      ),
-    ),
-    204 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Crete Round',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/creteround/v6/B8EwN421qqOCCT8vOH4wJ6CWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/creteround/v6/5xAt7XK2vkUdjhGtt98unUeOrDcLawS7-ssYqLr2Xp4.ttf',
-      ),
-    ),
-    205 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Crimson Text',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '600',
-        3 => '600italic',
-        4 => '700',
-        5 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/crimsontext/v8/3IFMwfRa07i-auYR-B-zNS3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/crimsontext/v8/a5QZnvmn5amyNI-t2BMkWPMZXuCXbOrAvx5R0IT5Oyo.ttf',
-        600 => 'http://fonts.gstatic.com/s/crimsontext/v8/rEy5tGc5HdXy56Xvd4f3I2v8CylhIUtwUiYO7Z2wXbE.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/crimsontext/v8/4j4TR-EfnvCt43InYpUNDIR-5-urNOGAobhAyctHvW8.ttf',
-        700 => 'http://fonts.gstatic.com/s/crimsontext/v8/rEy5tGc5HdXy56Xvd4f3I0D2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/crimsontext/v8/4j4TR-EfnvCt43InYpUNDPAs9-1nE9qOqhChW0m4nDE.ttf',
-      ),
-    ),
-    206 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Croissant One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/croissantone/v5/mPjsOObnC77fp1cvZlOfIYjjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    207 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Crushed',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/crushed/v8/aHwSejs3Kt0Lg95u7j32jA.ttf',
-      ),
-    ),
-    208 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cuprum',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cuprum/v9/JgXs0F_UiaEdAS74msmFNg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/cuprum/v9/cLEz0KV6OxInnktSzpk58g.ttf',
-        700 => 'http://fonts.gstatic.com/s/cuprum/v9/6tl3_FkDeXSD72oEHuJh4w.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/cuprum/v9/bnkXaBfoYvaJ75axRPSwVKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    209 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cutive',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cutive/v9/G2bW-ImyOCwKxBkLyz39YQ.ttf',
-      ),
-    ),
-    210 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Cutive Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/cutivemono/v6/ncWQtFVKcSs8OW798v30k6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    211 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Damion',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/damion/v7/13XtECwKxhD_VrOqXL4SiA.ttf',
-      ),
-    ),
-    212 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dancing Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2RnpV0hQCek3EmWnCPrvGRM.ttf',
-        700 => 'http://fonts.gstatic.com/s/dancingscript/v9/KGBfwabt0ZRLA5W1ywjowb_dAmXiKjTPGCuO6G2MbfA.ttf',
-      ),
-    ),
-    213 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dangrek',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dangrek/v9/LOaFhBT-EHNxZjV8DAW_ew.ttf',
-      ),
-    ),
-    214 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'David Libre',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'hebrew',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/davidlibre/v2/Fp_YuX4CP0pzlSUtACdOo6CWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/davidlibre/v2/ea-623K8OFNeGhfSzdpmysCNfqCYlB_eIx7H1TVXe60.ttf',
-        700 => 'http://fonts.gstatic.com/s/davidlibre/v2/ea-623K8OFNeGhfSzdpmyne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    215 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dawning of a New Day',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dawningofanewday/v8/JiDsRhiKZt8uz3NJ5xA06gXLnohmOYWQZqo_sW8GLTk.ttf',
-      ),
-    ),
-    216 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Days One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/daysone/v7/kzwZjNhc1iabMsrc_hKBIA.ttf',
-      ),
-    ),
-    217 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dekko',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dekko/v4/AKtgABKC1rUxgIgS-bpojw.ttf',
-      ),
-    ),
-    218 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Delius',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/delius/v7/TQA163qafki2-gV-B6F_ag.ttf',
-      ),
-    ),
-    219 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Delius Swash Caps',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/deliusswashcaps/v9/uXyrEUnoWApxIOICunRq7yIrxb5zDVgU2N3VzXm7zq4.ttf',
-      ),
-    ),
-    220 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Delius Unicase',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/deliusunicase/v10/b2sKujV3Q48RV2PQ0k1vqu6rPKfVZo7L2bERcf0BDns.ttf',
-        700 => 'http://fonts.gstatic.com/s/deliusunicase/v10/7FTMTITcb4dxUp99FAdTqNy5weKXdcrx-wE0cgECMq8.ttf',
-      ),
-    ),
-    221 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Della Respira',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dellarespira/v5/F4E6Lo_IZ6L9AJCcbqtDVeDcg5akpSnIcsPhLOFv7l8.ttf',
-      ),
-    ),
-    222 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Denk One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/denkone/v5/TdXOeA4eA_hEx4W8Sh9wPw.ttf',
-      ),
-    ),
-    223 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Devonshire',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/devonshire/v6/I3ct_2t12SYizP8ZC-KFi_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    224 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dhurjati',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dhurjati/v5/uV6jO5e2iFMbGB0z79Cy5g.ttf',
-      ),
-    ),
-    225 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Didact Gothic',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'greek-ext',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/didactgothic/v11/v8_72sD3DYMKyM0dn3LtWotBLojGU5Qdl8-5NL4v70w.ttf',
-      ),
-    ),
-    226 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Diplomata',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/diplomata/v9/u-ByBiKgN6rTMA36H3kcKg.ttf',
-      ),
-    ),
-    227 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Diplomata SC',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/diplomatasc/v6/JdVwAwfE1a_pahXjk5qpNi3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    228 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Domine',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/domine/v5/wfVIgamVFjMNQAEWurCiHA.ttf',
-        700 => 'http://fonts.gstatic.com/s/domine/v5/phBcG1ZbQFxUIt18hPVxnw.ttf',
-      ),
-    ),
-    229 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Donegal One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/donegalone/v5/6kN4-fDxz7T9s5U61HwfF6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    230 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Doppio One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/doppioone/v5/WHZ3HJQotpk_4aSMNBo_t_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    231 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dorsa',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dorsa/v8/wCc3cUe6XrmG2LQE6GlIrw.ttf',
-      ),
-    ),
-    232 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dosis',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/dosis/v7/ztftab0r6hcd7AeurUGrSQ.ttf',
-        300 => 'http://fonts.gstatic.com/s/dosis/v7/awIB6L0h5mb0plIKorXmuA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/dosis/v7/rJRlixu-w0JZ1MyhJpao_Q.ttf',
-        500 => 'http://fonts.gstatic.com/s/dosis/v7/ruEXDOFMxDPGnjCBKRqdAQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/dosis/v7/KNAswRNwm3tfONddYyidxg.ttf',
-        700 => 'http://fonts.gstatic.com/s/dosis/v7/AEEAj0ONidK8NQQMBBlSig.ttf',
-        800 => 'http://fonts.gstatic.com/s/dosis/v7/nlrKd8E69vvUU39XGsvR7Q.ttf',
-      ),
-    ),
-    233 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dr Sugiyama',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/drsugiyama/v6/S5Yx3MIckgoyHhhS4C9Tv6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    234 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Droid Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/droidsans/v8/rS9BT6-asrfjpkcV3DXf__esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/droidsans/v8/EFpQQyG9GqCrobXxL-KRMQJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    235 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Droid Sans Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/droidsansmono/v9/ns-m2xQYezAtqh7ai59hJcwD6PD0c3_abh9zHKQtbGU.ttf',
-      ),
-    ),
-    236 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Droid Serif',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/droidserif/v8/DgAtPy6rIVa2Zx3Xh9KaNaCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/droidserif/v8/cj2hUnSRBhwmSPr9kS5890eOrDcLawS7-ssYqLr2Xp4.ttf',
-        700 => 'http://fonts.gstatic.com/s/droidserif/v8/QQt14e8dY39u-eYBZmppwXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/droidserif/v8/c92rD_x0V1LslSFt3-QEps_zJjSACmk0BRPxQqhnNLU.ttf',
-      ),
-    ),
-    237 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Duru Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/durusans/v10/xn7iYH8xwmSyTvEV_HOxTw.ttf',
-      ),
-    ),
-    238 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Dynalight',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/dynalight/v6/-CWsIe8OUDWTIHjSAh41kA.ttf',
-      ),
-    ),
-    239 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'EB Garamond',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ebgaramond/v8/CDR0kuiFK7I1OZ2hSdR7G6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    240 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Eagle Lake',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/eaglelake/v5/ZKlYin7caemhx9eSg6RvPfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    241 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Eater',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/eater/v6/gm6f3OmYEdbs3lPQtUfBkA.ttf',
-      ),
-    ),
-    242 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Economica',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/economica/v5/G4rJRujzZbq9Nxngu9l3hg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/economica/v5/p5O9AVeUqx_n35xQRinNYaCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/economica/v5/UK4l2VEpwjv3gdcwbwXE9C3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/economica/v5/ac5dlUsedQ03RqGOeay-3Xe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    243 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Eczar',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '600',
-        3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/eczar/v6/uKZcAQ5JBBs1UbeXFRbBRg.ttf',
-        500 => 'http://fonts.gstatic.com/s/eczar/v6/Ooe4KaPp2594tF8TbMfdlQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/eczar/v6/IjQsWW0bmgkZ6lnN72cnTQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/eczar/v6/ELC8RVXfBMb3VuuHtMwBOA.ttf',
-        800 => 'http://fonts.gstatic.com/s/eczar/v6/9Uyt6nTZLx_Qj5_WRah-iQ.ttf',
-      ),
-    ),
-    244 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'El Messiri',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'arabic',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/elmessiri/v2/dik94vfrFvHFnvdvxaX8N_esZW2xOQ-xsNqO47m55DA.ttf',
-        500 => 'http://fonts.gstatic.com/s/elmessiri/v2/kQW9PA2krAOzditagrX75pp-63r6doWhTEbsfBIRJ7A.ttf',
-        600 => 'http://fonts.gstatic.com/s/elmessiri/v2/HYl7TNqFfA1utGLZRWwzLPpTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/elmessiri/v2/ji73glXFIetaSqMU3cz7rAJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    245 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Electrolize',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/electrolize/v6/yFVu5iokC-nt4B1Cyfxb9aCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    246 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Elsie',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/elsie/v7/gwspePauE45BJu6Ok1QrfQ.ttf',
-        900 => 'http://fonts.gstatic.com/s/elsie/v7/1t-9f0N2NFYwAgN7oaISqg.ttf',
-      ),
-    ),
-    247 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Elsie Swash Caps',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/elsieswashcaps/v6/9L3hIJMPCf6sxCltnxd6X2YeFSdnSpRYv5h9gpdlD1g.ttf',
-        900 => 'http://fonts.gstatic.com/s/elsieswashcaps/v6/iZnus9qif0tR5pGaDv5zdKoKBWBozTtxi30NfZDOXXU.ttf',
-      ),
-    ),
-    248 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Emblema One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/emblemaone/v6/7IlBUjBWPIiw7cr_O2IfSaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    249 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Emilys Candy',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/emilyscandy/v5/PofLVm6v1SwZGOzC8s-I3S3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    250 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Encode Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/encodesans/v2/TvUFkOGoNYwmv-XugrRC14AWxXGWZ3yJw6KhWS7MxOk.ttf',
-        200 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vEnzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vC9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/encodesans/v2/xpYstnmVhPpbvOHKD75EK6CWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vMCNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vJZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vHe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vA89PwPrYLaRFJ-HNCU9NbA.ttf',
-        900 => 'http://fonts.gstatic.com/s/encodesans/v2/IaOhmWC4W3-qZLH1UUd4vCenaqEuufTBk9XMKnKmgDA.ttf',
-      ),
-    ),
-    251 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Encode Sans Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/6LOoEWi9It096ZzMNw6yeii7tdGxScTr3oVgcrTUqWw.ttf',
-        200 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY61IHoFZjDq9yl49NJ3Y0wY.ttf',
-        300 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY-ZroXgFx_lT3TTeDaAqrWE.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/CbFzpyBSY4j-AYSd59uzHIelbRYnLTTQA1Z5cVLnsI4.ttf',
-        500 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY64Ixr3FMLIaz6yY1ILODIU.ttf',
-        600 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY8MHImBNo4aGUuMCjGiDijI.ttf',
-        700 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY7GMx7y0UuyPIsLqSMg46Ks.ttf',
-        800 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY_3VPWKD9LjLpSGgTAgUUIc.ttf',
-        900 => 'http://fonts.gstatic.com/s/encodesanscondensed/v2/UP_H-DzI6prLPN-PMUyxY73y6LE9HhLx9tlnlwi3OAw.ttf',
-      ),
-    ),
-    252 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Encode Sans Expanded',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/SxJCe-5XtgTwkLeuB6DsDAzYtaUryPdMybTmqF2t-hk.ttf',
-        200 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtImyl4eLRAk2hWaf4usQtfw.ttf',
-        300 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtE8dNemX_23MZOKO5OoYF5E.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/OdOWbHhxwo9XAUoeS5o4Dg7dxr0N5HY0cZKknTIL6n4.ttf',
-        500 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtPqCJK4Zn8SYLcLgnaiBGrc.ttf',
-        600 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtFwX9co0a2-oIpf1o8i-1K0.ttf',
-        700 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtD3JW4OQm61sg8k8DfLBAwg.ttf',
-        800 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtJvi7umicd6qVgIYLFojqyc.ttf',
-        900 => 'http://fonts.gstatic.com/s/encodesansexpanded/v2/NZFW_aAjtWMwFwRPQHyMtGZrxQvJ_xEKbxayeNEjyrc.ttf',
-      ),
-    ),
-    253 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Encode Sans Semi Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/E6kA5T3mzxUj69IdQg70PS1QEJchpDhTUwbwiSjEPbgt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        200 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHVxi1xYyRqMxS_FPu-moW0lnrnXkzuOM3_obd5Pijc8I.ttf',
-        300 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHSLQwj9Lduqb1W3tq4fXf91Hjqw3C2sEu_rLGKi69l6e.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/70xnFP2R6L67b4lbb0LqFQ760Nu0ZmWpK1JTCHVCKHz3rGVtsTkPsbDajuO5ueQw.ttf',
-        500 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHWPzD9HBxt0HXJBsJbnj8Taafut6-naFoUxG7HwSESew.ttf',
-        600 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHZTIxrxLvLMtU-yhyAf1TK_6UxCao7uB89bcQ1oo--3e.ttf',
-        700 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHanrccv-0xgQwXIoROQBHDkCSihn6h2mBbERvk93HhFa.ttf',
-        800 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHaUGwPLApwd9av9Pcjv04cOpN24TwUgSdG0iUOmnC_tI.ttf',
-        900 => 'http://fonts.gstatic.com/s/encodesanssemicondensed/v2/z-mVMDpNLBzCo6eVg95vHf3LPq0EY0JuN61BrMSCA9udBAFcbdBtG4hJ7aeN0Leh.ttf',
-      ),
-    ),
-    254 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Encode Sans Semi Expanded',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/Dt9vBR-jlFaGi37WwOwD_8qIAxu59oivT8gVJSaPAJmglnMp3_3A8V8Ai8YosRtX.ttf',
-        200 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4iyuBgySKCdxv6GjzoxXXEct1EgZ0r6ZKKUGlEftq-4l.ttf',
-        300 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4mA0loIJ_cqzG2SO7pmT2v8t1EgZ0r6ZKKUGlEftq-4l.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/L50h_XWfeGcmQgSaLLv8qDl-hG_EEbQLBeCEvsoBv9c.ttf',
-        500 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4m9ZGOr7ke8-zfCGnYaqVkwt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        600 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4jZr6ABenySL2MEoV49ZPIEt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        700 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4vb58e8syHA9EvUqaFcpH8kt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        800 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4v1ujhhC8jANxa3d-BaQZ3st1EgZ0r6ZKKUGlEftq-4l.ttf',
-        900 => 'http://fonts.gstatic.com/s/encodesanssemiexpanded/v2/CzlMbAciMXgtU6UUaNDI4sIOIZ6BsfRi1i9aEyUWch4t1EgZ0r6ZKKUGlEftq-4l.ttf',
-      ),
-    ),
-    255 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Engagement',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/engagement/v6/4Uz0Jii7oVPcaFRYmbpU6vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    256 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Englebert',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/englebert/v5/sll38iOvOuarDTYBchlP3Q.ttf',
-      ),
-    ),
-    257 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Enriqueta',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/enriqueta/v6/_p90TrIwR1SC-vDKtmrv6A.ttf',
-        700 => 'http://fonts.gstatic.com/s/enriqueta/v6/I27Pb-wEGH2ajLYP0QrtSC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    258 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Erica One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ericaone/v8/cIBnH2VAqQMIGYAcE4ufvQ.ttf',
-      ),
-    ),
-    259 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Esteban',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/esteban/v5/ESyhLgqDDyK5JcFPp2svDw.ttf',
-      ),
-    ),
-    260 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Euphoria Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/euphoriascript/v5/c4XB4Iijj_NvSsCF4I0O2MxLhO8OSNnfAp53LK1_iRs.ttf',
-      ),
-    ),
-    261 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ewert',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ewert/v5/Em8hrzuzSbfHcTVqMjbAQg.ttf',
-      ),
-    ),
-    262 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Exo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/exo/v6/RI7A9uwjRmPbVp0n8e-Jvg.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/exo/v6/qtGyZZlWb2EEvby3ZPosxw.ttf',
-        200 => 'http://fonts.gstatic.com/s/exo/v6/F8OfC_swrRRxpFt-tlXZQg.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/exo/v6/fr4HBfXHYiIngW2_bhlgRw.ttf',
-        300 => 'http://fonts.gstatic.com/s/exo/v6/SBrN7TKUqgGUvfxqHqsnNw.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/exo/v6/3gmiLjBegIfcDLISjTGA1g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/exo/v6/eUEzTFueNXRVhbt4PEB8kQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/exo/v6/cfgolWisMSURhpQeVHl_NA.ttf',
-        500 => 'http://fonts.gstatic.com/s/exo/v6/jCg6DmGGXt_OVyp5ofQHPw.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/exo/v6/lo5eTdCNJZQVN08p8RnzAQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/exo/v6/q_SG5kXUmOcIvFpgtdZnlw.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/exo/v6/0cExa8K_pxS2lTuMr68XUA.ttf',
-        700 => 'http://fonts.gstatic.com/s/exo/v6/3_jwsL4v9uHjl5Q37G57mw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/exo/v6/0me55yJIxd5vyQ9bF7SsiA.ttf',
-        800 => 'http://fonts.gstatic.com/s/exo/v6/yLPuxBuV0lzqibRJyooOJg.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/exo/v6/n3LejeKVj_8gtZq5fIgNYw.ttf',
-        900 => 'http://fonts.gstatic.com/s/exo/v6/97d0nd6Yv4-SA_X92xAuZA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/exo/v6/JHTkQVhzyLtkY13Ye95TJQ.ttf',
-      ),
-    ),
-    263 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Exo 2',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/exo2/v4/oVOtQy53isv97g4UhBUDqg.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/exo2/v4/LNYVgsJcaCxoKFHmd4AZcg.ttf',
-        200 => 'http://fonts.gstatic.com/s/exo2/v4/qa-Ci2pBwJdCxciE1ErifQ.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/exo2/v4/DCrVxDVvS69n50O-5erZVvesZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/exo2/v4/nLUBdz_lHHoVIPor05Byhw.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/exo2/v4/iSy9VTeUTiqiurQg2ywtu_esZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/exo2/v4/Pf_kZuIH5c5WKVkQUaeSWQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/exo2/v4/xxA5ZscX9sTU6U0lZJUlYA.ttf',
-        500 => 'http://fonts.gstatic.com/s/exo2/v4/oM0rzUuPqVJpW-VEIpuW5w.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/exo2/v4/amzRVCB-gipwdihZZ2LtT_esZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/exo2/v4/YnSn3HsyvyI1feGSdRMYqA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/exo2/v4/Vmo58BiptGwfVFb0teU5gPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/exo2/v4/2DiK4XkdTckfTk6we73-bQ.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/exo2/v4/Sdo-zW-4_--pDkTg6bYrY_esZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/exo2/v4/IVYl_7dJruOg8zKRpC8Hrw.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/exo2/v4/p0TA6KeOz1o4rySEbvUxI_esZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/exo2/v4/e8csG8Wnu87AF6uCndkFRQ.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/exo2/v4/KPhsGCoT2-7Uj6pMlRscH_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    264 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Expletus Sans',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/expletussans/v10/gegTSDBDs5le3g6uxU1ZsX8f0n03UdmQgF_CLvNR2vg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/expletussans/v10/Y-erXmY0b6DU_i2Qu0hTJj4G9C9ttb0Oz5Cvf0qOitE.ttf',
-        500 => 'http://fonts.gstatic.com/s/expletussans/v10/cl6rhMY77Ilk8lB_uYRRwAqQmZ7VjhwksfpNVG0pqGc.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/expletussans/v10/sRBNtc46w65uJE451UYmW87DCVO6wo6i5LKIyZDzK40.ttf',
-        600 => 'http://fonts.gstatic.com/s/expletussans/v10/cl6rhMY77Ilk8lB_uYRRwCvj1tU7IJMS3CS9kCx2B3U.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/expletussans/v10/sRBNtc46w65uJE451UYmW8yKH23ZS6zCKOFHG0e_4JE.ttf',
-        700 => 'http://fonts.gstatic.com/s/expletussans/v10/cl6rhMY77Ilk8lB_uYRRwFCbmAUID8LN-q3pJpOk3Ys.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/expletussans/v10/sRBNtc46w65uJE451UYmW5F66r9C4AnxxlBlGd7xY4g.ttf',
-      ),
-    ),
-    265 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fanwood Text',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fanwoodtext/v7/hDNDHUlsSb8bgnEmDp4T_i3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/fanwoodtext/v7/0J3SBbkMZqBV-3iGxs5E9_MZXuCXbOrAvx5R0IT5Oyo.ttf',
-      ),
-    ),
-    266 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Farsan',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'gujarati',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/farsan/v3/Hdf9Y76SQ6e1X0Nqk3rHtw.ttf',
-      ),
-    ),
-    267 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fascinate',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fascinate/v6/ZE0637WWkBPKt1AmFaqD3Q.ttf',
-      ),
-    ),
-    268 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fascinate Inline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fascinateinline/v7/lRguYfMfWArflkm5aOQ5QJmp8DTZ6iHear7UV05iykg.ttf',
-      ),
-    ),
-    269 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Faster One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fasterone/v8/H4ciBXCHmdfClFb-vWhfyLs.ttf',
-      ),
-    ),
-    270 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fasthand',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fasthand/v8/6XAagHH_KmpZL67wTvsETQ.ttf',
-      ),
-    ),
-    271 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fauna One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/faunaone/v5/8kL-wpAPofcAMELI_5NRnQ.ttf',
-      ),
-    ),
-    272 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Faustina',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/faustina/v2/VG2SxiuKreAgH5lXZ5wbng.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/faustina/v2/JxwP25AedFpQZdkRJXn_5_esZW2xOQ-xsNqO47m55DA.ttf',
-        500 => 'http://fonts.gstatic.com/s/faustina/v2/DMeEDU8yYDdzN-7RbPNe8KCWcynf_cDxXwCLxiixG1c.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/faustina/v2/P6ASjT1goNMRHifKhq6WRZp-63r6doWhTEbsfBIRJ7A.ttf',
-        600 => 'http://fonts.gstatic.com/s/faustina/v2/YOr4BI3KhIzqwTG7vH0SM6CWcynf_cDxXwCLxiixG1c.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/faustina/v2/OJMzHMQmadDP2rMiZVbZd_pTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/faustina/v2/fO-A_KFKgRicxL_4JD_smaCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/faustina/v2/XGqbj0LfEd8UkIzdKBNuggJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    273 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Federant',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/federant/v9/tddZFSiGvxICNOGra0i5aA.ttf',
-      ),
-    ),
-    274 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Federo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/federo/v9/JPhe1S2tujeyaR79gXBLeQ.ttf',
-      ),
-    ),
-    275 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Felipa',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/felipa/v5/SeyfyFZY7abAQXGrOIYnYg.ttf',
-      ),
-    ),
-    276 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fenix',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fenix/v5/Ak8wR3VSlAN7VN_eMeJj7Q.ttf',
-      ),
-    ),
-    277 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Finger Paint',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fingerpaint/v7/m_ZRbiY-aPb13R3DWPBGXy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    278 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fira Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'greek-ext',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/firamono/v6/WQOm1D4RO-yvA9q9trJc8g.ttf',
-        500 => 'http://fonts.gstatic.com/s/firamono/v6/PJ4zAY1ucu5ib6LzyvHMkS3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/firamono/v6/l24Wph3FsyKAbJ8dfExTZy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    279 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fira Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/firasans/v8/8lKWk2lAb6-y9gc_GLDdPKCWcynf_cDxXwCLxiixG1c.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/firasans/v8/fmobwZujc_UI4huzQvESm4AWxXGWZ3yJw6KhWS7MxOk.ttf',
-        200 => 'http://fonts.gstatic.com/s/firasans/v8/H2QtVYRshA1CFy63P7ykZy3USBnSvpkopQaUR-2r7iU.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTUnzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/firasans/v8/VTBnrK42EiOBncVyQXZ7jy3USBnSvpkopQaUR-2r7iU.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTS9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/firasans/v8/nsT0isDy56OkSX99sFQbXw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/firasans/v8/cPT_2ddmoxsUuMtQqa8zGqCWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/firasans/v8/zM2u8V3CuPVwAAXFQcDi4C3USBnSvpkopQaUR-2r7iU.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTcCNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/firasans/v8/TPhEsJuyxIEzWtby22btfi3USBnSvpkopQaUR-2r7iU.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTZZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/firasans/v8/DugPdSljmOTocZOR2CItOi3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/firasans/v8/htOw9f-chtELyJuFCkCrFi3USBnSvpkopQaUR-2r7iU.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTQ89PwPrYLaRFJ-HNCU9NbA.ttf',
-        900 => 'http://fonts.gstatic.com/s/firasans/v8/rowJfijyp23uW9P2J-sluC3USBnSvpkopQaUR-2r7iU.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTSenaqEuufTBk9XMKnKmgDA.ttf',
-      ),
-    ),
-    280 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fira Sans Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/-hkH0zXsjNm-yd0g99LvtmzsEJYDLiwza6ZHrdqhthQ.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Nqqv1KfmeTlTML-ky7aaRPKr3wa5Ugsm4QGD8HSjBf8.ttf',
-        200 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993IBfX0yoOQz7y6Fa57EWAgY.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjDzTCSvnRzshTGhbaUNxVLsY.ttf',
-        300 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993EMwSSh38KQVJx4ABtsZTnA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjD4_LkTZ_uhAwfmGJ084hlvM.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/HQGj1o4-qj8agzakWWMQw0b2huS6PSilRpwXI3qYZmg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/-hkH0zXsjNm-yd0g99Lvtv745YdnE8ZqDtluSBzScUA.ttf',
-        500 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993OsjvTPWUq6WFqixIyn02S8.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjD4BZvKPjZWiSZqpadd3c-cI.ttf',
-        600 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993HI2_Em5SxSZLj3SINQVfR0.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjD5AgRolq0CFuJyGMzcpUuqI.ttf',
-        700 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993BEM87DM3yorPOrvA-vB930.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjDzkJmEiMQ4xM-o8FMi_9og4.ttf',
-        800 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993IakE3OFfI2LZ4c6GPO8Mzs.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjD07QUKmu2W_Ow4yNN8hZ1i8.ttf',
-        900 => 'http://fonts.gstatic.com/s/firasanscondensed/v2/k1srRZ14gKpu4XGd0R993BL2AAruu1GYH8xAyPJJAg8.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/firasanscondensed/v2/Z87ZCYzj43dcQd7C-kCjD8mJu-lqHNyZBDoYLJNH3Ks.ttf',
-      ),
-    ),
-    281 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fira Sans Extra Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/_dPmaUiuUAWmL0ibePdArgFORyOzJNaQMfz6m4ejZbGglnMp3_3A8V8Ai8YosRtX.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/G8VKhLxlTd0YOlG3i1R8CfHXjqTqiXVW6z8kDssMYPCAFsVxlmd8icOioVkuzMTp.ttf',
-        200 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwW_7IC3ILXfeIVwvfWGu4Sgt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPBJ88iJ4K8xoxodtsD2-nBj.ttf',
-        300 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwW7O05EUNkkL_mPtCuekiV0t1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPAvflpT0sW34iOPRrF6N6tI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/wg_5XrW_o1_ZfuCbAkBfGRreEc6WSk_gssVJg3w2ARQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/_dPmaUiuUAWmL0ibePdArnKUexidEaHsf8DLYXbriUSglnMp3_3A8V8Ai8YosRtX.ttf',
-        500 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7Owdd0GPYAHEVh0EvoffkRAuMt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPDAjX6gmJQf3iMex9U1V3ut.ttf',
-        600 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwW8v1dGG_WArVpDmblm5TDot1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPCWe8ZvgY99AY9ijXVw80mY.ttf',
-        700 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwdEjTMY3GGLBv_AxlS3Ww6ct1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPB3tT3e-lZe80aROzSyUO11.ttf',
-        800 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwZZWqFq9WyGGQ2ef9bXDKiQt1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPAPPT8D62C2kRSfhzQlPTWw.ttf',
-        900 => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/34whiWDL4CxC1laOcj7OwRPaRBEe7-4iQsBL_zD1FQ8t1EgZ0r6ZKKUGlEftq-4l.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/firasansextracondensed/v2/iGnuurQ1EqiOs_hlr82MCvHXjqTqiXVW6z8kDssMYPAnp2qhLrn0wZPVzCpypoAw.ttf',
-      ),
-    ),
-    282 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fjalla One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fjallaone/v5/3b7vWCfOZsU53vMa8LWsf_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    283 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fjord One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fjordone/v6/R_YHK8au2uFPw5tNu5N7zw.ttf',
-      ),
-    ),
-    284 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Flamenco',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/flamenco/v8/x9iI5CogvuZVCGoRHwXuo6CWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/flamenco/v8/HC0ugfLLgt26I5_BWD1PZA.ttf',
-      ),
-    ),
-    285 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Flavors',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/flavors/v6/SPJi5QclATvon8ExcKGRvQ.ttf',
-      ),
-    ),
-    286 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fondamento',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fondamento/v7/6LWXcjT1B7bnWluAOSNfMPesZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/fondamento/v7/y6TmwhSbZ8rYq7OTFyo7OS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    287 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fontdiner Swanky',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fontdinerswanky/v8/8_GxIO5ixMtn5P6COsF3TlBjMPLzPAFJwRBn-s1U7kA.ttf',
-      ),
-    ),
-    288 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Forum',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/forum/v8/MZUpsq1VfLrqv8eSDcbrrQ.ttf',
-      ),
-    ),
-    289 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Francois One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/francoisone/v11/bYbkq2nU2TSx4SwFbz5sCC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    290 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Frank Ruhl Libre',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '700',
-        4 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/frankruhllibre/v3/y8NWif61iD8Hg8bGAmxFPOo9jvbqtCEVUIntIHarXsc.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/frankruhllibre/v3/yDLloNqBpFmakCImLv4OJkfFI6QBbouvcOFcz81E3Ek.ttf',
-        500 => 'http://fonts.gstatic.com/s/frankruhllibre/v3/y8NWif61iD8Hg8bGAmxFPC-WNtISbX_UO2d0wZPgXtk.ttf',
-        700 => 'http://fonts.gstatic.com/s/frankruhllibre/v3/y8NWif61iD8Hg8bGAmxFPDPYiZEMiRRbPdIFMoTwDbo.ttf',
-        900 => 'http://fonts.gstatic.com/s/frankruhllibre/v3/y8NWif61iD8Hg8bGAmxFPNRZIVFRjDx-6MOpcoWbVhA.ttf',
-      ),
-    ),
-    291 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Freckle Face',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/freckleface/v5/7-B8j9BPJgazdHIGqPNv8y3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    292 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fredericka the Great',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/frederickathegreat/v6/7Es8Lxoku-e5eOZWpxw18nrnet6gXN1McwdQxS1dVrI.ttf',
-      ),
-    ),
-    293 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fredoka One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fredokaone/v5/QKfwXi-z-KtJAlnO2ethYqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    294 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Freehand',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/freehand/v9/uEBQxvA0lnn_BrD6krlxMw.ttf',
-      ),
-    ),
-    295 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fresca',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fresca/v6/2q7Qm9sCo1tWvVgSDVWNIw.ttf',
-      ),
-    ),
-    296 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Frijole',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/frijole/v6/L2MfZse-2gCascuD-nLhWg.ttf',
-      ),
-    ),
-    297 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fruktur',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fruktur/v10/PnQvfEi1LssAvhJsCwH__w.ttf',
-      ),
-    ),
-    298 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Fugaz One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/fugazone/v7/5tteVDCwxsr8-5RuSiRWOw.ttf',
-      ),
-    ),
-    299 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'GFS Didot',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gfsdidot/v7/jQKxZy2RU-h9tkPZcRVluA.ttf',
-      ),
-    ),
-    300 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'GFS Neohellenic',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gfsneohellenic/v8/B4xRqbn-tANVqVgamMsSDiayCZa0z7CpFzlkqoCHztc.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/gfsneohellenic/v8/KnaWrO4awITAqigQIIYXKkCTdomiyJpIzPbEbIES3rU.ttf',
-        700 => 'http://fonts.gstatic.com/s/gfsneohellenic/v8/7HwjPQa7qNiOsnUce2h4448_BwCLZY3eDSV6kppAwI8.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/gfsneohellenic/v8/FwWjoX6XqT-szJFyqsu_GYFF0fM4h-krcpQk7emtCpE.ttf',
-      ),
-    ),
-    301 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gabriela',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gabriela/v6/B-2ZfbAO3HDrxqV6lR5tdA.ttf',
-      ),
-    ),
-    302 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gafata',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gafata/v6/aTFqlki_3Dc3geo-FxHTvQ.ttf',
-      ),
-    ),
-    303 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Galada',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'bengali',
-        1 => 'latin',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/galada/v3/xGkllHQb8OOCv9VJ6IObSA.ttf',
-      ),
-    ),
-    304 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Galdeano',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/galdeano/v7/ZKFMQI6HxEG1jOT0UGSZUg.ttf',
-      ),
-    ),
-    305 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Galindo',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/galindo/v5/2lafAS_ZEfB33OJryhXDUg.ttf',
-      ),
-    ),
-    306 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gentium Basic',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gentiumbasic/v9/KCktj43blvLkhOTolFn-MYtBLojGU5Qdl8-5NL4v70w.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/gentiumbasic/v9/qoFz4NSMaYC2UmsMAG3lyTj3mvXnCeAk09uTtmkJGRc.ttf',
-        700 => 'http://fonts.gstatic.com/s/gentiumbasic/v9/2qL6yulgGf0wwgOp-UqGyLNuTeOOLg3nUymsEEGmdO0.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/gentiumbasic/v9/8N9-c_aQDJ8LbI1NGVMrwtswO1vWwP9exiF8s0wqW10.ttf',
-      ),
-    ),
-    307 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gentium Book Basic',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gentiumbookbasic/v8/IRFxB2matTxrjZt6a3FUnrWDjKAyldGEr6eEi2MBNeY.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/gentiumbookbasic/v8/qHqW2lwKO8-uTfIkh8FsUfXfjMwrYnmPVsQth2IcAPY.ttf',
-        700 => 'http://fonts.gstatic.com/s/gentiumbookbasic/v8/T2vUYmWzlqUtgLYdlemGnaWESMHIjnSjm9UUxYtEOko.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/gentiumbookbasic/v8/632u7TMIoFDWQYUaHFUp5PA2A9KyRZEkn4TZVuhsWRM.ttf',
-      ),
-    ),
-    308 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Geo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/geo/v9/mJuJYk5Pww84B4uHAQ1XaA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/geo/v9/8_r1wToF7nPdDuX1qxel6Q.ttf',
-      ),
-    ),
-    309 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Geostar',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/geostar/v7/A8WQbhQbpYx3GWWaShJ9GA.ttf',
-      ),
-    ),
-    310 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Geostar Fill',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/geostarfill/v7/Y5ovXPPOHYTfQzK2aM-hui3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    311 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Germania One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/germaniaone/v5/3_6AyUql_-FbDi1e68jHdC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    312 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gidugu',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gidugu/v4/Ey6Eq3hrT6MM58iFItFcgw.ttf',
-      ),
-    ),
-    313 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gilda Display',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gildadisplay/v5/8yAVUZLLZ3wb7dSsjix0CADHmap7fRWINAsw8-RaxNg.ttf',
-      ),
-    ),
-    314 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Give You Glory',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/giveyouglory/v7/DFEWZFgGmfseyIdGRJAxuBwwkpSPZdvjnMtysdqprfI.ttf',
-      ),
-    ),
-    315 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Glass Antiqua',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/glassantiqua/v5/0yLrXKplgdUDIMz5TnCHNODcg5akpSnIcsPhLOFv7l8.ttf',
-      ),
-    ),
-    316 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Glegoo',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/glegoo/v6/2tf-h3n2A_SNYXEO0C8bKw.ttf',
-        700 => 'http://fonts.gstatic.com/s/glegoo/v6/TlLolbauH0-0Aiz1LUH5og.ttf',
-      ),
-    ),
-    317 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gloria Hallelujah',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gloriahallelujah/v9/CA1k7SlXcY5kvI81M_R28Q3RdPdyebSUyJECJouPsvA.ttf',
-      ),
-    ),
-    318 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Goblin One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/goblinone/v7/331XtzoXgpVEvNTVcBJ_C_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    319 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gochi Hand',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gochihand/v8/KT1-WxgHsittJ34_20IfAPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    320 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gorditas',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gorditas/v5/uMgZhXUyH6qNGF3QsjQT5Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/gorditas/v5/6-XCeknmxaon8AUqVkMnHaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    321 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Goudy Bookletter 1911',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/goudybookletter1911/v7/l5lwlGTN3pEY5Bf-rQEuIIjNDsyURsIKu4GSfvSE4mA.ttf',
-      ),
-    ),
-    322 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Graduate',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/graduate/v5/JpAmYLHqcIh9_Ff35HHwiA.ttf',
-      ),
-    ),
-    323 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Grand Hotel',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/grandhotel/v5/C_A8HiFZjXPpnMt38XnK7qCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    324 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gravitas One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gravitasone/v7/nBHdBv6zVNU8MtP6w9FwTS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    325 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Great Vibes',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/greatvibes/v5/4Mi5RG_9LjQYrTU55GN_L6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    326 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Griffy',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/griffy/v5/vWkyYGBSyE5xjnShNtJtzw.ttf',
-      ),
-    ),
-    327 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gruppo',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gruppo/v8/pS_JM0cK_piBZve-lfUq9w.ttf',
-      ),
-    ),
-    328 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gudea',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gudea/v5/S-4QqBlkMPiiA3jNeCR5yw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/gudea/v5/7mNgsGw_vfS-uUgRVXNDSw.ttf',
-        700 => 'http://fonts.gstatic.com/s/gudea/v5/lsip4aiWhJ9bx172Y9FN_w.ttf',
-      ),
-    ),
-    329 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Gurajada',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/gurajada/v5/6Adfkl4PCRyq6XTENACEyA.ttf',
-      ),
-    ),
-    330 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Habibi',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/habibi/v6/YYyqXF6pWpL7kmKgS_2iUA.ttf',
-      ),
-    ),
-    331 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Halant',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/halant/v4/dM3ItAOWNNod_Cf3MnLlEg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/halant/v4/rEs7Jk3SVyt3cTx6DoTu1w.ttf',
-        500 => 'http://fonts.gstatic.com/s/halant/v4/tlsNj3K-hJKtiirTDtUbkQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/halant/v4/zNR2WvI_V8o652vIZp3X4Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/halant/v4/D9FN7OH89AuCmZDLHbPQfA.ttf',
-      ),
-    ),
-    332 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hammersmith One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/hammersmithone/v8/FWNn6ITYqL6or7ZTmBxRhjjVlsJB_M_Q_LtZxsoxvlw.ttf',
-      ),
-    ),
-    333 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hanalei',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/hanalei/v7/Sx8vVMBnXSQyK6Cn0CBJ3A.ttf',
-      ),
-    ),
-    334 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hanalei Fill',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/hanaleifill/v6/5uPeWLnaDdtm4UBG26Ds6C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    335 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Handlee',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/handlee/v6/6OfkXkyC0E5NZN80ED8u3A.ttf',
-      ),
-    ),
-    336 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hanuman',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/hanuman/v11/hRhwOGGmElJSl6KSPvEnOQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/hanuman/v11/lzzXZ2l84x88giDrbfq76vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    337 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Happy Monkey',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/happymonkey/v6/c2o0ps8nkBmaOYctqBq1rS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    338 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Harmattan',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/harmattan/v2/xNM1nDKzsLfoCLQtMRztGA.ttf',
-      ),
-    ),
-    339 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Headland One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/headlandone/v5/iGmBeOvQGfq9DSbjJ8jDVy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    340 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Heebo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '700',
-        5 => '800',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/heebo/v3/SoQODIucfpkiveZloUR6ag.ttf',
-        300 => 'http://fonts.gstatic.com/s/heebo/v3/dg5T18yyjkKiU_9mmcbDSQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/heebo/v3/nyHCGMPliplPNqpssbDSIA.ttf',
-        500 => 'http://fonts.gstatic.com/s/heebo/v3/jDb70ZCwdD6JnmQU62ZQZA.ttf',
-        700 => 'http://fonts.gstatic.com/s/heebo/v3/NsBYEn6oWei8pPqytA07yA.ttf',
-        800 => 'http://fonts.gstatic.com/s/heebo/v3/h4CV2Qq56LKIinGGOStvsw.ttf',
-        900 => 'http://fonts.gstatic.com/s/heebo/v3/uDfzHw3R0Bfa6HyIIcj-ow.ttf',
-      ),
-    ),
-    341 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Henny Penny',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/hennypenny/v5/XRgo3ogXyi3tpsFfjImRF6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    342 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Herr Von Muellerhoff',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/herrvonmuellerhoff/v7/mmy24EUmk4tjm4gAEjUd7NLGIYrUsBdh-JWHYgiDiMU.ttf',
-      ),
-    ),
-    343 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hind',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/hind/v8/qa346Adgv9kPDXoD1my4kA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/hind/v8/mktFHh5Z5P9YjGKSslSUtA.ttf',
-        500 => 'http://fonts.gstatic.com/s/hind/v8/2cs8RCVcYtiv4iNDH1UsQQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/hind/v8/TUKUmFMXSoxloBP1ni08oA.ttf',
-        700 => 'http://fonts.gstatic.com/s/hind/v8/cXJJavLdUbCfjxlsA6DqTw.ttf',
-      ),
-    ),
-    344 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hind Guntur',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/hindguntur/v3/Szg33M7ab5MTWe-PWAcNAi9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/hindguntur/v3/MXz-KyAeVZstlFz6v-5SC6CWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/hindguntur/v3/Szg33M7ab5MTWe-PWAcNAsCNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/hindguntur/v3/Szg33M7ab5MTWe-PWAcNApZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/hindguntur/v3/Szg33M7ab5MTWe-PWAcNAne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    345 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hind Madurai',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/hindmadurai/v3/sdSJTZLdRXJhVTP92m2S66cQoVhARpoaILP7amxE_8g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/hindmadurai/v3/pJpl47LatORZNWf8rgdiyS3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/hindmadurai/v3/sdSJTZLdRXJhVTP92m2S65MQuUSAwdHsY8ov_6tk1oA.ttf',
-        600 => 'http://fonts.gstatic.com/s/hindmadurai/v3/sdSJTZLdRXJhVTP92m2S62v8CylhIUtwUiYO7Z2wXbE.ttf',
-        700 => 'http://fonts.gstatic.com/s/hindmadurai/v3/sdSJTZLdRXJhVTP92m2S60D2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    346 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hind Siliguri',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'bengali',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/hindsiliguri/v4/fBpmjMpv5Rh6S25yVfWJnzoJ52uD-1fmXmi8u0n_zsc.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/hindsiliguri/v4/f2eEi2pbIa8eBfNwpUl0Am_MnNA9OgK8I1F23mNWOpE.ttf',
-        500 => 'http://fonts.gstatic.com/s/hindsiliguri/v4/fBpmjMpv5Rh6S25yVfWJn__2zpxNHQ3utWt_82o9dAo.ttf',
-        600 => 'http://fonts.gstatic.com/s/hindsiliguri/v4/fBpmjMpv5Rh6S25yVfWJn-x91FDzFvnud68bXrNkpDA.ttf',
-        700 => 'http://fonts.gstatic.com/s/hindsiliguri/v4/fBpmjMpv5Rh6S25yVfWJn6iiXuG_rGcOxkuidirlnJE.ttf',
-      ),
-    ),
-    347 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Hind Vadodara',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/hindvadodara/v4/KrZ6f_YevRawHvh0qDBkTbDwfZ__Dotj_J8NiWv76DQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/hindvadodara/v4/9c6KKeibr6NtFqknnNxZB-Dcg5akpSnIcsPhLOFv7l8.ttf',
-        500 => 'http://fonts.gstatic.com/s/hindvadodara/v4/KrZ6f_YevRawHvh0qDBkTZzEKvFIU9WyojfbAkhDb6c.ttf',
-        600 => 'http://fonts.gstatic.com/s/hindvadodara/v4/KrZ6f_YevRawHvh0qDBkTfgXs2VXrZsRiQ1c96pXZKI.ttf',
-        700 => 'http://fonts.gstatic.com/s/hindvadodara/v4/KrZ6f_YevRawHvh0qDBkTYGjoH95IEFGA7BjhXnx_eg.ttf',
-      ),
-    ),
-    348 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Holtwood One SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/holtwoodonesc/v8/sToOq3cIxbfnhbEkgYNuBbAgSRh1LpJXlLfl8IbsmHg.ttf',
-      ),
-    ),
-    349 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Homemade Apple',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/homemadeapple/v8/yg3UMEsefgZ8IHz_ryz86BiPOmFWYV1WlrJkRafc4c0.ttf',
-      ),
-    ),
-    350 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Homenaje',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/homenaje/v7/v0YBU0iBRrGdVjDNQILxtA.ttf',
-      ),
-    ),
-    351 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell DW Pica',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfelldwpica/v7/W81bfaWiUicLSPbJhW-ATsA5qm663gJGVdtpamafG5A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/imfelldwpica/v7/alQJ8SK5aSOZVaelYoyT4PL2asmh5DlYQYCosKo6yQs.ttf',
-      ),
-    ),
-    352 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell DW Pica SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfelldwpicasc/v7/xBKKJV4z2KsrtQnmjGO17JZ9RBdEL0H9o5qzT1Rtof4.ttf',
-      ),
-    ),
-    353 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell Double Pica',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfelldoublepica/v7/yN1wY_01BkQnO0LYAhXdUol14jEdVOhEmvtCMCVwYak.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/imfelldoublepica/v7/64odUh2hAw8D9dkFKTlWYq0AWwkgdQfsRHec8TYi4mI.ttf',
-      ),
-    ),
-    354 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell Double Pica SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfelldoublepicasc/v7/jkrUtrLFpMw4ZazhfkKsGwc4LoC4OJUqLw9omnT3VOU.ttf',
-      ),
-    ),
-    355 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell English',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellenglish/v7/xwIisCqGFi8pff-oa9uSVHGNmx1fDm-u2eBJHQkdrmk.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/imfellenglish/v7/Z3cnIAI_L3XTRfz4JuZKbuewladMPCWTthtMv9cPS-c.ttf',
-      ),
-    ),
-    356 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell English SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellenglishsc/v7/h3Tn6yWfw4b5qaLD1RWvz5ATixNthKRRR1XVH3rJNiw.ttf',
-      ),
-    ),
-    357 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell French Canon',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellfrenchcanon/v7/iKB0WL1BagSpNPz3NLMdsJ3V2FNpBrlLSvqUnERhBP8.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/imfellfrenchcanon/v7/owCuNQkLLFW7TBBPJbMnhRa-QL94KdW80H29tcyld2A.ttf',
-      ),
-    ),
-    358 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell French Canon SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellfrenchcanonsc/v7/kA3bS19-tQbeT_iG32EZmaiyyzHwYrAbmNulTz423iM.ttf',
-      ),
-    ),
-    359 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell Great Primer',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellgreatprimer/v7/AL8ALGNthei20f9Cu3e93rgeX3ROgtTz44CitKAxzKI.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/imfellgreatprimer/v7/1a-artkXMVg682r7TTxVY1_YG2SFv8Ma7CxRl1S3o7g.ttf',
-      ),
-    ),
-    360 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'IM Fell Great Primer SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imfellgreatprimersc/v7/A313vRj97hMMGFjt6rgSJtRg-ciw1Y27JeXb2Zv4lZQ.ttf',
-      ),
-    ),
-    361 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Iceberg',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/iceberg/v5/p2XVm4M-N0AOEEOymFKC5w.ttf',
-      ),
-    ),
-    362 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Iceland',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/iceland/v6/kq3uTMGgvzWGNi39B_WxGA.ttf',
-      ),
-    ),
-    363 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Imprima',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/imprima/v5/eRjquWLjwLGnTEhLH7u3kA.ttf',
-      ),
-    ),
-    364 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Inconsolata',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v16',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/inconsolata/v16/7bMKuoy6Nh0ft0SHnIGMuaCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/inconsolata/v16/AIed271kqQlcIRSOnQH0yXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    365 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Inder',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/inder/v6/C38TwecLTfKxIHDc_Adcrw.ttf',
-      ),
-    ),
-    366 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Indie Flower',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/indieflower/v9/10JVD_humAd5zP2yrFqw6i3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    367 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Inika',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/inika/v5/eZCrULQGaIxkrRoGz_DjhQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/inika/v5/bl3ZoTyrWsFun2zYbsgJrA.ttf',
-      ),
-    ),
-    368 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Inknut Antiqua',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-        5 => '800',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVIg6hmPNSXwHGnJQCeQHKUMo.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/inknutantiqua/v3/VlmmTfOrxr3HfcnhMueX9arFJ4O13IHVxZbM6yoslpo.ttf',
-        500 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVIiYCDvi1XFzRnTV7qUFsNgk.ttf',
-        600 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVIjLEgY6PI0GrY6L00mykcEQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVIlRhfXn9P4_QueZ7VkUHUNc.ttf',
-        800 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVInARjXVu2t2krcNTHiCb1qY.ttf',
-        900 => 'http://fonts.gstatic.com/s/inknutantiqua/v3/CagoW52rBcslcXzHh6tVIrTsNy1JrFNT1qKy8j7W3CU.ttf',
-      ),
-    ),
-    369 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Irish Grover',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/irishgrover/v8/kUp7uUPooL-KsLGzeVJbBC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    370 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Istok Web',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/istokweb/v11/RYLSjEXQ0nNtLLc4n7--dQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/istokweb/v11/kvcT2SlTjmGbC3YlZxmrl6CWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/istokweb/v11/2koEo4AKFSvK4B52O_Mwai3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/istokweb/v11/ycQ3g52ELrh3o_HYCNNUw3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    371 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Italiana',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/italiana/v6/dt95fkCSTOF-c6QNjwSycA.ttf',
-      ),
-    ),
-    372 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Italianno',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/italianno/v7/HsyHnLpKf8uP7aMpDQHZmg.ttf',
-      ),
-    ),
-    373 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Itim',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/itim/v2/HHV9WK2x5lUkc5bxMXG8Tw.ttf',
-      ),
-    ),
-    374 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jacques Francois',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jacquesfrancois/v5/_-0XWPQIW6tOzTHg4KaJ_M13D_4KM32Q4UmTSjpuNGQ.ttf',
-      ),
-    ),
-    375 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jacques Francois Shadow',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jacquesfrancoisshadow/v5/V14y0H3vq56fY9SV4OL_FASt0D_oLVawA8L8b9iKjbs.ttf',
-      ),
-    ),
-    376 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jaldi',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jaldi/v3/x1vR-bPW9a1EB-BUVqttCw.ttf',
-        700 => 'http://fonts.gstatic.com/s/jaldi/v3/OIbtgjjEp3aVWtjF6WY8mA.ttf',
-      ),
-    ),
-    377 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jim Nightshade',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jimnightshade/v5/_n43lYHXVWNgXegdYRIK9CF1W_bo0EdycfH0kHciIic.ttf',
-      ),
-    ),
-    378 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jockey One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jockeyone/v7/cAucnOZLvFo07w2AbufBCfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    379 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jolly Lodger',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jollylodger/v5/RX8HnkBgaEKQSHQyP9itiS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    380 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jomhuria',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jomhuria/v3/hrvsccQpBliIgor15WxE6g.ttf',
-      ),
-    ),
-    381 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Josefin Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/josefinsans/v12/q9w3H4aeBxj0hZ8Osfi3d8SVQ0giZ-l_NELu3lgGyYw.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/josefinsans/v12/s7-P1gqRNRNn-YWdOYnAOXXcj1rQwlNLIS625o-SrL0.ttf',
-        300 => 'http://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z6cQoVhARpoaILP7amxE_8g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/josefinsans/v12/ppse0J9fKSaoxCIIJb33Gyna0FLWfcB-J_SAYmcAXaI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/josefinsans/v12/xgzbb53t8j-Mo-vYa23n5i3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/josefinsans/v12/q9w3H4aeBxj0hZ8Osfi3d_MZXuCXbOrAvx5R0IT5Oyo.ttf',
-        600 => 'http://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z2v8CylhIUtwUiYO7Z2wXbE.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/josefinsans/v12/ppse0J9fKSaoxCIIJb33G4R-5-urNOGAobhAyctHvW8.ttf',
-        700 => 'http://fonts.gstatic.com/s/josefinsans/v12/C6HYlRF50SGJq1XyXj04z0D2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/josefinsans/v12/ppse0J9fKSaoxCIIJb33G_As9-1nE9qOqhChW0m4nDE.ttf',
-      ),
-    ),
-    382 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Josefin Slab',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/josefinslab/v8/etsUjZYO8lTLU85lDhZwUsSVQ0giZ-l_NELu3lgGyYw.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/josefinslab/v8/8BjDChqLgBF3RJKfwHIYh3Xcj1rQwlNLIS625o-SrL0.ttf',
-        300 => 'http://fonts.gstatic.com/s/josefinslab/v8/NbE6ykYuM2IyEwxQxOIi2KcQoVhARpoaILP7amxE_8g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/josefinslab/v8/af9sBoKGPbGO0r21xJulyyna0FLWfcB-J_SAYmcAXaI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/josefinslab/v8/46aYWdgz-1oFX11flmyEfS3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/josefinslab/v8/etsUjZYO8lTLU85lDhZwUvMZXuCXbOrAvx5R0IT5Oyo.ttf',
-        600 => 'http://fonts.gstatic.com/s/josefinslab/v8/NbE6ykYuM2IyEwxQxOIi2Gv8CylhIUtwUiYO7Z2wXbE.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/josefinslab/v8/af9sBoKGPbGO0r21xJuly4R-5-urNOGAobhAyctHvW8.ttf',
-        700 => 'http://fonts.gstatic.com/s/josefinslab/v8/NbE6ykYuM2IyEwxQxOIi2ED2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/josefinslab/v8/af9sBoKGPbGO0r21xJuly_As9-1nE9qOqhChW0m4nDE.ttf',
-      ),
-    ),
-    383 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Joti One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/jotione/v5/P3r_Th0ESHJdzunsvWgUfQ.ttf',
-      ),
-    ),
-    384 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Judson',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/judson/v10/znM1AAs0eytUaJzf1CrYZQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/judson/v10/GVqQW9P52ygW-ySq-CLwAA.ttf',
-        700 => 'http://fonts.gstatic.com/s/judson/v10/he4a2LwiPJc7r8x0oKCKiA.ttf',
-      ),
-    ),
-    385 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Julee',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/julee/v7/CAib-jsUsSO8SvVRnE9fHA.ttf',
-      ),
-    ),
-    386 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Julius Sans One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/juliussansone/v6/iU65JP9acQHPDLkdalCF7jjVlsJB_M_Q_LtZxsoxvlw.ttf',
-      ),
-    ),
-    387 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Junge',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/junge/v5/j4IXCXtxrw9qIBheercp3A.ttf',
-      ),
-    ),
-    388 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Jura',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/jura/v9/Rqx_xy1UnN0C7wD3FUSyPQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/jura/v9/YAWMwF3sN0KCbynMq-Yr_Q.ttf',
-        500 => 'http://fonts.gstatic.com/s/jura/v9/16xhfjHCiaLj3tsqqgmtGg.ttf',
-        600 => 'http://fonts.gstatic.com/s/jura/v9/iwseduOwJSdY8wQ1Y6CJdA.ttf',
-        700 => 'http://fonts.gstatic.com/s/jura/v9/k0wz0WR1Y0M_AuROdfv4xQ.ttf',
-      ),
-    ),
-    389 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Just Another Hand',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/justanotherhand/v9/fKV8XYuRNNagXr38eqbRf99BnJIEGrvoojniP57E51c.ttf',
-      ),
-    ),
-    390 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Just Me Again Down Here',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/justmeagaindownhere/v9/sN06iTc9ITubLTgXoG-kc3M9eVLpVTSK6TqZTIgBrWQ.ttf',
-      ),
-    ),
-    391 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kadwa',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kadwa/v2/VwEN8oKGqaa0ug9kRpvSSg.ttf',
-        700 => 'http://fonts.gstatic.com/s/kadwa/v2/NFPZaBfekj_Io-7vUMz4Ww.ttf',
-      ),
-    ),
-    392 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kalam',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/kalam/v8/MgQQlk1SgPEHdlkWMNh7Jg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/kalam/v8/hNEJkp2K-aql7e5WQish4Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/kalam/v8/95nLItUGyWtNLZjSckluLQ.ttf',
-      ),
-    ),
-    393 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kameron',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kameron/v8/9r8HYhqDSwcq9WMjupL82A.ttf',
-        700 => 'http://fonts.gstatic.com/s/kameron/v8/rabVVbzlflqvmXJUFlKnu_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    394 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kanit',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/kanit/v3/CYl4qOK-NWwZp3iTKW1eIA.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/kanit/v3/NLNtc56MpXmHl1yOrop8oQ.ttf',
-        200 => 'http://fonts.gstatic.com/s/kanit/v3/wfLWkj1C4tYl7MoiFWS3bA.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/kanit/v3/D8gkrAAM2bvNJ-1i4ot-1_esZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/kanit/v3/SM5qHynYGdOmMKEwGUFIPA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/kanit/v3/IePislKOKy3Bqfpb9V5VM_esZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/kanit/v3/L6VKvM17ZmevDynOiw7H9w.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/kanit/v3/sHLq5U0-T0oSMTnwTKgv-A.ttf',
-        500 => 'http://fonts.gstatic.com/s/kanit/v3/GxoU_USIJyIy8WIcYSUO2g.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/kanit/v3/hrCiWCaNv9AaF0mDY1F2zPesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/kanit/v3/n_qoIVxojeQY0D1pvoNDhA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/kanit/v3/9BkP85yRDoVayTWQwdGLqPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/kanit/v3/kEGmYvO8My36j5ILmbUPRg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/kanit/v3/WNo3ZZ9xtOZJknNlvHAFWfesZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/kanit/v3/YTp-zAuKXxwnA1YnJIF1rg.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/kanit/v3/qiTGrW5sCa9UQp841fWjc_esZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/kanit/v3/1NIEkusi3bG3GgO9Hor3fQ.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/kanit/v3/ogN5dFD1r4BfxNV4Nb-TXfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    395 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kantumruy',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/kantumruy/v4/ERRwQE0WG5uanaZWmOFXNi3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/kantumruy/v4/kQfXNYElQxr5dS8FyjD39Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/kantumruy/v4/gie_zErpGf_rNzs920C2Ji3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    396 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Karla',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/karla/v6/78UgGRwJFkhqaoFimqoKpQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/karla/v6/51UBKly9RQOnOkj95ZwEFw.ttf',
-        700 => 'http://fonts.gstatic.com/s/karla/v6/JS501sZLxZ4zraLQdncOUA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/karla/v6/3YDyi09gQjCRh-5-SVhTTvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    397 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Karma',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/karma/v7/lH6ijJnguWR2Sz7tEl6MQQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/karma/v7/wvqTxAGBUrTqU0urTEoPIw.ttf',
-        500 => 'http://fonts.gstatic.com/s/karma/v7/9YGjxi6Hcvz2Kh-rzO_cAw.ttf',
-        600 => 'http://fonts.gstatic.com/s/karma/v7/h_CVzXXtqSxjfS2sIwaejA.ttf',
-        700 => 'http://fonts.gstatic.com/s/karma/v7/smuSM08oApsQPPVYbHd1CA.ttf',
-      ),
-    ),
-    398 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Katibeh',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/katibeh/v3/Q-SA43uWR2uu3wBIvedotA.ttf',
-      ),
-    ),
-    399 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kaushan Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kaushanscript/v6/qx1LSqts-NtiKcLw4N03IBnpV0hQCek3EmWnCPrvGRM.ttf',
-      ),
-    ),
-    400 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kavivanar',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kavivanar/v3/VLDrdUtF1irKFc8rFWgDaw.ttf',
-      ),
-    ),
-    401 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kavoon',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kavoon/v6/382m-6baKXqJFQjEgobt6Q.ttf',
-      ),
-    ),
-    402 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kdam Thmor',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kdamthmor/v4/otCdP6UU-VBIrBfVDWBQJ_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    403 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Keania One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/keaniaone/v5/PACrDKZWngXzgo-ucl6buvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    404 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kelly Slab',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kellyslab/v7/F_2oS1e9XdYx1MAi8XEVefesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    405 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kenia',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kenia/v9/OLM9-XfITK9PsTLKbGBrwg.ttf',
-      ),
-    ),
-    406 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Khand',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/khand/v6/072zRl4OU9Pinjjkg174LA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/khand/v6/HdLdTNFqNIDGJZl1ZEj84w.ttf',
-        500 => 'http://fonts.gstatic.com/s/khand/v6/46_p-SqtuMe56nxQdteWxg.ttf',
-        600 => 'http://fonts.gstatic.com/s/khand/v6/zggGWYIiPJyMTgkfxP_kaA.ttf',
-        700 => 'http://fonts.gstatic.com/s/khand/v6/0I0UWaN-X5QBmfexpXKhqg.ttf',
-      ),
-    ),
-    407 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Khmer',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/khmer/v10/vWaBJIbaQuBNz02ALIKJ3A.ttf',
-      ),
-    ),
-    408 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Khula',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '600',
-        3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/khula/v3/_1LySU5Upq-sc4OZ1b_GIw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/khula/v3/izcPIFyCSd16XI1Ak_Wk7Q.ttf',
-        600 => 'http://fonts.gstatic.com/s/khula/v3/4ZH86Hce-aeFDaedTnbkbg.ttf',
-        700 => 'http://fonts.gstatic.com/s/khula/v3/UGVExGl-Jjs-YPpGv-MZ6w.ttf',
-        800 => 'http://fonts.gstatic.com/s/khula/v3/Sccp_oOo8FWgbx5smie7xQ.ttf',
-      ),
-    ),
-    409 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kite One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kiteone/v5/8ojWmgUc97m0f_i6sTqLoQ.ttf',
-      ),
-    ),
-    410 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Knewave',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/knewave/v6/KGHM4XWr4iKnBMqzZLkPBg.ttf',
-      ),
-    ),
-    411 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kotta One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kottaone/v5/AB2Q7hVw6niJYDgLvFXu5w.ttf',
-      ),
-    ),
-    412 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Koulen',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/koulen/v11/AAYOK8RSRO7FTskTzFuzNw.ttf',
-      ),
-    ),
-    413 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kranky',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kranky/v8/C8dxxTS99-fZ84vWk8SDrg.ttf',
-      ),
-    ),
-    414 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kreon',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/kreon/v11/HKtJRiq5C2zbq5N1IX32sA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/kreon/v11/zA_IZt0u0S3cvHJu-n1oEg.ttf',
-        700 => 'http://fonts.gstatic.com/s/kreon/v11/jh0dSmaPodjxISiblIUTkw.ttf',
-      ),
-    ),
-    415 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kristi',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kristi/v9/aRsgBQrkQkMlu4UPSnJyOQ.ttf',
-      ),
-    ),
-    416 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Krona One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kronaone/v5/zcQj4ljqTo166AdourlF9w.ttf',
-      ),
-    ),
-    417 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kumar One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kumarone/v2/YmcJD6Wky1clGYY5OD-BkQ.ttf',
-      ),
-    ),
-    418 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kumar One Outline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kumaroneoutline/v2/hnQF47H-55qiLAGgq7C3QyxhoCTLJoiJ-y-zew8F8j0.ttf',
-      ),
-    ),
-    419 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Kurale',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'devanagari',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/kurale/v3/rxeyIcvQlT4XAWwNbXFCfw.ttf',
-      ),
-    ),
-    420 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'La Belle Aurore',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/labelleaurore/v8/Irdbc4ASuUoWDjd_Wc3md123K2iuuhwZgaKapkyRTY8.ttf',
-      ),
-    ),
-    421 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Laila',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/laila/v4/bLbIVEZF3IWSZ-in72GJvA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/laila/v4/6iYor3edprH7360qtBGoag.ttf',
-        500 => 'http://fonts.gstatic.com/s/laila/v4/tkf8VtFvW9g3VsxQCA6WOQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/laila/v4/3EMP2L6JRQ4GaHIxCldCeA.ttf',
-        700 => 'http://fonts.gstatic.com/s/laila/v4/R7P4z1xjcjecmjZ9GyhqHQ.ttf',
-      ),
-    ),
-    422 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lakki Reddy',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lakkireddy/v4/Q5EpFa91FjW37t0FCnedaKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    423 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lalezar',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'arabic',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lalezar/v2/k4_MPf09PGmL7oyGdPKwcg.ttf',
-      ),
-    ),
-    424 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lancelot',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lancelot/v7/XMT7T_oo_MQUGAnU2v-sdA.ttf',
-      ),
-    ),
-    425 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lateef',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lateef/v11/PAsKCgi1qc7XPwvzo_I-DQ.ttf',
-      ),
-    ),
-    426 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lato',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '700',
-        7 => '700italic',
-        8 => '900',
-        9 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v14',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/lato/v14/Upp-ka9rLQmHYCsFgwL-eg.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/lato/v14/zLegi10uS_9-fnUDISl0KA.ttf',
-        300 => 'http://fonts.gstatic.com/s/lato/v14/Ja02qOppOVq9jeRjWekbHg.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/lato/v14/dVebFcn7EV7wAKwgYestUg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/lato/v14/h7rISIcQapZBpei-sXwIwg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/lato/v14/P_dJOFJylV3A870UIOtr0w.ttf',
-        700 => 'http://fonts.gstatic.com/s/lato/v14/iX_QxBBZLhNj5JHlTzHQzg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/lato/v14/WFcZakHrrCKeUJxHA4T_gw.ttf',
-        900 => 'http://fonts.gstatic.com/s/lato/v14/8TPEV6NbYWZlNsXjbYVv7w.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/lato/v14/draWperrI7n2xi35Cl08fA.ttf',
-      ),
-    ),
-    427 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'League Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/leaguescript/v8/wnRFLvfabWK_DauqppD6vSeUSrabuTpOsMEiRLtKwk0.ttf',
-      ),
-    ),
-    428 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Leckerli One',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/leckerlione/v8/S2Y_iLrItTu8kIJTkS7DrC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    429 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ledger',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ledger/v5/G432jp-tahOfWHbCYkI0jw.ttf',
-      ),
-    ),
-    430 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lekton',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lekton/v8/r483JYmxf5PjIm4jVAm8Yg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/lekton/v8/_UbDIPBA1wDqSbhp-OED7A.ttf',
-        700 => 'http://fonts.gstatic.com/s/lekton/v8/WZw-uL8WTkx3SBVfTlevXQ.ttf',
-      ),
-    ),
-    431 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lemon',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lemon/v6/wed1nNu4LNSu-3RoRVUhUw.ttf',
-      ),
-    ),
-    432 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lemonada',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'arabic',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/lemonada/v3/uM3MufQOcwGHuruj4TsXiqCWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/lemonada/v3/pkzws3AUXmaaAzOi7aydSQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/lemonada/v3/9Vd4MNKsOxNyLzlfTXdKLqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/lemonada/v3/9jKcm4hRI511-Dy7FFfQ3aCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    433 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 128',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode128/v5/mJ_rGOyyL62_i4eysdBvxEaNJhdpbyHQuRiGjlHceQo.ttf',
-      ),
-    ),
-    434 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 128 Text',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode128text/v5/T1o66XlW_PeuHiRa8wDOJDfWl2h5aCwBu15s5iWPtdk.ttf',
-      ),
-    ),
-    435 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 39',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode39/v5/tsmYkcVN_FjeCmyWhRNQuDLD7PrtP9qwC5bVQ-6ZBpw.ttf',
-      ),
-    ),
-    436 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 39 Extended',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode39extended/v4/fb2-vuy0PLrmtXyLBPV4KGYAiLTSvZR2kkYPJthhKEg.ttf',
-      ),
-    ),
-    437 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 39 Extended Text',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode39extendedtext/v4/wJsqK3E245PKDhdHYS7MabGP_8dGDh0UJYBW4DYg-cv00s133LT-tR5tU-vU7gLU.ttf',
-      ),
-    ),
-    438 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Barcode 39 Text',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-23',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebarcode39text/v5/O4inMvtTcDsw_GI-nhT1nhLP3W-fKNeNuxNx_t55A8U.ttf',
-      ),
-    ),
-    439 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Baskerville',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/librebaskerville/v5/pR0sBQVcY0JZc_ciXjFsKyyZRYCSvpCzQKuMWnP5NDY.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/librebaskerville/v5/QHIOz1iKF3bIEzRdDFaf5QnhapNS5Oi8FPrBRDLbsW4.ttf',
-        700 => 'http://fonts.gstatic.com/s/librebaskerville/v5/kH7K4InNTm7mmOXXjrA5v-xuswJKUVpBRfYFpz0W3Iw.ttf',
-      ),
-    ),
-    440 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Libre Franklin',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/librefranklin/v2/zrsyK9EytLQ07oRM9IZIsX6Zf0VB_l-7q6pFtcZSRCs.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/LHzsuUmxr4UY-IoiG8pRK4gsWNE1DYiT_eIOcNe2Au4.ttf',
-        200 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yCwKTB4uIbnDXE2hyxZaFPY.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqho0lu1sSkaQaYEjN61aJ3i1I.ttf',
-        300 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yMhKJW3W9-339CFS_Lie1us.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqho14je5cfhxzx5bEvSaoyQQI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/librefranklin/v2/PFwjf3aDdAQPvNKUrT3U7_fSnedoLXQQjURyDxluu8g.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/zrsyK9EytLQ07oRM9IZIsX5kKxjpQfTpnFf2SrDLxlg.ttf',
-        500 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yMBjwrbmxH6gp8HgxjPD8qo.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqho5VcuOW5XbZIr02vW37iuvg.ttf',
-        600 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yORt4MKdIUjA60qLK3wI2m8.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqhowNPRgU5g4Xymf9hgRWrbNs.ttf',
-        700 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yEnStGWSv3WdwjmyyI8xc7Q.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqhow7kn3RFjf4gfwsdsBE-Rf4.ttf',
-        800 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yKltwG0cydF-uC1kFVv1hts.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqho80d7u0uHUbaRkK-cNyim1w.ttf',
-        900 => 'http://fonts.gstatic.com/s/librefranklin/v2/1_DGDtljMiPWFs5rl_p0yF7duMYIKwoQ5QsTL00fobw.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/librefranklin/v2/7_V210XP3LBEtEwiCTqho0THpHUXJVnEwH4tSjkF0wg.ttf',
-      ),
-    ),
-    441 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Life Savers',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lifesavers/v7/g49cUDk4Y1P0G5NMkMAm7qCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/lifesavers/v7/THQKqChyYUm97rNPVFdGGXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    442 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lilita One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lilitaone/v5/vTxJQjbNV6BCBHx8sGDCVvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    443 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lily Script One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lilyscriptone/v5/uPWsLVW8uiXqIBnE8ZwGPDjVlsJB_M_Q_LtZxsoxvlw.ttf',
-      ),
-    ),
-    444 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Limelight',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/limelight/v8/5dTfN6igsXjLjOy8QQShcg.ttf',
-      ),
-    ),
-    445 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Linden Hill',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lindenhill/v7/UgsC0txqd-E1yjvjutwm_KCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/lindenhill/v7/OcS3bZcu8vJvIDH8Zic83keOrDcLawS7-ssYqLr2Xp4.ttf',
-      ),
-    ),
-    446 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lobster',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v19',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lobster/v19/9LpJGtNuM1D8FAZ2BkJH2Q.ttf',
-      ),
-    ),
-    447 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lobster Two',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lobstertwo/v10/xb9aY4w9ceh8JRzobID1naCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/lobstertwo/v10/Ul_16MSbfayQv1I4QhLEoEeOrDcLawS7-ssYqLr2Xp4.ttf',
-        700 => 'http://fonts.gstatic.com/s/lobstertwo/v10/bmdxOflBqMqjEC0-kGsIiHe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/lobstertwo/v10/LEkN2_no_6kFvRfiBZ8xpM_zJjSACmk0BRPxQqhnNLU.ttf',
-      ),
-    ),
-    448 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Londrina Outline',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/londrinaoutline/v8/lls08GOa1eT74p072l1AWJmp8DTZ6iHear7UV05iykg.ttf',
-      ),
-    ),
-    449 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Londrina Shadow',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/londrinashadow/v6/dNYuzPS_7eYgXFJBzMoKdbw6Z3rVA5KDSi7aQxS92Nk.ttf',
-      ),
-    ),
-    450 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Londrina Sketch',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/londrinasketch/v6/p7Ai06aT1Ycp_D2fyE3z69d6z_uhFGnpCOifUY1fJQo.ttf',
-      ),
-    ),
-    451 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Londrina Solid',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '300',
-        2 => 'regular',
-        3 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/londrinasolid/v6/GNw2ckl4GiWuueFb9dMt4kBPCDJ-ayOoeeQPacAe1lc.ttf',
-        300 => 'http://fonts.gstatic.com/s/londrinasolid/v6/BDKo9ty0kfh66weuamkY1YGlXQxaR_emZVjFa6K5Gm8.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/londrinasolid/v6/yysorIEiYSBb0ylZjg791MR125CwGqh8XBqkBzea0LA.ttf',
-        900 => 'http://fonts.gstatic.com/s/londrinasolid/v6/BDKo9ty0kfh66weuamkY1cOBCLEQFAwATxcDa2xYLs8.ttf',
-      ),
-    ),
-    452 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lora',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lora/v11/aXJ7KVIGcejEy1abawZazg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/lora/v11/AN2EZaj2tFRpyveuNn9BOg.ttf',
-        700 => 'http://fonts.gstatic.com/s/lora/v11/enKND5SfzQKkggBA_VnT1A.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/lora/v11/ivs9j3kYU65pR9QD9YFdzQ.ttf',
-      ),
-    ),
-    453 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Love Ya Like A Sister',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/loveyalikeasister/v8/LzkxWS-af0Br2Sk_YgSJY-ad1xEP8DQfgfY8MH9aBUg.ttf',
-      ),
-    ),
-    454 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Loved by the King',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lovedbytheking/v7/wg03xD4cWigj4YDufLBSr8io2AFEwwMpu7y5KyiyAJc.ttf',
-      ),
-    ),
-    455 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lovers Quarrel',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/loversquarrel/v5/gipdZ8b7pKb89MzQLAtJHLHLxci2ElvNEmOB303HLk0.ttf',
-      ),
-    ),
-    456 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Luckiest Guy',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/luckiestguy/v8/5718gH8nDy3hFVihOpkY5C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    457 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lusitana',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lusitana/v5/l1h9VDomkwbdzbPdmLcUIw.ttf',
-        700 => 'http://fonts.gstatic.com/s/lusitana/v5/GWtZyUsONxgkdl3Mc1P7FKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    458 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Lustria',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/lustria/v5/gXAk0s4ai0X-TAOhYzZd1w.ttf',
-      ),
-    ),
-    459 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Macondo',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/macondo/v6/G6yPNUscRPQ8ufBXs_8yRQ.ttf',
-      ),
-    ),
-    460 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Macondo Swash Caps',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/macondoswashcaps/v5/SsSR706z-MlvEH7_LS6JAPkkgYRHs6GSG949m-K6x2k.ttf',
-      ),
-    ),
-    461 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mada',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/mada/v4/sN1aPvvd07F1Sq3qcEQg4w.ttf',
-        300 => 'http://fonts.gstatic.com/s/mada/v4/P46fye2TPh4fVwALgHSXCA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/mada/v4/io_zUrt5o943T_q45OHLWQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/mada/v4/PhhDsBi34sP0LptbpS9m6w.ttf',
-        600 => 'http://fonts.gstatic.com/s/mada/v4/6zYBU-NFokCo3MIlPsWCUw.ttf',
-        700 => 'http://fonts.gstatic.com/s/mada/v4/VnwndFbEsjy4VcU_Dzedhg.ttf',
-        900 => 'http://fonts.gstatic.com/s/mada/v4/aCyc9Kc3rOJLL6fV9VfptA.ttf',
-      ),
-    ),
-    462 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Magra',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/magra/v5/hoZ13bwCXBxuGZqAudgc5A.ttf',
-        700 => 'http://fonts.gstatic.com/s/magra/v5/6fOM5sq5cIn8D0RjX8Lztw.ttf',
-      ),
-    ),
-    463 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Maiden Orange',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/maidenorange/v8/ZhKIA2SPisEwdhW7g0RUWojjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    464 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Maitree',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/maitree/v2/JTlrRs3bVPV4i05cUIx_z_esZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/maitree/v2/rEGdABAOaqCHggl37mkWjfesZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/maitree/v2/SpKVJkAjDAYOr1VkdSRspA.ttf',
-        500 => 'http://fonts.gstatic.com/s/maitree/v2/2VHD7TXjRhN4Xu74SEPGdvesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/maitree/v2/uuazDnPwt30gW3cKsG-e0_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/maitree/v2/cnHhc9fphsL3q-pistN3IPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    465 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mako',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mako/v8/z5zSLmfPlv1uTVAdmJBLXg.ttf',
-      ),
-    ),
-    466 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mallanna',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mallanna/v5/krCTa-CfMbtxqF0689CbuQ.ttf',
-      ),
-    ),
-    467 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mandali',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mandali/v5/0lF8yJ7fkyjXuqtSi5bWbQ.ttf',
-      ),
-    ),
-    468 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Manuale',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/manuale/v2/OL9lzPXATGiZUB8Qdk3tiQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/manuale/v2/oRbwaLnv_NzztbUuhNLiBw.ttf',
-        500 => 'http://fonts.gstatic.com/s/manuale/v2/xsy0EZlufjk4A6mPfwX5mfesZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/manuale/v2/r4TYrL7JhyPxpmVA-JAN0S3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/manuale/v2/gDxlyLYdCx7A4S8cf-Z8JvesZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/manuale/v2/n25GBfdDLxRFJ-OYtzyorS3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/manuale/v2/ut2ZOkBP2LtTYOuh1fI83_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/manuale/v2/Lrka5WC7aKfhIA6uk-QS6y3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    469 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marcellus',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/marcellus/v5/UjiLZzumxWC9whJ86UtaYw.ttf',
-      ),
-    ),
-    470 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marcellus SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/marcellussc/v5/_jugwxhkkynrvsfrxVx8gS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    471 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marck Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/marckscript/v8/O_D1NAZVOFOobLbVtW3bci3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    472 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Margarine',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/margarine/v6/DJnJwIrcO_cGkjSzY3MERw.ttf',
-      ),
-    ),
-    473 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marko One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/markoone/v7/hpP7j861sOAco43iDc4n4w.ttf',
-      ),
-    ),
-    474 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marmelad',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/marmelad/v7/jI0_FBlSOIRLL0ePWOhOwQ.ttf',
-      ),
-    ),
-    475 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Martel',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '600',
-        4 => '700',
-        5 => '800',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/martel/v2/_wfGdswZbat7P4tupHLA1w.ttf',
-        300 => 'http://fonts.gstatic.com/s/martel/v2/SghoV2F2VPdVU3P0a4fa9w.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/martel/v2/9ALu5czkaaf5zsYk6GJEnQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/martel/v2/Kt9uPhH1PvUwuZ5Y6zuAMQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/martel/v2/4OzIiKB5wE36xXL2U0vzWQ.ttf',
-        800 => 'http://fonts.gstatic.com/s/martel/v2/RVF8drcQoRkRL7l_ZkpTlQ.ttf',
-        900 => 'http://fonts.gstatic.com/s/martel/v2/iS0YUpFJoiLRlnyl40rpEA.ttf',
-      ),
-    ),
-    476 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Martel Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '600',
-        4 => '700',
-        5 => '800',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQEnzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQC9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/martelsans/v4/91c8DPDZncMc0RFfhmc2RqCWcynf_cDxXwCLxiixG1c.ttf',
-        600 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQJZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQHe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQA89PwPrYLaRFJ-HNCU9NbA.ttf',
-        900 => 'http://fonts.gstatic.com/s/martelsans/v4/7ajme85aKKx_SCWF59ImQCenaqEuufTBk9XMKnKmgDA.ttf',
-      ),
-    ),
-    477 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Marvel',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/marvel/v7/Fg1dO8tWVb-MlyqhsbXEkg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/marvel/v7/HzyjFB-oR5usrc7Lxz9g8w.ttf',
-        700 => 'http://fonts.gstatic.com/s/marvel/v7/WrHDBL1RupWGo2UcdgxB3Q.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/marvel/v7/Gzf5NT09Y6xskdQRj2kz1qCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    478 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mate',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mate/v6/ooFviPcJ6hZP5bAE71Cawg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/mate/v6/5XwW6_cbisGvCX5qmNiqfA.ttf',
-      ),
-    ),
-    479 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mate SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/matesc/v6/-YkIT2TZoPZF6pawKzDpWw.ttf',
-      ),
-    ),
-    480 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Maven Pro',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '700',
-        3 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mavenpro/v11/sqPJIFG4gqsjl-0q_46Gbw.ttf',
-        500 => 'http://fonts.gstatic.com/s/mavenpro/v11/SQVfzoJBbj9t3aVcmbspRi3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/mavenpro/v11/uDssvmXgp7Nj3i336k_dSi3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/mavenpro/v11/-91TwiFzqeL1F7Kh91APwS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    481 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'McLaren',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mclaren/v5/OprvTGxaiINBKW_1_U0eoQ.ttf',
-      ),
-    ),
-    482 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Meddon',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/meddon/v10/f8zJO98uu2EtSj9p7ci9RA.ttf',
-      ),
-    ),
-    483 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'MedievalSharp',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/medievalsharp/v9/85X_PjV6tftJ0-rX7KYQkOe45sJkivqprK7VkUlzfg0.ttf',
-      ),
-    ),
-    484 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Medula One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/medulaone/v7/AasPgDQak81dsTGQHc5zUPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    485 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Meera Inimai',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/meerainimai/v2/fWbdJc2ZVZnWCi06NRCxDy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    486 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Megrim',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/megrim/v8/e-9jVUC9lv1zxaFQARuftw.ttf',
-      ),
-    ),
-    487 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Meie Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/meiescript/v5/oTIWE5MmPye-rCyVp_6KEqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    488 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Merienda',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/merienda/v5/MYY6Og1qZlOQtPW2G95Y3A.ttf',
-        700 => 'http://fonts.gstatic.com/s/merienda/v5/GlwcvRLlgiVE2MBFQ4r0sKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    489 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Merienda One',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/meriendaone/v8/bCA-uDdUx6nTO8SjzCLXvS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    490 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Merriweather',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-        6 => '900',
-        7 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v18',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/merriweather/v18/ZvcMqxEwPfh2qDWBPxn6nqcQoVhARpoaILP7amxE_8g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/merriweather/v18/EYh7Vl4ywhowqULgRdYwICna0FLWfcB-J_SAYmcAXaI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/merriweather/v18/RFda8w1V0eDZheqfcyQ4EC3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/merriweather/v18/So5lHxHT37p2SS4-t60SlPMZXuCXbOrAvx5R0IT5Oyo.ttf',
-        700 => 'http://fonts.gstatic.com/s/merriweather/v18/ZvcMqxEwPfh2qDWBPxn6nkD2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/merriweather/v18/EYh7Vl4ywhowqULgRdYwIPAs9-1nE9qOqhChW0m4nDE.ttf',
-        900 => 'http://fonts.gstatic.com/s/merriweather/v18/ZvcMqxEwPfh2qDWBPxn6nqObDOjC3UL77puoeHsE3fw.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/merriweather/v18/EYh7Vl4ywhowqULgRdYwIBd0_s6jQr9r5s5OZYvtzBY.ttf',
-      ),
-    ),
-    491 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Merriweather Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '700italic',
-        6 => '800',
-        7 => '800italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/merriweathersans/v9/6LmGj5dOJopQKEkt88Gowan5N8K-_DP0e9e_v51obXQ.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/merriweathersans/v9/nAqt4hiqwq3tzCecpgPmVdytE4nGXk2hYD5nJ740tBw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/merriweathersans/v9/AKu1CjQ4qnV8MUltkAX3sOAj_ty82iuwwDTNEYXGiyQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/merriweathersans/v9/3Mz4hOHzs2npRMG3B1ascZ32VBCoA_HLsn85tSWZmdo.ttf',
-        700 => 'http://fonts.gstatic.com/s/merriweathersans/v9/6LmGj5dOJopQKEkt88GowbqxG25nQNOioCZSK4sU-CA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/merriweathersans/v9/nAqt4hiqwq3tzCecpgPmVbuqAJxizi8Dk_SK5et7kMg.ttf',
-        800 => 'http://fonts.gstatic.com/s/merriweathersans/v9/6LmGj5dOJopQKEkt88GowYufzO2zUYSj5LqoJ3UGkco.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/merriweathersans/v9/nAqt4hiqwq3tzCecpgPmVdDmPrYMy3aZO4LmnZsxTQw.ttf',
-      ),
-    ),
-    492 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Metal',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/metal/v10/zA3UOP13ooQcxjv04BZX5g.ttf',
-      ),
-    ),
-    493 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Metal Mania',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/metalmania/v7/isriV_rAUgj6bPWPN6l9QKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    494 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Metamorphous',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/metamorphous/v7/wGqUKXRinIYggz-BTRU9ei3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    495 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Metrophobic',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/metrophobic/v10/SaglWZWCrrv_D17u1i4v_aCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    496 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Michroma',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/michroma/v8/0c2XrW81_QsiKV8T9thumA.ttf',
-      ),
-    ),
-    497 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Milonga',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/milonga/v5/dzNdIUSTGFmy2ahovDRcWg.ttf',
-      ),
-    ),
-    498 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Miltonian',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/miltonian/v11/Z4HrYZyqm0BnNNzcCUfzoQ.ttf',
-      ),
-    ),
-    499 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Miltonian Tattoo',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/miltoniantattoo/v12/1oU_8OGYwW46eh02YHydn2uk0YtI6thZkz1Hmh-odwg.ttf',
-      ),
-    ),
-    500 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Miniver',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/miniver/v6/4yTQohOH_cWKRS5laRFhYg.ttf',
-      ),
-    ),
-    501 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Miriam Libre',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/miriamlibre/v3/Ljtpu8zR5iJWmlN3Faba5S3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/miriamlibre/v3/FLc0J-Gdn8ynDWUkeeesAED2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    502 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mirza',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mirza/v3/8oe36Xbgj9BMSLJBaZ8VAQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/mirza/v3/dT3HbZoBCx1xbU7PnFEFyQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/mirza/v3/6T4uh2Zti9P6Eq_gbAYvVQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/mirza/v3/b47CZDHoZdhnplmDpZymFw.ttf',
-      ),
-    ),
-    503 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Miss Fajardose',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/missfajardose/v7/WcXjlQPKn6nBfr8LY3ktNu6rPKfVZo7L2bERcf0BDns.ttf',
-      ),
-    ),
-    504 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mitr',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/mitr/v3/GCzZRAhweqJhxrmM0bPztg.ttf',
-        300 => 'http://fonts.gstatic.com/s/mitr/v3/A61rQ_y9i8Ja__oFN7KxiQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/mitr/v3/vKMd72X2iT4iBo5GvdCa_A.ttf',
-        500 => 'http://fonts.gstatic.com/s/mitr/v3/r_Z6yrJJ0zmkGAqxqjlLRg.ttf',
-        600 => 'http://fonts.gstatic.com/s/mitr/v3/42l66tb_XMxM97GKatU9Ng.ttf',
-        700 => 'http://fonts.gstatic.com/s/mitr/v3/V-V7Rul5HOZ651R4Tml2Lw.ttf',
-      ),
-    ),
-    505 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Modak',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/modak/v3/lMsN0QIKid-pCPvL0hH4nw.ttf',
-      ),
-    ),
-    506 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Modern Antiqua',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/modernantiqua/v7/8qX_tr6Xzy4t9fvZDXPkh6rFJ4O13IHVxZbM6yoslpo.ttf',
-      ),
-    ),
-    507 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mogra',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mogra/v4/gIxQBn9PseDaI0D4FnOiBQ.ttf',
-      ),
-    ),
-    508 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Molengo',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/molengo/v8/jcjgeGuzv83I55AzOTpXNQ.ttf',
-      ),
-    ),
-    509 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Molle',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'italic' => 'http://fonts.gstatic.com/s/molle/v6/9XTdCsjPXifLqo5et-YoGA.ttf',
-      ),
-    ),
-    510 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Monda',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/monda/v7/qFMHZ9zvR6B_gnoIgosPrw.ttf',
-        700 => 'http://fonts.gstatic.com/s/monda/v7/EVOzZUyc_j1w2GuTgTAW1g.ttf',
-      ),
-    ),
-    511 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Monofett',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/monofett/v7/C6K5L799Rgxzg2brgOaqAw.ttf',
-      ),
-    ),
-    512 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Monoton',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/monoton/v7/aCz8ja_bE4dg-7agSvExdw.ttf',
-      ),
-    ),
-    513 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Monsieur La Doulaise',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/monsieurladoulaise/v6/IMAdMj6Eq9jZ46CPctFtMKP61oAqTJXlx5ZVOBmcPdM.ttf',
-      ),
-    ),
-    514 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Montaga',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/montaga/v5/PwTwUboiD-M4-mFjZfJs2A.ttf',
-      ),
-    ),
-    515 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Montez',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/montez/v8/kx58rLOWQQLGFM4pDHv5Ng.ttf',
-      ),
-    ),
-    516 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Montserrat',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/montserrat/v11/CdKWaRAal2Bxq9mORLKRRS3USBnSvpkopQaUR-2r7iU.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/montserrat/v11/1809Y0aW9bpFOPXsQTFwf8SVQ0giZ-l_NELu3lgGyYw.ttf',
-        200 => 'http://fonts.gstatic.com/s/montserrat/v11/eWRmKHdPNWGn_iFyeEYja2eudeTO44zf-ht3k-KNzwg.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9FtwQm5IkIgNCodAfQb4ovl18.ttf',
-        300 => 'http://fonts.gstatic.com/s/montserrat/v11/IVeH6A3MiFyaSEiudUMXE0eOrDcLawS7-ssYqLr2Xp4.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft6cQoVhARpoaILP7amxE_8g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/montserrat/v11/Kqy6-utIpx_30Xzecmeo8_esZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/montserrat/v11/-iqwlckIhsmvkx0N6rwPmi3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/montserrat/v11/BYPM-GE291ZjIXBWrtCwepp-63r6doWhTEbsfBIRJ7A.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft5MQuUSAwdHsY8ov_6tk1oA.ttf',
-        600 => 'http://fonts.gstatic.com/s/montserrat/v11/q2OIMsAtXEkOulLQVdSl0_pTEJqju4Hz1txDWij77d4.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft2v8CylhIUtwUiYO7Z2wXbE.ttf',
-        700 => 'http://fonts.gstatic.com/s/montserrat/v11/IQHow_FEYlDC4Gzy_m8fcgJKKGfqHaYFsRG-T3ceEVo.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft0D2ttfZwueP-QU272T9-k4.ttf',
-        800 => 'http://fonts.gstatic.com/s/montserrat/v11/H8_7oktkjVeeX06kbAvc0Kk3bhPBSBJ0bSJQ6acL-0g.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft_qsay_1ZmRGmC8pVRdIfAg.ttf',
-        900 => 'http://fonts.gstatic.com/s/montserrat/v11/aEu-9ATAroJ1iN4zmQ55Bp0EAVxt0G0biEntp43Qt6E.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/montserrat/v11/zhwB3-BAdyKDf0geWr9Ft6ObDOjC3UL77puoeHsE3fw.ttf',
-      ),
-    ),
-    517 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Montserrat Alternates',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
-        17 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/montserratalternates/v8/oqQkJ7FUCF9bJw9oNhwpltmjtuu7N1WAenNR-bns1HU.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/3-rFIqHz_U7TAmWg7RcpLzob9T7De5a9EmE7cInrugI.ttf',
-        200 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZrWzJnWnTj1NV2WEtcqW8F0.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlATSYqyfLbk4Wyr4DDJHtpar3rGVtsTkPsbDajuO5ueQw.ttf',
-        300 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZoE9JAqK0NEjKMCIBssy61I.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAX0Ksah31OxOJpZejHsaXyX3rGVtsTkPsbDajuO5ueQw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/montserratalternates/v8/z2n1Sjxk9souK3HCtdHuklPuEVRGaG9GCQnmM16YWq0.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/oqQkJ7FUCF9bJw9oNhwpliKJhVBtn9MynHVBPiS2bkc.ttf',
-        500 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZkLT1bEhWimL9YDPt6og4ow.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAbq1yxDcj1rkVNifBkzxbjz3rGVtsTkPsbDajuO5ueQw.ttf',
-        600 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZlzJBia8MVcXq42LmpYhWMY.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAdzE96w6fJMDbKTKS-tt8C_3rGVtsTkPsbDajuO5ueQw.ttf',
-        700 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZpeqBKvsAhm-s2I4RVSXFfc.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAVeYZ2vsofSkgKvS_YtoH2b3rGVtsTkPsbDajuO5ueQw.ttf',
-        800 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZkG2AOFTt9I0BIk1fL0aWvI.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAbM_h-OHjcDf1XWbHqSgRF73rGVtsTkPsbDajuO5ueQw.ttf',
-        900 => 'http://fonts.gstatic.com/s/montserratalternates/v8/YENqOGAVzwIHjYNjmKuAZqjHT7NF_e7B-hWEBx2SqPI.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/montserratalternates/v8/AXzeb8s80Wvg1Wkw1cVlAX18ggQg0KDcknRVFWguAv_3rGVtsTkPsbDajuO5ueQw.ttf',
-      ),
-    ),
-    518 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Montserrat Subrayada',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/montserratsubrayada/v5/nzoCWCz0e9c7Mr2Gl8bbgrJymm6ilkk9f0nDA_sC_qk.ttf',
-        700 => 'http://fonts.gstatic.com/s/montserratsubrayada/v5/wf-IKpsHcfm0C9uaz9IeGJvEcF1LWArDbGWgKZSH9go.ttf',
-      ),
-    ),
-    519 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Moul',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/moul/v9/Kb0ALQnfyXawP1a_P_gpTQ.ttf',
-      ),
-    ),
-    520 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Moulpali',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/moulpali/v10/diD74BprGhmVkJoerKmrKA.ttf',
-      ),
-    ),
-    521 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mountains of Christmas',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mountainsofchristmas/v10/dVGBFPwd6G44IWDbQtPew2Auds3jz1Fxb61CgfaGDr4.ttf',
-        700 => 'http://fonts.gstatic.com/s/mountainsofchristmas/v10/PymufKtHszoLrY0uiAYKNM9cPTbSBTrQyTa5TWAe3vE.ttf',
-      ),
-    ),
-    522 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mouse Memoirs',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mousememoirs/v5/NBFaaJFux_j0AQbAsW3QeH8f0n03UdmQgF_CLvNR2vg.ttf',
-      ),
-    ),
-    523 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mr Bedfort',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mrbedfort/v6/81bGgHTRikLs_puEGshl7_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    524 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mr Dafoe',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mrdafoe/v6/s32Q1S6ZkT7EaX53mUirvQ.ttf',
-      ),
-    ),
-    525 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mr De Haviland',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mrdehaviland/v6/fD8y4L6PJ4vqDk7z8Y8e27v4lrhng1lzu7-weKO6cw8.ttf',
-      ),
-    ),
-    526 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mrs Saint Delafield',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mrssaintdelafield/v5/vuWagfFT7bj9lFtZOFBwmjHMBelqWf3tJeGyts2SmKU.ttf',
-      ),
-    ),
-    527 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mrs Sheppards',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mrssheppards/v6/2WFsWMV3VUeCz6UVH7UjCn8f0n03UdmQgF_CLvNR2vg.ttf',
-      ),
-    ),
-    528 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mukta',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/mukta/v4/tDVdzIQ8YtIPQkpeTPxaRw.ttf',
-        300 => 'http://fonts.gstatic.com/s/mukta/v4/XBYaFkW7WJ8kqXq2Yt41cw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/mukta/v4/7dmf9fx1PuHBtLhSPnZzrQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/mukta/v4/lQPvn1FqPa-GCFx-cAuBHg.ttf',
-        600 => 'http://fonts.gstatic.com/s/mukta/v4/NcubiFyhit9Cmsn9p9y9Xg.ttf',
-        700 => 'http://fonts.gstatic.com/s/mukta/v4/TZMKZcvgKiI-bWO9PoMI7w.ttf',
-        800 => 'http://fonts.gstatic.com/s/mukta/v4/QJVapEVpFpMfDYz2xuPBmQ.ttf',
-      ),
-    ),
-    529 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mukta Mahee',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gurmukhi',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4p0nzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4py9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/muktamahee/v2/aY_0-ayxlrgq21R8UWTI96CWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4p8CNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4p5Z7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4p3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/muktamahee/v2/kolKnxd29wydc4yTvsM4pw89PwPrYLaRFJ-HNCU9NbA.ttf',
-      ),
-    ),
-    530 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mukta Malar',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18eUnzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18eS9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/muktamalar/v3/xdx0fv5-ENz5PCzqiKyrqqCWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18ecCNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18eZZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18eXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/muktamalar/v3/1-N_tlWLJvzngraerf18eQ89PwPrYLaRFJ-HNCU9NbA.ttf',
-      ),
-    ),
-    531 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mukta Vaani',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-        6 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_0nzyIngrzGjGh22wPb6cGM.ttf',
-        300 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_y9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/muktavaani/v4/knS0wTOFNOwOD4CZrdHIxKCWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_8CNfqCYlB_eIx7H1TVXe60.ttf',
-        600 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_5Z7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/muktavaani/v4/X9qyC4rK_D9w1AvSv0mw_w89PwPrYLaRFJ-HNCU9NbA.ttf',
-      ),
-    ),
-    532 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Muli',
-      'category' => 'sans-serif',
+      'family' => 'Asap Condensed',
       'variants' => 
       array (
         0 => '200',
@@ -12726,1147 +1435,8 @@ return array (
         3 => '300italic',
         4 => 'regular',
         5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '800',
-        11 => '800italic',
-        12 => '900',
-        13 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/muli/v11/59Vi0Dm-YSaaKxRiSKrm0w.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/muli/v11/ZV7FMcmPA9u6IXfXrqyybA.ttf',
-        300 => 'http://fonts.gstatic.com/s/muli/v11/VJw4F3ZHRAZ7Hmg3nQu5YQ.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/muli/v11/s-NKMCru8HiyjEt0ZDoBoA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/muli/v11/KJiP6KznxbALQgfJcDdPAw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/muli/v11/Cg0K_IWANs9xkNoxV7H1_w.ttf',
-        600 => 'http://fonts.gstatic.com/s/muli/v11/O4zVJyE-wzb2CQjcHkw-Xg.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/muli/v11/xasdEbMzFtnmERn70-CN-A.ttf',
-        700 => 'http://fonts.gstatic.com/s/muli/v11/n0UfHdYd8jlanPB1sJ0WYQ.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/muli/v11/9vQS_qOVbbe4j6LkPjCG1g.ttf',
-        800 => 'http://fonts.gstatic.com/s/muli/v11/QdHPibssQgzNly7JkF7wdw.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/muli/v11/jbD7XyPvLT1oJBLbEcQmmg.ttf',
-        900 => 'http://fonts.gstatic.com/s/muli/v11/RcGfHFZUYLsFj9c3uAb4Gg.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/muli/v11/r4hqeWwjqEvTncJsq5KCSg.ttf',
-      ),
-    ),
-    533 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Mystery Quest',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/mysteryquest/v5/467jJvg0c7HgucvBB9PLDyeUSrabuTpOsMEiRLtKwk0.ttf',
-      ),
-    ),
-    534 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'NTR',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ntr/v5/e7H4ZLtGfVOYyOupo6T12g.ttf',
-      ),
-    ),
-    535 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Neucha',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/neucha/v9/bijdhB-TzQdtpl0ykhGh4Q.ttf',
-      ),
-    ),
-    536 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Neuton',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '700',
-        5 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/neuton/v10/DA3Mkew3XqSkPpi1f4tJow.ttf',
-        300 => 'http://fonts.gstatic.com/s/neuton/v10/xrc_aZ2hx-gdeV0mlY8Vww.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/neuton/v10/9R-MGIOQUdjAVeB6nE6PcQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/neuton/v10/uVMT3JOB5BNFi3lgPp6kEg.ttf',
-        700 => 'http://fonts.gstatic.com/s/neuton/v10/gnWpkWY7DirkKiovncYrfg.ttf',
-        800 => 'http://fonts.gstatic.com/s/neuton/v10/XPzBQV4lY6enLxQG9cF1jw.ttf',
-      ),
-    ),
-    537 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'New Rocker',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/newrocker/v6/EFUWzHJedEkpW399zYOHofesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    538 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'News Cycle',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v14',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/newscycle/v14/xyMAr8VfiUzIOvS1abHJO_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/newscycle/v14/G28Ny31cr5orMqEQy6ljtwJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    539 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Niconne',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/niconne/v7/ZA-mFw2QNXodx5y7kfELBg.ttf',
-      ),
-    ),
-    540 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nixie One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/nixieone/v8/h6kQfmzm0Shdnp3eswRaqQ.ttf',
-      ),
-    ),
-    541 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nobile',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '500',
-        3 => '500italic',
-        4 => '700',
-        5 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/nobile/v9/lC_lPi1ddtN38iXTCRh6ow.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/nobile/v9/vGmrpKzWQQSrb-PR6FWBIA.ttf',
-        500 => 'http://fonts.gstatic.com/s/nobile/v9/el-1JDqzLC5ePMPiB2COqQ.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/nobile/v9/y2A1jpvs_uHcnmIZDscDC6CWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/nobile/v9/9p6M-Yrg_r_QPmSD1skrOg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/nobile/v9/oQ1eYPaXV638N03KvsNvyKCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    542 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nokora',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/nokora/v11/dRyz1JfnyKPNaRcBNX9F9A.ttf',
-        700 => 'http://fonts.gstatic.com/s/nokora/v11/QMqqa4QEOhQpiig3cAPmbQ.ttf',
-      ),
-    ),
-    543 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Norican',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/norican/v5/SHnSqhYAWG5sZTWcPzEHig.ttf',
-      ),
-    ),
-    544 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nosifer',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/nosifer/v6/7eJGoIuHRrtcG00j6CptSA.ttf',
-      ),
-    ),
-    545 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nothing You Could Do',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/nothingyoucoulddo/v7/jpk1K3jbJoyoK0XKaSyQAf-TpkXjXYGWiJZAEtBRjPU.ttf',
-      ),
-    ),
-    546 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Noticia Text',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/noticiatext/v7/wdyV6x3eKpdeUPQ7BJ5uUC3USBnSvpkopQaUR-2r7iU.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/noticiatext/v7/dAuxVpkYE_Q_IwIm6elsKPMZXuCXbOrAvx5R0IT5Oyo.ttf',
-        700 => 'http://fonts.gstatic.com/s/noticiatext/v7/pEko-RqEtp45bE2P80AAKUD2ttfZwueP-QU272T9-k4.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/noticiatext/v7/-rQ7V8ARjf28_b7kRa0JuvAs9-1nE9qOqhChW0m4nDE.ttf',
-      ),
-    ),
-    547 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Noto Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'devanagari',
-        7 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/notosans/v7/0Ue9FiUJwVhi4NGfHJS5uA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/notosans/v7/dLcNKMgJ1H5RVoZFraDz0qCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/notosans/v7/PIbvSEyHEdL91QLOQRnZ1y3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/notosans/v7/9Z3uUWMRR7crzm1TjRicDne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    548 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Noto Serif',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/notoserif/v6/zW6mc7bC1CWw8dH0yxY8JfesZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/notoserif/v6/HQXBIwLHsOJCNEQeX9kNzy3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/notoserif/v6/lJAvZoKA5NttpPc9yc6lPQJKKGfqHaYFsRG-T3ceEVo.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/notoserif/v6/Wreg0Be4tcFGM2t6VWytvED2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    549 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Cut',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novacut/v9/6q12jWcBvj0KO2cMRP97tA.ttf',
-      ),
-    ),
-    550 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Flat',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novaflat/v9/pK7a0CoGzI684qe_XSHBqQ.ttf',
-      ),
-    ),
-    551 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'greek',
-        1 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novamono/v8/6-SChr5ZIaaasJFBkgrLNw.ttf',
-      ),
-    ),
-    552 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Oval',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novaoval/v9/VuukVpKP8BwUf8o9W5LYQQ.ttf',
-      ),
-    ),
-    553 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Round',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novaround/v9/7-cK3Ari_8XYYFgVMxVhDvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    554 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Script',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novascript/v10/dEvxQDLgx1M1TKY-NmBWYaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    555 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Slim',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novaslim/v9/rPYXC81_VL2EW-4CzBX65g.ttf',
-      ),
-    ),
-    556 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nova Square',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/novasquare/v9/BcBzXoaDzYX78rquGXVuSqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    557 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Numans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/numans/v7/g5snI2p6OEjjTNmTHyBdiQ.ttf',
-      ),
-    ),
-    558 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nunito',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '200italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '800',
-        11 => '800italic',
-        12 => '900',
-        13 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/nunito/v9/xtWPP_05UbsUNY9Kdgwt_w.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/nunito/v9/EbyHzRpZ3jx6yC2BjZCsQqCWcynf_cDxXwCLxiixG1c.ttf',
-        300 => 'http://fonts.gstatic.com/s/nunito/v9/zXQvrWBJqUooM7Xv98MrQw.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/nunito/v9/4BFBxBQCHZfUELdybShAwKCWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/nunito/v9/ySZTeT3IuzJj0GK6uGpbBg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/nunito/v9/NZNWFpgsC6hUUE2c03CLoQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/nunito/v9/B4-BGlpEzQ4WP-D3Zi0PRQ.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/nunito/v9/7SyYp8NBEeMV4V7MAKJnZ6CWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/nunito/v9/aEdlqgMuYbpe4U3TnqOQMA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/nunito/v9/4cHctiCFYmTpv-a6b6vYsKCWcynf_cDxXwCLxiixG1c.ttf',
-        800 => 'http://fonts.gstatic.com/s/nunito/v9/GtGHSZwowZF8a9-GAsh20A.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/nunito/v9/2TsLUs-EFIKsriUeVTl6nKCWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/nunito/v9/QVvFcvcPoFKH9Q71V4WsjQ.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/nunito/v9/cIxOb6Vw6BqF9ZoAlenp3qCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    559 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Nunito Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '200italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '800',
-        11 => '800italic',
-        12 => '900',
-        13 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHUnzyIngrzGjGh22wPb6cGM.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqV02YN_dW5g9CXH6iztHQiR4.ttf',
-        300 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHS9-WlPSxbfiI49GsXo3q0g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqV2o9eWDfYYxG3A176Zl7aIg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/nunitosans/v3/qDS9UelBO44ppiSawKNcIKCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/w9sy7IRyDFLWACdltghEwUeOrDcLawS7-ssYqLr2Xp4.ttf',
-        600 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHZZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqV5e6We3S5L6hKLscKpOkmlo.ttf',
-        700 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqV8_zJjSACmk0BRPxQqhnNLU.ttf',
-        800 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHQ89PwPrYLaRFJ-HNCU9NbA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqVyad_7rtf4IdDfsLVg-2OV4.ttf',
-        900 => 'http://fonts.gstatic.com/s/nunitosans/v3/XvilrNtBQKRMeiqSPzEFHSenaqEuufTBk9XMKnKmgDA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/nunitosans/v3/ORCQQ32ldzJ6bFTh_zXqV0_yTOUGsoC54csJe1b-IRw.ttf',
-      ),
-    ),
-    560 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Odor Mean Chey',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/odormeanchey/v9/GK3E7EjPoBkeZhYshGFo0eVKG8sq4NyGgdteJLvqLDs.ttf',
-      ),
-    ),
-    561 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Offside',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/offside/v5/v0C913SB8wqQUvcu1faUqw.ttf',
-      ),
-    ),
-    562 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Old Standard TT',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oldstandardtt/v9/n6RTCDcIPWSE8UNBa4k-DLcB5jyhm1VsHs65c3QNDr0.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/oldstandardtt/v9/QQT_AUSp4AV4dpJfIN7U5PWrQzeMtsHf8QsWQ2cZg3c.ttf',
-        700 => 'http://fonts.gstatic.com/s/oldstandardtt/v9/5Ywdce7XEbTSbxs__4X1_HJqbZqK7TdZ58X80Q_Lw8Y.ttf',
-      ),
-    ),
-    563 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oldenburg',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oldenburg/v5/dqA_M_uoCVXZbCO-oKBTnQ.ttf',
-      ),
-    ),
-    564 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oleo Script',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oleoscript/v6/21stZcmPyzbQVXtmGegyqKCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/oleoscript/v6/hudNQFKFl98JdNnlo363fne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    565 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oleo Script Swash Caps',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oleoscriptswashcaps/v5/vdWhGqsBUAP-FF3NOYTe4iMF4kXAPemmyaDpMXQ31P0.ttf',
-        700 => 'http://fonts.gstatic.com/s/oleoscriptswashcaps/v5/HMO3ftxA9AU5floml9c755reFYaXZ4zuJXJ8fr8OO1g.ttf',
-      ),
-    ),
-    566 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Open Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '600',
-        5 => '600italic',
-        6 => '700',
-        7 => '700italic',
-        8 => '800',
-        9 => '800italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v15',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTS3USBnSvpkopQaUR-2r7iU.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/opensans/v15/PRmiXeptR36kaC0GEAetxi9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/opensans/v15/IgZJs4-7SA1XX_edsoXWog.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/opensans/v15/O4NhV7_qs9r9seTo7fnsVKCWcynf_cDxXwCLxiixG1c.ttf',
-        600 => 'http://fonts.gstatic.com/s/opensans/v15/MTP_ySUJH_bn48VBG8sNSi3USBnSvpkopQaUR-2r7iU.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/opensans/v15/PRmiXeptR36kaC0GEAetxpZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        700 => 'http://fonts.gstatic.com/s/opensans/v15/k3k702ZOKiLJc3WVjuplzC3USBnSvpkopQaUR-2r7iU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/opensans/v15/PRmiXeptR36kaC0GEAetxne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        800 => 'http://fonts.gstatic.com/s/opensans/v15/EInbV5DfGHOiMmvb1Xr-hi3USBnSvpkopQaUR-2r7iU.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/opensans/v15/PRmiXeptR36kaC0GEAetxg89PwPrYLaRFJ-HNCU9NbA.ttf',
-      ),
-    ),
-    567 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Open Sans Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/opensanscondensed/v12/gk5FxslNkTTHtojXrkp-xEMwSSh38KQVJx4ABtsZTnA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/opensanscondensed/v12/jIXlqT1WKafUSwj6s9AzV4_LkTZ_uhAwfmGJ084hlvM.ttf',
-        700 => 'http://fonts.gstatic.com/s/opensanscondensed/v12/gk5FxslNkTTHtojXrkp-xBEM87DM3yorPOrvA-vB930.ttf',
-      ),
-    ),
-    568 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oranienbaum',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oranienbaum/v6/M98jYwCSn0PaFhXXgviCoaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    569 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Orbitron',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '700',
-        3 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/orbitron/v9/DY8swouAZjR3RaUPRf0HDQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/orbitron/v9/p-y_ffzMdo5JN_7ia0vYEqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/orbitron/v9/PS9_6SLkY1Y6OgPO3APr6qCWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/orbitron/v9/2I3-8i9hT294TE_pyjy9SaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    570 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oregano',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oregano/v5/UiLhqNixVv2EpjRoBG6axA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/oregano/v5/_iwqGEht6XsAuEaCbYG64Q.ttf',
-      ),
-    ),
-    571 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Orienta',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/orienta/v5/_NKSk93mMs0xsqtfjCsB3Q.ttf',
-      ),
-    ),
-    572 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Original Surfer',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/originalsurfer/v6/gdHw6HpSIN4D6Xt7pi1-qIkEz33TDwAZczo_6fY7eg0.ttf',
-      ),
-    ),
-    573 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oswald',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '300',
-        2 => 'regular',
-        3 => '500',
-        4 => '600',
-        5 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v15',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/oswald/v15/NFBt4e1rewQyDPftazXlBw.ttf',
-        300 => 'http://fonts.gstatic.com/s/oswald/v15/y3tZpCdiRD4oNRRYFcAR5Q.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/oswald/v15/uLEd2g2vJglLPfsBF91DCg.ttf',
-        500 => 'http://fonts.gstatic.com/s/oswald/v15/wrHWShuZ7ELtrnx0cnkzXw.ttf',
-        600 => 'http://fonts.gstatic.com/s/oswald/v15/JNlamLn5ALW8eKp46JLlQA.ttf',
-        700 => 'http://fonts.gstatic.com/s/oswald/v15/7wj8ldV_5Ti37rHa0m1DDw.ttf',
-      ),
-    ),
-    574 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Over the Rainbow',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/overtherainbow/v8/6gp-gkpI2kie2dHQQLM2jQBdxkZd83xOSx-PAQ2QmiI.ttf',
-      ),
-    ),
-    575 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Overlock',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-        4 => '900',
-        5 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/overlock/v7/Z8oYsGi88-E1cUB8YBFMAg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/overlock/v7/rq6EacukHROOBrFrK_zF6_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/overlock/v7/Fexr8SqXM8Bm_gEVUA7AKaCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/overlock/v7/wFWnYgeXKYBks6gEUwYnfAJKKGfqHaYFsRG-T3ceEVo.ttf',
-        900 => 'http://fonts.gstatic.com/s/overlock/v7/YPJCVTT8ZbG3899l_-KIGqCWcynf_cDxXwCLxiixG1c.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/overlock/v7/iOZhxT2zlg7W5ij_lb-oDp0EAVxt0G0biEntp43Qt6E.ttf',
-      ),
-    ),
-    576 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Overlock SC',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/overlocksc/v6/8D7HYDsvS_g1GhBnlHzgzaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    577 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Overpass',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
+        6 => '500',
+        7 => '500italic',
         8 => '600',
         9 => '600italic',
         10 => '700',
@@ -13876,332 +1446,6105 @@ return array (
         14 => '900',
         15 => '900italic',
       ),
-      'subsets' => 
+    ),
+    122 => 
+    array (
+      'family' => 'Asap Sharp',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
+    ),
+    123 => 
+    array (
+      'family' => 'Asar',
+      'variants' => 
       array (
-        100 => 'http://fonts.gstatic.com/s/overpass/v2/ywiUWFAguOSxQn0FFeOdWPesZW2xOQ-xsNqO47m55DA.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/overpass/v2/thg-CA5nD5lyYWLwXbqXXi3USBnSvpkopQaUR-2r7iU.ttf',
-        200 => 'http://fonts.gstatic.com/s/overpass/v2/WrbWRQuVnXt_EslNm2vBt6CWcynf_cDxXwCLxiixG1c.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/overpass/v2/Eyj9nfhrJ71MmfPNEwqE02eudeTO44zf-ht3k-KNzwg.ttf',
-        300 => 'http://fonts.gstatic.com/s/overpass/v2/nqDUqkXaOp0r1j0uaM5VUaCWcynf_cDxXwCLxiixG1c.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/overpass/v2/R77XtXNe7WC4SXZBLWmy80eOrDcLawS7-ssYqLr2Xp4.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/overpass/v2/1fNed5evrqtu4ZjkbTnCRw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/overpass/v2/lG-Dpm66OH9lPHbYTnITSvesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/overpass/v2/-GUou309ST_HAHIhkHjkz6CWcynf_cDxXwCLxiixG1c.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/overpass/v2/aPYi-s_WVz-zuU4TsgAEjvpTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/overpass/v2/sBTg-F6_A1NQLJPfW5I7Q6CWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/overpass/v2/E5UsN4VY1e_Twk_bY6TpQAJKKGfqHaYFsRG-T3ceEVo.ttf',
-        800 => 'http://fonts.gstatic.com/s/overpass/v2/YeZIq305iGwGCyZbaiEbVqCWcynf_cDxXwCLxiixG1c.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/overpass/v2/j6xjlCEDoKw-D0Co-88A9Kk3bhPBSBJ0bSJQ6acL-0g.ttf',
-        900 => 'http://fonts.gstatic.com/s/overpass/v2/4lJ8BLdIYI_B9rFwoB4zO6CWcynf_cDxXwCLxiixG1c.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/overpass/v2/SegM1mSQIRZG2pJwM_2Nm50EAVxt0G0biEntp43Qt6E.ttf',
+        0 => 'regular',
+      ),
+    ),
+    124 => 
+    array (
+      'family' => 'Asimovian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    125 => 
+    array (
+      'family' => 'Asset',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    126 => 
+    array (
+      'family' => 'Assistant',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    127 => 
+    array (
+      'family' => 'Asta Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+      ),
+    ),
+    128 => 
+    array (
+      'family' => 'Astloch',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    129 => 
+    array (
+      'family' => 'Asul',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    130 => 
+    array (
+      'family' => 'Athiti',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    131 => 
+    array (
+      'family' => 'Atkinson Hyperlegible',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    132 => 
+    array (
+      'family' => 'Atkinson Hyperlegible Mono',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    133 => 
+    array (
+      'family' => 'Atkinson Hyperlegible Next',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    134 => 
+    array (
+      'family' => 'Atma',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    135 => 
+    array (
+      'family' => 'Atomic Age',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    136 => 
+    array (
+      'family' => 'Aubrey',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    137 => 
+    array (
+      'family' => 'Audiowide',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    138 => 
+    array (
+      'family' => 'Autour One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    139 => 
+    array (
+      'family' => 'Average',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    140 => 
+    array (
+      'family' => 'Average Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    141 => 
+    array (
+      'family' => 'Averia Gruesa Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    142 => 
+    array (
+      'family' => 'Averia Libre',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    143 => 
+    array (
+      'family' => 'Averia Sans Libre',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    144 => 
+    array (
+      'family' => 'Averia Serif Libre',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    145 => 
+    array (
+      'family' => 'Azeret Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    146 => 
+    array (
+      'family' => 'B612',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    147 => 
+    array (
+      'family' => 'B612 Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    148 => 
+    array (
+      'family' => 'Babylonica',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    149 => 
+    array (
+      'family' => 'Bacasime Antique',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    150 => 
+    array (
+      'family' => 'Bad Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    151 => 
+    array (
+      'family' => 'Badeen Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    152 => 
+    array (
+      'family' => 'Bagel Fat One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    153 => 
+    array (
+      'family' => 'Bahiana',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    154 => 
+    array (
+      'family' => 'Bahianita',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    155 => 
+    array (
+      'family' => 'Bai Jamjuree',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    156 => 
+    array (
+      'family' => 'Bakbak One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    157 => 
+    array (
+      'family' => 'Ballet',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    158 => 
+    array (
+      'family' => 'Baloo 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    159 => 
+    array (
+      'family' => 'Baloo Bhai 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    160 => 
+    array (
+      'family' => 'Baloo Bhaijaan 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    161 => 
+    array (
+      'family' => 'Baloo Bhaina 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    162 => 
+    array (
+      'family' => 'Baloo Chettan 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    163 => 
+    array (
+      'family' => 'Baloo Da 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    164 => 
+    array (
+      'family' => 'Baloo Paaji 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    165 => 
+    array (
+      'family' => 'Baloo Tamma 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    166 => 
+    array (
+      'family' => 'Baloo Tammudu 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    167 => 
+    array (
+      'family' => 'Baloo Thambi 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    168 => 
+    array (
+      'family' => 'Balsamiq Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    169 => 
+    array (
+      'family' => 'Balthazar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    170 => 
+    array (
+      'family' => 'Bangers',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    171 => 
+    array (
+      'family' => 'Barlow',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    172 => 
+    array (
+      'family' => 'Barlow Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    173 => 
+    array (
+      'family' => 'Barlow Semi Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    174 => 
+    array (
+      'family' => 'Barriecito',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    175 => 
+    array (
+      'family' => 'Barrio',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    176 => 
+    array (
+      'family' => 'Basic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    177 => 
+    array (
+      'family' => 'Baskervville',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    178 => 
+    array (
+      'family' => 'Baskervville SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    179 => 
+    array (
+      'family' => 'Battambang',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    180 => 
+    array (
+      'family' => 'Baumans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    181 => 
+    array (
+      'family' => 'Bayon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    182 => 
+    array (
+      'family' => 'BBH Bartle',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    183 => 
+    array (
+      'family' => 'BBH Bogle',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    184 => 
+    array (
+      'family' => 'BBH Hegarty',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    185 => 
+    array (
+      'family' => 'Be Vietnam Pro',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    186 => 
+    array (
+      'family' => 'Beau Rivage',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    187 => 
+    array (
+      'family' => 'Bebas Neue',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    188 => 
+    array (
+      'family' => 'Beiruti',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    189 => 
+    array (
+      'family' => 'Belanosima',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '600',
+        2 => '700',
+      ),
+    ),
+    190 => 
+    array (
+      'family' => 'Belgrano',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    191 => 
+    array (
+      'family' => 'Bellefair',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    192 => 
+    array (
+      'family' => 'Belleza',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    193 => 
+    array (
+      'family' => 'Bellota',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    194 => 
+    array (
+      'family' => 'Bellota Text',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    195 => 
+    array (
+      'family' => 'BenchNine',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    196 => 
+    array (
+      'family' => 'Benne',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    197 => 
+    array (
+      'family' => 'Bentham',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    198 => 
+    array (
+      'family' => 'Berkshire Swash',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    199 => 
+    array (
+      'family' => 'Besley',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    200 => 
+    array (
+      'family' => 'Betania Patmos',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    201 => 
+    array (
+      'family' => 'Betania Patmos GDL',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    202 => 
+    array (
+      'family' => 'Betania Patmos In',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    203 => 
+    array (
+      'family' => 'Betania Patmos In GDL',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    204 => 
+    array (
+      'family' => 'Beth Ellen',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    205 => 
+    array (
+      'family' => 'Bevan',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    206 => 
+    array (
+      'family' => 'BhuTuka Expanded One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    207 => 
+    array (
+      'family' => 'Big Shoulders',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    208 => 
+    array (
+      'family' => 'Big Shoulders Inline',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    209 => 
+    array (
+      'family' => 'Big Shoulders Stencil',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    210 => 
+    array (
+      'family' => 'Bigelow Rules',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    211 => 
+    array (
+      'family' => 'Bigshot One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    212 => 
+    array (
+      'family' => 'Bilbo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    213 => 
+    array (
+      'family' => 'Bilbo Swash Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    214 => 
+    array (
+      'family' => 'BioRhyme',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    215 => 
+    array (
+      'family' => 'BioRhyme Expanded',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    216 => 
+    array (
+      'family' => 'Birthstone',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    217 => 
+    array (
+      'family' => 'Birthstone Bounce',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+      ),
+    ),
+    218 => 
+    array (
+      'family' => 'Biryani',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    219 => 
+    array (
+      'family' => 'Bitcount',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    220 => 
+    array (
+      'family' => 'Bitcount Grid Double',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    221 => 
+    array (
+      'family' => 'Bitcount Grid Double Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    222 => 
+    array (
+      'family' => 'Bitcount Grid Single',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    223 => 
+    array (
+      'family' => 'Bitcount Grid Single Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    224 => 
+    array (
+      'family' => 'Bitcount Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    225 => 
+    array (
+      'family' => 'Bitcount Prop Double',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    226 => 
+    array (
+      'family' => 'Bitcount Prop Double Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    227 => 
+    array (
+      'family' => 'Bitcount Prop Single',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    228 => 
+    array (
+      'family' => 'Bitcount Prop Single Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    229 => 
+    array (
+      'family' => 'Bitcount Single',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    230 => 
+    array (
+      'family' => 'Bitcount Single Ink',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    231 => 
+    array (
+      'family' => 'Bitter',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    232 => 
+    array (
+      'family' => 'BIZ UDGothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    233 => 
+    array (
+      'family' => 'BIZ UDMincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    234 => 
+    array (
+      'family' => 'BIZ UDPGothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    235 => 
+    array (
+      'family' => 'BIZ UDPMincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    236 => 
+    array (
+      'family' => 'BJCree',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    237 => 
+    array (
+      'family' => 'Black And White Picture',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    238 => 
+    array (
+      'family' => 'Black Han Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    239 => 
+    array (
+      'family' => 'Black Ops One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    240 => 
+    array (
+      'family' => 'Blaka',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    241 => 
+    array (
+      'family' => 'Blaka Hollow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    242 => 
+    array (
+      'family' => 'Blaka Ink',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    243 => 
+    array (
+      'family' => 'Blinker',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    244 => 
+    array (
+      'family' => 'Bodoni Moda',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    245 => 
+    array (
+      'family' => 'Bodoni Moda SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    246 => 
+    array (
+      'family' => 'Bokor',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    247 => 
+    array (
+      'family' => 'Boldonse',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    248 => 
+    array (
+      'family' => 'Bona Nova',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    249 => 
+    array (
+      'family' => 'Bona Nova SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    250 => 
+    array (
+      'family' => 'Bonbon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    251 => 
+    array (
+      'family' => 'Bonheur Royale',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    252 => 
+    array (
+      'family' => 'Boogaloo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    253 => 
+    array (
+      'family' => 'Borel',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    254 => 
+    array (
+      'family' => 'Bowlby One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    255 => 
+    array (
+      'family' => 'Bowlby One SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    256 => 
+    array (
+      'family' => 'Bpmf Huninn',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    257 => 
+    array (
+      'family' => 'Bpmf Iansui',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    258 => 
+    array (
+      'family' => 'Bpmf Zihi Kai Std',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    259 => 
+    array (
+      'family' => 'Braah One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    260 => 
+    array (
+      'family' => 'Brawler',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    261 => 
+    array (
+      'family' => 'Bree Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    262 => 
+    array (
+      'family' => 'Bricolage Grotesque',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    263 => 
+    array (
+      'family' => 'Bruno Ace',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    264 => 
+    array (
+      'family' => 'Bruno Ace SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    265 => 
+    array (
+      'family' => 'Brygada 1918',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    266 => 
+    array (
+      'family' => 'Bubblegum Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    267 => 
+    array (
+      'family' => 'Bubbler One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    268 => 
+    array (
+      'family' => 'Buda',
+      'variants' => 
+      array (
+        0 => '300',
+      ),
+    ),
+    269 => 
+    array (
+      'family' => 'Buenard',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    270 => 
+    array (
+      'family' => 'Bungee',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    271 => 
+    array (
+      'family' => 'Bungee Hairline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    272 => 
+    array (
+      'family' => 'Bungee Inline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    273 => 
+    array (
+      'family' => 'Bungee Outline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    274 => 
+    array (
+      'family' => 'Bungee Shade',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    275 => 
+    array (
+      'family' => 'Bungee Spice',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    276 => 
+    array (
+      'family' => 'Bungee Tint',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    277 => 
+    array (
+      'family' => 'Butcherman',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    278 => 
+    array (
+      'family' => 'Butterfly Kids',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    279 => 
+    array (
+      'family' => 'Bytesized',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    280 => 
+    array (
+      'family' => 'Caacupe One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    281 => 
+    array (
+      'family' => 'Cabin',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    282 => 
+    array (
+      'family' => 'Cabin Condensed',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    283 => 
+    array (
+      'family' => 'Cabin Sketch',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    284 => 
+    array (
+      'family' => 'Cactus Classical Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    285 => 
+    array (
+      'family' => 'Caesar Dressing',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    286 => 
+    array (
+      'family' => 'Cagliostro',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    287 => 
+    array (
+      'family' => 'Cairo',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    288 => 
+    array (
+      'family' => 'Cairo Play',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    289 => 
+    array (
+      'family' => 'Cal Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    290 => 
+    array (
+      'family' => 'Caladea',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    291 => 
+    array (
+      'family' => 'Calistoga',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    292 => 
+    array (
+      'family' => 'Calligraffitti',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    293 => 
+    array (
+      'family' => 'Cambay',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    294 => 
+    array (
+      'family' => 'Cambo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    295 => 
+    array (
+      'family' => 'Candal',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    296 => 
+    array (
+      'family' => 'Cantarell',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    297 => 
+    array (
+      'family' => 'Cantata One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    298 => 
+    array (
+      'family' => 'Cantora One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    299 => 
+    array (
+      'family' => 'Caprasimo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    300 => 
+    array (
+      'family' => 'Capriola',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    301 => 
+    array (
+      'family' => 'Caramel',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    302 => 
+    array (
+      'family' => 'Carattere',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    303 => 
+    array (
+      'family' => 'Cardo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    304 => 
+    array (
+      'family' => 'Carlito',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    305 => 
+    array (
+      'family' => 'Carme',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    306 => 
+    array (
+      'family' => 'Carrois Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    307 => 
+    array (
+      'family' => 'Carrois Gothic SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    308 => 
+    array (
+      'family' => 'Carter One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    309 => 
+    array (
+      'family' => 'Cascadia Code',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '200italic',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+      ),
+    ),
+    310 => 
+    array (
+      'family' => 'Cascadia Mono',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '200italic',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+      ),
+    ),
+    311 => 
+    array (
+      'family' => 'Castoro',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    312 => 
+    array (
+      'family' => 'Castoro Titling',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    313 => 
+    array (
+      'family' => 'Catamaran',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    314 => 
+    array (
+      'family' => 'Caudex',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    315 => 
+    array (
+      'family' => 'Cause',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    316 => 
+    array (
+      'family' => 'Caveat',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    317 => 
+    array (
+      'family' => 'Caveat Brush',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    318 => 
+    array (
+      'family' => 'Cedarville Cursive',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    319 => 
+    array (
+      'family' => 'Ceviche One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    320 => 
+    array (
+      'family' => 'Chakra Petch',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '600',
+        7 => '600italic',
+        8 => '700',
+        9 => '700italic',
+      ),
+    ),
+    321 => 
+    array (
+      'family' => 'Changa',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    322 => 
+    array (
+      'family' => 'Changa One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    323 => 
+    array (
+      'family' => 'Chango',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    324 => 
+    array (
+      'family' => 'Charis SIL',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    325 => 
+    array (
+      'family' => 'Charm',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    326 => 
+    array (
+      'family' => 'Charmonman',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    327 => 
+    array (
+      'family' => 'Chathura',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    328 => 
+    array (
+      'family' => 'Chau Philomene One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    329 => 
+    array (
+      'family' => 'Chela One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    330 => 
+    array (
+      'family' => 'Chelsea Market',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    331 => 
+    array (
+      'family' => 'Chenla',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    332 => 
+    array (
+      'family' => 'Cherish',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    333 => 
+    array (
+      'family' => 'Cherry Bomb One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    334 => 
+    array (
+      'family' => 'Cherry Cream Soda',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    335 => 
+    array (
+      'family' => 'Cherry Swash',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    336 => 
+    array (
+      'family' => 'Chewy',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    337 => 
+    array (
+      'family' => 'Chicle',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    338 => 
+    array (
+      'family' => 'Chilanka',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    339 => 
+    array (
+      'family' => 'Chiron GoRound TC',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    340 => 
+    array (
+      'family' => 'Chiron Hei HK',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    341 => 
+    array (
+      'family' => 'Chiron Sung HK',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    342 => 
+    array (
+      'family' => 'Chivo',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    343 => 
+    array (
+      'family' => 'Chivo Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    344 => 
+    array (
+      'family' => 'Chocolate Classical Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    345 => 
+    array (
+      'family' => 'Chokokutai',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    346 => 
+    array (
+      'family' => 'Chonburi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    347 => 
+    array (
+      'family' => 'Cinzel',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    348 => 
+    array (
+      'family' => 'Cinzel Decorative',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+        2 => '900',
+      ),
+    ),
+    349 => 
+    array (
+      'family' => 'Clarity City',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    350 => 
+    array (
+      'family' => 'Clicker Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    351 => 
+    array (
+      'family' => 'Climate Crisis',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    352 => 
+    array (
+      'family' => 'Coda',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '800',
+      ),
+    ),
+    353 => 
+    array (
+      'family' => 'Codystar',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+      ),
+    ),
+    354 => 
+    array (
+      'family' => 'Coiny',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    355 => 
+    array (
+      'family' => 'Combo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    356 => 
+    array (
+      'family' => 'Comfortaa',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    357 => 
+    array (
+      'family' => 'Comforter',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    358 => 
+    array (
+      'family' => 'Comforter Brush',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    359 => 
+    array (
+      'family' => 'Comic Neue',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    360 => 
+    array (
+      'family' => 'Comic Relief',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    361 => 
+    array (
+      'family' => 'Coming Soon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    362 => 
+    array (
+      'family' => 'Comme',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    363 => 
+    array (
+      'family' => 'Commissioner',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    364 => 
+    array (
+      'family' => 'Concert One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    365 => 
+    array (
+      'family' => 'Condiment',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    366 => 
+    array (
+      'family' => 'Content',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    367 => 
+    array (
+      'family' => 'Contrail One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    368 => 
+    array (
+      'family' => 'Convergence',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    369 => 
+    array (
+      'family' => 'Cookie',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    370 => 
+    array (
+      'family' => 'Copse',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    371 => 
+    array (
+      'family' => 'Coral Pixels',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    372 => 
+    array (
+      'family' => 'Corben',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    373 => 
+    array (
+      'family' => 'Corinthia',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    374 => 
+    array (
+      'family' => 'Cormorant',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    375 => 
+    array (
+      'family' => 'Cormorant Garamond',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    376 => 
+    array (
+      'family' => 'Cormorant Infant',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    377 => 
+    array (
+      'family' => 'Cormorant SC',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    378 => 
+    array (
+      'family' => 'Cormorant Unicase',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    379 => 
+    array (
+      'family' => 'Cormorant Upright',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    380 => 
+    array (
+      'family' => 'Cossette Texte',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    381 => 
+    array (
+      'family' => 'Cossette Titre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    382 => 
+    array (
+      'family' => 'Courgette',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    383 => 
+    array (
+      'family' => 'Courier Prime',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    384 => 
+    array (
+      'family' => 'Cousine',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    385 => 
+    array (
+      'family' => 'Coustard',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '900',
+      ),
+    ),
+    386 => 
+    array (
+      'family' => 'Covered By Your Grace',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    387 => 
+    array (
+      'family' => 'Crafty Girls',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    388 => 
+    array (
+      'family' => 'Creepster',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    389 => 
+    array (
+      'family' => 'Crete Round',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    390 => 
+    array (
+      'family' => 'Crimson Pro',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    391 => 
+    array (
+      'family' => 'Crimson Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '600',
+        3 => '600italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    392 => 
+    array (
+      'family' => 'Croissant One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    393 => 
+    array (
+      'family' => 'Crushed',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    394 => 
+    array (
+      'family' => 'Cuprum',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    395 => 
+    array (
+      'family' => 'Cute Font',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    396 => 
+    array (
+      'family' => 'Cutive',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    397 => 
+    array (
+      'family' => 'Cutive Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    398 => 
+    array (
+      'family' => 'Dai Banna SIL',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '600',
+        7 => '600italic',
+        8 => '700',
+        9 => '700italic',
+      ),
+    ),
+    399 => 
+    array (
+      'family' => 'Damion',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    400 => 
+    array (
+      'family' => 'Dancing Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    401 => 
+    array (
+      'family' => 'Danfo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    402 => 
+    array (
+      'family' => 'Dangrek',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    403 => 
+    array (
+      'family' => 'Darker Grotesque',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    404 => 
+    array (
+      'family' => 'Darumadrop One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    405 => 
+    array (
+      'family' => 'Datatype',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    406 => 
+    array (
+      'family' => 'David Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    407 => 
+    array (
+      'family' => 'Dawning of a New Day',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    408 => 
+    array (
+      'family' => 'Days One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    409 => 
+    array (
+      'family' => 'Dekko',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    410 => 
+    array (
+      'family' => 'Dela Gothic One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    411 => 
+    array (
+      'family' => 'Delicious Handrawn',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    412 => 
+    array (
+      'family' => 'Delius',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    413 => 
+    array (
+      'family' => 'Delius Swash Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    414 => 
+    array (
+      'family' => 'Delius Unicase',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    415 => 
+    array (
+      'family' => 'Della Respira',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    416 => 
+    array (
+      'family' => 'Denk One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    417 => 
+    array (
+      'family' => 'Devonshire',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    418 => 
+    array (
+      'family' => 'Dhurjati',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    419 => 
+    array (
+      'family' => 'Didact Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    420 => 
+    array (
+      'family' => 'Diphylleia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    421 => 
+    array (
+      'family' => 'Diplomata',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    422 => 
+    array (
+      'family' => 'Diplomata SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    423 => 
+    array (
+      'family' => 'DM Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+      ),
+    ),
+    424 => 
+    array (
+      'family' => 'DM Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    425 => 
+    array (
+      'family' => 'DM Serif Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    426 => 
+    array (
+      'family' => 'DM Serif Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    427 => 
+    array (
+      'family' => 'Do Hyeon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    428 => 
+    array (
+      'family' => 'Dokdo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    429 => 
+    array (
+      'family' => 'Domine',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    430 => 
+    array (
+      'family' => 'Donegal One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    431 => 
+    array (
+      'family' => 'Dongle',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    432 => 
+    array (
+      'family' => 'Doppio One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    433 => 
+    array (
+      'family' => 'Dorsa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    434 => 
+    array (
+      'family' => 'Dosis',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    435 => 
+    array (
+      'family' => 'DotGothic16',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    436 => 
+    array (
+      'family' => 'Doto',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    437 => 
+    array (
+      'family' => 'Dr Sugiyama',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    438 => 
+    array (
+      'family' => 'Duru Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    439 => 
+    array (
+      'family' => 'Dynalight',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    440 => 
+    array (
+      'family' => 'DynaPuff',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    441 => 
+    array (
+      'family' => 'Eagle Lake',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    442 => 
+    array (
+      'family' => 'East Sea Dokdo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    443 => 
+    array (
+      'family' => 'Eater',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    444 => 
+    array (
+      'family' => 'EB Garamond',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => 'italic',
+        6 => '500italic',
+        7 => '600italic',
+        8 => '700italic',
+        9 => '800italic',
+      ),
+    ),
+    445 => 
+    array (
+      'family' => 'Economica',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    446 => 
+    array (
+      'family' => 'Eczar',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    447 => 
+    array (
+      'family' => 'Edu AU VIC WA NT Arrows',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    448 => 
+    array (
+      'family' => 'Edu AU VIC WA NT Dots',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    449 => 
+    array (
+      'family' => 'Edu AU VIC WA NT Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    450 => 
+    array (
+      'family' => 'Edu AU VIC WA NT Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    451 => 
+    array (
+      'family' => 'Edu AU VIC WA NT Pre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    452 => 
+    array (
+      'family' => 'Edu NSW ACT Cursive',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    453 => 
+    array (
+      'family' => 'Edu NSW ACT Foundation',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    454 => 
+    array (
+      'family' => 'Edu NSW ACT Hand Pre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    455 => 
+    array (
+      'family' => 'Edu QLD Beginner',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    456 => 
+    array (
+      'family' => 'Edu QLD Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    457 => 
+    array (
+      'family' => 'Edu SA Beginner',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    458 => 
+    array (
+      'family' => 'Edu SA Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    459 => 
+    array (
+      'family' => 'Edu TAS Beginner',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    460 => 
+    array (
+      'family' => 'Edu VIC WA NT Beginner',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    461 => 
+    array (
+      'family' => 'Edu VIC WA NT Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    462 => 
+    array (
+      'family' => 'Edu VIC WA NT Hand Pre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    463 => 
+    array (
+      'family' => 'El Messiri',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    464 => 
+    array (
+      'family' => 'Electrolize',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    465 => 
+    array (
+      'family' => 'Elms Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    466 => 
+    array (
+      'family' => 'Elsie',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '900',
+      ),
+    ),
+    467 => 
+    array (
+      'family' => 'Elsie Swash Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '900',
+      ),
+    ),
+    468 => 
+    array (
+      'family' => 'Emblema One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    469 => 
+    array (
+      'family' => 'Emilys Candy',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    470 => 
+    array (
+      'family' => 'Encode Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    471 => 
+    array (
+      'family' => 'Encode Sans Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    472 => 
+    array (
+      'family' => 'Encode Sans Expanded',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    473 => 
+    array (
+      'family' => 'Encode Sans SC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    474 => 
+    array (
+      'family' => 'Encode Sans Semi Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    475 => 
+    array (
+      'family' => 'Encode Sans Semi Expanded',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    476 => 
+    array (
+      'family' => 'Engagement',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    477 => 
+    array (
+      'family' => 'Englebert',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    478 => 
+    array (
+      'family' => 'Enriqueta',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    479 => 
+    array (
+      'family' => 'Ephesis',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    480 => 
+    array (
+      'family' => 'Epilogue',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    481 => 
+    array (
+      'family' => 'Epunda Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    482 => 
+    array (
+      'family' => 'Epunda Slab',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    483 => 
+    array (
+      'family' => 'Erica One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    484 => 
+    array (
+      'family' => 'Esteban',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    485 => 
+    array (
+      'family' => 'Estedad',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    486 => 
+    array (
+      'family' => 'Estonia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    487 => 
+    array (
+      'family' => 'Euphoria Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    488 => 
+    array (
+      'family' => 'Ewert',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    489 => 
+    array (
+      'family' => 'Exile',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    490 => 
+    array (
+      'family' => 'Exo',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    491 => 
+    array (
+      'family' => 'Exo 2',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    492 => 
+    array (
+      'family' => 'Expletus Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    493 => 
+    array (
+      'family' => 'Explora',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    494 => 
+    array (
+      'family' => 'Faculty Glyphic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    495 => 
+    array (
+      'family' => 'Fahkwang',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    496 => 
+    array (
+      'family' => 'Familjen Grotesk',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    497 => 
+    array (
+      'family' => 'Fanwood Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    498 => 
+    array (
+      'family' => 'Farro',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '700',
+      ),
+    ),
+    499 => 
+    array (
+      'family' => 'Farsan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    500 => 
+    array (
+      'family' => 'Fascinate',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    501 => 
+    array (
+      'family' => 'Fascinate Inline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    502 => 
+    array (
+      'family' => 'Faster One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    503 => 
+    array (
+      'family' => 'Fasthand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    504 => 
+    array (
+      'family' => 'Fauna One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    505 => 
+    array (
+      'family' => 'Faustina',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    506 => 
+    array (
+      'family' => 'Federant',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    507 => 
+    array (
+      'family' => 'Federo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    508 => 
+    array (
+      'family' => 'Felipa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    509 => 
+    array (
+      'family' => 'Fenix',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    510 => 
+    array (
+      'family' => 'Festive',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    511 => 
+    array (
+      'family' => 'Figtree',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    512 => 
+    array (
+      'family' => 'Finger Paint',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    513 => 
+    array (
+      'family' => 'Finlandica Headline',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    514 => 
+    array (
+      'family' => 'Finlandica Text',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    515 => 
+    array (
+      'family' => 'Fira Code',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    516 => 
+    array (
+      'family' => 'Fira Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    517 => 
+    array (
+      'family' => 'Fira Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    518 => 
+    array (
+      'family' => 'Fira Sans Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    519 => 
+    array (
+      'family' => 'Fira Sans Extra Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    520 => 
+    array (
+      'family' => 'Firjar',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    521 => 
+    array (
+      'family' => 'Fjalla One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    522 => 
+    array (
+      'family' => 'Fjord One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    523 => 
+    array (
+      'family' => 'Flamenco',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+      ),
+    ),
+    524 => 
+    array (
+      'family' => 'Flavors',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    525 => 
+    array (
+      'family' => 'Fleur De Leah',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    526 => 
+    array (
+      'family' => 'Flow Block',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    527 => 
+    array (
+      'family' => 'Flow Circular',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    528 => 
+    array (
+      'family' => 'Flow Rounded',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    529 => 
+    array (
+      'family' => 'Foldit',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    530 => 
+    array (
+      'family' => 'Fondamento',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    531 => 
+    array (
+      'family' => 'Fontdiner Swanky',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    532 => 
+    array (
+      'family' => 'Forum',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    533 => 
+    array (
+      'family' => 'Fragment Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    534 => 
+    array (
+      'family' => 'Francois One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    535 => 
+    array (
+      'family' => 'Frank Ruhl Libre',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    536 => 
+    array (
+      'family' => 'Fraunces',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    537 => 
+    array (
+      'family' => 'Freckle Face',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    538 => 
+    array (
+      'family' => 'Fredericka the Great',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    539 => 
+    array (
+      'family' => 'Fredoka',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    540 => 
+    array (
+      'family' => 'Freehand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    541 => 
+    array (
+      'family' => 'Freeman',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    542 => 
+    array (
+      'family' => 'Fresca',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    543 => 
+    array (
+      'family' => 'Frijole',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    544 => 
+    array (
+      'family' => 'Fruktur',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    545 => 
+    array (
+      'family' => 'Fugaz One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    546 => 
+    array (
+      'family' => 'Fuggles',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    547 => 
+    array (
+      'family' => 'Funnel Display',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+      ),
+    ),
+    548 => 
+    array (
+      'family' => 'Funnel Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    549 => 
+    array (
+      'family' => 'Fustat',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    550 => 
+    array (
+      'family' => 'Fuzzy Bubbles',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    551 => 
+    array (
+      'family' => 'Ga Maamli',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    552 => 
+    array (
+      'family' => 'Gabarito',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    553 => 
+    array (
+      'family' => 'Gabriela',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    554 => 
+    array (
+      'family' => 'Gaegu',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    555 => 
+    array (
+      'family' => 'Gafata',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    556 => 
+    array (
+      'family' => 'Gajraj One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    557 => 
+    array (
+      'family' => 'Galada',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    558 => 
+    array (
+      'family' => 'Galdeano',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    559 => 
+    array (
+      'family' => 'Galindo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    560 => 
+    array (
+      'family' => 'Gamja Flower',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    561 => 
+    array (
+      'family' => 'Gantari',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    562 => 
+    array (
+      'family' => 'Gasoek One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    563 => 
+    array (
+      'family' => 'Gayathri',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    564 => 
+    array (
+      'family' => 'Geist',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    565 => 
+    array (
+      'family' => 'Geist Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    566 => 
+    array (
+      'family' => 'Geist Pixel',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    567 => 
+    array (
+      'family' => 'Gelasio',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    568 => 
+    array (
+      'family' => 'Gemunu Libre',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    569 => 
+    array (
+      'family' => 'Genos',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    570 => 
+    array (
+      'family' => 'Gentium Book Plus',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    571 => 
+    array (
+      'family' => 'Gentium Plus',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    572 => 
+    array (
+      'family' => 'Geo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    573 => 
+    array (
+      'family' => 'Geologica',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    574 => 
+    array (
+      'family' => 'Geom',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    575 => 
+    array (
+      'family' => 'Geomini',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    576 => 
+    array (
+      'family' => 'Georama',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    577 => 
+    array (
+      'family' => 'Geostar',
+      'variants' => 
+      array (
+        0 => 'regular',
       ),
     ),
     578 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Overpass Mono',
-      'category' => 'monospace',
+      'family' => 'Geostar Fill',
       'variants' => 
       array (
-        0 => '300',
-        1 => 'regular',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/overpassmono/v3/JEQ6tXkANEo2u0wZ-MTOPEW1P7_iUBn_wmH5B9p-CEw.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/overpassmono/v3/MarHoIqW2hy_po97b_wS9uV_5zh5b-_HiooIRUBwn1A.ttf',
-        600 => 'http://fonts.gstatic.com/s/overpassmono/v3/JEQ6tXkANEo2u0wZ-MTOPCvU6mrnWf1MVbTZ5LZwmOY.ttf',
-        700 => 'http://fonts.gstatic.com/s/overpassmono/v3/JEQ6tXkANEo2u0wZ-MTOPO-Cz_5MeePnXDAcLNWyBME.ttf',
+        0 => 'regular',
       ),
     ),
     579 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ovo',
-      'category' => 'serif',
+      'family' => 'Germania One',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ovo/v8/mFg27dimu3s9t09qjCwB1g.ttf',
       ),
     ),
     580 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oxygen',
-      'category' => 'sans-serif',
+      'family' => 'GFS Didot',
       'variants' => 
       array (
-        0 => '300',
-        1 => 'regular',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/oxygen/v7/lZ31r0bR1Bzt_DfGZu1S8A.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/oxygen/v7/uhoyAE7XlQL22abzQieHjw.ttf',
-        700 => 'http://fonts.gstatic.com/s/oxygen/v7/yLqkmDwuNtt5pSqsJmhyrg.ttf',
+        0 => 'regular',
       ),
     ),
     581 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Oxygen Mono',
-      'category' => 'monospace',
+      'family' => 'GFS Neohellenic',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/oxygenmono/v5/DigTu7k4b7OmM8ubt1Qza6CWcynf_cDxXwCLxiixG1c.ttf',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
     582 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Mono',
-      'category' => 'monospace',
+      'family' => 'Gideon Roman',
       'variants' => 
       array (
         0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptmono/v5/QUbM8H9yJK5NhpQ0REO6Wg.ttf',
       ),
     ),
     583 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Sans',
-      'category' => 'sans-serif',
+      'family' => 'Gidole',
       'variants' => 
       array (
         0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptsans/v9/UFoEz2uiuMypUGZL1NKoeg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ptsans/v9/yls9EYWOd496wiu7qzfgNg.ttf',
-        700 => 'http://fonts.gstatic.com/s/ptsans/v9/F51BEgHuR0tYHxF0bD4vwvesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/ptsans/v9/lILlYDvubYemzYzN7GbLkC3USBnSvpkopQaUR-2r7iU.ttf',
       ),
     ),
     584 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Sans Caption',
-      'category' => 'sans-serif',
+      'family' => 'Gidugu',
       'variants' => 
       array (
         0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptsanscaption/v10/OXYTDOzBcXU8MTNBvBHeSW8by34Z3mUMtM-o4y-SHCY.ttf',
-        700 => 'http://fonts.gstatic.com/s/ptsanscaption/v10/Q-gJrFokeE7JydPpxASt25tc0eyfI4QDEsobEEpk_hA.ttf',
       ),
     ),
     585 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Sans Narrow',
-      'category' => 'sans-serif',
+      'family' => 'Gilda Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    586 => 
+    array (
+      'family' => 'Girassol',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    587 => 
+    array (
+      'family' => 'Give You Glory',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    588 => 
+    array (
+      'family' => 'Glass Antiqua',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    589 => 
+    array (
+      'family' => 'Glegoo',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    590 => 
+    array (
+      'family' => 'Gloock',
+      'variants' => 
       array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptsansnarrow/v8/UyYrYy3ltEffJV9QueSi4ZTvAuddT2xDMbdz0mdLyZY.ttf',
-        700 => 'http://fonts.gstatic.com/s/ptsansnarrow/v8/Q_pTky3Sc3ubRibGToTAYsLtdzs3iyjn_YuT226ZsLU.ttf',
+        0 => 'regular',
       ),
     ),
-    586 => 
+    591 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Serif',
-      'category' => 'serif',
+      'family' => 'Gloria Hallelujah',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    592 => 
+    array (
+      'family' => 'Glory',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '100italic',
+        9 => '200italic',
+        10 => '300italic',
+        11 => 'italic',
+        12 => '500italic',
+        13 => '600italic',
+        14 => '700italic',
+        15 => '800italic',
+      ),
+    ),
+    593 => 
+    array (
+      'family' => 'Gluten',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    594 => 
+    array (
+      'family' => 'Goblin One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    595 => 
+    array (
+      'family' => 'Gochi Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    596 => 
+    array (
+      'family' => 'Goldman',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    597 => 
+    array (
+      'family' => 'Golos Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    598 => 
+    array (
+      'family' => 'Google Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    599 => 
+    array (
+      'family' => 'Google Sans Code',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    600 => 
+    array (
+      'family' => 'Google Sans Flex',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    601 => 
+    array (
+      'family' => 'Gorditas',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    602 => 
+    array (
+      'family' => 'Gothic A1',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    603 => 
+    array (
+      'family' => 'Gotu',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    604 => 
+    array (
+      'family' => 'Goudy Bookletter 1911',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    605 => 
+    array (
+      'family' => 'Gowun Batang',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    606 => 
+    array (
+      'family' => 'Gowun Dodum',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    607 => 
+    array (
+      'family' => 'Graduate',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    608 => 
+    array (
+      'family' => 'Grand Hotel',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    609 => 
+    array (
+      'family' => 'Grandiflora One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    610 => 
+    array (
+      'family' => 'Grandstander',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    611 => 
+    array (
+      'family' => 'Grape Nuts',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    612 => 
+    array (
+      'family' => 'Gravitas One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    613 => 
+    array (
+      'family' => 'Great Vibes',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    614 => 
+    array (
+      'family' => 'Grechen Fuemen',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    615 => 
+    array (
+      'family' => 'Grenze',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    616 => 
+    array (
+      'family' => 'Grenze Gotisch',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    617 => 
+    array (
+      'family' => 'Grey Qo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    618 => 
+    array (
+      'family' => 'Griffy',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    619 => 
+    array (
+      'family' => 'Gruppo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    620 => 
+    array (
+      'family' => 'Gudea',
       'variants' => 
       array (
         0 => 'regular',
         1 => 'italic',
         2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptserif/v9/sAo427rn3-QL9sWCbMZXhA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ptserif/v9/9khWhKzhpkH0OkNnBKS3n_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/ptserif/v9/kyZw18tqQ5if-_wpmxxOeKCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/ptserif/v9/Foydq9xJp--nfYIx2TBz9QJKKGfqHaYFsRG-T3ceEVo.ttf',
       ),
     ),
-    587 => 
+    621 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'PT Serif Caption',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ptserifcaption/v9/7xkFOeTxxO1GMC1suOUYWVsRioCqs5fohhaYel24W3k.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ptserifcaption/v9/0kfPsmrmTSgiec7u_Wa0DB1mqvzPHelJwRcF_s_EUM0.ttf',
-      ),
-    ),
-    588 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pacifico',
-      'category' => 'handwriting',
+      'family' => 'Gugi',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    622 => 
+    array (
+      'family' => 'Gulzar',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pacifico/v10/GIrpeRY1r5CzbfL8r182lw.ttf',
+        0 => 'regular',
       ),
     ),
-    589 => 
+    623 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Padauk',
-      'category' => 'sans-serif',
+      'family' => 'Gupter',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    624 => 
+    array (
+      'family' => 'Gurajada',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    625 => 
+    array (
+      'family' => 'Gveret Levin',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    626 => 
+    array (
+      'family' => 'Gwendolyn',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    627 => 
+    array (
+      'family' => 'Habibi',
+      'variants' => 
       array (
-        0 => 'myanmar',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/padauk/v4/WdTk6igBu-qn4v8naF9hGQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/padauk/v4/XUBO5k0emPIVnqCcQCcEpg.ttf',
+        0 => 'regular',
       ),
     ),
-    590 => 
+    628 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Palanquin',
-      'category' => 'sans-serif',
+      'family' => 'Hachi Maru Pop',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    629 => 
+    array (
+      'family' => 'Hahmlet',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    630 => 
+    array (
+      'family' => 'Halant',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    631 => 
+    array (
+      'family' => 'Hammersmith One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    632 => 
+    array (
+      'family' => 'Hanalei',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    633 => 
+    array (
+      'family' => 'Hanalei Fill',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    634 => 
+    array (
+      'family' => 'Handjet',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    635 => 
+    array (
+      'family' => 'Handlee',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    636 => 
+    array (
+      'family' => 'Hanken Grotesk',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    637 => 
+    array (
+      'family' => 'Hanuman',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    638 => 
+    array (
+      'family' => 'Happy Monkey',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    639 => 
+    array (
+      'family' => 'Harmattan',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    640 => 
+    array (
+      'family' => 'Headland One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    641 => 
+    array (
+      'family' => 'Hedvig Letters Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    642 => 
+    array (
+      'family' => 'Hedvig Letters Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    643 => 
+    array (
+      'family' => 'Heebo',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    644 => 
+    array (
+      'family' => 'Henny Penny',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    645 => 
+    array (
+      'family' => 'Hepta Slab',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    646 => 
+    array (
+      'family' => 'Herr Von Muellerhoff',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    647 => 
+    array (
+      'family' => 'Hi Melody',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    648 => 
+    array (
+      'family' => 'Hibur Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    649 => 
+    array (
+      'family' => 'Hina Mincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    650 => 
+    array (
+      'family' => 'Hind',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    651 => 
+    array (
+      'family' => 'Hind Guntur',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    652 => 
+    array (
+      'family' => 'Hind Madurai',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    653 => 
+    array (
+      'family' => 'Hind Mysuru',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    654 => 
+    array (
+      'family' => 'Hind Siliguri',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    655 => 
+    array (
+      'family' => 'Hind Vadodara',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    656 => 
+    array (
+      'family' => 'Holtwood One SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    657 => 
+    array (
+      'family' => 'Homemade Apple',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    658 => 
+    array (
+      'family' => 'Homenaje',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    659 => 
+    array (
+      'family' => 'Honk',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    660 => 
+    array (
+      'family' => 'Host Grotesk',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    661 => 
+    array (
+      'family' => 'Hubballi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    662 => 
+    array (
+      'family' => 'Hubot Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    663 => 
+    array (
+      'family' => 'Huninn',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    664 => 
+    array (
+      'family' => 'Hurricane',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    665 => 
+    array (
+      'family' => 'Iansui',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    666 => 
+    array (
+      'family' => 'Ibarra Real Nova',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    667 => 
+    array (
+      'family' => 'IBM Plex Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+      ),
+    ),
+    668 => 
+    array (
+      'family' => 'IBM Plex Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    669 => 
+    array (
+      'family' => 'IBM Plex Sans Arabic',
       'variants' => 
       array (
         0 => '100',
@@ -14212,30 +7555,1068 @@ return array (
         5 => '600',
         6 => '700',
       ),
-      'subsets' => 
+    ),
+    670 => 
+    array (
+      'family' => 'IBM Plex Sans Condensed',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/palanquin/v3/Hu0eGDVGK_g4saUFu6AK3KCWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/palanquin/v3/pqXYXD7-VI5ezTjeqQOcyC3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/palanquin/v3/c0-J5OCAagpFCKkKraz-Ey3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/palanquin/v3/xCwBUoAEV0kzCDwerAZ0Aw.ttf',
-        500 => 'http://fonts.gstatic.com/s/palanquin/v3/wLvvkEcZMKy95afLWh2EfC3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/palanquin/v3/405UIAv95_yZkCECrH6y-i3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/palanquin/v3/-UtkePo3NFvxEN3rGCtTvi3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
       ),
     ),
-    591 => 
+    671 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Palanquin Dark',
-      'category' => 'sans-serif',
+      'family' => 'IBM Plex Sans Devanagari',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    672 => 
+    array (
+      'family' => 'IBM Plex Sans Hebrew',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    673 => 
+    array (
+      'family' => 'IBM Plex Sans JP',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    674 => 
+    array (
+      'family' => 'IBM Plex Sans KR',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    675 => 
+    array (
+      'family' => 'IBM Plex Sans Thai',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    676 => 
+    array (
+      'family' => 'IBM Plex Sans Thai Looped',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    677 => 
+    array (
+      'family' => 'IBM Plex Serif',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+      ),
+    ),
+    678 => 
+    array (
+      'family' => 'Iceberg',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    679 => 
+    array (
+      'family' => 'Iceland',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    680 => 
+    array (
+      'family' => 'Idiqlat',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+      ),
+    ),
+    681 => 
+    array (
+      'family' => 'IM Fell Double Pica',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    682 => 
+    array (
+      'family' => 'IM Fell Double Pica SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    683 => 
+    array (
+      'family' => 'IM Fell DW Pica',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    684 => 
+    array (
+      'family' => 'IM Fell DW Pica SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    685 => 
+    array (
+      'family' => 'IM Fell English',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    686 => 
+    array (
+      'family' => 'IM Fell English SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    687 => 
+    array (
+      'family' => 'IM Fell French Canon',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    688 => 
+    array (
+      'family' => 'IM Fell French Canon SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    689 => 
+    array (
+      'family' => 'IM Fell Great Primer',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    690 => 
+    array (
+      'family' => 'IM Fell Great Primer SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    691 => 
+    array (
+      'family' => 'Imbue',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    692 => 
+    array (
+      'family' => 'Imperial Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    693 => 
+    array (
+      'family' => 'Imprima',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    694 => 
+    array (
+      'family' => 'Inclusive Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    695 => 
+    array (
+      'family' => 'Inconsolata',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    696 => 
+    array (
+      'family' => 'Inder',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    697 => 
+    array (
+      'family' => 'Indie Flower',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    698 => 
+    array (
+      'family' => 'Ingrid Darling',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    699 => 
+    array (
+      'family' => 'Inika',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    700 => 
+    array (
+      'family' => 'Inknut Antiqua',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    701 => 
+    array (
+      'family' => 'Inria Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    702 => 
+    array (
+      'family' => 'Inria Serif',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    703 => 
+    array (
+      'family' => 'Inspiration',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    704 => 
+    array (
+      'family' => 'Instrument Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    705 => 
+    array (
+      'family' => 'Instrument Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    706 => 
+    array (
+      'family' => 'Intel One Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '600',
+        7 => '600italic',
+        8 => '700',
+        9 => '700italic',
+      ),
+    ),
+    707 => 
+    array (
+      'family' => 'Inter',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    708 => 
+    array (
+      'family' => 'Inter Tight',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    709 => 
+    array (
+      'family' => 'Iosevka Charon',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '700',
+        7 => '700italic',
+      ),
+    ),
+    710 => 
+    array (
+      'family' => 'Iosevka Charon Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '700',
+        7 => '700italic',
+      ),
+    ),
+    711 => 
+    array (
+      'family' => 'Irish Grover',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    712 => 
+    array (
+      'family' => 'Island Moments',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    713 => 
+    array (
+      'family' => 'Isometra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    714 => 
+    array (
+      'family' => 'Istok Web',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    715 => 
+    array (
+      'family' => 'Italiana',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    716 => 
+    array (
+      'family' => 'Italianno',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    717 => 
+    array (
+      'family' => 'Itim',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    718 => 
+    array (
+      'family' => 'Jacquard 12',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    719 => 
+    array (
+      'family' => 'Jacquard 12 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    720 => 
+    array (
+      'family' => 'Jacquard 24',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    721 => 
+    array (
+      'family' => 'Jacquard 24 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    722 => 
+    array (
+      'family' => 'Jacquarda Bastarda 9',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    723 => 
+    array (
+      'family' => 'Jacquarda Bastarda 9 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    724 => 
+    array (
+      'family' => 'Jacques Francois',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    725 => 
+    array (
+      'family' => 'Jacques Francois Shadow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    726 => 
+    array (
+      'family' => 'Jaini',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    727 => 
+    array (
+      'family' => 'Jaini Purva',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    728 => 
+    array (
+      'family' => 'Jaldi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    729 => 
+    array (
+      'family' => 'Jaro',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    730 => 
+    array (
+      'family' => 'Jersey 10',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    731 => 
+    array (
+      'family' => 'Jersey 10 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    732 => 
+    array (
+      'family' => 'Jersey 15',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    733 => 
+    array (
+      'family' => 'Jersey 15 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    734 => 
+    array (
+      'family' => 'Jersey 20',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    735 => 
+    array (
+      'family' => 'Jersey 20 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    736 => 
+    array (
+      'family' => 'Jersey 25',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    737 => 
+    array (
+      'family' => 'Jersey 25 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    738 => 
+    array (
+      'family' => 'JetBrains Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '100italic',
+        9 => '200italic',
+        10 => '300italic',
+        11 => 'italic',
+        12 => '500italic',
+        13 => '600italic',
+        14 => '700italic',
+        15 => '800italic',
+      ),
+    ),
+    739 => 
+    array (
+      'family' => 'Jim Nightshade',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    740 => 
+    array (
+      'family' => 'Joan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    741 => 
+    array (
+      'family' => 'Jockey One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    742 => 
+    array (
+      'family' => 'Jolly Lodger',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    743 => 
+    array (
+      'family' => 'Jomhuria',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    744 => 
+    array (
+      'family' => 'Jomolhari',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    745 => 
+    array (
+      'family' => 'Josefin Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    746 => 
+    array (
+      'family' => 'Josefin Slab',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    747 => 
+    array (
+      'family' => 'Jost',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    748 => 
+    array (
+      'family' => 'Joti One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    749 => 
+    array (
+      'family' => 'Jua',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    750 => 
+    array (
+      'family' => 'Judson',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    751 => 
+    array (
+      'family' => 'Julee',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    752 => 
+    array (
+      'family' => 'Julius Sans One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    753 => 
+    array (
+      'family' => 'Junge',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    754 => 
+    array (
+      'family' => 'Jura',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    755 => 
+    array (
+      'family' => 'Just Another Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    756 => 
+    array (
+      'family' => 'Just Me Again Down Here',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    757 => 
+    array (
+      'family' => 'K2D',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+      ),
+    ),
+    758 => 
+    array (
+      'family' => 'Kablammo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    759 => 
+    array (
+      'family' => 'Kadwa',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    760 => 
+    array (
+      'family' => 'Kaisei Decol',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    761 => 
+    array (
+      'family' => 'Kaisei HarunoUmi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    762 => 
+    array (
+      'family' => 'Kaisei Opti',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+      ),
+    ),
+    763 => 
+    array (
+      'family' => 'Kaisei Tokumin',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+        3 => '800',
+      ),
+    ),
+    764 => 
+    array (
+      'family' => 'Kalam',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    765 => 
+    array (
+      'family' => 'Kalnia',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    766 => 
+    array (
+      'family' => 'Kalnia Glaze',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    767 => 
+    array (
+      'family' => 'Kameron',
       'variants' => 
       array (
         0 => 'regular',
@@ -14243,755 +8624,21 @@ return array (
         2 => '600',
         3 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/palanquindark/v3/PamTqrrgbBh_M3702w39rOfChn3JSg5yz_Q_xmrKQN0.ttf',
-        500 => 'http://fonts.gstatic.com/s/palanquindark/v3/iXyBGf5UbFUu6BG8hOY-maMZTo-EwKMRQt3RWHocLi0.ttf',
-        600 => 'http://fonts.gstatic.com/s/palanquindark/v3/iXyBGf5UbFUu6BG8hOY-mVNxaunw8i4Gywrk2SigRnk.ttf',
-        700 => 'http://fonts.gstatic.com/s/palanquindark/v3/iXyBGf5UbFUu6BG8hOY-mWToair6W0TEE44XrlfKbiM.ttf',
-      ),
     ),
-    592 => 
+    768 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pangolin',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pangolin/v3/i2W796ne6lveehHXs8AFGA.ttf',
-      ),
-    ),
-    593 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Paprika',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/paprika/v5/b-VpyoRSieBdB5BPJVF8HQ.ttf',
-      ),
-    ),
-    594 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Parisienne',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/parisienne/v5/TW74B5QISJNx9moxGlmJfvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    595 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Passero One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/passeroone/v9/Yc-7nH5deCCv9Ed0MMnAQqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    596 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Passion One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-        2 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/passionone/v8/1UIK1tg3bKJ4J3o35M4heqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/passionone/v8/feOcYDy2R-f3Ysy72PYJ2ne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        900 => 'http://fonts.gstatic.com/s/passionone/v8/feOcYDy2R-f3Ysy72PYJ2ienaqEuufTBk9XMKnKmgDA.ttf',
-      ),
-    ),
-    597 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pathway Gothic One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pathwaygothicone/v6/Lqv9ztoTUV8Q0FmQZzPqaA6A6xIYD7vYcYDop1i-K-c.ttf',
-      ),
-    ),
-    598 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Patrick Hand',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/patrickhand/v11/9BG3JJgt_HlF3NpEUehL0C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    599 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Patrick Hand SC',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/patrickhandsc/v5/OYFWCgfCR-7uHIovjUZXsbAgSRh1LpJXlLfl8IbsmHg.ttf',
-      ),
-    ),
-    600 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pattaya',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'cyrillic',
-        2 => 'thai',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pattaya/v2/sJEout1xdD7J8H-1H81pIQ.ttf',
-      ),
-    ),
-    601 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Patua One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/patuaone/v7/njZwotTYjswR4qdhsW-kJw.ttf',
-      ),
-    ),
-    602 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pavanam',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'tamil',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pavanam/v2/C7yuEhNK5oftNLSL3I0bGw.ttf',
-      ),
-    ),
-    603 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Paytone One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/paytoneone/v10/3WCxC7JAJjQHQVoIE0ZwvqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    604 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Peddana',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/peddana/v5/zaSZuj_GhmC8AOTugOROnA.ttf',
-      ),
-    ),
-    605 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Peralta',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/peralta/v5/cTJX5KEuc0GKRU9NXSm-8Q.ttf',
-      ),
-    ),
-    606 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Permanent Marker',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/permanentmarker/v7/9vYsg5VgPHKK8SXYbf3sMol14xj5tdg9OHF8w4E7StQ.ttf',
-      ),
-    ),
-    607 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Petit Formal Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/petitformalscript/v5/OEZwr2-ovBsq2n3ACCKoEvVPl2Gjtxj0D6F7QLy1VQc.ttf',
-      ),
-    ),
-    608 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Petrona',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/petrona/v6/nnQwxlP6dhrGovYEFtemTg.ttf',
-      ),
-    ),
-    609 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Philosopher',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/philosopher/v9/oZLTrB9jmJsyV0u_T0TKEaCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/philosopher/v9/_9Hnc_gz9k7Qq6uKaeHKmUeOrDcLawS7-ssYqLr2Xp4.ttf',
-        700 => 'http://fonts.gstatic.com/s/philosopher/v9/napvkewXG9Gqby5vwGHICHe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/philosopher/v9/PuKlryTcvTj7-qZWfLCFIM_zJjSACmk0BRPxQqhnNLU.ttf',
-      ),
-    ),
-    610 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Piedra',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/piedra/v6/owf-AvEEyAj9LJ2tVZ_3Mw.ttf',
-      ),
-    ),
-    611 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pinyon Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pinyonscript/v7/TzghnhfCn7TuE73f-CBQ0CeUSrabuTpOsMEiRLtKwk0.ttf',
-      ),
-    ),
-    612 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pirata One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pirataone/v5/WnbD86B4vB2ckYcL7oxuhvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    613 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Plaster',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/plaster/v9/O4QG9Z5116CXyfJdR9zxLw.ttf',
-      ),
-    ),
-    614 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Play',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/play/v9/GWvfObW8LhtsOX333MCpBg.ttf',
-        700 => 'http://fonts.gstatic.com/s/play/v9/crPhg6I0alLI-MpB3vW-zw.ttf',
-      ),
-    ),
-    615 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Playball',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/playball/v7/3hOFiQm_EUzycTpcN9uz4w.ttf',
-      ),
-    ),
-    616 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Playfair Display',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-        4 => '900',
-        5 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/playfairdisplay/v12/2NBgzUtEeyB-Xtpr9bm1CV6uyC_qD11hrFQ6EGgTJWI.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/playfairdisplay/v12/9MkijrV-dEJ0-_NWV7E6NzMsbnvDNEBX25F5HWk9AhI.ttf',
-        700 => 'http://fonts.gstatic.com/s/playfairdisplay/v12/UC3ZEjagJi85gF9qFaBgICsv6SrURqJprbhH_C1Mw8w.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/playfairdisplay/v12/n7G4PqJvFP2Kubl0VBLDECsYW3XoOVcYyYdp9NzzS9E.ttf',
-        900 => 'http://fonts.gstatic.com/s/playfairdisplay/v12/UC3ZEjagJi85gF9qFaBgIKqwMe2wjvZrAR44M0BJZ48.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/playfairdisplay/v12/n7G4PqJvFP2Kubl0VBLDEC0JfJ4xmm7j1kL6D7mPxrA.ttf',
-      ),
-    ),
-    617 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Playfair Display SC',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-        4 => '900',
-        5 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/G0-tvBxd4eQRdwFKB8dRkcpjYTDWIvcAwAccqeW9uNM.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/myuYiFR-4NTrUT4w6TKls2klJsJYggW8rlNoTOTuau0.ttf',
-        700 => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/5ggqGkvWJU_TtW2W8cEubA-Amcyomnuy4WsCiPxGHjw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/6X0OQrQhEEnPo56RalREX4krgPi80XvBcbTwmz-rgmU.ttf',
-        900 => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/5ggqGkvWJU_TtW2W8cEubKXL3C32k275YmX_AcBPZ7w.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/playfairdisplaysc/v6/6X0OQrQhEEnPo56RalREX8Zag2q3ssKz8uH1RU4a9gs.ttf',
-      ),
-    ),
-    618 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Podkova',
-      'category' => 'serif',
+      'family' => 'Kanchenjunga',
       'variants' => 
       array (
         0 => 'regular',
         1 => '500',
         2 => '600',
         3 => '700',
-        4 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/podkova/v11/eylljyGVfB8ZUQjYY3WZRQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/podkova/v11/8MkhKmKhl0HgqBeKkV0pmvesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/podkova/v11/921xSzgq6uUBjPZXn2IH0PesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/podkova/v11/SqW4aa8m_KVrOgYSydQ33vesZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/podkova/v11/ObfRYfRr58NtktZuAa1VhfesZW2xOQ-xsNqO47m55DA.ttf',
       ),
     ),
-    619 => 
+    769 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Poiret One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/poiretone/v5/dWcYed048E5gHGDIt8i1CPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    620 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Poller One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pollerone/v7/dkctmDlTPcZ6boC8662RA_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    621 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Poly',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/poly/v8/bcMAuiacS2qkd54BcwW6_Q.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/poly/v8/Zkx-eIlZSjKUrPGYhV5PeA.ttf',
-      ),
-    ),
-    622 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pompiere',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pompiere/v7/o_va2p9CD5JfmFohAkGZIA.ttf',
-      ),
-    ),
-    623 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pontano Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pontanosans/v5/gTHiwyxi6S7iiHpqAoiE3C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    624 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Poppins',
-      'category' => 'sans-serif',
+      'family' => 'Kanit',
       'variants' => 
       array (
         0 => '100',
@@ -15013,172 +8660,1612 @@ return array (
         16 => '900',
         17 => '900italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/poppins/v5/J_Uo-RBVJYTcfQfJqaBpiA.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/poppins/v5/AgVJ3FHPsWMHPMmRYdKWQKCWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/poppins/v5/iG8N2M28abs14mWAmy9C8vesZW2xOQ-xsNqO47m55DA.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/poppins/v5/-GlaWpWcSgdVagNuOGuFKS3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/poppins/v5/VIeViZ2fPtYBt3B2fQZplvesZW2xOQ-xsNqO47m55DA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/poppins/v5/QmRKoWaGfh304P2oApdMLS3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/poppins/v5/hlvAxH6aIdOjWlLzgm0jqg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/poppins/v5/3cZiAJEeIIIKVRjGXr9qVg.ttf',
-        500 => 'http://fonts.gstatic.com/s/poppins/v5/4WGKlFyjcmCFVl8pRsgZ9vesZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/poppins/v5/ZswPVmYNMYXIwQy7Wnzcyi3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/poppins/v5/-zOABrCWORC3lyDh-ajNnPesZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/poppins/v5/RbebACOccNN-5ixkDIVLjS3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/poppins/v5/8JitanEsk5aDh7mDYs-fYfesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/poppins/v5/c4FPK8_hIFKoX59qcGwdCi3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/poppins/v5/vVhctzCFjekFM26ZXVvlAvesZW2xOQ-xsNqO47m55DA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/poppins/v5/nhuxdF7XMkIXmkGDadS6EC3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/poppins/v5/7WUVvX7AIKpgWf6w-guTPfesZW2xOQ-xsNqO47m55DA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/poppins/v5/Lmn8WRFdDq3MeV9dyKOb_y3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    625 => 
+    770 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Port Lligat Sans',
-      'category' => 'sans-serif',
+      'family' => 'Kantumruy Pro',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/portlligatsans/v6/CUEdhRk7oC7up0p6t0g4P6mASEpx5X0ZpsuJOuvfOGA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
       ),
     ),
-    626 => 
+    771 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Port Lligat Slab',
-      'category' => 'serif',
+      'family' => 'Kapakana',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/portlligatslab/v6/CUEdhRk7oC7up0p6t0g4PxLSPACXvawUYCBEnHsOe30.ttf',
+        0 => '300',
+        1 => 'regular',
       ),
     ),
-    627 => 
+    772 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pragati Narrow',
-      'category' => 'sans-serif',
+      'family' => 'Karantina',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    773 => 
+    array (
+      'family' => 'Karla',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    774 => 
+    array (
+      'family' => 'Karla Tamil Inclined',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    775 => 
+    array (
+      'family' => 'Karla Tamil Upright',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pragatinarrow/v3/HzG2TfC862qPNsZsV_djPpTvAuddT2xDMbdz0mdLyZY.ttf',
-        700 => 'http://fonts.gstatic.com/s/pragatinarrow/v3/DnSI1zRkc0CY-hI5SC3q3MLtdzs3iyjn_YuT226ZsLU.ttf',
+        0 => 'regular',
+        1 => '700',
       ),
     ),
-    628 => 
+    776 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Prata',
-      'category' => 'serif',
+      'family' => 'Karma',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    777 => 
+    array (
+      'family' => 'Katibeh',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/prata/v8/3gmx8r842loRRm9iQkCDGg.ttf',
-      ),
     ),
-    629 => 
+    778 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Preahvihear',
-      'category' => 'display',
+      'family' => 'Kaushan Script',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/preahvihear/v9/82tDI-xTc53CxxOzEG4hDaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
     ),
-    630 => 
+    779 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Press Start 2P',
-      'category' => 'display',
+      'family' => 'Kavivanar',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    780 => 
+    array (
+      'family' => 'Kavoon',
+      'variants' => 
       array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/pressstart2p/v6/8Lg6LX8-ntOHUQnvQ0E7o1jfl3W46Sz5gOkEVhcFWF4.ttf',
+        0 => 'regular',
       ),
     ),
-    631 => 
+    781 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Pridi',
-      'category' => 'serif',
+      'family' => 'Kay Pho Du',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    782 => 
+    array (
+      'family' => 'Kdam Thmor Pro',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    783 => 
+    array (
+      'family' => 'Keania One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    784 => 
+    array (
+      'family' => 'Kedebideri',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    785 => 
+    array (
+      'family' => 'Kelly Slab',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    786 => 
+    array (
+      'family' => 'Kenia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    787 => 
+    array (
+      'family' => 'Khand',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    788 => 
+    array (
+      'family' => 'Khmer',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    789 => 
+    array (
+      'family' => 'Khula',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    790 => 
+    array (
+      'family' => 'Kings',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    791 => 
+    array (
+      'family' => 'Kirang Haerang',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    792 => 
+    array (
+      'family' => 'Kite One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    793 => 
+    array (
+      'family' => 'Kiwi Maru',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+      ),
+    ),
+    794 => 
+    array (
+      'family' => 'Klee One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '600',
+      ),
+    ),
+    795 => 
+    array (
+      'family' => 'Knewave',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    796 => 
+    array (
+      'family' => 'Kodchasan',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    797 => 
+    array (
+      'family' => 'Kode Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    798 => 
+    array (
+      'family' => 'Koh Santepheap',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    799 => 
+    array (
+      'family' => 'KoHo',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    800 => 
+    array (
+      'family' => 'Kolker Brush',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    801 => 
+    array (
+      'family' => 'Konkhmer Sleokchher',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    802 => 
+    array (
+      'family' => 'Kosugi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    803 => 
+    array (
+      'family' => 'Kosugi Maru',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    804 => 
+    array (
+      'family' => 'Kotta One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    805 => 
+    array (
+      'family' => 'Koulen',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    806 => 
+    array (
+      'family' => 'Kranky',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    807 => 
+    array (
+      'family' => 'Kreon',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    808 => 
+    array (
+      'family' => 'Kripa',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    809 => 
+    array (
+      'family' => 'Kristi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    810 => 
+    array (
+      'family' => 'Krona One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    811 => 
+    array (
+      'family' => 'Krub',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    812 => 
+    array (
+      'family' => 'Kufam',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    813 => 
+    array (
+      'family' => 'Kulim Park',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '600',
+        7 => '600italic',
+        8 => '700',
+        9 => '700italic',
+      ),
+    ),
+    814 => 
+    array (
+      'family' => 'Kumar One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    815 => 
+    array (
+      'family' => 'Kumar One Outline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    816 => 
+    array (
+      'family' => 'Kumbh Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    817 => 
+    array (
+      'family' => 'Kurale',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    818 => 
+    array (
+      'family' => 'La Belle Aurore',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    819 => 
+    array (
+      'family' => 'Labrada',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    820 => 
+    array (
+      'family' => 'Lacquer',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    821 => 
+    array (
+      'family' => 'Laila',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    822 => 
+    array (
+      'family' => 'Lakki Reddy',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    823 => 
+    array (
+      'family' => 'Lalezar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    824 => 
+    array (
+      'family' => 'Lancelot',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    825 => 
+    array (
+      'family' => 'Langar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    826 => 
+    array (
+      'family' => 'Lateef',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    827 => 
+    array (
+      'family' => 'Lato',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '700',
+        7 => '700italic',
+        8 => '900',
+        9 => '900italic',
+      ),
+    ),
+    828 => 
+    array (
+      'family' => 'Lavishly Yours',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    829 => 
+    array (
+      'family' => 'League Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    830 => 
+    array (
+      'family' => 'League Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    831 => 
+    array (
+      'family' => 'League Spartan',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    832 => 
+    array (
+      'family' => 'Leckerli One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    833 => 
+    array (
+      'family' => 'Ledger',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    834 => 
+    array (
+      'family' => 'Lekton',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    835 => 
+    array (
+      'family' => 'Lemon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    836 => 
+    array (
+      'family' => 'Lemonada',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    837 => 
+    array (
+      'family' => 'Lexend',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    838 => 
+    array (
+      'family' => 'Lexend Deca',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    839 => 
+    array (
+      'family' => 'Lexend Exa',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    840 => 
+    array (
+      'family' => 'Lexend Giga',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    841 => 
+    array (
+      'family' => 'Lexend Mega',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    842 => 
+    array (
+      'family' => 'Lexend Peta',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    843 => 
+    array (
+      'family' => 'Lexend Tera',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    844 => 
+    array (
+      'family' => 'Lexend Zetta',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    845 => 
+    array (
+      'family' => 'Libertinus Keyboard',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    846 => 
+    array (
+      'family' => 'Libertinus Math',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    847 => 
+    array (
+      'family' => 'Libertinus Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    848 => 
+    array (
+      'family' => 'Libertinus Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    849 => 
+    array (
+      'family' => 'Libertinus Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '600',
+        3 => '600italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    850 => 
+    array (
+      'family' => 'Libertinus Serif Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    851 => 
+    array (
+      'family' => 'Libre Barcode 128',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    852 => 
+    array (
+      'family' => 'Libre Barcode 128 Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    853 => 
+    array (
+      'family' => 'Libre Barcode 39',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    854 => 
+    array (
+      'family' => 'Libre Barcode 39 Extended',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    855 => 
+    array (
+      'family' => 'Libre Barcode 39 Extended Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    856 => 
+    array (
+      'family' => 'Libre Barcode 39 Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    857 => 
+    array (
+      'family' => 'Libre Barcode EAN13 Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    858 => 
+    array (
+      'family' => 'Libre Baskerville',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    859 => 
+    array (
+      'family' => 'Libre Bodoni',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    860 => 
+    array (
+      'family' => 'Libre Caslon Condensed',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    861 => 
+    array (
+      'family' => 'Libre Caslon Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    862 => 
+    array (
+      'family' => 'Libre Caslon Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    863 => 
+    array (
+      'family' => 'Libre Franklin',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    864 => 
+    array (
+      'family' => 'Licorice',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    865 => 
+    array (
+      'family' => 'Life Savers',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+        2 => '800',
+      ),
+    ),
+    866 => 
+    array (
+      'family' => 'Lilex',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    867 => 
+    array (
+      'family' => 'Lilita One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    868 => 
+    array (
+      'family' => 'Lily Script One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    869 => 
+    array (
+      'family' => 'Limelight',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    870 => 
+    array (
+      'family' => 'Linden Hill',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    871 => 
+    array (
+      'family' => 'LINE Seed JP',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => 'regular',
+        2 => '700',
+        3 => '800',
+      ),
+    ),
+    872 => 
+    array (
+      'family' => 'Linefont',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    873 => 
+    array (
+      'family' => 'Lisu Bosa',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+        12 => '800',
+        13 => '800italic',
+        14 => '900',
+        15 => '900italic',
+      ),
+    ),
+    874 => 
+    array (
+      'family' => 'Liter',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    875 => 
+    array (
+      'family' => 'Literata',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    876 => 
+    array (
+      'family' => 'Liu Jian Mao Cao',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    877 => 
+    array (
+      'family' => 'Livvic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '900',
+        15 => '900italic',
+      ),
+    ),
+    878 => 
+    array (
+      'family' => 'Lobster',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    879 => 
+    array (
+      'family' => 'Lobster Two',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    880 => 
+    array (
+      'family' => 'Londrina Outline',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    881 => 
+    array (
+      'family' => 'Londrina Shadow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    882 => 
+    array (
+      'family' => 'Londrina Sketch',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    883 => 
+    array (
+      'family' => 'Londrina Solid',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '900',
+      ),
+    ),
+    884 => 
+    array (
+      'family' => 'Long Cang',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    885 => 
+    array (
+      'family' => 'Lora',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    886 => 
+    array (
+      'family' => 'Love Light',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    887 => 
+    array (
+      'family' => 'Love Ya Like A Sister',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    888 => 
+    array (
+      'family' => 'Loved by the King',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    889 => 
+    array (
+      'family' => 'Lovers Quarrel',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    890 => 
+    array (
+      'family' => 'Luckiest Guy',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    891 => 
+    array (
+      'family' => 'Lugrasimo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    892 => 
+    array (
+      'family' => 'Lumanosimo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    893 => 
+    array (
+      'family' => 'Lunasima',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    894 => 
+    array (
+      'family' => 'Lusitana',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    895 => 
+    array (
+      'family' => 'Lustria',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    896 => 
+    array (
+      'family' => 'Luxurious Roman',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    897 => 
+    array (
+      'family' => 'Luxurious Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    898 => 
+    array (
+      'family' => 'LXGW Marker Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    899 => 
+    array (
+      'family' => 'LXGW WenKai Mono TC',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    900 => 
+    array (
+      'family' => 'LXGW WenKai TC',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    901 => 
+    array (
+      'family' => 'M PLUS 1',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    902 => 
+    array (
+      'family' => 'M PLUS 1 Code',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    903 => 
+    array (
+      'family' => 'M PLUS 1p',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    904 => 
+    array (
+      'family' => 'M PLUS 2',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    905 => 
+    array (
+      'family' => 'M PLUS Code Latin',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    906 => 
+    array (
+      'family' => 'M PLUS Rounded 1c',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    907 => 
+    array (
+      'family' => 'M PLUS U',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    908 => 
+    array (
+      'family' => 'Ma Shan Zheng',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    909 => 
+    array (
+      'family' => 'Macondo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    910 => 
+    array (
+      'family' => 'Macondo Swash Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    911 => 
+    array (
+      'family' => 'Mada',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    912 => 
+    array (
+      'family' => 'Madimi One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    913 => 
+    array (
+      'family' => 'Magra',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    914 => 
+    array (
+      'family' => 'Maiden Orange',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    915 => 
+    array (
+      'family' => 'Maitree',
       'variants' => 
       array (
         0 => '200',
@@ -15188,71 +10275,973 @@ return array (
         4 => '600',
         5 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/pridi/v3/WvKJ-kflGuELyK4uQzpYIA.ttf',
-        300 => 'http://fonts.gstatic.com/s/pridi/v3/Ihwk-OGVFS69PINILdqAjQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/pridi/v3/Mau018Ghi7LJX7FkGYCZAQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/pridi/v3/dPNOrMxU-HjLo-fvkFydsQ.ttf',
-        600 => 'http://fonts.gstatic.com/s/pridi/v3/J0i5OZxX07KC4mby5RjNbg.ttf',
-        700 => 'http://fonts.gstatic.com/s/pridi/v3/UhCy4jDDJttTB8k8rtWadg.ttf',
-      ),
     ),
-    632 => 
+    916 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Princess Sofia',
-      'category' => 'handwriting',
+      'family' => 'Major Mono Display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/princesssofia/v5/8g5l8r9BM0t1QsXLTajDe-wjmA7ie-lFcByzHGRhCIg.ttf',
-      ),
     ),
-    633 => 
+    917 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Prociono',
-      'category' => 'serif',
+      'family' => 'Mako',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    918 => 
+    array (
+      'family' => 'Mali',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/prociono/v7/43ZYDHWogdFeNBWTl6ksmw.ttf',
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
       ),
     ),
-    634 => 
+    919 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Prompt',
-      'category' => 'sans-serif',
+      'family' => 'Mallanna',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    920 => 
+    array (
+      'family' => 'Maname',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    921 => 
+    array (
+      'family' => 'Mandali',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    922 => 
+    array (
+      'family' => 'Manjari',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    923 => 
+    array (
+      'family' => 'Manrope',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    924 => 
+    array (
+      'family' => 'Mansalva',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    925 => 
+    array (
+      'family' => 'Manuale',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    926 => 
+    array (
+      'family' => 'Manufacturing Consent',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    927 => 
+    array (
+      'family' => 'Marcellus',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    928 => 
+    array (
+      'family' => 'Marcellus SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    929 => 
+    array (
+      'family' => 'Marck Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    930 => 
+    array (
+      'family' => 'Margarine',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    931 => 
+    array (
+      'family' => 'Marhey',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    932 => 
+    array (
+      'family' => 'Markazi Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    933 => 
+    array (
+      'family' => 'Marko One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    934 => 
+    array (
+      'family' => 'Marmelad',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    935 => 
+    array (
+      'family' => 'Martel',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    936 => 
+    array (
+      'family' => 'Martel Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    937 => 
+    array (
+      'family' => 'Martian Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    938 => 
+    array (
+      'family' => 'Marvel',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    939 => 
+    array (
+      'family' => 'Matangi',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    940 => 
+    array (
+      'family' => 'Mate',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    941 => 
+    array (
+      'family' => 'Mate SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    942 => 
+    array (
+      'family' => 'Matemasie',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    943 => 
+    array (
+      'family' => 'Material Icons',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    944 => 
+    array (
+      'family' => 'Material Icons Outlined',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    945 => 
+    array (
+      'family' => 'Material Icons Round',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    946 => 
+    array (
+      'family' => 'Material Icons Sharp',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    947 => 
+    array (
+      'family' => 'Material Icons Two Tone',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    948 => 
+    array (
+      'family' => 'Material Symbols',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    949 => 
+    array (
+      'family' => 'Material Symbols Outlined',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    950 => 
+    array (
+      'family' => 'Material Symbols Rounded',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    951 => 
+    array (
+      'family' => 'Material Symbols Sharp',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    952 => 
+    array (
+      'family' => 'Maven Pro',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    953 => 
+    array (
+      'family' => 'McLaren',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    954 => 
+    array (
+      'family' => 'Mea Culpa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    955 => 
+    array (
+      'family' => 'Meddon',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    956 => 
+    array (
+      'family' => 'MedievalSharp',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    957 => 
+    array (
+      'family' => 'Medula One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    958 => 
+    array (
+      'family' => 'Meera Inimai',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    959 => 
+    array (
+      'family' => 'Megrim',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    960 => 
+    array (
+      'family' => 'Meie Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    961 => 
+    array (
+      'family' => 'Menbere',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    962 => 
+    array (
+      'family' => 'Meow Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    963 => 
+    array (
+      'family' => 'Merienda',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    964 => 
+    array (
+      'family' => 'Merriweather',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    965 => 
+    array (
+      'family' => 'Merriweather Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    966 => 
+    array (
+      'family' => 'Metal',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    967 => 
+    array (
+      'family' => 'Metal Mania',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    968 => 
+    array (
+      'family' => 'Metamorphous',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    969 => 
+    array (
+      'family' => 'Metrophobic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    970 => 
+    array (
+      'family' => 'Michroma',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    971 => 
+    array (
+      'family' => 'Micro 5',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    972 => 
+    array (
+      'family' => 'Micro 5 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    973 => 
+    array (
+      'family' => 'Milonga',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    974 => 
+    array (
+      'family' => 'Miltonian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    975 => 
+    array (
+      'family' => 'Miltonian Tattoo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    976 => 
+    array (
+      'family' => 'Mina',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    977 => 
+    array (
+      'family' => 'Mingzat',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    978 => 
+    array (
+      'family' => 'Miniver',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    979 => 
+    array (
+      'family' => 'Miranda Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    980 => 
+    array (
+      'family' => 'Miriam Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    981 => 
+    array (
+      'family' => 'Mirza',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    982 => 
+    array (
+      'family' => 'Miss Fajardose',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    983 => 
+    array (
+      'family' => 'Mitr',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    984 => 
+    array (
+      'family' => 'Mochiy Pop One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    985 => 
+    array (
+      'family' => 'Mochiy Pop P One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    986 => 
+    array (
+      'family' => 'Modak',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    987 => 
+    array (
+      'family' => 'Modern Antiqua',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    988 => 
+    array (
+      'family' => 'Moderustic',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+      ),
+    ),
+    989 => 
+    array (
+      'family' => 'Mogra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    990 => 
+    array (
+      'family' => 'Mohave',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    991 => 
+    array (
+      'family' => 'Moirai One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    992 => 
+    array (
+      'family' => 'Molengo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    993 => 
+    array (
+      'family' => 'Molle',
+      'variants' => 
+      array (
+        0 => 'italic',
+      ),
+    ),
+    994 => 
+    array (
+      'family' => 'Momo Signature',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    995 => 
+    array (
+      'family' => 'Momo Trust Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    996 => 
+    array (
+      'family' => 'Momo Trust Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    997 => 
+    array (
+      'family' => 'Mona Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    998 => 
+    array (
+      'family' => 'Monda',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    999 => 
+    array (
+      'family' => 'Monofett',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1000 => 
+    array (
+      'family' => 'Monomakh',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1001 => 
+    array (
+      'family' => 'Monomaniac One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1002 => 
+    array (
+      'family' => 'Monoton',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1003 => 
+    array (
+      'family' => 'Monsieur La Doulaise',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1004 => 
+    array (
+      'family' => 'Montaga',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1005 => 
+    array (
+      'family' => 'Montagu Slab',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    1006 => 
+    array (
+      'family' => 'MonteCarlo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1007 => 
+    array (
+      'family' => 'Montenegrin Gothic One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1008 => 
+    array (
+      'family' => 'Montez',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1009 => 
+    array (
+      'family' => 'Montserrat',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1010 => 
+    array (
+      'family' => 'Montserrat Alternates',
       'variants' => 
       array (
         0 => '100',
@@ -15274,64 +11263,5335 @@ return array (
         16 => '900',
         17 => '900italic',
       ),
-      'subsets' => 
+    ),
+    1011 => 
+    array (
+      'family' => 'Montserrat Underline',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/prompt/v2/ltjX-trOmfS-yKy_awt70g.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/prompt/v2/KvTeArBpVb-tA2mahV6Jk_esZW2xOQ-xsNqO47m55DA.ttf',
-        200 => 'http://fonts.gstatic.com/s/prompt/v2/MNB_CVkbfYHFMWX_UbDC2Q.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/prompt/v2/NR0JuXzzCDKpLNVhfyEAiaCWcynf_cDxXwCLxiixG1c.ttf',
-        300 => 'http://fonts.gstatic.com/s/prompt/v2/LzifakiWysr3N3OoAdbdpg.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/prompt/v2/ir8BhbeDHM-qnbo-tnpmt6CWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/prompt/v2/nDo1rQFnTFNua4cp-OnD2A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/prompt/v2/ZD4khIP924SU2fRYOJkraQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/prompt/v2/w31OY1otplAgr5iZ21K7Fg.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/prompt/v2/dfaeaRx00u9arVHsaDjliaCWcynf_cDxXwCLxiixG1c.ttf',
-        600 => 'http://fonts.gstatic.com/s/prompt/v2/uUrJjg1BGaIb6CAOlUIp9g.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/prompt/v2/CJUBMsoNNHMMdFRxm-n7p6CWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/prompt/v2/HdM_epiStzshOr-49ubVyg.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/prompt/v2/GtXRH7QWy3aLCHoJuR5WIKCWcynf_cDxXwCLxiixG1c.ttf',
-        800 => 'http://fonts.gstatic.com/s/prompt/v2/GF9cOamDd7mYPHNW1nZLKg.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/prompt/v2/kBLgnnEB-VXkOLFCc0pzwqCWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/prompt/v2/KFgmbwHbRBQb28VFhH3c8Q.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/prompt/v2/qjrOe-lEPwDDeUu5g6q_DaCWcynf_cDxXwCLxiixG1c.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    635 => 
+    1012 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Prosto One',
-      'category' => 'display',
+      'family' => 'Moo Lah Lah',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1013 => 
+    array (
+      'family' => 'Mooli',
+      'variants' => 
       array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/prostoone/v6/bsqnAElAqk9kX7eABTRFJPesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => 'regular',
       ),
     ),
-    636 => 
+    1014 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Moon Dance',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1015 => 
+    array (
+      'family' => 'Moul',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1016 => 
+    array (
+      'family' => 'Moulpali',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1017 => 
+    array (
+      'family' => 'Mountains of Christmas',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1018 => 
+    array (
+      'family' => 'Mouse Memoirs',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1019 => 
+    array (
+      'family' => 'Mozilla Headline',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1020 => 
+    array (
+      'family' => 'Mozilla Text',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1021 => 
+    array (
+      'family' => 'Mr Bedfort',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1022 => 
+    array (
+      'family' => 'Mr Dafoe',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1023 => 
+    array (
+      'family' => 'Mr De Haviland',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1024 => 
+    array (
+      'family' => 'Mrs Saint Delafield',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1025 => 
+    array (
+      'family' => 'Mrs Sheppards',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1026 => 
+    array (
+      'family' => 'Ms Madi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1027 => 
+    array (
+      'family' => 'Mukta',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1028 => 
+    array (
+      'family' => 'Mukta Mahee',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1029 => 
+    array (
+      'family' => 'Mukta Malar',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1030 => 
+    array (
+      'family' => 'Mukta Vaani',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1031 => 
+    array (
+      'family' => 'Mulish',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1032 => 
+    array (
+      'family' => 'Murecho',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1033 => 
+    array (
+      'family' => 'MuseoModerno',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1034 => 
+    array (
+      'family' => 'My Soul',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1035 => 
+    array (
+      'family' => 'Mynerve',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1036 => 
+    array (
+      'family' => 'Mystery Quest',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1037 => 
+    array (
+      'family' => 'Nabla',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1038 => 
+    array (
+      'family' => 'Namdhinggo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1039 => 
+    array (
+      'family' => 'Nanum Brush Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1040 => 
+    array (
+      'family' => 'Nanum Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+        2 => '800',
+      ),
+    ),
+    1041 => 
+    array (
+      'family' => 'Nanum Gothic Coding',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1042 => 
+    array (
+      'family' => 'Nanum Myeongjo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+        2 => '800',
+      ),
+    ),
+    1043 => 
+    array (
+      'family' => 'Nanum Pen Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1044 => 
+    array (
+      'family' => 'Narnoor',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1045 => 
+    array (
+      'family' => 'Nata Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1046 => 
+    array (
+      'family' => 'National Park',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1047 => 
+    array (
+      'family' => 'Neonderthaw',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1048 => 
+    array (
+      'family' => 'Nerko One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1049 => 
+    array (
+      'family' => 'Neucha',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1050 => 
+    array (
+      'family' => 'Neuton',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '700',
+        5 => '800',
+      ),
+    ),
+    1051 => 
+    array (
+      'family' => 'New Amsterdam',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1052 => 
+    array (
+      'family' => 'New Rocker',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1053 => 
+    array (
+      'family' => 'New Tegomin',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1054 => 
+    array (
+      'family' => 'News Cycle',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1055 => 
+    array (
+      'family' => 'Newsreader',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    1056 => 
+    array (
+      'family' => 'Niconne',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1057 => 
+    array (
+      'family' => 'Niramit',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+      ),
+    ),
+    1058 => 
+    array (
+      'family' => 'Nixie One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1059 => 
+    array (
+      'family' => 'Nobile',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '500',
+        3 => '500italic',
+        4 => '700',
+        5 => '700italic',
+      ),
+    ),
+    1060 => 
+    array (
+      'family' => 'Nokora',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1061 => 
+    array (
+      'family' => 'Norican',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1062 => 
+    array (
+      'family' => 'Nosifer',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1063 => 
+    array (
+      'family' => 'Notable',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1064 => 
+    array (
+      'family' => 'Nothing You Could Do',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1065 => 
+    array (
+      'family' => 'Noticia Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1066 => 
+    array (
+      'family' => 'Noto Color Emoji',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1067 => 
+    array (
+      'family' => 'Noto Emoji',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1068 => 
+    array (
+      'family' => 'Noto Kufi Arabic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1069 => 
+    array (
+      'family' => 'Noto Music',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1070 => 
+    array (
+      'family' => 'Noto Naskh Arabic',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1071 => 
+    array (
+      'family' => 'Noto Nastaliq Urdu',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1072 => 
+    array (
+      'family' => 'Noto Rashi Hebrew',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1073 => 
+    array (
+      'family' => 'Noto Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1074 => 
+    array (
+      'family' => 'Noto Sans Adlam',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1075 => 
+    array (
+      'family' => 'Noto Sans Adlam Unjoined',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1076 => 
+    array (
+      'family' => 'Noto Sans Anatolian Hieroglyphs',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1077 => 
+    array (
+      'family' => 'Noto Sans Arabic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1078 => 
+    array (
+      'family' => 'Noto Sans Armenian',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1079 => 
+    array (
+      'family' => 'Noto Sans Avestan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1080 => 
+    array (
+      'family' => 'Noto Sans Balinese',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1081 => 
+    array (
+      'family' => 'Noto Sans Bamum',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1082 => 
+    array (
+      'family' => 'Noto Sans Bassa Vah',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1083 => 
+    array (
+      'family' => 'Noto Sans Batak',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1084 => 
+    array (
+      'family' => 'Noto Sans Bengali',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1085 => 
+    array (
+      'family' => 'Noto Sans Bhaiksuki',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1086 => 
+    array (
+      'family' => 'Noto Sans Brahmi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1087 => 
+    array (
+      'family' => 'Noto Sans Buginese',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1088 => 
+    array (
+      'family' => 'Noto Sans Buhid',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1089 => 
+    array (
+      'family' => 'Noto Sans Canadian Aboriginal',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1090 => 
+    array (
+      'family' => 'Noto Sans Carian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1091 => 
+    array (
+      'family' => 'Noto Sans Caucasian Albanian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1092 => 
+    array (
+      'family' => 'Noto Sans Chakma',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1093 => 
+    array (
+      'family' => 'Noto Sans Cham',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1094 => 
+    array (
+      'family' => 'Noto Sans Cherokee',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1095 => 
+    array (
+      'family' => 'Noto Sans Chorasmian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1096 => 
+    array (
+      'family' => 'Noto Sans Coptic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1097 => 
+    array (
+      'family' => 'Noto Sans Cuneiform',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1098 => 
+    array (
+      'family' => 'Noto Sans Cypriot',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1099 => 
+    array (
+      'family' => 'Noto Sans Cypro Minoan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1100 => 
+    array (
+      'family' => 'Noto Sans Deseret',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1101 => 
+    array (
+      'family' => 'Noto Sans Devanagari',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1102 => 
+    array (
+      'family' => 'Noto Sans Display',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1103 => 
+    array (
+      'family' => 'Noto Sans Duployan',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1104 => 
+    array (
+      'family' => 'Noto Sans Egyptian Hieroglyphs',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1105 => 
+    array (
+      'family' => 'Noto Sans Elbasan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1106 => 
+    array (
+      'family' => 'Noto Sans Elymaic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1107 => 
+    array (
+      'family' => 'Noto Sans Ethiopic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1108 => 
+    array (
+      'family' => 'Noto Sans Georgian',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1109 => 
+    array (
+      'family' => 'Noto Sans Glagolitic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1110 => 
+    array (
+      'family' => 'Noto Sans Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1111 => 
+    array (
+      'family' => 'Noto Sans Grantha',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1112 => 
+    array (
+      'family' => 'Noto Sans Gujarati',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1113 => 
+    array (
+      'family' => 'Noto Sans Gunjala Gondi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1114 => 
+    array (
+      'family' => 'Noto Sans Gurmukhi',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1115 => 
+    array (
+      'family' => 'Noto Sans Hanifi Rohingya',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1116 => 
+    array (
+      'family' => 'Noto Sans Hanunoo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1117 => 
+    array (
+      'family' => 'Noto Sans Hatran',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1118 => 
+    array (
+      'family' => 'Noto Sans Hebrew',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1119 => 
+    array (
+      'family' => 'Noto Sans HK',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1120 => 
+    array (
+      'family' => 'Noto Sans Imperial Aramaic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1121 => 
+    array (
+      'family' => 'Noto Sans Indic Siyaq Numbers',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1122 => 
+    array (
+      'family' => 'Noto Sans Inscriptional Pahlavi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1123 => 
+    array (
+      'family' => 'Noto Sans Inscriptional Parthian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1124 => 
+    array (
+      'family' => 'Noto Sans Javanese',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1125 => 
+    array (
+      'family' => 'Noto Sans JP',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1126 => 
+    array (
+      'family' => 'Noto Sans Kaithi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1127 => 
+    array (
+      'family' => 'Noto Sans Kannada',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1128 => 
+    array (
+      'family' => 'Noto Sans Kawi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1129 => 
+    array (
+      'family' => 'Noto Sans Kayah Li',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1130 => 
+    array (
+      'family' => 'Noto Sans Kharoshthi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1131 => 
+    array (
+      'family' => 'Noto Sans Khmer',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1132 => 
+    array (
+      'family' => 'Noto Sans Khojki',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1133 => 
+    array (
+      'family' => 'Noto Sans Khudawadi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1134 => 
+    array (
+      'family' => 'Noto Sans KR',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1135 => 
+    array (
+      'family' => 'Noto Sans Lao',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1136 => 
+    array (
+      'family' => 'Noto Sans Lao Looped',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1137 => 
+    array (
+      'family' => 'Noto Sans Lepcha',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1138 => 
+    array (
+      'family' => 'Noto Sans Limbu',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1139 => 
+    array (
+      'family' => 'Noto Sans Linear A',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1140 => 
+    array (
+      'family' => 'Noto Sans Linear B',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1141 => 
+    array (
+      'family' => 'Noto Sans Lisu',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1142 => 
+    array (
+      'family' => 'Noto Sans Lycian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1143 => 
+    array (
+      'family' => 'Noto Sans Lydian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1144 => 
+    array (
+      'family' => 'Noto Sans Mahajani',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1145 => 
+    array (
+      'family' => 'Noto Sans Malayalam',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1146 => 
+    array (
+      'family' => 'Noto Sans Mandaic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1147 => 
+    array (
+      'family' => 'Noto Sans Manichaean',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1148 => 
+    array (
+      'family' => 'Noto Sans Marchen',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1149 => 
+    array (
+      'family' => 'Noto Sans Masaram Gondi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1150 => 
+    array (
+      'family' => 'Noto Sans Math',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1151 => 
+    array (
+      'family' => 'Noto Sans Mayan Numerals',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1152 => 
+    array (
+      'family' => 'Noto Sans Medefaidrin',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1153 => 
+    array (
+      'family' => 'Noto Sans Meetei Mayek',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1154 => 
+    array (
+      'family' => 'Noto Sans Mende Kikakui',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1155 => 
+    array (
+      'family' => 'Noto Sans Meroitic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1156 => 
+    array (
+      'family' => 'Noto Sans Miao',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1157 => 
+    array (
+      'family' => 'Noto Sans Modi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1158 => 
+    array (
+      'family' => 'Noto Sans Mongolian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1159 => 
+    array (
+      'family' => 'Noto Sans Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1160 => 
+    array (
+      'family' => 'Noto Sans Mro',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1161 => 
+    array (
+      'family' => 'Noto Sans Multani',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1162 => 
+    array (
+      'family' => 'Noto Sans Myanmar',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1163 => 
+    array (
+      'family' => 'Noto Sans Nabataean',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1164 => 
+    array (
+      'family' => 'Noto Sans Nag Mundari',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1165 => 
+    array (
+      'family' => 'Noto Sans Nandinagari',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1166 => 
+    array (
+      'family' => 'Noto Sans New Tai Lue',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1167 => 
+    array (
+      'family' => 'Noto Sans Newa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1168 => 
+    array (
+      'family' => 'Noto Sans NKo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1169 => 
+    array (
+      'family' => 'Noto Sans NKo Unjoined',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1170 => 
+    array (
+      'family' => 'Noto Sans Nushu',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1171 => 
+    array (
+      'family' => 'Noto Sans Ogham',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1172 => 
+    array (
+      'family' => 'Noto Sans Ol Chiki',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1173 => 
+    array (
+      'family' => 'Noto Sans Old Hungarian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1174 => 
+    array (
+      'family' => 'Noto Sans Old Italic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1175 => 
+    array (
+      'family' => 'Noto Sans Old North Arabian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1176 => 
+    array (
+      'family' => 'Noto Sans Old Permic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1177 => 
+    array (
+      'family' => 'Noto Sans Old Persian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1178 => 
+    array (
+      'family' => 'Noto Sans Old Sogdian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1179 => 
+    array (
+      'family' => 'Noto Sans Old South Arabian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1180 => 
+    array (
+      'family' => 'Noto Sans Old Turkic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1181 => 
+    array (
+      'family' => 'Noto Sans Oriya',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1182 => 
+    array (
+      'family' => 'Noto Sans Osage',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1183 => 
+    array (
+      'family' => 'Noto Sans Osmanya',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1184 => 
+    array (
+      'family' => 'Noto Sans Pahawh Hmong',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1185 => 
+    array (
+      'family' => 'Noto Sans Palmyrene',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1186 => 
+    array (
+      'family' => 'Noto Sans Pau Cin Hau',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1187 => 
+    array (
+      'family' => 'Noto Sans PhagsPa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1188 => 
+    array (
+      'family' => 'Noto Sans Phoenician',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1189 => 
+    array (
+      'family' => 'Noto Sans Psalter Pahlavi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1190 => 
+    array (
+      'family' => 'Noto Sans Rejang',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1191 => 
+    array (
+      'family' => 'Noto Sans Runic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1192 => 
+    array (
+      'family' => 'Noto Sans Samaritan',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1193 => 
+    array (
+      'family' => 'Noto Sans Saurashtra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1194 => 
+    array (
+      'family' => 'Noto Sans SC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1195 => 
+    array (
+      'family' => 'Noto Sans Sharada',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1196 => 
+    array (
+      'family' => 'Noto Sans Shavian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1197 => 
+    array (
+      'family' => 'Noto Sans Siddham',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1198 => 
+    array (
+      'family' => 'Noto Sans SignWriting',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1199 => 
+    array (
+      'family' => 'Noto Sans Sinhala',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1200 => 
+    array (
+      'family' => 'Noto Sans Sogdian',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1201 => 
+    array (
+      'family' => 'Noto Sans Sora Sompeng',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1202 => 
+    array (
+      'family' => 'Noto Sans Soyombo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1203 => 
+    array (
+      'family' => 'Noto Sans Sundanese',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1204 => 
+    array (
+      'family' => 'Noto Sans Sunuwar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1205 => 
+    array (
+      'family' => 'Noto Sans Syloti Nagri',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1206 => 
+    array (
+      'family' => 'Noto Sans Symbols',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1207 => 
+    array (
+      'family' => 'Noto Sans Symbols 2',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1208 => 
+    array (
+      'family' => 'Noto Sans Syriac',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1209 => 
+    array (
+      'family' => 'Noto Sans Syriac Eastern',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1210 => 
+    array (
+      'family' => 'Noto Sans Syriac Western',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1211 => 
+    array (
+      'family' => 'Noto Sans Tagalog',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1212 => 
+    array (
+      'family' => 'Noto Sans Tagbanwa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1213 => 
+    array (
+      'family' => 'Noto Sans Tai Le',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1214 => 
+    array (
+      'family' => 'Noto Sans Tai Tham',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1215 => 
+    array (
+      'family' => 'Noto Sans Tai Viet',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1216 => 
+    array (
+      'family' => 'Noto Sans Takri',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1217 => 
+    array (
+      'family' => 'Noto Sans Tamil',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1218 => 
+    array (
+      'family' => 'Noto Sans Tamil Supplement',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1219 => 
+    array (
+      'family' => 'Noto Sans Tangsa',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1220 => 
+    array (
+      'family' => 'Noto Sans TC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1221 => 
+    array (
+      'family' => 'Noto Sans Telugu',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1222 => 
+    array (
+      'family' => 'Noto Sans Thaana',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1223 => 
+    array (
+      'family' => 'Noto Sans Thai',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1224 => 
+    array (
+      'family' => 'Noto Sans Thai Looped',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1225 => 
+    array (
+      'family' => 'Noto Sans Tifinagh',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1226 => 
+    array (
+      'family' => 'Noto Sans Tirhuta',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1227 => 
+    array (
+      'family' => 'Noto Sans Ugaritic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1228 => 
+    array (
+      'family' => 'Noto Sans Vai',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1229 => 
+    array (
+      'family' => 'Noto Sans Vithkuqi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1230 => 
+    array (
+      'family' => 'Noto Sans Wancho',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1231 => 
+    array (
+      'family' => 'Noto Sans Warang Citi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1232 => 
+    array (
+      'family' => 'Noto Sans Yi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1233 => 
+    array (
+      'family' => 'Noto Sans Zanabazar Square',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1234 => 
+    array (
+      'family' => 'Noto Serif',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1235 => 
+    array (
+      'family' => 'Noto Serif Ahom',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1236 => 
+    array (
+      'family' => 'Noto Serif Armenian',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1237 => 
+    array (
+      'family' => 'Noto Serif Balinese',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1238 => 
+    array (
+      'family' => 'Noto Serif Bengali',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1239 => 
+    array (
+      'family' => 'Noto Serif Devanagari',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1240 => 
+    array (
+      'family' => 'Noto Serif Display',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1241 => 
+    array (
+      'family' => 'Noto Serif Dives Akuru',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1242 => 
+    array (
+      'family' => 'Noto Serif Dogra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1243 => 
+    array (
+      'family' => 'Noto Serif Ethiopic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1244 => 
+    array (
+      'family' => 'Noto Serif Georgian',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1245 => 
+    array (
+      'family' => 'Noto Serif Grantha',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1246 => 
+    array (
+      'family' => 'Noto Serif Gujarati',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1247 => 
+    array (
+      'family' => 'Noto Serif Gurmukhi',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1248 => 
+    array (
+      'family' => 'Noto Serif Hebrew',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1249 => 
+    array (
+      'family' => 'Noto Serif Hentaigana',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1250 => 
+    array (
+      'family' => 'Noto Serif HK',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1251 => 
+    array (
+      'family' => 'Noto Serif JP',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1252 => 
+    array (
+      'family' => 'Noto Serif Kannada',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1253 => 
+    array (
+      'family' => 'Noto Serif Khitan Small Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1254 => 
+    array (
+      'family' => 'Noto Serif Khmer',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1255 => 
+    array (
+      'family' => 'Noto Serif Khojki',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1256 => 
+    array (
+      'family' => 'Noto Serif KR',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1257 => 
+    array (
+      'family' => 'Noto Serif Lao',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1258 => 
+    array (
+      'family' => 'Noto Serif Makasar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1259 => 
+    array (
+      'family' => 'Noto Serif Malayalam',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1260 => 
+    array (
+      'family' => 'Noto Serif Myanmar',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1261 => 
+    array (
+      'family' => 'Noto Serif NP Hmong',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1262 => 
+    array (
+      'family' => 'Noto Serif Old Uyghur',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1263 => 
+    array (
+      'family' => 'Noto Serif Oriya',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1264 => 
+    array (
+      'family' => 'Noto Serif Ottoman Siyaq',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1265 => 
+    array (
+      'family' => 'Noto Serif SC',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1266 => 
+    array (
+      'family' => 'Noto Serif Sinhala',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1267 => 
+    array (
+      'family' => 'Noto Serif Tamil',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1268 => 
+    array (
+      'family' => 'Noto Serif Tangut',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1269 => 
+    array (
+      'family' => 'Noto Serif TC',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1270 => 
+    array (
+      'family' => 'Noto Serif Telugu',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1271 => 
+    array (
+      'family' => 'Noto Serif Thai',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1272 => 
+    array (
+      'family' => 'Noto Serif Tibetan',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1273 => 
+    array (
+      'family' => 'Noto Serif Todhri',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1274 => 
+    array (
+      'family' => 'Noto Serif Toto',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1275 => 
+    array (
+      'family' => 'Noto Serif Vithkuqi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1276 => 
+    array (
+      'family' => 'Noto Serif Yezidi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1277 => 
+    array (
+      'family' => 'Noto Traditional Nushu',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1278 => 
+    array (
+      'family' => 'Noto Znamenny Musical Notation',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1279 => 
+    array (
+      'family' => 'Nova Cut',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1280 => 
+    array (
+      'family' => 'Nova Flat',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1281 => 
+    array (
+      'family' => 'Nova Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1282 => 
+    array (
+      'family' => 'Nova Oval',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1283 => 
+    array (
+      'family' => 'Nova Round',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1284 => 
+    array (
+      'family' => 'Nova Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1285 => 
+    array (
+      'family' => 'Nova Slim',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1286 => 
+    array (
+      'family' => 'Nova Square',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1287 => 
+    array (
+      'family' => 'NTR',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1288 => 
+    array (
+      'family' => 'Numans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1289 => 
+    array (
+      'family' => 'Nunito',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1290 => 
+    array (
+      'family' => 'Nunito Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1291 => 
+    array (
+      'family' => 'Nuosu SIL',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1292 => 
+    array (
+      'family' => 'Odibee Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1293 => 
+    array (
+      'family' => 'Odor Mean Chey',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1294 => 
+    array (
+      'family' => 'Offside',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1295 => 
+    array (
+      'family' => 'Oi',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1296 => 
+    array (
+      'family' => 'Ojuju',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1297 => 
+    array (
+      'family' => 'Old Standard TT',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1298 => 
+    array (
+      'family' => 'Oldenburg',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1299 => 
+    array (
+      'family' => 'Ole',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1300 => 
+    array (
+      'family' => 'Oleo Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1301 => 
+    array (
+      'family' => 'Oleo Script Swash Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1302 => 
+    array (
+      'family' => 'Onest',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1303 => 
+    array (
+      'family' => 'Oooh Baby',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1304 => 
+    array (
+      'family' => 'Open Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    1305 => 
+    array (
+      'family' => 'Oranienbaum',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1306 => 
+    array (
+      'family' => 'Orbit',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1307 => 
+    array (
+      'family' => 'Orbitron',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    1308 => 
+    array (
+      'family' => 'Oregano',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1309 => 
+    array (
+      'family' => 'Orelega One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1310 => 
+    array (
+      'family' => 'Orienta',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1311 => 
+    array (
+      'family' => 'Original Surfer',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1312 => 
+    array (
+      'family' => 'Oswald',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1313 => 
+    array (
+      'family' => 'Outfit',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1314 => 
+    array (
+      'family' => 'Over the Rainbow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1315 => 
+    array (
+      'family' => 'Overlock',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+        4 => '900',
+        5 => '900italic',
+      ),
+    ),
+    1316 => 
+    array (
+      'family' => 'Overlock SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1317 => 
+    array (
+      'family' => 'Overpass',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1318 => 
+    array (
+      'family' => 'Overpass Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1319 => 
+    array (
+      'family' => 'Ovo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1320 => 
+    array (
+      'family' => 'Oxanium',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1321 => 
+    array (
+      'family' => 'Oxygen',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    1322 => 
+    array (
+      'family' => 'Oxygen Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1323 => 
+    array (
+      'family' => 'Pacifico',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1324 => 
+    array (
+      'family' => 'Padauk',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1325 => 
+    array (
+      'family' => 'Padyakke Expanded One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1326 => 
+    array (
+      'family' => 'Palanquin',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+      ),
+    ),
+    1327 => 
+    array (
+      'family' => 'Palanquin Dark',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1328 => 
+    array (
+      'family' => 'Palette Mosaic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1329 => 
+    array (
+      'family' => 'Pangolin',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1330 => 
+    array (
+      'family' => 'Paprika',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1331 => 
+    array (
+      'family' => 'Parastoo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1332 => 
+    array (
+      'family' => 'Parisienne',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1333 => 
+    array (
+      'family' => 'Parkinsans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+      ),
+    ),
+    1334 => 
+    array (
+      'family' => 'Passero One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1335 => 
+    array (
+      'family' => 'Passion One',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+        2 => '900',
+      ),
+    ),
+    1336 => 
+    array (
+      'family' => 'Passions Conflict',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1337 => 
+    array (
+      'family' => 'Pathway Extreme',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1338 => 
+    array (
+      'family' => 'Pathway Gothic One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1339 => 
+    array (
+      'family' => 'Patrick Hand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1340 => 
+    array (
+      'family' => 'Patrick Hand SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1341 => 
+    array (
+      'family' => 'Pattaya',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1342 => 
+    array (
+      'family' => 'Patua One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1343 => 
+    array (
+      'family' => 'Pavanam',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1344 => 
+    array (
+      'family' => 'Paytone One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1345 => 
+    array (
+      'family' => 'Peddana',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1346 => 
+    array (
+      'family' => 'Peralta',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1347 => 
+    array (
+      'family' => 'Permanent Marker',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1348 => 
+    array (
+      'family' => 'Petemoss',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1349 => 
+    array (
+      'family' => 'Petit Formal Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1350 => 
+    array (
+      'family' => 'Petrona',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1351 => 
+    array (
+      'family' => 'Phetsarath',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1352 => 
+    array (
+      'family' => 'Philosopher',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1353 => 
+    array (
+      'family' => 'Phudu',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    1354 => 
+    array (
+      'family' => 'Piazzolla',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1355 => 
+    array (
+      'family' => 'Piedra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1356 => 
+    array (
+      'family' => 'Pinyon Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1357 => 
+    array (
+      'family' => 'Pirata One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1358 => 
+    array (
+      'family' => 'Pixelify Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1359 => 
+    array (
+      'family' => 'Plaster',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1360 => 
+    array (
+      'family' => 'Platypi',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    1361 => 
+    array (
+      'family' => 'Play',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1362 => 
+    array (
+      'family' => 'Playball',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1363 => 
+    array (
+      'family' => 'Playfair',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    1364 => 
+    array (
+      'family' => 'Playfair Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    1365 => 
+    array (
+      'family' => 'Playfair Display SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+        4 => '900',
+        5 => '900italic',
+      ),
+    ),
+    1366 => 
+    array (
+      'family' => 'Playpen Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1367 => 
+    array (
+      'family' => 'Playpen Sans Arabic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1368 => 
+    array (
+      'family' => 'Playpen Sans Deva',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1369 => 
+    array (
+      'family' => 'Playpen Sans Hebrew',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1370 => 
+    array (
+      'family' => 'Playpen Sans Thai',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1371 => 
+    array (
+      'family' => 'Playwrite AR',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1372 => 
+    array (
+      'family' => 'Playwrite AR Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1373 => 
+    array (
+      'family' => 'Playwrite AT',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '100italic',
+        5 => '200italic',
+        6 => '300italic',
+        7 => 'italic',
+      ),
+    ),
+    1374 => 
+    array (
+      'family' => 'Playwrite AT Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1375 => 
+    array (
+      'family' => 'Playwrite AU NSW',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1376 => 
+    array (
+      'family' => 'Playwrite AU NSW Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1377 => 
+    array (
+      'family' => 'Playwrite AU QLD',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1378 => 
+    array (
+      'family' => 'Playwrite AU QLD Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1379 => 
+    array (
+      'family' => 'Playwrite AU SA',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1380 => 
+    array (
+      'family' => 'Playwrite AU SA Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1381 => 
+    array (
+      'family' => 'Playwrite AU TAS',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1382 => 
+    array (
+      'family' => 'Playwrite AU TAS Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1383 => 
+    array (
+      'family' => 'Playwrite AU VIC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1384 => 
+    array (
+      'family' => 'Playwrite AU VIC Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1385 => 
+    array (
+      'family' => 'Playwrite BE VLG',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1386 => 
+    array (
+      'family' => 'Playwrite BE VLG Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1387 => 
+    array (
+      'family' => 'Playwrite BE WAL',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1388 => 
+    array (
+      'family' => 'Playwrite BE WAL Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1389 => 
+    array (
+      'family' => 'Playwrite BR',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1390 => 
+    array (
+      'family' => 'Playwrite BR Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1391 => 
+    array (
+      'family' => 'Playwrite CA',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1392 => 
+    array (
+      'family' => 'Playwrite CA Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1393 => 
+    array (
+      'family' => 'Playwrite CL',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1394 => 
+    array (
+      'family' => 'Playwrite CL Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1395 => 
+    array (
+      'family' => 'Playwrite CO',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1396 => 
+    array (
+      'family' => 'Playwrite CO Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1397 => 
+    array (
+      'family' => 'Playwrite CU',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1398 => 
+    array (
+      'family' => 'Playwrite CU Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1399 => 
+    array (
+      'family' => 'Playwrite CZ',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1400 => 
+    array (
+      'family' => 'Playwrite CZ Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1401 => 
+    array (
+      'family' => 'Playwrite DE Grund',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1402 => 
+    array (
+      'family' => 'Playwrite DE Grund Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1403 => 
+    array (
+      'family' => 'Playwrite DE LA',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1404 => 
+    array (
+      'family' => 'Playwrite DE LA Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1405 => 
+    array (
+      'family' => 'Playwrite DE SAS',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1406 => 
+    array (
+      'family' => 'Playwrite DE SAS Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1407 => 
+    array (
+      'family' => 'Playwrite DE VA',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1408 => 
+    array (
+      'family' => 'Playwrite DE VA Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1409 => 
+    array (
+      'family' => 'Playwrite DK Loopet',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1410 => 
+    array (
+      'family' => 'Playwrite DK Loopet Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1411 => 
+    array (
+      'family' => 'Playwrite DK Uloopet',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1412 => 
+    array (
+      'family' => 'Playwrite DK Uloopet Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1413 => 
+    array (
+      'family' => 'Playwrite ES',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1414 => 
+    array (
+      'family' => 'Playwrite ES Deco',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1415 => 
+    array (
+      'family' => 'Playwrite ES Deco Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1416 => 
+    array (
+      'family' => 'Playwrite ES Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1417 => 
+    array (
+      'family' => 'Playwrite FR Moderne',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1418 => 
+    array (
+      'family' => 'Playwrite FR Moderne Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1419 => 
+    array (
+      'family' => 'Playwrite FR Trad',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1420 => 
+    array (
+      'family' => 'Playwrite FR Trad Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1421 => 
+    array (
+      'family' => 'Playwrite GB J',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '100italic',
+        5 => '200italic',
+        6 => '300italic',
+        7 => 'italic',
+      ),
+    ),
+    1422 => 
+    array (
+      'family' => 'Playwrite GB J Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1423 => 
+    array (
+      'family' => 'Playwrite GB S',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '100italic',
+        5 => '200italic',
+        6 => '300italic',
+        7 => 'italic',
+      ),
+    ),
+    1424 => 
+    array (
+      'family' => 'Playwrite GB S Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1425 => 
+    array (
+      'family' => 'Playwrite HR',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1426 => 
+    array (
+      'family' => 'Playwrite HR Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1427 => 
+    array (
+      'family' => 'Playwrite HR Lijeva',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1428 => 
+    array (
+      'family' => 'Playwrite HR Lijeva Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1429 => 
+    array (
+      'family' => 'Playwrite HU',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1430 => 
+    array (
+      'family' => 'Playwrite HU Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1431 => 
+    array (
+      'family' => 'Playwrite ID',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1432 => 
+    array (
+      'family' => 'Playwrite ID Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1433 => 
+    array (
+      'family' => 'Playwrite IE',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1434 => 
+    array (
+      'family' => 'Playwrite IE Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1435 => 
+    array (
+      'family' => 'Playwrite IN',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1436 => 
+    array (
+      'family' => 'Playwrite IN Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1437 => 
+    array (
+      'family' => 'Playwrite IS',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1438 => 
+    array (
+      'family' => 'Playwrite IS Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1439 => 
+    array (
+      'family' => 'Playwrite IT Moderna',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1440 => 
+    array (
+      'family' => 'Playwrite IT Moderna Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1441 => 
+    array (
+      'family' => 'Playwrite IT Trad',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1442 => 
+    array (
+      'family' => 'Playwrite IT Trad Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1443 => 
+    array (
+      'family' => 'Playwrite MX',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1444 => 
+    array (
+      'family' => 'Playwrite MX Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1445 => 
+    array (
+      'family' => 'Playwrite NG Modern',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1446 => 
+    array (
+      'family' => 'Playwrite NG Modern Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1447 => 
+    array (
+      'family' => 'Playwrite NL',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1448 => 
+    array (
+      'family' => 'Playwrite NL Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1449 => 
+    array (
+      'family' => 'Playwrite NO',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1450 => 
+    array (
+      'family' => 'Playwrite NO Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1451 => 
+    array (
+      'family' => 'Playwrite NZ',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1452 => 
+    array (
+      'family' => 'Playwrite NZ Basic',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1453 => 
+    array (
+      'family' => 'Playwrite NZ Basic Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1454 => 
+    array (
+      'family' => 'Playwrite NZ Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1455 => 
+    array (
+      'family' => 'Playwrite PE',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1456 => 
+    array (
+      'family' => 'Playwrite PE Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1457 => 
+    array (
+      'family' => 'Playwrite PL',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1458 => 
+    array (
+      'family' => 'Playwrite PL Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1459 => 
+    array (
+      'family' => 'Playwrite PT',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1460 => 
+    array (
+      'family' => 'Playwrite PT Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1461 => 
+    array (
+      'family' => 'Playwrite RO',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1462 => 
+    array (
+      'family' => 'Playwrite RO Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1463 => 
+    array (
+      'family' => 'Playwrite SK',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1464 => 
+    array (
+      'family' => 'Playwrite SK Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1465 => 
+    array (
+      'family' => 'Playwrite TZ',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1466 => 
+    array (
+      'family' => 'Playwrite TZ Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1467 => 
+    array (
+      'family' => 'Playwrite US Modern',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1468 => 
+    array (
+      'family' => 'Playwrite US Modern Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1469 => 
+    array (
+      'family' => 'Playwrite US Trad',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1470 => 
+    array (
+      'family' => 'Playwrite US Trad Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1471 => 
+    array (
+      'family' => 'Playwrite VN',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1472 => 
+    array (
+      'family' => 'Playwrite VN Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1473 => 
+    array (
+      'family' => 'Playwrite ZA',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+      ),
+    ),
+    1474 => 
+    array (
+      'family' => 'Playwrite ZA Guides',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1475 => 
+    array (
+      'family' => 'Pliant',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1476 => 
+    array (
+      'family' => 'Plus Jakarta Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    1477 => 
+    array (
+      'family' => 'Pochaevsk',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1478 => 
+    array (
+      'family' => 'Podkova',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1479 => 
+    array (
+      'family' => 'Poetsen One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1480 => 
+    array (
+      'family' => 'Poiret One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1481 => 
+    array (
+      'family' => 'Poller One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1482 => 
+    array (
+      'family' => 'Poltawski Nowy',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    1483 => 
+    array (
+      'family' => 'Poly',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1484 => 
+    array (
+      'family' => 'Pompiere',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1485 => 
+    array (
+      'family' => 'Ponnala',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1486 => 
+    array (
+      'family' => 'Ponomar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1487 => 
+    array (
+      'family' => 'Pontano Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1488 => 
+    array (
+      'family' => 'Poor Story',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1489 => 
+    array (
+      'family' => 'Poppins',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    1490 => 
+    array (
+      'family' => 'Port Lligat Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1491 => 
+    array (
+      'family' => 'Port Lligat Slab',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1492 => 
+    array (
+      'family' => 'Potta One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1493 => 
+    array (
+      'family' => 'Pragati Narrow',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1494 => 
+    array (
+      'family' => 'Praise',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1495 => 
+    array (
+      'family' => 'Prata',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1496 => 
+    array (
+      'family' => 'Preahvihear',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1497 => 
+    array (
+      'family' => 'Press Start 2P',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1498 => 
+    array (
+      'family' => 'Pridi',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1499 => 
+    array (
+      'family' => 'Princess Sofia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1500 => 
+    array (
+      'family' => 'Prociono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1501 => 
+    array (
+      'family' => 'Prompt',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
+      ),
+    ),
+    1502 => 
+    array (
+      'family' => 'Prosto One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1503 => 
+    array (
+      'family' => 'Protest Guerrilla',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1504 => 
+    array (
+      'family' => 'Protest Revolution',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1505 => 
+    array (
+      'family' => 'Protest Riot',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1506 => 
+    array (
+      'family' => 'Protest Strike',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1507 => 
+    array (
       'family' => 'Proza Libre',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -15345,32 +16605,18 @@ return array (
         8 => '800',
         9 => '800italic',
       ),
-      'subsets' => 
+    ),
+    1508 => 
+    array (
+      'family' => 'PT Mono',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/prozalibre/v2/Hg11OrfE1P_U6mKmrZPknKCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/prozalibre/v2/ClQTew5IUT7yKo8vyspLxEeOrDcLawS7-ssYqLr2Xp4.ttf',
-        500 => 'http://fonts.gstatic.com/s/prozalibre/v2/4gjxWDPA6RMWrIls_qgQBsCNfqCYlB_eIx7H1TVXe60.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/prozalibre/v2/rWq3Qp4ZlPGKduc1qkgLHGnWRcJAYo5PSCx8UfGMHCI.ttf',
-        600 => 'http://fonts.gstatic.com/s/prozalibre/v2/4gjxWDPA6RMWrIls_qgQBpZ7xm-Bj30Bj2KNdXDzSZg.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/prozalibre/v2/rWq3Qp4ZlPGKduc1qkgLHJe6We3S5L6hKLscKpOkmlo.ttf',
-        700 => 'http://fonts.gstatic.com/s/prozalibre/v2/4gjxWDPA6RMWrIls_qgQBne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/prozalibre/v2/rWq3Qp4ZlPGKduc1qkgLHM_zJjSACmk0BRPxQqhnNLU.ttf',
-        800 => 'http://fonts.gstatic.com/s/prozalibre/v2/4gjxWDPA6RMWrIls_qgQBg89PwPrYLaRFJ-HNCU9NbA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/prozalibre/v2/rWq3Qp4ZlPGKduc1qkgLHCad_7rtf4IdDfsLVg-2OV4.ttf',
+        0 => 'regular',
       ),
     ),
-    637 => 
+    1509 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Puritan',
-      'category' => 'sans-serif',
+      'family' => 'PT Sans',
       'variants' => 
       array (
         0 => 'regular',
@@ -15378,116 +16624,28 @@ return array (
         2 => '700',
         3 => '700italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/puritan/v9/wv_RtgVBSCn-or2MC0n4Kg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/puritan/v9/BqZX8Tp200LeMv1KlzXgLQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/puritan/v9/pJS2SdwI0SCiVnO0iQSFT_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/puritan/v9/rFG3XkMJL75nUNZwCEIJqC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    638 => 
+    1510 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Purple Purse',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/purplepurse/v6/Q5heFUrdmei9axbMITxxxS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    639 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quando',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/quando/v6/03nDiEZuO2-h3xvtG6UmHg.ttf',
-      ),
-    ),
-    640 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quantico',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/quantico/v6/pwSnP8Xpaix2rIz99HrSlQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/quantico/v6/KQhDd2OsZi6HiITUeFQ2U_esZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/quantico/v6/OVZZzjcZ3Hkq2ojVcUtDjaCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/quantico/v6/HeCYRcZbdRso3ZUu01ELbQJKKGfqHaYFsRG-T3ceEVo.ttf',
-      ),
-    ),
-    641 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quattrocento',
-      'category' => 'serif',
+      'family' => 'PT Sans Caption',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1511 => 
+    array (
+      'family' => 'PT Sans Narrow',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/quattrocento/v9/WZDISdyil4HsmirlOdBRFC3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/quattrocento/v9/Uvi-cRwyvqFpl9j3oT2mqkD2ttfZwueP-QU272T9-k4.ttf',
+        0 => 'regular',
+        1 => '700',
       ),
     ),
-    642 => 
+    1512 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quattrocento Sans',
-      'category' => 'sans-serif',
+      'family' => 'PT Serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -15495,330 +16653,52 @@ return array (
         2 => '700',
         3 => '700italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/quattrocentosans/v10/efd6FGWWGX5Z3ztwLBrG9eAj_ty82iuwwDTNEYXGiyQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/quattrocentosans/v10/8PXYbvM__bjl0rBnKiByg532VBCoA_HLsn85tSWZmdo.ttf',
-        700 => 'http://fonts.gstatic.com/s/quattrocentosans/v10/tXSgPxDl7Lk8Zr_5qX8FIbqxG25nQNOioCZSK4sU-CA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/quattrocentosans/v10/8N1PdXpbG6RtFvTjl-5E7buqAJxizi8Dk_SK5et7kMg.ttf',
-      ),
     ),
-    643 => 
+    1513 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Questrial',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/questrial/v7/MoHHaw_WwNs_hd9ob1zTVw.ttf',
-      ),
-    ),
-    644 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quicksand',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/quicksand/v7/qhfoJiLu10kFjChCCTvGlC3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/quicksand/v7/Ngv3fIJjKB7sD-bTUGIFCA.ttf',
-        500 => 'http://fonts.gstatic.com/s/quicksand/v7/FRGja7LlrG1Mypm0hCq0Di3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/quicksand/v7/32nyIRHyCu6iqEka_hbKsi3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    645 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Quintessential',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/quintessential/v5/mmk6ioesnTrEky_Zb92E5s02lXbtMOtZWfuxKeMZO8Q.ttf',
-      ),
-    ),
-    646 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Qwigley',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/qwigley/v7/aDqxws-KubFID85TZHFouw.ttf',
-      ),
-    ),
-    647 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Racing Sans One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/racingsansone/v5/1r3DpWaCiT7y3PD4KgkNyDjVlsJB_M_Q_LtZxsoxvlw.ttf',
-      ),
-    ),
-    648 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Radley',
-      'category' => 'serif',
+      'family' => 'PT Serif Caption',
       'variants' => 
       array (
         0 => 'regular',
         1 => 'italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/radley/v12/FgE9di09a-mXGzAIyI6Q9Q.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/radley/v12/Z_JcACuPAOO2f9kzQcGRug.ttf',
-      ),
     ),
-    649 => 
+    1514 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rajdhani',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '500',
-        3 => '600',
-        4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/rajdhani/v7/9pItuEhQZVGdq8spnHTku6CWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/rajdhani/v7/Wfy5zp4PGFAFS7-Wetehzw.ttf',
-        500 => 'http://fonts.gstatic.com/s/rajdhani/v7/nd_5ZpVwm710HcLual0fBqCWcynf_cDxXwCLxiixG1c.ttf',
-        600 => 'http://fonts.gstatic.com/s/rajdhani/v7/5fnmZahByDeTtgxIiqbJSaCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/rajdhani/v7/UBK6d2Hg7X7wYLlF92aXW6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    650 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rakkas',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rakkas/v2/XWSZpoSbAR4myQgKbSJM9A.ttf',
-      ),
-    ),
-    651 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Raleway',
-      'category' => 'sans-serif',
+      'family' => 'Public Sans',
       'variants' => 
       array (
         0 => '100',
-        1 => '100italic',
-        2 => '200',
-        3 => '200italic',
-        4 => '300',
-        5 => '300italic',
-        6 => 'regular',
-        7 => 'italic',
-        8 => '500',
-        9 => '500italic',
-        10 => '600',
-        11 => '600italic',
-        12 => '700',
-        13 => '700italic',
-        14 => '800',
-        15 => '800italic',
-        16 => '900',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
         17 => '900italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/raleway/v12/UDfD6oxBaBnmFJwQ7XAFNw.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/raleway/v12/hUpHtml6IPNuUR-FwVi2UKCWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/raleway/v12/LAQwev4hdCtYkOYX4Oc7nPesZW2xOQ-xsNqO47m55DA.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/raleway/v12/N2DIbZG4399cPGfifZUEQi3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/raleway/v12/2VvSZU2kb4DZwFfRM4fLQPesZW2xOQ-xsNqO47m55DA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/raleway/v12/TVSB8ogXDKMcnAAJ5CqrUi3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/raleway/v12/_dCzxpXzIS3sL-gdJWAP8A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/raleway/v12/utU2m1gdZSfuQpArSy5Dbw.ttf',
-        500 => 'http://fonts.gstatic.com/s/raleway/v12/348gn6PEmbLDWlHbbV15d_esZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/raleway/v12/S7vGLZZ40c85SJgiptJGVy3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/raleway/v12/M7no6oPkwKYJkedjB1wqEvesZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/raleway/v12/OY22yoG8EJ3IN_muVWm29C3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/raleway/v12/VGEV9-DrblisWOWLbK-1XPesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/raleway/v12/lFxvRPuGFG5ktd7P0WRwKi3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/raleway/v12/mMh0JrsYMXcLO69jgJwpUvesZW2xOQ-xsNqO47m55DA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/raleway/v12/us4LjTCmlYgh3W8CKujEJi3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/raleway/v12/ajQQGcDBLcyLpaUfD76UuPesZW2xOQ-xsNqO47m55DA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/raleway/v12/oY2RadnkHfshu5f0FLsgVS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    652 => 
+    1515 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Raleway Dots',
-      'category' => 'display',
+      'family' => 'Puppies Play',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ralewaydots/v5/lhLgmWCRcyz-QXo8LCzTfC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    653 => 
+    1516 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ramabhadra',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ramabhadra/v6/JyhxLXRVQChLDGADS_c5MPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    654 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ramaraja',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ramaraja/v2/XIqzxFapVczstBedHdQTiw.ttf',
-      ),
-    ),
-    655 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rambla',
-      'category' => 'sans-serif',
+      'family' => 'Puritan',
       'variants' => 
       array (
         0 => 'regular',
@@ -15826,112 +16706,73 @@ return array (
         2 => '700',
         3 => '700italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rambla/v5/YaTmpvm5gFg_ShJKTQmdzg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/rambla/v5/mhUgsKmp0qw3uATdDDAuwA.ttf',
-        700 => 'http://fonts.gstatic.com/s/rambla/v5/C5VZH8BxQKmnBuoC00UPpw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/rambla/v5/ziMzUZya6QahrKONSI1TzqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
     ),
-    656 => 
+    1517 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rammetto One',
-      'category' => 'display',
+      'family' => 'Purple Purse',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rammettoone/v6/mh0uQ1tV8QgSx9v_KyEYPC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    657 => 
+    1518 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ranchers',
-      'category' => 'display',
+      'family' => 'Qahiri',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ranchers/v5/9ya8CZYhqT66VERfjQ7eLA.ttf',
-      ),
     ),
-    658 => 
+    1519 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rancho',
-      'category' => 'handwriting',
+      'family' => 'Quando',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1520 => 
+    array (
+      'family' => 'Quantico',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rancho/v8/ekp3-4QykC4--6KaslRgHA.ttf',
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
-    659 => 
+    1521 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ranga',
-      'category' => 'display',
+      'family' => 'Quattrocento',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1522 => 
+    array (
+      'family' => 'Quattrocento Sans',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ranga/v3/xpW6zFTNzY1JykoBIqE1Zg.ttf',
-        700 => 'http://fonts.gstatic.com/s/ranga/v3/h8G_gEUH7vHKH-NkjAs34A.ttf',
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
       ),
     ),
-    660 => 
+    1523 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rasa',
-      'category' => 'serif',
+      'family' => 'Questrial',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1524 => 
+    array (
+      'family' => 'Quicksand',
       'variants' => 
       array (
         0 => '300',
@@ -15940,305 +16781,1361 @@ return array (
         3 => '600',
         4 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/rasa/v3/XQ1gDq2EqBtGcdadPyPbww.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/rasa/v3/A5PoJUwX_PxTsywxlRB79g.ttf',
-        500 => 'http://fonts.gstatic.com/s/rasa/v3/HfsDi_Ls3NARO_YEODINGg.ttf',
-        600 => 'http://fonts.gstatic.com/s/rasa/v3/f-fvbq-hWIQCdmT3QHGk3Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/rasa/v3/TSF3CG-8Cn72jvaVdqtMMQ.ttf',
-      ),
     ),
-    661 => 
+    1525 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rationale',
-      'category' => 'sans-serif',
+      'family' => 'Quintessential',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rationale/v8/7M2eN-di0NGLQse7HzJRfg.ttf',
-      ),
     ),
-    662 => 
+    1526 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ravi Prakash',
-      'category' => 'display',
+      'family' => 'Qwigley',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1527 => 
+    array (
+      'family' => 'Qwitcher Grypen',
+      'variants' => 
       array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/raviprakash/v4/8EzbM7Rymjk25jWeHxbO6C3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
+        1 => '700',
       ),
     ),
-    663 => 
+    1528 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Redressed',
-      'category' => 'handwriting',
+      'family' => 'Racing Sans One',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1529 => 
+    array (
+      'family' => 'Radio Canada',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/redressed/v8/3aZ5sTBppH3oSm5SabegtA.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
       ),
     ),
-    664 => 
+    1530 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Reem Kufi',
-      'category' => 'sans-serif',
+      'family' => 'Radio Canada Big',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    1531 => 
+    array (
+      'family' => 'Radley',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1532 => 
+    array (
+      'family' => 'Rajdhani',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1533 => 
+    array (
+      'family' => 'Rakkas',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/reemkufi/v3/xLwMbK_T1g-h9p-rp60A1Q.ttf',
-      ),
     ),
-    665 => 
+    1534 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Reenie Beanie',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/reeniebeanie/v8/ljpKc6CdXusL1cnGUSamX4jjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    666 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Revalia',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/revalia/v5/1TKw66fF5_poiL0Ktgo4_A.ttf',
-      ),
-    ),
-    667 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rhodium Libre',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rhodiumlibre/v2/Vxr7A4-xE2zsBDDI8BcseIjjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    668 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ribeye',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ribeye/v6/e5w3VE8HnWBln4Ll6lUj3Q.ttf',
-      ),
-    ),
-    669 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ribeye Marrow',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ribeyemarrow/v7/q7cBSA-4ErAXBCDFPrhlY0cTNmV93fYG7UKgsLQNQWs.ttf',
-      ),
-    ),
-    670 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Righteous',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/righteous/v6/0nRRWM_gCGCt2S-BCfN8WQ.ttf',
-      ),
-    ),
-    671 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Risque',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/risque/v5/92RnElGnl8yHP97-KV3Fyg.ttf',
-      ),
-    ),
-    672 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Roboto',
-      'category' => 'sans-serif',
+      'family' => 'Raleway',
       'variants' => 
       array (
         0 => '100',
-        1 => '100italic',
+        1 => '200',
         2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '500',
-        7 => '500italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '900',
-        11 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v18',
-      'lastModified' => '2017-10-16',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/roboto/v18/7MygqTe2zs9YkP0adA9QQQ.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/roboto/v18/T1xnudodhcgwXCmZQ490TPesZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/roboto/v18/dtpHsbgPEm2lVWciJZ0P-A.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/roboto/v18/iE8HhaRzdhPxC93dOdA056CWcynf_cDxXwCLxiixG1c.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/roboto/v18/W5F8_SL0XFawnjxHGsZjJA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/roboto/v18/hcKoSgxdnKlbH5dlTwKbow.ttf',
-        500 => 'http://fonts.gstatic.com/s/roboto/v18/Uxzkqj-MIMWle-XP2pDNAA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/roboto/v18/daIfzbEw-lbjMyv4rMUUTqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/roboto/v18/bdHGHleUa-ndQCOrdpfxfw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/roboto/v18/owYYXKukxFDFjr0ZO8NXh6CWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/roboto/v18/H1vB34nOKWXqzKotq25pcg.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/roboto/v18/b9PWBSMHrT2zM5FgUdtu0aCWcynf_cDxXwCLxiixG1c.ttf',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    673 => 
+    1535 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Raleway Dots',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1536 => 
+    array (
+      'family' => 'Ramabhadra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1537 => 
+    array (
+      'family' => 'Ramaraja',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1538 => 
+    array (
+      'family' => 'Rambla',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1539 => 
+    array (
+      'family' => 'Rammetto One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1540 => 
+    array (
+      'family' => 'Rampart One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1541 => 
+    array (
+      'family' => 'Ramsina',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1542 => 
+    array (
+      'family' => 'Ranchers',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1543 => 
+    array (
+      'family' => 'Rancho',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1544 => 
+    array (
+      'family' => 'Ranga',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1545 => 
+    array (
+      'family' => 'Rasa',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1546 => 
+    array (
+      'family' => 'Rationale',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1547 => 
+    array (
+      'family' => 'Ravi Prakash',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1548 => 
+    array (
+      'family' => 'Readex Pro',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1549 => 
+    array (
+      'family' => 'Recursive',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    1550 => 
+    array (
+      'family' => 'Red Hat Display',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    1551 => 
+    array (
+      'family' => 'Red Hat Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1552 => 
+    array (
+      'family' => 'Red Hat Text',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1553 => 
+    array (
+      'family' => 'Red Rose',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1554 => 
+    array (
+      'family' => 'Redacted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1555 => 
+    array (
+      'family' => 'Redacted Script',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    1556 => 
+    array (
+      'family' => 'Redaction',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1557 => 
+    array (
+      'family' => 'Redaction 10',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1558 => 
+    array (
+      'family' => 'Redaction 100',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1559 => 
+    array (
+      'family' => 'Redaction 20',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1560 => 
+    array (
+      'family' => 'Redaction 35',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1561 => 
+    array (
+      'family' => 'Redaction 50',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1562 => 
+    array (
+      'family' => 'Redaction 70',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+      ),
+    ),
+    1563 => 
+    array (
+      'family' => 'Reddit Mono',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1564 => 
+    array (
+      'family' => 'Reddit Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1565 => 
+    array (
+      'family' => 'Reddit Sans Condensed',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1566 => 
+    array (
+      'family' => 'Redressed',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1567 => 
+    array (
+      'family' => 'Reem Kufi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1568 => 
+    array (
+      'family' => 'Reem Kufi Fun',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1569 => 
+    array (
+      'family' => 'Reem Kufi Ink',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1570 => 
+    array (
+      'family' => 'Reenie Beanie',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1571 => 
+    array (
+      'family' => 'Reggae One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1572 => 
+    array (
+      'family' => 'REM',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1573 => 
+    array (
+      'family' => 'Rethink Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => 'italic',
+        6 => '500italic',
+        7 => '600italic',
+        8 => '700italic',
+        9 => '800italic',
+      ),
+    ),
+    1574 => 
+    array (
+      'family' => 'Revalia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1575 => 
+    array (
+      'family' => 'Rhodium Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1576 => 
+    array (
+      'family' => 'Ribeye',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1577 => 
+    array (
+      'family' => 'Ribeye Marrow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1578 => 
+    array (
+      'family' => 'Righteous',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1579 => 
+    array (
+      'family' => 'Risque',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1580 => 
+    array (
+      'family' => 'Road Rage',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1581 => 
+    array (
+      'family' => 'Roboto',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1582 => 
+    array (
       'family' => 'Roboto Condensed',
-      'category' => 'sans-serif',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1583 => 
+    array (
+      'family' => 'Roboto Flex',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1584 => 
+    array (
+      'family' => 'Roboto Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    1585 => 
+    array (
+      'family' => 'Roboto Serif',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1586 => 
+    array (
+      'family' => 'Roboto Slab',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1587 => 
+    array (
+      'family' => 'Rochester',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1588 => 
+    array (
+      'family' => 'Rock 3D',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1589 => 
+    array (
+      'family' => 'Rock Salt',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1590 => 
+    array (
+      'family' => 'RocknRoll One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1591 => 
+    array (
+      'family' => 'Rokkitt',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1592 => 
+    array (
+      'family' => 'Romanesco',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1593 => 
+    array (
+      'family' => 'Ropa Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1594 => 
+    array (
+      'family' => 'Rosario',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1595 => 
+    array (
+      'family' => 'Rosarivo',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1596 => 
+    array (
+      'family' => 'Rouge Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1597 => 
+    array (
+      'family' => 'Rowdies',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
+      ),
+    ),
+    1598 => 
+    array (
+      'family' => 'Rozha One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1599 => 
+    array (
+      'family' => 'Rubik',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    1600 => 
+    array (
+      'family' => 'Rubik 80s Fade',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1601 => 
+    array (
+      'family' => 'Rubik Beastly',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1602 => 
+    array (
+      'family' => 'Rubik Broken Fax',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1603 => 
+    array (
+      'family' => 'Rubik Bubbles',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1604 => 
+    array (
+      'family' => 'Rubik Burned',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1605 => 
+    array (
+      'family' => 'Rubik Dirt',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1606 => 
+    array (
+      'family' => 'Rubik Distressed',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1607 => 
+    array (
+      'family' => 'Rubik Doodle Shadow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1608 => 
+    array (
+      'family' => 'Rubik Doodle Triangles',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1609 => 
+    array (
+      'family' => 'Rubik Gemstones',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1610 => 
+    array (
+      'family' => 'Rubik Glitch',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1611 => 
+    array (
+      'family' => 'Rubik Glitch Pop',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1612 => 
+    array (
+      'family' => 'Rubik Iso',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1613 => 
+    array (
+      'family' => 'Rubik Lines',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1614 => 
+    array (
+      'family' => 'Rubik Maps',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1615 => 
+    array (
+      'family' => 'Rubik Marker Hatch',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1616 => 
+    array (
+      'family' => 'Rubik Maze',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1617 => 
+    array (
+      'family' => 'Rubik Microbe',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1618 => 
+    array (
+      'family' => 'Rubik Mono One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1619 => 
+    array (
+      'family' => 'Rubik Moonrocks',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1620 => 
+    array (
+      'family' => 'Rubik Pixels',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1621 => 
+    array (
+      'family' => 'Rubik Puddles',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1622 => 
+    array (
+      'family' => 'Rubik Scribble',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1623 => 
+    array (
+      'family' => 'Rubik Spray Paint',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1624 => 
+    array (
+      'family' => 'Rubik Storm',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1625 => 
+    array (
+      'family' => 'Rubik Vinyl',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1626 => 
+    array (
+      'family' => 'Rubik Wet Paint',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1627 => 
+    array (
+      'family' => 'Ruda',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    1628 => 
+    array (
+      'family' => 'Rufina',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1629 => 
+    array (
+      'family' => 'Ruge Boogie',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1630 => 
+    array (
+      'family' => 'Ruluko',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1631 => 
+    array (
+      'family' => 'Rum Raisin',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1632 => 
+    array (
+      'family' => 'Ruslan Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1633 => 
+    array (
+      'family' => 'Russo One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1634 => 
+    array (
+      'family' => 'Ruthie',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1635 => 
+    array (
+      'family' => 'Ruwudu',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1636 => 
+    array (
+      'family' => 'Rye',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1637 => 
+    array (
+      'family' => 'Sacramento',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1638 => 
+    array (
+      'family' => 'Sahitya',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1639 => 
+    array (
+      'family' => 'Sail',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1640 => 
+    array (
+      'family' => 'Saira',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1641 => 
+    array (
+      'family' => 'Saira Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1642 => 
+    array (
+      'family' => 'Saira Extra Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1643 => 
+    array (
+      'family' => 'Saira Semi Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1644 => 
+    array (
+      'family' => 'Saira Stencil',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1645 => 
+    array (
+      'family' => 'Salsa',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1646 => 
+    array (
+      'family' => 'Sanchez',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1647 => 
+    array (
+      'family' => 'Sancreek',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1648 => 
+    array (
+      'family' => 'Sankofa Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1649 => 
+    array (
+      'family' => 'Sansation',
       'variants' => 
       array (
         0 => '300',
@@ -16248,863 +18145,10 @@ return array (
         4 => '700',
         5 => '700italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v16',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/robotocondensed/v16/b9QBgL0iMZfDSpmcXcE8nJRhFVcex_hajThhFkHyhYk.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/robotocondensed/v16/mg0cGfGRUERshzBlvqxeAPYa9bgCHecWXGgisnodcS0.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/robotocondensed/v16/Zd2E9abXLFGSr9G3YK2MsKDbm6fPDOZJsR8PmdG62gY.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/robotocondensed/v16/BP5K8ZAJv9qEbmuFp8RpJY_eiqgTfYGaH0bJiUDZ5GA.ttf',
-        700 => 'http://fonts.gstatic.com/s/robotocondensed/v16/b9QBgL0iMZfDSpmcXcE8nPOYkGiSOYDq_T7HbIOV1hA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/robotocondensed/v16/mg0cGfGRUERshzBlvqxeAE2zk2RGRC3SlyyLLQfjS_8.ttf',
-      ),
     ),
-    674 => 
+    1650 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Roboto Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '100italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '500',
-        7 => '500italic',
-        8 => '700',
-        9 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/robotomono/v5/aOIeRp72J9_Hp_8KwQ9M-YAWxXGWZ3yJw6KhWS7MxOk.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/robotomono/v5/rqQ1zSE-ZGCKVZgew-A9dgyDtfpXZi-8rXUZYR4dumU.ttf',
-        300 => 'http://fonts.gstatic.com/s/robotomono/v5/N4duVc9C58uwPiY8_59Fzy9-WlPSxbfiI49GsXo3q0g.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/robotomono/v5/1OsMuiiO6FCF2x67vzDKA2o9eWDfYYxG3A176Zl7aIg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/robotomono/v5/eJ4cxQe85Lo39t-LVoKa26CWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/robotomono/v5/mE0EPT_93c7f86_WQexR3EeOrDcLawS7-ssYqLr2Xp4.ttf',
-        500 => 'http://fonts.gstatic.com/s/robotomono/v5/N4duVc9C58uwPiY8_59Fz8CNfqCYlB_eIx7H1TVXe60.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/robotomono/v5/1OsMuiiO6FCF2x67vzDKA2nWRcJAYo5PSCx8UfGMHCI.ttf',
-        700 => 'http://fonts.gstatic.com/s/robotomono/v5/N4duVc9C58uwPiY8_59Fz3e1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/robotomono/v5/1OsMuiiO6FCF2x67vzDKA8_zJjSACmk0BRPxQqhnNLU.ttf',
-      ),
-    ),
-    675 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Roboto Slab',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '300',
-        2 => 'regular',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/robotoslab/v7/MEz38VLIFL-t46JUtkIEgIAWxXGWZ3yJw6KhWS7MxOk.ttf',
-        300 => 'http://fonts.gstatic.com/s/robotoslab/v7/dazS1PrQQuCxC3iOAJFEJS9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/robotoslab/v7/3__ulTNA7unv0UtplybPiqCWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/robotoslab/v7/dazS1PrQQuCxC3iOAJFEJXe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-      ),
-    ),
-    676 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rochester',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rochester/v8/bnj8tmQBiOkdji_G_yvypg.ttf',
-      ),
-    ),
-    677 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rock Salt',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rocksalt/v8/Zy7JF9h9WbhD9V3SFMQ1UQ.ttf',
-      ),
-    ),
-    678 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rokkitt',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/rokkitt/v12/_3YC6rPA1FdHK3T5HJAiKA.ttf',
-        200 => 'http://fonts.gstatic.com/s/rokkitt/v12/YawjzRx4kAyF2FdhIXfg1_esZW2xOQ-xsNqO47m55DA.ttf',
-        300 => 'http://fonts.gstatic.com/s/rokkitt/v12/Cw0HfZi5axnl2GTVcAe4x_esZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/rokkitt/v12/GMA7Z_ToF8uSvpZAgnp_VQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/rokkitt/v12/jSxUaZL9JCo117IMemf-iPesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/rokkitt/v12/b4_SvUo9hy0bV60RoA1RKPesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/rokkitt/v12/gxlo-sr3rPmvgSixYog_ofesZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/rokkitt/v12/mCok2W9ZHFgB-LY6ITuapfesZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/rokkitt/v12/riY221k9xwvseUAhNXMjQPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    679 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Romanesco',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/romanesco/v6/2udIjUrpK_CPzYSxRVzD4Q.ttf',
-      ),
-    ),
-    680 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ropa Sans',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ropasans/v7/Gba7ZzVBuhg6nX_AoSwlkQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ropasans/v7/V1zbhZQscNrh63dy5Jk2nqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    681 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rosario',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rosario/v12/bL-cEh8dXtDupB2WccA2LA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/rosario/v12/pkflNy18HEuVVx4EOjeb_Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/rosario/v12/nrS6PJvDWN42RP4TFWccd_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/rosario/v12/EOgFX2Va5VGrkhn_eDpIRS3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    682 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rosarivo',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rosarivo/v5/EmPiINK0qyqc7KSsNjJamA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/rosarivo/v5/u3VuWsWQlX1pDqsbz4paNPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    683 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rouge Script',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rougescript/v6/AgXDSqZJmy12qS0ixjs6Vy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    684 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rozha One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rozhaone/v4/PyrMHQ6lucEIxwKmhqsX8A.ttf',
-      ),
-    ),
-    685 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rubik',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
-        4 => '500',
-        5 => '500italic',
-        6 => '700',
-        7 => '700italic',
-        8 => '900',
-        9 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'hebrew',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/rubik/v7/o1vXYO8YwDpErHEAPAxpOg.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/rubik/v7/NyXDvUhvZLSWiVfGa5KM-vesZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/rubik/v7/4sMyW_teKWHB3K8Hm-Il6A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/rubik/v7/elD65ddI0qvNcCh42b1Iqg.ttf',
-        500 => 'http://fonts.gstatic.com/s/rubik/v7/D4HihERG27s-BJrQ4dvkbw.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/rubik/v7/0hcxMdoMbXtHiEM1ebdN6PesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/rubik/v7/m1GGHcpLe6Mb0_sAyjXE4g.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/rubik/v7/R4g_rs714cUXVZcdnRdHw_esZW2xOQ-xsNqO47m55DA.ttf',
-        900 => 'http://fonts.gstatic.com/s/rubik/v7/mOHfPRl5uP4vw7-5-dbnng.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/rubik/v7/HH1b7kBbwInqlw8OQxRE5vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    686 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rubik Mono One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rubikmonoone/v6/e_cupPtD4BrZzotubJD7UbAREgn5xbW23GEXXnhMQ5Y.ttf',
-      ),
-    ),
-    687 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ruda',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-        2 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ruda/v9/jPEIPB7DM2DNK_uBGv2HGw.ttf',
-        700 => 'http://fonts.gstatic.com/s/ruda/v9/JABOu1SYOHcGXVejUq4w6g.ttf',
-        900 => 'http://fonts.gstatic.com/s/ruda/v9/Uzusv-enCjoIrznlJJaBRw.ttf',
-      ),
-    ),
-    688 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rufina',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rufina/v5/s9IFr_fIemiohfZS-ZRDbQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/rufina/v5/D0RUjXFr55y4MVZY2Ww_RA.ttf',
-      ),
-    ),
-    689 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ruge Boogie',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rugeboogie/v8/U-TTmltL8aENLVIqYbI5QaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    690 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ruluko',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ruluko/v5/lv4cMwJtrx_dzmlK5SDc1g.ttf',
-      ),
-    ),
-    691 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rum Raisin',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rumraisin/v5/kDiL-ntDOEq26B7kYM7cx_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    692 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ruslan Display',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ruslandisplay/v8/SREdhlyLNUfU1VssRBfs3rgH88D3l9N4auRNHrNS708.ttf',
-      ),
-    ),
-    693 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Russo One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/russoone/v6/zfwxZ--UhUc7FVfgT21PRQ.ttf',
-      ),
-    ),
-    694 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ruthie',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ruthie/v7/vJ2LorukHSbWYoEs5juivg.ttf',
-      ),
-    ),
-    695 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Rye',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/rye/v5/VUrJlpPpSZxspl3w_yNOrQ.ttf',
-      ),
-    ),
-    696 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sacramento',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sacramento/v5/_kv-qycSHMNdhjiv0Kj7BvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    697 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sahitya',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sahitya/v2/wQWULcDbZqljdTfjOUtDvw.ttf',
-        700 => 'http://fonts.gstatic.com/s/sahitya/v2/Zm5hNvMwUyN3tC4GMkH1l_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    698 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sail',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sail/v8/iuEoG6kt-bePGvtdpL0GUQ.ttf',
-      ),
-    ),
-    699 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Saira',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/saira/v2/Ozk8do2fTcpbNH9fymkZGg.ttf',
-        200 => 'http://fonts.gstatic.com/s/saira/v2/IqoIheMFTgcbZXFWbGwENA.ttf',
-        300 => 'http://fonts.gstatic.com/s/saira/v2/ANavK9Yw1m9jo7r6xy-MSg.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/saira/v2/Xscf3I_Twe9a3mnmbLi5XQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/saira/v2/8JTYqpjvzQP3oTjzUn8w7Q.ttf',
-        600 => 'http://fonts.gstatic.com/s/saira/v2/7TS8zxqrCaFpOEscLh1xXg.ttf',
-        700 => 'http://fonts.gstatic.com/s/saira/v2/Vmcd_0w8o16ONteEu2UzSw.ttf',
-        800 => 'http://fonts.gstatic.com/s/saira/v2/R-CIR5SYaB7pZZbF4KBcmg.ttf',
-        900 => 'http://fonts.gstatic.com/s/saira/v2/NkJ3cJqxlFuVNRn8L9vVsg.ttf',
-      ),
-    ),
-    700 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Saira Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/sairacondensed/v3/g6ZiOTAus3rTCuLbft-lrhQ4ZQgT5IY6T956D4i2DOg.ttf',
-        200 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-t_1mjc__NNUUqnuBhyrdnQ.ttf',
-        300 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-mOGg88i8doN2x6-0_j_XSs.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/sairacondensed/v3/RzMaXT8ujYB0FpOoZJ_AtSQPsWWoiv__AzYJ9Zzn9II.ttf',
-        500 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-gRL_-ABKXdjsJSPT0lc2Bk.ttf',
-        600 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-rS5sSASxc8z4EQTQj7DCAI.ttf',
-        700 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-sAWgzcA047xWLixhLCofl8.ttf',
-        800 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-hVl4JojgVAnfiwswP7KrtY.ttf',
-        900 => 'http://fonts.gstatic.com/s/sairacondensed/v3/iBnVn24meOdNw5Ie3y-w-mCsDIq3El29Rd5VD3daJ_M.ttf',
-      ),
-    ),
-    701 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Saira Extra Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/fW6xdUWepu0r8HZYLdXhdSi7tdGxScTr3oVgcrTUqWw.ttf',
-        200 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfa1IHoFZjDq9yl49NJ3Y0wY.ttf',
-        300 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfeZroXgFx_lT3TTeDaAqrWE.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/3XMbuc1UIdE_Bo4eJ-H3G4elbRYnLTTQA1Z5cVLnsI4.ttf',
-        500 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfa4Ixr3FMLIaz6yY1ILODIU.ttf',
-        600 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfcMHImBNo4aGUuMCjGiDijI.ttf',
-        700 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfbGMx7y0UuyPIsLqSMg46Ks.ttf',
-        800 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwff3VPWKD9LjLpSGgTAgUUIc.ttf',
-        900 => 'http://fonts.gstatic.com/s/sairaextracondensed/v3/XVu3ZHO65MpX5FDLl4hwfb3y6LE9HhLx9tlnlwi3OAw.ttf',
-      ),
-    ),
-    702 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Saira Semi Condensed',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '100',
-        1 => '200',
-        2 => '300',
-        3 => 'regular',
-        4 => '500',
-        5 => '600',
-        6 => '700',
-        7 => '800',
-        8 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/W0qqtuwvTyZEzthCisMvJNpUFoAgdo3N6uMK4qBKl14.ttf',
-        200 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZXmwZH8Mj4a8GCt9BVpguoM.ttf',
-        300 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZf41r7gBuORyHypyaMk5V7M.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/E1gvqhdADptsO-uwP-KYOplmjOf-f3WTIBZyrvssS_s.ttf',
-        500 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZQTR7LyNMQKOmEK2zaPVo7k.ttf',
-        600 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZYxOyuVPIqzYlTscMcnFFdw.ttf',
-        700 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZVhvgkvS4Vb80oyvTRs3xAw.ttf',
-        800 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZbgNSs8Rfv-SK6bauL4DA_k.ttf',
-        900 => 'http://fonts.gstatic.com/s/sairasemicondensed/v3/AqP7QX0TdaZHs8pWxeHdZftJ9g8-32R6gX5VB508ZS0.ttf',
-      ),
-    ),
-    703 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Salsa',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/salsa/v7/BnpUCBmYdvggScEPs5JbpA.ttf',
-      ),
-    ),
-    704 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sanchez',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sanchez/v5/BEL8ao-E2LJ5eHPLB2UAiw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/sanchez/v5/iSrhkWLexUZzDeNxNEHtzA.ttf',
-      ),
-    ),
-    705 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sancreek',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sancreek/v8/8ZacBMraWMvHly4IJI3esw.ttf',
-      ),
-    ),
-    706 => 
-    array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sansita',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -17116,75 +18160,64 @@ return array (
         6 => '900',
         7 => '900italic',
       ),
-      'subsets' => 
+    ),
+    1651 => 
+    array (
+      'family' => 'Sansita Swashed',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sansita/v2/ey9oYobmakEwtEciY0G5Mg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/sansita/v2/UkWzQlyaYvMqX8-kX9fI1A.ttf',
-        700 => 'http://fonts.gstatic.com/s/sansita/v2/q9hPUXq37zR3BVunMJi2HfesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/sansita/v2/Izkki8H_L5Nxxk6vpKrxXS3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/sansita/v2/vOIsA3n-LuVE_PeoZ3aSFfesZW2xOQ-xsNqO47m55DA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/sansita/v2/4OvihNMj_b3nyu4KlgNNVS3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/sansita/v2/lwgTmJASMyrLsXnTfRSt7fesZW2xOQ-xsNqO47m55DA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/sansita/v2/JTPHz0Wyy3AImmVqi8CQTy3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
       ),
     ),
-    707 => 
+    1652 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Sarabun',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+      ),
+    ),
+    1653 => 
+    array (
       'family' => 'Sarala',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sarala/v2/ohip9lixCHoBab7hTtgLnw.ttf',
-        700 => 'http://fonts.gstatic.com/s/sarala/v2/hpc9cz8KYsazwq2In_oJYw.ttf',
-      ),
     ),
-    708 => 
+    1654 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sarina',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sarina/v6/XYtRfaSknHIU3NHdfTdXoQ.ttf',
-      ),
     ),
-    709 => 
+    1655 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sarpanch',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -17194,922 +18227,26 @@ return array (
         4 => '800',
         5 => '900',
       ),
-      'subsets' => 
+    ),
+    1656 => 
+    array (
+      'family' => 'Sassy Frass',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sarpanch/v3/YMBZdT27b6O5a1DADbAGSg.ttf',
-        500 => 'http://fonts.gstatic.com/s/sarpanch/v3/Ov7BxSrFSZYrfuJxL1LzQaCWcynf_cDxXwCLxiixG1c.ttf',
-        600 => 'http://fonts.gstatic.com/s/sarpanch/v3/WTnP2wnc0qSbUaaDG-2OQ6CWcynf_cDxXwCLxiixG1c.ttf',
-        700 => 'http://fonts.gstatic.com/s/sarpanch/v3/57kYsSpovYmFaEt2hsZhv6CWcynf_cDxXwCLxiixG1c.ttf',
-        800 => 'http://fonts.gstatic.com/s/sarpanch/v3/OKyqPLjdnuVghR-1TV6RzaCWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/sarpanch/v3/JhYc2cr6kqWTo_P0vfvJR6CWcynf_cDxXwCLxiixG1c.ttf',
+        0 => 'regular',
       ),
     ),
-    710 => 
+    1657 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Satisfy',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/satisfy/v8/PRlyepkd-JCGHiN8e9WV2w.ttf',
-      ),
     ),
-    711 => 
+    1658 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Scada',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/scada/v6/iZNC3ZEYwe3je6H-28d5Ug.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/scada/v6/PCGyLT1qNawkOUQ3uHFhBw.ttf',
-        700 => 'http://fonts.gstatic.com/s/scada/v6/t6XNWdMdVWUz93EuRVmifQ.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/scada/v6/kLrBIf7V4mDMwcd_Yw7-D_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    712 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Scheherazade',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'arabic',
-      ),
-      'version' => 'v13',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/scheherazade/v13/AuKlqGWzUC-8XqMOmsqXiy3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/scheherazade/v13/C1wtT46acJkQxc6mPHwvHED2ttfZwueP-QU272T9-k4.ttf',
-      ),
-    ),
-    713 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Schoolbell',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/schoolbell/v8/95-3djEuubb3cJx-6E7j4vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    714 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Scope One',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/scopeone/v3/ge7dY8Yht-n7_1cLHtoT3w.ttf',
-      ),
-    ),
-    715 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Seaweed Script',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/seaweedscript/v5/eorWAPpOvvWrPw5IHwE60BnpV0hQCek3EmWnCPrvGRM.ttf',
-      ),
-    ),
-    716 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Secular One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'hebrew',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/secularone/v2/yW9qikjpt_X0fh5oQJcdo6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    717 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sedgwick Ave',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sedgwickave/v3/pbgmsWX_2A5V-qqzaczoEy3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    718 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sedgwick Ave Display',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sedgwickavedisplay/v3/_2bQpgd1Hl3UOD3yDrU-cP912kD9slMJGfCNYtCeVl4.ttf',
-      ),
-    ),
-    719 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sevillana',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sevillana/v5/6m1Nh35oP7YEt00U80Smiw.ttf',
-      ),
-    ),
-    720 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Seymour One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/seymourone/v5/HrdG2AEG_870Xb7xBVv6C6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    721 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Shadows Into Light',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shadowsintolight/v7/clhLqOv7MXn459PTh0gXYAW_5bEze-iLRNvGrRpJsfM.ttf',
-      ),
-    ),
-    722 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Shadows Into Light Two',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shadowsintolighttwo/v5/gDxHeefcXIo-lOuZFCn2xVQrZk-Pga5KeEE_oZjkQjQ.ttf',
-      ),
-    ),
-    723 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Shanti',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shanti/v9/lc4nG_JG6Q-2FQSOMMhb_w.ttf',
-      ),
-    ),
-    724 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Share',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/share/v8/1ytD7zSb_-g9I2GG67vmVw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/share/v8/a9YGdQWFRlNJ0zClJVaY3Q.ttf',
-        700 => 'http://fonts.gstatic.com/s/share/v8/XrU8e7a1YKurguyY2azk1Q.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/share/v8/A992-bLVYwAflKu6iaznufesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    725 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Share Tech',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sharetech/v7/Dq3DuZ5_0SW3oEfAWFpen_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    726 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Share Tech Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sharetechmono/v7/RQxK-3RA0Lnf3gnnnNrAscwD6PD0c3_abh9zHKQtbGU.ttf',
-      ),
-    ),
-    727 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Shojumaru',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shojumaru/v5/WP8cxonzQQVAoI3RJQ2wug.ttf',
-      ),
-    ),
-    728 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Short Stack',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shortstack/v7/v4dXPI0Rm8XN9gk4SDdqlqCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    729 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Shrikhand',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'gujarati',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/shrikhand/v3/45jwHiwIDTWCy3Ir85vvKA.ttf',
-      ),
-    ),
-    730 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Siemreap',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/siemreap/v10/JSK-mOIsXwxo-zE9XDDl_g.ttf',
-      ),
-    ),
-    731 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sigmar One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sigmarone/v8/oh_5NxD5JBZksdo2EntKefesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    732 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Signika',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/signika/v8/0wDPonOzsYeEo-1KO78w4fesZW2xOQ-xsNqO47m55DA.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/signika/v8/WvDswbww0oAtvBg2l1L-9w.ttf',
-        600 => 'http://fonts.gstatic.com/s/signika/v8/lQMOF6NUN2ooR7WvB7tADvesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/signika/v8/lEcnfPBICWJPv5BbVNnFJPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    733 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Signika Negative',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => 'regular',
-        2 => '600',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/signikanegative/v7/q5TOjIw4CenPw6C-TW06FjYFXpUPtCmIEFDvjUnLLaI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/signikanegative/v7/Z-Q1hzbY8uAo3TpTyPFMXVM1lnCWMnren5_v6047e5A.ttf',
-        600 => 'http://fonts.gstatic.com/s/signikanegative/v7/q5TOjIw4CenPw6C-TW06FrKLaDJM01OezSVA2R_O3qI.ttf',
-        700 => 'http://fonts.gstatic.com/s/signikanegative/v7/q5TOjIw4CenPw6C-TW06FpYzPxtVvobH1w3hEppR8WI.ttf',
-      ),
-    ),
-    734 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Simonetta',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '900',
-        3 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/simonetta/v7/fN8puNuahBo4EYMQgp12Yg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/simonetta/v7/ynxQ3FqfF_Nziwy3T9ZwL6CWcynf_cDxXwCLxiixG1c.ttf',
-        900 => 'http://fonts.gstatic.com/s/simonetta/v7/22EwvvJ2r1VwVCxit5LcVi3USBnSvpkopQaUR-2r7iU.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/simonetta/v7/WUXOpCgBZaRPrWtMCpeKoienaqEuufTBk9XMKnKmgDA.ttf',
-      ),
-    ),
-    735 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sintony',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sintony/v5/IDhCijoIMev2L6Lg5QsduQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/sintony/v5/zVXQB1wqJn6PE4dWXoYpvPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    736 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sirin Stencil',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sirinstencil/v6/pRpLdo0SawzO7MoBpvowsImg74kgS1F7KeR8rWhYwkU.ttf',
-      ),
-    ),
-    737 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Six Caps',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sixcaps/v8/_XeDnO0HOV8Er9u97If1tQ.ttf',
-      ),
-    ),
-    738 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Skranji',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/skranji/v5/jnOLPS0iZmDL7dfWnW3nIw.ttf',
-        700 => 'http://fonts.gstatic.com/s/skranji/v5/Lcrhg-fviVkxiEgoadsI1vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    739 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Slabo 13px',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/slabo13px/v4/jPGWFTjRXfCSzy0qd1nqdvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    740 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Slabo 27px',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/slabo27px/v4/gC0o8B9eU21EafNkXlRAfPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    741 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Slackey',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/slackey/v8/evRIMNhGVCRJvCPv4kteeA.ttf',
-      ),
-    ),
-    742 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Smokum',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/smokum/v8/8YP4BuAcy97X8WfdKfxVRw.ttf',
-      ),
-    ),
-    743 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Smythe',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/smythe/v8/yACD1gy_MpbB9Ft42fUvYw.ttf',
-      ),
-    ),
-    744 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sniglet',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '800',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sniglet/v9/XWhyQLHH4SpCVsHRPRgu9w.ttf',
-        800 => 'http://fonts.gstatic.com/s/sniglet/v9/NLF91nBmcEfkBgcEWbHFa_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    745 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Snippet',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/snippet/v7/eUcYMLq2GtHZovLlQH_9kA.ttf',
-      ),
-    ),
-    746 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Snowburst One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/snowburstone/v5/zSQzKOPukXRux2oTqfYJjIjjx0o0jr6fNXxPgYh_a8Q.ttf',
-      ),
-    ),
-    747 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sofadi One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sofadione/v6/nirf4G12IcJ6KI8Eoj119fesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    748 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sofia',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sofia/v6/Imnvx0Ag9r6iDBFUY5_RaQ.ttf',
-      ),
-    ),
-    749 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sonsie One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sonsieone/v6/KSP7xT1OSy0q2ob6RQOTWPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    750 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Sorts Mill Goudy',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sortsmillgoudy/v7/JzRrPKdwEnE8F1TDmDLMUlIL2Qjg-Xlsg_fhGbe2P5U.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/sortsmillgoudy/v7/UUu1lKiy4hRmBWk599VL1TYNkCNSzLyoucKmbTguvr0.ttf',
-      ),
-    ),
-    751 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Source Code Pro',
-      'category' => 'monospace',
+      'family' => 'Savate',
       'variants' => 
       array (
         0 => '200',
@@ -18118,104 +18255,37 @@ return array (
         3 => '500',
         4 => '600',
         5 => '700',
-        6 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqaXvKVW_haheDNrHjziJZVk.ttf',
-        300 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqVP7R5lD_au4SZC6Ks_vyWs.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/sourcecodepro/v7/mrl8jkM18OlOQN8JLgasD9Rl0pGnog23EMYRrBmUzJQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqX63uKwMO11Of4rJWV582wg.ttf',
-        600 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqeiMeWyi5E_-XkTgB5psiDg.ttf',
-        700 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqfgXsetDviZcdR5OzC1KPcw.ttf',
-        900 => 'http://fonts.gstatic.com/s/sourcecodepro/v7/leqv3v-yTsJNC7nFznSMqRA_awHl7mXRjE_LQVochcU.ttf',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
       ),
     ),
-    752 => 
+    1659 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Source Sans Pro',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '200',
-        1 => '200italic',
-        2 => '300',
-        3 => '300italic',
-        4 => 'regular',
-        5 => 'italic',
-        6 => '600',
-        7 => '600italic',
-        8 => '700',
-        9 => '700italic',
-        10 => '900',
-        11 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'greek-ext',
-        6 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGKXvKVW_haheDNrHjziJZVk.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/fpTVHK8qsXbIeTHTrnQH6OptKU7UIBg2hLM7eMTU8bI.ttf',
-        300 => 'http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGFP7R5lD_au4SZC6Ks_vyWs.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/fpTVHK8qsXbIeTHTrnQH6DUpNKoQAsDux-Todp8f29w.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlNRl0pGnog23EMYRrBmUzJQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/M2Jd71oPJhLKp0zdtTvoMwRX4TIfMQQEXLu74GftruE.ttf',
-        600 => 'http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGOiMeWyi5E_-XkTgB5psiDg.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/fpTVHK8qsXbIeTHTrnQH6Pp6lGoTTgjlW0sC4r900Co.ttf',
-        700 => 'http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGPgXsetDviZcdR5OzC1KPcw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/fpTVHK8qsXbIeTHTrnQH6LVT4locI09aamSzFGQlDMY.ttf',
-        900 => 'http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGBA_awHl7mXRjE_LQVochcU.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/sourcesanspro/v11/fpTVHK8qsXbIeTHTrnQH6A0NcF6HPGWR298uWIdxWv0.ttf',
-      ),
-    ),
-    753 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Source Serif Pro',
-      'category' => 'serif',
+      'family' => 'Sawarabi Gothic',
       'variants' => 
       array (
         0 => 'regular',
-        1 => '600',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sourceserifpro/v5/CeUM4np2c42DV49nanp55YGL0S0YDpKs5GpLtZIQ0m4.ttf',
-        600 => 'http://fonts.gstatic.com/s/sourceserifpro/v5/yd5lDMt8Sva2PE17yiLarGi4cQnvCGV11m1KlXh97aQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/sourceserifpro/v5/yd5lDMt8Sva2PE17yiLarEkpYHRvxGNSCrR82n_RDNk.ttf',
       ),
     ),
-    754 => 
+    1660 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Space Mono',
-      'category' => 'monospace',
+      'family' => 'Sawarabi Mincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1661 => 
+    array (
+      'family' => 'Scada',
       'variants' => 
       array (
         0 => 'regular',
@@ -18223,47 +18293,955 @@ return array (
         2 => '700',
         3 => '700italic',
       ),
-      'subsets' => 
+    ),
+    1662 => 
+    array (
+      'family' => 'Scheherazade New',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/spacemono/v2/B_LOPq3uMVBqC_kmqwURBfesZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/spacemono/v2/7xgIgvUEl9Gvhtf7tXsRzC3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/spacemono/v2/vdpMRWfyjfCvDYTz00NEPAJKKGfqHaYFsRG-T3ceEVo.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/spacemono/v2/y2NWQDXe2-qPj6a6rWkLc0D2ttfZwueP-QU272T9-k4.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
       ),
     ),
-    755 => 
+    1663 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Special Elite',
-      'category' => 'display',
+      'family' => 'Schibsted Grotesk',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    1664 => 
+    array (
+      'family' => 'Schoolbell',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1665 => 
+    array (
+      'family' => 'Science Gothic',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/specialelite/v8/9-wW4zu3WNoD5Fjka35Jm4jjx0o0jr6fNXxPgYh_a8Q.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
       ),
     ),
-    756 => 
+    1666 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Scope One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1667 => 
+    array (
+      'family' => 'Scoutie Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '200italic',
+        8 => '300italic',
+        9 => 'italic',
+        10 => '500italic',
+        11 => '600italic',
+        12 => '700italic',
+        13 => '800italic',
+      ),
+    ),
+    1668 => 
+    array (
+      'family' => 'Seaweed Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1669 => 
+    array (
+      'family' => 'Secular One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1670 => 
+    array (
+      'family' => 'Sedan',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1671 => 
+    array (
+      'family' => 'Sedan SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1672 => 
+    array (
+      'family' => 'Sedgwick Ave',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1673 => 
+    array (
+      'family' => 'Sedgwick Ave Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1674 => 
+    array (
+      'family' => 'Sekuya',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1675 => 
+    array (
+      'family' => 'Sen',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1676 => 
+    array (
+      'family' => 'Send Flowers',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1677 => 
+    array (
+      'family' => 'Sevillana',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1678 => 
+    array (
+      'family' => 'Seymour One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1679 => 
+    array (
+      'family' => 'Shadows Into Light',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1680 => 
+    array (
+      'family' => 'Shadows Into Light Two',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1681 => 
+    array (
+      'family' => 'Shafarik',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1682 => 
+    array (
+      'family' => 'Shalimar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1683 => 
+    array (
+      'family' => 'Shantell Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '300italic',
+        7 => 'italic',
+        8 => '500italic',
+        9 => '600italic',
+        10 => '700italic',
+        11 => '800italic',
+      ),
+    ),
+    1684 => 
+    array (
+      'family' => 'Shanti',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1685 => 
+    array (
+      'family' => 'Share',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1686 => 
+    array (
+      'family' => 'Share Tech',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1687 => 
+    array (
+      'family' => 'Share Tech Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1688 => 
+    array (
+      'family' => 'Shippori Antique',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1689 => 
+    array (
+      'family' => 'Shippori Antique B1',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1690 => 
+    array (
+      'family' => 'Shippori Mincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1691 => 
+    array (
+      'family' => 'Shippori Mincho B1',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1692 => 
+    array (
+      'family' => 'Shizuru',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1693 => 
+    array (
+      'family' => 'Shojumaru',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1694 => 
+    array (
+      'family' => 'Short Stack',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1695 => 
+    array (
+      'family' => 'Shrikhand',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1696 => 
+    array (
+      'family' => 'Siemreap',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1697 => 
+    array (
+      'family' => 'Sigmar',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1698 => 
+    array (
+      'family' => 'Sigmar One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1699 => 
+    array (
+      'family' => 'Signika',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1700 => 
+    array (
+      'family' => 'Signika Negative',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1701 => 
+    array (
+      'family' => 'Silkscreen',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1702 => 
+    array (
+      'family' => 'Simonetta',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '900',
+        3 => '900italic',
+      ),
+    ),
+    1703 => 
+    array (
+      'family' => 'Single Day',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1704 => 
+    array (
+      'family' => 'Sintony',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1705 => 
+    array (
+      'family' => 'Sirin Stencil',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1706 => 
+    array (
+      'family' => 'Sirivennela',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1707 => 
+    array (
+      'family' => 'Six Caps',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1708 => 
+    array (
+      'family' => 'Sixtyfour',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1709 => 
+    array (
+      'family' => 'Sixtyfour Convergence',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1710 => 
+    array (
+      'family' => 'Skranji',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1711 => 
+    array (
+      'family' => 'Slabo 13px',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1712 => 
+    array (
+      'family' => 'Slabo 27px',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1713 => 
+    array (
+      'family' => 'Slackey',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1714 => 
+    array (
+      'family' => 'Slackside One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1715 => 
+    array (
+      'family' => 'Smokum',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1716 => 
+    array (
+      'family' => 'Smooch',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1717 => 
+    array (
+      'family' => 'Smooch Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1718 => 
+    array (
+      'family' => 'Smythe',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1719 => 
+    array (
+      'family' => 'SN Pro',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1720 => 
+    array (
+      'family' => 'Sniglet',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '800',
+      ),
+    ),
+    1721 => 
+    array (
+      'family' => 'Snippet',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1722 => 
+    array (
+      'family' => 'Snowburst One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1723 => 
+    array (
+      'family' => 'Sofadi One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1724 => 
+    array (
+      'family' => 'Sofia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1725 => 
+    array (
+      'family' => 'Sofia Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1726 => 
+    array (
+      'family' => 'Sofia Sans Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1727 => 
+    array (
+      'family' => 'Sofia Sans Extra Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1728 => 
+    array (
+      'family' => 'Sofia Sans Semi Condensed',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1729 => 
+    array (
+      'family' => 'Solitreo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1730 => 
+    array (
+      'family' => 'Solway',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1731 => 
+    array (
+      'family' => 'Sometype Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    1732 => 
+    array (
+      'family' => 'Song Myung',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1733 => 
+    array (
+      'family' => 'Sono',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1734 => 
+    array (
+      'family' => 'Sonsie One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1735 => 
+    array (
+      'family' => 'Sora',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1736 => 
+    array (
+      'family' => 'Sorts Mill Goudy',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1737 => 
+    array (
+      'family' => 'Sour Gummy',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1738 => 
+    array (
+      'family' => 'Source Code Pro',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1739 => 
+    array (
+      'family' => 'Source Sans 3',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1740 => 
+    array (
+      'family' => 'Source Serif 4',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1741 => 
+    array (
+      'family' => 'Space Grotesk',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1742 => 
+    array (
+      'family' => 'Space Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1743 => 
+    array (
+      'family' => 'Special Elite',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1744 => 
+    array (
+      'family' => 'Special Gothic',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+      ),
+    ),
+    1745 => 
+    array (
+      'family' => 'Special Gothic Condensed One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1746 => 
+    array (
+      'family' => 'Special Gothic Expanded One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1747 => 
+    array (
       'family' => 'Spectral',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => '200',
@@ -18281,609 +19259,607 @@ return array (
         12 => '800',
         13 => '800italic',
       ),
-      'subsets' => 
+    ),
+    1748 => 
+    array (
+      'family' => 'Spectral SC',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/spectral/v2/RPsjutNSGdCMO0uTaGNKAaCWcynf_cDxXwCLxiixG1c.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/spectral/v2/iTACFYcWCBGY-0cRjdYs3meudeTO44zf-ht3k-KNzwg.ttf',
-        300 => 'http://fonts.gstatic.com/s/spectral/v2/EUVu_t3TbuiAmr-6bAqTvaCWcynf_cDxXwCLxiixG1c.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/spectral/v2/gXmD0bm_WQVxhEdjIN6xlEeOrDcLawS7-ssYqLr2Xp4.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/spectral/v2/iBj67vddkZHOY5CJLE9SnA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/spectral/v2/lQA62MkEULvXDckLFYyk-vesZW2xOQ-xsNqO47m55DA.ttf',
-        500 => 'http://fonts.gstatic.com/s/spectral/v2/KuRhuOjLr-dCVlaHBMOF96CWcynf_cDxXwCLxiixG1c.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/spectral/v2/hUloM7YPsU02LWYFA7w1x5p-63r6doWhTEbsfBIRJ7A.ttf',
-        600 => 'http://fonts.gstatic.com/s/spectral/v2/OSDAbiOpLs0hkOIFx2oUZKCWcynf_cDxXwCLxiixG1c.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/spectral/v2/c6okfJABbOc8QqRI28ISV_pTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/spectral/v2/g1QizOcRY_Apk-QDq3rhOKCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/spectral/v2/v9WvdY1ll-vjpGHSRxsAIQJKKGfqHaYFsRG-T3ceEVo.ttf',
-        800 => 'http://fonts.gstatic.com/s/spectral/v2/qQdpRyS_X5oC54LeW0MlmKCWcynf_cDxXwCLxiixG1c.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/spectral/v2/wYroR9dlOe2UFhp_3HJ9qqk3bhPBSBJ0bSJQ6acL-0g.ttf',
+        0 => '200',
+        1 => '200italic',
+        2 => '300',
+        3 => '300italic',
+        4 => 'regular',
+        5 => 'italic',
+        6 => '500',
+        7 => '500italic',
+        8 => '600',
+        9 => '600italic',
+        10 => '700',
+        11 => '700italic',
+        12 => '800',
+        13 => '800italic',
       ),
     ),
-    757 => 
+    1749 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Spicy Rice',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/spicyrice/v6/WGCtz7cLoggXARPi9OGD6_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
     ),
-    758 => 
+    1750 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Spinnaker',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/spinnaker/v9/MQdIXivKITpjROUdiN6Jgg.ttf',
-      ),
     ),
-    759 => 
+    1751 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Spirax',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1752 => 
+    array (
+      'family' => 'Splash',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/spirax/v6/IOKqhk-Ccl7y31yDsePPkw.ttf',
+        0 => 'regular',
       ),
     ),
-    760 => 
+    1753 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Spline Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1754 => 
+    array (
+      'family' => 'Spline Sans Mono',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1755 => 
+    array (
       'family' => 'Squada One',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1756 => 
+    array (
+      'family' => 'Square Peg',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/squadaone/v6/3tzGuaJdD65cZVgfQzN8uvesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => 'regular',
       ),
     ),
-    761 => 
+    1757 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sree Krushnadevaraya',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sreekrushnadevaraya/v5/CdsXmnHyEqVl1ahzOh5qnzjDZVem5Eb4d0dXjXa0F_Q.ttf',
-      ),
     ),
-    762 => 
+    1758 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sriracha',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sriracha/v2/l-TXHmKwoHm6vtjy4oUz8Q.ttf',
-      ),
     ),
-    763 => 
+    1759 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Stalemate',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/stalemate/v5/wQLCnG0qB6mOu2Wit2dt_w.ttf',
-      ),
-    ),
-    764 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Stalinist One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/stalinistone/v10/MQpS-WezM9W4Dd7D3B7I-UT7eZ8.ttf',
-      ),
-    ),
-    765 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Stardos Stencil',
-      'category' => 'display',
+      'family' => 'Srisakdi',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1760 => 
+    array (
+      'family' => 'Staatliches',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/stardosstencil/v7/ygEOyTW9a6u4fi4OXEZeTFf2eT4jUldwg_9fgfY_tHc.ttf',
-        700 => 'http://fonts.gstatic.com/s/stardosstencil/v7/h4ExtgvoXhPtv9Ieqd-XC81wDCbBgmIo8UyjIhmkeSM.ttf',
+        0 => 'regular',
       ),
     ),
-    766 => 
+    1761 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Stack Sans Headline',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1762 => 
+    array (
+      'family' => 'Stack Sans Notch',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1763 => 
+    array (
+      'family' => 'Stack Sans Text',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1764 => 
+    array (
+      'family' => 'Stalemate',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1765 => 
+    array (
+      'family' => 'Stalinist One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1766 => 
+    array (
+      'family' => 'Stardos Stencil',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1767 => 
+    array (
+      'family' => 'Stick',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1768 => 
+    array (
+      'family' => 'Stick No Bills',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+      ),
+    ),
+    1769 => 
+    array (
       'family' => 'Stint Ultra Condensed',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/stintultracondensed/v6/8DqLK6-YSClFZt3u3EgOUYelbRYnLTTQA1Z5cVLnsI4.ttf',
-      ),
     ),
-    767 => 
+    1770 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Stint Ultra Expanded',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1771 => 
+    array (
+      'family' => 'STIX Two Math',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/stintultraexpanded/v5/FeigX-wDDgHMCKuhekhedQ7dxr0N5HY0cZKknTIL6n4.ttf',
+        0 => 'regular',
       ),
     ),
-    768 => 
+    1772 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'STIX Two Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    1773 => 
+    array (
       'family' => 'Stoke',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => '300',
         1 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1774 => 
+    array (
+      'family' => 'Story Script',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/stoke/v7/Sell9475FOS8jUqQsfFsUQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/stoke/v7/A7qJNoqOm2d6o1E6e0yUFg.ttf',
+        0 => 'regular',
       ),
     ),
-    769 => 
+    1775 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Strait',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1776 => 
+    array (
+      'family' => 'Strichpunkt Sans',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/strait/v5/m4W73ViNmProETY2ybc-Bg.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
       ),
     ),
-    770 => 
+    1777 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Style Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1778 => 
+    array (
+      'family' => 'Stylish',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1779 => 
+    array (
       'family' => 'Sue Ellen Francisco',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sueellenfrancisco/v8/TwHX4vSxMUnJUdEz1JIgrhzazJzPVbGl8jnf1tisRz4.ttf',
-      ),
     ),
-    771 => 
+    1780 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Suez One',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1781 => 
+    array (
+      'family' => 'Sulphur Point',
+      'variants' => 
       array (
-        0 => 'hebrew',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/suezone/v2/xulpHtKbz3V8hoSLE2uKDw.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '700',
       ),
     ),
-    772 => 
+    1782 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sumana',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1783 => 
+    array (
+      'family' => 'Sunflower',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sumana/v2/wgdl__wAK7pzliiWs0Nlog.ttf',
-        700 => 'http://fonts.gstatic.com/s/sumana/v2/8AcM-KAproitONSBBHj3sQ.ttf',
+        0 => '300',
+        1 => '500',
+        2 => '700',
       ),
     ),
-    773 => 
+    1784 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sunshiney',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sunshiney/v8/kaWOb4pGbwNijM7CkxK1sQ.ttf',
-      ),
     ),
-    774 => 
+    1785 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Supermercado One',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/supermercadoone/v7/kMGPVTNFiFEp1U274uBMb4mm5hmSKNFf3C5YoMa-lrM.ttf',
-      ),
     ),
-    775 => 
+    1786 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Sura',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/sura/v2/jznKrhTH5NezYxb0-Q5zzA.ttf',
-        700 => 'http://fonts.gstatic.com/s/sura/v2/Z5bXQaFGmoWicN1WlcncxA.ttf',
-      ),
     ),
-    776 => 
+    1787 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Suranna',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/suranna/v5/PYmfr6TQeTqZ-r8HnPM-kA.ttf',
-      ),
     ),
-    777 => 
+    1788 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Suravaram',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1789 => 
+    array (
+      'family' => 'SUSE',
+      'variants' => 
       array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/suravaram/v4/G4dPee4pel_w2HqzavW4MA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    778 => 
+    1790 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'SUSE Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '100italic',
+        9 => '200italic',
+        10 => '300italic',
+        11 => 'italic',
+        12 => '500italic',
+        13 => '600italic',
+        14 => '700italic',
+        15 => '800italic',
+      ),
+    ),
+    1791 => 
+    array (
       'family' => 'Suwannaphum',
-      'category' => 'display',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'khmer',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/suwannaphum/v11/1jIPOyXied3T79GCnSlCN6CWcynf_cDxXwCLxiixG1c.ttf',
+        0 => '100',
+        1 => '300',
+        2 => 'regular',
+        3 => '700',
+        4 => '900',
       ),
     ),
-    779 => 
+    1792 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Swanky and Moo Moo',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/swankyandmoomoo/v7/orVNZ9kDeE3lWp3U3YELu9DVLKqNC3_XMNHhr8S94FU.ttf',
-      ),
     ),
-    780 => 
+    1793 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Syncopate',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1794 => 
+    array (
+      'family' => 'Syne',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/syncopate/v9/RQVwO52fAH6MI764EcaYtw.ttf',
-        700 => 'http://fonts.gstatic.com/s/syncopate/v9/S5z8ixiOoC4WJ1im6jAlYC3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
       ),
     ),
-    781 => 
+    1795 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Syne Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1796 => 
+    array (
+      'family' => 'Syne Tactile',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1797 => 
+    array (
+      'family' => 'Tac One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1798 => 
+    array (
+      'family' => 'Tagesschrift',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1799 => 
+    array (
+      'family' => 'Tai Heritage Pro',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1800 => 
+    array (
+      'family' => 'Tajawal',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+      ),
+    ),
+    1801 => 
+    array (
       'family' => 'Tangerine',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
       ),
-      'subsets' => 
+    ),
+    1802 => 
+    array (
+      'family' => 'Tapestry',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tangerine/v9/DTPeM3IROhnkz7aYG2a9sA.ttf',
-        700 => 'http://fonts.gstatic.com/s/tangerine/v9/UkFsr-RwJB_d2l9fIWsx3i3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
       ),
     ),
-    782 => 
+    1803 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Taprom',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1804 => 
+    array (
+      'family' => 'TASA Explorer',
+      'variants' => 
       array (
-        0 => 'khmer',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/taprom/v9/-KByU3BaUsyIvQs79qFObg.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
       ),
     ),
-    783 => 
+    1805 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'TASA Orbiter',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1806 => 
+    array (
       'family' => 'Tauri',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tauri/v5/XIWeYJDXNqiVNej0zEqtGg.ttf',
-      ),
     ),
-    784 => 
+    1807 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Taviraj',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => '100',
@@ -18905,42 +19881,27 @@ return array (
         16 => '900',
         17 => '900italic',
       ),
-      'subsets' => 
+    ),
+    1808 => 
+    array (
+      'family' => 'Teachers',
+      'variants' => 
       array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/taviraj/v3/7iDtujKEc7hwcT6D0zLx-A.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/taviraj/v3/ai0UdHXB1gi5etfpU0CZ6aCWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/taviraj/v3/fn3qCO_sC_zLuf2hqWE37fesZW2xOQ-xsNqO47m55DA.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/taviraj/v3/eDMMTK5GhTdvvz3R-ZWvay3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/taviraj/v3/1EIpbtG_cs5haG6Ba9wX8vesZW2xOQ-xsNqO47m55DA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/taviraj/v3/IEBfc1xGgsBbdCeXKNAtfS3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/taviraj/v3/AH1eoWagKJhbVx4Poc3M1A.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/taviraj/v3/hAS5RxygdSnG4626KdkXuQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/taviraj/v3/s8BuqYm5ebG2N1R4JkTp_fesZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/taviraj/v3/319qfe3yzAi9RNFu-dI9zy3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/taviraj/v3/KscmiA6HGz7nCcHhaddQH_esZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/taviraj/v3/ofRN6EMiboGiM2Ga3cG_yy3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/taviraj/v3/TY91892tTFNYCeCXjQ1AEPesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/taviraj/v3/4Yzb6i1xtMRZn9oAQ484nS3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/taviraj/v3/oGWJbiDGcxlInLLnrLxTDvesZW2xOQ-xsNqO47m55DA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/taviraj/v3/MPtY5Qs3hwV4f0LUH-vVmy3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/taviraj/v3/RfIEodnN0NYWUdZHol5fdPesZW2xOQ-xsNqO47m55DA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/taviraj/v3/aDM2JaXSd_qo0nqKiBAq5C3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => 'italic',
+        6 => '500italic',
+        7 => '600italic',
+        8 => '700italic',
+        9 => '800italic',
       ),
     ),
-    785 => 
+    1809 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Teko',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => '300',
@@ -18949,157 +19910,132 @@ return array (
         3 => '600',
         4 => '700',
       ),
-      'subsets' => 
+    ),
+    1810 => 
+    array (
+      'family' => 'Tektur',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/teko/v7/OobFGE9eo24rcBpN6zXDaQ.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/teko/v7/UtekqODEqZXSN2L-njejpA.ttf',
-        500 => 'http://fonts.gstatic.com/s/teko/v7/FQ0duU7gWM4cSaImOfAjBA.ttf',
-        600 => 'http://fonts.gstatic.com/s/teko/v7/QDx_i8H-TZ1IK1JEVrqwEQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/teko/v7/xKfTxe_SWpH4xU75vmvylA.ttf',
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
       ),
     ),
-    786 => 
+    1811 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Telex',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/telex/v6/24-3xP9ywYeHOcFU3iGk8A.ttf',
-      ),
     ),
-    787 => 
+    1812 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Tenali Ramakrishna',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tenaliramakrishna/v4/M0nTmDqv2M7AGoGh-c946BZak5pSBHqWX6uyVMiMFoA.ttf',
-      ),
     ),
-    788 => 
+    1813 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Tenor Sans',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tenorsans/v8/dUBulmjNJJInvK5vL7O9yfesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
     ),
-    789 => 
+    1814 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Text Me One',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1815 => 
+    array (
+      'family' => 'Texturina',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/textmeone/v5/9em_3ckd_P5PQkP4aDyDLqCWcynf_cDxXwCLxiixG1c.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    790 => 
+    1816 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Thasadith',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1817 => 
+    array (
       'family' => 'The Girl Next Door',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1818 => 
+    array (
+      'family' => 'The Nautigal',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/thegirlnextdoor/v8/cWRA4JVGeEcHGcPl5hmX7kzo0nFFoM60ux_D9BUymX4.ttf',
+        0 => 'regular',
+        1 => '700',
       ),
     ),
-    791 => 
+    1819 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Tienne',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
         2 => '900',
       ),
-      'subsets' => 
+    ),
+    1820 => 
+    array (
+      'family' => 'TikTok Sans',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tienne/v10/-IIfDl701C0z7-fy2kmGvA.ttf',
-        700 => 'http://fonts.gstatic.com/s/tienne/v10/JvoCDOlyOSEyYGRwCyfs3g.ttf',
-        900 => 'http://fonts.gstatic.com/s/tienne/v10/FBano5T521OWexj2iRYLMw.ttf',
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
       ),
     ),
-    792 => 
+    1821 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Tillana',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
@@ -19108,49 +20044,42 @@ return array (
         3 => '700',
         4 => '800',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tillana/v3/zN0D-jDPsr1HzU3VRFLY5g.ttf',
-        500 => 'http://fonts.gstatic.com/s/tillana/v3/gqdUngSIcY9tSla5eCZky_esZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/tillana/v3/fqon6-r15hy8M1cyiYfQBvesZW2xOQ-xsNqO47m55DA.ttf',
-        700 => 'http://fonts.gstatic.com/s/tillana/v3/jGARMTxLrMerzTCpGBpMffesZW2xOQ-xsNqO47m55DA.ttf',
-        800 => 'http://fonts.gstatic.com/s/tillana/v3/pmTtNH_Ibktj5Cyc1XrP6vesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
     ),
-    793 => 
+    1822 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Timmana',
-      'category' => 'sans-serif',
+      'family' => 'Tilt Neon',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1823 => 
+    array (
+      'family' => 'Tilt Prism',
+      'variants' => 
       array (
-        0 => 'telugu',
-        1 => 'latin',
-      ),
-      'version' => 'v2',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/timmana/v2/T25SicsJUJkc2s2sbBsDnA.ttf',
+        0 => 'regular',
       ),
     ),
-    794 => 
+    1824 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Tilt Warp',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1825 => 
+    array (
+      'family' => 'Timmana',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1826 => 
+    array (
       'family' => 'Tinos',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => 'regular',
@@ -19158,53 +20087,153 @@ return array (
         2 => '700',
         3 => '700italic',
       ),
-      'subsets' => 
+    ),
+    1827 => 
+    array (
+      'family' => 'Tiny5',
+      'variants' => 
       array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'hebrew',
-        4 => 'greek',
-        5 => 'latin',
-        6 => 'greek-ext',
-        7 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tinos/v11/EqpUbkVmutfwZ0PjpoGwCg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/tinos/v11/slfyzlasCr9vTsaP4lUh9A.ttf',
-        700 => 'http://fonts.gstatic.com/s/tinos/v11/vHXfhX8jZuQruowfon93yQ.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/tinos/v11/M6kfzvDMM0CdxdraoFpG6vesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    795 => 
+    1828 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Tiny5 Duo',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1829 => 
+    array (
+      'family' => 'Tiro Bangla',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1830 => 
+    array (
+      'family' => 'Tiro Devanagari Hindi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1831 => 
+    array (
+      'family' => 'Tiro Devanagari Marathi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1832 => 
+    array (
+      'family' => 'Tiro Devanagari Sanskrit',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1833 => 
+    array (
+      'family' => 'Tiro Gurmukhi',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1834 => 
+    array (
+      'family' => 'Tiro Kannada',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1835 => 
+    array (
+      'family' => 'Tiro Tamil',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1836 => 
+    array (
+      'family' => 'Tiro Telugu',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1837 => 
+    array (
+      'family' => 'Tirra',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+      ),
+    ),
+    1838 => 
+    array (
       'family' => 'Titan One',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/titanone/v5/FbvpRvzfV_oipS0De3iAZg.ttf',
-      ),
     ),
-    796 => 
+    1839 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Titillium Web',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => '200',
@@ -19219,53 +20248,10 @@ return array (
         9 => '700italic',
         10 => '900',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/titilliumweb/v6/anMUvcNT0H1YN4FII8wprzOdCrLccoxq42eaxM802O0.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/titilliumweb/v6/RZunN20OBmkvrU7sA4GPPj4N98U-66ThNJvtgddRfBE.ttf',
-        300 => 'http://fonts.gstatic.com/s/titilliumweb/v6/anMUvcNT0H1YN4FII8wpr9ZAkYT8DuUZELiKLwMGWAo.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/titilliumweb/v6/RZunN20OBmkvrU7sA4GPPrfzCkqg7ORZlRf2cc4mXu8.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/titilliumweb/v6/7XUFZ5tgS-tD6QamInJTcTyagQBwYgYywpS70xNq8SQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/titilliumweb/v6/r9OmwyQxrgzUAhaLET_KO-ixohbIP6lHkU-1Mgq95cY.ttf',
-        600 => 'http://fonts.gstatic.com/s/titilliumweb/v6/anMUvcNT0H1YN4FII8wpr28K9dEd5Ue-HTQrlA7E2xQ.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/titilliumweb/v6/RZunN20OBmkvrU7sA4GPPgOhzTSndyK8UWja2yJjKLc.ttf',
-        700 => 'http://fonts.gstatic.com/s/titilliumweb/v6/anMUvcNT0H1YN4FII8wpr2-6tpSbB9YhmWtmd1_gi_U.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/titilliumweb/v6/RZunN20OBmkvrU7sA4GPPio3LEw-4MM8Ao2j9wPOfpw.ttf',
-        900 => 'http://fonts.gstatic.com/s/titilliumweb/v6/anMUvcNT0H1YN4FII8wpr7L0GmZLri-m-nfoo0Vul4Y.ttf',
-      ),
     ),
-    797 => 
+    1840 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Trade Winds',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tradewinds/v6/sDOCVgAxw6PEUi2xdMsoDaCWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    798 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Trirong',
-      'category' => 'serif',
+      'family' => 'Tomorrow',
       'variants' => 
       array (
         0 => '100',
@@ -19287,860 +20273,117 @@ return array (
         16 => '900',
         17 => '900italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'thai',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/trirong/v3/A4AP1moxqvtadq5CW3L17A.ttf',
-        '100italic' => 'http://fonts.gstatic.com/s/trirong/v3/ke-m75CXBPHlqwRHmCTBi6CWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/trirong/v3/QD8N5qk-agpAEYCSSWullPesZW2xOQ-xsNqO47m55DA.ttf',
-        '200italic' => 'http://fonts.gstatic.com/s/trirong/v3/TLnptEEWKdIVHKJYBO592y3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/trirong/v3/mfCfGz4GqprWJZ47PUMDGfesZW2xOQ-xsNqO47m55DA.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/trirong/v3/RnkK09k5OfEHFxd_smcYuC3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/trirong/v3/lYu4kez-Enlvh2X-itx6CA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/trirong/v3/kV0MzmWPKkglEtJf--dQhQ.ttf',
-        500 => 'http://fonts.gstatic.com/s/trirong/v3/6CsQ6UR1e8rURaEPxqnGBvesZW2xOQ-xsNqO47m55DA.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/trirong/v3/I7H5Vf-5oH45BHkyxaUodS3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/trirong/v3/1FjmLIhPhB6Yc7RWqO27mfesZW2xOQ-xsNqO47m55DA.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/trirong/v3/BXLhSV51vCWUiACSqyWe6i3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/trirong/v3/ab8hG5CTSzMAobTnPgcDP_esZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/trirong/v3/CEBv6IoZawJuRHdATx4LQi3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/trirong/v3/UBRQXGJvi5EHcyI5wwZew_esZW2xOQ-xsNqO47m55DA.ttf',
-        '800italic' => 'http://fonts.gstatic.com/s/trirong/v3/lGUgSzOvjUqrsrJfnROivC3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/trirong/v3/Lam1ewMdiP3O-bVYT-W6t_esZW2xOQ-xsNqO47m55DA.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/trirong/v3/EtuLHyx5DS9oX5NoKhYlkC3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
     ),
-    799 => 
+    1841 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Trocchi',
-      'category' => 'serif',
+      'family' => 'Tourney',
       'variants' => 
       array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/trocchi/v6/uldNPaKrUGVeGCVsmacLwA.ttf',
-      ),
-    ),
-    800 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Trochut',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/trochut/v5/6Y65B0x-2JsnYt16OH5omw.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/trochut/v5/pczUwr4ZFvC79TgNO5cZng.ttf',
-        700 => 'http://fonts.gstatic.com/s/trochut/v5/lWqNOv6ISR8ehNzGLFLnJ_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    801 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Trykker',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/trykker/v6/YiVrVJpBFN7I1l_CWk6yYQ.ttf',
-      ),
-    ),
-    802 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Tulpen One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/tulpenone/v7/lwcTfVIEVxpZLZlWzR5baPesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    803 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ubuntu',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => '300',
-        1 => '300italic',
-        2 => 'regular',
-        3 => 'italic',
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
         4 => '500',
-        5 => '500italic',
+        5 => '600',
         6 => '700',
-        7 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'greek-ext',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v11',
-      'lastModified' => '2017-10-11',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoC1CzTtw.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZftWyI.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCs6KVjbNBYlgo6eA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCu6KVjbNBYlgoKeg7z.ttf',
-        500 => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3Ttw.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejYHtGyI.ttf',
-        700 => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvTtw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/ubuntu/v11/4iCp6KVjbNBYlgoKejZPsmyI.ttf',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
       ),
     ),
-    804 => 
+    1842 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ubuntu Condensed',
-      'category' => 'sans-serif',
+      'family' => 'Trade Winds',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'greek-ext',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ubuntucondensed/v8/DBCt-NXN57MTAFjitYxdrKDbm6fPDOZJsR8PmdG62gY.ttf',
-      ),
     ),
-    805 => 
+    1843 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ubuntu Mono',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'cyrillic',
-        2 => 'greek',
-        3 => 'latin',
-        4 => 'greek-ext',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ubuntumono/v7/EgeuS9OtEmA0y_JRo03MQaCWcynf_cDxXwCLxiixG1c.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/ubuntumono/v7/KAKuHXAHZOeECOWAHsRKA0eOrDcLawS7-ssYqLr2Xp4.ttf',
-        700 => 'http://fonts.gstatic.com/s/ubuntumono/v7/ceqTZGKHipo8pJj4molytne1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/ubuntumono/v7/n_d8tv_JOIiYyMXR4eaV9c_zJjSACmk0BRPxQqhnNLU.ttf',
-      ),
-    ),
-    806 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Ultra',
-      'category' => 'serif',
+      'family' => 'Train One',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/ultra/v10/OW8uXkOstRADuhEmGOFQLA.ttf',
-      ),
     ),
-    807 => 
+    1844 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Uncial Antiqua',
-      'category' => 'display',
+      'family' => 'Triodion',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1845 => 
+    array (
+      'family' => 'Trirong',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/uncialantiqua/v5/F-leefDiFwQXsyd6eaSllqrFJ4O13IHVxZbM6yoslpo.ttf',
+        0 => '100',
+        1 => '100italic',
+        2 => '200',
+        3 => '200italic',
+        4 => '300',
+        5 => '300italic',
+        6 => 'regular',
+        7 => 'italic',
+        8 => '500',
+        9 => '500italic',
+        10 => '600',
+        11 => '600italic',
+        12 => '700',
+        13 => '700italic',
+        14 => '800',
+        15 => '800italic',
+        16 => '900',
+        17 => '900italic',
       ),
     ),
-    808 => 
+    1846 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Underdog',
-      'category' => 'display',
+      'family' => 'Trispace',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+      ),
+    ),
+    1847 => 
+    array (
+      'family' => 'Trocchi',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/underdog/v6/gBv9yjez_-5PnTprHWq0ig.ttf',
-      ),
     ),
-    809 => 
+    1848 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Unica One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/unicaone/v5/KbYKlhWMDpatWViqDkNQgA.ttf',
-      ),
-    ),
-    810 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'UnifrakturCook',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        700 => 'http://fonts.gstatic.com/s/unifrakturcook/v9/ASwh69ykD8iaoYijVEU6RrWZkcsCTHKV51zmcUsafQ0.ttf',
-      ),
-    ),
-    811 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'UnifrakturMaguntia',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/unifrakturmaguntia/v8/7KWy3ymCVR_xfAvvcIXm3-kdNg30GQauG_DE-tMYtWk.ttf',
-      ),
-    ),
-    812 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Unkempt',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/unkempt/v9/NLLBeNSspr0RGs71R5LHWA.ttf',
-        700 => 'http://fonts.gstatic.com/s/unkempt/v9/V7H-GCl9bgwGwqFqTTgDHvesZW2xOQ-xsNqO47m55DA.ttf',
-      ),
-    ),
-    813 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Unlock',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/unlock/v7/rXEQzK7uIAlhoyoAEiMy1w.ttf',
-      ),
-    ),
-    814 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Unna',
-      'category' => 'serif',
+      'family' => 'Trochut',
       'variants' => 
       array (
         0 => 'regular',
         1 => 'italic',
         2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v10',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/unna/v10/UAS0AM7AmbdCNY_80xyAZQ.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/unna/v10/CB25jfOme9BL61pT4h1_0A.ttf',
-        700 => 'http://fonts.gstatic.com/s/unna/v10/V-r3KRrJqBWlu97fCUB8Nw.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/unna/v10/H7rJH2hD4wVI9bOhx98O8A.ttf',
       ),
     ),
-    815 => 
+    1849 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'VT323',
-      'category' => 'monospace',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'latin',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vt323/v9/ITU2YQfM073o1iYK3nSOmQ.ttf',
-      ),
-    ),
-    816 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vampiro One',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vampiroone/v8/OVDs4gY4WpS5u3Qd1gXRW6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    817 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Varela',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/varela/v8/ON7qs0cKUUixhhDFXlZUjw.ttf',
-      ),
-    ),
-    818 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Varela Round',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'hebrew',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/varelaround/v9/APH4jr0uSos5wiut5cpjri3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    819 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vast Shadow',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vastshadow/v7/io4hqKX3ibiqQQjYfW0-h6CWcynf_cDxXwCLxiixG1c.ttf',
-      ),
-    ),
-    820 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vesper Libre',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => '500',
-        2 => '700',
-        3 => '900',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vesperlibre/v9/Cg-TeZFsqV8BaOcoVwzu2C3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/vesperlibre/v9/0liLgNkygqH6EOtsVjZDsZMQuUSAwdHsY8ov_6tk1oA.ttf',
-        700 => 'http://fonts.gstatic.com/s/vesperlibre/v9/0liLgNkygqH6EOtsVjZDsUD2ttfZwueP-QU272T9-k4.ttf',
-        900 => 'http://fonts.gstatic.com/s/vesperlibre/v9/0liLgNkygqH6EOtsVjZDsaObDOjC3UL77puoeHsE3fw.ttf',
-      ),
-    ),
-    821 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vibur',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vibur/v8/xB9aKsUbJo68XP0bAg2iLw.ttf',
-      ),
-    ),
-    822 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vidaloka',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vidaloka/v9/C6Nul0ogKUWkx356rrt9RA.ttf',
-      ),
-    ),
-    823 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Viga',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/viga/v6/uD87gDbhS7frHLX4uL6agg.ttf',
-      ),
-    ),
-    824 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Voces',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/voces/v7/QoBH6g6yKgNIgvL8A2aE2Q.ttf',
-      ),
-    ),
-    825 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Volkhov',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '700',
-        3 => '700italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/volkhov/v9/MDIZAofe1T_J3un5Kgo8zg.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/volkhov/v9/1rTjmztKEpbkKH06JwF8Yw.ttf',
-        700 => 'http://fonts.gstatic.com/s/volkhov/v9/L8PbKS-kEoLHm7nP--NCzPesZW2xOQ-xsNqO47m55DA.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/volkhov/v9/W6oG0QDDjCgj0gmsHE520C3USBnSvpkopQaUR-2r7iU.ttf',
-      ),
-    ),
-    826 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Vollkorn',
-      'category' => 'serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-        1 => 'italic',
-        2 => '600',
-        3 => '600italic',
-        4 => '700',
-        5 => '700italic',
-        6 => '900',
-        7 => '900italic',
-      ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'greek',
-        4 => 'latin',
-        5 => 'latin-ext',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/vollkorn/v8/IiexqYAeh8uII223thYx3w.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/vollkorn/v8/UuIzosgR1ovBhJFdwVp3fvesZW2xOQ-xsNqO47m55DA.ttf',
-        600 => 'http://fonts.gstatic.com/s/vollkorn/v8/gWz-6Uqzc1g8XxDn5f2-pKCWcynf_cDxXwCLxiixG1c.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/vollkorn/v8/dU1kkg9Vvuo527vzySfgDPpTEJqju4Hz1txDWij77d4.ttf',
-        700 => 'http://fonts.gstatic.com/s/vollkorn/v8/gOwQjJVGXlDOONC12hVoBqCWcynf_cDxXwCLxiixG1c.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/vollkorn/v8/KNiAlx6phRqXCwnZZG51JAJKKGfqHaYFsRG-T3ceEVo.ttf',
-        900 => 'http://fonts.gstatic.com/s/vollkorn/v8/IBcUSEL3da6GXw0kfPwtqqCWcynf_cDxXwCLxiixG1c.ttf',
-        '900italic' => 'http://fonts.gstatic.com/s/vollkorn/v8/5fOn_dOVwBIkZpOP3_1I750EAVxt0G0biEntp43Qt6E.ttf',
-      ),
-    ),
-    827 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Voltaire',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/voltaire/v7/WvqBzaGEBbRV-hrahwO2cA.ttf',
-      ),
-    ),
-    828 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Waiting for the Sunrise',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/waitingforthesunrise/v8/eNfH7kLpF1PZWpsetF-ha9TChrNgrDiT3Zy6yGf3FnM.ttf',
-      ),
-    ),
-    829 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Wallpoet',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/wallpoet/v9/hmum4WuBN4A0Z_7367NDIg.ttf',
-      ),
-    ),
-    830 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Walter Turncoat',
-      'category' => 'handwriting',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvQplL2YwNeota48DxFlGDUo.ttf',
-      ),
-    ),
-    831 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Warnes',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/warnes/v7/MXG7_Phj4YpzAXxKGItuBw.ttf',
-      ),
-    ),
-    832 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Wellfleet',
-      'category' => 'display',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/wellfleet/v5/J5tOx72iFRPgHYpbK9J4XQ.ttf',
-      ),
-    ),
-    833 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Wendy One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v5',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/wendyone/v5/R8CJT2oDXdMk_ZtuHTxoxw.ttf',
-      ),
-    ),
-    834 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Wire One',
-      'category' => 'sans-serif',
-      'variants' => 
-      array (
-        0 => 'regular',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/wireone/v8/sRLhaQOQpWnvXwIx0CycQw.ttf',
-      ),
-    ),
-    835 => 
-    array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Work Sans',
-      'category' => 'sans-serif',
+      'family' => 'Truculenta',
       'variants' => 
       array (
         0 => '100',
@@ -20153,60 +20396,849 @@ return array (
         7 => '800',
         8 => '900',
       ),
-      'subsets' => 
+    ),
+    1850 => 
+    array (
+      'family' => 'Trykker',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/worksans/v3/ZAhtNqLaAViKjGLajtuwWaCWcynf_cDxXwCLxiixG1c.ttf',
-        200 => 'http://fonts.gstatic.com/s/worksans/v3/u_mYNr_qYP37m7vgvmIYZy3USBnSvpkopQaUR-2r7iU.ttf',
-        300 => 'http://fonts.gstatic.com/s/worksans/v3/FD_Udbezj8EHXbdsqLUply3USBnSvpkopQaUR-2r7iU.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/worksans/v3/zVvigUiMvx7JVEnrJgc-5Q.ttf',
-        500 => 'http://fonts.gstatic.com/s/worksans/v3/Nbre-U_bp6Xktt8cpgwaJC3USBnSvpkopQaUR-2r7iU.ttf',
-        600 => 'http://fonts.gstatic.com/s/worksans/v3/z9rX03Xuz9ZNHTMg1_ghGS3USBnSvpkopQaUR-2r7iU.ttf',
-        700 => 'http://fonts.gstatic.com/s/worksans/v3/4udXuXg54JlPEP5iKO5AmS3USBnSvpkopQaUR-2r7iU.ttf',
-        800 => 'http://fonts.gstatic.com/s/worksans/v3/IQh-ap2Uqs7kl1YINeeEGi3USBnSvpkopQaUR-2r7iU.ttf',
-        900 => 'http://fonts.gstatic.com/s/worksans/v3/Hjn0acvjHfjY_vAK9Uc6gi3USBnSvpkopQaUR-2r7iU.ttf',
+        0 => 'regular',
       ),
     ),
-    836 => 
+    1851 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Yanone Kaffeesatz',
-      'category' => 'sans-serif',
+      'family' => 'Tsukimi Rounded',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1852 => 
+    array (
+      'family' => 'Tuffy',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1853 => 
+    array (
+      'family' => 'Tulpen One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1854 => 
+    array (
+      'family' => 'Turret Road',
       'variants' => 
       array (
         0 => '200',
         1 => '300',
         2 => 'regular',
-        3 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'vietnamese',
-        1 => 'cyrillic',
-        2 => 'latin',
-        3 => 'latin-ext',
-      ),
-      'version' => 'v9',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        200 => 'http://fonts.gstatic.com/s/yanonekaffeesatz/v9/We_iSDqttE3etzfdfhuPRbq92v6XxU4pSv06GI0NsGc.ttf',
-        300 => 'http://fonts.gstatic.com/s/yanonekaffeesatz/v9/We_iSDqttE3etzfdfhuPRZlIwXPiNoNT_wxzJ2t3mTE.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/yanonekaffeesatz/v9/YDAoLskQQ5MOAgvHUQCcLdXn3cHbFGWU4T2HrSN6JF4.ttf',
-        700 => 'http://fonts.gstatic.com/s/yanonekaffeesatz/v9/We_iSDqttE3etzfdfhuPRf2R4S6PlKaGXWPfWpHpcl0.ttf',
+        3 => '500',
+        4 => '700',
+        5 => '800',
       ),
     ),
-    837 => 
+    1855 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Twinkle Star',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1856 => 
+    array (
+      'family' => 'Ubuntu',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => '300italic',
+        2 => 'regular',
+        3 => 'italic',
+        4 => '500',
+        5 => '500italic',
+        6 => '700',
+        7 => '700italic',
+      ),
+    ),
+    1857 => 
+    array (
+      'family' => 'Ubuntu Condensed',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1858 => 
+    array (
+      'family' => 'Ubuntu Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1859 => 
+    array (
+      'family' => 'Ubuntu Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '100italic',
+        9 => '200italic',
+        10 => '300italic',
+        11 => 'italic',
+        12 => '500italic',
+        13 => '600italic',
+        14 => '700italic',
+        15 => '800italic',
+      ),
+    ),
+    1860 => 
+    array (
+      'family' => 'Ubuntu Sans Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => 'italic',
+        5 => '500italic',
+        6 => '600italic',
+        7 => '700italic',
+      ),
+    ),
+    1861 => 
+    array (
+      'family' => 'Uchen',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1862 => 
+    array (
+      'family' => 'Ultra',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1863 => 
+    array (
+      'family' => 'Unbounded',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1864 => 
+    array (
+      'family' => 'Uncial Antiqua',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1865 => 
+    array (
+      'family' => 'Underdog',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1866 => 
+    array (
+      'family' => 'Unica One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1867 => 
+    array (
+      'family' => 'UnifrakturCook',
+      'variants' => 
+      array (
+        0 => '700',
+      ),
+    ),
+    1868 => 
+    array (
+      'family' => 'UnifrakturMaguntia',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1869 => 
+    array (
+      'family' => 'Unkempt',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '700',
+      ),
+    ),
+    1870 => 
+    array (
+      'family' => 'Unlock',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1871 => 
+    array (
+      'family' => 'Unna',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1872 => 
+    array (
+      'family' => 'UoqMunThenKhung',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1873 => 
+    array (
+      'family' => 'Updock',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1874 => 
+    array (
+      'family' => 'Urbanist',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1875 => 
+    array (
+      'family' => 'Valley Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1876 => 
+    array (
+      'family' => 'Vampiro One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1877 => 
+    array (
+      'family' => 'Varela',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1878 => 
+    array (
+      'family' => 'Varela Round',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1879 => 
+    array (
+      'family' => 'Varta',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+      ),
+    ),
+    1880 => 
+    array (
+      'family' => 'Vast Shadow',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1881 => 
+    array (
+      'family' => 'Vazirmatn',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1882 => 
+    array (
+      'family' => 'Vend Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+      ),
+    ),
+    1883 => 
+    array (
+      'family' => 'Vesper Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '700',
+        3 => '900',
+      ),
+    ),
+    1884 => 
+    array (
+      'family' => 'Viaoda Libre',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1885 => 
+    array (
+      'family' => 'Vibes',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1886 => 
+    array (
+      'family' => 'Vibur',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1887 => 
+    array (
+      'family' => 'Victor Mono',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '100italic',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+      ),
+    ),
+    1888 => 
+    array (
+      'family' => 'Vidaloka',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1889 => 
+    array (
+      'family' => 'Viga',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1890 => 
+    array (
+      'family' => 'Vina Sans',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1891 => 
+    array (
+      'family' => 'Voces',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1892 => 
+    array (
+      'family' => 'Volkhov',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '700',
+        3 => '700italic',
+      ),
+    ),
+    1893 => 
+    array (
+      'family' => 'Vollkorn',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    1894 => 
+    array (
+      'family' => 'Vollkorn SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '600',
+        2 => '700',
+        3 => '900',
+      ),
+    ),
+    1895 => 
+    array (
+      'family' => 'Voltaire',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1896 => 
+    array (
+      'family' => 'VT323',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1897 => 
+    array (
+      'family' => 'Vujahday Script',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1898 => 
+    array (
+      'family' => 'Waiting for the Sunrise',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1899 => 
+    array (
+      'family' => 'Wallpoet',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1900 => 
+    array (
+      'family' => 'Walter Turncoat',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1901 => 
+    array (
+      'family' => 'Warnes',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1902 => 
+    array (
+      'family' => 'Water Brush',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1903 => 
+    array (
+      'family' => 'Waterfall',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1904 => 
+    array (
+      'family' => 'Wavefont',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1905 => 
+    array (
+      'family' => 'WDXL Lubrifont JP N',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1906 => 
+    array (
+      'family' => 'WDXL Lubrifont SC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1907 => 
+    array (
+      'family' => 'WDXL Lubrifont TC',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1908 => 
+    array (
+      'family' => 'Wellfleet',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1909 => 
+    array (
+      'family' => 'Wendy One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1910 => 
+    array (
+      'family' => 'Whisper',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1911 => 
+    array (
+      'family' => 'WindSong',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+      ),
+    ),
+    1912 => 
+    array (
+      'family' => 'Winky Rough',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    1913 => 
+    array (
+      'family' => 'Winky Sans',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '600',
+        4 => '700',
+        5 => '800',
+        6 => '900',
+        7 => '300italic',
+        8 => 'italic',
+        9 => '500italic',
+        10 => '600italic',
+        11 => '700italic',
+        12 => '800italic',
+        13 => '900italic',
+      ),
+    ),
+    1914 => 
+    array (
+      'family' => 'Wire One',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1915 => 
+    array (
+      'family' => 'Wittgenstein',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+        5 => '900',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
+        10 => '800italic',
+        11 => '900italic',
+      ),
+    ),
+    1916 => 
+    array (
+      'family' => 'Wix Madefor Display',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '800',
+      ),
+    ),
+    1917 => 
+    array (
+      'family' => 'Wix Madefor Text',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+        2 => '500',
+        3 => '500italic',
+        4 => '600',
+        5 => '600italic',
+        6 => '700',
+        7 => '700italic',
+        8 => '800',
+        9 => '800italic',
+      ),
+    ),
+    1918 => 
+    array (
+      'family' => 'Work Sans',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1919 => 
+    array (
+      'family' => 'Workbench',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1920 => 
+    array (
+      'family' => 'Xanh Mono',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1921 => 
+    array (
+      'family' => 'Xmind',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1922 => 
+    array (
+      'family' => 'Yaldevi',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1923 => 
+    array (
+      'family' => 'Yanone Kaffeesatz',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+      ),
+    ),
+    1924 => 
+    array (
       'family' => 'Yantramanav',
-      'category' => 'sans-serif',
       'variants' => 
       array (
         0 => '100',
@@ -20216,115 +21248,98 @@ return array (
         4 => '700',
         5 => '900',
       ),
-      'subsets' => 
+    ),
+    1925 => 
+    array (
+      'family' => 'Yarndings 12',
+      'variants' => 
       array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        100 => 'http://fonts.gstatic.com/s/yantramanav/v3/Rs1I2PF4Z8GAb6qjgvr8wIAWxXGWZ3yJw6KhWS7MxOk.ttf',
-        300 => 'http://fonts.gstatic.com/s/yantramanav/v3/HSfbC4Z8I8BZ00wiXeA5bC9-WlPSxbfiI49GsXo3q0g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/yantramanav/v3/FwdziO-qWAO8pZg8e376kaCWcynf_cDxXwCLxiixG1c.ttf',
-        500 => 'http://fonts.gstatic.com/s/yantramanav/v3/HSfbC4Z8I8BZ00wiXeA5bMCNfqCYlB_eIx7H1TVXe60.ttf',
-        700 => 'http://fonts.gstatic.com/s/yantramanav/v3/HSfbC4Z8I8BZ00wiXeA5bHe1Pd76Vl7zRpE7NLJQ7XU.ttf',
-        900 => 'http://fonts.gstatic.com/s/yantramanav/v3/HSfbC4Z8I8BZ00wiXeA5bCenaqEuufTBk9XMKnKmgDA.ttf',
+        0 => 'regular',
       ),
     ),
-    838 => 
+    1926 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Yarndings 12 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1927 => 
+    array (
+      'family' => 'Yarndings 20',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1928 => 
+    array (
+      'family' => 'Yarndings 20 Charted',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1929 => 
+    array (
       'family' => 'Yatra One',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'devanagari',
-        2 => 'latin-ext',
-      ),
-      'version' => 'v4',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/yatraone/v4/ApKQzWF7_vG0Lt5TDqgUvw.ttf',
-      ),
     ),
-    839 => 
+    1930 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Yellowtail',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1931 => 
+    array (
+      'family' => 'Yeon Sung',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v8',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/yellowtail/v8/HLrU6lhCTjXfLZ7X60LcB_esZW2xOQ-xsNqO47m55DA.ttf',
+        0 => 'regular',
       ),
     ),
-    840 => 
+    1932 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Yeseva One',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
-      array (
-        0 => 'cyrillic-ext',
-        1 => 'vietnamese',
-        2 => 'cyrillic',
-        3 => 'latin',
-        4 => 'latin-ext',
-      ),
-      'version' => 'v12',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/yesevaone/v12/eenQQxvpzSA80JmisGcgX_esZW2xOQ-xsNqO47m55DA.ttf',
-      ),
     ),
-    841 => 
+    1933 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Yesteryear',
-      'category' => 'handwriting',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1934 => 
+    array (
+      'family' => 'Yomogi',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v6',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/yesteryear/v6/dv09hP_ZrdjVOfZQXKXuZvesZW2xOQ-xsNqO47m55DA.ttf',
+        0 => 'regular',
       ),
     ),
-    842 => 
+    1935 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Young Serif',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1936 => 
+    array (
       'family' => 'Yrsa',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => '300',
@@ -20332,48 +21347,392 @@ return array (
         2 => '500',
         3 => '600',
         4 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/yrsa/v3/YI0C1syzAYpkrPx27UnC2w.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/yrsa/v3/JWX_dCK4_Jq-oqF7r9rFHg.ttf',
-        500 => 'http://fonts.gstatic.com/s/yrsa/v3/rWuZmBLHIeKRbnfSvWCvYg.ttf',
-        600 => 'http://fonts.gstatic.com/s/yrsa/v3/1413P-oEfrq-tBIdqnslDQ.ttf',
-        700 => 'http://fonts.gstatic.com/s/yrsa/v3/iV49zaJV5wyo_4LgxE2yng.ttf',
+        5 => '300italic',
+        6 => 'italic',
+        7 => '500italic',
+        8 => '600italic',
+        9 => '700italic',
       ),
     ),
-    843 => 
+    1937 => 
     array (
-      'kind' => 'webfonts#webfont',
-      'family' => 'Zeyada',
-      'category' => 'handwriting',
+      'family' => 'Ysabeau',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1938 => 
+    array (
+      'family' => 'Ysabeau Infant',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1939 => 
+    array (
+      'family' => 'Ysabeau Office',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+        9 => '100italic',
+        10 => '200italic',
+        11 => '300italic',
+        12 => 'italic',
+        13 => '500italic',
+        14 => '600italic',
+        15 => '700italic',
+        16 => '800italic',
+        17 => '900italic',
+      ),
+    ),
+    1940 => 
+    array (
+      'family' => 'Ysabeau SC',
+      'variants' => 
+      array (
+        0 => '100',
+        1 => '200',
+        2 => '300',
+        3 => 'regular',
+        4 => '500',
+        5 => '600',
+        6 => '700',
+        7 => '800',
+        8 => '900',
+      ),
+    ),
+    1941 => 
+    array (
+      'family' => 'Yuji Boku',
       'variants' => 
       array (
         0 => 'regular',
       ),
-      'subsets' => 
+    ),
+    1942 => 
+    array (
+      'family' => 'Yuji Hentaigana Akari',
+      'variants' => 
       array (
-        0 => 'latin',
-      ),
-      'version' => 'v7',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/zeyada/v7/hmonmGYYFwqTZQfG2nRswQ.ttf',
+        0 => 'regular',
       ),
     ),
-    844 => 
+    1943 => 
     array (
-      'kind' => 'webfonts#webfont',
+      'family' => 'Yuji Hentaigana Akebono',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1944 => 
+    array (
+      'family' => 'Yuji Mai',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1945 => 
+    array (
+      'family' => 'Yuji Syuku',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1946 => 
+    array (
+      'family' => 'Yusei Magic',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1947 => 
+    array (
+      'family' => 'Yuyu',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1948 => 
+    array (
+      'family' => 'Yuyu Short',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1949 => 
+    array (
+      'family' => 'Zain',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => '300italic',
+        3 => 'regular',
+        4 => 'italic',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+      ),
+    ),
+    1950 => 
+    array (
+      'family' => 'Zalando Sans',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1951 => 
+    array (
+      'family' => 'Zalando Sans Expanded',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1952 => 
+    array (
+      'family' => 'Zalando Sans SemiExpanded',
+      'variants' => 
+      array (
+        0 => '200',
+        1 => '300',
+        2 => 'regular',
+        3 => '500',
+        4 => '600',
+        5 => '700',
+        6 => '800',
+        7 => '900',
+        8 => '200italic',
+        9 => '300italic',
+        10 => 'italic',
+        11 => '500italic',
+        12 => '600italic',
+        13 => '700italic',
+        14 => '800italic',
+        15 => '900italic',
+      ),
+    ),
+    1953 => 
+    array (
+      'family' => 'ZCOOL KuaiLe',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1954 => 
+    array (
+      'family' => 'ZCOOL QingKe HuangYou',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1955 => 
+    array (
+      'family' => 'ZCOOL XiaoWei',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1956 => 
+    array (
+      'family' => 'Zen Antique',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1957 => 
+    array (
+      'family' => 'Zen Antique Soft',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1958 => 
+    array (
+      'family' => 'Zen Dots',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1959 => 
+    array (
+      'family' => 'Zen Kaku Gothic Antique',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    1960 => 
+    array (
+      'family' => 'Zen Kaku Gothic New',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    1961 => 
+    array (
+      'family' => 'Zen Kurenaido',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1962 => 
+    array (
+      'family' => 'Zen Loop',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => 'italic',
+      ),
+    ),
+    1963 => 
+    array (
+      'family' => 'Zen Maru Gothic',
+      'variants' => 
+      array (
+        0 => '300',
+        1 => 'regular',
+        2 => '500',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    1964 => 
+    array (
+      'family' => 'Zen Old Mincho',
+      'variants' => 
+      array (
+        0 => 'regular',
+        1 => '500',
+        2 => '600',
+        3 => '700',
+        4 => '900',
+      ),
+    ),
+    1965 => 
+    array (
+      'family' => 'Zen Tokyo Zoo',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1966 => 
+    array (
+      'family' => 'Zeyada',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1967 => 
+    array (
+      'family' => 'Zhi Mang Xing',
+      'variants' => 
+      array (
+        0 => 'regular',
+      ),
+    ),
+    1968 => 
+    array (
       'family' => 'Zilla Slab',
-      'category' => 'serif',
       'variants' => 
       array (
         0 => '300',
@@ -20387,48 +21746,14 @@ return array (
         8 => '700',
         9 => '700italic',
       ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-10',
-      'files' => 
-      array (
-        300 => 'http://fonts.gstatic.com/s/zillaslab/v3/MIkI-zFTb-IKu6GQ4qfBIUeOrDcLawS7-ssYqLr2Xp4.ttf',
-        '300italic' => 'http://fonts.gstatic.com/s/zillaslab/v3/SlbCHfLtf3uBEqmR9ezZMqcQoVhARpoaILP7amxE_8g.ttf',
-        'regular' => 'http://fonts.gstatic.com/s/zillaslab/v3/GQa6C2kQZDjk1E7wBSIhnPesZW2xOQ-xsNqO47m55DA.ttf',
-        'italic' => 'http://fonts.gstatic.com/s/zillaslab/v3/0uwn9tpUNTyjFGXazfTluC3USBnSvpkopQaUR-2r7iU.ttf',
-        500 => 'http://fonts.gstatic.com/s/zillaslab/v3/M-lMpg6F7WVOVam88MR7yJp-63r6doWhTEbsfBIRJ7A.ttf',
-        '500italic' => 'http://fonts.gstatic.com/s/zillaslab/v3/SlbCHfLtf3uBEqmR9ezZMpMQuUSAwdHsY8ov_6tk1oA.ttf',
-        600 => 'http://fonts.gstatic.com/s/zillaslab/v3/idTxEJxWLSyMdm2hH0_fO_pTEJqju4Hz1txDWij77d4.ttf',
-        '600italic' => 'http://fonts.gstatic.com/s/zillaslab/v3/SlbCHfLtf3uBEqmR9ezZMmv8CylhIUtwUiYO7Z2wXbE.ttf',
-        700 => 'http://fonts.gstatic.com/s/zillaslab/v3/5alS-fi1sAYG-KJydQxv8AJKKGfqHaYFsRG-T3ceEVo.ttf',
-        '700italic' => 'http://fonts.gstatic.com/s/zillaslab/v3/SlbCHfLtf3uBEqmR9ezZMkD2ttfZwueP-QU272T9-k4.ttf',
-      ),
     ),
-    845 => 
+    1969 => 
     array (
-      'kind' => 'webfonts#webfont',
       'family' => 'Zilla Slab Highlight',
-      'category' => 'display',
       'variants' => 
       array (
         0 => 'regular',
         1 => '700',
-      ),
-      'subsets' => 
-      array (
-        0 => 'latin',
-        1 => 'latin-ext',
-      ),
-      'version' => 'v3',
-      'lastModified' => '2017-10-09',
-      'files' => 
-      array (
-        'regular' => 'http://fonts.gstatic.com/s/zillaslabhighlight/v3/A1oFQmFZMluFeVEQs3f1ZsRj1XVSCnpi3yrU572D-Ys.ttf',
-        700 => 'http://fonts.gstatic.com/s/zillaslabhighlight/v3/4GC1z5cbR6tbZfervoVHHDJanj6ILIntqP8io1sy9nk.ttf',
       ),
     ),
   ),

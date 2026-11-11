@@ -1,5 +1,29 @@
 <?php
 
+if (! function_exists('azbalac_get_google_fonts')) {
+    /**
+     * Loads the static Google Fonts catalog when it is actually needed.
+     *
+     * @return array<string, mixed>
+     */
+    function azbalac_get_google_fonts()
+    {
+        static $fonts = null;
+
+        if ($fonts === null) {
+            $fontFile = get_template_directory() . '/inc/customizer/webfonts.php';
+            $fontData = is_readable($fontFile) ? require $fontFile : array();
+            $fonts = is_array($fontData) ? $fontData : array();
+        }
+
+        if (!isset($fonts['items']) || !is_array($fonts['items'])) {
+            $fonts['items'] = array();
+        }
+
+        return $fonts;
+    }
+}
+
 /**
  * Default Font list as constant array
  *
@@ -61,7 +85,7 @@ class Azbalac_Custom_Font_Request
 
         $searchfont = sanitize_text_field(wp_unslash($_POST['searchfont']));
 
-        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
+        $gglfonts = azbalac_get_google_fonts();
         
         $fontData = null;
         foreach ($gglfonts['items'] as $gglfont) {
@@ -227,7 +251,7 @@ class Azbalac_Custom_Font_Control extends WP_Customize_Control
         
     
         // build gglfonts options
-        $gglfonts = $GLOBALS['azbalacGoogleFonts']; 
+        $gglfonts = azbalac_get_google_fonts();
         $gglfontsItems = $gglfonts['items'];
    
         $cnt = count($gglfontsItems);

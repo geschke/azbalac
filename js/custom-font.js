@@ -165,18 +165,6 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
                         var data = response.data;
                         // trigger action which builds array of variants
                         element.trigger('event_font_gglfont_selected', [ element, elementId, data ]);
-
-                        // this does not work due to asynchronous request
-                        // get default (first) first variant to store into elementData
-                        /*if (typeof data.variants != 'undefined') {
-                            var defaultVariant = data.variants[0];
-                            console.log("defaultVariant and file::");
-                            console.log(defaultVariant);
-                            console.log(data.files[defaultVariant]);
-                            elementData['gglfontdata'] = {'variant': defaultVariant,
-                                'file': data.files[defaultVariant]
-                            };
-                        }*/
                     }
 
                 },
@@ -221,20 +209,11 @@ wp.customize.controlConstructor.azbalac_font = wp.customize.Control.extend( {
             success: function (response, textStatus, jqXHR) {
                 if (response.success && response.data) {
                     var data = response.data;
-                    // search variant and store filename into elementData array
+                    // Validate and store the selected variant. Font file URLs are
+                    // not needed because the frontend uses the Google Fonts CSS2 API.
                                      
-                    if (typeof data.variants != 'undefined') {
-                        if (typeof data.files[variant] != 'undefined') {
-                            // variant found
-                            var file = data.files[variant];
-
-                        } else {
-                            var file = ''; // no file submitted, use empty string.
-                            // currently the font file is not used. Was: data.files[data.variants[0]];
-                        }
-                        elementData['gglfontdata'] = {'variant': variant,
-                            'file': file
-                        };
+                    if (Array.isArray(data.variants) && data.variants.indexOf(variant) !== -1) {
+                        elementData['gglfontdata'] = {'variant': variant};
                         // call update function to store elementData
                         control.updateCurrentDataField(elementData);
                     }

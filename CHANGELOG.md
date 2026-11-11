@@ -2,6 +2,17 @@
 
 ## Azbalac One
 
+Version 0.7.0
+
+- Breaking: Renamed the theme and its text domain to Azbalac One (`azbalac-one`); existing installations must migrate or copy their theme modifications when switching from the previous theme directory.
+- Update: Standardized visible theme branding, metadata, documentation and internal package annotations for Azbalac One.
+- Update: Rebuilt and substantially completed the German translation, including Customizer controls and help text.
+- Update: Added a CLI maintenance tool for refreshing the static Google Fonts catalog and changed font data to load only when required by the Customizer.
+- Improvement: Moved the search form into the existing Twig template architecture while retaining WordPress search-form filtering.
+- Improvement: Refreshed the theme screenshot, Theme URI, cache namespace and Welcome Screen integration for the renamed theme.
+- Fix: Replaced unnecessary filesystem abstraction and legacy admin bootstrap code with direct, validated WordPress-compatible handling.
+- Internal: Addressed remaining Theme Check findings without changing the theme architecture or adding runtime dependencies.
+
 Version 0.6.1
 
 - Update: Replaced jQuery UI slider and button controls with native HTML5 range and radio controls.

@@ -14,14 +14,13 @@ msgstr ""
 "X-Poedit-Language: \n"
 "X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Poedit-Basepath: \n"
 "X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes\n"
 "X-Domain: azbalac-one\n"
-"Language: de_DE"
+"Language: de_DE\n"
 
 #: content.php:46
 msgid "% Comments"
@@ -33,7 +32,7 @@ msgstr "&hellip;oder URL eingeben zur Verlinkung"
 
 #: inc/customizer/Customizer.php:292
 msgid "&hellip;or Link to Post"
-msgstr ""
+msgstr "&hellip;oder mit einem Beitrag verlinken"
 
 #: inc/customizer/Customizer.php:1958
 msgid "&hellip;use Image"
@@ -67,33 +66,25 @@ msgstr "- Version %s"
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
+#  msgid ""
+#  "<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> "
+#  "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 #: content.php:45
 #, php-format
-#| msgid ""
-#| "<span class=\"byline-icon fa fa-comment\" aria-hidden=\"true\"></span> "
-#| "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgid ""
-"<span class=\"byline-icon bi bi-chat-text\" aria-hidden=\"true\"></span> "
-"Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-"<span class=\"byline-icon bi bi-chat\" aria-hidden=\"true\"></span> Schreibe "
-"einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
+msgid "<span class=\"byline-icon bi bi-chat-text\" aria-hidden=\"true\"></span> Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"byline-icon bi bi-chat\" aria-hidden=\"true\"></span> Schreibe einen Kommentar<span class=\"screen-reader-text\"> zu %s</span>"
 
+#  msgid ""
+#  "<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\">"
+#  "</span>Edit <span class=\"screen-reader-text\">%s</span>"
 #: content-featured-post-large.php:33 content-featured-post-mag-style1.php:41
 #: content-featured-post.php:50 content.php:55
 #, php-format
-#| msgid ""
-#| "<span class=\"byline-icon fa fa-pencil-square-o\" aria-hidden=\"true\">"
-#| "</span>Edit <span class=\"screen-reader-text\">%s</span>"
-msgid ""
-"<span class=\"byline-icon bi bi-pencil-square\" aria-hidden=\"true\"></span>"
-"Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-"<span class=\"byline-icon bi bi-pencil-square\" aria-hidden=\"true\"></span>"
-"Bearbeite <span class=\"screen-reader-text\">%s</span>"
+msgid "<span class=\"byline-icon bi bi-pencil-square\" aria-hidden=\"true\"></span>Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "<span class=\"byline-icon bi bi-pencil-square\" aria-hidden=\"true\"></span>Bearbeite <span class=\"screen-reader-text\">%s</span>"
 
+#  msgid "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
 #: content.php:88
-#| msgid "<span class=\"byline-icon fa fa-tags\"></span> Tags: "
 msgid "<span class=\"byline-icon bi bi-tags\"></span> Tags: "
 msgstr "<span class=\"byline-icon bi bi-tags\"></span> Tags: "
 
@@ -107,14 +98,10 @@ msgstr "<span class=\"screen-reader-text\">Datum: </span>"
 
 #: inc/customizer/Customizer.php:1155
 msgid "A higher value means more whitespace."
-msgstr ""
+msgstr "Ein höherer Wert erzeugt mehr Abstand."
 
 #: inc/info-screen/sections/getting-started.php:40
-msgid ""
-"A word from the author: When I moved my blog from custom software to "
-"WordPress, I looked for a Bootstrap-powered theme. I already knew Bootstrap "
-"from many web projects, so working in a familiar environment seemed like the "
-"natural choice."
+msgid "A word from the author: When I moved my blog from custom software to WordPress, I looked for a Bootstrap-powered theme. I already knew Bootstrap from many web projects, so working in a familiar environment seemed like the natural choice."
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:32
@@ -128,9 +115,7 @@ msgstr "Oberhalb des Headers (bei Standard-Navigation)"
 
 #: inc/customizer/Customizer.php:374 inc/customizer/Customizer.php:1841
 msgid "Above navigation (if navbar position is not fixed)"
-msgstr ""
-"Oberhalb Navigationsleiste (wenn Navigationsleiste nicht am oberen Rand "
-"fixiert ist)"
+msgstr "Oberhalb Navigationsleiste (wenn Navigationsleiste nicht am oberen Rand fixiert ist)"
 
 #: inc/customizer/Customizer.php:1914
 msgid "Add as many elements as you want."
@@ -151,44 +136,32 @@ msgstr "Archive"
 #: searchform.php:20
 msgctxt "aria label"
 msgid "Site search"
-msgstr ""
+msgstr "Website durchsuchen"
 
 #. Name of the theme
 msgid "Azbalac One"
-msgstr ""
+msgstr "Azbalac One"
 
 #. Description of the theme
-msgid ""
-"Azbalac One - A pure and basic WordPress theme, based on Bootstrap 5 "
-"framework."
+msgid "Azbalac One - A pure and basic WordPress theme, based on Bootstrap 5 framework."
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:33
-msgid ""
-"Azbalac One is a classic WordPress theme based on Bootstrap 5 and Twig 3. It "
-"provides a focused set of customization options without introducing a page "
-"builder, block-theme architecture, frontend build system, or commercial "
-"feature tier."
+msgid "Azbalac One is a classic WordPress theme based on Bootstrap 5 and Twig 3. It provides a focused set of customization options without introducing a page builder, block-theme architecture, frontend build system, or commercial feature tier."
 msgstr ""
 
 #: inc/info-screen/sections/getting-started.php:52
-msgid ""
-"Azbalac One will remain free, including features added in the future. I "
-"still have some ideas in mind and may implement them when time permits."
+msgid "Azbalac One will remain free, including features added in the future. I still have some ideas in mind and may implement them when time permits."
 msgstr ""
 
 #: inc/back-compat.php:36 inc/back-compat.php:48 inc/back-compat.php:63
 #, php-format
-msgid ""
-"Azbalac One requires at least PHP version 8.1. You are running version %s. "
-"Please upgrade and try again."
-msgstr ""
-"Azbalac One benötigt mindestens PHP 8.1. Installiert ist Version %s. Bitte "
-"aktualisieren Sie PHP und versuchen Sie es erneut."
+msgid "Azbalac One requires at least PHP version 8.1. You are running version %s. Please upgrade and try again."
+msgstr "Azbalac One benötigt mindestens PHP 8.1. Installiert ist Version %s. Bitte aktualisieren Sie PHP und versuchen Sie es erneut."
 
 #: inc/customizer/Customizer.php:751
 msgid "Background Color"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #: inc/customizer/Customizer.php:614
 msgid "Below Footer"
@@ -212,63 +185,63 @@ msgstr "Zwischen Navigationsleiste und hervorgehobenen Beiträgen"
 
 #: inc/customizer/Customizer.php:1199
 msgid "bg-danger"
-msgstr ""
+msgstr "bg-danger"
 
 #: inc/customizer/Customizer.php:1203
 msgid "bg-dark"
-msgstr ""
+msgstr "bg-dark"
 
 #: inc/customizer/Customizer.php:1201
 msgid "bg-info"
-msgstr ""
+msgstr "bg-info"
 
 #: inc/customizer/Customizer.php:1202
 msgid "bg-light"
-msgstr ""
+msgstr "bg-light"
 
 #: inc/customizer/Customizer.php:1196
 msgid "bg-primary"
-msgstr ""
+msgstr "bg-primary"
 
 #: inc/customizer/Customizer.php:1197
 msgid "bg-secondary"
-msgstr ""
+msgstr "bg-secondary"
 
 #: inc/customizer/Customizer.php:1198
 msgid "bg-success"
-msgstr ""
+msgstr "bg-success"
 
 #: inc/customizer/Customizer.php:1200
 msgid "bg-warning"
-msgstr ""
+msgstr "bg-warning"
 
 #: inc/customizer/Customizer.php:1204
 msgid "bg-white"
-msgstr ""
+msgstr "bg-white"
 
 #: inc/customizer/Customizer.php:1458
 msgid "Body Font"
-msgstr ""
+msgstr "Schriftart Inhalt"
 
 #: inc/customizer/Customizer.php:675
 msgid "Border Circle"
-msgstr ""
+msgstr "Kreisförmiger Rahmen"
 
 #: inc/customizer/Customizer.php:712
 msgid "Border Color (if chosen border type)"
-msgstr ""
+msgstr "Rahmenfarbe (bei ausgewähltem Rahmentyp)"
 
 #: inc/customizer/Customizer.php:674
 msgid "Border Rounded"
-msgstr ""
+msgstr "Abgerundeter Rahmen"
 
 #: inc/customizer/Customizer.php:673
 msgid "Border Square"
-msgstr ""
+msgstr "Eckiger Rahmen"
 
 #: inc/customizer/Customizer.php:688
 msgid "Border Width"
-msgstr ""
+msgstr "Rahmenbreite"
 
 #: inc/customizer/Customizer.php:626
 msgid "Button Alignment"
@@ -310,9 +283,7 @@ msgid "Change Image"
 msgstr "Bild wechseln"
 
 #: inc/info-screen/sections/getting-started.php:35
-msgid ""
-"Changes to the theme source should preferably be implemented in a child "
-"theme because a theme update may overwrite modified files."
+msgid "Changes to the theme source should preferably be implemented in a child theme because a theme update may overwrite modified files."
 msgstr ""
 
 #: inc/customizer/Customizer.php:2027
@@ -358,28 +329,24 @@ msgstr "URLs der Social-Media-Buttons konfigurieren"
 #: content-featured-post-large.php:58 content-featured-post-mag-style1.php:25
 #: content-featured-post.php:59 content-featured-post.php:65 content.php:74
 #, php-format
-msgid ""
-"Continue reading<span class=\"screen-reader-text\"> on %s</span><span "
-"class=\"meta-nav\"> &raquo;</span>"
-msgstr ""
-"Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span "
-"class=\"meta-nav\"> &raquo;</span>"
+msgid "Continue reading<span class=\"screen-reader-text\"> on %s</span><span class=\"meta-nav\"> &raquo;</span>"
+msgstr "Weiterlesen <span class=\"screen-reader-text\">bei %s</span><span class=\"meta-nav\"> &raquo;</span>"
 
 #: inc/customizer/Customizer.php:775
 msgid "Custom Background Color (overwrites previous setting)"
-msgstr ""
+msgstr "Benutzerdefinierte Hintergrundfarbe (überschreibt die vorherige Einstellung)"
 
 #: inc/customizer/Customizer.php:736
 msgid "Custom Border Color (overwrites previous setting)"
-msgstr ""
+msgstr "Benutzerdefinierte Rahmenfarbe (überschreibt die vorherige Einstellung)"
 
 #: inc/customizer/Customizer.php:814
 msgid "Custom Icon (Foreground) Color (overwrites previous setting)"
-msgstr ""
+msgstr "Benutzerdefinierte Icon-Farbe (überschreibt die vorherige Einstellung)"
 
 #: inc/customizer/Customizer.php:827
 msgid "Custom Icon Mouseover Color"
-msgstr ""
+msgstr "Benutzerdefinierte Icon-Farbe Mouse-Over"
 
 #: inc/customizer/Customizer.php:1058
 msgid "Custom Logo Position"
@@ -387,7 +354,7 @@ msgstr "Benutzerdefinierte Logo-Positionierung"
 
 #: inc/customizer/Customizer.php:1214
 msgid "Custom Navigation Background Color"
-msgstr ""
+msgstr "Benutzerdefinierte Hintergrundfarbe Navigation"
 
 #: inc/info-screen/sections/getting-started.php:24
 msgid "Customize whole theme in a single place."
@@ -405,16 +372,16 @@ msgstr "Archiv für den Tag: %s"
 #: inc/customizer/Customizer.php:721 inc/customizer/Customizer.php:760
 #: inc/customizer/Customizer.php:799
 msgid "danger"
-msgstr ""
+msgstr "danger"
 
 #: inc/customizer/Customizer.php:1178
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: inc/customizer/Customizer.php:725 inc/customizer/Customizer.php:764
 #: inc/customizer/Customizer.php:803
 msgid "dark"
-msgstr ""
+msgstr "dark"
 
 #: inc/customizer/Customizer.php:1094
 msgid "Default"
@@ -422,7 +389,7 @@ msgstr "Standard"
 
 #: inc/customizer/Customizer.php:671
 msgid "Default style"
-msgstr ""
+msgstr "Standarddarstellung"
 
 #: inc/customizer/Customizer.php:227
 msgid "Description"
@@ -438,19 +405,15 @@ msgstr "Keine automatische Anpassung des Standard Header-Bildes"
 
 #: inc/customizer/Customizer.php:1796
 msgid "Do not resize automatically the extra small header image"
-msgstr ""
-"Keine automatische Anpassung des Header-Bildes für sehr kleine Display-"
-"Größen."
+msgstr "Keine automatische Anpassung des Header-Bildes für sehr kleine Display-Größen."
 
 #: inc/customizer/Customizer.php:1731
 msgid "Do not resize automatically the medium screen header image"
-msgstr ""
-"Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
+msgstr "Keine automatische Anpassung des Header-Bildes für mittlere Display-Größen."
 
 #: inc/customizer/Customizer.php:1763
 msgid "Do not resize automatically the small screen header image"
-msgstr ""
-"Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
+msgstr "Keine automatische Anpassung des Header-Bildes für kleine Display-Größen."
 
 #: inc/customizer/Customizer.php:83
 msgid "Edit general settings:  colors, main layout, navigation bar."
@@ -470,46 +433,42 @@ msgstr "Aufmacher-Bereich Einstellungen bearbeiten"
 
 #: inc/customizer/Customizer.php:92
 msgid "Edit options of header."
-msgstr ""
+msgstr "Header-Einstellungen bearbeiten."
 
 #: inc/customizer/Customizer.php:102
 msgid "Edit options of main navigation bar."
-msgstr ""
+msgstr "Einstellungen der Navigationsleiste bearbeiten."
 
 #: inc/customizer/Customizer.php:137
 msgid "Edit posts settings"
 msgstr "Beitrags-Einstellungen bearbeiten"
 
 #: inc/customizer/Customizer.php:111
-msgid "Edit typography settings:  fonts settings of title and body elements."
-msgstr ""
+msgid "Edit typography settings: font settings for titles and body text."
+msgstr "Typografie-Einstellungen bearbeiten: Schriftarten für Titel und Inhalt."
 
 #: functions.php:290
 msgid "Email*"
 msgstr "E-Mail*"
 
+#  msgid ""
+#  "Enter the complete SlideShare page URL (please include http or https!)"
 #: inc/customizer/Customizer.php:468
-#| msgid ""
-#| "Enter the complete SlideShare page URL (please include http or https!)"
-msgid ""
-"Enter the complete Discord profile page URL (please include http or https!)"
+msgid "Enter the complete Discord profile page URL (please include http or https!)"
 msgstr "Discord-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:472
-msgid ""
-"Enter the complete Facebook profile page URL (please include http or https!)"
+msgid "Enter the complete Facebook profile page URL (please include http or https!)"
 msgstr "Facebook-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:476
-msgid ""
-"Enter the complete GitHub profile page URL (please include http or https!)"
+msgid "Enter the complete GitHub profile page URL (please include http or https!)"
 msgstr "GitHub-Profilseiten-URL angeben (inkl. http oder https)"
 
+#  msgid ""
+#  "Enter the complete Xing profile page URL (please include http or https!)"
 #: inc/customizer/Customizer.php:480
-#| msgid ""
-#| "Enter the complete Xing profile page URL (please include http or https!)"
-msgid ""
-"Enter the complete Google profile page URL (please include http or https!)"
+msgid "Enter the complete Google profile page URL (please include http or https!)"
 msgstr "Google-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:484
@@ -520,41 +479,39 @@ msgstr "Instagram-Profilseiten-URL angeben (inkl. http oder https)"
 msgid "Enter the complete LinkedIn page URL (please include http or https!)"
 msgstr "LinkedIn-Profilseiten-URL angeben (inkl. http oder https)"
 
+#  msgid "Enter the complete Google+ page URL (please include http or https!)"
 #: inc/customizer/Customizer.php:492
-#| msgid "Enter the complete Google+ page URL (please include http or https!)"
 msgid "Enter the complete Mastodon page URL (please include http or https!)"
 msgstr "Mastodon-Profilseiten-URL angeben (inkl. http oder https)"
 
+#  msgid "Enter the complete Vine page URL (please include http or https!)"
 #: inc/customizer/Customizer.php:500
-#| msgid "Enter the complete Vine page URL (please include http or https!)"
 msgid "Enter the complete Skype page URL (please include http or https!)"
 msgstr "Skype-Profilseiten-URL angeben (inkl. http oder https)"
 
+#  msgid "Enter the complete Snapchat page URL (please include http or https!)"
 #: inc/customizer/Customizer.php:504
-#| msgid "Enter the complete Snapchat page URL (please include http or https!)"
 msgid "Enter the complete Slack page URL (please include http or https!)"
 msgstr "Slack-Profilseiten-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:496
 msgid "Enter the complete SlideShare page URL (please include http or https!)"
-msgstr ""
+msgstr "Vollständige URL der SlideShare-Seite eingeben (einschließlich http oder https)."
 
 #: inc/customizer/Customizer.php:508
 msgid "Enter the complete Snapchat page URL (please include http or https!)"
-msgstr ""
+msgstr "Vollständige URL der Snapchat-Seite eingeben (einschließlich http oder https)."
 
 #: inc/customizer/Customizer.php:524
 msgid "Enter the complete Vine page URL (please include http or https!)"
-msgstr ""
+msgstr "Vollständige URL der Vine-Seite eingeben (einschließlich http oder https)."
 
 #: inc/customizer/Customizer.php:528
-msgid ""
-"Enter the complete Xing profile page URL (please include http or https!)"
-msgstr ""
+msgid "Enter the complete Xing profile page URL (please include http or https!)"
+msgstr "Vollständige URL des Xing-Profils eingeben (einschließlich http oder https)."
 
 #: inc/customizer/Customizer.php:536
-msgid ""
-"Enter the complete YouTube channel page URL (please include http or https!)"
+msgid "Enter the complete YouTube channel page URL (please include http or https!)"
 msgstr "YouTube-Channel-URL angeben (inkl. http oder https)"
 
 #: inc/customizer/Customizer.php:512
@@ -579,11 +536,11 @@ msgstr "Facebook"
 
 #: inc/post-addons.php:105
 msgid "Featured Classic"
-msgstr ""
+msgstr "Featured Classic"
 
 #: inc/post-addons.php:106
 msgid "Featured Mag Style 1"
-msgstr ""
+msgstr "Featured Mag Style 1"
 
 #: inc/post-addons.php:102
 msgid "Featured Post"
@@ -595,7 +552,7 @@ msgstr "Feedback und Support"
 
 #: inc/customizer/CustomFontControl.php:76
 msgid "Font not found."
-msgstr ""
+msgstr "Schriftart nicht gefunden."
 
 #: inc/customizer/CustomFontControl.php:374
 msgid "Font Size"
@@ -637,8 +594,8 @@ msgstr "GitHub"
 msgid "Go to Customizer"
 msgstr "Gehe zum Customizer"
 
+#  msgid "Google+"
 #: inc/customizer/Customizer.php:479
-#| msgid "Google+"
 msgid "Google"
 msgstr "Google"
 
@@ -676,25 +633,19 @@ msgstr "Einstellungen Kopfbereich"
 
 #: functions.php:241
 msgid "Header Widget Area"
-msgstr ""
+msgstr "Header-Widget-Bereich"
 
 #: inc/customizer/Customizer.php:1424
 msgid "Headline Base Font"
-msgstr ""
+msgstr "Basisschrift Überschriften"
 
 #: inc/customizer/Customizer.php:1654
-msgid ""
-"Hide \"Nothing found\" message on homepage if chosen last blog entries and "
-"no blog entry is available"
-msgstr ""
+msgid "Hide \"Nothing found\" message on homepage if chosen last blog entries and no blog entry is available"
+msgstr "Hinweis „Nichts gefunden“ auf der Startseite ausblenden, wenn „Deine letzten Beiträge“ ausgewählt ist und keine Beiträge verfügbar sind"
 
 #: inc/customizer/Customizer.php:635
-msgid ""
-"Hint: The option left and centered are only possible when there are no "
-"further elements in the same row beside the social media buttons. If e.g.the "
-"site title is displayed at the left, the social media buttons don't change "
-"the alignment."
-msgstr ""
+msgid "Hint: Left and centered alignment are only available when no other elements are displayed in the same row beside the social media buttons. If, for example, the site title is displayed on the left, the social media buttons retain their default alignment."
+msgstr "Hinweis: Die linke und zentrierte Ausrichtung ist nur verfügbar, wenn neben den Social-Media-Buttons keine weiteren Elemente in derselben Zeile angezeigt werden. Wird beispielsweise der Seitentitel links angezeigt, behalten die Social-Media-Buttons ihre Standardausrichtung."
 
 #: inc/info-screen/sections/getting-started.php:39
 msgid "History"
@@ -706,104 +657,59 @@ msgstr "Homepage-Einstellungen"
 
 #. Author URI of the theme
 msgid "https://www.geschke.net"
-msgstr ""
+msgstr "https://www.geschke.net"
 
 #. URI of the theme
 msgid "https://www.kuerbis.org/azbalac-one/"
-msgstr ""
+msgstr "https://www.kuerbis.org/azbalac-one/"
 
 #: inc/info-screen/sections/getting-started.php:54
-msgid ""
-"I would be happy to hear from you. Which features do you like or dislike? "
-"Are you missing an option, have you found an error or unexpected behavior, "
-"or would you like to help with a translation or documentation? You can use "
-"the following feedback form, which is currently available in German only."
+msgid "I would be happy to hear from you. Which features do you like or dislike? Are you missing an option, have you found an error or unexpected behavior, or would you like to help with a translation or documentation? You can use the following feedback form, which is currently available in German only."
 msgstr ""
 
 #: inc/customizer/Customizer.php:790
 msgid "Icon (Foreground) Color"
-msgstr ""
+msgstr "Icon-Farbe"
 
 #: inc/customizer/Customizer.php:1981
 msgid "Icon Color"
 msgstr "Icon-Farbe"
 
 #: inc/customizer/Customizer.php:1783
-msgid ""
-"If available, this image will be used with extra small devices (phones, less "
-"than 768px). Please use a minimal width of 690px. It is available when "
-"chosen default navbar."
-msgstr ""
-"Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen "
-"verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px "
-"empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-"
-"Navigationsleiste eingesetzt wird."
+msgid "If available, this image will be used with extra small devices (phones, less than 768px). Please use a minimal width of 690px. It is available when chosen default navbar."
+msgstr "Wenn vorhanden, wird das Header-Bild bei sehr kleinen Display-Größen verwendet (Smartphones, kleiner als 768ox). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
 #: inc/customizer/Customizer.php:1718
-msgid ""
-"If available, this image will be used with medium devices (desktops, 992px "
-"and up). Please use a minimal width of 912px. It is available when chosen "
-"default navbar."
-msgstr ""
-"Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet "
-"(Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. "
-"Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste "
-"eingesetzt wird."
+msgid "If available, this image will be used with medium devices (desktops, 992px and up). Please use a minimal width of 912px. It is available when chosen default navbar."
+msgstr "Wenn vorhanden, wird das Header-Bild bei mittleren Display-Größen verwendet (Desktops, 992px und größer). Als minimale Breite werden 912px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
 #: inc/customizer/Customizer.php:1750
-msgid ""
-"If available, this image will be used with small devices (tablets, 768px and "
-"up). Please use a minimal width of 690px. It is available when chosen "
-"default navbar."
-msgstr ""
-"Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet "
-"(Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das "
-"Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste "
-"eingesetzt wird."
+msgid "If available, this image will be used with small devices (tablets, 768px and up). Please use a minimal width of 690px. It is available when chosen default navbar."
+msgstr "Wenn vorhanden, wird das Header-Bild bei kleinen Display-Größen verwendet (Tablets,768px und größer). Als minimale Breite werden 690px empfohlen. Das Header-Bild wird nur verwendet, wenn die Standard-Navigationsleiste eingesetzt wird."
 
 #: inc/customizer/Customizer.php:1702
-msgid ""
-"If checked, the default header image will <b>not</b> be resized to fit the "
-"width of the screen."
-msgstr ""
-"Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige "
-"Display-Breite angepasst."
+msgid "If checked, the default header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Standard-Header-Bild <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
 #: inc/customizer/Customizer.php:1799
-msgid ""
-"If checked, the extra small header image will <b>not</b> be resized to fit "
-"the width of the screen."
-msgstr ""
-"Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>"
-"nicht</b> an die jeweilige Display-Breite angepasst."
+msgid "If checked, the extra small header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Header-Bild für sehr kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
 #: inc/customizer/Customizer.php:1734
-msgid ""
-"If checked, the medium screen header image will <b>not</b> be resized to fit "
-"the width of the screen."
-msgstr ""
-"Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b>"
-" an die jeweilige Display-Breite angepasst."
+msgid "If checked, the medium screen header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Header-Bild für mittlere Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
 #: inc/customizer/Customizer.php:1766
-msgid ""
-"If checked, the small screen header image will <b>not</b> be resized to fit "
-"the width of the screen."
-msgstr ""
-"Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> "
-"an die jeweilige Display-Breite angepasst."
+msgid "If checked, the small screen header image will <b>not</b> be resized to fit the width of the screen."
+msgstr "Wenn aktiviert, wird das Header-Bild für kleine Display-Größen <b>nicht</b> an die jeweilige Display-Breite angepasst."
 
 #: inc/customizer/Customizer.php:1258
-msgid ""
-"If title is positioned as overlay on the header image, move title and "
-"subtile above the header image on small screens"
-msgstr ""
+msgid "If the title is positioned as an overlay on the header image, move the title and subtitle above the header image on small screens"
+msgstr "Wenn Titel und Untertitel als Overlay auf dem Header-Bild positioniert sind, werden sie auf kleinen Bildschirmen über das Header-Bild verschoben."
 
 #: inc/sections/SectionFooter.php:25
-msgid ""
-"If you want to leave the space empty, simply add a text or html widget with "
-"no content to the Footer Widget Area #%d."
-msgstr ""
+msgid "If you want to leave the space empty, simply add a text or html widget with no content to the Footer Widget Area #%d."
+msgstr "Um diesen Bereich leer zu lassen, fügen Sie dem Footer-Widget-Bereich Nr. %d einfach ein Text- oder HTML-Widget ohne Inhalt hinzu."
 
 #: inc/customizer/Customizer.php:208
 msgid "Image displayed on slider"
@@ -816,19 +722,15 @@ msgstr "Bild-Kontur"
 #: inc/customizer/Customizer.php:723 inc/customizer/Customizer.php:762
 #: inc/customizer/Customizer.php:801
 msgid "info"
-msgstr ""
+msgstr "info"
 
 #: inc/customizer/Customizer.php:483
 msgid "Instagram"
 msgstr "Instagram"
 
 #: content-none.php:21
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast."
-" Möglicherweise hilft die Suchfunktion."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht hast. Möglicherweise hilft die Suchfunktion."
 
 #: searchform.php:23
 msgctxt "label"
@@ -875,7 +777,7 @@ msgstr "Hell"
 #: inc/customizer/Customizer.php:724 inc/customizer/Customizer.php:763
 #: inc/customizer/Customizer.php:802
 msgid "light"
-msgstr ""
+msgstr "light"
 
 #: inc/customizer/Customizer.php:1975
 msgid "Link to any URL"
@@ -898,12 +800,7 @@ msgid "LinkedIn"
 msgstr "LinkedIn"
 
 #: inc/info-screen/sections/getting-started.php:41
-msgid ""
-"Many available themes were either too limited or offered far more features "
-"and complexity than I needed. I therefore created a small, general-purpose "
-"theme that stays close to Bootstrap and contains the features I actually use."
-" I am a programmer rather than a designer, after all. ;-) That was the birth "
-"of Azbalac One, and I am happy if you find it useful too."
+msgid "Many available themes were either too limited or offered far more features and complexity than I needed. I therefore created a small, general-purpose theme that stays close to Bootstrap and contains the features I actually use. I am a programmer rather than a designer, after all. ;-) That was the birth of Azbalac One, and I am happy if you find it useful too."
 msgstr ""
 
 #: inc/customizer/Customizer.php:491
@@ -924,11 +821,11 @@ msgstr "Menü Ausrichtung"
 
 #: inc/customizer/CustomFontControl.php:60
 msgid "Missing font name."
-msgstr ""
+msgstr "Der Name der Schriftart fehlt."
 
 #: inc/customizer/CustomThemeControl.php:66
 msgid "Missing theme name."
-msgstr ""
+msgstr "Der Name des Themes fehlt."
 
 #: archive.php:42
 msgctxt "monthly archives date format"
@@ -954,19 +851,19 @@ msgstr "Navigationsleiste Style"
 
 #: inc/customizer/Customizer.php:1190
 msgid "Navigation Background Color"
-msgstr ""
+msgstr "Hintergrundfarbe Navigation"
 
 #: inc/customizer/Customizer.php:101
 msgid "Navigation Bar Settings"
-msgstr ""
+msgstr "Einstellungen Navigationsleiste"
 
 #: inc/customizer/Customizer.php:1441
 msgid "Navigation Header Font"
-msgstr ""
+msgstr "Schriftart Navigationsleiste"
 
 #: functions.php:250
 msgid "Navigation Right Widget Area"
-msgstr ""
+msgstr "Widget-Bereich rechts in der Navigation"
 
 #: comments.php:32
 msgid "Newer Comments &rarr;"
@@ -1003,12 +900,8 @@ msgid "Comment"
 msgstr "Kommentar"
 
 #: inc/customizer/Customizer.php:387
-msgid ""
-"Number of milliseconds a photo is displayed for (enter 0 for no "
-"automatically cycling)."
-msgstr ""
-"Zeit in Millisekunden, die vergehen soll, bevor das nächste Objekt "
-"aufgerufen wird (0 für keine automatische Bewegung)"
+msgid "Number of milliseconds a photo is displayed for (enter 0 for no automatically cycling)."
+msgstr "Zeit in Millisekunden, die vergehen soll, bevor das nächste Objekt aufgerufen wird (0 für keine automatische Bewegung)"
 
 #: comments.php:24
 #, php-format
@@ -1031,153 +924,92 @@ msgstr "Pausiert die Bewegung des Sliders bei mouseenter"
 #: inc/customizer/CustomFontControl.php:56
 #: inc/customizer/CustomFontControl.php:87
 msgid "Permission denied."
-msgstr ""
+msgstr "Zugriff verweigert."
 
 #: inc/customizer/Customizer.php:935
-msgid ""
-"Pick a background color for the footer (default: transparent, i.e. use color "
-"defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im "
-"Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:888
-msgid ""
-"Pick a background color for the header (default: transparent, i.e. use color "
-"defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für den Header (Standard: transparent, d.h. die im "
-"Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the header (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Header (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:1876
-msgid ""
-"Pick a background color for the Lead Section (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für den Aufmacher-Bereich (Standard: transparent, d.h. die "
-"im Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the Lead Section (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Aufmacher-Bereich (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:961
-msgid ""
-"Pick a background color for the sidebar (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im "
-"Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:778
-#, fuzzy
-#| msgid ""
-#| "Pick a background color for the Social Media icon (default: transparent, "
-#| "i.e. use color defined in the theme stylesheet)."
-msgid ""
-"Pick a background color for the Social Media icon (default: transparent, i.e."
-" use color from previous setting or defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für den Social-Media-Button (Standard: transparent, d.h. "
-"die im Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Social-Media-Button (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:1597
-msgid ""
-"Pick a background color for the subfooter (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
-"Hintergrundfarbe für den Subfooter (Standard: transparent, d.h. die im "
-"Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a background color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Hintergrundfarbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:767
-msgid "Pick a background color from theme stylesheet or choose your own)."
-msgstr ""
+msgid "Pick a background color from the theme stylesheet or choose your own."
+msgstr "Hintergrundfarbe aus dem Theme-Stylesheet auswählen oder eine eigene Farbe festlegen."
 
 #: inc/customizer/Customizer.php:1274
-msgid ""
-"Pick a background color of transparency title and subtitle area (default: "
-"black)."
-msgstr ""
+msgid "Pick a background color of transparency title and subtitle area (default: black)."
+msgstr "Hintergrundfarbe für den transparenten Titel- und Untertitelbereich auswählen (Standard: Schwarz)."
 
 #: inc/customizer/Customizer.php:739
-msgid ""
-"Pick a border color for the Social Media icon (default: transparent, i.e. "
-"use color from previous setting or defined in the theme stylesheet)."
-msgstr ""
+msgid "Pick a border color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet)."
+msgstr "Rahmenfarbe für das Social-Media-Icon auswählen. Bei transparenter Farbe wird die vorherige Einstellung beziehungsweise die Farbe aus dem Theme-Stylesheet verwendet."
 
 #: inc/customizer/Customizer.php:728
-msgid "Pick a border color from theme stylesheet or choose your own)."
-msgstr ""
+msgid "Pick a border color from the theme stylesheet or choose your own."
+msgstr "Rahmenfarbe aus dem Theme-Stylesheet auswählen oder eine eigene Farbe festlegen."
 
 #: inc/customizer/Customizer.php:261
-msgid ""
-"Pick a color for the title and description text of this slide (default: "
-"transparent, i.e. use color defined in the theme stylesheet)."
-msgstr ""
-"Schriftfarbe für den Titel und Beschreibung des Sliders (Standard: "
-"transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a color for the title and description text of this slide (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für den Titel und Beschreibung des Sliders (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:923
-msgid ""
-"Pick a foreground color for the footer (default: transparent, i.e. use color "
-"defined in the theme stylesheet)."
-msgstr ""
-"Schriftfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet "
-"eingestellte Farbe wird verwendet)."
+msgid "Pick a foreground color for the footer (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für den Footer (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:949
-msgid ""
-"Pick a foreground color for the sidebar (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
-"Schriftfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet "
-"eingestellte Farbe wird verwendet)."
+msgid "Pick a foreground color for the sidebar (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für die Sidebar (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:1573
-msgid ""
-"Pick a foreground color for the subfooter (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
-"Schriftfarbe für den Subfooter (Standard: transparent, d.h. die im "
-"Stylesheet eingestellte Farbe wird verwendet)."
+msgid "Pick a foreground color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:911
-msgid ""
-"Pick a foreground color for the subtitle (default: transparent, i.e. use "
-"color defined in the theme stylesheet)."
-msgstr ""
+msgid "Pick a foreground color for the subtitle (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für den Untertitel auswählen. Bei transparenter Farbe wird die im Theme-Stylesheet definierte Farbe verwendet."
 
 #: inc/customizer/Customizer.php:900
-msgid ""
-"Pick a foreground color for the title (default: transparent, i.e. use color "
-"defined in the theme stylesheet)."
-msgstr ""
+msgid "Pick a foreground color for the title (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Schriftfarbe für den Seitentitel auswählen. Bei transparenter Farbe wird die im Theme-Stylesheet definierte Farbe verwendet."
 
 #: inc/customizer/Customizer.php:1585
-msgid ""
-"Pick a link color for the subfooter (default: transparent, i.e. use color "
-"defined in the theme stylesheet)."
-msgstr ""
-"Link-Farbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet "
-"eingestellte Farbe wird verwendet)."
+msgid "Pick a link color for the subfooter (default: transparent, i.e. use color defined in the theme stylesheet)."
+msgstr "Link-Farbe für den Subfooter (Standard: transparent, d.h. die im Stylesheet eingestellte Farbe wird verwendet)."
 
 #: inc/customizer/Customizer.php:817
-msgid ""
-"Pick an icon color for the Social Media icon (default: transparent, i.e. use "
-"color from previous setting or defined in the theme stylesheet)."
-msgstr ""
+msgid "Pick an icon color for the Social Media icon (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet)."
+msgstr "Farbe für das Social-Media-Icon auswählen. Bei transparenter Farbe wird die vorherige Einstellung beziehungsweise die Farbe aus dem Theme-Stylesheet verwendet."
 
 #: inc/customizer/Customizer.php:830
-msgid ""
-"Pick an icon color for the Social Media icon when mouseovered (default: "
-"transparent, i.e. use color from previous setting or defined in the theme "
-"stylesheet)."
-msgstr ""
+msgid "Pick an icon color for the Social Media icon when hovered (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet)."
+msgstr "Mouse-Over-Farbe für das Social-Media-Icon auswählen. Bei transparenter Farbe wird die vorherige Einstellung beziehungsweise die Farbe aus dem Theme-Stylesheet verwendet."
 
 #: inc/customizer/Customizer.php:806
-msgid "Pick an icon color from theme stylesheet or choose your own)."
-msgstr ""
+msgid "Pick an icon color from the theme stylesheet or choose your own."
+msgstr "Icon-Farbe aus dem Theme-Stylesheet auswählen oder eine eigene Farbe festlegen."
 
 #: searchform.php:21
 msgctxt "placeholder"
 msgid "Search …"
-msgstr ""
+msgstr "Suchen …"
 
 #: inc/sections/SectionFooter.php:22
 msgid "Please Add Widgets"
@@ -1196,12 +1028,8 @@ msgid "Posts Settings"
 msgstr "Beitrags-Einstellungen"
 
 #: inc/customizer/Customizer.php:1601 inc/sections/SectionSubfooter.php:81
-msgid ""
-"Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac "
-"One by <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
-msgstr ""
-"Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme "
-"Azbalac One von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
+msgid "Powered by <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac One by <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
+msgstr "Dieses Blog läuft mit <a href=\"https://wordpress.org\">WordPress</a>. Theme Azbalac One von <a href=\"https://www.geschke.net\">Ralf Geschke</a>."
 
 #: inc/sections/SectionSlider.php:203
 msgid "Previous"
@@ -1210,7 +1038,7 @@ msgstr "Zurück"
 #: inc/customizer/Customizer.php:718 inc/customizer/Customizer.php:757
 #: inc/customizer/Customizer.php:796
 msgid "primary"
-msgstr ""
+msgstr "primary"
 
 #. Author of the theme
 #: inc/info-screen/sections/getting-started.php:61
@@ -1228,11 +1056,8 @@ msgstr "Weiterlesen<span class=\"screen-reader-text\"> bei %1$s </span>&raquo;"
 
 #: content-none.php:15
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Bereit, um deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte "
-"hier</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Bereit, um deinen ersten Beitrag zu veröffentlichen? <a href=\"%1$s\">Starte hier</a>."
 
 #: inc/customizer/CustomRepeaterControl.php:96
 msgid "Remove"
@@ -1248,9 +1073,7 @@ msgstr "Element entfernen"
 
 #: inc/sections/SectionFooter.php:24
 msgid "Remove this message by adding widgets to Footer Widget Area #%d."
-msgstr ""
-"Diese Nachricht ist ein Platzhalter und kann entfernt werden durch "
-"Hinzufügen von Inhalten im Footer Widget-Bereich #%d."
+msgstr "Diese Nachricht ist ein Platzhalter und kann entfernt werden durch Hinzufügen von Inhalten im Footer Widget-Bereich #%d."
 
 #: inc/customizer/Customizer.php:248 inc/customizer/Customizer.php:633
 #: inc/customizer/Customizer.php:1065 inc/customizer/Customizer.php:1138
@@ -1269,7 +1092,7 @@ msgstr "Suchergebnisse für: %s"
 #: inc/customizer/Customizer.php:719 inc/customizer/Customizer.php:758
 #: inc/customizer/Customizer.php:797
 msgid "secondary"
-msgstr ""
+msgstr "secondary"
 
 #: inc/customizer/Customizer.php:1873
 msgid "Section Background Color"
@@ -1281,7 +1104,7 @@ msgstr "Bereichs-Titel"
 
 #: inc/customizer/CustomFontControl.php:348
 msgid "Select font variant:"
-msgstr ""
+msgstr "Schriftvariante auswählen:"
 
 #: inc/customizer/Customizer.php:1951 inc/customizer/Customizer.php:1952
 msgid "Select Icon or&hellip;"
@@ -1297,47 +1120,36 @@ msgid "Select your theme."
 msgstr "Farbschema auswählen"
 
 #: inc/customizer/Customizer.php:1425
-msgid ""
-"Set base font of headlines. The real size of H1 - H6 will be calculated "
-"based on this size with the same resize factors as in the CSS framework. "
-"Choose a size of 0 (zero) to use the default font size of the theme."
-msgstr ""
+msgid "Set base font of headlines. The real size of H1 - H6 will be calculated based on this size with the same resize factors as in the CSS framework. Choose a size of 0 (zero) to use the default font size of the theme."
+msgstr "Basisschrift und -größe der Überschriften festlegen. Die Größen von H1 bis H6 werden aus diesem Wert mit denselben Größenfaktoren wie im CSS-Framework berechnet. Bei einer Größe von 0 wird die Standardschriftgröße des Themes verwendet."
 
 #: inc/customizer/Customizer.php:1361
 msgid "Set distance between title and subtitle"
-msgstr ""
+msgstr "Abstand zwischen Titel und Untertitel festlegen"
 
 #: inc/customizer/Customizer.php:1343
 msgid "Set distance to left/right border"
-msgstr ""
+msgstr "Abstand zum linken und rechten Rand festlegen"
 
 #: inc/customizer/Customizer.php:1325
 msgid "Set distance to top/bottom margin"
-msgstr ""
+msgstr "Abstand zum oberen und unteren Rand festlegen"
 
 #: inc/customizer/Customizer.php:1459
-msgid ""
-"Set font of body content. Choose a size of 0 (zero) to use the default font "
-"size of the theme."
-msgstr ""
+msgid "Set font of body content. Choose a size of 0 (zero) to use the default font size of the theme."
+msgstr "Schriftart des Inhalts festlegen. Bei einer Größe von 0 wird die Standardschriftgröße des Themes verwendet."
 
 #: inc/customizer/Customizer.php:1442
-msgid ""
-"Set font of navigation header, the navbar. Choose a size of 0 (zero) to use "
-"the default font size of the theme."
-msgstr ""
+msgid "Set font of navigation header, the navbar. Choose a size of 0 (zero) to use the default font size of the theme."
+msgstr "Schriftart der Navigationsleiste festlegen. Bei einer Größe von 0 wird die Standardschriftgröße des Themes verwendet."
 
 #: inc/customizer/Customizer.php:1408
-msgid ""
-"Set font of website subtitle. Choose a size of 0 (zero) to use the default "
-"font size of the theme"
-msgstr ""
+msgid "Set font of website subtitle. Choose a size of 0 (zero) to use the default font size of the theme"
+msgstr "Schriftart des Untertitels festlegen. Bei einer Größe von 0 wird die Standardschriftgröße des Themes verwendet."
 
 #: inc/customizer/Customizer.php:1392
-msgid ""
-"Set font of website title. Choose a size of 0 (zero) to use the default font "
-"size of the theme"
-msgstr ""
+msgid "Set font of website title. Choose a size of 0 (zero) to use the default font size of the theme"
+msgstr "Schriftart des Seitentitels festlegen. Bei einer Größe von 0 wird die Standardschriftgröße des Themes verwendet."
 
 #: inc/customizer/Customizer.php:342
 msgid "Set generic slider options"
@@ -1365,16 +1177,15 @@ msgstr "Einstellungen des Subfooters, d.h. des Bereiches unterhalb des Footers"
 
 #: inc/customizer/Customizer.php:1311
 msgid "Set position of title and subtitle when displayed on header image."
-msgstr ""
+msgstr "Position von Titel und Untertitel auf dem Header-Bild festlegen."
 
 #: inc/customizer/Customizer.php:1286
 msgid "Set transparency of title and subtitle background"
-msgstr ""
+msgstr "Transparenz des Hintergrunds von Titel und Untertitel festlegen"
 
 #: inc/customizer/Customizer.php:1486
 msgid "Show date and author of featured posts on homepage"
-msgstr ""
-"Datum und Autor von hervorgehobenen Beiträgen auf der Homepage anzeigen"
+msgstr "Datum und Autor von hervorgehobenen Beiträgen auf der Homepage anzeigen"
 
 #: inc/customizer/Customizer.php:1511
 msgid "Show footer"
@@ -1390,7 +1201,7 @@ msgstr "Slider anzeigen"
 
 #: inc/customizer/Customizer.php:447
 msgid "Show slider indicators"
-msgstr ""
+msgstr "Slider-Indikatoren anzeigen"
 
 #: inc/customizer/Customizer.php:593
 msgid "Show Social Media Buttons"
@@ -1402,7 +1213,7 @@ msgstr "Subfooter anzeigen"
 
 #: inc/customizer/Customizer.php:1242
 msgid "Show title and subtitle on header image"
-msgstr ""
+msgstr "Titel und Untertitel auf dem Header-Bild anzeigen"
 
 #: functions.php:219
 msgid "Sidebar 1"
@@ -1430,7 +1241,7 @@ msgstr "Slack"
 
 #: inc/sections/SectionSlider.php:119
 msgid "Slide %d"
-msgstr ""
+msgstr "Slide %d"
 
 #: inc/customizer/Customizer.php:187
 msgid "Slider #%d"
@@ -1462,7 +1273,7 @@ msgstr "Textfarbe Slider"
 
 #: inc/customizer/Customizer.php:495
 msgid "SlideShare"
-msgstr ""
+msgstr "SlideShare"
 
 #: inc/customizer/Customizer.php:651
 msgid "Small"
@@ -1470,7 +1281,7 @@ msgstr "Klein"
 
 #: inc/customizer/Customizer.php:507
 msgid "Snapchat"
-msgstr ""
+msgstr "Snapchat"
 
 #: inc/customizer/Customizer.php:569
 msgid "Social Media Buttons"
@@ -1485,12 +1296,8 @@ msgid "Social Media Integration"
 msgstr "Social-Media-Integration"
 
 #: content-none.php:18
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Entschuldigung, aber zu deinen Suchbegriffen wurde nichts passendes gefunden."
-" Bitte versuche es mit anderen Stichworten noch einmal."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Entschuldigung, aber zu deinen Suchbegriffen wurde nichts passendes gefunden. Bitte versuche es mit anderen Stichworten noch einmal."
 
 #: inc/template-tags.php:82
 msgid "Sticky"
@@ -1519,7 +1326,7 @@ msgstr "Subfooter-Einstellungen"
 #: searchform.php:24
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: inc/customizer/Customizer.php:1864
 msgid "Subtitle"
@@ -1527,16 +1334,16 @@ msgstr "Untertitel"
 
 #: inc/customizer/Customizer.php:1407
 msgid "Subtitle Font"
-msgstr ""
+msgstr "Schriftart Untertitel"
 
 #: inc/customizer/Customizer.php:908
 msgid "Subtitle Font Color"
-msgstr ""
+msgstr "Schriftfarbe Untertitel"
 
 #: inc/customizer/Customizer.php:720 inc/customizer/Customizer.php:759
 #: inc/customizer/Customizer.php:798
 msgid "success"
-msgstr ""
+msgstr "success"
 
 #: inc/customizer/Customizer.php:511
 msgid "Telegram"
@@ -1553,30 +1360,27 @@ msgstr ""
 #: inc/info-screen/sections/changelog.php:17
 #: inc/info-screen/sections/changelog.php:24
 msgid "The changelog could not be loaded."
-msgstr ""
+msgstr "Das Änderungsprotokoll konnte nicht geladen werden."
 
 #: inc/customizer/CustomizerSanitizer.php:36
 msgid "The selected slider page does not exist or is not a valid page."
-msgstr ""
+msgstr "Die ausgewählte Slider-Seite existiert nicht oder ist keine gültige Seite."
 
 #: inc/customizer/CustomizerSanitizer.php:46
 msgid "The selected slider post does not exist or is not a valid post."
-msgstr ""
+msgstr "Der ausgewählte Slider-Beitrag existiert nicht oder ist kein gültiger Beitrag."
 
 #: inc/info-screen/sections/getting-started.php:50
-msgid ""
-"The theme is actively maintained, but it deliberately does not try to "
-"implement every imaginable WordPress feature. There is no \"Pro\", enhanced, "
-"or commercial edition, and there will never be one."
+msgid "The theme is actively maintained, but it deliberately does not try to implement every imaginable WordPress feature. There is no \"Pro\", enhanced, or commercial edition, and there will never be one."
 msgstr ""
 
 #: inc/customizer/Customizer.php:1042
 msgid "Theme"
-msgstr ""
+msgstr "Theme"
 
 #: inc/customizer/CustomThemeControl.php:83
 msgid "Theme not found."
-msgstr ""
+msgstr "Theme nicht gefunden."
 
 #: inc/customizer/Customizer.php:74
 msgid "Theme Options"
@@ -1587,17 +1391,12 @@ msgid "Theme Options:"
 msgstr "Theme-Einstellungen:"
 
 #: inc/customizer/Customizer.php:1217
-msgid ""
-"This is optional. If color is set here, the previous option will be "
-"overwritten. To disable this option, set to transparent color."
-msgstr ""
+msgid "This is optional. If color is set here, the previous option will be overwritten. To disable this option, set to transparent color."
+msgstr "Diese Einstellung ist optional. Wird hier eine Farbe festgelegt, überschreibt sie die vorherige Einstellung. Zum Deaktivieren muss eine transparente Farbe eingestellt werden."
 
 #: inc/customizer/Customizer.php:1132
-msgid ""
-"This setting works only if there is no content defined in the navigation "
-"widget area. Otherwise the alignment will be fallback to the default value "
-"(left)."
-msgstr ""
+msgid "This setting works only if there is no content defined in the navigation widget area. Otherwise, the alignment will fall back to the default value (left)."
+msgstr "Diese Einstellung ist nur wirksam, wenn im Widget-Bereich der Navigation kein Inhalt definiert ist. Andernfalls wird die Standardausrichtung „Links“ verwendet."
 
 #: inc/customizer/Customizer.php:1994
 msgid "Thumbnail"
@@ -1610,11 +1409,11 @@ msgstr "Titel"
 
 #: inc/customizer/Customizer.php:1391
 msgid "Title Font"
-msgstr ""
+msgstr "Schriftart Seitentitel"
 
 #: inc/customizer/Customizer.php:897
 msgid "Title Font Color"
-msgstr ""
+msgstr "Schriftfarbe Seitentitel"
 
 #: header.php:202
 msgid "Toggle navigation"
@@ -1622,15 +1421,15 @@ msgstr "Navigation ein-/ausblenden"
 
 #: inc/customizer/Customizer.php:1110
 msgid "Top Spacing (only available with fixed-top navigation bar)"
-msgstr ""
+msgstr "Oberer Abstand (nur bei oben fixierter Navigationsleiste)"
 
 #: inc/customizer/Customizer.php:1095
 msgid "Top-Aligned"
-msgstr ""
+msgstr "Oben ausgerichtet"
 
 #: inc/customizer/Customizer.php:1096
 msgid "Top-Aligned, fixed to top"
-msgstr ""
+msgstr "Oben ausgerichtet, am oberen Rand fixiert"
 
 #: inc/customizer/Customizer.php:386
 msgid "Transition delay"
@@ -1638,11 +1437,11 @@ msgstr "Verzögerung beim Übergang"
 
 #: inc/customizer/Customizer.php:1271
 msgid "Transparency Background Color"
-msgstr ""
+msgstr "Hintergrundfarbe des transparenten Bereichs"
 
 #: inc/customizer/Customizer.php:515
 msgid "Twitch"
-msgstr ""
+msgstr "Twitch"
 
 #: inc/customizer/Customizer.php:519
 msgid "Twitter"
@@ -1650,7 +1449,7 @@ msgstr "Twitter"
 
 #: inc/customizer/Customizer.php:110
 msgid "Typography Settings"
-msgstr ""
+msgstr "Typografie-Einstellungen"
 
 #: inc/customizer/Customizer.php:1960
 msgid "Use Image instead of Icon"
@@ -1662,14 +1461,10 @@ msgstr "Bilder-Konturen für das Bild wählen:"
 
 #: inc/customizer/Customizer.php:1681
 msgid "Use the example image from the theme if no default header image is set."
-msgstr ""
-"Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild "
-"gesetzt ist."
+msgstr "Nutze das Beispiel-Header-Bild des Themes, falls kein Standard-Header-Bild gesetzt ist."
 
 #: inc/info-screen/sections/getting-started.php:25
-msgid ""
-"Using the WordPress Customizer you can easily customize every feature of the "
-"theme."
+msgid "Using the WordPress Customizer you can easily customize every feature of the theme."
 msgstr ""
 
 #: content.php:104
@@ -1679,12 +1474,12 @@ msgstr "Alle Artikel in %s ansehen"
 
 #: inc/customizer/Customizer.php:523
 msgid "Vine"
-msgstr ""
+msgstr "Vine"
 
 #: inc/customizer/Customizer.php:722 inc/customizer/Customizer.php:761
 #: inc/customizer/Customizer.php:800
 msgid "warning"
-msgstr ""
+msgstr "warning"
 
 #: functions.php:302
 msgid "Website"
@@ -1696,53 +1491,45 @@ msgstr "Willkommen bei Azbalac One!"
 
 #: inc/info-screen/welcome-screen.php:77
 #, php-format
-msgid ""
-"Welcome! Thank you for choosing Azbalac One! Please have a look at the new "
-"%sWelcome page%s. You will find some information about new or updated "
-"features there."
-msgstr ""
-"Willkommen! Vielen Dank, dass Sie Azbalac One gewählt haben! Bitte besuchen "
-"Sie die neue %sWillkommensseite%s. Sie finden dort Informationen über "
-"neue oder aktualisierte Features."
+msgid "Welcome! Thank you for choosing Azbalac One! Please have a look at the new %sWelcome page%s. You will find some information about new or updated features there."
+msgstr "Willkommen! Vielen Dank, dass Sie Azbalac One gewählt haben! Bitte besuchen Sie die neue %sWillkommensseite%s. Sie finden dort Informationen über neue oder aktualisierte Features."
 
 #: inc/customizer/Customizer.php:531
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: inc/customizer/Customizer.php:1113
-msgid ""
-"When using fixed-top navigation with larger header font size, you can adjust "
-"the spacing to the page content here."
-msgstr ""
+msgid "When using fixed-top navigation with larger header font size, you can adjust the spacing to the page content here."
+msgstr "Bei einer oben fixierten Navigation mit größerer Schrift kann hier der Abstand zum Seiteninhalt angepasst werden."
 
 #: inc/customizer/Customizer.php:726 inc/customizer/Customizer.php:765
 #: inc/customizer/Customizer.php:804
 msgid "white"
-msgstr ""
+msgstr "white"
 
 #: inc/customizer/Customizer.php:1152
 msgid "Whitespace settings in Navigation"
-msgstr ""
+msgstr "Abstände innerhalb der Navigation"
 
 #: inc/customizer/Customizer.php:695
 msgid "Width 1"
-msgstr ""
+msgstr "Breite 1"
 
 #: inc/customizer/Customizer.php:696
 msgid "Width 2"
-msgstr ""
+msgstr "Breite 2"
 
 #: inc/customizer/Customizer.php:697
 msgid "Width 3 (Default)"
-msgstr ""
+msgstr "Breite 3 (Standard)"
 
 #: inc/customizer/Customizer.php:698
 msgid "Width 4"
-msgstr ""
+msgstr "Breite 4"
 
 #: inc/customizer/Customizer.php:699
 msgid "Width 5"
-msgstr ""
+msgstr "Breite 5"
 
 #: inc/customizer/Customizer.php:527
 msgid "Xing"
@@ -1759,17 +1546,12 @@ msgid "Yearly Archives: %s"
 msgstr "Archiv für das Jahr: %s"
 
 #: inc/info-screen/sections/getting-started.php:34
-msgid ""
-"You can choose from multiple Bootswatch designs and customize the navigation,"
-" header, footer, colors, typography, featured content, slider, introduction "
-"area, and social-media buttons through the WordPress Customizer."
+msgid "You can choose from multiple Bootswatch designs and customize the navigation, header, footer, colors, typography, featured content, slider, introduction area, and social-media buttons through the WordPress Customizer."
 msgstr ""
 
 #: inc/customizer/Customizer.php:1684
 msgid "You can switch off this option, so no image will be displayed."
-msgstr ""
-"Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild "
-"erscheint, falls kein Standard-Header-Bild gesetzt ist."
+msgstr "Diese Option kann abgeschaltet werden, so dass gar kein Header-Bild erscheint, falls kein Standard-Header-Bild gesetzt ist."
 
 #: inc/info-screen/sections/getting-started.php:55
 msgid "Your feedback and wishes"

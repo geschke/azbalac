@@ -107,7 +107,7 @@ class Azbalac_Customizer
             'capability' => 'edit_theme_options',
             'theme_supports' => '',
             'title' => __('Typography Settings', 'azbalac-one'),
-            'description' => __('Edit typography settings:  fonts settings of title and body elements.', 'azbalac-one'),
+            'description' => __('Edit typography settings: font settings for titles and body text.', 'azbalac-one'),
             'panel' => 'panel_theme_options',
         ));
 
@@ -631,7 +631,7 @@ class Azbalac_Customizer
                 '2' => __('Centered', 'azbalac-one'),
                 '3' => __('Right', 'azbalac-one'),
             ),
-            'description' => __('Hint: The option left and centered are only possible when there are no further elements in the same row beside the social media buttons. If e.g.the site title is displayed at the left, the social media buttons don\'t change the alignment.','azbalac-one')
+            'description' => __('Hint: Left and centered alignment are only available when no other elements are displayed in the same row beside the social media buttons. If, for example, the site title is displayed on the left, the social media buttons retain their default alignment.','azbalac-one')
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_size', array(
@@ -724,7 +724,7 @@ class Azbalac_Customizer
                 'dark' => __('dark', 'azbalac-one'),
                 'white' => __('white', 'azbalac-one'),
             ),
-            'description' => __('Pick a border color from theme stylesheet or choose your own).', 'azbalac-one'),
+            'description' => __('Pick a border color from the theme stylesheet or choose your own.', 'azbalac-one'),
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_border_color_custom', array(
@@ -763,7 +763,7 @@ class Azbalac_Customizer
                 'dark' => __('dark', 'azbalac-one'),
                 'white' => __('white', 'azbalac-one'),
             ),
-            'description' => __('Pick a background color from theme stylesheet or choose your own).', 'azbalac-one'),
+            'description' => __('Pick a background color from the theme stylesheet or choose your own.', 'azbalac-one'),
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_bg_color_custom', array(
@@ -802,7 +802,7 @@ class Azbalac_Customizer
                 'dark' => __('dark', 'azbalac-one'),
                 'white' => __('white', 'azbalac-one'),
             ),
-            'description' => __('Pick an icon color from theme stylesheet or choose your own).', 'azbalac-one'),
+            'description' => __('Pick an icon color from the theme stylesheet or choose your own.', 'azbalac-one'),
         ));
 
         $wp_customize->add_setting('azbalac_setting_social_button_fg_color_custom', array(
@@ -826,7 +826,7 @@ class Azbalac_Customizer
             'label' => __('Custom Icon Mouseover Color', 'azbalac-one'),
             'section' => 'section_social_media_position',
             'settings' => 'azbalac_setting_social_button_fg_color_custom_hover',
-            'description' => __('Pick an icon color for the Social Media icon when mouseovered (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac-one'),)
+            'description' => __('Pick an icon color for the Social Media icon when hovered (default: transparent, i.e. use color from previous setting or defined in the theme stylesheet).', 'azbalac-one'),)
         ));
 
         
@@ -1128,7 +1128,7 @@ class Azbalac_Customizer
         $wp_customize->add_control('azbalac_control_navbar_menu_alignment', array(
             'label' => __('Menu Alignment', 'azbalac-one'),
             'section' => 'section_theme_options_navbar',
-            'description' => __('This setting works only if there is no content defined in the navigation widget area. Otherwise the alignment will be fallback to the default value (left).', 'azbalac-one'),
+            'description' => __('This setting works only if there is no content defined in the navigation widget area. Otherwise, the alignment will fall back to the default value (left).', 'azbalac-one'),
             'settings' => 'azbalac_setting_navbar_menu_alignment',
             'type' => 'radio',
             'choices' => array(
@@ -1254,7 +1254,7 @@ class Azbalac_Customizer
          ));
   
          $wp_customize->add_control('azbalac_control_header_move_title_small', array(
-            'label' => __('If title is positioned as overlay on the header image, move title and subtile above the header image on small screens', 'azbalac-one'),
+            'label' => __('If the title is positioned as an overlay on the header image, move the title and subtitle above the header image on small screens', 'azbalac-one'),
             'section' => 'section_theme_options_header',
             'settings' => 'azbalac_setting_header_move_title_small',
             'type' => 'checkbox',

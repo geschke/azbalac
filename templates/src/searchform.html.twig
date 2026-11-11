@@ -1,0 +1,34 @@
+<form
+    role="search"
+    method="get"
+    id="{{ form_id|e('html_attr') }}"
+    class="searchform search-form"
+    action="{{ action_url|e('html_attr') }}"
+    aria-label="{{ aria_label|e('html_attr') }}"
+>
+    <div class="mb-3 form-floating">
+        <input
+            class="form-control search-field"
+            type="search"
+            placeholder="{{ placeholder|e('html_attr') }}"
+            value="{{ search_query|e('html_attr') }}"
+            name="s"
+            id="{{ field_id|e('html_attr') }}"
+        >
+
+        <label
+            class="form-label"
+            for="{{ field_id|e('html_attr') }}"
+        >
+            {{ field_label|e }}
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <input
+            class="btn btn-primary search-submit"
+            type="submit"
+            value="{{ submit_label|e('html_attr') }}"
+        >
+    </div>
+</form>

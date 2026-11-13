@@ -36,8 +36,21 @@ class Azbalac_Section_Content_Column
 
     public static function showIntroductionElements($position) 
     {
-        $introActive =  get_option('azbalac_setting_introduction_area_activate',0);
-        if (intval($introActive) !== 1) {
+        $introActive = get_option('azbalac_setting_introduction_area_activate', false);
+
+        if (is_customize_preview()) {
+            global $wp_customize;
+
+            if ($wp_customize instanceof WP_Customize_Manager) {
+                $setting = $wp_customize->get_setting('azbalac_setting_introduction_area_activate');
+
+                if ($setting instanceof WP_Customize_Setting) {
+                    $introActive = $setting->post_value($introActive);
+                }
+            }
+        }
+
+        if (!in_array($introActive, array(true, 1, '1'), true)) {
           return '';
         }
        

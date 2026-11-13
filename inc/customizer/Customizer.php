@@ -1813,6 +1813,7 @@ class Azbalac_Customizer
            'default' => false,
            'capability' => 'edit_theme_options',
            'type' => 'option',
+           'transport' => 'refresh',
            'sanitize_callback' => array($this->sanitizer, 'sanitizeCheckbox'),
            'sanitize_js_callback' => array($this->sanitizer, 'sanitizeCheckbox')
         ));

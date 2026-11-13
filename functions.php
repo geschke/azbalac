@@ -216,28 +216,6 @@ function theme_azbalac_widgets_init()
     $bodyStyles = azbalac_get_body_styles();
 
     register_sidebar(array(
-        'name' => __("Sidebar 1", 'azbalac-one'),
-        'id' => 'sidebar-1',
-        'class' => '',
-        'before_widget' => '<div class="card mb-3"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
-        'after_widget' => "</div></div>\n",
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => "</h3>\n"
-    ));
-
-    for ($i = 1; $i <= 6; $i++) {
-        register_sidebar(array(
-            'name' => sprintf(__("Footer Widget Area #%d", 'azbalac-one'), $i),
-            'id' => sprintf("footer-sidebar-%d", $i),
-            'description' => 'Appears in the footer area',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
-        ));
-    }
-
-    register_sidebar(array(
         'name' => __("Header Widget Area", 'azbalac-one'),
         'id' => "header-widget-right",
         'description' => 'Appears in the header on right side',
@@ -265,6 +243,28 @@ function theme_azbalac_widgets_init()
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+
+    register_sidebar(array(
+        'name' => __("Sidebar 1", 'azbalac-one'),
+        'id' => 'sidebar-1',
+        'class' => '',
+        'before_widget' => '<div class="card mb-3"><div id="%1$s" style="' . $bodyStyles['sidebarStyleColorBg'] . $bodyStyles['sidebarStyleColorFg'] . '" class="card-body widget %2$s">',
+        'after_widget' => "</div></div>\n",
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => "</h3>\n"
+    ));
+
+    for ($i = 1; $i <= 6; $i++) {
+        register_sidebar(array(
+            'name' => sprintf(__("Footer Widget Area #%d", 'azbalac-one'), $i),
+            'id' => sprintf("footer-sidebar-%d", $i),
+            'description' => 'Appears in the footer area',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ));
+    }
 
 
 }

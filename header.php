@@ -119,8 +119,28 @@ $content['skipToMainContent'] = __( 'Skip to main content', 'azbalac-one' );
 
 $content['headerStyles'] = azbalac_get_header_styles( $content['navbarFixed'] );
 
-$content['headerOptions']['show_title_image'] = get_option('azbalac_setting_header_show_title_image','');
-$content['headerOptions']['move_title_small'] = get_option('azbalac_setting_header_move_title_small','');
+$headerCheckboxOptions = array(
+    'show_title_image' => 'azbalac_setting_header_show_title_image',
+    'move_title_small' => 'azbalac_setting_header_move_title_small',
+);
+
+foreach ($headerCheckboxOptions as $optionName => $settingId) {
+    $optionValue = get_option($settingId, false);
+
+    if (is_customize_preview()) {
+        global $wp_customize;
+
+        if ($wp_customize instanceof WP_Customize_Manager) {
+            $setting = $wp_customize->get_setting($settingId);
+
+            if ($setting instanceof WP_Customize_Setting) {
+                $optionValue = $setting->post_value($optionValue);
+            }
+        }
+    }
+
+    $content['headerOptions'][$optionName] = in_array($optionValue, array(true, 1, '1'), true);
+}
 
 $content['headerOptions']['header_color_bg'] = get_theme_mod('azbalac_setting_header_color_bg','#000000'); // default black
 $content['headerOptions']['header_background_transp'] = get_option('azbalac_setting_header_background_transp',70); // default 70%
@@ -191,7 +211,9 @@ $content['socialMediaButtons']['1'] = Azbalac_Section_Social_Media_Buttons::getB
 
 
 if ( is_front_page()) {
-    
+
+    $content['homepageContentArea'] = Azbalac_Section_Widgets::get('homepage-content-area');
+
     $content['showSlider']['1'] = Azbalac_Section_Slider::getSlider(1);
 
     $content['showIntroductionElements']['1'] = Azbalac_Section_Content_Column::getIntroductionElements(1);

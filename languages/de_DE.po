@@ -22,6 +22,14 @@ msgstr ""
 "X-Domain: azbalac-one\n"
 "Language: de_DE\n"
 
+#: functions.php:262
+msgid "Displayed below the header on the homepage."
+msgstr "Wird auf der Homepage unterhalb des Headerbereichs angezeigt."
+
+#: functions.php:260
+msgid "Homepage Content Area"
+msgstr "Homepage-Inhaltsbereich"
+
 #: content.php:46
 msgid "% Comments"
 msgstr "% Kommentare"

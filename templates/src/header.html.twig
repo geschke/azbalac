@@ -188,6 +188,12 @@
 
 {% endif %}
 
+{% if is_front_page and content.homepageContentArea %}
+    <div class="azbalac-homepage-content-area container my-4">
+        {{ content.homepageContentArea|raw }}
+    </div>
+{% endif %}
+
 {#
 
 

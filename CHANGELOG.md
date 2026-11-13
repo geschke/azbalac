@@ -2,6 +2,12 @@
 
 ## Azbalac One
 
+Unreleased
+
+- New: Added a block-compatible widget area below the homepage header.
+- Fix: Corrected header title placement checkbox states in the Customizer preview.
+- Fix: Corrected Lead Section visibility when enabling or disabling it in the Customizer preview.
+
 Version 0.7.0
 
 - Breaking: Renamed the theme and its text domain to Azbalac One (`azbalac-one`); existing installations must migrate or copy their theme modifications when switching from the previous theme directory.
